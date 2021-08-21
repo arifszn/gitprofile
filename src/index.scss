@@ -45,7 +45,7 @@ html:not([data-theme="luxury"]),
 html:not([data-theme="dracula"]) {
     @include meta.load-css("node_modules/antd/dist/antd.css", $with: null);
 
-    p {
+    p, ul {
         margin-bottom: 0;
     }
 }
@@ -58,7 +58,7 @@ html[data-theme="luxury"],
 html[data-theme="dracula"] {
     @include meta.load-css("node_modules/antd/dist/antd.dark.css", $with: null);
     
-    p {
+    p, ul {
         margin-bottom: 0;
     }
 }

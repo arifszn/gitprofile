@@ -9,6 +9,7 @@ import config from "./config";
 import moment from 'moment';
 import { setLoading } from "./store/slices/loadingSlice";
 import { setProfile } from "./store/slices/profileSlice";
+import Details from "./components/Details";
 
 function App() {
     const dispatch = useDispatch();
@@ -110,6 +111,7 @@ function App() {
                                             )
                                         }
                                         <AvatarCard />
+                                        <Details />
                                     </div>
                                 </div>
                                 <div className="card shadow-lg compact side bg-base-100">
@@ -201,100 +203,6 @@ function App() {
                                                 Register
                                             </button>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="card shadow-lg compact side bg-base-100">
-                                    <div className="flex-row items-center space-x-4 card-body">
-                                        <div className="flex-1">
-                                            <h2 className="flex card-title">
-                                                <button className="btn btn-ghost btn-sm btn-circle loading" />
-                                                Downloading...
-                                            </h2>
-                                            <progress value={70} max={100} className="progress progress-secondary" />
-                                        </div>
-                                        <div className="flex-0">
-                                            <button className="btn btn-circle">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="card shadow-lg compact side bg-base-100">
-                                    <div className="flex-row items-center space-x-4 card-body">
-                                        <label className="cursor-pointer label">
-                                            <input type="checkbox" defaultChecked="checked" className="checkbox checkbox-accent" />
-                                            <span className="mx-4 label-text">
-                                                Enable Autosave
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <ul className="menu row-span-3 p-4 shadow-lg bg-base-100 text-base-content text-opacity-40 rounded-box">
-                                    <li className="menu-title">
-                                        <span>Menu Title
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 mr-2 stroke-current">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                            </svg>
-                                            Item with icon
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 mr-2 stroke-current">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                                            </svg>
-                                            Item with icon
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 mr-2 stroke-current">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-                                            </svg>
-                                            Item with icon
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="alert col-span-1 xl:col-span-2 bg-base-100">
-                                    <div className="flex-1">
-                                        <label className="mx-3">
-                                            Lorem ipsum dolor sit amet, consectetur adip!
-                                        </label>
-                                    </div>
-                                    <div className="flex-none">
-                                        <button className="btn btn-sm btn-ghost mr-2">
-                                            Cancel
-                                        </button>
-                                        <button className="btn btn-sm btn-primary">
-                                            Apply
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="alert col-span-1 xl:col-span-2 alert-info">
-                                    <div className="flex-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-6 h-6 mx-2 stroke-current">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                        <label>
-                                            Lorem ipsum dolor sit amet, consectetur adip!
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className="alert col-span-1 xl:col-span-2 alert-success">
-                                    <div className="flex-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-6 h-6 mx-2 stroke-current">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-                                        </svg>
-                                        <label>
-                                            Lorem ipsum dolor sit amet, consectetur adip!
-                                        </label>
                                     </div>
                                 </div>
                             </div>
