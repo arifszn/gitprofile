@@ -38,6 +38,9 @@ function App() {
                 avatar: data.avatar_url,
                 name: data.name,
                 bio: data.bio,
+                location: data.location,
+                company: data.company,
+                twitter: data.twitter_username,
             }
 
             dispatch(setProfile(profileData));
@@ -70,7 +73,7 @@ function App() {
     return (
         <Fragment>
             <div className="fade-in h-screen">
-                <div className="p-4 lg:p-10 bg-base-200">
+                <div className="p-4 lg:p-10 min-h-full bg-base-200">
                     {
                         error ? (
                             <ErrorPage
@@ -101,7 +104,6 @@ function App() {
                                 }
                             />
                         ) : (
-
                             <div className="grid grid-cols-1 gap-6 xl:grid-cols-3 lg:bg-base-200 rounded-box">
                                 <div className="row-span-3">
                                     <div className="grid grid-cols-1 gap-6">

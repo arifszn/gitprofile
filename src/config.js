@@ -1,5 +1,8 @@
 module.exports = {
-    githubUsername: 'arifszn',
+    githubUsername: 'arifszn', // required
+    email: 'contact@arifszn.com', // optional
+    linkedinUsername: 'ariful-alam', // optional
+    dribbbleUsername: '', // optional
     themeConfig: {
         default: 'light',
 

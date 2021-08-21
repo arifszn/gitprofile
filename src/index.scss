@@ -1,9 +1,5 @@
 @use "sass:meta";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -41,6 +37,8 @@ html:not([data-theme="dark"]),
 html:not([data-theme="halloween"]), 
 html:not([data-theme="forest"]), 
 html:not([data-theme="black"]), 
+html:not([data-theme="synthwave"]),
+html:not([data-theme="aqua"]),
 html:not([data-theme="luxury"]),
 html:not([data-theme="dracula"]) {
     @include meta.load-css("node_modules/antd/dist/antd.css", $with: null);
@@ -53,7 +51,9 @@ html:not([data-theme="dracula"]) {
 html[data-theme="dark"], 
 html[data-theme="halloween"], 
 html[data-theme="forest"], 
-html[data-theme="black"], 
+html[data-theme="black"],
+html[data-theme="synthwave"],
+html[data-theme="aqua"],
 html[data-theme="luxury"],
 html[data-theme="dracula"] {
     @include meta.load-css("node_modules/antd/dist/antd.dark.css", $with: null);
@@ -61,6 +61,14 @@ html[data-theme="dracula"] {
     p, ul {
         margin-bottom: 0;
     }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-base-content-important {
+    color: hsla(var(--bc) / var(--tw-text-opacity)) !important;
 }
 
 svg {

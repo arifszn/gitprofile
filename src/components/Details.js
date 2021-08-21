@@ -1,37 +1,148 @@
+import { GoLocation } from 'react-icons/go';
+import { AiFillGithub } from 'react-icons/ai';
+import { SiTwitter } from 'react-icons/si';
+import { BiBuilding } from 'react-icons/bi';
+import { GrLinkedinOption, GrMail } from 'react-icons/gr';
+import { ImDribbble } from 'react-icons/im';
+import { useSelector } from 'react-redux';
+import config from '../config';
+
 const Details = () => {
+    const profile = useSelector(state => state.profile);
+    const loading = useSelector(state => state.loading);
+
     return (
         <div className="card shadow-lg compact side bg-base-100">
             <div className="card-body">
                 <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
-                    <li className="menu-title">
-                        <span>Menu Title
-                        </span>
-                    </li>
-                    <li>
-                        <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 mr-2 stroke-current">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                            </svg>
-                            Item with icon
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 mr-2 stroke-current">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                            </svg>
-                            Item with icon
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 mr-2 stroke-current">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
-                            </svg>
-                            Item with icon
-                        </a>
-                    </li>
+                    {
+                        loading ? (
+                            <>
+                                <li>
+                                    <span>
+                                        <div className="bg-base-300 w-6 h-4 animate-pulse rounded-full mr-2" />
+                                        <div className="bg-base-300 w-32 h-4 animate-pulse rounded-full" />
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <div className="bg-base-300 w-6 h-4 animate-pulse rounded-full mr-2" />
+                                        <div className="bg-base-300 w-32 h-4 animate-pulse rounded-full" />
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        <div className="bg-base-300 w-6 h-4 animate-pulse rounded-full mr-2" />
+                                        <div className="bg-base-300 w-32 h-4 animate-pulse rounded-full" />
+                                    </span>
+                                </li>
+                            </>
+                        ) : (
+                            <>
+                                {
+                                    profile && profile.location && (
+                                        <li>
+                                            <span>
+                                                <GoLocation className="mr-2"/>
+                                                {profile.location}
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    profile && profile.company && (
+                                        <li>
+                                            <span>
+                                                <BiBuilding className="mr-2"/>
+                                                {profile.company}
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                <li>
+                                    <span>
+                                        <AiFillGithub className="mr-2"/>
+                                        <a 
+                                            href={`https://github.com/${config.githubUsername}`} 
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="text-base-content-important"
+                                        >
+                                            {config.githubUsername}
+                                        </a>
+                                    </span>
+                                </li>
+                                {
+                                    profile && profile.twitter && (
+                                        <li>
+                                            <span>
+                                                <SiTwitter className="mr-2"/>
+                                                <a 
+                                                    href={`https://twitter.com/${profile.twitter}`} 
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {profile.twitter}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    typeof config.linkedinUsername !== 'undefined' && config.linkedinUsername && (
+                                        <li>
+                                            <span>
+                                                <GrLinkedinOption className="mr-2"/>
+                                                <a 
+                                                    href={`https://www.linkedin.com/in/${config.linkedinUsername}`} 
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {config.linkedinUsername}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    typeof config.dribbbleUsername !== 'undefined' && config.dribbbleUsername && (
+                                        <li>
+                                            <span>
+                                                <ImDribbble className="mr-2"/>
+                                                <a 
+                                                    href={`https://dribbble.com/${config.dribbbleUsername}`} 
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {config.dribbbleUsername}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    typeof config.email !== 'undefined' && config.email && (
+                                        <li>
+                                            <span>
+                                                <GrMail className="mr-2"/>
+                                                <a 
+                                                    href={`mailto:${config.email}`} 
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {config.email}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                            </>
+                        )
+                    }
                 </ul>
             </div>
         </div>
