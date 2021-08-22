@@ -1,5 +1,5 @@
 module.exports = {
-    githubUsername: 'tailwindlabs', // required
+    githubUsername: 'arifszn', // required
     email: 'contact@arifszn.com', // optional
     linkedinUsername: 'ariful-alam', // optional
     dribbbleUsername: '', // optional
