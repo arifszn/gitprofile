@@ -14,6 +14,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Project from "./components/Project";
 import { setRepo } from "./store/slices/repoSlice";
+import Blog from "./components/Blog";
 
 function App() {
     const dispatch = useDispatch();
@@ -29,11 +30,10 @@ function App() {
     }, [theme])
 
     useEffect(() => {
-        loadProfile();
-        loadRepo();
+        loadData();
     }, [])
 
-    const loadProfile = () => {
+    const loadData = () => {
         axios.get(`https://api.github.com/users/${config.githubUsername}`)
         .then(response => {
             let data = response.data;
@@ -48,6 +48,9 @@ function App() {
             }
 
             dispatch(setProfile(profileData));
+        })
+        .then(() => {
+            loadRepo();
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -75,8 +78,6 @@ function App() {
     }
 
     const loadRepo = () => {
-        dispatch(setLoading(true));
-
         axios.get(`https://api.github.com/search/repositories?q=user:${config.githubUsername}+&s=stars&type=Repositories`)
         .then(response => {
             let data = response.data;
@@ -96,10 +97,7 @@ function App() {
             } catch (error2) {
                 console.error('Error:', error2);
             }
-        })
-        .finally(() => {
-            dispatch(setLoading(false));
-        });;
+        });
     }
 
     return (
@@ -148,12 +146,12 @@ function App() {
                                         <AvatarCard/>
                                         <Details/>
                                         <Skill/>
+                                        <Experience/>
+                                        <Education/>
                                     </div>
                                 </div>
                                 <div className="col-span-2">
                                     <div className="grid grid-cols-1 gap-6">
-                                        <Experience/>
-                                        <Education/>
                                         <Project/>
                                     </div>
                                 </div>

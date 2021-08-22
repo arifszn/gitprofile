@@ -14,11 +14,11 @@ const Project = () => {
 
         } else {
             return repo.slice(0, LIMIT).map((project, index) => (
-                <div className="card shadow-lg compact side bg-base-100">
+                <div className="card shadow-lg compact side bg-base-100" key={index}>
                     <div className="flex justify-between flex-col p-8">
                         <div>
                             <div className="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 mr-2 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 mr-2 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
                             <span>{project.name}</span>
                             </div>
                             <p className="mb-8">{project.description}</p>
@@ -36,8 +36,8 @@ const Project = () => {
     return (
         <Fragment>
             <div className="col-span-1 lg:col-span-2">
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="col-span-2">
+                <div className="grid grid-cols-2 gap-6">
+                    {/* <div className="col-span-2">
                         <div className="card shadow-lg compact side bg-base-100">
                             <div className="card-body">
                                 <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
@@ -48,7 +48,7 @@ const Project = () => {
                                             </h5>
                                             {
                                                 loading ? skeleton({width: 'w-8', height: 'h-8'}) : (
-                                                    <svg class="animate-bounce w-4 h-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <svg className="animate-bounce w-4 h-4" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                                     </svg>
                                                 )
@@ -58,8 +58,8 @@ const Project = () => {
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-span-2">
+                    </div> */}
+                    <div className="col-span-2">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {renderProjects()}
                         </div>

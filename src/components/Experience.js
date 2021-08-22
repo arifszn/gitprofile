@@ -10,13 +10,13 @@ const Experience = () => {
         let array = [];
         for (let index = 0; index < 2; index++) {
             array.push((
-                <li>
+                <li key={index}>
                     <span className="d-unset">
-                        <div class="block md:flex justify-between">
-                            <div class="font-medium">
+                        <div className="block justify-between">
+                            <div className="font-medium">
                                 {skeleton({ width: 'w-48', height: 'h-4', className: "mb-2" })}
                             </div>
-                            <div class="opacity-80">
+                            <div className="opacity-80">
                                 {skeleton({ width: 'w-32', height: 'h-4', className: "mb-2" })}
                             </div>
                         </div>
@@ -35,7 +35,7 @@ const Experience = () => {
         <>
             {
                 (typeof config.experiences !== 'undefined' && config.experiences.length !== 0) && (
-                    <div className="card shadow-lg compact side bg-base-100 col-span-1 lg:col-span-2">
+                    <div className="card shadow-lg compact side bg-base-100">
                         <div className="card-body">
                             <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
                                 <li>
@@ -48,13 +48,13 @@ const Experience = () => {
                                 {
                                     loading ? renderSkeleton() : (
                                         config.experiences.map((experience, index) => (
-                                            <li>
+                                            <li key={index}>
                                                 <span className="d-unset">
-                                                    <div class="block md:flex justify-between">
-                                                        <div class="font-medium">
+                                                    <div className="block justify-between">
+                                                        <div className="font-medium">
                                                             {experience.company}
                                                         </div>
-                                                        <div class="opacity-80">
+                                                        <div className="opacity-80">
                                                             {experience.from} - {experience.to}
                                                         </div>
                                                     </div>

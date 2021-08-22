@@ -24,11 +24,11 @@ const Skill = () => {
                 (typeof config.skills !== 'undefined' && config.skills.length !== 0) && (
                     <div className="card shadow-lg compact side bg-base-100">
                         <div className="card-body">
-                            <div className="inline-flex gap-2 flex-wrap justify-center">
+                            <div className="inline-flex gap-2 flex-wrap justify-center p-3">
                                 {
                                     loading ? renderSkeleton() : (
                                         config.skills.map((skill, index) => (
-                                            <div class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 badge-primary bg-opacity-75 rounded-full">
+                                            <div key={index} className="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 badge-primary bg-opacity-75 rounded-full">
                                                 {skill}
                                             </div>
                                         ))

@@ -8,7 +8,13 @@ module.exports = {
         'Laravel',
         'JavaScript',
         'React.js',
-        'Node.js'
+        'Node.js',
+        'Tailwind',
+        'Antd',
+        'CSS',
+        'Git',
+        'Mysql',
+        'Jquery',
     ],
     experiences: [
         { 

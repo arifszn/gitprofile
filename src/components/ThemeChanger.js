@@ -14,7 +14,7 @@ const ThemeChanger = () => {
     
     return (
         <div className="card shadow-lg compact side bg-base-100">
-            <div className="flex-row items-center space-x-4 card-body">
+            <div className="flex-row items-center space-x-4 card-body p-3">
                 <div className="flex-1">
                     <div className="section-title">
                         <h5 className="card-title">
@@ -26,10 +26,10 @@ const ThemeChanger = () => {
                 <div className="flex-0">
                     {
                         loading ? skeleton({width: 'w-28', height: 'h-10'}) : (
-                            <select class="select w-full max-w-xs opacity-50" value={theme} onChange={handleChange}>
+                            <select className="select w-full max-w-xs opacity-50" value={theme} onChange={handleChange}>
                                 {
                                     config.themeConfig.themes.map((item, index) => (
-                                        <option className="capitalize text-base-content text-opacity-60" value={item}>{item === config.themeConfig.default ? 'Default' : item}</option>
+                                        <option className="capitalize text-base-content text-opacity-60" value={item} key={index}>{item === config.themeConfig.default ? 'Default' : item}</option>
                                     ))
                                 }
                             </select>
