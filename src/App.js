@@ -2,7 +2,6 @@ import axios from "axios";
 import { Fragment, memo, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AvatarCard from "./components/AvatarCard";
-import Demo from "./components/Demo";
 import ErrorPage from "./components/ErrorPage";
 import ThemeChanger from "./components/ThemeChanger";
 import config from "./config";
@@ -10,6 +9,10 @@ import moment from 'moment';
 import { setLoading } from "./store/slices/loadingSlice";
 import { setProfile } from "./store/slices/profileSlice";
 import Details from "./components/Details";
+import Skill from "./components/Skill";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Project from "./components/Project";
 
 function App() {
     const dispatch = useDispatch();
@@ -73,7 +76,7 @@ function App() {
     return (
         <Fragment>
             <div className="fade-in h-screen">
-                <div className="p-4 lg:p-10 min-h-full bg-base-200">
+                
                     {
                         error ? (
                             <ErrorPage
@@ -104,19 +107,24 @@ function App() {
                                 }
                             />
                         ) : (
-                            <div className="grid grid-cols-1 gap-6 xl:grid-cols-3 lg:bg-base-200 rounded-box">
+                            <div className="p-4 lg:p-10 min-h-full bg-base-200">
+                            <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:bg-base-200 rounded-box">
                                 <div className="row-span-3">
                                     <div className="grid grid-cols-1 gap-6">
                                         {
                                             !config.themeConfig.disableSwitch && (
-                                                <ThemeChanger />
+                                                <ThemeChanger/>
                                             )
                                         }
-                                        <AvatarCard />
-                                        <Details />
+                                        <AvatarCard/>
+                                        <Details/>
+                                        <Skill/>
                                     </div>
                                 </div>
-                                <div className="card shadow-lg compact side bg-base-100">
+                                <Experience/>
+                                <Education/>
+                                <Project/>
+                                {/* <div className="card shadow-lg compact side bg-base-100">
                                     <div className="flex-row items-center space-x-4 card-body">
                                         <div>
                                             <div className="avatar">
@@ -206,11 +214,11 @@ function App() {
                                             </button>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
+                        </div>
                         )
                     }
-                </div>
             </div>
         </Fragment>
     );

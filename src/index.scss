@@ -33,36 +33,6 @@ code {
     monospace;
 }
 
-html:not([data-theme="dark"]), 
-html:not([data-theme="halloween"]), 
-html:not([data-theme="forest"]), 
-html:not([data-theme="black"]), 
-html:not([data-theme="synthwave"]),
-html:not([data-theme="aqua"]),
-html:not([data-theme="luxury"]),
-html:not([data-theme="dracula"]) {
-    @include meta.load-css("node_modules/antd/dist/antd.css", $with: null);
-
-    p, ul {
-        margin-bottom: 0;
-    }
-}
-
-html[data-theme="dark"], 
-html[data-theme="halloween"], 
-html[data-theme="forest"], 
-html[data-theme="black"],
-html[data-theme="synthwave"],
-html[data-theme="aqua"],
-html[data-theme="luxury"],
-html[data-theme="dracula"] {
-    @include meta.load-css("node_modules/antd/dist/antd.dark.css", $with: null);
-    
-    p, ul {
-        margin-bottom: 0;
-    }
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -86,6 +56,25 @@ svg {
     -ms-transform: scale(1.03) !important;
     -webkit-transform: scale(1.03) !important; 
     transform: scale(1.03) !important;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: .75rem;
+    line-height: 1rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    // text-transform: uppercase;
+    --tw-text-opacity: 0.6;
+    color: hsla(var(--bc)/var(--tw-text-opacity,1)) !important;
+}
+
+.d-unset {
+    display: unset !important;
+}
+
+.pb-0-important {
+    padding-bottom: 0 !important;
 }
 
 .fade-in {

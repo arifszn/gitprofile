@@ -6,38 +6,34 @@ import { GrLinkedinOption, GrMail } from 'react-icons/gr';
 import { ImDribbble } from 'react-icons/im';
 import { useSelector } from 'react-redux';
 import config from '../config';
+import { skeleton } from '../helpers/utils';
 
 const Details = () => {
     const profile = useSelector(state => state.profile);
     const loading = useSelector(state => state.loading);
+
+    const renderSkeleton = () => {
+        let array = [];
+        for (let index = 0; index < 4; index++) {
+            array.push((
+                <li key={index}>
+                    <span>
+                        {skeleton({width: 'w-6', height: 'h-4', className: 'mr-2'})}
+                        {skeleton({width: 'w-32', height: 'h-4'})}
+                    </span>
+                </li>
+            ))
+        }
+
+        return array;
+    }
 
     return (
         <div className="card shadow-lg compact side bg-base-100">
             <div className="card-body">
                 <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
                     {
-                        loading ? (
-                            <>
-                                <li>
-                                    <span>
-                                        <div className="bg-base-300 w-6 h-4 animate-pulse rounded-full mr-2" />
-                                        <div className="bg-base-300 w-32 h-4 animate-pulse rounded-full" />
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <div className="bg-base-300 w-6 h-4 animate-pulse rounded-full mr-2" />
-                                        <div className="bg-base-300 w-32 h-4 animate-pulse rounded-full" />
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>
-                                        <div className="bg-base-300 w-6 h-4 animate-pulse rounded-full mr-2" />
-                                        <div className="bg-base-300 w-32 h-4 animate-pulse rounded-full" />
-                                    </span>
-                                </li>
-                            </>
-                        ) : (
+                        loading ? renderSkeleton() : (
                             <>
                                 {
                                     profile && profile.location && (
@@ -146,7 +142,6 @@ const Details = () => {
                 </ul>
             </div>
         </div>
-        
     )
 }
 

@@ -1,6 +1,6 @@
-import { Image } from "antd";
 import { useSelector } from "react-redux";
-import { fallbackImage } from "../helpers/utils";
+import { fallbackImage, skeleton } from "../helpers/utils";
+import LazyImage from "./LazyImage";
 
 const imageHeight = 300;
 
@@ -13,39 +13,49 @@ const AvatarCard = () => {
             <figure>
                 {
                     loading ? (
-                        <div className="bg-base-300 w-full animate-pulse" style={{height: imageHeight}}/>
-                    ) : (
-                        <Image
-                            className="object-cover"
-                            src={profile.avatar ? profile.avatar : fallbackImage}
-                            fallback={fallbackImage}
-                            alt={profile.name}
-                            preview={false}
-                            width={'100%'}
-                            height={imageHeight}
-                            placeholder={
-                                <div className="bg-base-300 w-full animate-pulse" style={{height: imageHeight}}/>
+                        skeleton({
+                            width: 'w-full',
+                            shape: '',
+                            style: {
+                                height: imageHeight
                             }
+                        })
+                    ) : (
+                        <LazyImage
+                            className="object-cover w-full opacity-90"
+                            src={profile.avatar ? profile.avatar : fallbackImage}
+                            alt={profile.name}
+                            style={{height: imageHeight}}
+                            height={imageHeight}
+                            placeholder={skeleton({
+                                width: 'w-full',
+                                shape: '',
+                                style: {
+                                    height: imageHeight
+                                }
+                            })}
                         />
                     )
                 }
             </figure>
             <div className="flex-row items-center space-x-4 card-body">
                 <div>
-                    <h2 className="card-title">
+                    <div className="section-title">
+                        <h5 className="card-title">
+                            {
+                                loading ? (
+                                    skeleton({width: 'w-3/6', height: 'h-8'})
+                                ) : profile.name
+                            }
+                        </h5>
+                    </div>
+                    <span className="text-base-content text-opacity-40 text-justify">
                         {
                             loading ? (
-                                <div className="bg-base-300 w-3/6 h-8 animate-pulse rounded-full" />
-                            ) : profile.name
-                        }
-                    </h2>
-                    <p className="text-base-content text-opacity-40 text-justify">
-                        {
-                            loading ? (
-                                <div className="bg-base-300 w-48 h-4 animate-pulse rounded-full" />
+                                skeleton({width: 'w-48', height: 'h-4'})
                             ) : profile.bio
                         }
-                    </p>
+                    </span>
                 </div>
             </div>
         </div>
