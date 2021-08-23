@@ -29,7 +29,7 @@ const Details = () => {
     }
 
     return (
-        <div className="card shadow-lg compact side bg-base-100">
+        <div className="card shadow-lg compact bg-base-100">
             <div className="card-body">
                 <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
                     {

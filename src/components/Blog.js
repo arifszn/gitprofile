@@ -7,7 +7,7 @@ const Blog = () => {
     const loading = useSelector(state => state.loading);
 
     return (
-        <div className="card shadow-lg compact side bg-base-100">
+        <div className="card shadow-lg compact bg-base-100">
             <div className="flex-row items-center space-x-4 card-body">
                 <div className="flex-1">
                     <div className="section-title">

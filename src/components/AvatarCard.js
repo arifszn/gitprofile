@@ -10,52 +10,49 @@ const AvatarCard = () => {
 
     return (
         <div className="card shadow-lg compact bg-base-100">
-            <figure>
-                {
-                    loading ? (
-                        skeleton({
-                            width: 'w-full',
-                            shape: '',
-                            style: {
-                                height: imageHeight
-                            }
-                        })
-                    ) : (
-                        <LazyImage
-                            className="object-cover w-full opacity-90"
-                            src={profile.avatar ? profile.avatar : fallbackImage}
-                            alt={profile.name}
-                            style={{height: imageHeight}}
-                            height={imageHeight}
-                            placeholder={skeleton({
-                                width: 'w-full',
-                                shape: '',
-                                style: {
-                                    height: imageHeight
-                                }
-                            })}
-                        />
-                    )
-                }
-            </figure>
-            <div className="flex-row items-center space-x-4 card-body">
-                <div>
-                    <div className="section-title">
-                        <h5 className="card-title">
-                            {
-                                loading ? (
-                                    skeleton({width: 'w-3/6', height: 'h-8'})
-                                ) : profile.name
-                            }
-                        </h5>
-                    </div>
-                    <span className="text-base-content text-opacity-40 text-justify">
+            <div className="grid place-items-center py-8">
+                <div class="avatar">
+                    <div class={`mb-8 rounded-full w-32 h-32${!loading ? ' ring ring-primary ring-offset-base-100 ring-offset-2' : ''}`}>
                         {
                             loading ? (
-                                skeleton({width: 'w-48', height: 'h-4'})
+                                skeleton({
+                                    width: 'w-full',
+                                    height: 'h-full',
+                                    shape: '',
+                                })
+                            ) : (
+                                <LazyImage
+                                    className="opacity-90"
+                                    src={profile.avatar ? profile.avatar : fallbackImage}
+                                    alt={profile.name}
+                                    height={imageHeight}
+                                    placeholder={
+                                        skeleton({
+                                            width: 'w-full',
+                                            height: 'h-full',
+                                            shape: '',
+                                        })
+                                    }
+                                />
+                            )
+                        }
+                    </div>
+                </div>
+                <div className="text-center mx-8">
+                    <div className="text-lg font-extrabold">
+                        {
+                            loading ? (
+                                skeleton({ width: 'w-48', height: 'h-8' })
+                            ) : profile.name
+                        }
+                    </div>
+                    <div className="mt-3 text-sm text-base-content text-opacity-60">
+                        {
+                            loading ? (
+                                skeleton({ width: 'w-48', height: 'h-4' })
                             ) : profile.bio
                         }
-                    </span>
+                    </div>
                 </div>
             </div>
         </div>

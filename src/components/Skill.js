@@ -22,7 +22,7 @@ const Skill = () => {
         <>
             {
                 (typeof config.skills !== 'undefined' && config.skills.length !== 0) && (
-                    <div className="card shadow-lg compact side bg-base-100">
+                    <div className="card shadow-lg compact bg-base-100">
                         <div className="card-body">
                             <div className="inline-flex gap-2 flex-wrap justify-center p-3">
                                 {

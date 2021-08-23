@@ -13,7 +13,7 @@ const Project = () => {
         let array = [];
         for (let index = 0; index < LIMIT; index++) {
             array.push((
-                <div className="card shadow-lg compact side bg-base-100" key={index}>
+                <div className="card shadow-lg compact bg-base-100" key={index}>
                     <div className="flex justify-between flex-col p-8 h-full w-full">
                         <div>
                             <div className="flex items-center opacity-60">
@@ -23,10 +23,10 @@ const Project = () => {
                                     </h5>
                                 </span>
                             </div>
-                            <span className="mb-5 mt-1 text-base-content text-opacity-40 text-sm">
+                            <p className="mb-5 mt-1 text-base-content text-opacity-40 text-sm">
                                 {skeleton({width: 'w-full', height: 'h-4', className: 'mb-2'})}
                                 {skeleton({width: 'w-full', height: 'h-4'})}
-                            </span>
+                            </p>
                         </div>
                         <div className="flex justify-between text-sm text-base-content text-opacity-40">
                             <div className="flex flex-grow">
@@ -53,7 +53,7 @@ const Project = () => {
 
     const renderProjects = () => {
         return repo.slice(0, LIMIT).map((item, index) => (
-            <a href={item.html_url} target="_blank" rel="noreferrer" className="card shadow-lg compact side bg-base-100" key={index}>
+            <a href={item.html_url} target="_blank" rel="noreferrer" className="card shadow-lg compact bg-base-100" key={index}>
                 <div className="flex justify-between flex-col p-8 h-full w-full">
                     <div>
                         <div className="flex items-center opacity-60">
@@ -96,7 +96,7 @@ const Project = () => {
             <div className="col-span-1 lg:col-span-2">
                 <div className="grid grid-cols-2 gap-6">
                     {/* <div className="col-span-2">
-                        <div className="card shadow-lg compact side bg-base-100">
+                        <div className="card shadow-lg compact bg-base-100">
                             <div className="card-body">
                                 <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
                                     <li>
