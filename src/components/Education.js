@@ -16,7 +16,7 @@ const Education = () => {
                             <div className="font-medium">
                                 {skeleton({ width: 'w-48', height: 'h-4', className: "mb-2" })}
                             </div>
-                            <div className="opacity-80">
+                            <div className="opacity-90">
                                 {skeleton({ width: 'w-32', height: 'h-4', className: "mb-2" })}
                             </div>
                         </div>
@@ -54,7 +54,7 @@ const Education = () => {
                                                         <div className="font-medium">
                                                             {item.institution}
                                                         </div>
-                                                        <div className="opacity-80">
+                                                        <div className="opacity-90">
                                                             {item.from} - {item.to}
                                                         </div>
                                                     </div>

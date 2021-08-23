@@ -1,4 +1,5 @@
 import config from "../config";
+import colors from './colors.json';
 
 export const getThemeValue = () => {
     if (config.themeConfig.disableSwitch) {
@@ -10,7 +11,7 @@ export const getThemeValue = () => {
         return theme;
     }
 
-    if (config.themeConfig.respectPrefersColorScheme) {
+    if (config.themeConfig.respectPrefersColorScheme && !config.themeConfig.disableSwitch) {
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : config.themeConfig.default;
     }
 
@@ -19,6 +20,14 @@ export const getThemeValue = () => {
 
 export const skeleton = ({width = null, height = null, style = {}, shape = 'rounded-full', className = null}) => {
     return <div className={`bg-base-300 animate-pulse ${shape}${className ? ` ${className}` : ''}${width ? ` ${width}` : ''}${height ? ` ${height}` : ''}`} style={style}/>;
+}
+
+export const languageColor = (language) => {
+    if (typeof colors[language] !== 'undefined') {
+        return colors[language].color;
+    } else {
+        return 'gray';
+    }
 }
 
 export const fallbackImage = (

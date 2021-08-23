@@ -1,5 +1,5 @@
 module.exports = {
-    githubUsername: 'arifszn', // required
+    githubUsername: 'tailwindlabs', // required
     email: 'contact@arifszn.com', // optional
     linkedinUsername: 'ariful-alam', // optional
     dribbbleUsername: '', // optional
@@ -58,7 +58,7 @@ module.exports = {
         disableSwitch: false,
 
         // Should we use the prefers-color-scheme media-query,
-        // using user system preferences, instead of the hardcoded defaultMode
+        // using user system preferences, instead of the hardcoded default
         respectPrefersColorScheme: true,
 
         // Available themes
