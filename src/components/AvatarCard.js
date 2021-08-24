@@ -45,7 +45,7 @@ const AvatarCard = () => {
                     <div className="mt-3 text-base-content text-opacity-60">
                         {
                             loading ? (
-                                skeleton({ width: 'w-48', height: 'h-5', className: 'mt-4' })
+                                skeleton({ width: 'w-48', height: 'h-5' })
                             ) : profile.bio
                         }
                     </div>

@@ -1,11 +1,19 @@
 module.exports = {
     githubUsername: 'arifszn', // required
-    email: 'contact@arifszn.com', // optional
-    linkedinUsername: 'ariful-alam', // optional
-    dribbbleUsername: '', // optional
     blog: {
         source: 'dev.to', // medium | dev.to
         username: 'arifszn',
+    },
+    social: {
+        linkedin: 'ariful-alam',
+        twitter: 'arif_swozon',
+        facebook: '',
+        dribbble: '',
+        behance: '',
+        medium: '',
+        devto: '',
+        website: 'https://www.arifszn.com',
+        email: 'contact@arifszn.com'
     },
     skills: [
         'PHP',
@@ -65,7 +73,7 @@ module.exports = {
         // using user system preferences, instead of the hardcoded default
         respectPrefersColorScheme: true,
 
-        // Available themes
+        // Available themes. To remove any theme, exclude from here.
         themes: [
             'light',
             'dark',

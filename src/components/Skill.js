@@ -10,7 +10,7 @@ const Skill = () => {
         for (let index = 0; index < 12; index++) {
             array.push((
                 <div key={index}>
-                    {skeleton({width: 'w-16', height: 'h-4'})}
+                    {skeleton({ width: 'w-16', height: 'h-4' })}
                 </div>
             ))
         }
@@ -24,7 +24,7 @@ const Skill = () => {
                 (typeof config.skills !== 'undefined' && config.skills.length !== 0) && (
                     <div className="card shadow-lg compact bg-base-100">
                         <div className="card-body">
-                            <div className="inline-flex gap-2 flex-wrap justify-center p-3">
+                            <div className="inline-flex gap-2 flex-wrap p-3">
                                 {
                                     loading ? renderSkeleton() : (
                                         config.skills.map((skill, index) => (

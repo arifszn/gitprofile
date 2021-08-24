@@ -36,11 +36,13 @@ const Experience = () => {
                 (typeof config.experiences !== 'undefined' && config.experiences.length !== 0) && (
                     <div className="card shadow-lg compact bg-base-100">
                         <div className="card-body">
-                            <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
+                            <ul className="menu row-span-3 bg-base-100 text-base-content">
                                 <li>
-                                    <div className="section-title pb-0-important mx-5">
+                                    <div className="pb-0-important mx-5">
                                         <h5 className="card-title">
-                                            {loading ? skeleton({width: 'w-32', height: 'h-8'}) : 'Experience'}
+                                            {loading ? skeleton({width: 'w-32', height: 'h-8'}) : (
+                                                <span className="opacity-70">Experience</span>
+                                            )}
                                         </h5>
                                     </div>
                                 </li>
@@ -50,14 +52,14 @@ const Experience = () => {
                                             <li key={index}>
                                                 <span className="d-unset">
                                                     <div className="block justify-between">
-                                                        <div className="font-medium">
+                                                        <div className="font-medium opacity-70">
                                                             {experience.company}
                                                         </div>
-                                                        <div className="opacity-90">
+                                                        <div className="opacity-50">
                                                             {experience.from} - {experience.to}
                                                         </div>
                                                     </div>
-                                                    <div>
+                                                    <div className="opacity-70">
                                                         {experience.position}
                                                     </div>
                                                 </span>

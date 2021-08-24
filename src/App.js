@@ -39,8 +39,7 @@ function App() {
                 name: data.name,
                 bio: data.bio,
                 location: data.location,
-                company: data.company,
-                twitter: data.twitter_username,
+                company: data.company
             }
 
             dispatch(setProfile(profileData));

@@ -1,9 +1,9 @@
-import { GoLocation } from 'react-icons/go';
-import { AiFillGithub } from 'react-icons/ai';
+import { MdLocationOn, MdMail } from 'react-icons/md';
+import { AiFillGithub, AiFillMediumSquare } from 'react-icons/ai';
 import { SiTwitter } from 'react-icons/si';
-import { BiBuilding } from 'react-icons/bi';
-import { GrLinkedinOption, GrMail } from 'react-icons/gr';
-import { ImDribbble } from 'react-icons/im';
+import { GrLinkedinOption } from 'react-icons/gr';
+import { CgDribbble } from 'react-icons/cg';
+import { FaBehanceSquare, FaBuilding, FaDev, FaFacebook, FaGlobe } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import config from '../config';
 import { skeleton } from '../helpers/utils';
@@ -18,8 +18,8 @@ const Details = () => {
             array.push((
                 <li key={index}>
                     <span>
-                        {skeleton({width: 'w-6', height: 'h-4', className: 'mr-2'})}
-                        {skeleton({width: 'w-32', height: 'h-4'})}
+                        {skeleton({ width: 'w-6', height: 'h-4', className: 'mr-2' })}
+                        {skeleton({ width: 'w-32', height: 'h-4' })}
                     </span>
                 </li>
             ))
@@ -31,7 +31,7 @@ const Details = () => {
     return (
         <div className="card shadow-lg compact bg-base-100">
             <div className="card-body">
-                <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
+                <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-60">
                     {
                         loading ? renderSkeleton() : (
                             <>
@@ -39,7 +39,7 @@ const Details = () => {
                                     profile && profile.location && (
                                         <li>
                                             <span>
-                                                <GoLocation className="mr-2"/>
+                                                <MdLocationOn className="mr-2" />
                                                 {profile.location}
                                             </span>
                                         </li>
@@ -49,7 +49,7 @@ const Details = () => {
                                     profile && profile.company && (
                                         <li>
                                             <span>
-                                                <BiBuilding className="mr-2"/>
+                                                <FaBuilding className="mr-2" />
                                                 {profile.company}
                                             </span>
                                         </li>
@@ -57,9 +57,9 @@ const Details = () => {
                                 }
                                 <li>
                                     <span>
-                                        <AiFillGithub className="mr-2"/>
-                                        <a 
-                                            href={`https://github.com/${config.githubUsername}`} 
+                                        <AiFillGithub className="mr-2" />
+                                        <a
+                                            href={`https://github.com/${config.githubUsername}`}
                                             target="_blank"
                                             rel="noreferrer"
                                             className="text-base-content-important"
@@ -69,68 +69,153 @@ const Details = () => {
                                     </span>
                                 </li>
                                 {
-                                    profile && profile.twitter && (
+                                    typeof config.social.linkedin !== 'undefined' && config.social.linkedin && (
                                         <li>
                                             <span>
-                                                <SiTwitter className="mr-2"/>
-                                                <a 
-                                                    href={`https://twitter.com/${profile.twitter}`} 
+                                                <GrLinkedinOption className="mr-2" />
+                                                <a
+                                                    href={`https://www.linkedin.com/in/${config.social.linkedin}`}
                                                     target="_blank"
                                                     rel="noreferrer"
                                                     className="text-base-content-important"
                                                 >
-                                                    {profile.twitter}
+                                                    {config.social.linkedin}
                                                 </a>
                                             </span>
                                         </li>
                                     )
                                 }
                                 {
-                                    typeof config.linkedinUsername !== 'undefined' && config.linkedinUsername && (
+                                    typeof config.social.twitter !== 'undefined' && config.social.twitter && (
                                         <li>
                                             <span>
-                                                <GrLinkedinOption className="mr-2"/>
-                                                <a 
-                                                    href={`https://www.linkedin.com/in/${config.linkedinUsername}`} 
+                                                <SiTwitter className="mr-2" />
+                                                <a
+                                                    href={`https://twitter.com/${config.social.twitter}`}
                                                     target="_blank"
                                                     rel="noreferrer"
                                                     className="text-base-content-important"
                                                 >
-                                                    {config.linkedinUsername}
+                                                    {config.social.twitter}
                                                 </a>
                                             </span>
                                         </li>
                                     )
                                 }
                                 {
-                                    typeof config.dribbbleUsername !== 'undefined' && config.dribbbleUsername && (
+                                    typeof config.social.dribbble !== 'undefined' && config.social.dribbble && (
                                         <li>
                                             <span>
-                                                <ImDribbble className="mr-2"/>
-                                                <a 
-                                                    href={`https://dribbble.com/${config.dribbbleUsername}`} 
+                                                <CgDribbble className="mr-2" />
+                                                <a
+                                                    href={`https://dribbble.com/${config.social.dribbble}`}
                                                     target="_blank"
                                                     rel="noreferrer"
                                                     className="text-base-content-important"
                                                 >
-                                                    {config.dribbbleUsername}
+                                                    {config.social.dribbble}
                                                 </a>
                                             </span>
                                         </li>
                                     )
                                 }
                                 {
-                                    typeof config.email !== 'undefined' && config.email && (
+                                    typeof config.social.behance !== 'undefined' && config.social.behance && (
                                         <li>
                                             <span>
-                                                <GrMail className="mr-2"/>
-                                                <a 
-                                                    href={`mailto:${config.email}`} 
+                                                <FaBehanceSquare className="mr-2" />
+                                                <a
+                                                    href={`https://www.behance.net/${config.social.behance}`}
                                                     target="_blank"
                                                     rel="noreferrer"
                                                     className="text-base-content-important"
                                                 >
-                                                    {config.email}
+                                                    {config.social.behance}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    typeof config.social.facebook !== 'undefined' && config.social.facebook && (
+                                        <li>
+                                            <span>
+                                                <FaFacebook className="mr-2" />
+                                                <a
+                                                    href={`https://www.facebook.com/${config.social.facebook}`}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {config.social.facebook}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    typeof config.social.medium !== 'undefined' && config.social.medium && (
+                                        <li>
+                                            <span>
+                                                <AiFillMediumSquare className="mr-2" />
+                                                <a
+                                                    href={`https://medium.com/@${config.social.medium}`}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {config.social.medium}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    typeof config.social.devto !== 'undefined' && config.social.devto && (
+                                        <li>
+                                            <span>
+                                                <FaDev className="mr-2" />
+                                                <a
+                                                    href={`https://dev.to/${config.social.devto}`}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {config.social.devto}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    typeof config.social.website !== 'undefined' && config.social.website && (
+                                        <li>
+                                            <span>
+                                                <FaGlobe className="mr-2" />
+                                                <a
+                                                    href={`${config.social.website}`}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {config.social.website}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    typeof config.social.email !== 'undefined' && config.social.email && (
+                                        <li>
+                                            <span>
+                                                <MdMail className="mr-2" />
+                                                <a
+                                                    href={`mailto:${config.social.email}`}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {config.social.email}
                                                 </a>
                                             </span>
                                         </li>
