@@ -95,8 +95,8 @@ const Project = () => {
         <Fragment>
             <div className="col-span-1 lg:col-span-2">
                 <div className="grid grid-cols-2 gap-6">
-                    {/* <div className="col-span-2">
-                        <div className="card shadow-lg compact bg-base-100">
+                    <div className="col-span-2">
+                        <div className="card compact bg-base-100">
                             <div className="card-body">
                                 <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
                                     <li>
@@ -116,7 +116,7 @@ const Project = () => {
                                 </ul>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
                     <div className="col-span-2">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {(loading || !repo) ? renderSkeleton() : renderProjects()}

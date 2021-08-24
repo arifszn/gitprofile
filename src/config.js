@@ -3,6 +3,10 @@ module.exports = {
     email: 'contact@arifszn.com', // optional
     linkedinUsername: 'ariful-alam', // optional
     dribbbleUsername: '', // optional
+    blog: {
+        source: 'dev.to', // medium | dev.to
+        username: 'arifszn',
+    },
     skills: [
         'PHP',
         'Laravel',

@@ -153,6 +153,7 @@ function App() {
                                 <div className="lg:col-span-2 col-span-1">
                                     <div className="grid grid-cols-1 gap-6">
                                         <Project />
+                                        <Blog />
                                     </div>
                                 </div>
                             </div>

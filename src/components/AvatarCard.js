@@ -39,13 +39,15 @@ const AvatarCard = () => {
                     </div>
                 </div>
                 <div className="text-center mx-8">
-                    <div className="text-lg font-extrabold">
-                        {
+                    <span class="opacity-60">
+                        <h5 className="card-title font-extrabold">
+                            {
                             loading ? (
                                 skeleton({ width: 'w-48', height: 'h-8' })
-                            ) : profile.name
+                            ) : <span className="opacity-60">{profile.name}</span>
                         }
-                    </div>
+                        </h5>
+                    </span>
                     <div className="mt-3 text-sm text-base-content text-opacity-60">
                         {
                             loading ? (
