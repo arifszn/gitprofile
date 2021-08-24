@@ -1,7 +1,8 @@
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
 import { languageColor, skeleton } from "../helpers/utils";
-import { AiFillStar, AiOutlineFork } from 'react-icons/ai';
+import { AiFillStar } from 'react-icons/ai';
+import { VscSourceControl } from 'react-icons/vsc';
 
 const LIMIT = 8;
 
@@ -75,7 +76,7 @@ const Project = () => {
                                 <span>{item.stargazers_count}</span>
                             </span>
                             <span className="flex items-center">
-                                <AiOutlineFork/>
+                                <VscSourceControl/>
                                 <span>{item.forks_count}</span>
                             </span>
                         </div>
@@ -96,7 +97,7 @@ const Project = () => {
             <div className="col-span-1 lg:col-span-2">
                 <div className="grid grid-cols-2 gap-6">
                     <div className="col-span-2">
-                        <div className="card compact bg-base-100">
+                        <div className="card compact bg-base-100 shadow-sm">
                             <div className="card-body">
                                 <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
                                     <li>

@@ -38,7 +38,7 @@ const Blog = () => {
         <div className="col-span-1 lg:col-span-2">
                 <div className="grid grid-cols-2 gap-6">
                     <div className="col-span-2">
-                        <div className="card compact bg-base-100">
+                        <div className="card compact bg-base-100 shadow-sm">
                             <div className="card-body">
                                 <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
                                     <li>
