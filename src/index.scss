@@ -53,13 +53,9 @@ svg {
 .z-hover:focus,
 .z-hover:active {
     transition: transform 0.3s !important;
-    -ms-transform: scale(1.03) !important;
-    -webkit-transform: scale(1.03) !important; 
-    transform: scale(1.03) !important;
-}
-
-.d-unset {
-    display: unset !important;
+    -ms-transform: scale(1.01) !important;
+    -webkit-transform: scale(1.01) !important; 
+    transform: scale(1.01) !important;
 }
 
 .pb-0-important {

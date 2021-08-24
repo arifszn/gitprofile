@@ -1,8 +1,10 @@
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
 import { languageColor, skeleton } from "../helpers/utils";
-import { AiFillStar } from 'react-icons/ai';
+import { AiFillStar, AiOutlineFork } from 'react-icons/ai';
 import { VscSourceControl } from 'react-icons/vsc';
+import config from "../config";
+import { CgGitFork } from "react-icons/cg";
 
 const LIMIT = 8;
 
@@ -17,30 +19,30 @@ const Project = () => {
                 <div className="card shadow-lg compact bg-base-100" key={index}>
                     <div className="flex justify-between flex-col p-8 h-full w-full">
                         <div>
-                            <div className="flex items-center opacity-60">
+                            <div className="flex items-center">
                                 <span>
                                     <h5 className="card-title">
-                                        {skeleton({width: 'w-32', height: 'h-8'})}
+                                        {skeleton({ width: 'w-32', height: 'h-8' })}
                                     </h5>
                                 </span>
                             </div>
-                            <div className="mb-5 mt-1 text-base-content text-opacity-40 text-sm">
-                                {skeleton({width: 'w-full', height: 'h-4', className: 'mb-2'})}
-                                {skeleton({width: 'w-full', height: 'h-4'})}
+                            <div className="mb-5 mt-1">
+                                {skeleton({ width: 'w-full', height: 'h-4', className: 'mb-2' })}
+                                {skeleton({ width: 'w-full', height: 'h-4' })}
                             </div>
                         </div>
-                        <div className="flex justify-between text-sm text-base-content text-opacity-40">
+                        <div className="flex justify-between">
                             <div className="flex flex-grow">
                                 <span className="mr-3 flex items-center">
-                                    {skeleton({width: 'w-12', height: 'h-4'})}
+                                    {skeleton({ width: 'w-12', height: 'h-4' })}
                                 </span>
                                 <span className="flex items-center">
-                                    {skeleton({width: 'w-12', height: 'h-4'})}
+                                    {skeleton({ width: 'w-12', height: 'h-4' })}
                                 </span>
                             </div>
                             <div>
                                 <span className="flex items-center">
-                                    {skeleton({width: 'w-12', height: 'h-4'})}
+                                    {skeleton({ width: 'w-12', height: 'h-4' })}
                                 </span>
                             </div>
                         </div>
@@ -65,24 +67,24 @@ const Project = () => {
                                 </h5>
                             </span>
                         </div>
-                        <p className="mb-5 mt-1 text-base-content text-opacity-40 text-sm">
+                        <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
                             {item.description}
                         </p>
                     </div>
-                    <div className="flex justify-between text-sm text-base-content text-opacity-40">
+                    <div className="flex justify-between text-sm text-base-content text-opacity-60">
                         <div className="flex flex-grow">
                             <span className="mr-3 flex items-center">
-                                <AiFillStar/>
+                                <AiFillStar />
                                 <span>{item.stargazers_count}</span>
                             </span>
                             <span className="flex items-center">
-                                <VscSourceControl/>
+                                <AiOutlineFork />
                                 <span>{item.forks_count}</span>
                             </span>
                         </div>
                         <div>
                             <span className="flex items-center">
-                                <div className="w-3 h-3 rounded-full mr-1 opacity-75" style={{backgroundColor: languageColor(item.language)}}/>
+                                <div className="w-3 h-3 rounded-full mr-1 opacity-60" style={{ backgroundColor: languageColor(item.language) }} />
                                 <span>{item.language}</span>
                             </span>
                         </div>
@@ -99,17 +101,26 @@ const Project = () => {
                     <div className="col-span-2">
                         <div className="card compact bg-base-100 shadow-sm">
                             <div className="card-body">
-                                <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
+                                <ul className="menu row-span-3 bg-base-100 text-base-content">
                                     <li>
-                                        <div className="section-title pb-0-important mx-5 flex items-center">
-                                            <h5 className="card-title mr-3">
-                                                {loading ? skeleton({width: 'w-28', height: 'h-8'}) : 'Project'}
+                                        <div className="pb-0-important mx-4 flex items-center justify-between">
+                                            <h5 className="card-title">
+                                                {
+                                                    loading ? skeleton({ width: 'w-28', height: 'h-8' }) : (
+                                                        <span className="opacity-70">My Projects</span>
+                                                    )
+                                                }
                                             </h5>
                                             {
-                                                loading ? skeleton({width: 'w-8', height: 'h-8'}) : (
-                                                    <svg className="animate-bounce w-4 h-4" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                                    </svg>
+                                                loading ? skeleton({ width: 'w-10', height: 'h-5' }) : (
+                                                    <a
+                                                        href={`https://github.com/${config.githubUsername}?tab=repositories`}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        className="opacity-50"
+                                                    >
+                                                        See All
+                                                    </a>
                                                 )
                                             }
                                         </div>

@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setTheme } from '../store/slices/themeSlice';
 import config from '../config';
 import { skeleton } from '../helpers/utils';
-import { memo } from 'react';
 import { AiOutlineControl } from 'react-icons/ai';
 
 const ThemeChanger = () => {
@@ -71,4 +70,4 @@ const ThemeChanger = () => {
     )
 }
 
-export default memo(ThemeChanger);
+export default ThemeChanger;

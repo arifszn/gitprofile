@@ -1,6 +1,6 @@
 import { getDevtoArticle, getMediumArticle } from "article-api";
 import moment from "moment";
-import { memo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CgHashtag } from 'react-icons/cg';
 import config from "../config";
 import { skeleton } from "../helpers/utils";
@@ -105,4 +105,4 @@ const Blog = () => {
     )
 }
 
-export default memo(Blog);
+export default Blog;

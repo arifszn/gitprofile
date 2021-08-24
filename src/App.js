@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Fragment, memo, useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AvatarCard from "./components/AvatarCard";
 import ErrorPage from "./components/ErrorPage";
@@ -92,7 +92,7 @@ function App() {
     }, [dispatch])
 
     useEffect(() => {
-        loadData();
+        // loadData();
     }, [loadData])
 
     return (
@@ -160,4 +160,4 @@ function App() {
     );
 }
 
-export default memo(App);
+export default App;
