@@ -61,7 +61,7 @@ const Experience = () => {
                                                             <div className="font-medium opacity-70">
                                                                 {experience.company}
                                                             </div>
-                                                            <div className="opacity-40">
+                                                            <div className="opacity-50">
                                                                 {experience.from} - {experience.to}
                                                             </div>
                                                         </div>

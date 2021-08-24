@@ -2,11 +2,14 @@ import { getDevtoArticle, getMediumArticle } from "article-api";
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { CgHashtag } from 'react-icons/cg';
+import { useSelector } from "react-redux";
 import config from "../config";
 import { skeleton } from "../helpers/utils";
+import LazyImage from "./LazyImage";
 
 const Blog = () => {
     const [articles, setArticles] = useState(null);
+    const loading = useSelector(state => state.loading);
 
     useEffect(() => {
         if (
@@ -34,74 +37,127 @@ const Blog = () => {
         }
     }, [])
 
-    return (
-        <div className="col-span-1 lg:col-span-2">
-                <div className="grid grid-cols-2 gap-6">
-                    <div className="col-span-2">
-                        <div className="card compact bg-base-100 shadow-sm">
-                            <div className="card-body">
-                                <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-40">
-                                    <li>
-                                        <div className="section-title pb-0-important mx-5 flex items-center">
-                                            <h5 className="card-title mr-3">
-                                                {!articles ? skeleton({width: 'w-28', height: 'h-8'}) : 'Recent Posts'}
-                                            </h5>
-                                            {
-                                                !articles ? skeleton({width: 'w-8', height: 'h-8'}) : (
-                                                    <svg className="animate-bounce w-4 h-4" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                                                    </svg>
-                                                )
-                                            }
+    const renderSkeleton = () => {
+        let array = [];
+        for (let index = 0; index < 2; index++) {
+            array.push((
+                <div className="card shadow-lg compact bg-base-100" key={index}>
+                    <div className="p-8 h-full w-full">
+                        <div className="flex items-center flex-col md:flex-row">
+                            <div className="avatar mb-5 md:mb-0">
+                                <div className="w-24 h-24 mask mask-squircle">
+                                    {
+                                        skeleton({
+                                            width: 'w-full',
+                                            height: 'h-full',
+                                            shape: '',
+                                        })
+                                    }
+                                </div>
+                            </div>
+                            <div className="w-full">
+                                <div className="flex items-start px-4">
+                                    <div className="w-full">
+                                        <h2>
+                                            {skeleton({ width: 'w-48', height: 'h-8', className: 'mb-2 mx-auto md:mx-0' })}
+                                        </h2>
+                                        {skeleton({ width: 'w-24', height: 'h-3', className: 'mx-auto md:mx-0' })}
+                                        <div className="mt-3">
+                                            {skeleton({ width: 'w-full', height: 'h-4', className: 'mx-auto md:mx-0' })}
                                         </div>
-                                    </li>
-                                </ul>
+                                        <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
+                                            {skeleton({ width: 'w-32', height: 'h-4', className: "md:mr-2 mx-auto md:mx-0" })}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-2">
-                        <div className="grid grid-cols-1 gap-6">
-                            {
-                                articles && articles.slice(0, 5).map((article, index) => (
-                                    <a href={article.link} target="_blank" rel="noreferrer" className="card shadow-lg compact bg-base-100" key={index}>
-                                    <div className="p-8 h-full w-full">
-                                            <div className="flex items-center flex-col md:flex-row">
-                                                <div className="avatar mb-5 md:mb-0">
-                                                    <div className="w-24 h-24 mask mask-squircle">
-                                                        <img src={article.thumbnail} alt={'thumbnail'}/>
-                                                    </div>
+                </div>
+            ))
+        }
+
+        return array;
+    }
+
+    const renderArticles = () => {
+        return articles && articles.slice(0, 5).map((article, index) => (
+            <a href={article.link} target="_blank" rel="noreferrer" className="card shadow-lg compact bg-base-100" key={index}>
+                <div className="p-8 h-full w-full">
+                    <div className="flex items-center flex-col md:flex-row">
+                        <div className="avatar mb-5 md:mb-0">
+                            <div className="w-24 h-24 mask mask-squircle">
+                                <LazyImage
+                                    src={article.thumbnail} 
+                                    alt={'thumbnail'}
+                                    placeholder={
+                                        skeleton({
+                                            width: 'w-full',
+                                            height: 'h-full',
+                                            shape: '',
+                                        })
+                                    }
+                                />
+                            </div>
+                        </div>
+                        <div className="w-full">
+                            <div className="flex items-start px-4">
+                                <div className="text-center md:text-left w-full">
+                                    <h2 className="text-lg font-semibold text-base-content opacity-60">{article.title}</h2>
+                                    <p className="opacity-50 text-xs">
+                                        {moment(article.publishedAt).fromNow()}
+                                    </p>
+                                    <p className="mt-3 text-base-content text-opacity-60 text-sm">
+                                        {article.description}
+                                    </p>
+                                    <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
+                                        {
+                                            article.categories.map((category, index2) => (
+                                                <div key={index2} className="flex text-sm mr-3 items-center opacity-50 font-bold font-mono">
+                                                    <CgHashtag />
+                                                    <span>{category}</span>
                                                 </div>
-                                                <div className="w-full">
-                                                    <div className="flex items-start px-4">
-                                                        <div className="text-center md:text-left">
-                                                            <h2 className="text-lg font-semibold text-gray-900 -mt-1">{article.title}</h2>
-                                                            <p className="text-gray-700">{moment(article.publishedAt).fromNow()}</p>
-                                                            <p className="mt-3 text-gray-700 text-sm">
-                                                                {article.description}
-                                                            </p>
-                                                            <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
-                                                                {
-                                                                    article.categories.map((category, index2) => (
-                                                                        <div key={index2} className="flex text-gray-700 text-sm mr-3 items-center">
-                                                                            <CgHashtag/>
-                                                                            <span>{category}</span>
-                                                                        </div>
-                                                                    ))
-                                                                }
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </a>
-                                        
-                                ))
-                            }
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </a>
+        ))
+    }
+
+    return (
+        <div className="col-span-1 lg:col-span-2">
+            <div className="grid grid-cols-2 gap-6">
+                <div className="col-span-2">
+                    <div className="card compact bg-base-100 shadow-sm">
+                        <div className="card-body">
+                            <ul className="menu row-span-3 bg-base-100 text-base-content">
+                                <li>
+                                    <div className="pb-0-important mx-4 flex items-center justify-between">
+                                        <h5 className="card-title">
+                                            {
+                                                (loading || !articles) ? skeleton({ width: 'w-28', height: 'h-8' }) : (
+                                                    <span className="opacity-70">Recent Posts</span>
+                                                )
+                                            }
+                                        </h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-span-2">
+                    <div className="grid grid-cols-1 gap-6">
+                        {(loading || !articles) ? renderSkeleton() : renderArticles()}
+                    </div>
+                </div>
             </div>
+        </div>
     )
 }
 

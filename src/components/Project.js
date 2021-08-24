@@ -2,9 +2,7 @@ import { Fragment } from "react";
 import { useSelector } from "react-redux";
 import { languageColor, skeleton } from "../helpers/utils";
 import { AiFillStar, AiOutlineFork } from 'react-icons/ai';
-import { VscSourceControl } from 'react-icons/vsc';
 import config from "../config";
-import { CgGitFork } from "react-icons/cg";
 
 const LIMIT = 8;
 

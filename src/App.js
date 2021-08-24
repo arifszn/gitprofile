@@ -92,7 +92,7 @@ function App() {
     }, [dispatch])
 
     useEffect(() => {
-        // loadData();
+        loadData();
     }, [loadData])
 
     return (

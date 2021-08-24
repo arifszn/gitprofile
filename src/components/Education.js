@@ -63,7 +63,7 @@ const Education = () => {
                                                             <div className="font-medium opacity-70">
                                                                 {item.institution}
                                                             </div>
-                                                            <div className="opacity-40">
+                                                            <div className="opacity-50">
                                                                 {item.from} - {item.to}
                                                             </div>
                                                         </div>
