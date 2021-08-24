@@ -23,10 +23,10 @@ const Project = () => {
                                     </h5>
                                 </span>
                             </div>
-                            <p className="mb-5 mt-1 text-base-content text-opacity-40 text-sm">
+                            <div className="mb-5 mt-1 text-base-content text-opacity-40 text-sm">
                                 {skeleton({width: 'w-full', height: 'h-4', className: 'mb-2'})}
                                 {skeleton({width: 'w-full', height: 'h-4'})}
-                            </p>
+                            </div>
                         </div>
                         <div className="flex justify-between text-sm text-base-content text-opacity-40">
                             <div className="flex flex-grow">

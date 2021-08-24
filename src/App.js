@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Fragment, memo, useEffect, useState } from "react";
+import { Fragment, memo, useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AvatarCard from "./components/AvatarCard";
 import ErrorPage from "./components/ErrorPage";
@@ -29,56 +29,24 @@ function App() {
         }
     }, [theme])
 
-    useEffect(() => {
-        loadData();
-    }, [])
-
-    const loadData = () => {
+    const loadData = useCallback(() => {
         axios.get(`https://api.github.com/users/${config.githubUsername}`)
-            .then(response => {
-                let data = response.data;
+        .then(response => {
+            let data = response.data;
 
-                let profileData = {
-                    avatar: data.avatar_url,
-                    name: data.name,
-                    bio: data.bio,
-                    location: data.location,
-                    company: data.company,
-                    twitter: data.twitter_username,
-                }
+            let profileData = {
+                avatar: data.avatar_url,
+                name: data.name,
+                bio: data.bio,
+                location: data.location,
+                company: data.company,
+                twitter: data.twitter_username,
+            }
 
-                dispatch(setProfile(profileData));
-            })
-            .then(() => {
-                loadRepo();
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-
-                try {
-                    setRateLimit({
-                        remaining: error.response.headers['x-ratelimit-remaining'],
-                        reset: moment(new Date(error.response.headers['x-ratelimit-reset'] * 1000)).fromNow(),
-                    });
-
-                    if (error.response.status === 403) {
-                        setError(403);
-                    } else if (error.response.status === 404) {
-                        setError(404);
-                    } else {
-                        setError(500);
-                    }
-                } catch (error2) {
-                    setError(500);
-                }
-            })
-            .finally(() => {
-                dispatch(setLoading(false));
-            });
-    }
-
-    const loadRepo = () => {
-        axios.get(`https://api.github.com/search/repositories?q=user:${config.githubUsername}+&s=stars&type=Repositories`)
+            dispatch(setProfile(profileData));
+        })
+        .then(() => {
+            axios.get(`https://api.github.com/search/repositories?q=user:${config.githubUsername}+&s=stars&type=Repositories`)
             .then(response => {
                 let data = response.data;
 
@@ -98,7 +66,35 @@ function App() {
                     console.error('Error:', error2);
                 }
             });
-    }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+
+            try {
+                setRateLimit({
+                    remaining: error.response.headers['x-ratelimit-remaining'],
+                    reset: moment(new Date(error.response.headers['x-ratelimit-reset'] * 1000)).fromNow(),
+                });
+
+                if (error.response.status === 403) {
+                    setError(403);
+                } else if (error.response.status === 404) {
+                    setError(404);
+                } else {
+                    setError(500);
+                }
+            } catch (error2) {
+                setError(500);
+            }
+        })
+        .finally(() => {
+            dispatch(setLoading(false));
+        });
+    }, [dispatch])
+
+    useEffect(() => {
+        loadData();
+    }, [loadData])
 
     return (
         <Fragment>

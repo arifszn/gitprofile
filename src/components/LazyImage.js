@@ -1,6 +1,6 @@
 import { useState, Fragment, useEffect } from 'react';
 
-const LazyImage = ({ placeholder, src, ...rest }) => {
+const LazyImage = ({ placeholder, src, alt, ...rest }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -10,7 +10,7 @@ const LazyImage = ({ placeholder, src, ...rest }) => {
         imageToLoad.onload = () => {
             setLoading(false);
         }
-    }, [])
+    }, [src])
 
     return (
         <Fragment>
@@ -18,6 +18,7 @@ const LazyImage = ({ placeholder, src, ...rest }) => {
                 loading ? placeholder : (
                     <img
                         src={src}
+                        alt={alt}
                         {...rest}
                     />
                 )

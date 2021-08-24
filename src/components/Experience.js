@@ -1,4 +1,3 @@
-import { AiFillGithub } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import config from "../config";
 import { skeleton } from "../helpers/utils";

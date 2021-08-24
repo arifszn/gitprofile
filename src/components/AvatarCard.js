@@ -11,8 +11,8 @@ const AvatarCard = () => {
     return (
         <div className="card shadow-lg compact bg-base-100">
             <div className="grid place-items-center py-8">
-                <div class="avatar">
-                    <div class={`mb-8 rounded-full w-32 h-32${!loading ? ' ring ring-primary ring-offset-base-100 ring-offset-2' : ''}`}>
+                <div className="avatar">
+                    <div className={`mb-8 rounded-full w-32 h-32${!loading ? ' ring ring-primary ring-offset-base-100 ring-offset-2' : ''}`}>
                         {
                             loading ? (
                                 skeleton({
@@ -39,7 +39,7 @@ const AvatarCard = () => {
                     </div>
                 </div>
                 <div className="text-center mx-8">
-                    <span class="opacity-60">
+                    <span className="opacity-60">
                         <h5 className="card-title font-extrabold">
                             {
                             loading ? (
