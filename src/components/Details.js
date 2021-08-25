@@ -59,12 +59,12 @@ const Details = () => {
                                     <span>
                                         <AiFillGithub className="mr-2" />
                                         <a
-                                            href={`https://github.com/${config.githubUsername}`}
+                                            href={`https://github.com/${config.github.username}`}
                                             target="_blank"
                                             rel="noreferrer"
                                             className="text-base-content-important"
                                         >
-                                            {config.githubUsername}
+                                            {config.github.username}
                                         </a>
                                     </span>
                                 </li>

@@ -39,7 +39,7 @@ const Blog = () => {
 
     const renderSkeleton = () => {
         let array = [];
-        for (let index = 0; index < 2; index++) {
+        for (let index = 0; index < config.blog.limit; index++) {
             array.push((
                 <div className="card shadow-lg compact bg-base-100" key={index}>
                     <div className="p-8 h-full w-full">
@@ -81,8 +81,14 @@ const Blog = () => {
     }
 
     const renderArticles = () => {
-        return articles && articles.slice(0, 5).map((article, index) => (
-            <a href={article.link} target="_blank" rel="noreferrer" className="card shadow-lg compact bg-base-100" key={index}>
+        return articles && articles.slice(0, config.blog.limit).map((article, index) => (
+            <div 
+                className="card shadow-lg compact bg-base-100 cursor-pointer" 
+                key={index}
+                onClick={() => {
+                    window.open(article.link, '_blank')
+                }}
+            >
                 <div className="p-8 h-full w-full">
                     <div className="flex items-center flex-col md:flex-row">
                         <div className="avatar mb-5 md:mb-0 opacity-90">
@@ -103,7 +109,7 @@ const Blog = () => {
                         <div className="w-full">
                             <div className="flex items-start px-4">
                                 <div className="text-center md:text-left w-full">
-                                    <h2 className="text-lg font-semibold text-base-content opacity-60">{article.title}</h2>
+                                    <h2 className="font-semibold text-base-content opacity-60">{article.title}</h2>
                                     <p className="opacity-50 text-xs">
                                         {moment(article.publishedAt).fromNow()}
                                     </p>
@@ -125,7 +131,7 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
         ))
     }
 
