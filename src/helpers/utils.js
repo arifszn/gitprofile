@@ -53,3 +53,18 @@ export const ga = {
         }
     }
 }
+
+export const isThemeDarkish = (theme) => {
+    if (
+        theme === 'dark' ||
+        theme === 'halloween' ||
+        theme === 'forest' ||
+        theme === 'black' ||
+        theme === 'luxury' ||
+        theme === 'dracula'
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+}

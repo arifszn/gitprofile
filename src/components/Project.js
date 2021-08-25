@@ -56,13 +56,17 @@ const Project = () => {
                 className="card shadow-lg compact bg-base-100 cursor-pointer"
                 key={index}
                 onClick={() => {
-                    if (config.googleAnalytics.id) {
-                        ga.event({
-                            action: "Click project",
-                            params: {
-                                project: item.name
-                            }
-                        });
+                    try {
+                        if (config.googleAnalytics.id) {
+                            ga.event({
+                                action: "Click project",
+                                params: {
+                                    project: item.name
+                                }
+                            });
+                        }
+                    } catch (error) {
+                        console.error(error);
                     }
 
                     window.open(item.html_url, '_blank')

@@ -15,11 +15,7 @@ import Education from "./components/Education";
 import Project from "./components/Project";
 import { setRepo } from "./store/slices/repoSlice";
 import Blog from "./components/Blog";
-import { ga } from "./helpers/utils";
-
-if (config.googleAnalytics.id) {
-    ga.initialize(config.googleAnalytics.id);
-}
+import MetaTags from "./components/MetaTags";
 
 function App() {
     const dispatch = useDispatch();
@@ -116,6 +112,7 @@ function App() {
 
     return (
         <Fragment>
+            <MetaTags/>
             <div className="fade-in h-screen">
 
                 {
