@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
-import { languageColor, skeleton } from "../helpers/utils";
+import { ga, languageColor, skeleton } from "../helpers/utils";
 import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 import config from "../config";
 
@@ -52,10 +52,19 @@ const Project = () => {
 
     const renderProjects = () => {
         return repo.map((item, index) => (
-            <div 
-                className="card shadow-lg compact bg-base-100 cursor-pointer" 
+            <div
+                className="card shadow-lg compact bg-base-100 cursor-pointer"
                 key={index}
                 onClick={() => {
+                    if (config.googleAnalytics.id) {
+                        ga.event({
+                            action: "Click project",
+                            params: {
+                                project: item.name
+                            }
+                        });
+                    }
+
                     window.open(item.html_url, '_blank')
                 }}
             >
@@ -76,11 +85,11 @@ const Project = () => {
                     <div className="flex justify-between text-sm text-base-content text-opacity-60">
                         <div className="flex flex-grow">
                             <span className="mr-3 flex items-center">
-                                <AiOutlineStar className="mr-0.5"/>
+                                <AiOutlineStar className="mr-0.5" />
                                 <span>{item.stargazers_count}</span>
                             </span>
                             <span className="flex items-center">
-                                <AiOutlineFork className="mr-0.5"/>
+                                <AiOutlineFork className="mr-0.5" />
                                 <span>{item.forks_count}</span>
                             </span>
                         </div>

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { CgHashtag } from 'react-icons/cg';
 import { useSelector } from "react-redux";
 import config from "../config";
-import { skeleton } from "../helpers/utils";
+import { ga, skeleton } from "../helpers/utils";
 import LazyImage from "./LazyImage";
 
 const Blog = () => {
@@ -82,10 +82,19 @@ const Blog = () => {
 
     const renderArticles = () => {
         return articles && articles.slice(0, config.blog.limit).map((article, index) => (
-            <div 
-                className="card shadow-lg compact bg-base-100 cursor-pointer" 
+            <div
+                className="card shadow-lg compact bg-base-100 cursor-pointer"
                 key={index}
                 onClick={() => {
+                    if (config.googleAnalytics.id) {
+                        ga.event({
+                            action: "Click Blog Post",
+                            params: {
+                                post: article.title
+                            }
+                        });
+                    }
+
                     window.open(article.link, '_blank')
                 }}
             >
@@ -94,7 +103,7 @@ const Blog = () => {
                         <div className="avatar mb-5 md:mb-0 opacity-90">
                             <div className="w-24 h-24 mask mask-squircle">
                                 <LazyImage
-                                    src={article.thumbnail} 
+                                    src={article.thumbnail}
                                     alt={'thumbnail'}
                                     placeholder={
                                         skeleton({

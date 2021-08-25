@@ -15,6 +15,10 @@ module.exports = {
         username: 'arifszn',
         limit: 5 // How many posts to display. Max is 10.
     },
+    googleAnalytics: {
+        id: 'G-WLLB5E14M6', 
+        // id: 'G-XXXXXXXXXX' // GA3 tracking id/GA4 tag id
+    },
     social: {
         linkedin: 'ariful-alam',
         twitter: 'arif_swozon',
