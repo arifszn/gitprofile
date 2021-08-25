@@ -155,6 +155,10 @@ function App() {
                         </div>
                     )
                 }
+                {/* DO NOT REMOVE/MODIFY THE FOOTER */}
+                <div className="text-center bg-base-200 credit">
+                    <p className="font-mono text-sm">Made with <a className="text-primary" href="https://github.com/arifszn/ezprofile" target="_blank" rel="noreferrer">ezprofile</a> and ❤️</p>
+                </div>
             </div>
         </Fragment>
     );

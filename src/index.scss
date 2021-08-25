@@ -62,6 +62,18 @@ svg {
     padding-bottom: 0 !important;
 }
 
+.credit {
+    p {
+        opacity: 0.6;
+        padding-bottom: 0.5rem;
+
+        a {
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+}
+
 .fade-in {
 	opacity: 1;
 	animation-name: fadeIn;
