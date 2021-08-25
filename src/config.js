@@ -1,8 +1,19 @@
 module.exports = {
-    githubUsername: 'arifszn', // required
+    github: {
+        username: 'arifszn',
+        sortBy: 'stars', // stars | updated
+        limit: 8, // How many projects to display.
+        exclude: {
+            forks: false, // forked projects will not be displayed if set to true
+            projects: [
+                
+            ]
+        }
+    },
     blog: {
         source: 'dev.to', // medium | dev.to
         username: 'arifszn',
+        limit: 5 // How many posts to display. Max is 10.
     },
     social: {
         linkedin: 'ariful-alam',

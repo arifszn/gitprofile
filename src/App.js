@@ -30,7 +30,7 @@ function App() {
     }, [theme])
 
     const loadData = useCallback(() => {
-        axios.get(`https://api.github.com/users/${config.githubUsername}`)
+        axios.get(`https://api.github.com/users/${config.github.username}`)
         .then(response => {
             let data = response.data;
 
@@ -45,7 +45,21 @@ function App() {
             dispatch(setProfile(profileData));
         })
         .then(() => {
-            axios.get(`https://api.github.com/search/repositories?q=user:${config.githubUsername}+&s=stars&type=Repositories`)
+            let excludeRepo = ``;
+
+            config.github.exclude.projects.forEach(project => {
+                excludeRepo += `+-repo:${config.github.username}/${project}`;
+            });
+
+            let query = `user:${config.github.username}+fork:${!config.github.exclude.forks}${excludeRepo}`;
+
+            let url = `https://api.github.com/search/repositories?q=${query}&sort=${config.github.sortBy}&per_page=${config.github.limit}&type=Repositories`;
+
+            axios.get(url, {
+                headers: {
+                    'Content-Type': 'application/vnd.github.v3+json'
+                }
+            })
             .then(response => {
                 let data = response.data;
 
@@ -129,36 +143,38 @@ function App() {
                             }
                         />
                     ) : (
-                        <div className="p-4 lg:p-10 min-h-full bg-base-200">
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
-                                <div className="col-span-1">
-                                    <div className="grid grid-cols-1 gap-6">
-                                        {
-                                            !config.themeConfig.disableSwitch && (
-                                                <ThemeChanger />
-                                            )
-                                        }
-                                        <AvatarCard />
-                                        <Details />
-                                        <Skill />
-                                        <Experience />
-                                        <Education />
+                        <Fragment>
+                            <div className="p-4 lg:p-10 min-h-full bg-base-200">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
+                                    <div className="col-span-1">
+                                        <div className="grid grid-cols-1 gap-6">
+                                            {
+                                                !config.themeConfig.disableSwitch && (
+                                                    <ThemeChanger />
+                                                )
+                                            }
+                                            <AvatarCard />
+                                            <Details />
+                                            <Skill />
+                                            <Experience />
+                                            <Education />
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="lg:col-span-2 col-span-1">
-                                    <div className="grid grid-cols-1 gap-6">
-                                        <Project />
-                                        <Blog />
+                                    <div className="lg:col-span-2 col-span-1">
+                                        <div className="grid grid-cols-1 gap-6">
+                                            <Project />
+                                            <Blog />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            {/* DO NOT REMOVE/MODIFY THE FOOTER */}
+                            <div className="text-center bg-base-200 credit">
+                                <p className="font-mono text-sm">Made with <a className="text-primary" href="https://github.com/arifszn/ezprofile" target="_blank" rel="noreferrer">ezprofile</a> and ❤️</p>
+                            </div>
+                        </Fragment>
                     )
                 }
-                {/* DO NOT REMOVE/MODIFY THE FOOTER */}
-                <div className="text-center bg-base-200 credit">
-                    <p className="font-mono text-sm">Made with <a className="text-primary" href="https://github.com/arifszn/ezprofile" target="_blank" rel="noreferrer">ezprofile</a> and ❤️</p>
-                </div>
             </div>
         </Fragment>
     );

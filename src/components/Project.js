@@ -1,10 +1,8 @@
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
 import { languageColor, skeleton } from "../helpers/utils";
-import { AiFillStar, AiOutlineFork } from 'react-icons/ai';
+import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 import config from "../config";
-
-const LIMIT = 8;
 
 const Project = () => {
     const loading = useSelector(state => state.loading);
@@ -12,7 +10,7 @@ const Project = () => {
 
     const renderSkeleton = () => {
         let array = [];
-        for (let index = 0; index < LIMIT; index++) {
+        for (let index = 0; index < config.github.limit; index++) {
             array.push((
                 <div className="card shadow-lg compact bg-base-100" key={index}>
                     <div className="flex justify-between flex-col p-8 h-full w-full">
@@ -53,8 +51,14 @@ const Project = () => {
     }
 
     const renderProjects = () => {
-        return repo.slice(0, LIMIT).map((item, index) => (
-            <a href={item.html_url} target="_blank" rel="noreferrer" className="card shadow-lg compact bg-base-100" key={index}>
+        return repo.map((item, index) => (
+            <div 
+                className="card shadow-lg compact bg-base-100 cursor-pointer" 
+                key={index}
+                onClick={() => {
+                    window.open(item.html_url, '_blank')
+                }}
+            >
                 <div className="flex justify-between flex-col p-8 h-full w-full">
                     <div>
                         <div className="flex items-center opacity-60">
@@ -72,11 +76,11 @@ const Project = () => {
                     <div className="flex justify-between text-sm text-base-content text-opacity-60">
                         <div className="flex flex-grow">
                             <span className="mr-3 flex items-center">
-                                <AiFillStar />
+                                <AiOutlineStar className="mr-0.5"/>
                                 <span>{item.stargazers_count}</span>
                             </span>
                             <span className="flex items-center">
-                                <AiOutlineFork />
+                                <AiOutlineFork className="mr-0.5"/>
                                 <span>{item.forks_count}</span>
                             </span>
                         </div>
@@ -88,7 +92,7 @@ const Project = () => {
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
         ));
     }
 
@@ -112,7 +116,7 @@ const Project = () => {
                                             {
                                                 loading ? skeleton({ width: 'w-10', height: 'h-5' }) : (
                                                     <a
-                                                        href={`https://github.com/${config.githubUsername}?tab=repositories`}
+                                                        href={`https://github.com/${config.github.username}?tab=repositories`}
                                                         target="_blank"
                                                         rel="noreferrer"
                                                         className="opacity-50"
