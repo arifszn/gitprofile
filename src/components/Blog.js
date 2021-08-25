@@ -59,7 +59,7 @@ const Blog = () => {
                                 <div className="flex items-start px-4">
                                     <div className="w-full">
                                         <h2>
-                                            {skeleton({ width: 'w-48', height: 'h-8', className: 'mb-2 mx-auto md:mx-0' })}
+                                            {skeleton({ width: 'w-full', height: 'h-8', className: 'mb-2 mx-auto md:mx-0' })}
                                         </h2>
                                         {skeleton({ width: 'w-24', height: 'h-3', className: 'mx-auto md:mx-0' })}
                                         <div className="mt-3">
@@ -85,7 +85,7 @@ const Blog = () => {
             <a href={article.link} target="_blank" rel="noreferrer" className="card shadow-lg compact bg-base-100" key={index}>
                 <div className="p-8 h-full w-full">
                     <div className="flex items-center flex-col md:flex-row">
-                        <div className="avatar mb-5 md:mb-0">
+                        <div className="avatar mb-5 md:mb-0 opacity-90">
                             <div className="w-24 h-24 mask mask-squircle">
                                 <LazyImage
                                     src={article.thumbnail} 

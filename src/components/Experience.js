@@ -13,17 +13,17 @@ const Experience = () => {
                 <li key={index}>
                     <span>
                         {skeleton({ width: 'w-2', height: 'h-2', className: "mr-2" })}
-                        <div>
+                        <div className="w-full">
                             <div className="block justify-between">
                                 <div>
-                                    {skeleton({ width: 'w-48', height: 'h-4', className: "mb-2" })}
+                                    {skeleton({ width: 'w-9/12', height: 'h-4', className: "mb-2" })}
                                 </div>
                                 <div>
-                                    {skeleton({ width: 'w-32', height: 'h-4', className: "mb-2" })}
+                                    {skeleton({ width: 'w-6/12', height: 'h-4', className: "mb-2" })}
                                 </div>
                             </div>
                             <div>
-                                {skeleton({ width: 'w-32', height: 'h-3' })}
+                                {skeleton({ width: 'w-6/12', height: 'h-3' })}
                             </div>
                         </div>
                     </span>

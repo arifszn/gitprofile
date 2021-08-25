@@ -34,7 +34,7 @@ const AvatarCard = () => {
                         }
                     </div>
                 </div>
-                <div className="text-center mx-8">
+                <div className="text-center mx-auto md:mx-8">
                     <h5 className="font-bold text-2xl">
                         {
                             loading ? (
