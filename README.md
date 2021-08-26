@@ -7,8 +7,11 @@
 <h1 align="center">ezProfile</h1>
 <p align="center">A modern, responsive and customizable portfolio template for Developers!</p>
 
+<br/>
+
 https://user-images.githubusercontent.com/45073703/130999562-881227cb-d2bf-46a0-98b2-a7c7dad2664f.mp4
 
+<br/>
 
 **ezProfile** is an easy-to-customize personal dev portfolio template that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories. Also it includes space to highlight your details, job history, education history, skills and recent blog posts.
 
