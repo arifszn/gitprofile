@@ -1,23 +1,13 @@
+// config.js
 module.exports = {
     github: {
-        username: 'arifszn',
+        username: 'arifszn', // Your GitHub org/user name. (Required)
         sortBy: 'stars', // stars | updated
         limit: 8, // How many projects to display.
         exclude: {
-            forks: false, // forked projects will not be displayed if set to true
-            projects: [
-                
-            ]
+            forks: false, // Forked projects will not be displayed if set to true.
+            projects: [] // These projects will not be displayed. example: ['my-project1', 'my-project2']
         }
-    },
-    blog: {
-        source: 'dev.to', // medium | dev.to
-        username: 'arifszn',
-        limit: 5 // How many posts to display. Max is 10.
-    },
-    googleAnalytics: {
-        id: 'G-WLLB5E14M6', 
-        // id: 'G-XXXXXXXXXX' // GA3 tracking id/GA4 tag id
     },
     social: {
         linkedin: 'ariful-alam',
@@ -27,7 +17,7 @@ module.exports = {
         behance: '',
         medium: '',
         devto: '',
-        website: 'https://www.arifszn.com',
+        website: 'https://arifszn.github.io',
         email: 'contact@arifszn.com'
     },
     skills: [
@@ -77,6 +67,16 @@ module.exports = {
             to: '2012'
         }
     ],
+    blog: {
+        // Display blog posts from your medium or dev.to account. (Optional)
+        source: 'dev.to', // medium | dev.to
+        username: 'arifszn',
+        limit: 5 // How many posts to display. Max is 10.
+    },
+    googleAnalytics: {
+        // GA3 tracking id/GA4 tag id
+        id: 'G-WLLB5E14M6' // UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    },
     themeConfig: {
         default: 'light',
 

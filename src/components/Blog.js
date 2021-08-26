@@ -1,24 +1,32 @@
 import { getDevtoArticle, getMediumArticle } from "article-api";
 import moment from "moment";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { CgHashtag } from 'react-icons/cg';
 import { useSelector } from "react-redux";
 import config from "../config";
 import { ga, skeleton } from "../helpers/utils";
 import LazyImage from "./LazyImage";
 
+const displaySection = () => {
+    if (
+        typeof config.blog !== 'undefined' &&
+        typeof config.blog.source !== 'undefined' &&
+        typeof config.blog.username !== 'undefined' &&
+        config.blog.source &&
+        config.blog.username
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 const Blog = () => {
     const [articles, setArticles] = useState(null);
     const loading = useSelector(state => state.loading);
 
     useEffect(() => {
-        if (
-            typeof config.blog !== 'undefined' &&
-            typeof config.blog.source !== 'undefined' &&
-            typeof config.blog.username !== 'undefined' &&
-            config.blog.source &&
-            config.blog.username
-        ) {
+        if (displaySection()) {
             if (config.blog.source === 'medium') {
                 getMediumArticle({
                     user: config.blog.username
@@ -149,34 +157,40 @@ const Blog = () => {
     }
 
     return (
-        <div className="col-span-1 lg:col-span-2">
-            <div className="grid grid-cols-2 gap-6">
-                <div className="col-span-2">
-                    <div className="card compact bg-base-100 shadow-sm">
-                        <div className="card-body">
-                            <ul className="menu row-span-3 bg-base-100 text-base-content">
-                                <li>
-                                    <div className="pb-0-important mx-4 flex items-center justify-between">
-                                        <h5 className="card-title">
-                                            {
-                                                (loading || !articles) ? skeleton({ width: 'w-28', height: 'h-8' }) : (
-                                                    <span className="opacity-70">Recent Posts</span>
-                                                )
-                                            }
-                                        </h5>
+        <Fragment>
+            {
+                displaySection() && (
+                    <div className="col-span-1 lg:col-span-2">
+                        <div className="grid grid-cols-2 gap-6">
+                            <div className="col-span-2">
+                                <div className="card compact bg-base-100 shadow-sm">
+                                    <div className="card-body">
+                                        <ul className="menu row-span-3 bg-base-100 text-base-content">
+                                            <li>
+                                                <div className="pb-0-important mx-4 flex items-center justify-between">
+                                                    <h5 className="card-title">
+                                                        {
+                                                            (loading || !articles) ? skeleton({ width: 'w-28', height: 'h-8' }) : (
+                                                                <span className="opacity-70">Recent Posts</span>
+                                                            )
+                                                        }
+                                                    </h5>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
+                            <div className="col-span-2">
+                                <div className="grid grid-cols-1 gap-6">
+                                    {(loading || !articles) ? renderSkeleton() : renderArticles()}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-span-2">
-                    <div className="grid grid-cols-1 gap-6">
-                        {(loading || !articles) ? renderSkeleton() : renderArticles()}
-                    </div>
-                </div>
-            </div>
-        </div>
+                )
+            }
+        </Fragment>
     )
 }
 
