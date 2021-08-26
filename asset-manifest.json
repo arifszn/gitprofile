@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ezprofile/static/css/main.12fa5930.chunk.css",
-    "main.js": "/ezprofile/static/js/main.f8e4a9c4.chunk.js",
-    "main.js.map": "/ezprofile/static/js/main.f8e4a9c4.chunk.js.map",
+    "main.css": "/ezprofile/static/css/main.a4bcbe94.chunk.css",
+    "main.js": "/ezprofile/static/js/main.72b71416.chunk.js",
+    "main.js.map": "/ezprofile/static/js/main.72b71416.chunk.js.map",
     "runtime-main.js": "/ezprofile/static/js/runtime-main.8b0e2895.js",
     "runtime-main.js.map": "/ezprofile/static/js/runtime-main.8b0e2895.js.map",
-    "static/js/2.b00d30bf.chunk.js": "/ezprofile/static/js/2.b00d30bf.chunk.js",
-    "static/js/2.b00d30bf.chunk.js.map": "/ezprofile/static/js/2.b00d30bf.chunk.js.map",
+    "static/js/2.6fd72509.chunk.js": "/ezprofile/static/js/2.6fd72509.chunk.js",
+    "static/js/2.6fd72509.chunk.js.map": "/ezprofile/static/js/2.6fd72509.chunk.js.map",
     "static/js/3.1fa892e1.chunk.js": "/ezprofile/static/js/3.1fa892e1.chunk.js",
     "static/js/3.1fa892e1.chunk.js.map": "/ezprofile/static/js/3.1fa892e1.chunk.js.map",
     "index.html": "/ezprofile/index.html",
-    "static/css/main.12fa5930.chunk.css.map": "/ezprofile/static/css/main.12fa5930.chunk.css.map",
-    "static/js/2.b00d30bf.chunk.js.LICENSE.txt": "/ezprofile/static/js/2.b00d30bf.chunk.js.LICENSE.txt"
+    "static/css/main.a4bcbe94.chunk.css.map": "/ezprofile/static/css/main.a4bcbe94.chunk.css.map",
+    "static/js/2.6fd72509.chunk.js.LICENSE.txt": "/ezprofile/static/js/2.6fd72509.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8b0e2895.js",
-    "static/js/2.b00d30bf.chunk.js",
-    "static/css/main.12fa5930.chunk.css",
-    "static/js/main.f8e4a9c4.chunk.js"
+    "static/js/2.6fd72509.chunk.js",
+    "static/css/main.a4bcbe94.chunk.css",
+    "static/js/main.72b71416.chunk.js"
   ]
 }
