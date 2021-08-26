@@ -7,14 +7,11 @@
 <h1 align="center">ezProfile</h1>
 <p align="center">A modern, responsive and customizable portfolio template for Developers!</p>
 
-https://user-images.githubusercontent.com/45073703/130990222-1b184169-1cdd-4f06-a6c4-990312de4962.mp4
-
-
-ezProfile is an easy-to-customize personal dev portfolio template that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories. Also it includes space to highlight your details, job history, education history, skills and recent blog posts.
+**ezProfile** is an easy-to-customize personal dev portfolio template that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories. Also it includes space to highlight your details, job history, education history, skills and recent blog posts.
 
 It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
 
-✔️ 21 Themes\
+✔️ [21 Themes](###Themes)\
 ✔️ Google Analytics\
 ✔️ Meta Tags\
 ✔️ Avatar and Bio\
@@ -351,7 +348,7 @@ Once you are done with your setup and have successfully completed all steps abov
 **2. Other:** You can also host your website to Netlify, Vercel, Heroku or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed guide.
 
 
-## 🚨 Please Read
+## 📢 Please Read
 
 I intend to keep my works open source. Please do not discourage me by claiming this work by copying as your own or removing the footer notice.
 
