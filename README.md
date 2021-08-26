@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://arifszn.github.io/ezprofile" target="_blank">
-    <img src="https://raw.githubusercontent.com/arifszn/ezprofile/main/public/logo.png" alt="ezProfile" title="ezProfile" width="80">
+    <img src="https://arifszn.github.io/assets/img/hosted/ezprofile/logo.png" alt="ezProfile" title="ezProfile" width="80">
   </a>
 </p>
 
@@ -169,9 +169,11 @@ module.exports = {
 ### Themes
 
 There are 21 themes available which can be selected from the dropdown.\
+<br/>
 ![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-1.png)
 
 Here are some screenshots of different themes.\
+<br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-2.png)\
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-3.png)\
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-4.png)\
@@ -193,6 +195,7 @@ module.exports = {
 ```
 
 Besides tracking visitors, ezFolio will track click event on projects and blog posts, and send them to Google Analytics.\
+<br/>
 ![Google Analytics](https://arifszn.github.io/assets/img/hosted/ezprofile/google-analytics.png)
 
 
@@ -204,6 +207,7 @@ Meta tags will be auto generated from configs dynamically. However, you can also
 ### Avatar and Bio
 
 Your github avatar and bio will be displayed here.\
+<br/>
 ![Avatar Bio](https://arifszn.github.io/assets/img/hosted/ezprofile/avatar-card.png)
 
 
