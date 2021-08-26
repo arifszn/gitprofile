@@ -316,7 +316,7 @@ Empty array will hide the education section.
 
 ### Projects
 
-Your public repo from github will be displayed here automatically. You can limit how many projects do you want to be displayed. Also you can hide forked or specific repos.
+Your public repo from github will be displayed here automatically. You can limit how many projects you want to display. Also you can hide forked or specific repos.
 
 ```js
 // config.js
