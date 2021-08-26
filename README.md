@@ -181,9 +181,13 @@ There are 21 themes available which can be selected from the dropdown.\
 Here are some screenshots of different themes.\
 <br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-2.png)\
+<br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-3.png)\
+<br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-4.png)\
+<br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-5.png)\
+<br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)
 
 
