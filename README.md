@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">ezProfile</h1>
-<p align="center">A modern, responsive and customizable portfolio template for Developers!</p>
+<p align="center"><sup>A modern, responsive and customizable portfolio template for Developers!</sup></p>
 
 <br/>
 
