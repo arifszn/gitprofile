@@ -11,7 +11,7 @@ export const themeSlice = createSlice({
             state = action.payload;
 
             document.documentElement.setAttribute('data-theme', state);
-            localStorage.setItem('theme', state);
+            localStorage.setItem('ezprofileTheme', state);
 
             return state;
         }
