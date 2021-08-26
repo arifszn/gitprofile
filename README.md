@@ -1,29 +1,32 @@
 <p align="center">
   <a href="http://arifszn.github.io/ezprofile" target="_blank">
-    <img src="https://raw.githubusercontent.com/arifszn/ezprofile/main/public/logo.png" alt="ezProfile" title="ezProfile" width="80">
+    <img src="https://arifszn.github.io/assets/img/hosted/ezprofile/logo.png" alt="ezProfile" title="ezProfile" width="80">
   </a>
 </p>
 
 <h1 align="center">ezProfile</h1>
-<p align="center">A modern, responsive and customizable portfolio template for Developers!</p>
+<p align="center"><sup>A modern, responsive and customizable portfolio template for Developers!</sup></p>
 
-https://user-images.githubusercontent.com/45073703/130990222-1b184169-1cdd-4f06-a6c4-990312de4962.mp4
+<br/>
 
+https://user-images.githubusercontent.com/45073703/130999562-881227cb-d2bf-46a0-98b2-a7c7dad2664f.mp4
 
-ezProfile is an easy-to-customize personal dev portfolio template that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories. Also it includes space to highlight your details, job history, education history, skills and recent blog posts.
+<br/>
+
+**ezProfile** is an easy-to-customize personal dev portfolio template that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories. Also, it includes space to highlight your details, job history, education history, skills, and recent blog posts.
 
 It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
 
-✔️ 21 Themes\
-✔️ Google Analytics\
-✔️ Meta Tags\
-✔️ Avatar and Bio\
-✔️ Social Links\
-✔️ Skills\
-✔️ Experience\
-✔️ Education\
-✔️ Projects\
-✔️ Blog Posts
+✔️ [21 Themes](#themes)\
+✔️ [Google Analytics](#google-analytics)\
+✔️ [Meta Tags](#meta-tags)\
+✔️ [Avatar and Bio](#avatar-and-bio)\
+✔️ [Social Links](#social-links)\
+✔️ [Skills](#skills)\
+✔️ [Experience](#experience)\
+✔️ [Education](#education)\
+✔️ [Projects](#projects)\
+✔️ [Blog Posts](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/ezprofile)**.
 
@@ -172,11 +175,20 @@ module.exports = {
 ### Themes
 
 There are 21 themes available which can be selected from the dropdown.\
-![Theme Dropdown]()
+<br/>
+![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-1.png)
 
 Here are some screenshots of different themes.\
-![Theme 1]()\
-![Theme 2]()
+<br/>
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-2.png)\
+<br/>
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-3.png)\
+<br/>
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-4.png)\
+<br/>
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-5.png)\
+<br/>
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)
 
 
 ### Google Analytics
@@ -192,24 +204,26 @@ module.exports = {
 }
 ```
 
-Besides tracking visitors, ezFolio will track click event on projects and blog posts, and send them to Google Analytics.\
-![Google Analytics]()
+Besides tracking visitors, ezFolio will track click events on projects and blog posts, and send them to Google Analytics.\
+<br/>
+![Google Analytics](https://arifszn.github.io/assets/img/hosted/ezprofile/google-analytics.png)
 
 
 ### Meta Tags
 
-Meta tags will be auto generated from configs dynamically. However, you can also manually add meta tags in <code>public\index.html</code>
+Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in <code>public\index.html</code>
 
 
 ### Avatar and Bio
 
 Your github avatar and bio will be displayed here.\
-![Avatar Bio]()
+<br/>
+![Avatar Bio](https://arifszn.github.io/assets/img/hosted/ezprofile/avatar-card.png)
 
 
 ### Social Links
 
-ezProfile supports linking social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website and email.
+ezProfile supports linking your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, and email.
 ```js
 // config.js
 module.exports = {
@@ -302,7 +316,7 @@ Empty array will hide the education section.
 
 ### Projects
 
-Your public repo from github will be displayed here automatically. You can limit how many projects do you want to be displayed. Also you can hide forked or specific repos.
+Your public repo from github will be displayed here automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
 
 ```js
 // config.js
@@ -324,12 +338,26 @@ module.exports = {
 
 If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is 10).
 
+```js
+// config.js
+module.exports = {
+  // ...
+  blog: {
+    source: 'dev.to',
+    username: 'arifszn',
+    limit: 5
+  },
+}
+```
+
+![Blog](https://arifszn.github.io/assets/img/hosted/ezprofile/blog.png)
+
 The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
 
 
 ## 🚀 Deploy
 
-Once you are done with your setup and have successfully completed all steps above, you need to put your website online! The fastest approach is to use [GitHub Pages](https://pages.github.com) which is completely free.
+Once you are done with your setup and have completed all steps above, you need to put your website online! The fastest approach is to use [GitHub Pages](https://pages.github.com) which is completely free.
 
 **1. Github Pages:**
   - Rename your forked repository to <code>username.github.io</code>, where <code>username</code> is your GitHub username (or organization name).
@@ -348,12 +376,12 @@ Once you are done with your setup and have successfully completed all steps abov
     Your personal portfolio will be live at <code>username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
 
-**2. Other:** You can also host your website to Netlify, Vercel, Heroku or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed guide.
+**2. Other:** You can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed guide.
 
 
-## 🚨 Please Read
+## 📢 Please Read
 
-I intend to keep my works open source. Please do not discourage me by claiming this work by copying as your own or removing the footer notice.
+I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own or removing the footer notice.
 
 
 ## 💖 Support
@@ -363,8 +391,8 @@ If you are using this project and happy with it or just want to encourage me to 
 
 ## 💡 Contributing
 
-Any contributiors who wants to make this website better can make contribution,which will be greatly appreciated. To contribute, clone this repo locally and commit your code on a new branch. Feel free to create an issue or make a pull request.
+Any contributors who want to make this website better can make contributions, which will be greatly appreciated. To contribute, clone this repo locally and commit your code to a new branch. Feel free to create an issue or make a pull request.
 
 ## 📄 License
 
-ezProfile is licensed under the Apache-2.0 License.
+ezProfile is licensed under the [Apache-2.0 License](https://github.com/arifszn/ezprofile/blob/main/LICENSE).
