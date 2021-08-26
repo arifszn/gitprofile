@@ -25,13 +25,15 @@ module.exports = {
         'Laravel',
         'JavaScript',
         'React.js',
+        'Vue.js',
         'Node.js',
-        'Tailwind',
-        'Antd',
-        'CSS',
-        'Git',
-        'Mysql',
         'Jquery',
+        'MySQL',
+        'Git',
+        'CSS',
+        'Antd',
+        'Tailwind',
+        'Bootstrap',
     ],
     experiences: [
         { 
@@ -71,7 +73,7 @@ module.exports = {
         // Display blog posts from your medium or dev.to account. (Optional)
         source: 'dev.to', // medium | dev.to
         username: 'arifszn',
-        limit: 5 // How many posts to display. Max is 10.
+        limit: 3 // How many posts to display. Max is 10.
     },
     googleAnalytics: {
         // GA3 tracking id/GA4 tag id
