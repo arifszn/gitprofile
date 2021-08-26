@@ -31,7 +31,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
 
-<br/>
 
 1. **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repo so you have your own project to customize. A "fork" is a copy of a repository.
 
@@ -307,12 +306,12 @@ Your public repo from github will be displayed here automatically. You can limit
 module.exports = {
   // ...
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
-    limit: 8, // How many projects to display.
+    username: 'arifszn',
+    sortBy: 'stars',
+    limit: 8,
     exclude: {
-      forks: false, // Forked projects will not be displayed if set to true.
-      projects: [] // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      forks: false,
+      projects: ['my-project1', 'my-project2']
     }
   },
 }
@@ -323,3 +322,46 @@ module.exports = {
 If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is 10).
 
 The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
+
+
+## 🚀 Deploy
+
+Once you are done with your setup and have successfully completed all steps above, you need to put your website online! The fastest approach is to use [GitHub Pages](https://pages.github.com) which is completely free.
+
+- **Github Pages:**
+  - Rename your forked repository to <code>username.github.io</code>, where <code>username</code> is your GitHub username (or organization name).
+  - Open <code>package.json</code>, and change <code>homepage</code>'s value to <code>username.github.io</code>.
+  
+    ```json
+    // package.json
+    {
+      // ...
+      "homepage": "username.github.io",
+    }
+    ```
+
+  - Run <code>npm run deploy</code>.
+
+    Your personal portfolio will be live at <code>username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
+
+
+- **Other:** You can also host your website to Netlify, Vercel, Heroku or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed guide.
+
+
+## 🚨 Please Read
+
+I intend to keep my works open source. Please do not discourage me by claiming this work by copying as your own or removing the footer notice.
+
+
+## 💖 Support
+
+If you are using this project and happy with it or just want to encourage me to continue creating stuff, you can do it by just starring and sharing the project.
+
+
+## 💡 Contributing
+
+Any contributiors who wants to make this website better can make contribution,which will be greatly appreciated. To contribute, clone this repo locally and commit your code on a new branch. Feel free to create an issue or make a pull request.
+
+## 📄 License
+
+ezProfile is licensed under the Apache-2.0 License.
