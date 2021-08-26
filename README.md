@@ -329,7 +329,9 @@ module.exports = {
 
 ### Blog Posts
 
-If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is 10).
+If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is 10).\
+<br/>
+![Blog](https://arifszn.github.io/assets/img/hosted/ezprofile/blog.png)
 
 The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
 
