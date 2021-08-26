@@ -67,39 +67,11 @@ function App() {
                 dispatch(setRepo(data.items));
             })
             .catch((error) => {
-                console.error('Error:', error);
-
-                try {
-                    setRateLimit({
-                        remaining: error.response.headers['x-ratelimit-remaining'],
-                        reset: moment(new Date(error.response.headers['x-ratelimit-reset'] * 1000)).fromNow(),
-                    });
-
-
-                } catch (error2) {
-                    console.error('Error:', error2);
-                }
+                handleError(error);
             });
         })
         .catch((error) => {
-            console.error('Error:', error);
-
-            try {
-                setRateLimit({
-                    remaining: error.response.headers['x-ratelimit-remaining'],
-                    reset: moment(new Date(error.response.headers['x-ratelimit-reset'] * 1000)).fromNow(),
-                });
-
-                if (error.response.status === 403) {
-                    setError(403);
-                } else if (error.response.status === 404) {
-                    setError(404);
-                } else {
-                    setError(500);
-                }
-            } catch (error2) {
-                setError(500);
-            }
+            handleError(error);
         })
         .finally(() => {
             dispatch(setLoading(false));
@@ -109,6 +81,26 @@ function App() {
     useEffect(() => {
         loadData();
     }, [loadData])
+
+    const handleError = (error) => {
+        console.error('Error:', error);
+        try {
+            setRateLimit({
+                remaining: error.response.headers['x-ratelimit-remaining'],
+                reset: moment(new Date(error.response.headers['x-ratelimit-reset'] * 1000)).fromNow(),
+            });
+
+            if (error.response.status === 403) {
+                setError(403);
+            } else if (error.response.status === 404) {
+                setError(404);
+            } else {
+                setError(500);
+            }
+        } catch (error2) {
+            setError(500);
+        }
+    }
 
     return (
         <Fragment>
@@ -120,7 +112,7 @@ function App() {
                         <ErrorPage
                             status={`${error}`}
                             title={(error === 404) ? 'The Github Username is Incorrect' : (
-                                error === 403 ? 'Too Many Request.' : `${error}`
+                                error === 403 ? 'Too Many Request.' : `Ops!!`
                             )}
                             subTitle={
                                 (error === 404) ? (
