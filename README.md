@@ -245,7 +245,7 @@ module.exports = {
 
 ### Skills
 
-To showcase your skills provide them in <code>skills</code>.
+To showcase your skills provide them here.
 ```js
 // config.js
 module.exports = {
