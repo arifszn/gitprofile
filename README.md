@@ -11,16 +11,16 @@
 
 It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
 
-✔️ [21 Themes](###Themes)\
-✔️ Google Analytics\
-✔️ Meta Tags\
-✔️ Avatar and Bio\
-✔️ Social Links\
-✔️ Skills\
-✔️ Experience\
-✔️ Education\
-✔️ Projects\
-✔️ Blog Posts
+✔️ [21 Themes](#themes)\
+✔️ [Google Analytics](#google-analytics)\
+✔️ [Meta Tags](#meta-tags)\
+✔️ [Avatar and Bio](#avatar-and-bio)\
+✔️ [Social Links](#social-links)\
+✔️ [Skills](#skills)\
+✔️ [Experience](#experience)\
+✔️ [Education](#education)\
+✔️ [Projects](#projects)\
+✔️ [Blog Posts](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/ezprofile)**.
 
@@ -169,11 +169,14 @@ module.exports = {
 ### Themes
 
 There are 21 themes available which can be selected from the dropdown.\
-![Theme Dropdown]()
+![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-1.png)
 
 Here are some screenshots of different themes.\
-![Theme 1]()\
-![Theme 2]()
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-2.png)\
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-3.png)\
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-4.png)\
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-5.png)\
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)
 
 
 ### Google Analytics
@@ -190,7 +193,7 @@ module.exports = {
 ```
 
 Besides tracking visitors, ezFolio will track click event on projects and blog posts, and send them to Google Analytics.\
-![Google Analytics]()
+![Google Analytics](https://arifszn.github.io/assets/img/hosted/ezprofile/google-analytics.png)
 
 
 ### Meta Tags
@@ -201,7 +204,7 @@ Meta tags will be auto generated from configs dynamically. However, you can also
 ### Avatar and Bio
 
 Your github avatar and bio will be displayed here.\
-![Avatar Bio]()
+![Avatar Bio](https://arifszn.github.io/assets/img/hosted/ezprofile/avatar-card.png)
 
 
 ### Social Links
