@@ -328,11 +328,11 @@ The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
 
 Once you are done with your setup and have successfully completed all steps above, you need to put your website online! The fastest approach is to use [GitHub Pages](https://pages.github.com) which is completely free.
 
-- **Github Pages:**
+**1. Github Pages:**
   - Rename your forked repository to <code>username.github.io</code>, where <code>username</code> is your GitHub username (or organization name).
   - Open <code>package.json</code>, and change <code>homepage</code>'s value to <code>username.github.io</code>.
   
-    ```json
+    ```js
     // package.json
     {
       // ...
@@ -345,7 +345,7 @@ Once you are done with your setup and have successfully completed all steps abov
     Your personal portfolio will be live at <code>username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
 
-- **Other:** You can also host your website to Netlify, Vercel, Heroku or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed guide.
+**2. Other:** You can also host your website to Netlify, Vercel, Heroku or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed guide.
 
 
 ## 🚨 Please Read
