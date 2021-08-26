@@ -17,8 +17,8 @@ It's all possible using [GitHub API](https://developer.github.com/v3/) (for auto
 ✔️ Avatar and Bio\
 ✔️ Social Links\
 ✔️ Skills\
-✔️ Education\
 ✔️ Experience\
+✔️ Education\
 ✔️ Projects\
 ✔️ Blog Posts
 
@@ -73,16 +73,6 @@ module.exports = {
       projects: [] // These projects will not be displayed. example: ['my-project1', 'my-project2']
     }
   },
-  blog: {
-    // Display blog posts from your medium or dev.to account. (Optional)
-    source: 'dev.to', // medium | dev.to
-    username: 'arifszn',
-    limit: 5 // How many posts to display. Max is 10.
-  },
-  googleAnalytics: {
-    // GA3 tracking id/GA4 tag id
-    id: '' // UA-XXXXXXXXX-X | G-XXXXXXXXXX
-  },
   social: {
     linkedin: '',
     twitter: '',
@@ -126,6 +116,16 @@ module.exports = {
       to: '2014',
     }
   ],
+  blog: {
+    // Display blog posts from your medium or dev.to account. (Optional)
+    source: 'dev.to', // medium | dev.to
+    username: 'arifszn',
+    limit: 5 // How many posts to display. Max is 10.
+  },
+  googleAnalytics: {
+    // GA3 tracking id/GA4 tag id
+    id: '' // UA-XXXXXXXXX-X | G-XXXXXXXXXX
+  },
   themeConfig: {
     default: 'light',
 
@@ -169,4 +169,157 @@ module.exports = {
 
 ### Themes
 
-Themes
+There are 21 themes available which can be selected from the dropdown.\
+![Theme Dropdown]()
+
+Here are some screenshots of different themes.\
+![Theme 1]()\
+![Theme 2]()
+
+
+### Google Analytics
+
+ezFolio supports both GA3 and GA4. If you do not want to use Google Analytics, keep the <code>id</code> empty.
+```js
+// config.js
+module.exports = {
+  // ...
+  googleAnalytics: {
+    id: ''
+  },
+}
+```
+
+Besides tracking visitors, ezFolio will track click event on projects and blog posts, and send them to Google Analytics.\
+![Google Analytics]()
+
+
+### Meta Tags
+
+Meta tags will be auto generated from configs dynamically. However, you can also manually add meta tags in <code>public\index.html</code>
+
+
+### Avatar and Bio
+
+Your github avatar and bio will be displayed here.\
+![Avatar Bio]()
+
+
+### Social Links
+
+ezProfile supports linking social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website and email.
+```js
+// config.js
+module.exports = {
+  // ...
+  social: {
+    linkedin: 'ariful-alam',
+    twitter: 'arif_swozon',
+    facebook: '',
+    dribbble: '',
+    behance: '',
+    medium: '',
+    devto: '',
+    website: 'https://arifszn.github.io',
+    email: ''
+  },
+}
+```
+
+
+### Skills
+
+To showcase your skills provide them in <code>skills</code>.
+```js
+// config.js
+module.exports = {
+  // ...
+  skills: [
+    'JavaScript',
+    'React.js',
+  ],
+}
+```
+
+Empty array will hide the skills section.
+
+
+### Experience
+
+Provide your job history in <code>experiences</code>.
+```js
+// config.js
+module.exports = {
+  // ...
+  experiences: [
+    {
+      company: 'Company name 1',
+      position: 'Software Engineer',
+      from: 'July 2019',
+      to: 'Present'
+    },
+    {
+      company: 'Company name 2',
+      position: 'Jr. Software Engineer',
+      from: 'January 2019',
+      to: ' June 2019'
+    }
+  ],
+}
+```
+
+Empty array will hide the experience section.
+
+
+### Education
+
+Provide your education history in <code>education</code>.
+```js
+// config.js
+module.exports = {
+  // ...
+  education: [
+    {
+      institution: 'Institution name 1',
+      degree: 'Bachelor of Science',
+      from: '2015',
+      to: '2019'
+    },
+    {
+      institution: 'Institution name 2',
+      degree: 'Higher Secondary Certificate (HSC)',
+      from: '2012',
+      to: '2014',
+    }
+  ],
+}
+```
+
+Empty array will hide the education section.
+
+
+### Projects
+
+Your public repo from github will be displayed here automatically. You can limit how many projects do you want to be displayed. Also you can hide forked or specific repos.
+
+```js
+// config.js
+module.exports = {
+  // ...
+  github: {
+    username: 'arifszn', // Your GitHub org/user name. (Required)
+    sortBy: 'stars', // stars | updated
+    limit: 8, // How many projects to display.
+    exclude: {
+      forks: false, // Forked projects will not be displayed if set to true.
+      projects: [] // These projects will not be displayed. example: ['my-project1', 'my-project2']
+    }
+  },
+}
+```
+
+### Blog Posts
+
+If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is 10).
+
+The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
