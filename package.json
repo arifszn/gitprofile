@@ -1,6 +1,7 @@
 {
     "name": "ezprofile",
     "version": "0.1.0",
+    "homepage": "https://arifszn.github.io/ezprofile",
     "private": true,
     "dependencies": {
         "@craco/craco": "^6.2.0",
@@ -11,6 +12,7 @@
         "article-api": "^1.0.5",
         "axios": "^0.21.1",
         "daisyui": "^1.12.1",
+        "gh-pages": "^3.2.3",
         "moment": "^2.29.1",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
@@ -26,7 +28,9 @@
         "start": "craco start",
         "build": "craco build",
         "test": "craco test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
