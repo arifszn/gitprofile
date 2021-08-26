@@ -316,7 +316,7 @@ Empty array will hide the education section.
 
 ### Projects
 
-Your public repo from github will be displayed here automatically. You can limit how many projects you want to display. Also you can hide forked or specific repos.
+Your public repo from github will be displayed here automatically. You can limit how many projects do you want to be displayed. Also you can hide forked or specific repos.
 
 ```js
 // config.js
@@ -336,8 +336,20 @@ module.exports = {
 
 ### Blog Posts
 
-If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is 10).\
-<br/>
+If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is 10).
+
+```js
+// config.js
+module.exports = {
+  // ...
+  blog: {
+    source: 'dev.to',
+    username: 'arifszn',
+    limit: 5
+  },
+}
+```
+
 ![Blog](https://arifszn.github.io/assets/img/hosted/ezprofile/blog.png)
 
 The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
