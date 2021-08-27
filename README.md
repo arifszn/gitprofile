@@ -17,16 +17,16 @@ https://user-images.githubusercontent.com/45073703/130999562-881227cb-d2bf-46a0-
 
 It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
 
-✔️ [21 Themes](#themes)\
-✔️ [Google Analytics](#google-analytics)\
-✔️ [Meta Tags](#meta-tags)\
-✔️ [Avatar and Bio](#avatar-and-bio)\
-✔️ [Social Links](#social-links)\
-✔️ [Skills](#skills)\
-✔️ [Experience](#experience)\
-✔️ [Education](#education)\
-✔️ [Projects](#projects)\
-✔️ [Blog Posts](#blog-posts)
+✓ [21 Themes](#themes)\
+✓ [Google Analytics](#google-analytics)\
+✓ [Meta Tags](#meta-tags)\
+✓ [Avatar and Bio](#avatar-and-bio)\
+✓ [Social Links](#social-links)\
+✓ [Skills](#skills)\
+✓ [Experience](#experience)\
+✓ [Education](#education)\
+✓ [Projects](#projects)\
+✓ [Blog Posts](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/ezprofile)**.
 
@@ -59,7 +59,7 @@ npm start
 
 ## 🎨 Customization
 
-All the magic happens in file <code>src/config</code>. Open it and modify it according to your preference.
+All the magic happens in the file <code>src/config</code>. Open it and modify it according to your preference.
 
 These are the default values:
 
