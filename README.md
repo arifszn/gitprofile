@@ -6,6 +6,7 @@
 
 <h1 align="center">ezProfile</h1>
 <p align="center"><sup>A modern, responsive and customizable portfolio template for Developers!</sup></p>
+<p align="center"><sup>https://arifszn.github.io/ezprofile</sup></p>
 
 <br/>
 
