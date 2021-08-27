@@ -376,7 +376,7 @@ Once you are done with your setup and have completed all steps above, you need t
     Your personal portfolio will be live at <code>username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
 
-**2. Other:** You can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed guide.
+**2. Other:** You can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed deployment guide.
 
 
 ## 📢 Please Read
