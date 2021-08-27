@@ -77,7 +77,7 @@ module.exports = {
     },
     googleAnalytics: {
         // GA3 tracking id/GA4 tag id
-        id: 'G-WLLB5E14M6' // UA-XXXXXXXXX-X | G-XXXXXXXXXX
+        id: '' // UA-XXXXXXXXX-X | G-XXXXXXXXXX
     },
     themeConfig: {
         default: 'light',

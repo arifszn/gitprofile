@@ -1,8 +1,15 @@
 {
     "name": "ezprofile",
-    "version": "0.1.0",
+    "version": "1.0.0",
+    "description": "Kickstart your personal portfolio with Github Api and blog",
     "homepage": "https://arifszn.github.io/ezprofile",
     "private": true,
+    "license": "MIT",
+    "author": "arifszn",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/arifszn/ezprofile.git"
+    },
     "dependencies": {
         "@craco/craco": "^6.2.0",
         "@reduxjs/toolkit": "^1.6.1",
@@ -54,5 +61,20 @@
         "autoprefixer": "^9.8.6",
         "postcss": "^7.0.36",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
-    }
+    },
+    "keywords": [
+        "personal-site",
+        "template",
+        "portfolio",
+        "personal-website",
+        "portfolio-website",
+        "portfolio-site",
+        "portfolio-template",
+        "portfolio-page",
+        "developer-portfolio",
+        "portfolio-project",
+        "github-portfolio",
+        "react-portfolio",
+        "github-api"
+    ]
 }
