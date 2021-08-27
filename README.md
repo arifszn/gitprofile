@@ -174,8 +174,21 @@ module.exports = {
 
 ### Themes
 
-There are 21 themes available which can be selected from the dropdown.\
-<br/>
+There are 21 themes available that can be selected from the dropdown. 
+
+The default theme can be specified.
+
+```js
+// config.js
+module.exports = {
+  // ...
+  themeConfig: {
+    default: 'light',
+    // ...
+  }
+}
+```
+
 ![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-1.png)
 
 Here are some screenshots of different themes.\
@@ -188,7 +201,9 @@ Here are some screenshots of different themes.\
 <br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-5.png)\
 <br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)\
+<br/>
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-7.png)
 
 
 ### Google Analytics
@@ -375,8 +390,9 @@ Once you are done with your setup and have completed all steps above, you need t
 
     Your personal portfolio will be live at <code>username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
+<br/>
 
-**2. Other:** You can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed deployment guide.
+**2. Other:** You can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://create-react-app.dev/docs/deployment) for a detailed deployment guide.
 
 
 ## 📢 Please Read
