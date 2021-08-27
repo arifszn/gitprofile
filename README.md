@@ -6,27 +6,32 @@
 
 <h1 align="center">ezProfile</h1>
 <p align="center"><sup>A modern, responsive and customizable portfolio template for Developers!</sup></p>
+<p align="center"><sup>https://arifszn.github.io/ezprofile</sup></p>
 
 <br/>
 
-https://user-images.githubusercontent.com/45073703/130999562-881227cb-d2bf-46a0-98b2-a7c7dad2664f.mp4
-
-<br/>
+<p align="center">
+    <a href="https://arifszn.github.io/ezprofile">
+        <img src="https://arifszn.github.io/assets/img/hosted/ezprofile/preview.gif" width="60%" alt="Preview"/>
+    </a>
+    <br/>
+    <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
+</p>
 
 **ezProfile** is an easy-to-customize personal dev portfolio template that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories. Also, it includes space to highlight your details, job history, education history, skills, and recent blog posts.
 
 It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
 
-✔️ [21 Themes](#themes)\
-✔️ [Google Analytics](#google-analytics)\
-✔️ [Meta Tags](#meta-tags)\
-✔️ [Avatar and Bio](#avatar-and-bio)\
-✔️ [Social Links](#social-links)\
-✔️ [Skills](#skills)\
-✔️ [Experience](#experience)\
-✔️ [Education](#education)\
-✔️ [Projects](#projects)\
-✔️ [Blog Posts](#blog-posts)
+✓ [21 Themes](#themes)\
+✓ [Google Analytics](#google-analytics)\
+✓ [Meta Tags](#meta-tags)\
+✓ [Avatar and Bio](#avatar-and-bio)\
+✓ [Social Links](#social-links)\
+✓ [Skills](#skills)\
+✓ [Experience](#experience)\
+✓ [Education](#education)\
+✓ [Projects](#projects)\
+✓ [Blog Posts](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/ezprofile)**.
 
@@ -59,7 +64,7 @@ npm start
 
 ## 🎨 Customization
 
-All the magic happens in file <code>src/config</code>. Open it and modify it according to your preference.
+All the magic happens in the file <code>src/config</code>. Open it and modify it according to your preference.
 
 These are the default values:
 
@@ -174,8 +179,21 @@ module.exports = {
 
 ### Themes
 
-There are 21 themes available which can be selected from the dropdown.\
-<br/>
+There are 21 themes available that can be selected from the dropdown. 
+
+The default theme can be specified.
+
+```js
+// config.js
+module.exports = {
+  // ...
+  themeConfig: {
+    default: 'light',
+    // ...
+  }
+}
+```
+
 ![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-1.png)
 
 Here are some screenshots of different themes.\
@@ -188,7 +206,9 @@ Here are some screenshots of different themes.\
 <br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-5.png)\
 <br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)\
+<br/>
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-7.png)
 
 
 ### Google Analytics
@@ -245,7 +265,7 @@ module.exports = {
 
 ### Skills
 
-To showcase your skills provide them in <code>skills</code>.
+To showcase your skills provide them here.
 ```js
 // config.js
 module.exports = {
@@ -375,8 +395,9 @@ Once you are done with your setup and have completed all steps above, you need t
 
     Your personal portfolio will be live at <code>username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
+<br/>
 
-**2. Other:** You can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [docs](https://create-react-app.dev/docs/deployment) for detailed guide.
+**2. Other:** You can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://create-react-app.dev/docs/deployment) for a detailed deployment guide.
 
 
 ## 📢 Please Read
