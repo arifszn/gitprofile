@@ -5,8 +5,8 @@
 </p>
 
 <h1 align="center">ezProfile</h1>
-<p align="center"><sup>A modern, responsive and customizable portfolio template for Developers!</sup></p>
-<p align="center"><sup>https://arifszn.github.io/ezprofile</sup></p>
+<p align="center">A modern, responsive and customizable portfolio template for Developers!</p>
+<p align="center">https://arifszn.github.io/ezprofile</p>
 
 <br/>
 
@@ -392,8 +392,9 @@ Once you are done with your setup and have completed all steps above, you need t
     ```
 
   - Run <code>npm run deploy</code>.
+  - If you see <code>README.md</code> at <code>username.github.io</code>, be sure to change your GitHub Page's source to <code>gh-pages</code> branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-    Your personal portfolio will be live at <code>https://username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
+    Your personal portfolio will be live at <code>username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
 <br/>
 
