@@ -381,19 +381,19 @@ Once you are done with your setup and have completed all steps above, you need t
 
 **1. Github Pages:**
   - Rename your forked repository to <code>username.github.io</code> in github, where <code>username</code> is your GitHub username (or organization name).
-  - Open <code>package.json</code>, and change <code>homepage</code>'s value to <code>username.github.io</code>.
+  - Open <code>package.json</code>, and change <code>homepage</code>'s value to <code>https://username.github.io</code>.
   
     ```js
     // package.json
     {
       // ...
-      "homepage": "username.github.io",
+      "homepage": "https://username.github.io",
     }
     ```
 
   - Run <code>npm run deploy</code>.
 
-    Your personal portfolio will be live at <code>username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
+    Your personal portfolio will be live at <code>https://username.github.io</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
 <br/>
 
