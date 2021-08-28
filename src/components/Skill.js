@@ -10,7 +10,7 @@ const Skill = () => {
         for (let index = 0; index < 12; index++) {
             array.push((
                 <div key={index}>
-                    {skeleton({ width: 'w-16', height: 'h-4' })}
+                    {skeleton({ width: 'w-16', height: 'h-4', className: 'm-1' })}
                 </div>
             ))
         }
@@ -24,16 +24,18 @@ const Skill = () => {
                 (typeof config.skills !== 'undefined' && config.skills.length !== 0) && (
                     <div className="card shadow-lg compact bg-base-100">
                         <div className="card-body">
-                            <div className="inline-flex gap-2 flex-wrap p-3">
-                                {
-                                    loading ? renderSkeleton() : (
-                                        config.skills.map((skill, index) => (
-                                            <div key={index} className="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 badge-primary bg-opacity-75 rounded-full">
-                                                {skill}
-                                            </div>
-                                        ))
-                                    )
-                                }
+                            <div className="p-3 flow-root">
+                                <div className="-m-1 flex flex-wrap">
+                                    {
+                                        loading ? renderSkeleton() : (
+                                            config.skills.map((skill, index) => (
+                                                <div key={index} className="m-1 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 badge-primary bg-opacity-75 rounded-full">
+                                                    {skill}
+                                                </div>
+                                            ))
+                                        )
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>
