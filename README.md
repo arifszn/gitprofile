@@ -226,7 +226,7 @@ module.exports = {
 
 Besides tracking visitors, ezFolio will track click events on projects and blog posts, and send them to Google Analytics.\
 <br/>
-![Google Analytics](https://arifszn.github.io/assets/img/hosted/ezprofile/google-analytics.png)
+![Google Analytics](https://www.arifszn.com/assets/img/hosted/ezprofile/event.png)
 
 
 ### Meta Tags
@@ -356,7 +356,7 @@ module.exports = {
 
 ### Blog Posts
 
-If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is 10).
+If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is <code>10</code>).
 
 ```js
 // config.js
