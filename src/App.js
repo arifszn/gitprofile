@@ -163,9 +163,11 @@ function App() {
                                 </div>
                             </div>
                             {/* DO NOT REMOVE/MODIFY THE FOOTER */}
-                            <div className="text-center bg-base-200 credit">
-                                <p className="font-mono text-sm">Made with <a className="text-primary" href="https://github.com/arifszn/ezprofile" target="_blank" rel="noreferrer">ezProfile</a> and ❤️</p>
-                            </div>
+                            <footer className="p-4 footer bg-base-200 text-base-content footer-center">
+                                <div>
+                                    <p className="font-mono text-sm">Made with <a className="text-primary" href="https://github.com/arifszn/ezprofile" target="_blank" rel="noreferrer">ezProfile</a> and ❤️</p>
+                                </div>
+                            </footer>
                         </Fragment>
                     )
                 }
