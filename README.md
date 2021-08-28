@@ -64,7 +64,7 @@ npm start
 
 ## 🎨 Customization
 
-All the magic happens in the file <code>src/config</code>. Open it and modify it according to your preference.
+All the magic happens in the file <code>src/config.js</code>. Open it and modify it according to your preference.
 
 These are the default values:
 
@@ -380,7 +380,7 @@ The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
 Once you are done with your setup and have completed all steps above, you need to put your website online! The fastest approach is to use [GitHub Pages](https://pages.github.com) which is completely free.
 
 **1. Github Pages:**
-  - Rename your forked repository to <code>username.github.io</code>, where <code>username</code> is your GitHub username (or organization name).
+  - Rename your forked repository to <code>username.github.io</code> in github, where <code>username</code> is your GitHub username (or organization name).
   - Open <code>package.json</code>, and change <code>homepage</code>'s value to <code>username.github.io</code>.
   
     ```js

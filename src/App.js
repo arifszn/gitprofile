@@ -37,10 +37,10 @@ function App() {
 
             let profileData = {
                 avatar: data.avatar_url,
-                name: data.name,
-                bio: data.bio,
-                location: data.location,
-                company: data.company
+                name: data.name ? data.name : '',
+                bio: data.bio ? data.bio : '',
+                location: data.location ? data.location : '',
+                company: data.company ? data.company : ''
             }
 
             dispatch(setProfile(profileData));
