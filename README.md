@@ -413,7 +413,7 @@ If you are using this project and happy with it or just want to encourage me to 
 
 ## 💡 Contributing
 
-Any contributors who want to make this website better can make contributions, which will be greatly appreciated. To contribute, clone this repo locally and commit your code to a new branch. Feel free to create an issue or make a pull request.
+Any contributors who want to make this project better can make contributions, which will be greatly appreciated. To contribute, clone this repo locally and commit your code to a new branch. Feel free to create an issue or make a pull request.
 
 ## 📄 License
 
