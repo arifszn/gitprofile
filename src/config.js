@@ -37,6 +37,12 @@ module.exports = {
     ],
     experiences: [
         { 
+            company: 'Monstarlab Bangladesh',
+            position: 'Software Engineer',
+            from: 'September 2021',
+            to: 'Present'
+        },
+        { 
             company: 'Orangetoolz - My Offer 360 Degree',
             position: 'Jr. Full Stack Engineer',
             from: 'July 2019',
