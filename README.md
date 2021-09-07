@@ -92,6 +92,7 @@ module.exports = {
     medium: '',
     devto: '',
     website: '',
+    phone: '',
     email: ''
   },
   skills: [
@@ -243,7 +244,7 @@ Your github avatar and bio will be displayed here.\
 
 ### Social Links
 
-ezProfile supports linking your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, and email.
+ezProfile supports linking your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, phone and email.
 ```js
 // config.js
 module.exports = {
@@ -257,6 +258,7 @@ module.exports = {
     medium: '',
     devto: '',
     website: 'https://arifszn.github.io',
+    phone: '',
     email: ''
   },
 }

@@ -3,6 +3,7 @@ import { AiFillGithub, AiFillMediumSquare } from 'react-icons/ai';
 import { SiTwitter } from 'react-icons/si';
 import { GrLinkedinOption } from 'react-icons/gr';
 import { CgDribbble } from 'react-icons/cg';
+import { RiPhoneFill } from 'react-icons/ri';
 import { FaBehanceSquare, FaBuilding, FaDev, FaFacebook, FaGlobe } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import config from '../config';
@@ -199,6 +200,22 @@ const Details = () => {
                                                     className="text-base-content-important"
                                                 >
                                                     {config.social.website}
+                                                </a>
+                                            </span>
+                                        </li>
+                                    )
+                                }
+                                {
+                                    typeof config.social.phone !== 'undefined' && config.social.phone && (
+                                        <li>
+                                            <span>
+                                                <RiPhoneFill className="mr-2" />
+                                                <a
+                                                    href={`tel:${config.social.phone}`}
+                                                    rel="noreferrer"
+                                                    className="text-base-content-important"
+                                                >
+                                                    {config.social.phone}
                                                 </a>
                                             </span>
                                         </li>

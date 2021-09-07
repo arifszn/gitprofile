@@ -18,6 +18,7 @@ module.exports = {
         medium: '',
         devto: '',
         website: 'https://arifszn.github.io',
+        phone: '',
         email: 'contact@arifszn.com'
     },
     skills: [
