@@ -401,7 +401,7 @@ Once you are done with your setup and have completed all steps above, you need t
   - Any time you commit a change to main branch the website will automatically update.
 
   
-Manual deployment is also available by running <code>npm run deploy</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages). If you see only <code>README</code> at <code>username.github.io/repoName</code>, be sure to change your GitHub Page's source to <code>gh-pages</code> branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+Manual deployment is also available by running <code>npm run deploy</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages). If you see only <code>README</code> at <code>username.github.io</code>, be sure to change your GitHub Page's source to <code>gh-pages</code> branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
   
 <br/>
 
