@@ -394,9 +394,9 @@ Once you are done with your setup and have completed all steps above, you need t
     }
     ```
 
-  - Now commit to your main branch
+  - Now commit to your main branch with your changes.
   - The CI/CD pipeline will publish your page at the gh-pages branch automatically.
-  - Go to your repo's Settings -> Pages -> Source and change the branch to gh-pages
+  - Go to your repo's Settings -> Pages -> Source and change the branch to gh-pages.
   - Your personal portfolio will be live at <code>username.github.io</code>.
   - Any time you commit a change to main branch the website will automatically update.
 
