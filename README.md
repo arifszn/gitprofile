@@ -5,66 +5,69 @@
 </p>
 
 <h1 align="center">ezProfile</h1>
-<p align="center">A modern, responsive and customizable portfolio builder for Developers!</p>
-<p align="center">https://arifszn.github.io/ezprofile</p>
+<p align="center"><sup>A modern, responsive and customizable portfolio template for Developers!</sup></p>
 
 <br/>
 
-<p align="center">
-    <a href="https://arifszn.github.io/ezprofile">
-        <img src="https://arifszn.github.io/assets/img/hosted/ezprofile/preview.gif" width="60%" alt="Preview"/>
-    </a>
-    <br/>
-    <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
-</p>
+https://user-images.githubusercontent.com/45073703/130999562-881227cb-d2bf-46a0-98b2-a7c7dad2664f.mp4
 
-**ezProfile** is an easy-to-customize personal dev portfolio builder that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories. Also, it includes space to highlight your details, job history, education history, skills, and recent blog posts.
+<br/>
+
+**ezProfile** is an easy-to-customize personal dev portfolio template that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and public repositories. Also, it includes space to highlight your details, job history, education history, skills, and recent blog posts.
 
 It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
 
-✓ [21 Themes](#themes)\
-✓ [Google Analytics](#google-analytics)\
-✓ [Meta Tags](#meta-tags)\
-✓ [Avatar and Bio](#avatar-and-bio)\
-✓ [Social Links](#social-links)\
-✓ [Skills](#skills)\
-✓ [Experience](#experience)\
-✓ [Education](#education)\
-✓ [Projects](#projects)\
-✓ [Blog Posts](#blog-posts)
+✔️ [21 Themes](#themes)\
+✔️ [Google Analytics](#google-analytics)\
+✔️ [Meta Tags](#meta-tags)\
+✔️ [Avatar and Bio](#avatar-and-bio)\
+✔️ [Social Links](#social-links)\
+✔️ [Skills](#skills)\
+✔️ [Experience](#experience)\
+✔️ [Education](#education)\
+✔️ [Projects](#projects)\
+✔️ [Blog Posts](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/ezprofile)**.
 
 
 ## 🛠 Installation & Set Up
 
-These instructions will get you a copy of the project up and running on your local machine.
+These instructions will get you a copy of the project and deploy your website online!
 
-You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
+  - **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repo so you have your own project to customize by clicking the fork icon on the top right side. A "fork" is a copy of a repository.
+  - Rename your forked repository to <code>username.github.io</code> in github, where <code>username</code> is your GitHub username (or organization name).
+  - Go to your repo's **Actions** page and enable workflows.\
+  ![Workflows](https://arifszn.github.io/assets/img/hosted/ezprofile/workflows.png)
 
+  - Open <code>package.json</code>, and change <code>homepage</code>'s value to <code>https://username.github.io</code>.
+  
+    ```js
+    // package.json
+    {
+      // ...
+      "homepage": "https://username.github.io",
+    }
+    ```
 
-1. **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repo so you have your own project to customize. A "fork" is a copy of a repository.
+  - Now commit to your **main** branch with your changes.
+  - The CI/CD pipeline will publish your page at the gh-pages branch automatically.
+  - Go to your repo's **Settings** -> **Pages** -> **Source** and change the branch to gh-pages and click **save**.
+  - Your personal portfolio will be live at <code>username.github.io</code>.
+  - Any time you commit a change to the **main** branch the website will automatically update.
 
-2. Once you've found a home for your forked repository, **[clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)** it.
+  
+You can skip the above steps and do a manual deployment by running <code>npm run deploy</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
-3. Change into your new directory.
-```sh
-cd ezprofile
-```
+As this is a create react app, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://create-react-app.dev/docs/deployment) for a detailed deployment guide to other services.
 
-4. Install dependencies
-```sh
-npm install
-```
+If you see only <code>README</code> at <code>username.github.io</code>, be sure to change your GitHub Page's source to <code>gh-pages</code> branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+  
 
-5. Start the development server
-```sh
-npm start
-```
 
 ## 🎨 Customization
 
-All the magic happens in the file <code>src/config.js</code>. Open it and modify it according to your preference.
+All the magic happens in file <code>src/config</code>. Open it and modify it according to your preference.
 
 These are the default values:
 
@@ -92,7 +95,6 @@ module.exports = {
     medium: '',
     devto: '',
     website: '',
-    phone: '',
     email: ''
   },
   skills: [
@@ -180,21 +182,8 @@ module.exports = {
 
 ### Themes
 
-There are 21 themes available that can be selected from the dropdown. 
-
-The default theme can be specified.
-
-```js
-// config.js
-module.exports = {
-  // ...
-  themeConfig: {
-    default: 'light',
-    // ...
-  }
-}
-```
-
+There are 21 themes available which can be selected from the dropdown.\
+<br/>
 ![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-1.png)
 
 Here are some screenshots of different themes.\
@@ -207,9 +196,7 @@ Here are some screenshots of different themes.\
 <br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-5.png)\
 <br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)\
-<br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-7.png)
+![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)
 
 
 ### Google Analytics
@@ -227,7 +214,7 @@ module.exports = {
 
 Besides tracking visitors, ezFolio will track click events on projects and blog posts, and send them to Google Analytics.\
 <br/>
-![Google Analytics](https://www.arifszn.com/assets/img/hosted/ezprofile/event.png)
+![Google Analytics](https://arifszn.github.io/assets/img/hosted/ezprofile/event.png)
 
 
 ### Meta Tags
@@ -244,7 +231,7 @@ Your github avatar and bio will be displayed here.\
 
 ### Social Links
 
-ezProfile supports linking your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, phone and email.
+ezProfile supports linking your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, and email.
 ```js
 // config.js
 module.exports = {
@@ -258,7 +245,6 @@ module.exports = {
     medium: '',
     devto: '',
     website: 'https://arifszn.github.io',
-    phone: '',
     email: ''
   },
 }
@@ -267,7 +253,7 @@ module.exports = {
 
 ### Skills
 
-To showcase your skills provide them here.
+To showcase your skills provide them in <code>skills</code>.
 ```js
 // config.js
 module.exports = {
@@ -358,7 +344,7 @@ module.exports = {
 
 ### Blog Posts
 
-If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is <code>10</code>).
+If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is 10).
 
 ```js
 // config.js
@@ -377,40 +363,10 @@ module.exports = {
 The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
 
 
-## 🚀 Deploy
-
-Once you are done with your setup and have completed all steps above, you need to put your website online! The fastest approach is to use [GitHub Pages](https://pages.github.com) which is completely free.
-
-**1. Github Pages:**
- 
-  - Rename your forked repository to <code>username.github.io</code> in github, where <code>username</code> is your GitHub username (or organization name).
-  - Open <code>package.json</code>, and change <code>homepage</code>'s value to <code>https://username.github.io</code>.
-  
-    ```js
-    // package.json
-    {
-      // ...
-      "homepage": "https://username.github.io",
-    }
-    ```
-
-  - Now commit to your main branch with your changes.
-  - The CI/CD pipeline will publish your page at the gh-pages branch automatically.
-  - Go to your repo's Settings -> Pages -> Source and change the branch to gh-pages.
-  - Your personal portfolio will be live at <code>username.github.io</code>.
-  - Any time you commit a change to main branch the website will automatically update.
-
-  
-Manual deployment is also available by running <code>npm run deploy</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages). If you see only <code>README</code> at <code>username.github.io</code>, be sure to change your GitHub Page's source to <code>gh-pages</code> branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-  
-<br/>
-
-**2. Other:** You can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://create-react-app.dev/docs/deployment) for a detailed deployment guide.
-
 
 ## 📢 Please Read
 
-I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own or removing/changing the footer notice. However You are open to use this project by forking it and change any code necessary(except footer notice). Go through the [License](https://github.com/arifszn/ezprofile/blob/main/LICENSE) before thinking of stealing this project. For every stolen copy found, an issue will be created on the concerned repo and a [DMCA Takedown](https://www.dmca.com/FAQ/What-is-a-DMCA-Takedown) notice will be sent. Do not fall into this [list](https://github.com/arifszn/ezprofile/issues/2).
+I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own or removing the footer notice.
 
 
 ## 💖 Support
@@ -420,7 +376,7 @@ If you are using this project and happy with it or just want to encourage me to 
 
 ## 💡 Contributing
 
-Any contributors who want to make this project better can make contributions, which will be greatly appreciated. To contribute, clone this repo locally and commit your code to a new branch. Feel free to create an issue or make a pull request.
+Any contributors who want to make this website better can make contributions, which will be greatly appreciated. To contribute, clone this repo locally and commit your code to a new branch. Feel free to create an issue or make a pull request.
 
 ## 📄 License
 
