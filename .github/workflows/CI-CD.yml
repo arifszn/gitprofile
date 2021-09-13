@@ -1,4 +1,4 @@
-name: Build and Publish to gh-pages branch
+name: CI/CD
 
 on:
   push:
@@ -30,10 +30,10 @@ jobs:
     - name: Build
       run: npm run build
       env:
-         CI: ""
+        CI: ""
          
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-          branch: gh-pages
-          folder: build  
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
