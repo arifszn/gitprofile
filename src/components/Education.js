@@ -1,10 +1,11 @@
-import { useSelector } from "react-redux";
 import config from "../config";
 import { GoPrimitiveDot } from 'react-icons/go';
 import { skeleton } from "../helpers/utils";
+import { useContext } from "react";
+import { LoadingContext } from "../contexts/LoadingContext";
 
 const Education = () => {
-    const loading = useSelector(state => state.loading);
+    const [loading] = useContext(LoadingContext);
 
     const renderSkeleton = () => {
         let array = [];

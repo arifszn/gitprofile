@@ -1,26 +1,25 @@
 import axios from "axios";
-import { Fragment, useCallback, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { Fragment, useCallback, useContext, useEffect, useState } from "react";
 import AvatarCard from "./components/AvatarCard";
 import ErrorPage from "./components/ErrorPage";
 import ThemeChanger from "./components/ThemeChanger";
 import config from "./config";
 import moment from 'moment';
-import { setLoading } from "./store/slices/loadingSlice";
-import { setProfile } from "./store/slices/profileSlice";
 import Details from "./components/Details";
 import Skill from "./components/Skill";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Project from "./components/Project";
-import { setRepo } from "./store/slices/repoSlice";
 import Blog from "./components/Blog";
 import MetaTags from "./components/MetaTags";
+import { LoadingContext } from "./contexts/LoadingContext";
+import { ThemeContext } from "./contexts/ThemeContext";
 
 function App() {
-    const dispatch = useDispatch();
-    const theme = useSelector(state => state.theme);
-
+    const [theme] = useContext(ThemeContext);
+    const [, setLoading] = useContext(LoadingContext);
+    const [profile, setProfile] = useState(null);
+    const [repo, setRepo] = useState(null);
     const [error, setError] = useState(null);
     const [rateLimit, setRateLimit] = useState(null);
 
@@ -43,7 +42,7 @@ function App() {
                 company: data.company ? data.company : ''
             }
 
-            dispatch(setProfile(profileData));
+            setProfile(profileData);
         })
         .then(() => {
             let excludeRepo = ``;
@@ -64,7 +63,7 @@ function App() {
             .then(response => {
                 let data = response.data;
 
-                dispatch(setRepo(data.items));
+                setRepo(data.items);
             })
             .catch((error) => {
                 handleError(error);
@@ -74,9 +73,9 @@ function App() {
             handleError(error);
         })
         .finally(() => {
-            dispatch(setLoading(false));
+            setLoading(false);
         });
-    }, [dispatch])
+    }, [setLoading])
 
     useEffect(() => {
         loadData();
@@ -104,7 +103,7 @@ function App() {
 
     return (
         <Fragment>
-            <MetaTags/>
+            <MetaTags profile={profile}/>
             <div className="fade-in h-screen">
 
                 {
@@ -144,20 +143,20 @@ function App() {
                                         <div className="grid grid-cols-1 gap-6">
                                             {
                                                 !config.themeConfig.disableSwitch && (
-                                                    <ThemeChanger />
+                                                    <ThemeChanger/>
                                                 )
                                             }
-                                            <AvatarCard />
-                                            <Details />
-                                            <Skill />
-                                            <Experience />
-                                            <Education />
+                                            <AvatarCard profile={profile}/>
+                                            <Details profile={profile}/>
+                                            <Skill/>
+                                            <Experience/>
+                                            <Education/>
                                         </div>
                                     </div>
                                     <div className="lg:col-span-2 col-span-1">
                                         <div className="grid grid-cols-1 gap-6">
-                                            <Project />
-                                            <Blog />
+                                            <Project repo={repo}/>
+                                            <Blog/>
                                         </div>
                                     </div>
                                 </div>

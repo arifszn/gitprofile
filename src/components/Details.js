@@ -5,13 +5,14 @@ import { GrLinkedinOption } from 'react-icons/gr';
 import { CgDribbble } from 'react-icons/cg';
 import { RiPhoneFill } from 'react-icons/ri';
 import { FaBehanceSquare, FaBuilding, FaDev, FaFacebook, FaGlobe } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
 import config from '../config';
 import { skeleton } from '../helpers/utils';
+import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { LoadingContext } from '../contexts/LoadingContext';
 
-const Details = () => {
-    const profile = useSelector(state => state.profile);
-    const loading = useSelector(state => state.loading);
+const Details = (props) => {
+    const [loading] = useContext(LoadingContext);
 
     const renderSkeleton = () => {
         let array = [];
@@ -34,24 +35,24 @@ const Details = () => {
             <div className="card-body">
                 <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-60">
                     {
-                        loading ? renderSkeleton() : (
+                        (loading || !props.profile) ? renderSkeleton() : (
                             <>
                                 {
-                                    profile && profile.location && (
+                                    props.profile.location && (
                                         <li>
                                             <span>
                                                 <MdLocationOn className="mr-2" />
-                                                {profile.location}
+                                                {props.profile.location}
                                             </span>
                                         </li>
                                     )
                                 }
                                 {
-                                    profile && profile.company && (
+                                    props.profile.company && (
                                         <li>
                                             <span>
                                                 <FaBuilding className="mr-2" />
-                                                {profile.company}
+                                                {props.profile.company}
                                             </span>
                                         </li>
                                     )
@@ -245,6 +246,10 @@ const Details = () => {
             </div>
         </div>
     )
+}
+
+Details.propTypes = {
+    profile: PropTypes.object
 }
 
 export default Details;

@@ -1,17 +1,20 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { setTheme } from '../store/slices/themeSlice';
 import config from '../config';
 import { skeleton } from '../helpers/utils';
 import { AiOutlineControl } from 'react-icons/ai';
+import { useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
+import { LoadingContext } from '../contexts/LoadingContext';
 
 const ThemeChanger = () => {
-    const dispatch = useDispatch();
-    const theme = useSelector(state => state.theme);
-    const loading = useSelector(state => state.loading);
+    const [theme, setTheme] = useContext(ThemeContext);
+    const [loading] = useContext(LoadingContext);
 
     const changeTheme = (e, selectedTheme) => {
         e.preventDefault();
-        dispatch(setTheme(selectedTheme));
+        document.querySelector('html').setAttribute('data-theme', selectedTheme);
+        localStorage.setItem('ezprofileTheme', selectedTheme);
+
+        setTheme(selectedTheme);
     }
 
     return (
@@ -26,7 +29,9 @@ const ThemeChanger = () => {
                         }
                     </h5>
                     <span className="text-base-content text-opacity-40 capitalize text-sm">
-                        {loading ? skeleton({ width: 'w-16', height: 'h-5' }) : (theme === config.themeConfig.default ? 'Default' : theme)}
+                        {
+                            loading ? skeleton({ width: 'w-16', height: 'h-5' }) : (theme === config.themeConfig.default ? 'Default' : theme)
+                        }
                     </span>
                 </div>
                 <div className="flex-0">

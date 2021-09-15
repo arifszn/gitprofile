@@ -1,7 +1,7 @@
 import config from "../config";
 import colors from './colors.json';
 
-export const getThemeValue = () => {
+export const getInitialTheme = () => {
     if (config.themeConfig.disableSwitch) {
         return config.themeConfig.default;
     }

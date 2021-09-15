@@ -1,12 +1,12 @@
-import { Fragment } from "react";
-import { useSelector } from "react-redux";
+import { Fragment, useContext } from "react";
 import { ga, languageColor, skeleton } from "../helpers/utils";
 import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 import config from "../config";
+import PropTypes from 'prop-types';
+import { LoadingContext } from "../contexts/LoadingContext";
 
-const Project = () => {
-    const loading = useSelector(state => state.loading);
-    const repo = useSelector(state => state.repo);
+const Project = (props) => {
+    const [loading] = useContext(LoadingContext);
 
     const renderSkeleton = () => {
         let array = [];
@@ -51,7 +51,7 @@ const Project = () => {
     }
 
     const renderProjects = () => {
-        return repo.map((item, index) => (
+        return props.repo.map((item, index) => (
             <div
                 className="card shadow-lg compact bg-base-100 cursor-pointer"
                 key={index}
@@ -146,13 +146,17 @@ const Project = () => {
                     </div>
                     <div className="col-span-2">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {(loading || !repo) ? renderSkeleton() : renderProjects()}
+                            {(loading || !props.repo) ? renderSkeleton() : renderProjects()}
                         </div>
                     </div>
                 </div>
             </div>
         </Fragment>
     )
+}
+
+Project.propTypes = {
+    repo: PropTypes.array
 }
 
 export default Project;

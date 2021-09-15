@@ -1,9 +1,10 @@
-import { useSelector } from "react-redux";
+import { useContext } from "react";
 import config from "../config";
+import { LoadingContext } from "../contexts/LoadingContext";
 import { skeleton } from "../helpers/utils";
 
 const Skill = () => {
-    const loading = useSelector(state => state.loading);
+    const [loading] = useContext(LoadingContext);
 
     const renderSkeleton = () => {
         let array = [];
@@ -26,9 +27,11 @@ const Skill = () => {
                         <div className="card-body">
                             <div className="mx-3">
                                 <h5 className="card-title">
-                                    {loading ? skeleton({width: 'w-32', height: 'h-8'}) : (
-                                        <span className="opacity-70">Tech Stack</span>
-                                    )}
+                                    {
+                                        loading ? skeleton({width: 'w-32', height: 'h-8'}) : (
+                                            <span className="opacity-70">Tech Stack</span>
+                                        )
+                                    }
                                 </h5>
                             </div>
                             <div className="p-3 flow-root">

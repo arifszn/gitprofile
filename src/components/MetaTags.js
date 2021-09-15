@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { Helmet } from "react-helmet-async";
-import { useSelector } from 'react-redux';
 import config from '../config';
 import { isThemeDarkish } from '../helpers/utils';
+import PropTypes from 'prop-types';
+import { ThemeContext } from '../contexts/ThemeContext';
 
-const MetaTags = () => {
-    const profile = useSelector(state => state.profile);
-    const theme = useSelector(state => state.theme);
+const MetaTags = (props) => {
+    const [theme] = useContext(ThemeContext);
 
     return (
         <Fragment>
             {
-                profile && (
+                props.profile && (
                     <Helmet>
                         {
                             config.googleAnalytics.id && (
@@ -33,30 +33,34 @@ const MetaTags = () => {
                                 </script>
                             )
                         }
-                        <title>Portfolio of {profile.name}</title>
+                        <title>Portfolio of {props.profile.name}</title>
                         <meta name="theme-color" content={isThemeDarkish(theme) ? '#000000' : '#ffffff'}/>
 
-                        <meta name="description" content={profile.bio} />
+                        <meta name="description" content={props.profile.bio} />
 
-                        <meta itemprop="name" content={`Portfolio of ${profile.name}`} />
-                        <meta itemprop="description" content={profile.bio} />
-                        <meta itemprop="image" content={profile.avatar} />
+                        <meta itemprop="name" content={`Portfolio of ${props.profile.name}`} />
+                        <meta itemprop="description" content={props.profile.bio} />
+                        <meta itemprop="image" content={props.profile.avatar} />
 
                         <meta property="og:url" content={typeof config.social.website !== 'undefined' ? config.social.website : ''} />
                         <meta property="og:type" content="website" />
-                        <meta property="og:title" content={`Portfolio of ${profile.name}`} />
-                        <meta property="og:description" content={profile.bio} />
-                        <meta property="og:image" content={profile.avatar} />
+                        <meta property="og:title" content={`Portfolio of ${props.profile.name}`} />
+                        <meta property="og:description" content={props.profile.bio} />
+                        <meta property="og:image" content={props.profile.avatar} />
 
                         <meta name="twitter:card" content="summary_large_image" />
-                        <meta name="twitter:title" content={`Portfolio of ${profile.name}`} />
-                        <meta name="twitter:description" content={profile.bio} />
-                        <meta name="twitter:image" content={profile.avatar} />
+                        <meta name="twitter:title" content={`Portfolio of ${props.profile.name}`} />
+                        <meta name="twitter:description" content={props.profile.bio} />
+                        <meta name="twitter:image" content={props.profile.avatar} />
                     </Helmet>
                 )
             }
         </Fragment>
     )
+}
+
+MetaTags.propTypes = {
+    profile: PropTypes.object
 }
 
 export default MetaTags;

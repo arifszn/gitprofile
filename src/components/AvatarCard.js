@@ -1,16 +1,17 @@
-import { useSelector } from "react-redux";
 import { fallbackImage, skeleton } from "../helpers/utils";
 import LazyImage from "./LazyImage";
+import PropTypes from 'prop-types';
+import { useContext } from "react";
+import { LoadingContext } from "../contexts/LoadingContext";
 
-const AvatarCard = () => {
-    const profile = useSelector(state => state.profile);
-    const loading = useSelector(state => state.loading);
+const AvatarCard = (props) => {
+    const [loading] = useContext(LoadingContext);
 
     return (
         <div className="card shadow-lg compact bg-base-100">
             <div className="grid place-items-center py-8">
                 {
-                    loading ? (
+                    (loading || !props.profile) ? (
                         <div className="avatar opacity-90">
                             <div className="mb-8 rounded-full w-32 h-32">
                                 {
@@ -27,8 +28,8 @@ const AvatarCard = () => {
                             <div className="mb-8 rounded-full w-32 h-32 ring ring-primary ring-offset-base-100 ring-offset-2">
                                 {
                                     <LazyImage
-                                        src={profile.avatar ? profile.avatar : fallbackImage}
-                                        alt={profile.name}
+                                        src={props.profile.avatar ? props.profile.avatar : fallbackImage}
+                                        alt={props.profile.name}
                                         placeholder={
                                             skeleton({
                                                 width: 'w-full',
@@ -45,22 +46,26 @@ const AvatarCard = () => {
                 <div className="text-center mx-auto px-8">
                     <h5 className="font-bold text-2xl">
                         {
-                            loading ? (
+                            (loading || !props.profile) ? (
                                 skeleton({ width: 'w-48', height: 'h-8' })
-                            ) : <span className="opacity-70">{profile.name}</span>
+                            ) : <span className="opacity-70">{props.profile.name}</span>
                         }
                     </h5>
                     <div className="mt-3 text-base-content text-opacity-60">
                         {
-                            loading ? (
+                            (loading || !props.profile) ? (
                                 skeleton({ width: 'w-48', height: 'h-5' })
-                            ) : profile.bio
+                            ) : props.profile.bio
                         }
                     </div>
                 </div>
             </div>
         </div>
     )
+}
+
+AvatarCard.propTypes = {
+    profile: PropTypes.object
 }
 
 export default AvatarCard;

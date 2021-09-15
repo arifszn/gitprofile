@@ -1,10 +1,11 @@
-import { useSelector } from "react-redux";
 import config from "../config";
 import { GoPrimitiveDot } from 'react-icons/go';
 import { skeleton } from "../helpers/utils";
+import { useContext } from "react";
+import { LoadingContext } from "../contexts/LoadingContext";
 
 const Experience = () => {
-    const loading = useSelector(state => state.loading);
+    const [loading] = useContext(LoadingContext);
 
     const renderSkeleton = () => {
         let array = [];
@@ -44,9 +45,11 @@ const Experience = () => {
                                 <li>
                                     <div className="pb-0-important mx-3">
                                         <h5 className="card-title">
-                                            {loading ? skeleton({width: 'w-32', height: 'h-8'}) : (
-                                                <span className="opacity-70">Experience</span>
-                                            )}
+                                            {
+                                                loading ? skeleton({width: 'w-32', height: 'h-8'}) : (
+                                                    <span className="opacity-70">Experience</span>
+                                                )
+                                            }
                                         </h5>
                                     </div>
                                 </li>
