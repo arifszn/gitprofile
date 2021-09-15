@@ -42,7 +42,7 @@ const Experience = () => {
                         <div className="card-body">
                             <ul className="menu row-span-3 bg-base-100 text-base-content">
                                 <li>
-                                    <div className="pb-0-important mx-5">
+                                    <div className="pb-0-important mx-3">
                                         <h5 className="card-title">
                                             {loading ? skeleton({width: 'w-32', height: 'h-8'}) : (
                                                 <span className="opacity-70">Experience</span>
