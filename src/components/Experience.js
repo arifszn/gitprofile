@@ -58,7 +58,9 @@ const Experience = () => {
                                         config.experiences.map((experience, index) => (
                                             <li key={index}>
                                                 <span>
-                                                    <GoPrimitiveDot className="mr-2 opacity-40"/>
+                                                    <div>
+                                                        <GoPrimitiveDot className="mr-2 opacity-40"/>
+                                                    </div>
                                                     <div>
                                                         <div className="block justify-between">
                                                             <div className="font-medium opacity-70">

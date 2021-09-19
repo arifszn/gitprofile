@@ -141,7 +141,7 @@ const Blog = () => {
                                         {
                                             article.categories.map((category, index2) => (
                                                 <div key={index2} className="flex text-sm mr-3 items-center opacity-50 font-bold font-mono">
-                                                    <CgHashtag />
+                                                    <span><CgHashtag /></span>
                                                     <span>{category}</span>
                                                 </div>
                                             ))
