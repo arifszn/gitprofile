@@ -1,4 +1,4 @@
-name: Build and Publish to gh-pages branch
+name: Build and Publish to gh-pages Branch
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
       env:
          CI: ""
          
-    - name: Deploy 🚀
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
           branch: gh-pages
