@@ -15,8 +15,8 @@ module.exports = {
         facebook: 'lrsayedofficial',
         dribbble: '',
         behance: '',
-        medium: '',
-        devto: '',
+        medium: 'abusayed0206',
+        devto: 'abusayed0206',
         website: 'https://abusayed.dev',
         phone: '',
         email: 'contact@abusayed.dev'
@@ -38,56 +38,56 @@ module.exports = {
     ],
     experiences: [
         { 
-            company: 'Monstarlab Bangladesh',
-            position: 'Software Engineer',
-            from: 'September 2021',
+            company: 'Privacy Bangladesh',
+            position: 'Idle⚠️',
+            from: 'August 2021',
             to: 'Present'
         },
         { 
-            company: 'Orangetoolz - My Offer 360 Degree',
-            position: 'Jr. Full Stack Engineer',
-            from: 'July 2019',
-            to: 'August 2021'
+            company: 'International Youth Mathe Challenge',
+            position: 'Campus Ambassador',
+            from: 'February 2019',
+            to: 'Present'
         },
         { 
-            company: 'Techvillage',
-            position: 'Jr. Software Engineer',
-            from: 'January 2019',
-            to: ' June 2019'
+            company: 'American Concrete Institution(ACI)',
+            position: 'Student Member',
+            from: 'April 2020',
+            to: 'Present'
         }
     ],
     education: [
         { 
-            institution: 'American International University-Bangladesh',
-            degree: 'Bachelor of Science',
-            from: '2015',
-            to: '2019'
+            institution: 'Chittagong University of Engineering & Technology-Bangladesh',
+            degree: 'Bachelor of Science(Civil Engineering)',
+            from: 'November 2019',
+            to: 'Present'
         },
         { 
-            institution: 'Cantonment College, Jessore',
+            institution: 'Comilla Victoria Govt. College, Cumilla',
             degree: 'Higher Secondary Certificate (HSC)',
-            from: '2012',
-            to: '2014',
+            from: '2017',
+            to: '2019',
         },
         { 
-            institution: 'Chowgacha Shahadat Pilot High School',
+            institution: 'Bhagaban Govt. High School, Brahmanpara, Cumilla',
             degree: 'Secondary School Certificate (SSC)',
-            from: '2007',
-            to: '2012'
+            from: '2012',
+            to: '2017'
         }
     ],
     blog: {
         // Display blog posts from your medium or dev.to account. (Optional)
         source: 'dev.to', // medium | dev.to
-        username: 'arifszn',
+        username: 'abusayed0206',
         limit: 2 // How many posts to display. Max is 10.
     },
     googleAnalytics: {
         // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
-        id: 'G-WLLB5E14M6' // Please remove this and use your own tag id
+        id: '' // Please remove this and use your own tag id
     },
     themeConfig: {
-        default: 'light',
+        default: 'dark',
 
         // Hides the switch in the navbar
         // Useful if you want to support a single color mode
