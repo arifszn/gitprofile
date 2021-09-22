@@ -238,6 +238,19 @@ Besides tracking visitors, ezFolio will track click events on projects and blog 
 <br/>
 ![Event](https://www.arifszn.com/assets/img/hosted/ezprofile/event.png)
 
+### Hotjar
+
+ezProfile supports hotjar. If you do not want to use Hotjar, comment out the id property.
+
+```js
+// config.js
+module.exports = {
+  // ...
+  hotjar: {
+    //id: 
+  },
+}
+```
 
 ### Meta Tags
 
