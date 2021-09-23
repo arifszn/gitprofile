@@ -146,6 +146,10 @@ module.exports = {
     // GA3 tracking id/GA4 tag id
     id: '' // UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
+  hotjar: {
+    id: '',
+    snippetVersion : 6 
+  },
   themeConfig: {
     default: 'light',
 
@@ -240,14 +244,15 @@ Besides tracking visitors, ezFolio will track click events on projects and blog 
 
 ### Hotjar
 
-ezProfile supports hotjar. If you do not want to use Hotjar, comment out the id property.
+ezProfile supports hotjar. If you do not want to use Hotjar, keep the <code>id</code> empty.
 
 ```js
 // config.js
 module.exports = {
   // ...
   hotjar: {
-    //id: 
+    id: '',
+    snippetVersion : 6 
   },
 }
 ```

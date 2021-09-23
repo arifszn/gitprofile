@@ -87,8 +87,8 @@ module.exports = {
         id: 'G-WLLB5E14M6' // Please remove this and use your own tag id
     },
     hotjar: {
-        id: 1234567, //  Please remove this and use your own id
-        snippetVersion : 6 // hotjar snippet version, defaults to 6
+        id: '2617601', //  Please remove this and use your own id
+        snippetVersion : 6
     },
     themeConfig: {
         default: 'light',
