@@ -24,6 +24,7 @@ It's all possible using [GitHub API](https://developer.github.com/v3/) (for auto
 
 ✓ [21 Themes](#themes)\
 ✓ [Google Analytics](#google-analytics)\
+✓ [Hotjar](#hotjar)\
 ✓ [Meta Tags](#meta-tags)\
 ✓ [Avatar and Bio](#avatar-and-bio)\
 ✓ [Social Links](#social-links)\
