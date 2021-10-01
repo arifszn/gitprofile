@@ -31,6 +31,7 @@ module.exports = {
         'Jquery',
         'MySQL',
         'Git',
+        'Docker',
         'CSS',
         'Antd',
         'Tailwind',
