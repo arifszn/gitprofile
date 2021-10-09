@@ -40,7 +40,7 @@ module.exports = {
     experiences: [
         { 
             company: 'Monstarlab Bangladesh',
-            position: 'Software Engineer',
+            position: 'Backend Engineer',
             from: 'September 2021',
             to: 'Present'
         },
