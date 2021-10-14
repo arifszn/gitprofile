@@ -90,7 +90,7 @@ function App() {
             });
 
             if (error.response.status === 403) {
-                setError(403);
+                setError(429);
             } else if (error.response.status === 404) {
                 setError(404);
             } else {
@@ -111,7 +111,7 @@ function App() {
                         <ErrorPage
                             status={`${error}`}
                             title={(error === 404) ? 'The Github Username is Incorrect' : (
-                                error === 403 ? 'Too Many Request.' : `Ops!!`
+                                error === 429 ? 'Too Many Requests.' : `Ops!!`
                             )}
                             subTitle={
                                 (error === 404) ? (
@@ -119,7 +119,7 @@ function App() {
                                         Please provide correct github username in <code>src\config.js</code>
                                     </p>
                                 ) : (
-                                    error === 403 ? (
+                                    error === 429 ? (
                                         <p>
                                             Oh no, you hit the{' '}
                                             <a
