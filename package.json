@@ -16,7 +16,7 @@
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
         "article-api": "^1.0.5",
-        "axios": "^0.21.1",
+        "axios": "^0.23.0",
         "daisyui": "^1.12.1",
         "gh-pages": "^3.2.3",
         "moment": "^2.29.1",
