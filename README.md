@@ -408,7 +408,7 @@ The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
 
 ## 📢 Please Read
 
-I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own or removing/changing the footer notice. However, You are open to use this project by forking it and change any code necessary by giving attribute to the original author.
+I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own or removing/changing the footer notice. However, You are open to use this project by forking it and change any code necessary by giving attribute to the original author. Please see this [issue](https://github.com/arifszn/ezprofile/issues/11) for more info.
 
 
 ## 💖 Support
