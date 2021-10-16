@@ -11,6 +11,6 @@ module.exports = {
         require('daisyui')
     ],
     daisyui: {
-      logs: false
+        logs: false
     },
 }
