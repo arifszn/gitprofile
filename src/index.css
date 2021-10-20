@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scrollbar-width: thin;
+}
+
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -11,7 +19,7 @@
         background-color: #f1f1f1;
     }
 }
- 
+
 ::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 10px;
@@ -30,10 +38,6 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .text-base-content-important {
     color: hsla(var(--bc) / var(--tw-text-opacity)) !important;
