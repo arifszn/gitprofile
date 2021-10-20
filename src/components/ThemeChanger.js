@@ -12,7 +12,7 @@ const ThemeChanger = () => {
     const changeTheme = (e, selectedTheme) => {
         e.preventDefault();
         document.querySelector('html').setAttribute('data-theme', selectedTheme);
-        localStorage.setItem('ezprofileTheme', selectedTheme);
+        localStorage.setItem('ezprofile-theme', selectedTheme);
 
         setTheme(selectedTheme);
     }

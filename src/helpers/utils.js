@@ -7,8 +7,8 @@ export const getInitialTheme = () => {
         return config.themeConfig.default;
     }
 
-    if (localStorage.hasOwnProperty('ezprofileTheme')) {
-        let theme = localStorage.getItem('ezprofileTheme');
+    if (localStorage.hasOwnProperty('ezprofile-theme')) {
+        let theme = localStorage.getItem('ezprofile-theme');
         return theme;
     }
 
