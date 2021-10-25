@@ -17,8 +17,8 @@ module.exports = {
         behance: '',
         medium: 'abusayed0206',
         devto: 'abusayed0206',
-        website: 'https://abusayed.dev',
-        phone: '',
+        website: '',
+        phone: '+1 (719) 319-6460',
         email: 'contact@abusayed.dev'
     },
     skills: [
@@ -44,7 +44,7 @@ module.exports = {
             to: 'Present'
         },
         { 
-            company: 'International Youth Mathe Challenge',
+            company: 'International Youth Math Challenge',
             position: 'Campus Ambassador',
             from: 'February 2019',
             to: 'Present'
