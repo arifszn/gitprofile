@@ -45,7 +45,7 @@ module.exports = {
             to: 'Present'
         },
         { 
-            company: 'Orangetoolz - My Offer 360 Degree',
+            company: 'Orangetoolz',
             position: 'Jr. Full Stack Engineer',
             from: 'July 2019',
             to: 'August 2021'
