@@ -16,10 +16,10 @@ module.exports = {
         dribbble: '',
         behance: '',
         medium: '',
-        devto: '',
+        devto: 'arifszn',
         website: 'https://arifszn.github.io',
         phone: '',
-        email: 'contact@arifszn.com'
+        email: 'arifulalamszn@gmail.com'
     },
     skills: [
         'PHP',
@@ -85,10 +85,10 @@ module.exports = {
     },
     googleAnalytics: {
         // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
-        id: 'G-WLLB5E14M6' // Please remove this and use your own tag id
+        id: 'G-WLLB5E14M6' // Please remove this and use your own tag id or keep it empty
     },
     hotjar: {
-        id: '2617601', //  Please remove this and use your own id
+        id: '2617601', //  Please remove this and use your own id or keep it empty
         snippetVersion : 6
     },
     themeConfig: {
