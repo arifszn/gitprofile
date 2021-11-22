@@ -61,14 +61,14 @@ These instructions will get you a copy of the project and deploy your website on
   - The CI/CD pipeline will publish your page at the gh-pages branch automatically.
   - Go to your repo's **Settings** -> **Pages** -> **Source** and change the branch to gh-pages and click **save**.
   - Your personal portfolio will be live at <code>username.github.io</code>.
-  - Any time you commit a change to the **main** branch the website will automatically update.
+  - Any time you commit a change to the **main** branch, the website will be automatically updated.
 
   
 You can skip the above steps and do a manual deployment by running <code>npm run deploy</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
 As this is a create react app, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://create-react-app.dev/docs/deployment) for a detailed deployment guide to other services.
 
-If you see only <code>README</code> at <code>username.github.io</code>, be sure to change your GitHub Page's source to <code>gh-pages</code> branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+If you see only <code>README</code> at <code>username.github.io</code>, be sure to change your GitHub Page's source to <code>gh-pages</code> branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Also, if you face any issue rendering the website, double-check the `homepage` value in the package.json.
 
 
 
