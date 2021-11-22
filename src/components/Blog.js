@@ -95,7 +95,7 @@ const Blog = () => {
                 key={index}
                 onClick={() => {
                     try {
-                        if (config.googleAnalytics.id) {
+                        if (config.googleAnalytics?.id) {
                             ga.event({
                                 action: "Click Blog Post",
                                 params: {
