@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ezprofile/static/css/main.2ee728b6.chunk.css",
+    "main.css": "/ezprofile/static/css/main.fe701162.chunk.css",
     "main.js": "/ezprofile/static/js/main.ee93c7de.chunk.js",
     "main.js.map": "/ezprofile/static/js/main.ee93c7de.chunk.js.map",
     "runtime-main.js": "/ezprofile/static/js/runtime-main.0a6fe2c4.js",
@@ -10,13 +10,13 @@
     "static/js/3.08dc99e9.chunk.js": "/ezprofile/static/js/3.08dc99e9.chunk.js",
     "static/js/3.08dc99e9.chunk.js.map": "/ezprofile/static/js/3.08dc99e9.chunk.js.map",
     "index.html": "/ezprofile/index.html",
-    "static/css/main.2ee728b6.chunk.css.map": "/ezprofile/static/css/main.2ee728b6.chunk.css.map",
+    "static/css/main.fe701162.chunk.css.map": "/ezprofile/static/css/main.fe701162.chunk.css.map",
     "static/js/2.2cfba4b6.chunk.js.LICENSE.txt": "/ezprofile/static/js/2.2cfba4b6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0a6fe2c4.js",
     "static/js/2.2cfba4b6.chunk.js",
-    "static/css/main.2ee728b6.chunk.css",
+    "static/css/main.fe701162.chunk.css",
     "static/js/main.ee93c7de.chunk.js"
   ]
 }
