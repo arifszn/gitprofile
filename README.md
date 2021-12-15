@@ -44,8 +44,9 @@ These instructions will get you a copy of the project and deploy your website on
 
   - **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repo so you have your own project to customize by clicking the fork icon on the top right side. A "fork" is a copy of a repository.
   - Rename your forked repository to <code>username.github.io</code> in github, where <code>username</code> is your GitHub username (or organization name).
-  - Go to your repo's **Actions** page and enable workflows.\
-  ![Workflows](https://arifszn.github.io/assets/img/hosted/ezprofile/workflows.png)
+  - Go to your repo's **Actions** page and enable workflows.
+  
+    ![Workflows](https://arifszn.github.io/assets/img/hosted/ezprofile/workflows.png)
 
   - Open <code>package.json</code>, and change <code>homepage</code>'s value to <code>https://username.github.io</code>.
   
