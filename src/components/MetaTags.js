@@ -33,7 +33,7 @@ const MetaTags = (props) => {
                                 </script>
                             )
                         }
-                        <title>Portfolio of {props.profile.name}</title>
+                        <title>{props.profile.name}</title>
                         <meta name="theme-color" content={isThemeDarkish(theme) ? '#000000' : '#ffffff'}/>
 
                         <meta name="description" content={props.profile.bio} />
