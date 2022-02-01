@@ -90,7 +90,7 @@ function App() {
             });
 
             if (error.response.status === 403) {
-                setError(403);
+                setError(429);
             } else if (error.response.status === 404) {
                 setError(404);
             } else {
@@ -111,7 +111,7 @@ function App() {
                         <ErrorPage
                             status={`${error}`}
                             title={(error === 404) ? 'The Github Username is Incorrect' : (
-                                error === 403 ? 'Too Many Request.' : `Ops!!`
+                                error === 429 ? 'Too Many Requests.' : `Ops!!`
                             )}
                             subTitle={
                                 (error === 404) ? (
@@ -119,7 +119,7 @@ function App() {
                                         Please provide correct github username in <code>src\config.js</code>
                                     </p>
                                 ) : (
-                                    error === 403 ? (
+                                    error === 429 ? (
                                         <p>
                                             Oh no, you hit the{' '}
                                             <a
@@ -161,7 +161,7 @@ function App() {
                                     </div>
                                 </div>
                             </div>
-                            {/* DO NOT REMOVE/MODIFY THE FOOTER */}
+                            {/* DO NOT REMOVE/MODIFY THE FOOTER. FOR MORE INFO https://github.com/arifszn/ezprofile#-please-read */}
                             <footer className="p-4 footer bg-base-200 text-base-content footer-center">
                                 <div>
                                     <p className="font-mono text-sm">Made with <a className="text-primary" href="https://github.com/arifszn/ezprofile" target="_blank" rel="noreferrer">ezProfile</a> and ❤️</p>

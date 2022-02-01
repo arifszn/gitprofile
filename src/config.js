@@ -6,7 +6,7 @@ module.exports = {
         limit: 8, // How many projects to display.
         exclude: {
             forks: false, // Forked projects will not be displayed if set to true.
-            projects: [] // These projects will not be displayed. example: ['my-project1', 'my-project2']
+            projects: ['laravel-ecommerce'] // These projects will not be displayed. example: ['my-project1', 'my-project2']
         }
     },
     social: {
@@ -15,22 +15,29 @@ module.exports = {
         facebook: 'lrsayedofficial',
         dribbble: '',
         behance: '',
+<<<<<<< HEAD
         medium: 'abusayed0206',
         devto: 'abusayed0206',
         website: '',
         phone: '+1 (719) 319-6460',
         email: 'contact@abusayed.dev'
+=======
+        medium: '',
+        devto: 'arifszn',
+        website: 'https://arifszn.github.io',
+        phone: '',
+        email: 'arifulalamszn@gmail.com'
+>>>>>>> 59e53ac24582f4be0e2c04e200a985356a8b3cb2
     },
     skills: [
         'PHP',
         'Laravel',
         'JavaScript',
         'React.js',
-        'Vue.js',
         'Node.js',
-        'Jquery',
         'MySQL',
         'Git',
+        'Docker',
         'CSS',
         'Antd',
         'Tailwind',
@@ -38,6 +45,7 @@ module.exports = {
     ],
     experiences: [
         { 
+<<<<<<< HEAD
             company: 'Privacy Bangladesh',
             position: 'Idle⚠️',
             from: 'August 2021',
@@ -48,6 +56,18 @@ module.exports = {
             position: 'Campus Ambassador',
             from: 'February 2019',
             to: 'Present'
+=======
+            company: 'Monstarlab Bangladesh',
+            position: 'Backend Engineer II',
+            from: 'September 2021',
+            to: 'Present'
+        },
+        { 
+            company: 'Orangetoolz',
+            position: 'Jr. Full Stack Engineer',
+            from: 'July 2019',
+            to: 'August 2021'
+>>>>>>> 59e53ac24582f4be0e2c04e200a985356a8b3cb2
         },
         { 
             company: 'American Concrete Institution(ACI)',
@@ -79,12 +99,25 @@ module.exports = {
     blog: {
         // Display blog posts from your medium or dev.to account. (Optional)
         source: 'dev.to', // medium | dev.to
+<<<<<<< HEAD
         username: 'abusayed0206',
         limit: 2 // How many posts to display. Max is 10.
     },
     googleAnalytics: {
         // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
         id: '' // Please remove this and use your own tag id
+=======
+        username: 'arifszn',
+        limit: 3 // How many posts to display. Max is 10.
+    },
+    googleAnalytics: {
+        // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+        id: 'G-WLLB5E14M6' // Please remove this and use your own tag id or keep it empty
+    },
+    hotjar: {
+        id: '2617601', //  Please remove this and use your own id or keep it empty
+        snippetVersion : 6
+>>>>>>> 59e53ac24582f4be0e2c04e200a985356a8b3cb2
     },
     themeConfig: {
         default: 'dark',

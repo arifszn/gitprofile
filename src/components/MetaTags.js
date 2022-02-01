@@ -14,12 +14,12 @@ const MetaTags = (props) => {
                 props.profile && (
                     <Helmet>
                         {
-                            config.googleAnalytics.id && (
+                            config.googleAnalytics?.id && (
                                 <script async src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalytics.id}`}></script>
                             )
                         }
                         {
-                            config.googleAnalytics.id && (
+                            config.googleAnalytics?.id && (
                                 <script>
                                     {
                                         `
