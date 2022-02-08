@@ -1,0 +1,88 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/**
+   * @name ranges-apply
+   * @fileoverview Take an array of string index ranges, delete/replace the string according to them
+   * @version 5.1.0
+   * @author Roy Revelt, Codsen Ltd
+   * @license MIT
+   * {@link https://codsen.com/os/ranges-apply/}
+   */
+
+/**
+   * @name ranges-merge
+   * @fileoverview Merge and sort string index ranges
+   * @version 7.1.0
+   * @author Roy Revelt, Codsen Ltd
+   * @license MIT
+   * {@link https://codsen.com/os/ranges-merge/}
+   */
+
+/**
+   * @name ranges-push
+   * @fileoverview Gather string index ranges
+   * @version 5.1.0
+   * @author Roy Revelt, Codsen Ltd
+   * @license MIT
+   * {@link https://codsen.com/os/ranges-push/}
+   */
+
+/**
+   * @name ranges-sort
+   * @fileoverview Sort string index ranges
+   * @version 4.1.0
+   * @author Roy Revelt, Codsen Ltd
+   * @license MIT
+   * {@link https://codsen.com/os/ranges-sort/}
+   */
+
+/**
+   * @name string-collapse-leading-whitespace
+   * @fileoverview Collapse the leading and trailing whitespace of a string
+   * @version 5.1.0
+   * @author Roy Revelt, Codsen Ltd
+   * @license MIT
+   * {@link https://codsen.com/os/string-collapse-leading-whitespace/}
+   */
+
+/** @license React v0.20.2
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.2
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.2
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.2
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+//! moment.js
