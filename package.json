@@ -1,7 +1,7 @@
 {
-    "name": "ezprofile",
+    "name": "Reyeff Portfolio",
     "version": "1.1.1",
-    "description": "Kickstart your personal portfolio with Github Api and blog",
+    "description": "My personal portfolio with Github",
     "homepage": "https://reyeff.github.io",
     "private": true,
     "license": "Apache-2.0",
