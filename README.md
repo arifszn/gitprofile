@@ -43,12 +43,12 @@ To view a live example, **[click here](https://arifszn.github.io/ezprofile)**.
 These instructions will get you a copy of the project and deploy your website online!
 
   - **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repo so you have your own project to customize by clicking the fork icon on the top right side. A "fork" is a copy of a repository.
-  - Rename your forked repository to <code>username.github.io</code> in github, where <code>username</code> is your GitHub username (or organization name).
+  - Rename your forked repository to `username.github.io` in github, where `username` is your GitHub username (or organization name).
   - Go to your repo's **Actions** page and enable workflows.
   
     ![Workflows](https://arifszn.github.io/assets/img/hosted/ezprofile/workflows.png)
 
-  - Open <code>package.json</code>, and change <code>homepage</code>'s value to <code>https://username.github.io</code>.
+  - Open `package.json`, and change `homepage`'s value to `https://username.github.io`.
   
     ```js
     // package.json
@@ -61,21 +61,21 @@ These instructions will get you a copy of the project and deploy your website on
   - Now commit to your **main** branch with your changes.
   - The CI/CD pipeline will publish your page at the gh-pages branch automatically.
   - Go to your repo's **Settings** -> **Pages** -> **Source** and change the branch to gh-pages and click **save**.
-  - Your personal portfolio will be live at <code>username.github.io</code>.
+  - Your personal portfolio will be live at `username.github.io`.
   - Any time you commit a change to the **main** branch, the website will be automatically updated.
 
   
-You can skip the above steps and do a manual deployment by running <code>npm run deploy</code>. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
+You can skip the above steps and do a manual deployment by running `npm run deploy`. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
+
+If you see only `README` at `username.github.io`, be sure to change your GitHub Page's source to `gh-pages` branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Also, if you face any issue rendering the website, double-check the `homepage` value in the `package.json`. It must be the value matching the repository name.
 
 As this is a create react app, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://create-react-app.dev/docs/deployment) for a detailed deployment guide to other services.
-
-If you see only <code>README</code> at <code>username.github.io</code>, be sure to change your GitHub Page's source to <code>gh-pages</code> branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Also, if you face any issue rendering the website, double-check the `homepage` value in the package.json.
 
 
 
 ## 🎨 Customization
 
-All the magic happens in the file <code>src/config.js</code>. Open it and modify it according to your preference.
+All the magic happens in the file `src/config.js`. Open it and modify it according to your preference.
 
 These are the default values:
 
@@ -223,7 +223,7 @@ Here are some screenshots of different themes.\
 
 ### Google Analytics
 
-ezFolio supports both GA3 and GA4. If you do not want to use Google Analytics, keep the <code>id</code> empty.
+ezFolio supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
 ```js
 // config.js
 module.exports = {
@@ -240,7 +240,7 @@ Besides tracking visitors, ezFolio will track click events on projects and blog 
 
 ### Hotjar
 
-ezProfile supports hotjar. If you do not want to use Hotjar, keep the <code>id</code> empty.
+ezProfile supports hotjar. If you do not want to use Hotjar, keep the `id` empty.
 
 ```js
 // config.js
@@ -255,7 +255,7 @@ module.exports = {
 
 ### Meta Tags
 
-Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in <code>public\index.html</code>
+Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public\index.html`.
 
 
 ### Avatar and Bio
@@ -307,7 +307,7 @@ Empty array will hide the skills section.
 
 ### Experience
 
-Provide your job history in <code>experiences</code>.
+Provide your job history in `experiences`.
 ```js
 // config.js
 module.exports = {
@@ -334,7 +334,7 @@ Empty array will hide the experience section.
 
 ### Education
 
-Provide your education history in <code>education</code>.
+Provide your education history in `education`.
 ```js
 // config.js
 module.exports = {
@@ -381,7 +381,7 @@ module.exports = {
 
 ### Blog Posts
 
-If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is <code>10</code>).
+If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is `10`).
 
 ```js
 // config.js
@@ -408,7 +408,9 @@ I intend to keep my works open source. Please do not discourage me by claiming t
 
 ## 💖 Support
 
-If you are using this project and happy with it or just want to encourage me to continue creating stuff, you can do it by just starring and sharing the project.
+<a href="https://www.buymeacoffee.com/arifszn" target="_blank">
+  <img src="https://raw.githubusercontent.com/arifszn/arifszn/main/assets/bmc-button.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
+</a>
 
 
 ## 💡 Contributing
