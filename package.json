@@ -23,11 +23,16 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "article-api": "^1.0.8",
     "autoprefixer": "^10.4.4",
+    "axios": "^0.26.1",
     "daisyui": "^2.11.0",
     "gh-pages": "^3.2.3",
+    "moment": "^2.29.1",
     "postcss": "^8.4.12",
+    "prop-types": "^15.8.1",
     "react-helmet-async": "^1.2.3",
+    "react-icons": "^4.3.1",
     "tailwindcss": "^3.0.23",
     "vite": "^2.8.0"
   },
