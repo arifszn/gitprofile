@@ -1,6 +1,6 @@
 // ezprofile.config.js
 
-module.exports = {
+const config = {
   github: {
     username: 'arifszn', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
@@ -86,10 +86,6 @@ module.exports = {
     // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
     id: 'G-WLLB5E14M6', // Please remove this and use your own tag id or keep it empty
   },
-  hotjar: {
-    id: '2617601', //  Please remove this and use your own id or keep it empty
-    snippetVersion: 6,
-  },
   themeConfig: {
     default: 'light',
 
@@ -127,3 +123,5 @@ module.exports = {
     ],
   },
 };
+
+export default config;
