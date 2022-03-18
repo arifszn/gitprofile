@@ -11,7 +11,7 @@ module.exports = {
     },
     social: {
         linkedin: 'ariful-alam',
-        twitter: 'arif_swozon',
+        twitter: 'arif_szn',
         facebook: '',
         dribbble: '',
         behance: '',
