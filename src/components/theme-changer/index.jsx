@@ -23,7 +23,7 @@ const ThemeChanger = () => {
         <div className="flex-1">
           <h5 className="card-title">
             {loading ? (
-              skeleton({ width: 'w-20', height: 'h-8' })
+              skeleton({ width: 'w-20', height: 'h-8', className: 'mb-1' })
             ) : (
               <span className="opacity-70">Theme</span>
             )}
