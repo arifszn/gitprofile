@@ -1,24 +1,24 @@
 <p align="center">
-  <a href="http://arifszn.github.io/ezprofile" target="_blank">
-    <img src="https://arifszn.github.io/assets/img/hosted/ezprofile/logo.png" alt="ezProfile" title="ezProfile" width="80">
+  <a href="http://arifszn.github.io/gitprofile" target="_blank">
+    <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/logo.png" alt="GitProfile" title="GitProfile" width="80">
   </a>
 </p>
 
-<h1 align="center">ezProfile</h1>
+<h1 align="center">GitProfile</h1>
 <p align="center">A modern, responsive and customizable portfolio builder for Developers!</p>
-<p align="center">https://arifszn.github.io/ezprofile</p>
+<p align="center">https://arifszn.github.io/gitprofile</p>
 
 <br/>
 
 <p align="center">
-    <a href="https://arifszn.github.io/ezprofile">
-        <img src="https://arifszn.github.io/assets/img/hosted/ezprofile/preview.gif" width="60%" alt="Preview"/>
-    </a>
-    <br/>
-    <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
+  <a href="https://arifszn.github.io/gitprofile">
+      <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/preview.gif" width="60%" alt="Preview"/>
+  </a>
+  <br/>
+  <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
 </p>
 
-**ezProfile** is an easy-to-customize personal dev portfolio builder that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and public repositories. Also, it includes space to highlight your details, job history, education history, skills, and recent blog posts.
+**GitProfile** is an easy-to-customize personal dev portfolio builder that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and public repositories. Also, it includes space to highlight your details, job history, education history, skills, and recent blog posts.
 
 It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
 
@@ -34,7 +34,7 @@ It's all possible using [GitHub API](https://developer.github.com/v3/) (for auto
 ✓ [Projects](#projects)\
 ✓ [Blog Posts](#blog-posts)
 
-To view a live example, **[click here](https://arifszn.github.io/ezprofile)**.
+To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 ## 🛠 Installation & Set Up
 
@@ -44,7 +44,7 @@ These instructions will get you a copy of the project and deploy your website on
 - Rename your forked repository to `username.github.io` in github, where `username` is your GitHub username (or organization name).
 - Go to your repo's **Actions** page and enable workflows.
 
-  ![Workflows](https://arifszn.github.io/assets/img/hosted/ezprofile/workflows.png)
+  ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
 
 - Open `package.json`, and change `homepage`'s value to `https://username.github.io`.
 
@@ -70,15 +70,15 @@ As this is a create react app, you can also host your website to Netlify, Vercel
 
 ## 🎨 Customization
 
-All the magic happens in the file `src/ezprofile.config.js`. Open it and modify it according to your preference.
+All the magic happens in the file `src/gitprofile.config.js`. Open it and modify it according to your preference.
 
 These are the default values:
 
 <details>
-<summary>ezprofile.config.js</summary>
+<summary>gitprofile.config.js</summary>
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 const config = {
   github: {
     username: 'arifszn', // Your GitHub org/user name. (Required)
@@ -192,7 +192,7 @@ There are 21 themes available that can be selected from the dropdown.
 The default theme can be specified.
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 module.exports = {
   // ...
   themeConfig: {
@@ -202,22 +202,22 @@ module.exports = {
 };
 ```
 
-![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-1.png)
+![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/gitprofile/themes-1.png)
 
 Here are some screenshots of different themes.\
 <br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-2.png)\
+![Themes](https://arifszn.github.io/assets/img/hosted/gitprofile/themes-2.png)\
 <br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-6.png)\
+![Themes](https://arifszn.github.io/assets/img/hosted/gitprofile/themes-6.png)\
 <br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-7.png)
+![Themes](https://arifszn.github.io/assets/img/hosted/gitprofile/themes-7.png)
 
 ### Google Analytics
 
 ezFolio supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 module.exports = {
   // ...
   googleAnalytics: {
@@ -228,14 +228,14 @@ module.exports = {
 
 Besides tracking visitors, ezFolio will track click events on projects and blog posts, and send them to Google Analytics.\
 <br/>
-![Event](https://www.arifszn.com/assets/img/hosted/ezprofile/event.png)
+![Event](https://www.arifszn.com/assets/img/hosted/gitprofile/event.png)
 
 ### Hotjar
 
-ezProfile supports hotjar. If you do not want to use Hotjar, keep the `id` empty.
+GitProfile supports hotjar. If you do not want to use Hotjar, keep the `id` empty.
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 module.exports = {
   // ...
   hotjar: {
@@ -253,14 +253,14 @@ Meta tags will be auto-generated from configs dynamically. However, you can also
 
 Your github avatar and bio will be displayed here.\
 <br/>
-![Avatar Bio](https://arifszn.github.io/assets/img/hosted/ezprofile/avatar-card.png)
+![Avatar Bio](https://arifszn.github.io/assets/img/hosted/gitprofile/avatar-card.png)
 
 ### Social Links
 
-ezProfile supports linking your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, phone and email.
+GitProfile supports linking your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, phone and email.
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 module.exports = {
   // ...
   social: {
@@ -283,7 +283,7 @@ module.exports = {
 To showcase your skills provide them here.
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 module.exports = {
   // ...
   skills: ['JavaScript', 'React.js'],
@@ -297,7 +297,7 @@ Empty array will hide the skills section.
 Provide your job history in `experiences`.
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 module.exports = {
   // ...
   experiences: [
@@ -324,7 +324,7 @@ Empty array will hide the experience section.
 Provide your education history in `education`.
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 module.exports = {
   // ...
   education: [
@@ -351,7 +351,7 @@ Empty array will hide the education section.
 Your public repo from github will be displayed here automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 module.exports = {
   // ...
   github: {
@@ -371,7 +371,7 @@ module.exports = {
 If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is `10`).
 
 ```js
-// ezprofile.config.js
+// gitprofile.config.js
 module.exports = {
   // ...
   blog: {
@@ -382,13 +382,13 @@ module.exports = {
 };
 ```
 
-![Blog](https://arifszn.github.io/assets/img/hosted/ezprofile/blog.png)
+![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
 
 The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
 
 ## 📢 Please Read
 
-I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own. However, You are open to use this project by forking it and change any code necessary by giving attribute to the original author. Please see this [issue](https://github.com/arifszn/ezprofile/issues/11) for more info.
+I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own. However, You are open to use this project by forking it and change any code necessary by giving attribute to the original author. Please see this [issue](https://github.com/arifszn/gitprofile/issues/11) for more info.
 
 ## 💖 Support
 
@@ -398,8 +398,8 @@ I intend to keep my works open source. Please do not discourage me by claiming t
 
 ## 💡 Contribute
 
-To contribute, see the [Contributing guide](https://github.com/arifszn/ezprofile/blob/main/CONTRIBUTING.md).
+To contribute, see the [Contributing guide](https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md).
 
 ## 📄 License
 
-**ezProfile** is licensed under the [Apache-2.0 License](https://github.com/arifszn/ezprofile/blob/main/LICENSE).
+**GitProfile** is licensed under the [Apache-2.0 License](https://github.com/arifszn/gitprofile/blob/main/LICENSE).

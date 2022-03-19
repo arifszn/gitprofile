@@ -1,5 +1,5 @@
 import { skeleton } from '../../helpers/utils';
-import config from '../../ezprofile.config';
+import config from '../../gitprofile.config';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 

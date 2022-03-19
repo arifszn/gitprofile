@@ -1,4 +1,4 @@
-import config from '../ezprofile.config';
+import config from '../gitprofile.config';
 import colors from '../data/colors.json';
 import { hotjar } from 'react-hotjar';
 
@@ -7,8 +7,8 @@ export const getInitialTheme = () => {
     return config.themeConfig.default;
   }
 
-  if (!(localStorage.getItem('ezprofile-theme') === null)) {
-    let theme = localStorage.getItem('ezprofile-theme');
+  if (!(localStorage.getItem('gitprofile-theme') === null)) {
+    let theme = localStorage.getItem('gitprofile-theme');
     return theme;
   }
 

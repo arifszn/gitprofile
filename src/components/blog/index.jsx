@@ -1,7 +1,7 @@
 import { getDevtoArticle, getMediumArticle } from 'article-api';
 import moment from 'moment';
 import { Fragment, useEffect, useState } from 'react';
-import config from '../../ezprofile.config';
+import config from '../../gitprofile.config';
 import { ga, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
 import PropTypes from 'prop-types';

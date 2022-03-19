@@ -14,7 +14,7 @@ import {
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
-import config from '../../ezprofile.config';
+import config from '../../gitprofile.config';
 
 const ListItem = ({ icon, title, value, link, skeleton = false }) => {
   return (
