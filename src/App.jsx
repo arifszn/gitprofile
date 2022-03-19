@@ -16,8 +16,8 @@ import Project from './components/project';
 import Blog from './components/blog';
 
 function App() {
-  const [theme] = useContext(ThemeContext);
-  const [, setLoading] = useContext(LoadingContext);
+  const { theme } = useContext(ThemeContext);
+  const { setLoading } = useContext(LoadingContext);
   const [profile, setProfile] = useState(null);
   const [repo, setRepo] = useState(null);
   const [error, setError] = useState(null);

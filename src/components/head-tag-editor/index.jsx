@@ -6,7 +6,7 @@ import config from '../../ezprofile.config';
 import { isThemeDarkish } from '../../helpers/utils';
 
 const HeadTagEditor = (props) => {
-  const [theme] = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <Fragment>

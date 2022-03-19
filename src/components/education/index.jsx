@@ -5,7 +5,7 @@ import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
 
 const Education = () => {
-  const [loading] = useContext(LoadingContext);
+  const { loading } = useContext(LoadingContext);
 
   const renderSkeleton = () => {
     let array = [];

@@ -5,7 +5,7 @@ import { skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
 
 const AvatarCard = (props) => {
-  const [loading] = useContext(LoadingContext);
+  const { loading } = useContext(LoadingContext);
 
   return (
     <div className="card shadow-lg compact bg-base-100">

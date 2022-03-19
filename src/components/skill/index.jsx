@@ -4,7 +4,7 @@ import config from '../../ezprofile.config';
 import { skeleton } from '../../helpers/utils';
 
 const Skill = () => {
-  const [loading] = useContext(LoadingContext);
+  const { loading } = useContext(LoadingContext);
 
   const renderSkeleton = () => {
     let array = [];

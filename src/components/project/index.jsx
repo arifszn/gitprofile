@@ -6,7 +6,7 @@ import config from '../../ezprofile.config';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
 
 const Project = (props) => {
-  const [loading] = useContext(LoadingContext);
+  const { loading } = useContext(LoadingContext);
 
   const renderSkeleton = () => {
     let array = [];

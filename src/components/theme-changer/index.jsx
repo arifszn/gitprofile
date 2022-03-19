@@ -6,8 +6,10 @@ import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
 
 const ThemeChanger = () => {
-  const [theme, setTheme] = useContext(ThemeContext);
-  const [loading] = useContext(LoadingContext);
+  const { theme, setTheme } = useContext(ThemeContext);
+  const { loading } = useContext(LoadingContext);
+
+  console.log(theme);
 
   const changeTheme = (e, selectedTheme) => {
     e.preventDefault();

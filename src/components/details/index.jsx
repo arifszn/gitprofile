@@ -12,7 +12,7 @@ import {
   FaGlobe,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
-import { Fragment, useContext } from 'react';
+import { useContext } from 'react';
 import { LoadingContext } from '../../contexts/LoadingContext';
 import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
@@ -32,7 +32,7 @@ const ListItem = ({ icon, title, value, link }) => {
 };
 
 const Details = (props) => {
-  const [loading] = useContext(LoadingContext);
+  const { loading } = useContext(LoadingContext);
 
   const renderSkeleton = () => {
     let array = [];

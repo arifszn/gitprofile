@@ -23,7 +23,7 @@ const displaySection = () => {
 
 const Blog = () => {
   const [articles, setArticles] = useState(null);
-  const [loading] = useContext(LoadingContext);
+  const { loading } = useContext(LoadingContext);
 
   useEffect(() => {
     if (displaySection()) {
