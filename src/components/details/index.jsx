@@ -61,7 +61,7 @@ const Details = ({ profile, loading }) => {
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
-        <div className="bg-base-100 text-base-content text-opacity-60">
+        <div className="text-base-content text-opacity-60">
           {loading || !profile ? (
             renderSkeleton()
           ) : (
