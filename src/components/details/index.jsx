@@ -12,10 +12,24 @@ import {
   FaGlobe,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
-import { useContext } from 'react';
+import { Fragment, useContext } from 'react';
 import { LoadingContext } from '../../contexts/LoadingContext';
 import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
+
+const ListItem = ({ icon, title, value, link }) => {
+  return (
+    <div class="flex justify-start py-2 items-center">
+      <span class="w-2 m-2">{icon}</span>
+      <div class="flex-grow font-medium px-2">{title}</div>
+      <div class="text-sm font-normal text-right mr-2 ml-3">
+        <a href={link} target="_blank" rel="noreferrer">
+          {value}
+        </a>
+      </div>
+    </div>
+  );
+};
 
 const Details = (props) => {
   const [loading] = useContext(LoadingContext);
@@ -39,108 +53,78 @@ const Details = (props) => {
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
-        <ul className="menu row-span-3 bg-base-100 text-base-content text-opacity-60">
+        {loading || !props.profile ? (
+          renderSkeleton()
+        ) : (
+          <div className="bg-base-100 text-base-content text-opacity-60">
+            {props.profile.location && (
+              <ListItem
+                icon={<MdLocationOn className="mr-2" />}
+                title="Based on"
+                value={props.profile.location}
+              />
+            )}
+            {props.profile.company && (
+              <ListItem
+                icon={<FaBuilding className="mr-2" />}
+                title="Company"
+                value={props.profile.company}
+              />
+            )}
+            <ListItem
+              icon={<AiFillGithub className="mr-2" />}
+              title="GitHub"
+              value={config.github.username}
+              link={`https://github.com/${config.github.username}`}
+            />
+            {typeof config.social.twitter !== 'undefined' &&
+              config.social.twitter && (
+                <ListItem
+                  icon={<SiTwitter className="mr-2" />}
+                  title="Twitter"
+                  value={config.social.twitter}
+                  link={`https://twitter.com/${config.social.twitter}`}
+                />
+              )}
+            {typeof config.social.linkedin !== 'undefined' &&
+              config.social.linkedin && (
+                <ListItem
+                  icon={<GrLinkedinOption className="mr-2" />}
+                  title="LinkedIn"
+                  value={config.social.linkedin}
+                  link={`https://www.linkedin.com/in/${config.social.linkedin}`}
+                />
+              )}
+            {typeof config.social.dribbble !== 'undefined' &&
+              config.social.dribbble && (
+                <ListItem
+                  icon={<CgDribbble className="mr-2" />}
+                  title="Dribbble"
+                  value={config.social.dribbble}
+                  link={`https://dribbble.com/${config.social.dribbble}`}
+                />
+              )}
+            {typeof config.social.behance !== 'undefined' &&
+              config.social.behance && (
+                <ListItem
+                  icon={<FaBehanceSquare className="mr-2" />}
+                  title="Behance"
+                  value={config.social.behance}
+                  link={`https://www.behance.net/${config.social.behance}`}
+                />
+              )}
+          </div>
+        )}
+        {/* <ul className="menu bg-base-100 text-base-content text-opacity-60">
           {loading || !props.profile ? (
             renderSkeleton()
           ) : (
             <>
-              {props.profile.location && (
-                <li>
-                  <span>
-                    <div>
-                      <MdLocationOn className="mr-2" />
-                    </div>
-                    <div>{props.profile.location}</div>
-                  </span>
-                </li>
-              )}
-              {props.profile.company && (
-                <li>
-                  <span>
-                    <div>
-                      <FaBuilding className="mr-2" />
-                    </div>
-                    <div>{props.profile.company}</div>
-                  </span>
-                </li>
-              )}
-              <li>
-                <span>
-                  <div>
-                    <AiFillGithub className="mr-2" />
-                  </div>
-                  <div>
-                    <a
-                      href={`https://github.com/${config.github.username}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-base-content-important"
-                    >
-                      {config.github.username}
-                    </a>
-                  </div>
-                </span>
-              </li>
-              {typeof config.social.linkedin !== 'undefined' &&
-                config.social.linkedin && (
-                  <li>
-                    <span>
-                      <div>
-                        <GrLinkedinOption className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={`https://www.linkedin.com/in/${config.social.linkedin}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.linkedin}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
-              {typeof config.social.twitter !== 'undefined' &&
-                config.social.twitter && (
-                  <li>
-                    <span>
-                      <div>
-                        <SiTwitter className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={`https://twitter.com/${config.social.twitter}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.twitter}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
-              {typeof config.social.dribbble !== 'undefined' &&
-                config.social.dribbble && (
-                  <li>
-                    <span>
-                      <div>
-                        <CgDribbble className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={`https://dribbble.com/${config.social.dribbble}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.dribbble}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
+              
+              
+              
+              
+              
               {typeof config.social.behance !== 'undefined' &&
                 config.social.behance && (
                   <li>
@@ -150,7 +134,7 @@ const Details = (props) => {
                       </div>
                       <div>
                         <a
-                          href={`https://www.behance.net/${config.social.behance}`}
+                          href={``}
                           target="_blank"
                           rel="noreferrer"
                           className="text-base-content-important"
@@ -282,7 +266,49 @@ const Details = (props) => {
                 )}
             </>
           )}
-        </ul>
+        </ul> */}
+
+        {/* <div class="bg-base-100 text-base-content text-opacity-60">
+          <div class="flex justify-start px-2 py-2 my-2 items-center">
+            <span class="w-2 m-2 rounded-full">
+              <MdLocationOn className="mr-2" />
+            </span>
+            <div class="flex-grow font-medium px-2">Based on</div>
+            <div class="text-sm font-normal text-gray-500 tracking-wide">
+              London
+            </div>
+          </div>
+          <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+            <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
+            <div class="flex-grow font-medium px-2">Taylor Otwell</div>
+            <div class="text-sm font-normal text-gray-500 tracking-wide">
+              Member
+            </div>
+          </div>
+          <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+            <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
+            <div class="flex-grow font-medium px-2">Adam Wathan</div>
+            <div class="text-sm font-normal text-gray-500 tracking-wide">
+              Member
+            </div>
+          </div>
+          <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+            <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
+            <div class="flex-grow font-medium px-2">
+              Duke Street Studio Inc.
+            </div>
+            <div class="text-sm font-normal text-gray-500 tracking-wide">
+              Team
+            </div>
+          </div>
+          <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+            <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
+            <div class="flex-grow font-medium px-2">Jeffrey Wey</div>
+            <div class="text-sm font-normal text-gray-500 tracking-wide">
+              Member
+            </div>
+          </div>
+        </div> */}
       </div>
     </div>
   );
