@@ -1,5 +1,6 @@
 import config from '../ezprofile.config';
 import colors from '../data/colors.json';
+import { hotjar } from 'react-hotjar';
 
 export const getInitialTheme = () => {
   if (config.themeConfig.disableSwitch) {
@@ -83,5 +84,15 @@ export const isThemeDarkish = (theme) => {
     return true;
   } else {
     return false;
+  }
+};
+
+export const setupHotjar = () => {
+  if (config.hotjar?.id) {
+    let snippetVersion = config.hotjar?.snippetVersion
+      ? config.hotjar?.snippetVersion
+      : 6;
+
+    hotjar.initialize(config.hotjar.id, snippetVersion);
   }
 };

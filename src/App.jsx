@@ -12,7 +12,7 @@ import Experience from './components/experience';
 import Education from './components/education';
 import Project from './components/project';
 import Blog from './components/blog';
-import { getInitialTheme } from './helpers/utils';
+import { getInitialTheme, setupHotjar } from './helpers/utils';
 
 function App() {
   const [theme, setTheme] = useState(getInitialTheme());
@@ -27,6 +27,10 @@ function App() {
       document.documentElement.setAttribute('data-theme', theme);
     }
   }, [theme]);
+
+  useEffect(() => {
+    setupHotjar();
+  }, []);
 
   const loadData = useCallback(() => {
     axios
