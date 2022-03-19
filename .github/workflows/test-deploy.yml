@@ -1,11 +1,11 @@
-name: Deploy to gh-pages Branch
+name: Test Deployment
 
 on:
   push:
     branches: [main]
 
 jobs:
-  deploy:
+  test-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -30,9 +30,3 @@ jobs:
         run: npm run build
         env:
           CI: ''
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: dist
