@@ -1,4 +1,4 @@
-// ezprofile.config.js
+// gitprofile.config.js
 
 const config = {
   github: {
