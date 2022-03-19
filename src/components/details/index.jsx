@@ -47,6 +47,7 @@ const Details = ({ profile, loading }) => {
     for (let index = 0; index < 4; index++) {
       array.push(
         <ListItem
+          key={index}
           skeleton={true}
           icon={skeleton({ width: 'w-4', height: 'h-4' })}
           title={skeleton({ width: 'w-24', height: 'h-4' })}

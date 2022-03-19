@@ -3,33 +3,36 @@ import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
 import { Fragment } from 'react';
 
+const ListItem = ({ time, position, company }) => (
+  <li className="mb-5 ml-4">
+    <div
+      className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
+      style={{ left: '-4.5px' }}
+    ></div>
+    <div className="my-0.5 text-xs opacity-80">{time}</div>
+    <h3 className="font-semibold opacity-90">{position}</h3>
+    <div className="mb-4 font-normal opacity-90">{company}</div>
+  </li>
+);
+
 const Experience = ({ loading }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 2; index++) {
       array.push(
-        <li class="mb-5 ml-4">
-          <div
-            class="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
-            style={{ left: '-4.5px' }}
-          ></div>
-          <div class="my-0.5 text-xs opacity-80">
-            {skeleton({
-              width: 'w-5/12',
-              height: 'h-4',
-            })}
-          </div>
-          <h3 class="font-semibold opacity-90">
-            {skeleton({
-              width: 'w-6/12',
-              height: 'h-4',
-              className: 'my-1.5',
-            })}
-          </h3>
-          <p class="mb-4 font-normal opacity-90">
-            {skeleton({ width: 'w-6/12', height: 'h-3' })}
-          </p>
-        </li>
+        <ListItem
+          key={index}
+          time={skeleton({
+            width: 'w-5/12',
+            height: 'h-4',
+          })}
+          position={skeleton({
+            width: 'w-6/12',
+            height: 'h-4',
+            className: 'my-1.5',
+          })}
+          company={skeleton({ width: 'w-6/12', height: 'h-3' })}
+        />
       );
     }
 
@@ -52,27 +55,18 @@ const Experience = ({ loading }) => {
                 </h5>
               </div>
               <div className="text-base-content text-opacity-60">
-                <ol class="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
+                <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
                   {loading ? (
                     renderSkeleton()
                   ) : (
                     <Fragment>
                       {config.experiences.map((experience, index) => (
-                        <li class="mb-5 ml-4">
-                          <div
-                            class="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
-                            style={{ left: '-4.5px' }}
-                          ></div>
-                          <div class="my-0.5 text-xs opacity-80">
-                            {experience.from} - {experience.to}
-                          </div>
-                          <h3 class="font-semibold opacity-90">
-                            {experience.position}
-                          </h3>
-                          <p class="mb-4 font-normal opacity-90">
-                            {experience.company}
-                          </p>
-                        </li>
+                        <ListItem
+                          key={index}
+                          time={`${experience.from} - ${experience.to}`}
+                          position={experience.position}
+                          company={experience.company}
+                        />
                       ))}
                     </Fragment>
                   )}
