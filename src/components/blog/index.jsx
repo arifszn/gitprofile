@@ -20,7 +20,7 @@ const displaySection = () => {
   }
 };
 
-const Blog = ({loading}) => {
+const Blog = ({ loading }) => {
   const [articles, setArticles] = useState(null);
 
   useEffect(() => {
@@ -152,13 +152,10 @@ const Blog = ({loading}) => {
                     <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
                       {article.categories.map((category, index2) => (
                         <div
+                          className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50"
                           key={index2}
-                          className="flex text-sm mr-3 items-center opacity-50 font-bold font-mono"
                         >
-                          <span>
-                            <CgHashtag />
-                          </span>
-                          <span>{category}</span>
+                          #{category}
                         </div>
                       ))}
                     </div>
@@ -180,19 +177,15 @@ const Blog = ({loading}) => {
             <div className="col-span-2">
               <div className="card compact bg-base-100 shadow-sm">
                 <div className="card-body">
-                  <ul className="menu row-span-3 bg-base-100 text-base-content">
-                    <li>
-                      <div className="pb-0-important mx-4 flex items-center justify-between">
-                        <h5 className="card-title">
-                          {loading || !articles ? (
-                            skeleton({ width: 'w-28', height: 'h-8' })
-                          ) : (
-                            <span className="opacity-70">Recent Posts</span>
-                          )}
-                        </h5>
-                      </div>
-                    </li>
-                  </ul>
+                  <div className="mx-3n">
+                    <h5 className="card-title">
+                      {loading ? (
+                        skeleton({ width: 'w-28', height: 'h-8' })
+                      ) : (
+                        <span className="opacity-70">Recent Posts</span>
+                      )}
+                    </h5>
+                  </div>
                 </div>
               </div>
             </div>
