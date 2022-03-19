@@ -36,63 +36,58 @@ It's all possible using [GitHub API](https://developer.github.com/v3/) (for auto
 
 To view a live example, **[click here](https://arifszn.github.io/ezprofile)**.
 
-
-
 ## 🛠 Installation & Set Up
 
 These instructions will get you a copy of the project and deploy your website online!
 
-  - **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repo so you have your own project to customize by clicking the fork icon on the top right side. A "fork" is a copy of a repository.
-  - Rename your forked repository to `username.github.io` in github, where `username` is your GitHub username (or organization name).
-  - Go to your repo's **Actions** page and enable workflows.
-  
-    ![Workflows](https://arifszn.github.io/assets/img/hosted/ezprofile/workflows.png)
+- **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repo so you have your own project to customize by clicking the fork icon on the top right side. A "fork" is a copy of a repository.
+- Rename your forked repository to `username.github.io` in github, where `username` is your GitHub username (or organization name).
+- Go to your repo's **Actions** page and enable workflows.
 
-  - Open `package.json`, and change `homepage`'s value to `https://username.github.io`.
-  
-    ```js
-    // package.json
-    {
-      // ...
-      "homepage": "https://username.github.io",
-    }
-    ```
+  ![Workflows](https://arifszn.github.io/assets/img/hosted/ezprofile/workflows.png)
 
-  - Now commit to your **main** branch with your changes.
-  - The CI/CD pipeline will publish your page at the gh-pages branch automatically.
-  - Go to your repo's **Settings** -> **Pages** -> **Source** and change the branch to gh-pages and click **save**.
-  - Your personal portfolio will be live at `username.github.io`.
-  - Any time you commit a change to the **main** branch, the website will be automatically updated.
+- Open `package.json`, and change `homepage`'s value to `https://username.github.io`.
 
-  
+  ```js
+  // package.json
+  {
+    // ...
+    "homepage": "https://username.github.io",
+  }
+  ```
+
+- Now commit to your **main** branch with your changes.
+- The CI/CD pipeline will publish your page at the gh-pages branch automatically.
+- Go to your repo's **Settings** -> **Pages** -> **Source** and change the branch to gh-pages and click **save**.
+- Your personal portfolio will be live at `username.github.io`.
+- Any time you commit a change to the **main** branch, the website will be automatically updated.
+
 You can skip the above steps and do a manual deployment by running `npm run deploy`. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
 
 If you see only `README` at `username.github.io`, be sure to change your GitHub Page's source to `gh-pages` branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Also, if you face any issue rendering the website, double-check the `homepage` value in the `package.json`. It must be the value matching the repository name.
 
 As this is a create react app, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://create-react-app.dev/docs/deployment) for a detailed deployment guide to other services.
 
-
-
 ## 🎨 Customization
 
-All the magic happens in the file `src/config.js`. Open it and modify it according to your preference.
+All the magic happens in the file `src/ezprofile.config.js`. Open it and modify it according to your preference.
 
 These are the default values:
 
 <details>
-<summary>config.js</summary>
+<summary>ezprofile.config.js</summary>
 
 ```js
-// config.js
-module.exports = {
+// ezprofile.config.js
+const config = {
   github: {
     username: 'arifszn', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 8, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
-      projects: [] // These projects will not be displayed. example: ['my-project1', 'my-project2']
-    }
+      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+    },
   },
   social: {
     linkedin: '',
@@ -104,53 +99,50 @@ module.exports = {
     devto: '',
     website: '',
     phone: '',
-    email: ''
+    email: '',
   },
-  skills: [
-    'JavaScript',
-    'React.js',
-  ],
+  skills: ['JavaScript', 'React.js'],
   experiences: [
     {
       company: 'Company name 1',
       position: 'Software Engineer',
       from: 'July 2019',
-      to: 'Present'
+      to: 'Present',
     },
     {
       company: 'Company name 2',
       position: 'Jr. Software Engineer',
       from: 'January 2019',
-      to: ' June 2019'
-    }
+      to: ' June 2019',
+    },
   ],
   education: [
     {
       institution: 'Institution name 1',
       degree: 'Bachelor of Science',
       from: '2015',
-      to: '2019'
+      to: '2019',
     },
     {
       institution: 'Institution name 2',
       degree: 'Higher Secondary Certificate (HSC)',
       from: '2012',
       to: '2014',
-    }
+    },
   ],
   blog: {
     // Display blog posts from your medium or dev.to account. (Optional)
     source: 'dev.to', // medium | dev.to
     username: 'arifszn',
-    limit: 5 // How many posts to display. Max is 10.
+    limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
     // GA3 tracking id/GA4 tag id
-    id: '' // UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: '', // UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
   hotjar: {
     id: '',
-    snippetVersion : 6 
+    snippetVersion: 6,
   },
   themeConfig: {
     default: 'light',
@@ -185,29 +177,29 @@ module.exports = {
       'wireframe',
       'black',
       'luxury',
-      'dracula'
-    ]
-  }
-}
+      'dracula',
+    ],
+  },
+};
 ```
-</details>
 
+</details>
 
 ### Themes
 
-There are 21 themes available that can be selected from the dropdown. 
+There are 21 themes available that can be selected from the dropdown.
 
 The default theme can be specified.
 
 ```js
-// config.js
+// ezprofile.config.js
 module.exports = {
   // ...
   themeConfig: {
     default: 'light',
     // ...
-  }
-}
+  },
+};
 ```
 
 ![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-1.png)
@@ -220,18 +212,18 @@ Here are some screenshots of different themes.\
 <br/>
 ![Themes](https://arifszn.github.io/assets/img/hosted/ezprofile/themes-7.png)
 
-
 ### Google Analytics
 
 ezFolio supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
+
 ```js
-// config.js
+// ezprofile.config.js
 module.exports = {
   // ...
   googleAnalytics: {
-    id: ''
+    id: '',
   },
-}
+};
 ```
 
 Besides tracking visitors, ezFolio will track click events on projects and blog posts, and send them to Google Analytics.\
@@ -243,20 +235,19 @@ Besides tracking visitors, ezFolio will track click events on projects and blog 
 ezProfile supports hotjar. If you do not want to use Hotjar, keep the `id` empty.
 
 ```js
-// config.js
+// ezprofile.config.js
 module.exports = {
   // ...
   hotjar: {
     id: '',
-    snippetVersion : 6 
+    snippetVersion: 6,
   },
-}
+};
 ```
 
 ### Meta Tags
 
 Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public\index.html`.
-
 
 ### Avatar and Bio
 
@@ -264,12 +255,12 @@ Your github avatar and bio will be displayed here.\
 <br/>
 ![Avatar Bio](https://arifszn.github.io/assets/img/hosted/ezprofile/avatar-card.png)
 
-
 ### Social Links
 
 ezProfile supports linking your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, phone and email.
+
 ```js
-// config.js
+// ezprofile.config.js
 module.exports = {
   // ...
   social: {
@@ -282,34 +273,31 @@ module.exports = {
     devto: '',
     website: 'https://arifszn.github.io',
     phone: '',
-    email: ''
+    email: '',
   },
-}
+};
 ```
-
 
 ### Skills
 
 To showcase your skills provide them here.
+
 ```js
-// config.js
+// ezprofile.config.js
 module.exports = {
   // ...
-  skills: [
-    'JavaScript',
-    'React.js',
-  ],
-}
+  skills: ['JavaScript', 'React.js'],
+};
 ```
 
 Empty array will hide the skills section.
 
-
 ### Experience
 
 Provide your job history in `experiences`.
+
 ```js
-// config.js
+// ezprofile.config.js
 module.exports = {
   // ...
   experiences: [
@@ -317,26 +305,26 @@ module.exports = {
       company: 'Company name 1',
       position: 'Software Engineer',
       from: 'July 2019',
-      to: 'Present'
+      to: 'Present',
     },
     {
       company: 'Company name 2',
       position: 'Jr. Software Engineer',
       from: 'January 2019',
-      to: ' June 2019'
-    }
+      to: ' June 2019',
+    },
   ],
-}
+};
 ```
 
 Empty array will hide the experience section.
 
-
 ### Education
 
 Provide your education history in `education`.
+
 ```js
-// config.js
+// ezprofile.config.js
 module.exports = {
   // ...
   education: [
@@ -344,27 +332,26 @@ module.exports = {
       institution: 'Institution name 1',
       degree: 'Bachelor of Science',
       from: '2015',
-      to: '2019'
+      to: '2019',
     },
     {
       institution: 'Institution name 2',
       degree: 'Higher Secondary Certificate (HSC)',
       from: '2012',
       to: '2014',
-    }
+    },
   ],
-}
+};
 ```
 
 Empty array will hide the education section.
-
 
 ### Projects
 
 Your public repo from github will be displayed here automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
 
 ```js
-// config.js
+// ezprofile.config.js
 module.exports = {
   // ...
   github: {
@@ -373,10 +360,10 @@ module.exports = {
     limit: 8,
     exclude: {
       forks: false,
-      projects: ['my-project1', 'my-project2']
-    }
+      projects: ['my-project1', 'my-project2'],
+    },
   },
-}
+};
 ```
 
 ### Blog Posts
@@ -384,34 +371,30 @@ module.exports = {
 If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is `10`).
 
 ```js
-// config.js
+// ezprofile.config.js
 module.exports = {
   // ...
   blog: {
     source: 'dev.to',
     username: 'arifszn',
-    limit: 5
+    limit: 5,
   },
-}
+};
 ```
 
 ![Blog](https://arifszn.github.io/assets/img/hosted/ezprofile/blog.png)
 
 The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
 
-
-
 ## 📢 Please Read
 
 I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own. However, You are open to use this project by forking it and change any code necessary by giving attribute to the original author. Please see this [issue](https://github.com/arifszn/ezprofile/issues/11) for more info.
-
 
 ## 💖 Support
 
 <a href="https://www.buymeacoffee.com/arifszn" target="_blank">
   <img src="https://raw.githubusercontent.com/arifszn/arifszn/main/assets/bmc-button.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
 </a>
-
 
 ## 💡 Contributing
 
