@@ -1,11 +1,7 @@
-import { useContext } from 'react';
-import { LoadingContext } from '../../contexts/LoadingContext';
 import config from '../../ezprofile.config';
 import { skeleton } from '../../helpers/utils';
 
-const Skill = () => {
-  const { loading } = useContext(LoadingContext);
-
+const Skill = ({ loading }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 12; index++) {

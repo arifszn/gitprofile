@@ -1,13 +1,10 @@
-import { Fragment, useContext } from 'react';
+import { Fragment } from 'react';
 import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 import PropTypes from 'prop-types';
-import { LoadingContext } from '../../contexts/LoadingContext';
 import config from '../../ezprofile.config';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
 
-const Project = (props) => {
-  const { loading } = useContext(LoadingContext);
-
+const Project = ({ repo, loading }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < config.github.limit; index++) {
@@ -55,7 +52,7 @@ const Project = (props) => {
   };
 
   const renderProjects = () => {
-    return props.repo.map((item, index) => (
+    return repo.map((item, index) => (
       <div
         className="card shadow-lg compact bg-base-100 cursor-pointer"
         key={index}
@@ -163,7 +160,7 @@ const Project = (props) => {
           </div>
           <div className="col-span-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {loading || !props.repo ? renderSkeleton() : renderProjects()}
+              {loading || !repo ? renderSkeleton() : renderProjects()}
             </div>
           </div>
         </div>

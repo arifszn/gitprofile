@@ -1,8 +1,7 @@
 import { getDevtoArticle, getMediumArticle } from 'article-api';
 import moment from 'moment';
-import { Fragment, useContext, useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { CgHashtag } from 'react-icons/cg';
-import { LoadingContext } from '../../contexts/LoadingContext';
 import config from '../../ezprofile.config';
 import { ga, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
@@ -21,9 +20,8 @@ const displaySection = () => {
   }
 };
 
-const Blog = () => {
+const Blog = ({loading}) => {
   const [articles, setArticles] = useState(null);
-  const { loading } = useContext(LoadingContext);
 
   useEffect(() => {
     if (displaySection()) {

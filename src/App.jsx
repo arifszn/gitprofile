@@ -1,8 +1,6 @@
 import axios from 'axios';
-import { Fragment, useCallback, useContext, useEffect, useState } from 'react';
+import { Fragment, useCallback, useEffect, useState } from 'react';
 import moment from 'moment';
-import { ThemeContext } from './contexts/ThemeContext';
-import { LoadingContext } from './contexts/LoadingContext';
 import config from './ezprofile.config';
 import HeadTagEditor from './components/head-tag-editor';
 import ErrorPage from './components/error-page';
@@ -14,10 +12,11 @@ import Experience from './components/experience';
 import Education from './components/education';
 import Project from './components/project';
 import Blog from './components/blog';
+import { getInitialTheme } from './helpers/utils';
 
 function App() {
-  const { theme } = useContext(ThemeContext);
-  const { setLoading } = useContext(LoadingContext);
+  const [theme, setTheme] = useState(getInitialTheme());
+  const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
   const [repo, setRepo] = useState(null);
   const [error, setError] = useState(null);
@@ -108,7 +107,7 @@ function App() {
 
   return (
     <Fragment>
-      <HeadTagEditor profile={profile} />
+      <HeadTagEditor profile={profile} theme={theme} />
       <div className="fade-in h-screen">
         {error ? (
           <ErrorPage
@@ -149,18 +148,24 @@ function App() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                 <div className="col-span-1">
                   <div className="grid grid-cols-1 gap-6">
-                    {!config.themeConfig.disableSwitch && <ThemeChanger />}
-                    <AvatarCard profile={profile} />
-                    <Details profile={profile} />
-                    <Skill />
-                    <Experience />
-                    <Education />
+                    {!config.themeConfig.disableSwitch && (
+                      <ThemeChanger
+                        theme={theme}
+                        setTheme={setTheme}
+                        loading={loading}
+                      />
+                    )}
+                    <AvatarCard profile={profile} loading={loading} />
+                    <Details profile={profile} loading={loading} />
+                    <Skill loading={loading} />
+                    <Experience loading={loading} />
+                    <Education loading={loading} />
                   </div>
                 </div>
                 <div className="lg:col-span-2 col-span-1">
                   <div className="grid grid-cols-1 gap-6">
-                    <Project repo={repo} />
-                    <Blog />
+                    <Project repo={repo} loading={loading} />
+                    <Blog loading={loading} />
                   </div>
                 </div>
               </div>

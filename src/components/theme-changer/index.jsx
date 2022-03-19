@@ -1,16 +1,8 @@
 import { AiOutlineControl } from 'react-icons/ai';
-import { useContext } from 'react';
-import { ThemeContext } from '../../contexts/ThemeContext';
-import { LoadingContext } from '../../contexts/LoadingContext';
 import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
 
-const ThemeChanger = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-  const { loading } = useContext(LoadingContext);
-
-  console.log(theme);
-
+const ThemeChanger = ({ theme, setTheme, loading }) => {
   const changeTheme = (e, selectedTheme) => {
     e.preventDefault();
     document.querySelector('html').setAttribute('data-theme', selectedTheme);

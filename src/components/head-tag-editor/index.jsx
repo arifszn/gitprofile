@@ -1,16 +1,13 @@
-import { Fragment, useContext } from 'react';
+import { Fragment } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
-import { ThemeContext } from '../../contexts/ThemeContext';
 import config from '../../ezprofile.config';
 import { isThemeDarkish } from '../../helpers/utils';
 
-const HeadTagEditor = (props) => {
-  const { theme } = useContext(ThemeContext);
-
+const HeadTagEditor = ({ profile, theme }) => {
   return (
     <Fragment>
-      {props.profile && (
+      {profile && (
         <Helmet>
           {config.googleAnalytics?.id && (
             <script
@@ -26,20 +23,17 @@ const HeadTagEditor = (props) => {
                 gtag('config', '${config.googleAnalytics.id}');`}
             </script>
           )}
-          <title>Portfolio of {props.profile.name}</title>
+          <title>Portfolio of {profile.name}</title>
           <meta
             name="theme-color"
             content={isThemeDarkish(theme) ? '#000000' : '#ffffff'}
           />
 
-          <meta name="description" content={props.profile.bio} />
+          <meta name="description" content={profile.bio} />
 
-          <meta
-            itemprop="name"
-            content={`Portfolio of ${props.profile.name}`}
-          />
-          <meta itemprop="description" content={props.profile.bio} />
-          <meta itemprop="image" content={props.profile.avatar} />
+          <meta itemprop="name" content={`Portfolio of ${profile.name}`} />
+          <meta itemprop="description" content={profile.bio} />
+          <meta itemprop="image" content={profile.avatar} />
 
           <meta
             property="og:url"
@@ -50,20 +44,14 @@ const HeadTagEditor = (props) => {
             }
           />
           <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content={`Portfolio of ${props.profile.name}`}
-          />
-          <meta property="og:description" content={props.profile.bio} />
-          <meta property="og:image" content={props.profile.avatar} />
+          <meta property="og:title" content={`Portfolio of ${profile.name}`} />
+          <meta property="og:description" content={profile.bio} />
+          <meta property="og:image" content={profile.avatar} />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:title"
-            content={`Portfolio of ${props.profile.name}`}
-          />
-          <meta name="twitter:description" content={props.profile.bio} />
-          <meta name="twitter:image" content={props.profile.avatar} />
+          <meta name="twitter:title" content={`Portfolio of ${profile.name}`} />
+          <meta name="twitter:description" content={profile.bio} />
+          <meta name="twitter:image" content={profile.avatar} />
         </Helmet>
       )}
     </Fragment>

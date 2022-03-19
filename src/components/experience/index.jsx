@@ -1,12 +1,8 @@
 import { GoPrimitiveDot } from 'react-icons/go';
-import { useContext } from 'react';
-import { LoadingContext } from '../../contexts/LoadingContext';
 import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
 
-const Experience = () => {
-  const { loading } = useContext(LoadingContext);
-
+const Experience = ({ loading }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 2; index++) {

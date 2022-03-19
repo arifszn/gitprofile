@@ -12,8 +12,6 @@ import {
   FaGlobe,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
-import { useContext } from 'react';
-import { LoadingContext } from '../../contexts/LoadingContext';
 import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
 
@@ -31,9 +29,7 @@ const ListItem = ({ icon, title, value, link }) => {
   );
 };
 
-const Details = (props) => {
-  const { loading } = useContext(LoadingContext);
-
+const Details = ({ profile, loading }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 4; index++) {
@@ -53,22 +49,22 @@ const Details = (props) => {
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
-        {loading || !props.profile ? (
+        {loading || !profile ? (
           renderSkeleton()
         ) : (
           <div className="bg-base-100 text-base-content text-opacity-60">
-            {props.profile.location && (
+            {profile.location && (
               <ListItem
                 icon={<MdLocationOn className="mr-2" />}
                 title="Based on"
-                value={props.profile.location}
+                value={profile.location}
               />
             )}
-            {props.profile.company && (
+            {profile.company && (
               <ListItem
                 icon={<FaBuilding className="mr-2" />}
                 title="Company"
-                value={props.profile.company}
+                value={profile.company}
               />
             )}
             <ListItem
@@ -116,7 +112,7 @@ const Details = (props) => {
           </div>
         )}
         {/* <ul className="menu bg-base-100 text-base-content text-opacity-60">
-          {loading || !props.profile ? (
+          {loading || !profile ? (
             renderSkeleton()
           ) : (
             <>
