@@ -1,7 +1,7 @@
-import { GoPrimitiveDot } from 'react-icons/go';
 import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
 import { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const ListItem = ({ time, position, company }) => (
   <li className="mb-5 ml-4">
@@ -77,6 +77,16 @@ const Experience = ({ loading }) => {
         )}
     </>
   );
+};
+
+ListItem.propTypes = {
+  time: PropTypes.node,
+  position: PropTypes.node,
+  company: PropTypes.node,
+};
+
+Experience.propTypes = {
+  loading: PropTypes.bool,
 };
 
 export default Experience;

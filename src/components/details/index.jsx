@@ -18,7 +18,12 @@ import config from '../../ezprofile.config';
 
 const ListItem = ({ icon, title, value, link, skeleton = false }) => {
   return (
-    <div className="flex justify-start py-2 px-1 items-center">
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="flex justify-start py-2 px-1 items-center"
+    >
       <span className="w-2 m-2">{icon}</span>
       <div className="flex-grow font-medium px-2">{title}</div>
       <div
@@ -26,18 +31,15 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
           skeleton ? 'flex-grow' : ''
         } text-sm font-normal text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
       >
-        <a
-          href={link}
-          target="_blank"
-          rel="noreferrer"
+        <div
           style={{
             wordBreak: 'break-word',
           }}
         >
           {value}
-        </a>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
@@ -187,6 +189,15 @@ const Details = ({ profile, loading }) => {
 
 Details.propTypes = {
   profile: PropTypes.object,
+  loading: PropTypes.bool,
+};
+
+ListItem.propTypes = {
+  icon: PropTypes.node,
+  title: PropTypes.node,
+  value: PropTypes.node,
+  link: PropTypes.string,
+  skeleton: PropTypes.bool,
 };
 
 export default Details;

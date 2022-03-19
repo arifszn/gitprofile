@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { skeleton } from '../../helpers/utils';
+import { fallbackImage, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
 
 const AvatarCard = ({ profile, loading }) => {
@@ -54,6 +54,7 @@ const AvatarCard = ({ profile, loading }) => {
 
 AvatarCard.propTypes = {
   profile: PropTypes.object,
+  loading: PropTypes.bool,
 };
 
 export default AvatarCard;

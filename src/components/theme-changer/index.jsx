@@ -1,6 +1,7 @@
 import { AiOutlineControl } from 'react-icons/ai';
 import { skeleton } from '../../helpers/utils';
 import config from '../../ezprofile.config';
+import PropTypes from 'prop-types';
 
 const ThemeChanger = ({ theme, setTheme, loading }) => {
   const changeTheme = (e, selectedTheme) => {
@@ -86,6 +87,12 @@ const ThemeChanger = ({ theme, setTheme, loading }) => {
       </div>
     </div>
   );
+};
+
+ThemeChanger.propTypes = {
+  theme: PropTypes.string,
+  setTheme: PropTypes.func,
+  loading: PropTypes.bool,
 };
 
 export default ThemeChanger;

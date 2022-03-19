@@ -1,5 +1,6 @@
 import config from '../../ezprofile.config';
 import { skeleton } from '../../helpers/utils';
+import PropTypes from 'prop-types';
 
 const Skill = ({ loading }) => {
   const renderSkeleton = () => {
@@ -48,6 +49,10 @@ const Skill = ({ loading }) => {
       )}
     </>
   );
+};
+
+Skill.propTypes = {
+  loading: PropTypes.bool,
 };
 
 export default Skill;

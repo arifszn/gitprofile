@@ -15,7 +15,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint --ext .js,.jsx .",
+    "lint:fix": "eslint --ext .js,.jsx --fix .",
+    "prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -27,9 +31,14 @@
     "autoprefixer": "^10.4.4",
     "axios": "^0.26.1",
     "daisyui": "^2.11.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
     "gh-pages": "^3.2.3",
     "moment": "^2.29.1",
     "postcss": "^8.4.12",
+    "prettier": "^2.6.0",
     "prop-types": "^15.8.1",
     "react-helmet-async": "^1.2.3",
     "react-hotjar": "^5.0.0",

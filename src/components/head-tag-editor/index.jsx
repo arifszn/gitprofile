@@ -31,9 +31,9 @@ const HeadTagEditor = ({ profile, theme }) => {
 
           <meta name="description" content={profile.bio} />
 
-          <meta itemprop="name" content={`Portfolio of ${profile.name}`} />
-          <meta itemprop="description" content={profile.bio} />
-          <meta itemprop="image" content={profile.avatar} />
+          <meta itemProp="name" content={`Portfolio of ${profile.name}`} />
+          <meta itemProp="description" content={profile.bio} />
+          <meta itemProp="image" content={profile.avatar} />
 
           <meta
             property="og:url"
@@ -60,6 +60,7 @@ const HeadTagEditor = ({ profile, theme }) => {
 
 HeadTagEditor.propTypes = {
   profile: PropTypes.object,
+  theme: PropTypes.string,
 };
 
 export default HeadTagEditor;
