@@ -1,4 +1,4 @@
-import config from '../../ezprofile.config';
+import config from '../../gitprofile.config';
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
 

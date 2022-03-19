@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Fragment, useCallback, useEffect, useState } from 'react';
 import moment from 'moment';
-import config from './ezprofile.config';
+import config from './gitprofile.config';
 import HeadTagEditor from './components/head-tag-editor';
 import ErrorPage from './components/error-page';
 import ThemeChanger from './components/theme-changer';
@@ -127,7 +127,7 @@ function App() {
               error === 404 ? (
                 <p>
                   Please provide correct github username in{' '}
-                  <code>src/ezprofile.config.js</code>
+                  <code>src/gitprofile.config.js</code>
                 </p>
               ) : error === 429 ? (
                 <p>
@@ -174,7 +174,7 @@ function App() {
                 </div>
               </div>
             </div>
-            {/* DO NOT REMOVE/MODIFY THE FOOTER. FOR MORE INFO https://github.com/arifszn/ezprofile#-please-read */}
+            {/* DO NOT REMOVE/MODIFY THE FOOTER. FOR MORE INFO https://github.com/arifszn/gitprofile#-please-read */}
             <footer className="p-4 footer bg-base-200 text-base-content footer-center">
               <div className="card compact bg-base-100 shadow">
                 <div className="card-body">
@@ -183,11 +183,11 @@ function App() {
                       Made with{' '}
                       <a
                         className="text-primary"
-                        href="https://github.com/arifszn/ezprofile"
+                        href="https://github.com/arifszn/gitprofile"
                         target="_blank"
                         rel="noreferrer"
                       >
-                        ezProfile
+                        GitProfile
                       </a>{' '}
                       and ❤️
                     </p>

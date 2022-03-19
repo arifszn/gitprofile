@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 import PropTypes from 'prop-types';
-import config from '../../ezprofile.config';
+import config from '../../gitprofile.config';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
 
 const Project = ({ repo, loading }) => {

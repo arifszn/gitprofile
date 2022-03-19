@@ -1,13 +1,13 @@
 import { AiOutlineControl } from 'react-icons/ai';
 import { skeleton } from '../../helpers/utils';
-import config from '../../ezprofile.config';
+import config from '../../gitprofile.config';
 import PropTypes from 'prop-types';
 
 const ThemeChanger = ({ theme, setTheme, loading }) => {
   const changeTheme = (e, selectedTheme) => {
     e.preventDefault();
     document.querySelector('html').setAttribute('data-theme', selectedTheme);
-    localStorage.setItem('ezprofile-theme', selectedTheme);
+    localStorage.setItem('gitprofile-theme', selectedTheme);
 
     setTheme(selectedTheme);
   };

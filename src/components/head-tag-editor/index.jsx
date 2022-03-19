@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
-import config from '../../ezprofile.config';
+import config from '../../gitprofile.config';
 import { isThemeDarkish } from '../../helpers/utils';
 
 const HeadTagEditor = ({ profile, theme }) => {
