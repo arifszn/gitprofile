@@ -17,7 +17,7 @@ import config from '../../ezprofile.config';
 
 const ListItem = ({ icon, title, value, link }) => {
   return (
-    <div class="flex justify-start py-2 items-center">
+    <div class="flex justify-start py-2 px-1 items-center">
       <span class="w-2 m-2">{icon}</span>
       <div class="flex-grow font-medium px-2">{title}</div>
       <div class="text-sm font-normal text-right mr-2 ml-3">
