@@ -172,19 +172,23 @@ function App() {
             </div>
             {/* DO NOT REMOVE/MODIFY THE FOOTER. FOR MORE INFO https://github.com/arifszn/ezprofile#-please-read */}
             <footer className="p-4 footer bg-base-200 text-base-content footer-center">
-              <div>
-                <p className="font-mono text-sm">
-                  Made with{' '}
-                  <a
-                    className="text-primary"
-                    href="https://github.com/arifszn/ezprofile"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    ezProfile
-                  </a>{' '}
-                  and ❤️
-                </p>
+              <div className="card compact bg-base-100 shadow">
+                <div className="card-body">
+                  <div>
+                    <p className="font-mono text-sm">
+                      Made with{' '}
+                      <a
+                        className="text-primary"
+                        href="https://github.com/arifszn/ezprofile"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        ezProfile
+                      </a>{' '}
+                      and ❤️
+                    </p>
+                  </div>
+                </div>
               </div>
             </footer>
           </Fragment>
