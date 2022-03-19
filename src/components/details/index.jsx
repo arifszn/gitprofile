@@ -189,6 +189,15 @@ const Details = ({ profile, loading }) => {
 
 Details.propTypes = {
   profile: PropTypes.object,
+  loading: PropTypes.bool,
+};
+
+ListItem.propTypes = {
+  icon: PropTypes.node,
+  title: PropTypes.node,
+  value: PropTypes.node,
+  link: PropTypes.string,
+  skeleton: PropTypes.bool,
 };
 
 export default Details;

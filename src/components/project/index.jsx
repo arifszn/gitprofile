@@ -167,6 +167,7 @@ const Project = ({ repo, loading }) => {
 
 Project.propTypes = {
   repo: PropTypes.array,
+  loading: PropTypes.bool,
 };
 
 export default Project;

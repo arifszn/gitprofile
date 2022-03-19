@@ -1,10 +1,10 @@
 import { getDevtoArticle, getMediumArticle } from 'article-api';
 import moment from 'moment';
 import { Fragment, useEffect, useState } from 'react';
-import { CgHashtag } from 'react-icons/cg';
 import config from '../../ezprofile.config';
 import { ga, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
+import PropTypes from 'prop-types';
 
 const displaySection = () => {
   if (
@@ -199,6 +199,10 @@ const Blog = ({ loading }) => {
       )}
     </Fragment>
   );
+};
+
+Blog.propTypes = {
+  loading: PropTypes.bool,
 };
 
 export default Blog;

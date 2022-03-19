@@ -1,4 +1,5 @@
 import { useState, Fragment, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const LazyImage = ({ placeholder, src, alt, ...rest }) => {
   const [loading, setLoading] = useState(true);
@@ -17,6 +18,12 @@ const LazyImage = ({ placeholder, src, alt, ...rest }) => {
       {loading ? placeholder : <img src={src} alt={alt} {...rest} />}
     </Fragment>
   );
+};
+
+LazyImage.propTypes = {
+  placeholder: PropTypes.node,
+  alt: PropTypes.string,
+  src: PropTypes.string,
 };
 
 export default LazyImage;
