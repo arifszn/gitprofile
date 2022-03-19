@@ -19,9 +19,20 @@ const ListItem = ({ icon, title, value, link }) => {
   return (
     <div class="flex justify-start py-2 px-1 items-center">
       <span class="w-2 m-2">{icon}</span>
-      <div class="flex-grow font-medium px-2">{title}</div>
-      <div class="text-sm font-normal text-right mr-2 ml-3">
-        <a href={link} target="_blank" rel="noreferrer">
+      <div class="flex-grow font-medium px-2">{title}:</div>
+      <div
+        class={`text-sm font-normal text-right mr-2 ml-3 ${
+          link ? 'truncate' : ''
+        }`}
+      >
+        <a
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            wordBreak: 'break-word',
+          }}
+        >
           {value}
         </a>
       </div>
@@ -109,202 +120,62 @@ const Details = ({ profile, loading }) => {
                   link={`https://www.behance.net/${config.social.behance}`}
                 />
               )}
+            {typeof config.social.facebook !== 'undefined' &&
+              config.social.facebook && (
+                <ListItem
+                  icon={<FaFacebook className="mr-2" />}
+                  title="Facebook"
+                  value={config.social.facebook}
+                  link={`https://www.facebook.com/${config.social.facebook}`}
+                />
+              )}
+            {typeof config.social.medium !== 'undefined' &&
+              config.social.medium && (
+                <ListItem
+                  icon={<AiFillMediumSquare className="mr-2" />}
+                  title="Medium"
+                  value={config.social.medium}
+                  link={`https://medium.com/@${config.social.medium}`}
+                />
+              )}
+            {typeof config.social.devto !== 'undefined' &&
+              config.social.devto && (
+                <ListItem
+                  icon={<FaDev className="mr-2" />}
+                  title="Dev"
+                  value={config.social.devto}
+                  link={`https://dev.to/${config.social.devto}`}
+                />
+              )}
+            {typeof config.social.website !== 'undefined' &&
+              config.social.website && (
+                <ListItem
+                  icon={<FaGlobe className="mr-2" />}
+                  title="Website"
+                  value={config.social.website}
+                  link={config.social.website}
+                />
+              )}
+            {typeof config.social.phone !== 'undefined' &&
+              config.social.phone && (
+                <ListItem
+                  icon={<RiPhoneFill className="mr-2" />}
+                  title="Phone"
+                  value={config.social.phone}
+                  link={`tel:${config.social.phone}`}
+                />
+              )}
+            {typeof config.social.email !== 'undefined' &&
+              config.social.email && (
+                <ListItem
+                  icon={<MdMail className="mr-2" />}
+                  title="Email"
+                  value={config.social.email}
+                  link={`mailto:${config.social.email}`}
+                />
+              )}
           </div>
         )}
-        {/* <ul className="menu bg-base-100 text-base-content text-opacity-60">
-          {loading || !profile ? (
-            renderSkeleton()
-          ) : (
-            <>
-              
-              
-              
-              
-              
-              {typeof config.social.behance !== 'undefined' &&
-                config.social.behance && (
-                  <li>
-                    <span>
-                      <div>
-                        <FaBehanceSquare className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={``}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.behance}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
-              {typeof config.social.facebook !== 'undefined' &&
-                config.social.facebook && (
-                  <li>
-                    <span>
-                      <div>
-                        <FaFacebook className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={`https://www.facebook.com/${config.social.facebook}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.facebook}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
-              {typeof config.social.medium !== 'undefined' &&
-                config.social.medium && (
-                  <li>
-                    <span>
-                      <div>
-                        <AiFillMediumSquare className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={`https://medium.com/@${config.social.medium}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.medium}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
-              {typeof config.social.devto !== 'undefined' &&
-                config.social.devto && (
-                  <li>
-                    <span>
-                      <div>
-                        <FaDev className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={`https://dev.to/${config.social.devto}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.devto}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
-              {typeof config.social.website !== 'undefined' &&
-                config.social.website && (
-                  <li>
-                    <span>
-                      <div>
-                        <FaGlobe className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={`${config.social.website}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.website}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
-              {typeof config.social.phone !== 'undefined' &&
-                config.social.phone && (
-                  <li>
-                    <span>
-                      <div>
-                        <RiPhoneFill className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={`tel:${config.social.phone}`}
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.phone}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
-              {typeof config.social.email !== 'undefined' &&
-                config.social.email && (
-                  <li>
-                    <span>
-                      <div>
-                        <MdMail className="mr-2" />
-                      </div>
-                      <div>
-                        <a
-                          href={`mailto:${config.social.email}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-base-content-important"
-                        >
-                          {config.social.email}
-                        </a>
-                      </div>
-                    </span>
-                  </li>
-                )}
-            </>
-          )}
-        </ul> */}
-
-        {/* <div class="bg-base-100 text-base-content text-opacity-60">
-          <div class="flex justify-start px-2 py-2 my-2 items-center">
-            <span class="w-2 m-2 rounded-full">
-              <MdLocationOn className="mr-2" />
-            </span>
-            <div class="flex-grow font-medium px-2">Based on</div>
-            <div class="text-sm font-normal text-gray-500 tracking-wide">
-              London
-            </div>
-          </div>
-          <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-            <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
-            <div class="flex-grow font-medium px-2">Taylor Otwell</div>
-            <div class="text-sm font-normal text-gray-500 tracking-wide">
-              Member
-            </div>
-          </div>
-          <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-            <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
-            <div class="flex-grow font-medium px-2">Adam Wathan</div>
-            <div class="text-sm font-normal text-gray-500 tracking-wide">
-              Member
-            </div>
-          </div>
-          <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-            <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
-            <div class="flex-grow font-medium px-2">
-              Duke Street Studio Inc.
-            </div>
-            <div class="text-sm font-normal text-gray-500 tracking-wide">
-              Team
-            </div>
-          </div>
-          <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-            <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
-            <div class="flex-grow font-medium px-2">Jeffrey Wey</div>
-            <div class="text-sm font-normal text-gray-500 tracking-wide">
-              Member
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );
