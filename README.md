@@ -396,9 +396,9 @@ I intend to keep my works open source. Please do not discourage me by claiming t
   <img src="https://raw.githubusercontent.com/arifszn/arifszn/main/assets/bmc-button.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
 </a>
 
-## 💡 Contributing
+## 💡 Contribute
 
-Any contributors who want to make this project better can make contributions, which will be greatly appreciated. To contribute, clone this repo locally and commit your code to a new branch. Feel free to create an issue or make a pull request.
+To contribute, see the [Contributing guide](https://github.com/arifszn/ezprofile/blob/main/CONTRIBUTING.md).
 
 ## 📄 License
 
