@@ -130,31 +130,27 @@ const Project = ({ repo, loading }) => {
           <div className="col-span-2">
             <div className="card compact bg-base-100 shadow-sm">
               <div className="card-body">
-                <ul className="menu row-span-3 bg-base-100 text-base-content">
-                  <li>
-                    <div className="pb-0-important mx-4 flex items-center justify-between">
-                      <h5 className="card-title">
-                        {loading ? (
-                          skeleton({ width: 'w-28', height: 'h-8' })
-                        ) : (
-                          <span className="opacity-70">My Projects</span>
-                        )}
-                      </h5>
-                      {loading ? (
-                        skeleton({ width: 'w-10', height: 'h-5' })
-                      ) : (
-                        <a
-                          href={`https://github.com/${config.github.username}?tab=repositories`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="opacity-50"
-                        >
-                          See All
-                        </a>
-                      )}
-                    </div>
-                  </li>
-                </ul>
+                <div className="mx-3 flex items-center justify-between">
+                  <h5 className="card-title">
+                    {loading ? (
+                      skeleton({ width: 'w-28', height: 'h-8' })
+                    ) : (
+                      <span className="opacity-70">My Projects</span>
+                    )}
+                  </h5>
+                  {loading ? (
+                    skeleton({ width: 'w-10', height: 'h-5' })
+                  ) : (
+                    <a
+                      href={`https://github.com/${config.github.username}?tab=repositories`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="opacity-50"
+                    >
+                      See All
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
