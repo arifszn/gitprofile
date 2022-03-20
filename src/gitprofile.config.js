@@ -99,7 +99,7 @@ const config = {
 
     // Should we use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded default
-    respectPrefersColorScheme: true,
+    respectPrefersColorScheme: false,
 
     // Available themes. To remove any theme, exclude from here.
     themes: [
