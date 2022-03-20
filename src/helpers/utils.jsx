@@ -9,7 +9,7 @@ export const getInitialTheme = () => {
 
   if (
     !(localStorage.getItem('gitprofile-theme') === null) &&
-    config.themeConfig.themes.includes('gitprofile-theme')
+    config.themeConfig.themes.includes(localStorage.getItem('gitprofile-theme'))
   ) {
     let theme = localStorage.getItem('gitprofile-theme');
 
