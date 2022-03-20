@@ -102,10 +102,13 @@ const Blog = ({ loading }) => {
     return (
       articles &&
       articles.slice(0, config.blog.limit).map((article, index) => (
-        <div
+        <a
           className="card shadow-lg compact bg-base-100 cursor-pointer"
           key={index}
-          onClick={() => {
+          href={article.link}
+          onClick={(e) => {
+            e.preventDefault();
+
             try {
               if (config.googleAnalytics?.id) {
                 ga.event({
@@ -164,7 +167,7 @@ const Blog = ({ loading }) => {
               </div>
             </div>
           </div>
-        </div>
+        </a>
       ))
     );
   };
