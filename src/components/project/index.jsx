@@ -53,10 +53,13 @@ const Project = ({ repo, loading }) => {
 
   const renderProjects = () => {
     return repo.map((item, index) => (
-      <div
+      <a
         className="card shadow-lg compact bg-base-100 cursor-pointer"
+        href={item.html_url}
         key={index}
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
+
           try {
             if (config.googleAnalytics?.id) {
               ga.event({
@@ -119,7 +122,7 @@ const Project = ({ repo, loading }) => {
             </div>
           </div>
         </div>
-      </div>
+      </a>
     ));
   };
 
