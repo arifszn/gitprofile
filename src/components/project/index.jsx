@@ -131,9 +131,9 @@ const Project = ({ repo, loading }) => {
       <div className="col-span-1 lg:col-span-2">
         <div className="grid grid-cols-2 gap-6">
           <div className="col-span-2">
-            <div className="card compact bg-base-100 shadow-sm">
+            <div className="card compact shadow-sm glass">
               <div className="card-body">
-                <div className="mx-3 flex items-center justify-between">
+                <div className="mx-3 flex items-center justify-between mb-2">
                   <h5 className="card-title">
                     {loading ? (
                       skeleton({ width: 'w-28', height: 'h-8' })
@@ -154,12 +154,12 @@ const Project = ({ repo, loading }) => {
                     </a>
                   )}
                 </div>
+                <div className="col-span-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {loading || !repo ? renderSkeleton() : renderProjects()}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="col-span-2">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {loading || !repo ? renderSkeleton() : renderProjects()}
             </div>
           </div>
         </div>
