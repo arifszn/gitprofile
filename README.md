@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://arifszn.github.io/gitprofile" target="_blank">
-    <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/logo.png" alt="GitProfile" title="GitProfile" width="80">
+    <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/logo.png" alt="GitProfile" title="GitProfile" width="50">
   </a>
 </p>
 
