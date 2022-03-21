@@ -46,13 +46,17 @@ These instructions will get you a copy of the project and deploy your website on
 
   ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
 
-- Open `package.json`, and change `homepage`'s value to `https://username.github.io`.
+- Open `vite.config.js`, and change `base`'s value.
+
+  - If you are deploying to `https://<USERNAME>.github.io/`, set `base` to `'/'`.
+
+  - If you are deploying to `https://<USERNAME>.github.io/<REPO>/`, for example your repository is at `https://github.com/<USERNAME>/<REPO>`, then set `base` to `'/<REPO>/'`.
 
   ```js
-  // package.json
+  // vite.config.js
   {
+    base: '/',
     // ...
-    "homepage": "https://username.github.io",
   }
   ```
 
@@ -62,11 +66,9 @@ These instructions will get you a copy of the project and deploy your website on
 - Your personal portfolio will be live at `username.github.io`.
 - Any time you commit a change to the **main** branch, the website will be automatically updated.
 
-You can skip the above steps and do a manual deployment by running `npm run deploy`. For more info, visit [here](https://create-react-app.dev/docs/deployment/#github-pages).
+If you see only `README` at `username.github.io`, be sure to change your GitHub Page's source to `gh-pages` branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Also, if you face any issue rendering the website, double-check the `base` value in the `vite.config.js`.
 
-If you see only `README` at `username.github.io`, be sure to change your GitHub Page's source to `gh-pages` branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Also, if you face any issue rendering the website, double-check the `homepage` value in the `package.json`. It must be the value matching the repository name.
-
-As this is a create react app, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://create-react-app.dev/docs/deployment) for a detailed deployment guide to other services.
+As this is a vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
 
 ## 🎨 Customization
 
