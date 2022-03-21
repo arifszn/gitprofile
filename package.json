@@ -3,7 +3,6 @@
   "description": "Kickstart your personal portfolio with Github Api and blog",
   "private": true,
   "version": "2.0.0",
-  "homepage": "https://arifszn.github.io/gitprofile",
   "license": "Apache-2.0",
   "author": "arifszn",
   "repository": {
@@ -14,8 +13,6 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "lint": "eslint --ext .js,.jsx .",
     "lint:fix": "eslint --ext .js,.jsx --fix .",
     "prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
