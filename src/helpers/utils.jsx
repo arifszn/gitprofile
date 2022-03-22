@@ -1,6 +1,6 @@
-import config from '../gitprofile.config';
 import colors from '../data/colors.json';
 import { hotjar } from 'react-hotjar';
+import config from '../../gitprofile.config';
 
 export const getInitialTheme = () => {
   if (config.themeConfig.disableSwitch) {

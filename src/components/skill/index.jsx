@@ -1,6 +1,6 @@
-import config from '../../gitprofile.config';
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
+import config from '../../../gitprofile.config';
 
 const Skill = ({ loading }) => {
   const renderSkeleton = () => {

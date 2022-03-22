@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 import PropTypes from 'prop-types';
-import config from '../../gitprofile.config';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
+import config from '../../../gitprofile.config';
 
 const Project = ({ repo, loading }) => {
   const renderSkeleton = () => {

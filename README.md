@@ -72,7 +72,7 @@ As this is a vite project, you can also host your website to Netlify, Vercel, He
 
 ## 🎨 Customization
 
-All the magic happens in the file `src/gitprofile.config.js`. Open it and modify it according to your preference.
+All the magic happens in the file `gitprofile.config.js`. Open it and modify it according to your preference.
 
 These are the default values:
 
