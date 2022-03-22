@@ -22,7 +22,7 @@
 
 It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
 
-✓ [21 Themes](#themes)\
+✓ [30 Themes](#themes)\
 ✓ [Google Analytics](#google-analytics)\
 ✓ [Hotjar](#hotjar)\
 ✓ [Meta Tags](#meta-tags)\
@@ -180,7 +180,28 @@ const config = {
       'black',
       'luxury',
       'dracula',
+      'cmyk',
+      'autumn',
+      'business',
+      'acid',
+      'lemonade',
+      'night',
+      'coffee',
+      'winter',
+      'procyon',
     ],
+
+    // Custom theme
+    customTheme: {
+      procyon: {
+        primary: '#fc055b',
+        secondary: '#219aaf',
+        accent: '#e8d03a',
+        neutral: '#2A2730',
+        'base-100': '#E3E3ED',
+        '--rounded-box': '3rem',
+      },
+    },
   },
 };
 ```
@@ -189,7 +210,7 @@ const config = {
 
 ### Themes
 
-There are 21 themes available that can be selected from the dropdown.
+There are 30 themes available that can be selected from the dropdown.
 
 The default theme can be specified.
 
@@ -199,6 +220,28 @@ module.exports = {
   // ...
   themeConfig: {
     default: 'light',
+    // ...
+  },
+};
+```
+
+You can create your own custom theme by modifying these values:
+
+```js
+// gitprofile.config.js
+module.exports = {
+  // ...
+  themeConfig: {
+    customTheme: {
+      procyon: {
+        primary: '#fc055b',
+        secondary: '#219aaf',
+        accent: '#e8d03a',
+        neutral: '#2A2730',
+        'base-100': '#E3E3ED',
+        '--rounded-box': '3rem',
+      },
+    },
     // ...
   },
 };
