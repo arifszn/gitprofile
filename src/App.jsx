@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { Fragment, useCallback, useEffect, useState } from 'react';
 import moment from 'moment';
-import config from './gitprofile.config';
 import HeadTagEditor from './components/head-tag-editor';
 import ErrorPage from './components/error-page';
 import ThemeChanger from './components/theme-changer';
@@ -13,6 +12,7 @@ import Education from './components/education';
 import Project from './components/project';
 import Blog from './components/blog';
 import { getInitialTheme, setupHotjar } from './helpers/utils';
+import config from '../gitprofile.config';
 
 function App() {
   const [theme, setTheme] = useState(getInitialTheme());
@@ -127,7 +127,7 @@ function App() {
               error === 404 ? (
                 <p>
                   Please provide correct github username in{' '}
-                  <code>src/gitprofile.config.js</code>
+                  <code>gitprofile.config.js</code>
                 </p>
               ) : error === 429 ? (
                 <p>

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import postcss from './postcss.config.js';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,4 +8,7 @@ export default defineConfig({
   // If you are deploying to https://<USERNAME>.github.io/<REPO>/, for example your repository is at https://github.com/<USERNAME>/<REPO>, then set base to '/<REPO>/'.
   base: '/gitprofile/',
   plugins: [react()],
+  css: {
+    postcss,
+  },
 });

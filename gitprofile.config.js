@@ -124,7 +124,28 @@ const config = {
       'black',
       'luxury',
       'dracula',
+      'cmyk',
+      'autumn',
+      'business',
+      'acid',
+      'lemonade',
+      'night',
+      'coffee',
+      'winter',
+      'procyon',
     ],
+
+    // Custom theme
+    customTheme: {
+      procyon: {
+        primary: '#fc055b',
+        secondary: '#219aaf',
+        accent: '#e8d03a',
+        neutral: '#2A2730',
+        'base-100': '#E3E3ED',
+        '--rounded-box': '3rem',
+      },
+    },
   },
 };
 

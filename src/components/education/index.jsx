@@ -1,7 +1,7 @@
 import { skeleton } from '../../helpers/utils';
-import config from '../../gitprofile.config';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import config from '../../../gitprofile.config';
 
 const ListItem = ({ time, degree, institution }) => (
   <li className="mb-5 ml-4">

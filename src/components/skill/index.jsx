@@ -1,6 +1,6 @@
-import config from '../../gitprofile.config';
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
+import config from '../../../gitprofile.config';
 
 const Skill = ({ loading }) => {
   const renderSkeleton = () => {
@@ -37,7 +37,7 @@ const Skill = ({ loading }) => {
                   : config.skills.map((skill, index) => (
                       <div
                         key={index}
-                        className="m-1 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 badge-primary bg-opacity-90 rounded-full"
+                        className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full"
                       >
                         {skill}
                       </div>

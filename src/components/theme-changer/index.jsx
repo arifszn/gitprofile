@@ -1,7 +1,7 @@
 import { AiOutlineControl } from 'react-icons/ai';
 import { skeleton } from '../../helpers/utils';
-import config from '../../gitprofile.config';
 import PropTypes from 'prop-types';
+import config from '../../../gitprofile.config';
 
 const ThemeChanger = ({ theme, setTheme, loading }) => {
   const changeTheme = (e, selectedTheme) => {
@@ -56,7 +56,7 @@ const ThemeChanger = ({ theme, setTheme, loading }) => {
               </div>
               <div
                 tabIndex={0}
-                className="mt-16 overflow-y-auto shadow-2xl top-px dropdown-content h-96 w-52 rounded-b-box bg-base-200 text-base-content"
+                className="mt-16 overflow-y-auto shadow-2xl top-px dropdown-content max-h-96 w-52 rounded-b-box bg-base-200 text-base-content"
               >
                 <ul className="p-4 menu compact">
                   {[
