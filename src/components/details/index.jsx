@@ -11,6 +11,7 @@ import {
   FaDev,
   FaFacebook,
   FaGlobe,
+  FaDiscord,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
@@ -177,6 +178,15 @@ const Details = ({ profile, loading }) => {
                     title="Email:"
                     value={config.social.email}
                     link={`mailto:${config.social.email}`}
+                  />
+                )}
+              {typeof config.social.discord !== 'undefined' &&
+                config.social.discord && (
+                  <ListItem
+                    icon={<FaDiscord className="mr-2" />}
+                    title="Discord:"
+                    value={config.social.discord}
+                    link={config.social.discordUri}
                   />
                 )}
             </Fragment>

@@ -21,6 +21,8 @@ const config = {
     website: 'https://arifszn.github.io',
     phone: '',
     email: 'arifulalamszn@gmail.com',
+    discord: '',
+    discordUri: '', //https://discord.com/users/YOUR_ID
   },
   skills: [
     'PHP',
