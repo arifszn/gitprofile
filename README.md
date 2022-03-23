@@ -200,6 +200,7 @@ const config = {
         neutral: '#2A2730',
         'base-100': '#E3E3ED',
         '--rounded-box': '3rem',
+        '--rounded-btn': '3rem',
       },
     },
   },
@@ -240,6 +241,7 @@ module.exports = {
         neutral: '#2A2730',
         'base-100': '#E3E3ED',
         '--rounded-box': '3rem',
+        '--rounded-btn': '3rem',
       },
     },
     // ...
