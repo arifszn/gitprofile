@@ -9,19 +9,22 @@
     "type": "git",
     "url": "https://github.com/arifszn/gitprofile.git"
   },
-  "files": ["dist"],
-  "main": "./dist/my-lib.umd.js",
-  "module": "./dist/my-lib.es.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/gitprofile.umd.js",
+  "module": "./dist/gitprofile.es.js",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.es.js",
-      "require": "./dist/my-lib.umd.js"
+      "import": "./dist/gitprofile.es.js",
+      "require": "./dist/gitprofile.umd.js"
     }
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "build:package": "vite build --config package.config.js",
     "lint": "eslint --ext .js,.jsx .",
     "lint:fix": "eslint --ext .js,.jsx --fix .",
     "prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
