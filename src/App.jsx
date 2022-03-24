@@ -13,6 +13,7 @@ import Project from './components/project';
 import Blog from './components/blog';
 import { getInitialTheme, setupHotjar } from './helpers/utils';
 import config from '../gitprofile.config';
+import './assets/index.css';
 
 function App() {
   const [theme, setTheme] = useState(getInitialTheme());
