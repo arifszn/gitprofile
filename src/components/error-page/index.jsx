@@ -10,9 +10,9 @@ const ErrorPage = (props) => {
               {props.status}
             </h1>
             <p className="text-lg pb-2 text-base-content">{props.title}</p>
-            <p className="text-base-content text-opacity-60">
+            <div className="text-base-content text-opacity-60">
               {props.subTitle}
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@ const ErrorPage = (props) => {
 ErrorPage.propTypes = {
   status: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired,
+  subTitle: PropTypes.node.isRequired,
 };
 
 export default ErrorPage;

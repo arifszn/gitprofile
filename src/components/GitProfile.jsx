@@ -17,12 +17,21 @@ import PropTypes from 'prop-types';
 import '../assets/index.css';
 
 const GitProfile = ({ config }) => {
-  const [theme, setTheme] = useState(getInitialTheme(config.themeConfig));
+  const [theme, setTheme] = useState(
+    config ? getInitialTheme(config.themeConfig) : null
+  );
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
   const [repo, setRepo] = useState(null);
-  const [error, setError] = useState(null);
-  const [rateLimit, setRateLimit] = useState(null);
+  const [error, setError] = useState(
+    typeof config === 'undefined'
+      ? {
+          status: 500,
+          title: 'No Config is provided',
+          subTitle: 'Pass the required config as prop.',
+        }
+      : null
+  );
 
   useEffect(() => {
     if (theme) {
@@ -31,7 +40,7 @@ const GitProfile = ({ config }) => {
   }, [theme]);
 
   useEffect(() => {
-    setupHotjar(config.hotjar);
+    config && setupHotjar(config.hotjar);
   }, []);
 
   const loadData = useCallback(() => {
@@ -86,71 +95,76 @@ const GitProfile = ({ config }) => {
   }, [setLoading]);
 
   useEffect(() => {
-    loadData();
+    config && loadData();
   }, [loadData]);
 
   const handleError = (error) => {
     console.error('Error:', error);
     try {
-      setRateLimit({
-        remaining: error.response.headers['x-ratelimit-remaining'],
-        reset: moment(
-          new Date(error.response.headers['x-ratelimit-reset'] * 1000)
-        ).fromNow(),
-      });
+      let reset = moment(
+        new Date(error.response.headers['x-ratelimit-reset'] * 1000)
+      ).fromNow();
 
       if (error.response.status === 403) {
-        setError(429);
+        setError({
+          status: 429,
+          title: 'Too Many Requests.',
+          subTitle: (
+            <p>
+              Oh no, you hit the{' '}
+              <a
+                href="https://developer.github.com/v3/rate_limit/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                rate limit.
+              </a>
+              ! Try again later{` ${reset}`}.
+            </p>
+          ),
+        });
       } else if (error.response.status === 404) {
-        setError(404);
+        setError({
+          status: 404,
+          title: 'The Github Username is Incorrect.',
+          subTitle: (
+            <p>
+              Please provide correct github username in <code>config</code>.
+            </p>
+          ),
+        });
       } else {
-        setError(500);
+        setError({
+          status: 500,
+          title: 'Ops!!',
+          subTitle: 'Something went wrong.',
+        });
       }
     } catch (error2) {
-      setError(500);
+      setError({
+        status: 500,
+        title: 'Ops!!',
+        subTitle: 'Something went wrong.',
+      });
     }
   };
 
   return (
     <HelmetProvider>
-      <HeadTagEditor
-        profile={profile}
-        theme={theme}
-        googleAnalytics={config.googleAnalytics}
-        social={config.social}
-      />
+      {!error && (
+        <HeadTagEditor
+          profile={profile}
+          theme={theme}
+          googleAnalytics={config.googleAnalytics}
+          social={config.social}
+        />
+      )}
       <div className="fade-in h-screen">
         {error ? (
           <ErrorPage
-            status={`${error}`}
-            title={
-              error === 404
-                ? 'The Github Username is Incorrect'
-                : error === 429
-                ? 'Too Many Requests.'
-                : `Ops!!`
-            }
-            subTitle={
-              error === 404 ? (
-                <p>
-                  Please provide correct github username in <code>config</code>
-                </p>
-              ) : error === 429 ? (
-                <p>
-                  Oh no, you hit the{' '}
-                  <a
-                    href="https://developer.github.com/v3/rate_limit/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    rate limit
-                  </a>
-                  ! Try again later{rateLimit && ` ${rateLimit.reset}`}.
-                </p>
-              ) : (
-                `Something went wrong`
-              )
-            }
+            status={`${error.status}`}
+            title={error.title}
+            subTitle={error.subTitle}
           />
         ) : (
           <Fragment>
@@ -158,7 +172,7 @@ const GitProfile = ({ config }) => {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                 <div className="col-span-1">
                   <div className="grid grid-cols-1 gap-6">
-                    {!config.themeConfig.disableSwitch && (
+                    {!error && !config.themeConfig.disableSwitch && (
                       <ThemeChanger
                         theme={theme}
                         setTheme={setTheme}
