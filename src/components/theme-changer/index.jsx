@@ -7,7 +7,9 @@ const ThemeChanger = ({ theme, setTheme, loading }) => {
   const changeTheme = (e, selectedTheme) => {
     e.preventDefault();
     document.querySelector('html').setAttribute('data-theme', selectedTheme);
-    localStorage.setItem('gitprofile-theme', selectedTheme);
+
+    typeof window !== 'undefined' &&
+      localStorage.setItem('gitprofile-theme', selectedTheme);
 
     setTheme(selectedTheme);
   };

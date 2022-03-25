@@ -8,6 +8,7 @@ export const getInitialTheme = () => {
   }
 
   if (
+    typeof window !== 'undefined' &&
     !(localStorage.getItem('gitprofile-theme') === null) &&
     config.themeConfig.themes.includes(localStorage.getItem('gitprofile-theme'))
   ) {
