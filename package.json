@@ -18,7 +18,8 @@
     ".": {
       "import": "./dist/gitprofile.es.js",
       "require": "./dist/gitprofile.umd.js"
-    }
+    },
+    "./dist/style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
