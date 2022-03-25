@@ -4,15 +4,14 @@ import { Fragment, useEffect, useState } from 'react';
 import { ga, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
 import PropTypes from 'prop-types';
-import config from '../../../gitprofile.config';
 
-const displaySection = () => {
+const displaySection = (blog) => {
   if (
-    typeof config.blog !== 'undefined' &&
-    typeof config.blog.source !== 'undefined' &&
-    typeof config.blog.username !== 'undefined' &&
-    config.blog.source &&
-    config.blog.username
+    typeof blog !== 'undefined' &&
+    typeof blog.source !== 'undefined' &&
+    typeof blog.username !== 'undefined' &&
+    blog.source &&
+    blog.username
   ) {
     return true;
   } else {
@@ -20,20 +19,20 @@ const displaySection = () => {
   }
 };
 
-const Blog = ({ loading }) => {
+const Blog = ({ loading, blog, googleAnalytics }) => {
   const [articles, setArticles] = useState(null);
 
   useEffect(() => {
-    if (displaySection()) {
-      if (config.blog.source === 'medium') {
+    if (displaySection(blog)) {
+      if (blog.source === 'medium') {
         getMediumArticle({
-          user: config.blog.username,
+          user: blog.username,
         }).then((res) => {
           setArticles(res);
         });
-      } else if (config.blog.source === 'dev.to') {
+      } else if (blog.source === 'dev.to') {
         getDevtoArticle({
-          user: config.blog.username,
+          user: blog.username,
         }).then((res) => {
           setArticles(res);
         });
@@ -43,7 +42,7 @@ const Blog = ({ loading }) => {
 
   const renderSkeleton = () => {
     let array = [];
-    for (let index = 0; index < config.blog.limit; index++) {
+    for (let index = 0; index < blog.limit; index++) {
       array.push(
         <div className="card shadow-lg compact bg-base-100" key={index}>
           <div className="p-8 h-full w-full">
@@ -101,7 +100,7 @@ const Blog = ({ loading }) => {
   const renderArticles = () => {
     return (
       articles &&
-      articles.slice(0, config.blog.limit).map((article, index) => (
+      articles.slice(0, blog.limit).map((article, index) => (
         <a
           className="card shadow-lg compact bg-base-100 cursor-pointer"
           key={index}
@@ -110,7 +109,7 @@ const Blog = ({ loading }) => {
             e.preventDefault();
 
             try {
-              if (config.googleAnalytics?.id) {
+              if (googleAnalytics?.id) {
                 ga.event({
                   action: 'Click Blog Post',
                   params: {
@@ -174,7 +173,7 @@ const Blog = ({ loading }) => {
 
   return (
     <Fragment>
-      {displaySection() && (
+      {displaySection(blog) && (
         <div className="col-span-1 lg:col-span-2">
           <div className="grid grid-cols-2 gap-6">
             <div className="col-span-2">
@@ -207,7 +206,9 @@ const Blog = ({ loading }) => {
 };
 
 Blog.propTypes = {
-  loading: PropTypes.bool,
+  loading: PropTypes.bool.isRequired,
+  blog: PropTypes.object.isRequired,
+  googleAnalytics: PropTypes.object.isRequired,
 };
 
 export default Blog;

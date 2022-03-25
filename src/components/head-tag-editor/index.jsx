@@ -2,25 +2,24 @@ import { Fragment } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import { isThemeDarkish } from '../../helpers/utils';
-import config from '../../../gitprofile.config';
 
-const HeadTagEditor = ({ profile, theme }) => {
+const HeadTagEditor = ({ profile, theme, googleAnalytics, social }) => {
   return (
     <Fragment>
       {profile && (
         <Helmet>
-          {config.googleAnalytics?.id && (
+          {googleAnalytics?.id && (
             <script
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalytics.id}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics.id}`}
             ></script>
           )}
-          {config.googleAnalytics?.id && (
+          {googleAnalytics?.id && (
             <script>
               {`window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${config.googleAnalytics.id}');`}
+                gtag('config', '${googleAnalytics.id}');`}
             </script>
           )}
           <title>Portfolio of {profile.name}</title>
@@ -38,9 +37,7 @@ const HeadTagEditor = ({ profile, theme }) => {
           <meta
             property="og:url"
             content={
-              typeof config.social.website !== 'undefined'
-                ? config.social.website
-                : ''
+              typeof social.website !== 'undefined' ? social.website : ''
             }
           />
           <meta property="og:type" content="website" />
@@ -60,7 +57,9 @@ const HeadTagEditor = ({ profile, theme }) => {
 
 HeadTagEditor.propTypes = {
   profile: PropTypes.object,
-  theme: PropTypes.string,
+  theme: PropTypes.string.isRequired,
+  googleAnalytics: PropTypes.object.isRequired,
+  social: PropTypes.object.isRequired,
 };
 
 export default HeadTagEditor;

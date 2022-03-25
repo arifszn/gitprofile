@@ -1,8 +1,7 @@
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
-import config from '../../../gitprofile.config';
 
-const Skill = ({ loading }) => {
+const Skill = ({ loading, skills }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 12; index++) {
@@ -18,7 +17,7 @@ const Skill = ({ loading }) => {
 
   return (
     <>
-      {typeof config.skills !== 'undefined' && config.skills.length !== 0 && (
+      {typeof skills !== 'undefined' && skills.length !== 0 && (
         <div className="card shadow-lg compact bg-base-100">
           <div className="card-body">
             <div className="mx-3">
@@ -34,7 +33,7 @@ const Skill = ({ loading }) => {
               <div className="-m-1 flex flex-wrap justify-center">
                 {loading
                   ? renderSkeleton()
-                  : config.skills.map((skill, index) => (
+                  : skills.map((skill, index) => (
                       <div
                         key={index}
                         className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full"
@@ -52,7 +51,8 @@ const Skill = ({ loading }) => {
 };
 
 Skill.propTypes = {
-  loading: PropTypes.bool,
+  loading: PropTypes.bool.isRequired,
+  skills: PropTypes.array.isRequired,
 };
 
 export default Skill;

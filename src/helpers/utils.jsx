@@ -1,32 +1,28 @@
 import colors from '../data/colors.json';
 import { hotjar } from 'react-hotjar';
-import config from '../../gitprofile.config';
 
-export const getInitialTheme = () => {
-  if (config.themeConfig.disableSwitch) {
-    return config.themeConfig.default;
+export const getInitialTheme = (themeConfig) => {
+  if (themeConfig.disableSwitch) {
+    return themeConfig.default;
   }
 
   if (
     typeof window !== 'undefined' &&
     !(localStorage.getItem('gitprofile-theme') === null) &&
-    config.themeConfig.themes.includes(localStorage.getItem('gitprofile-theme'))
+    themeConfig.themes.includes(localStorage.getItem('gitprofile-theme'))
   ) {
     let theme = localStorage.getItem('gitprofile-theme');
 
     return theme;
   }
 
-  if (
-    config.themeConfig.respectPrefersColorScheme &&
-    !config.themeConfig.disableSwitch
-  ) {
+  if (themeConfig.respectPrefersColorScheme && !themeConfig.disableSwitch) {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
-      : config.themeConfig.default;
+      : themeConfig.default;
   }
 
-  return config.themeConfig.default;
+  return themeConfig.default;
 };
 
 export const skeleton = ({
@@ -92,12 +88,12 @@ export const isThemeDarkish = (theme) => {
   }
 };
 
-export const setupHotjar = () => {
-  if (config.hotjar?.id) {
-    let snippetVersion = config.hotjar?.snippetVersion
-      ? config.hotjar?.snippetVersion
+export const setupHotjar = (hotjarConfig) => {
+  if (hotjarConfig?.id) {
+    let snippetVersion = hotjarConfig?.snippetVersion
+      ? hotjarConfig?.snippetVersion
       : 6;
 
-    hotjar.initialize(config.hotjar.id, snippetVersion);
+    hotjar.initialize(hotjarConfig.id, snippetVersion);
   }
 };

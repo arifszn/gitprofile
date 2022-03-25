@@ -1,7 +1,6 @@
 import { skeleton } from '../../helpers/utils';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import config from '../../../gitprofile.config';
 
 const ListItem = ({ time, degree, institution }) => (
   <li className="mb-5 ml-4">
@@ -15,7 +14,7 @@ const ListItem = ({ time, degree, institution }) => (
   </li>
 );
 
-const Education = ({ loading }) => {
+const Education = ({ loading, education }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 2; index++) {
@@ -41,46 +40,46 @@ const Education = ({ loading }) => {
 
   return (
     <>
-      {typeof config.education !== 'undefined' &&
-        config.education.length !== 0 && (
-          <div className="card shadow-lg compact bg-base-100">
-            <div className="card-body">
-              <div className="mx-3">
-                <h5 className="card-title">
-                  {loading ? (
-                    skeleton({ width: 'w-32', height: 'h-8' })
-                  ) : (
-                    <span className="opacity-70">Education</span>
-                  )}
-                </h5>
-              </div>
-              <div className="text-base-content text-opacity-60">
-                <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
-                  {loading ? (
-                    renderSkeleton()
-                  ) : (
-                    <Fragment>
-                      {config.education.map((item, index) => (
-                        <ListItem
-                          key={index}
-                          time={`${item.from} - ${item.to}`}
-                          degree={item.degree}
-                          institution={item.institution}
-                        />
-                      ))}
-                    </Fragment>
-                  )}
-                </ol>
-              </div>
+      {typeof education !== 'undefined' && education.length !== 0 && (
+        <div className="card shadow-lg compact bg-base-100">
+          <div className="card-body">
+            <div className="mx-3">
+              <h5 className="card-title">
+                {loading ? (
+                  skeleton({ width: 'w-32', height: 'h-8' })
+                ) : (
+                  <span className="opacity-70">Education</span>
+                )}
+              </h5>
+            </div>
+            <div className="text-base-content text-opacity-60">
+              <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
+                {loading ? (
+                  renderSkeleton()
+                ) : (
+                  <Fragment>
+                    {education.map((item, index) => (
+                      <ListItem
+                        key={index}
+                        time={`${item.from} - ${item.to}`}
+                        degree={item.degree}
+                        institution={item.institution}
+                      />
+                    ))}
+                  </Fragment>
+                )}
+              </ol>
             </div>
           </div>
-        )}
+        </div>
+      )}
     </>
   );
 };
 
 Education.propTypes = {
-  loading: PropTypes.bool,
+  loading: PropTypes.bool.isRequired,
+  education: PropTypes.array.isRequired,
 };
 
 ListItem.propTypes = {

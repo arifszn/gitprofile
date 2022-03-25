@@ -1,9 +1,8 @@
 import { AiOutlineControl } from 'react-icons/ai';
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
-import config from '../../../gitprofile.config';
 
-const ThemeChanger = ({ theme, setTheme, loading }) => {
+const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
   const changeTheme = (e, selectedTheme) => {
     e.preventDefault();
     document.querySelector('html').setAttribute('data-theme', selectedTheme);
@@ -28,7 +27,7 @@ const ThemeChanger = ({ theme, setTheme, loading }) => {
           <span className="text-base-content text-opacity-40 capitalize text-sm">
             {loading
               ? skeleton({ width: 'w-16', height: 'h-5' })
-              : theme === config.themeConfig.default
+              : theme === themeConfig.default
               ? 'Default'
               : theme}
           </span>
@@ -62,9 +61,9 @@ const ThemeChanger = ({ theme, setTheme, loading }) => {
               >
                 <ul className="p-4 menu compact">
                   {[
-                    config.themeConfig.default,
-                    ...config.themeConfig.themes.filter(
-                      (item) => item !== config.themeConfig.default
+                    themeConfig.default,
+                    ...themeConfig.themes.filter(
+                      (item) => item !== themeConfig.default
                     ),
                   ].map((item, index) => (
                     <li key={index}>
@@ -74,9 +73,7 @@ const ThemeChanger = ({ theme, setTheme, loading }) => {
                         className={`${theme === item ? 'active' : ''}`}
                       >
                         <span className="opacity-60 capitalize">
-                          {item === config.themeConfig.default
-                            ? 'Default'
-                            : item}
+                          {item === themeConfig.default ? 'Default' : item}
                         </span>
                       </a>
                     </li>
@@ -92,9 +89,10 @@ const ThemeChanger = ({ theme, setTheme, loading }) => {
 };
 
 ThemeChanger.propTypes = {
-  theme: PropTypes.string,
-  setTheme: PropTypes.func,
-  loading: PropTypes.bool,
+  theme: PropTypes.string.isRequired,
+  setTheme: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
+  themeConfig: PropTypes.object.isRequired,
 };
 
 export default ThemeChanger;

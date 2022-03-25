@@ -2,12 +2,11 @@ import { Fragment } from 'react';
 import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
-import config from '../../../gitprofile.config';
 
-const Project = ({ repo, loading }) => {
+const Project = ({ repo, loading, github, googleAnalytics }) => {
   const renderSkeleton = () => {
     let array = [];
-    for (let index = 0; index < config.github.limit; index++) {
+    for (let index = 0; index < github.limit; index++) {
       array.push(
         <div className="card shadow-lg compact bg-base-100" key={index}>
           <div className="flex justify-between flex-col p-8 h-full w-full">
@@ -61,7 +60,7 @@ const Project = ({ repo, loading }) => {
           e.preventDefault();
 
           try {
-            if (config.googleAnalytics?.id) {
+            if (googleAnalytics?.id) {
               ga.event({
                 action: 'Click project',
                 params: {
@@ -145,7 +144,7 @@ const Project = ({ repo, loading }) => {
                     skeleton({ width: 'w-10', height: 'h-5' })
                   ) : (
                     <a
-                      href={`https://github.com/${config.github.username}?tab=repositories`}
+                      href={`https://github.com/${github.username}?tab=repositories`}
                       target="_blank"
                       rel="noreferrer"
                       className="opacity-50"
@@ -170,7 +169,9 @@ const Project = ({ repo, loading }) => {
 
 Project.propTypes = {
   repo: PropTypes.array,
-  loading: PropTypes.bool,
+  loading: PropTypes.bool.isRequired,
+  github: PropTypes.object.isRequired,
+  googleAnalytics: PropTypes.object.isRequired,
 };
 
 export default Project;

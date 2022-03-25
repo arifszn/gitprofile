@@ -54,7 +54,7 @@ const AvatarCard = ({ profile, loading }) => {
 
 AvatarCard.propTypes = {
   profile: PropTypes.object,
-  loading: PropTypes.bool,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default AvatarCard;

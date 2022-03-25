@@ -12,12 +12,12 @@ import Education from './education';
 import Project from './project';
 import Blog from './blog';
 import { getInitialTheme, setupHotjar } from '../helpers/utils';
-import config from '../../gitprofile.config';
-import '../assets/index.css';
 import { HelmetProvider } from 'react-helmet-async';
+import PropTypes from 'prop-types';
+import '../assets/index.css';
 
-const GitProfile = () => {
-  const [theme, setTheme] = useState(getInitialTheme());
+const GitProfile = ({ config }) => {
+  const [theme, setTheme] = useState(getInitialTheme(config.themeConfig));
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
   const [repo, setRepo] = useState(null);
@@ -31,7 +31,7 @@ const GitProfile = () => {
   }, [theme]);
 
   useEffect(() => {
-    setupHotjar();
+    setupHotjar(config.hotjar);
   }, []);
 
   const loadData = useCallback(() => {
@@ -113,7 +113,12 @@ const GitProfile = () => {
 
   return (
     <HelmetProvider>
-      <HeadTagEditor profile={profile} theme={theme} />
+      <HeadTagEditor
+        profile={profile}
+        theme={theme}
+        googleAnalytics={config.googleAnalytics}
+        social={config.social}
+      />
       <div className="fade-in h-screen">
         {error ? (
           <ErrorPage
@@ -128,8 +133,7 @@ const GitProfile = () => {
             subTitle={
               error === 404 ? (
                 <p>
-                  Please provide correct github username in{' '}
-                  <code>gitprofile.config.js</code>
+                  Please provide correct github username in <code>config</code>
                 </p>
               ) : error === 429 ? (
                 <p>
@@ -159,19 +163,37 @@ const GitProfile = () => {
                         theme={theme}
                         setTheme={setTheme}
                         loading={loading}
+                        themeConfig={config.themeConfig}
                       />
                     )}
                     <AvatarCard profile={profile} loading={loading} />
-                    <Details profile={profile} loading={loading} />
-                    <Skill loading={loading} />
-                    <Experience loading={loading} />
-                    <Education loading={loading} />
+                    <Details
+                      profile={profile}
+                      loading={loading}
+                      github={config.github}
+                      social={config.social}
+                    />
+                    <Skill loading={loading} skills={config.skills} />
+                    <Experience
+                      loading={loading}
+                      experiences={config.experiences}
+                    />
+                    <Education loading={loading} education={config.education} />
                   </div>
                 </div>
                 <div className="lg:col-span-2 col-span-1">
                   <div className="grid grid-cols-1 gap-6">
-                    <Project repo={repo} loading={loading} />
-                    <Blog loading={loading} />
+                    <Project
+                      repo={repo}
+                      loading={loading}
+                      github={config.github}
+                      googleAnalytics={config.googleAnalytics}
+                    />
+                    <Blog
+                      loading={loading}
+                      googleAnalytics={config.googleAnalytics}
+                      blog={config.blog}
+                    />
                   </div>
                 </div>
               </div>
@@ -202,6 +224,68 @@ const GitProfile = () => {
       </div>
     </HelmetProvider>
   );
+};
+
+GitProfile.propTypes = {
+  config: PropTypes.shape({
+    github: PropTypes.shape({
+      username: PropTypes.string.isRequired,
+      sortBy: PropTypes.oneOf(['stars', 'updated']).isRequired,
+      limit: PropTypes.number.isRequired,
+      exclude: PropTypes.shape({
+        forks: PropTypes.bool.isRequired,
+        projects: PropTypes.array.isRequired,
+      }).isRequired,
+    }).isRequired,
+    social: PropTypes.shape({
+      linkedin: PropTypes.string,
+      twitter: PropTypes.string,
+      facebook: PropTypes.string,
+      dribbble: PropTypes.string,
+      behance: PropTypes.string,
+      medium: PropTypes.string,
+      devto: PropTypes.string,
+      website: PropTypes.string,
+      phone: PropTypes.string,
+      email: PropTypes.string,
+    }).isRequired,
+    skills: PropTypes.array.isRequired,
+    experiences: PropTypes.arrayOf(
+      PropTypes.shape({
+        company: PropTypes.string,
+        position: PropTypes.string,
+        from: PropTypes.string,
+        to: PropTypes.string,
+      })
+    ).isRequired,
+    education: PropTypes.arrayOf(
+      PropTypes.shape({
+        institution: PropTypes.string,
+        degree: PropTypes.string,
+        from: PropTypes.string,
+        to: PropTypes.string,
+      })
+    ).isRequired,
+    blog: PropTypes.shape({
+      source: PropTypes.string,
+      username: PropTypes.string,
+      limit: PropTypes.number,
+    }).isRequired,
+    googleAnalytics: PropTypes.shape({
+      id: PropTypes.string,
+    }).isRequired,
+    hotjar: PropTypes.shape({
+      id: PropTypes.string,
+      snippetVersion: PropTypes.number,
+    }).isRequired,
+    themeConfig: PropTypes.shape({
+      default: PropTypes.string.isRequired,
+      disableSwitch: PropTypes.bool.isRequired,
+      respectPrefersColorScheme: PropTypes.bool.isRequired,
+      themes: PropTypes.array.isRequired,
+      customTheme: PropTypes.object.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default GitProfile;
