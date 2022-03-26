@@ -21,6 +21,7 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "typings": "./types/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
