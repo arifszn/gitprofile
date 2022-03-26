@@ -135,9 +135,24 @@ export interface ThemeConfig {
   defaultTheme: string;
 
   /**
-   * Snippet Version
+   * Hides the switch in the navbar
    */
-  snippetVersion: number;
+  disableSwitch: boolean;
+
+  /**
+   * Should use the prefers-color-scheme media-query
+   */
+  respectPrefersColorScheme: boolean;
+
+  /**
+   * Available themes
+   */
+  themes: Array<string>;
+
+  /**
+   * Custom theme
+   */
+  customTheme: object;
 }
 
 export interface Config {

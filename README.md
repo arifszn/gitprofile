@@ -153,7 +153,7 @@ const config = {
     // Useful if you want to support a single color mode
     disableSwitch: false,
 
-    // Should we use the prefers-color-scheme media-query,
+    // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: true,
 
