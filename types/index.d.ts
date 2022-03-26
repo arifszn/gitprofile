@@ -4,7 +4,7 @@
 
 import { Component } from 'react';
 
-interface github {
+interface Github {
   /**
    * GitHub org/user name
    */
@@ -13,17 +13,17 @@ interface github {
   /**
    * stars | updated
    */
-  sortBy: string;
+  sortBy?: string;
 
   /**
    * How many projects to display
    */
-  limit: number;
+  limit?: number;
 
   /**
    * Exclude projects option
    */
-  exclude: {
+  exclude?: {
     /**
      * Forked projects will not be displayed if set to true
      */
@@ -38,18 +38,75 @@ interface github {
   };
 }
 
-interface config {
+interface Social {
+  /**
+   * LinkedIn
+   */
+  linkedin?: string;
+
+  /**
+   * Twitter
+   */
+  twitter?: string;
+
+  /**
+   * Facebook
+   */
+  facebook?: string;
+
+  /**
+   * Dribbble
+   */
+  dribbble?: string;
+
+  /**
+   * Behance
+   */
+  behance?: string;
+
+  /**
+   * Medium
+   */
+  medium?: string;
+
+  /**
+   * dev.to
+   */
+  devto?: string;
+
+  /**
+   * Website
+   */
+  website?: string;
+
+  /**
+   * Phone
+   */
+  phone?: string;
+
+  /**
+   * Email
+   */
+  email?: string;
+}
+
+interface Config {
   /**
    * GitHub Config
    */
-  github: github;
+  github: Github;
+
+  /**
+   * Social links
+   */
+  social?: Social;
 }
 
 interface GitProfileProps {
   /**
    * Config values
    */
-  config: config;
+  config: Config;
 }
 
 declare class GitProfile extends Component<GitProfileProps> {}
