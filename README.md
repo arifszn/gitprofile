@@ -147,14 +147,14 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    default: 'light',
+    defaultTheme: 'light',
 
     // Hides the theme change switch
     // Useful if you want to support a single color mode
     disableSwitch: false,
 
     // Should we use the prefers-color-scheme media-query,
-    // using user system preferences, instead of the hardcoded default
+    // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: true,
 
     // Available themes. To remove any theme, exclude from here.
@@ -220,7 +220,7 @@ The default theme can be specified.
 module.exports = {
   // ...
   themeConfig: {
-    default: 'light',
+    defaultTheme: 'light',
     // ...
   },
 };

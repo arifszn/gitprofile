@@ -4,7 +4,7 @@
 
 import { Component } from 'react';
 
-interface Github {
+export interface Github {
   /**
    * GitHub org/user name
    */
@@ -38,7 +38,7 @@ interface Github {
   };
 }
 
-interface Social {
+export interface Social {
   /**
    * LinkedIn
    */
@@ -90,7 +90,57 @@ interface Social {
   email?: string;
 }
 
-interface Config {
+export interface Blog {
+  /**
+   * medium | dev.to
+   */
+  source: string;
+
+  /**
+   * Username
+   */
+  username: string;
+
+  /**
+   * How many posts to display
+   *
+   * Max is 10
+   */
+  limit: number;
+}
+
+export interface GoogleAnalytics {
+  /**
+   * GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+   */
+  id: string;
+}
+
+export interface Hotjar {
+  /**
+   * Hotjar id
+   */
+  id: string;
+
+  /**
+   * Snippet Version
+   */
+  snippetVersion: number;
+}
+
+export interface ThemeConfig {
+  /**
+   * Default theme
+   */
+  defaultTheme: string;
+
+  /**
+   * Snippet Version
+   */
+  snippetVersion: number;
+}
+
+export interface Config {
   /**
    * GitHub Config
    */
@@ -100,9 +150,44 @@ interface Config {
    * Social links
    */
   social?: Social;
+
+  /**
+   * Skill list
+   */
+  skills?: Array<string>;
+
+  /**
+   * Experience list
+   */
+  experiences?: Array<string>;
+
+  /**
+   * Education list
+   */
+  education?: Array<string>;
+
+  /**
+   * Blog config
+   */
+  blog?: Blog;
+
+  /**
+   * Google Analytics config
+   */
+  googleAnalytics?: GoogleAnalytics;
+
+  /**
+   * Hotjar config
+   */
+  hotjar?: Hotjar;
+
+  /**
+   * Theme config
+   */
+  themeConfig?: ThemeConfig;
 }
 
-interface GitProfileProps {
+export interface GitProfileProps {
   /**
    * Config values
    */

@@ -27,7 +27,7 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
           <span className="text-base-content text-opacity-40 capitalize text-sm">
             {loading
               ? skeleton({ width: 'w-16', height: 'h-5' })
-              : theme === themeConfig.default
+              : theme === themeConfig.defaultTheme
               ? 'Default'
               : theme}
           </span>
@@ -61,9 +61,9 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
               >
                 <ul className="p-4 menu compact">
                   {[
-                    themeConfig.default,
+                    themeConfig.defaultTheme,
                     ...themeConfig.themes.filter(
-                      (item) => item !== themeConfig.default
+                      (item) => item !== themeConfig.defaultTheme
                     ),
                   ].map((item, index) => (
                     <li key={index}>
@@ -73,7 +73,7 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
                         className={`${theme === item ? 'active' : ''}`}
                       >
                         <span className="opacity-60 capitalize">
-                          {item === themeConfig.default ? 'Default' : item}
+                          {item === themeConfig.defaultTheme ? 'Default' : item}
                         </span>
                       </a>
                     </li>

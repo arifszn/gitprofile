@@ -311,7 +311,7 @@ GitProfile.propTypes = {
       snippetVersion: PropTypes.number,
     }),
     themeConfig: PropTypes.shape({
-      default: PropTypes.string.isRequired,
+      defaultTheme: PropTypes.string.isRequired,
       disableSwitch: PropTypes.bool.isRequired,
       respectPrefersColorScheme: PropTypes.bool.isRequired,
       themes: PropTypes.array.isRequired,

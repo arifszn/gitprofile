@@ -3,7 +3,7 @@ import { hotjar } from 'react-hotjar';
 
 export const getInitialTheme = (themeConfig) => {
   if (themeConfig.disableSwitch) {
-    return themeConfig.default;
+    return themeConfig.defaultTheme;
   }
 
   if (
@@ -19,10 +19,10 @@ export const getInitialTheme = (themeConfig) => {
   if (themeConfig.respectPrefersColorScheme && !themeConfig.disableSwitch) {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
-      : themeConfig.default;
+      : themeConfig.defaultTheme;
   }
 
-  return themeConfig.default;
+  return themeConfig.defaultTheme;
 };
 
 export const skeleton = ({
@@ -113,7 +113,7 @@ export const constructConfigWithMissingValues = (config) => {
 
   if (typeof config.themeConfig === 'undefined') {
     const themeConfig = {
-      default: 'corporate',
+      defaultTheme: 'corporate',
       disableSwitch: false,
       respectPrefersColorScheme: false,
       themes: [
