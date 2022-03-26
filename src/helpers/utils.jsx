@@ -98,7 +98,7 @@ export const setupHotjar = (hotjarConfig) => {
   }
 };
 
-export const validateConfig = (config) => {
+export const sanitizeConfig = (config) => {
   const customTheme =
     typeof config.themeConfig !== 'undefined' &&
     typeof config.themeConfig.customTheme !== 'undefined'
