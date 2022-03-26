@@ -12,9 +12,13 @@ import Education from './education';
 import Project from './project';
 import Blog from './blog';
 import {
-  constructConfigWithMissingValues,
+  genericError,
   getInitialTheme,
+  noConfigError,
+  notFoundError,
   setupHotjar,
+  tooManyRequestError,
+  sanitizeConfig,
 } from '../helpers/utils';
 import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
@@ -22,37 +26,31 @@ import '../assets/index.css';
 
 const GitProfile = ({ config }) => {
   const [error, setError] = useState(
-    typeof config === 'undefined'
-      ? {
-          status: 500,
-          title: 'No Config is provided',
-          subTitle: 'Pass the required config as prop.',
-        }
-      : null
+    typeof config === 'undefined' && !config ? noConfigError : null
   );
-
-  typeof config !== 'undefined' && constructConfigWithMissingValues(config);
-
-  const [theme, setTheme] = useState(
-    config ? getInitialTheme(config.themeConfig) : null
+  const [sanitizedConfig] = useState(
+    typeof config === 'undefined' && !config ? null : sanitizeConfig(config)
   );
+  const [theme, setTheme] = useState(null);
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState(null);
   const [repo, setRepo] = useState(null);
 
   useEffect(() => {
-    if (theme) {
-      document.documentElement.setAttribute('data-theme', theme);
+    if (sanitizedConfig) {
+      setTheme(getInitialTheme(sanitizedConfig.themeConfig));
+      setupHotjar(sanitizedConfig.hotjar);
+      loadData();
     }
-  }, [theme]);
+  }, [sanitizedConfig]);
 
   useEffect(() => {
-    config && setupHotjar(config.hotjar);
-  }, []);
+    theme && document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const loadData = useCallback(() => {
     axios
-      .get(`https://api.github.com/users/${config.github.username}`)
+      .get(`https://api.github.com/users/${sanitizedConfig.github.username}`)
       .then((response) => {
         let data = response.data;
 
@@ -69,14 +67,15 @@ const GitProfile = ({ config }) => {
       .then(() => {
         let excludeRepo = ``;
 
-        config.github.exclude.projects.forEach((project) => {
-          excludeRepo += `+-repo:${config.github.username}/${project}`;
+        sanitizedConfig.github.exclude.projects.forEach((project) => {
+          excludeRepo += `+-repo:${sanitizedConfig.github.username}/${project}`;
         });
 
-        let query = `user:${config.github.username}+fork:${!config.github
-          .exclude.forks}${excludeRepo}`;
+        let query = `user:${
+          sanitizedConfig.github.username
+        }+fork:${!sanitizedConfig.github.exclude.forks}${excludeRepo}`;
 
-        let url = `https://api.github.com/search/repositories?q=${query}&sort=${config.github.sortBy}&per_page=${config.github.limit}&type=Repositories`;
+        let url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.github.sortBy}&per_page=${sanitizedConfig.github.limit}&type=Repositories`;
 
         axios
           .get(url, {
@@ -101,10 +100,6 @@ const GitProfile = ({ config }) => {
       });
   }, [setLoading]);
 
-  useEffect(() => {
-    config && loadData();
-  }, [loadData]);
-
   const handleError = (error) => {
     console.error('Error:', error);
     try {
@@ -113,57 +108,25 @@ const GitProfile = ({ config }) => {
       ).fromNow();
 
       if (error.response.status === 403) {
-        setError({
-          status: 429,
-          title: 'Too Many Requests.',
-          subTitle: (
-            <p>
-              Oh no, you hit the{' '}
-              <a
-                href="https://developer.github.com/v3/rate_limit/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                rate limit.
-              </a>
-              ! Try again later{` ${reset}`}.
-            </p>
-          ),
-        });
+        setError(tooManyRequestError(reset));
       } else if (error.response.status === 404) {
-        setError({
-          status: 404,
-          title: 'The Github Username is Incorrect.',
-          subTitle: (
-            <p>
-              Please provide correct github username in <code>config</code>.
-            </p>
-          ),
-        });
+        setError(notFoundError);
       } else {
-        setError({
-          status: 500,
-          title: 'Ops!!',
-          subTitle: 'Something went wrong.',
-        });
+        setError(genericError);
       }
     } catch (error2) {
-      setError({
-        status: 500,
-        title: 'Ops!!',
-        subTitle: 'Something went wrong.',
-      });
+      setError(genericError);
     }
   };
 
   return (
     <HelmetProvider>
-      {!error && (
+      {sanitizedConfig && (
         <HeadTagEditor
           profile={profile}
           theme={theme}
-          googleAnalytics={config.googleAnalytics}
-          social={config.social}
+          googleAnalytics={sanitizedConfig.googleAnalytics}
+          social={sanitizedConfig.social}
         />
       )}
       <div className="fade-in h-screen">
@@ -174,84 +137,81 @@ const GitProfile = ({ config }) => {
             subTitle={error.subTitle}
           />
         ) : (
-          <Fragment>
-            <div className="p-4 lg:p-10 min-h-full bg-base-200">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
-                <div className="col-span-1">
-                  <div className="grid grid-cols-1 gap-6">
-                    {!error && !config.themeConfig.disableSwitch && (
-                      <ThemeChanger
-                        theme={theme}
-                        setTheme={setTheme}
+          sanitizedConfig && (
+            <Fragment>
+              <div className="p-4 lg:p-10 min-h-full bg-base-200">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
+                  <div className="col-span-1">
+                    <div className="grid grid-cols-1 gap-6">
+                      {!sanitizedConfig.themeConfig.disableSwitch && (
+                        <ThemeChanger
+                          theme={theme}
+                          setTheme={setTheme}
+                          loading={loading}
+                          themeConfig={sanitizedConfig.themeConfig}
+                        />
+                      )}
+                      <AvatarCard profile={profile} loading={loading} />
+                      <Details
+                        profile={profile}
                         loading={loading}
-                        themeConfig={config.themeConfig}
+                        github={sanitizedConfig.github}
+                        social={sanitizedConfig.social}
                       />
-                    )}
-                    <AvatarCard profile={profile} loading={loading} />
-                    <Details
-                      profile={profile}
-                      loading={loading}
-                      github={config.github}
-                      social={config.social}
-                    />
-                    {typeof config.skills !== 'undefined' && (
-                      <Skill loading={loading} skills={config.skills} />
-                    )}
-                    {typeof config.experiences !== 'undefined' && (
+                      <Skill
+                        loading={loading}
+                        skills={sanitizedConfig.skills}
+                      />
                       <Experience
                         loading={loading}
-                        experiences={config.experiences}
+                        experiences={sanitizedConfig.experiences}
                       />
-                    )}
-                    {typeof config.education !== 'undefined' && (
                       <Education
                         loading={loading}
-                        education={config.education}
+                        education={sanitizedConfig.education}
                       />
-                    )}
+                    </div>
                   </div>
-                </div>
-                <div className="lg:col-span-2 col-span-1">
-                  <div className="grid grid-cols-1 gap-6">
-                    <Project
-                      repo={repo}
-                      loading={loading}
-                      github={config.github}
-                      googleAnalytics={config.googleAnalytics}
-                    />
-                    {typeof config.blog !== 'undefined' && (
+                  <div className="lg:col-span-2 col-span-1">
+                    <div className="grid grid-cols-1 gap-6">
+                      <Project
+                        repo={repo}
+                        loading={loading}
+                        github={sanitizedConfig.github}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
+                      />
                       <Blog
                         loading={loading}
-                        googleAnalytics={config.googleAnalytics}
-                        blog={config.blog}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
+                        blog={sanitizedConfig.blog}
                       />
-                    )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* DO NOT REMOVE/MODIFY THE FOOTER. FOR MORE INFO https://github.com/arifszn/gitprofile#-please-read */}
-            <footer className="p-4 footer bg-base-200 text-base-content footer-center">
-              <div className="card compact bg-base-100 shadow">
-                <div className="card-body">
-                  <div>
-                    <p className="font-mono text-sm">
-                      Made with{' '}
-                      <a
-                        className="text-primary"
-                        href="https://github.com/arifszn/gitprofile"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        GitProfile
-                      </a>{' '}
-                      and ❤️
-                    </p>
+              {/* DO NOT REMOVE/MODIFY THE FOOTER. FOR MORE INFO https://github.com/arifszn/gitprofile#-please-read */}
+              <footer className="p-4 footer bg-base-200 text-base-content footer-center">
+                <div className="card compact bg-base-100 shadow">
+                  <div className="card-body">
+                    <div>
+                      <p className="font-mono text-sm">
+                        Made with{' '}
+                        <a
+                          className="text-primary"
+                          href="https://github.com/arifszn/gitprofile"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          GitProfile
+                        </a>{' '}
+                        and ❤️
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </footer>
-          </Fragment>
+              </footer>
+            </Fragment>
+          )
         )}
       </div>
     </HelmetProvider>
@@ -265,8 +225,8 @@ GitProfile.propTypes = {
       sortBy: PropTypes.oneOf(['stars', 'updated']),
       limit: PropTypes.number,
       exclude: PropTypes.shape({
-        forks: PropTypes.bool.isRequired,
-        projects: PropTypes.array.isRequired,
+        forks: PropTypes.bool,
+        projects: PropTypes.array,
       }),
     }).isRequired,
     social: PropTypes.shape({
@@ -311,11 +271,11 @@ GitProfile.propTypes = {
       snippetVersion: PropTypes.number,
     }),
     themeConfig: PropTypes.shape({
-      defaultTheme: PropTypes.string.isRequired,
-      disableSwitch: PropTypes.bool.isRequired,
-      respectPrefersColorScheme: PropTypes.bool.isRequired,
-      themes: PropTypes.array.isRequired,
-      customTheme: PropTypes.object.isRequired,
+      defaultTheme: PropTypes.string,
+      disableSwitch: PropTypes.bool,
+      respectPrefersColorScheme: PropTypes.bool,
+      themes: PropTypes.array,
+      customTheme: PropTypes.object,
     }),
   }).isRequired,
 };

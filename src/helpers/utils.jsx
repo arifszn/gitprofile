@@ -98,58 +98,12 @@ export const setupHotjar = (hotjarConfig) => {
   }
 };
 
-export const constructConfigWithMissingValues = (config) => {
-  if (typeof config.github.sortBy === 'undefined') {
-    Object.assign(config.github, { sortBy: 'stars' });
-  }
-
-  if (typeof config.github.limit === 'undefined') {
-    Object.assign(config.github, { limit: 6 });
-  }
-
-  if (typeof config.github.exclude === 'undefined') {
-    Object.assign(config.github, { exclude: { forks: false, projects: [] } });
-  }
-
-  if (typeof config.themeConfig === 'undefined') {
-    const themeConfig = {
-      defaultTheme: 'corporate',
-      disableSwitch: false,
-      respectPrefersColorScheme: false,
-      themes: [
-        'light',
-        'dark',
-        'cupcake',
-        'bumblebee',
-        'emerald',
-        'corporate',
-        'synthwave',
-        'retro',
-        'cyberpunk',
-        'valentine',
-        'halloween',
-        'garden',
-        'forest',
-        'aqua',
-        'lofi',
-        'pastel',
-        'fantasy',
-        'wireframe',
-        'black',
-        'luxury',
-        'dracula',
-        'cmyk',
-        'autumn',
-        'business',
-        'acid',
-        'lemonade',
-        'night',
-        'coffee',
-        'winter',
-        'procyon',
-      ],
-      customTheme: {
-        procyon: {
+export const validateConfig = (config) => {
+  const customTheme =
+    typeof config.themeConfig !== 'undefined' &&
+    typeof config.themeConfig.customTheme !== 'undefined'
+      ? config.themeConfig.customTheme
+      : {
           primary: '#fc055b',
           secondary: '#219aaf',
           accent: '#e8d03a',
@@ -157,26 +111,219 @@ export const constructConfigWithMissingValues = (config) => {
           'base-100': '#E3E3ED',
           '--rounded-box': '3rem',
           '--rounded-btn': '3rem',
-        },
+        };
+
+  const themes =
+    typeof config.themeConfig !== 'undefined' &&
+    typeof config.themeConfig.themes !== 'undefined'
+      ? config.themeConfig.themes
+      : [
+          'light',
+          'dark',
+          'cupcake',
+          'bumblebee',
+          'emerald',
+          'corporate',
+          'synthwave',
+          'retro',
+          'cyberpunk',
+          'valentine',
+          'halloween',
+          'garden',
+          'forest',
+          'aqua',
+          'lofi',
+          'pastel',
+          'fantasy',
+          'wireframe',
+          'black',
+          'luxury',
+          'dracula',
+          'cmyk',
+          'autumn',
+          'business',
+          'acid',
+          'lemonade',
+          'night',
+          'coffee',
+          'winter',
+          'procyon',
+        ];
+
+  return {
+    github: {
+      username: config.github.username,
+      sortBy:
+        typeof config.github.sortBy !== 'undefined'
+          ? config.github.sortBy
+          : 'stars',
+      limit:
+        typeof config.github.limit !== 'undefined' ? config.github.limit : 8,
+      exclude: {
+        forks:
+          typeof config.github.exclude !== 'undefined' &&
+          typeof config.github.exclude.forks !== 'undefined'
+            ? config.github.exclude.forks
+            : false,
+        projects:
+          typeof config.github.exclude !== 'undefined' &&
+          typeof config.github.exclude.projects !== 'undefined'
+            ? config.github.exclude.projects
+            : [],
       },
-    };
+    },
+    social: {
+      linkedin:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.linkedin !== 'undefined'
+          ? config.social.linkedin
+          : '',
+      twitter:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.twitter !== 'undefined'
+          ? config.social.twitter
+          : '',
+      facebook:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.facebook !== 'undefined'
+          ? config.social.facebook
+          : '',
+      dribbble:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.dribbble !== 'undefined'
+          ? config.social.dribbble
+          : '',
+      behance:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.behance !== 'undefined'
+          ? config.social.behance
+          : '',
+      medium:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.medium !== 'undefined'
+          ? config.social.medium
+          : '',
+      devto:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.devto !== 'undefined'
+          ? config.social.devto
+          : '',
+      website:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.website !== 'undefined'
+          ? config.social.website
+          : '',
+      phone:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.phone !== 'undefined'
+          ? config.social.phone
+          : '',
+      email:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.email !== 'undefined'
+          ? config.social.email
+          : '',
+    },
+    skills: typeof config.skills !== 'undefined' ? config.skills : [],
+    experiences:
+      typeof config.experiences !== 'undefined' ? config.experiences : [],
+    education: typeof config.education !== 'undefined' ? config.education : [],
+    blog: {
+      source:
+        typeof config.blog !== 'undefined' &&
+        typeof config.blog.source !== 'undefined'
+          ? config.blog.source
+          : '',
+      username:
+        typeof config.blog !== 'undefined' &&
+        typeof config.blog.username !== 'undefined'
+          ? config.blog.username
+          : '',
+      limit:
+        typeof config.blog !== 'undefined' &&
+        typeof config.blog.limit !== 'undefined'
+          ? config.blog.limit
+          : 10,
+    },
+    googleAnalytics: {
+      id:
+        typeof config.googleAnalytics !== 'undefined' &&
+        typeof config.googleAnalytics.id !== 'undefined'
+          ? config.googleAnalytics.id
+          : '',
+    },
+    hotjar: {
+      id:
+        typeof config.hotjar !== 'undefined' &&
+        typeof config.hotjar.id !== 'undefined'
+          ? config.hotjar.id
+          : '',
+      snippetVersion:
+        typeof config.hotjar !== 'undefined' &&
+        typeof config.hotjar.snippetVersion !== 'undefined'
+          ? config.hotjar.snippetVersion
+          : 6,
+    },
+    themeConfig: {
+      defaultTheme:
+        typeof config.themeConfig !== 'undefined' &&
+        typeof config.themeConfig.defaultTheme !== 'undefined'
+          ? config.themeConfig.defaultTheme
+          : themes[0],
+      disableSwitch:
+        typeof config.themeConfig !== 'undefined' &&
+        typeof config.themeConfig.disableSwitch !== 'undefined'
+          ? config.themeConfig.disableSwitch
+          : false,
+      respectPrefersColorScheme:
+        typeof config.themeConfig !== 'undefined' &&
+        typeof config.themeConfig.respectPrefersColorScheme !== 'undefined'
+          ? config.themeConfig.respectPrefersColorScheme
+          : false,
+      themes: themes,
+      customTheme: customTheme,
+    },
+  };
+};
 
-    Object.assign(config, { themeConfig: themeConfig });
-  }
+export const noConfigError = {
+  status: 500,
+  title: 'No Config is provided.',
+  subTitle: 'Pass the required config as prop.',
+};
 
-  if (typeof config.googleAnalytics === 'undefined') {
-    const googleAnalytics = {
-      id: '',
-    };
+export const tooManyRequestError = (reset) => {
+  return {
+    status: 429,
+    title: 'Too Many Requests.',
+    subTitle: (
+      <p>
+        Oh no, you hit the{' '}
+        <a
+          href="https://developer.github.com/v3/rate_limit/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          rate limit.
+        </a>
+        ! Try again later{` ${reset}`}.
+      </p>
+    ),
+  };
+};
 
-    Object.assign(config, { googleAnalytics: googleAnalytics });
-  }
+export const notFoundError = {
+  status: 404,
+  title: 'The Github Username is Incorrect.',
+  subTitle: (
+    <p>
+      Please provide correct github username in <code>config</code>.
+    </p>
+  ),
+};
 
-  if (typeof config.social === 'undefined') {
-    const social = {};
-
-    Object.assign(config, { social: social });
-  }
-
-  return config;
+export const genericError = {
+  status: 500,
+  title: 'Ops!!',
+  subTitle: 'Something went wrong.',
 };

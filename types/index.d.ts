@@ -27,14 +27,14 @@ export interface Github {
     /**
      * Forked projects will not be displayed if set to true
      */
-    forks: boolean;
+    forks?: boolean;
 
     /**
      * These projects will not be displayed
      *
      * example: ['my-project1', 'my-project2']
      */
-    projects: Array<string>;
+    projects?: Array<string>;
   };
 }
 
@@ -94,65 +94,79 @@ export interface Blog {
   /**
    * medium | dev.to
    */
-  source: string;
+  source?: string;
 
   /**
    * Username
    */
-  username: string;
+  username?: string;
 
   /**
    * How many posts to display
    *
    * Max is 10
    */
-  limit: number;
+  limit?: number;
 }
 
 export interface GoogleAnalytics {
   /**
    * GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
    */
-  id: string;
+  id?: string;
 }
 
 export interface Hotjar {
   /**
    * Hotjar id
    */
-  id: string;
+  id?: string;
 
   /**
    * Snippet Version
    */
-  snippetVersion: number;
+  snippetVersion?: number;
 }
 
 export interface ThemeConfig {
   /**
    * Default theme
    */
-  defaultTheme: string;
+  defaultTheme?: string;
 
   /**
    * Hides the switch in the navbar
    */
-  disableSwitch: boolean;
+  disableSwitch?: boolean;
 
   /**
    * Should use the prefers-color-scheme media-query
    */
-  respectPrefersColorScheme: boolean;
+  respectPrefersColorScheme?: boolean;
 
   /**
    * Available themes
    */
-  themes: Array<string>;
+  themes?: Array<string>;
 
   /**
    * Custom theme
    */
-  customTheme: object;
+  customTheme?: object;
+}
+
+export interface Experience {
+  company?: string;
+  position?: string;
+  from?: string;
+  to?: string;
+}
+
+export interface Education {
+  institution?: string;
+  degree?: string;
+  from?: string;
+  to?: string;
 }
 
 export interface Config {
@@ -174,12 +188,12 @@ export interface Config {
   /**
    * Experience list
    */
-  experiences?: Array<string>;
+  experiences?: Array<Experience>;
 
   /**
    * Education list
    */
-  education?: Array<string>;
+  education?: Array<Education>;
 
   /**
    * Blog config

@@ -57,7 +57,7 @@ const HeadTagEditor = ({ profile, theme, googleAnalytics, social }) => {
 
 HeadTagEditor.propTypes = {
   profile: PropTypes.object,
-  theme: PropTypes.string.isRequired,
+  theme: PropTypes.string,
   googleAnalytics: PropTypes.object.isRequired,
   social: PropTypes.object.isRequired,
 };

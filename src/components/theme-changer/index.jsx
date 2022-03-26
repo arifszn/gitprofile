@@ -89,7 +89,7 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
 };
 
 ThemeChanger.propTypes = {
-  theme: PropTypes.string.isRequired,
+  theme: PropTypes.string,
   setTheme: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   themeConfig: PropTypes.object.isRequired,
