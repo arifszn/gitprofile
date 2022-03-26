@@ -11,18 +11,16 @@ import Experience from './experience';
 import Education from './education';
 import Project from './project';
 import Blog from './blog';
-import { getInitialTheme, setupHotjar } from '../helpers/utils';
+import {
+  constructConfigWithMissingValues,
+  getInitialTheme,
+  setupHotjar,
+} from '../helpers/utils';
 import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import '../assets/index.css';
 
 const GitProfile = ({ config }) => {
-  const [theme, setTheme] = useState(
-    config ? getInitialTheme(config.themeConfig) : null
-  );
-  const [loading, setLoading] = useState(true);
-  const [profile, setProfile] = useState(null);
-  const [repo, setRepo] = useState(null);
   const [error, setError] = useState(
     typeof config === 'undefined'
       ? {
@@ -32,6 +30,15 @@ const GitProfile = ({ config }) => {
         }
       : null
   );
+
+  typeof config !== 'undefined' && constructConfigWithMissingValues(config);
+
+  const [theme, setTheme] = useState(
+    config ? getInitialTheme(config.themeConfig) : null
+  );
+  const [loading, setLoading] = useState(true);
+  const [profile, setProfile] = useState(null);
+  const [repo, setRepo] = useState(null);
 
   useEffect(() => {
     if (theme) {
@@ -187,12 +194,21 @@ const GitProfile = ({ config }) => {
                       github={config.github}
                       social={config.social}
                     />
-                    <Skill loading={loading} skills={config.skills} />
-                    <Experience
-                      loading={loading}
-                      experiences={config.experiences}
-                    />
-                    <Education loading={loading} education={config.education} />
+                    {typeof config.skills !== 'undefined' && (
+                      <Skill loading={loading} skills={config.skills} />
+                    )}
+                    {typeof config.experiences !== 'undefined' && (
+                      <Experience
+                        loading={loading}
+                        experiences={config.experiences}
+                      />
+                    )}
+                    {typeof config.education !== 'undefined' && (
+                      <Education
+                        loading={loading}
+                        education={config.education}
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="lg:col-span-2 col-span-1">
@@ -203,11 +219,13 @@ const GitProfile = ({ config }) => {
                       github={config.github}
                       googleAnalytics={config.googleAnalytics}
                     />
-                    <Blog
-                      loading={loading}
-                      googleAnalytics={config.googleAnalytics}
-                      blog={config.blog}
-                    />
+                    {typeof config.blog !== 'undefined' && (
+                      <Blog
+                        loading={loading}
+                        googleAnalytics={config.googleAnalytics}
+                        blog={config.blog}
+                      />
+                    )}
                   </div>
                 </div>
               </div>
@@ -244,12 +262,12 @@ GitProfile.propTypes = {
   config: PropTypes.shape({
     github: PropTypes.shape({
       username: PropTypes.string.isRequired,
-      sortBy: PropTypes.oneOf(['stars', 'updated']).isRequired,
-      limit: PropTypes.number.isRequired,
+      sortBy: PropTypes.oneOf(['stars', 'updated']),
+      limit: PropTypes.number,
       exclude: PropTypes.shape({
         forks: PropTypes.bool.isRequired,
         projects: PropTypes.array.isRequired,
-      }).isRequired,
+      }),
     }).isRequired,
     social: PropTypes.shape({
       linkedin: PropTypes.string,
@@ -262,8 +280,8 @@ GitProfile.propTypes = {
       website: PropTypes.string,
       phone: PropTypes.string,
       email: PropTypes.string,
-    }).isRequired,
-    skills: PropTypes.array.isRequired,
+    }),
+    skills: PropTypes.array,
     experiences: PropTypes.arrayOf(
       PropTypes.shape({
         company: PropTypes.string,
@@ -271,7 +289,7 @@ GitProfile.propTypes = {
         from: PropTypes.string,
         to: PropTypes.string,
       })
-    ).isRequired,
+    ),
     education: PropTypes.arrayOf(
       PropTypes.shape({
         institution: PropTypes.string,
@@ -279,26 +297,26 @@ GitProfile.propTypes = {
         from: PropTypes.string,
         to: PropTypes.string,
       })
-    ).isRequired,
+    ),
     blog: PropTypes.shape({
       source: PropTypes.string,
       username: PropTypes.string,
       limit: PropTypes.number,
-    }).isRequired,
+    }),
     googleAnalytics: PropTypes.shape({
       id: PropTypes.string,
-    }).isRequired,
+    }),
     hotjar: PropTypes.shape({
       id: PropTypes.string,
       snippetVersion: PropTypes.number,
-    }).isRequired,
+    }),
     themeConfig: PropTypes.shape({
       default: PropTypes.string.isRequired,
       disableSwitch: PropTypes.bool.isRequired,
       respectPrefersColorScheme: PropTypes.bool.isRequired,
       themes: PropTypes.array.isRequired,
       customTheme: PropTypes.object.isRequired,
-    }).isRequired,
+    }),
   }).isRequired,
 };
 

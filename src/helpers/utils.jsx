@@ -97,3 +97,86 @@ export const setupHotjar = (hotjarConfig) => {
     hotjar.initialize(hotjarConfig.id, snippetVersion);
   }
 };
+
+export const constructConfigWithMissingValues = (config) => {
+  if (typeof config.github.sortBy === 'undefined') {
+    Object.assign(config.github, { sortBy: 'stars' });
+  }
+
+  if (typeof config.github.limit === 'undefined') {
+    Object.assign(config.github, { limit: 6 });
+  }
+
+  if (typeof config.github.exclude === 'undefined') {
+    Object.assign(config.github, { exclude: { forks: false, projects: [] } });
+  }
+
+  if (typeof config.themeConfig === 'undefined') {
+    const themeConfig = {
+      default: 'corporate',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+      themes: [
+        'light',
+        'dark',
+        'cupcake',
+        'bumblebee',
+        'emerald',
+        'corporate',
+        'synthwave',
+        'retro',
+        'cyberpunk',
+        'valentine',
+        'halloween',
+        'garden',
+        'forest',
+        'aqua',
+        'lofi',
+        'pastel',
+        'fantasy',
+        'wireframe',
+        'black',
+        'luxury',
+        'dracula',
+        'cmyk',
+        'autumn',
+        'business',
+        'acid',
+        'lemonade',
+        'night',
+        'coffee',
+        'winter',
+        'procyon',
+      ],
+      customTheme: {
+        procyon: {
+          primary: '#fc055b',
+          secondary: '#219aaf',
+          accent: '#e8d03a',
+          neutral: '#2A2730',
+          'base-100': '#E3E3ED',
+          '--rounded-box': '3rem',
+          '--rounded-btn': '3rem',
+        },
+      },
+    };
+
+    Object.assign(config, { themeConfig: themeConfig });
+  }
+
+  if (typeof config.googleAnalytics === 'undefined') {
+    const googleAnalytics = {
+      id: '',
+    };
+
+    Object.assign(config, { googleAnalytics: googleAnalytics });
+  }
+
+  if (typeof config.social === 'undefined') {
+    const social = {};
+
+    Object.assign(config, { social: social });
+  }
+
+  return config;
+};
