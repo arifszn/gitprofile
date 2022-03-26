@@ -34,7 +34,7 @@ interface github {
      *
      * example: ['my-project1', 'my-project2']
      */
-    projects: Array;
+    projects: Array<string>;
   };
 }
 

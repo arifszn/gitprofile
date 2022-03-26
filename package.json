@@ -10,7 +10,10 @@
     "url": "https://github.com/arifszn/gitprofile.git"
   },
   "files": [
-    "dist"
+    "dist/gitprofile.es.js",
+    "dist/gitprofile.umd.js",
+    "dist/style.css",
+    "types"
   ],
   "main": "./dist/gitprofile.umd.js",
   "module": "./dist/gitprofile.es.js",
