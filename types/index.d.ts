@@ -128,6 +128,43 @@ export interface Hotjar {
   snippetVersion?: number;
 }
 
+export interface CustomTheme {
+  /**
+   * Primary color
+   */
+  primary?: string;
+
+  /**
+   * Secondary color
+   */
+  secondary?: string;
+
+  /**
+   * Accent color
+   */
+  accent?: string;
+
+  /**
+   * Neutral color
+   */
+  neutral?: string;
+
+  /**
+   * Base color of page
+   */
+  'base-100'?: string;
+
+  /**
+   * Border radius of rounded-box
+   */
+  '--rounded-box'?: string;
+
+  /**
+   * Border radius of rounded-btn
+   */
+  '--rounded-btn'?: string;
+}
+
 export interface ThemeConfig {
   /**
    * Default theme
@@ -152,7 +189,7 @@ export interface ThemeConfig {
   /**
    * Custom theme
    */
-  customTheme?: object;
+  customTheme?: CustomTheme;
 }
 
 export interface Experience {

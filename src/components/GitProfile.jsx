@@ -277,7 +277,15 @@ GitProfile.propTypes = {
       disableSwitch: PropTypes.bool,
       respectPrefersColorScheme: PropTypes.bool,
       themes: PropTypes.array,
-      customTheme: PropTypes.object,
+      customTheme: PropTypes.shape({
+        primary: PropTypes.string,
+        secondary: PropTypes.string,
+        accent: PropTypes.string,
+        neutral: PropTypes.string,
+        'base-100': PropTypes.string,
+        '--rounded-box': PropTypes.string,
+        '--rounded-btn': PropTypes.string,
+      }),
     }),
   }).isRequired,
 };
