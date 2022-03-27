@@ -1,11 +1,5 @@
-<p align="center">
-  <a href="http://arifszn.github.io/gitprofile" target="_blank">
-    <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/logo.png" alt="GitProfile" title="GitProfile" width="50">
-  </a>
-</p>
-
 <h1 align="center">GitProfile</h1>
-<p align="center">A modern, responsive and customizable portfolio builder for Developers!</p>
+<p align="center">Easy to use portfolio builder for every GitHub user!</p>
 <p align="center">https://arifszn.github.io/gitprofile</p>
 
 <br/>
@@ -18,14 +12,16 @@
   <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
 </p>
 
-**GitProfile** is an easy-to-customize personal dev portfolio builder that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and public repositories. Also, it includes space to highlight your details, job history, education history, skills, and recent blog posts.
+**GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. Also, you have the option to highlight your details, job history, education history, skills, and recent blog posts.
 
-It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
+This project is built using React.js on top of Vite.js. But it's not necessary at all to have knowledge on these to get you started. You can make your own copy with zero coding experience.
+
+**Features:**
 
 ✓ [30 Themes](#themes)\
 ✓ [Google Analytics](#google-analytics)\
 ✓ [Hotjar](#hotjar)\
-✓ [Meta Tags](#meta-tags)\
+✓ [SEO](#seo)\
 ✓ [Avatar and Bio](#avatar-and-bio)\
 ✓ [Social Links](#social-links)\
 ✓ [Skills](#skills)\
@@ -37,6 +33,17 @@ It's all possible using [GitHub API](https://developer.github.com/v3/) (for auto
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 ## 🛠 Installation & Set Up
+
+There are two ways to use **GitProfile**.
+
+- Installing `GitProfile` as a package.
+- Forking this repo.
+
+### Installing `GitProfile` as a package
+
+TO DO
+
+### Forking this repo
 
 These instructions will get you a copy of the project and deploy your website online!
 
@@ -288,7 +295,7 @@ module.exports = {
 };
 ```
 
-### Meta Tags
+### SEO
 
 Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public\index.html`.
 
