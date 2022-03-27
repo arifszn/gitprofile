@@ -36,12 +36,37 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 There are two ways to use **GitProfile**.
 
-- Installing `GitProfile` as a package.
+- Installing as a NPM package.
 - Forking this repo.
 
-### Installing `GitProfile` as a package
+### Installing as a NPM package
 
-TO DO
+Install via <a href="https://www.npmjs.com/package/gitprofile">NPM</a>
+
+```
+npm install gitprofile
+```
+
+Then, import the package, import and style and provide the config.
+
+```js
+import GitProfile from 'gitprofile';
+import 'gitprofile/dist/style.css';
+
+function App() {
+  return (
+    <GitProfile
+      config={{
+        github: {
+          username: 'arifszn',
+        },
+      }}
+    />
+  );
+}
+
+export default App;
+```
 
 ### Forking this repo
 
@@ -81,7 +106,7 @@ As this is a vite project, you can also host your website to Netlify, Vercel, He
 
 All the magic happens in the file `gitprofile.config.js`. Open it and modify it according to your preference.
 
-These are the default values:
+Click to expand the default values:
 
 <details>
 <summary>gitprofile.config.js</summary>
@@ -139,8 +164,8 @@ const config = {
       to: '2014',
     },
   ],
+  // Display blog posts from your medium or dev.to account. (Optional)
   blog: {
-    // Display blog posts from your medium or dev.to account. (Optional)
     source: 'dev.to', // medium | dev.to
     username: 'arifszn',
     limit: 5, // How many posts to display. Max is 10.
@@ -231,7 +256,7 @@ module.exports = {
 };
 ```
 
-You can create your own custom theme by modifying these values:
+You can create your own custom theme by modifying these values. Theme `procyon` will have the custom styles.
 
 ```js
 // gitprofile.config.js
@@ -264,7 +289,7 @@ Here are some screenshots of different themes.\
 
 ### Google Analytics
 
-ezFolio supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
+**GitProfile** supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
 
 ```js
 // gitprofile.config.js
@@ -276,7 +301,7 @@ module.exports = {
 };
 ```
 
-Besides tracking visitors, ezFolio will track click events on projects and blog posts, and send them to Google Analytics.\
+Besides tracking visitors, it will track `click events` on projects and blog posts, and send them to Google Analytics.\
 <br/>
 ![Event](https://www.arifszn.com/assets/img/hosted/gitprofile/event.png)
 
@@ -297,7 +322,7 @@ module.exports = {
 
 ### SEO
 
-Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public\index.html`.
+Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public/index.html`.
 
 ### Avatar and Bio
 
@@ -435,10 +460,6 @@ module.exports = {
 ![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
 
 The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
-
-## 📢 Please Read
-
-I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own. However, You are open to use this project by forking it and change any code necessary by giving attribute to the original author. Please see this [issue](https://github.com/arifszn/gitprofile/issues/11) for more info.
 
 ## 💖 Support
 
