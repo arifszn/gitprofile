@@ -76,8 +76,8 @@ const config = {
       to: '2012',
     },
   ],
+  // Display blog posts from your medium or dev.to account. (Optional)
   blog: {
-    // Display blog posts from your medium or dev.to account. (Optional)
     source: 'dev.to', // medium | dev.to
     username: 'arifszn',
     limit: 3, // How many posts to display. Max is 10.
