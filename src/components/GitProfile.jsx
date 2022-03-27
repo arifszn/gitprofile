@@ -189,25 +189,27 @@ const GitProfile = ({ config }) => {
                   </div>
                 </div>
               </div>
-              {/* DO NOT REMOVE/MODIFY THE FOOTER. FOR MORE INFO https://github.com/arifszn/gitprofile#-please-read */}
+
+              {/* The below attribution notice shall be
+              included in all copies or substantial portions of the Software. */}
+              {/* DO NOT REMOVE/MODIFY THE BELOW FOOTER. */}
+              {/* SEE 4(C) SECTION OF THE LICENSE FOR MORE DETAILS. */}
+              {/* https://github.com/arifszn/gitprofile/blob/main/LICENSE */}
               <footer className="p-4 footer bg-base-200 text-base-content footer-center">
                 <div className="card compact bg-base-100 shadow">
-                  <div className="card-body">
+                  <a
+                    className="card-body"
+                    href="https://github.com/arifszn/gitprofile"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div>
                       <p className="font-mono text-sm">
                         Made with{' '}
-                        <a
-                          className="text-primary"
-                          href="https://github.com/arifszn/gitprofile"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          GitProfile
-                        </a>{' '}
-                        and ❤️
+                        <span className="text-primary">GitProfile</span> and ❤️
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </footer>
             </Fragment>
