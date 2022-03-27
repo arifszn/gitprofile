@@ -243,7 +243,7 @@ export const sanitizeConfig = (config) => {
         typeof config.blog !== 'undefined' &&
         typeof config.blog.limit !== 'undefined'
           ? config.blog.limit
-          : 10,
+          : 5,
     },
     googleAnalytics: {
       id:
