@@ -2,8 +2,8 @@
 <p align="center">Easy to use portfolio builder for every GitHub user!</p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/gitprofile">
-  <img src="https://img.shields.io/npm/v/gitprofile"/>
+<a href="https://www.npmjs.com/package/@arifszn/gitprofile">
+  <img src="https://img.shields.io/npm/v/@arifszn/gitprofile"/>
 </a>
 <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
   <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
@@ -55,17 +55,17 @@ There are two ways to use **GitProfile**.
 
 ### Installing as a NPM package
 
-Install via <a href="https://www.npmjs.com/package/gitprofile">NPM</a>
+Install via <a href="https://www.npmjs.com/package/@arifszn/gitprofile">NPM</a>
 
 ```
-npm install gitprofile
+npm install @arifszn/gitprofile
 ```
 
 Then, import the package, import and style and provide the config.
 
 ```js
-import GitProfile from 'gitprofile';
-import 'gitprofile/dist/style.css';
+import GitProfile from '@arifszn/gitprofile';
+import '@arifszn/gitprofile/dist/style.css';
 
 function App() {
   return (
