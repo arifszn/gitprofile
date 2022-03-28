@@ -121,7 +121,8 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
               console.error(error);
             }
 
-            window.open(article.link, '_blank');
+            typeof window !== 'undefined' &&
+              window.open(article.link, '_blank');
           }}
         >
           <div className="p-8 h-full w-full">

@@ -17,7 +17,8 @@ export const getInitialTheme = (themeConfig) => {
   }
 
   if (themeConfig.respectPrefersColorScheme && !themeConfig.disableSwitch) {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
+    return typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : themeConfig.defaultTheme;
   }
@@ -57,8 +58,10 @@ export const ga = {
   // initialize google analytic
   initialize: (id) => {
     try {
-      window.gtag('js', new Date());
-      window.gtag('config', id);
+      if (typeof window !== 'undefined') {
+        window.gtag('js', new Date());
+        window.gtag('config', id);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -66,7 +69,7 @@ export const ga = {
   // log specific events happening
   event: ({ action, params }) => {
     try {
-      window.gtag('event', action, params);
+      typeof window !== 'undefined' && window.gtag('event', action, params);
     } catch (error) {
       console.error(error);
     }

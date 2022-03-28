@@ -72,7 +72,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
             console.error(error);
           }
 
-          window.open(item.html_url, '_blank');
+          typeof window !== 'undefined' && window.open(item.html_url, '_blank');
         }}
       >
         <div className="flex justify-between flex-col p-8 h-full w-full">
