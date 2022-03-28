@@ -1,7 +1,6 @@
 import { skeleton } from '../../helpers/utils';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import config from '../../../gitprofile.config';
 
 const ListItem = ({ time, position, company }) => (
   <li className="mb-5 ml-4">
@@ -15,7 +14,7 @@ const ListItem = ({ time, position, company }) => (
   </li>
 );
 
-const Experience = ({ loading }) => {
+const Experience = ({ experiences, loading }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 2; index++) {
@@ -41,40 +40,39 @@ const Experience = ({ loading }) => {
 
   return (
     <>
-      {typeof config.experiences !== 'undefined' &&
-        config.experiences.length !== 0 && (
-          <div className="card shadow-lg compact bg-base-100">
-            <div className="card-body">
-              <div className="mx-3">
-                <h5 className="card-title">
-                  {loading ? (
-                    skeleton({ width: 'w-32', height: 'h-8' })
-                  ) : (
-                    <span className="opacity-70">Experience</span>
-                  )}
-                </h5>
-              </div>
-              <div className="text-base-content text-opacity-60">
-                <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
-                  {loading ? (
-                    renderSkeleton()
-                  ) : (
-                    <Fragment>
-                      {config.experiences.map((experience, index) => (
-                        <ListItem
-                          key={index}
-                          time={`${experience.from} - ${experience.to}`}
-                          position={experience.position}
-                          company={experience.company}
-                        />
-                      ))}
-                    </Fragment>
-                  )}
-                </ol>
-              </div>
+      {typeof experiences !== 'undefined' && experiences.length !== 0 && (
+        <div className="card shadow-lg compact bg-base-100">
+          <div className="card-body">
+            <div className="mx-3">
+              <h5 className="card-title">
+                {loading ? (
+                  skeleton({ width: 'w-32', height: 'h-8' })
+                ) : (
+                  <span className="opacity-70">Experience</span>
+                )}
+              </h5>
+            </div>
+            <div className="text-base-content text-opacity-60">
+              <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
+                {loading ? (
+                  renderSkeleton()
+                ) : (
+                  <Fragment>
+                    {experiences.map((experience, index) => (
+                      <ListItem
+                        key={index}
+                        time={`${experience.from} - ${experience.to}`}
+                        position={experience.position}
+                        company={experience.company}
+                      />
+                    ))}
+                  </Fragment>
+                )}
+              </ol>
             </div>
           </div>
-        )}
+        </div>
+      )}
     </>
   );
 };
@@ -86,7 +84,8 @@ ListItem.propTypes = {
 };
 
 Experience.propTypes = {
-  loading: PropTypes.bool,
+  experiences: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default Experience;

@@ -1,31 +1,29 @@
 import colors from '../data/colors.json';
 import { hotjar } from 'react-hotjar';
-import config from '../../gitprofile.config';
 
-export const getInitialTheme = () => {
-  if (config.themeConfig.disableSwitch) {
-    return config.themeConfig.default;
+export const getInitialTheme = (themeConfig) => {
+  if (themeConfig.disableSwitch) {
+    return themeConfig.defaultTheme;
   }
 
   if (
+    typeof window !== 'undefined' &&
     !(localStorage.getItem('gitprofile-theme') === null) &&
-    config.themeConfig.themes.includes(localStorage.getItem('gitprofile-theme'))
+    themeConfig.themes.includes(localStorage.getItem('gitprofile-theme'))
   ) {
     let theme = localStorage.getItem('gitprofile-theme');
 
     return theme;
   }
 
-  if (
-    config.themeConfig.respectPrefersColorScheme &&
-    !config.themeConfig.disableSwitch
-  ) {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  if (themeConfig.respectPrefersColorScheme && !themeConfig.disableSwitch) {
+    return typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
-      : config.themeConfig.default;
+      : themeConfig.defaultTheme;
   }
 
-  return config.themeConfig.default;
+  return themeConfig.defaultTheme;
 };
 
 export const skeleton = ({
@@ -60,8 +58,10 @@ export const ga = {
   // initialize google analytic
   initialize: (id) => {
     try {
-      window.gtag('js', new Date());
-      window.gtag('config', id);
+      if (typeof window !== 'undefined') {
+        window.gtag('js', new Date());
+        window.gtag('config', id);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -69,7 +69,7 @@ export const ga = {
   // log specific events happening
   event: ({ action, params }) => {
     try {
-      window.gtag('event', action, params);
+      typeof window !== 'undefined' && window.gtag('event', action, params);
     } catch (error) {
       console.error(error);
     }
@@ -91,12 +91,242 @@ export const isThemeDarkish = (theme) => {
   }
 };
 
-export const setupHotjar = () => {
-  if (config.hotjar?.id) {
-    let snippetVersion = config.hotjar?.snippetVersion
-      ? config.hotjar?.snippetVersion
+export const setupHotjar = (hotjarConfig) => {
+  if (hotjarConfig?.id) {
+    let snippetVersion = hotjarConfig?.snippetVersion
+      ? hotjarConfig?.snippetVersion
       : 6;
 
-    hotjar.initialize(config.hotjar.id, snippetVersion);
+    hotjar.initialize(hotjarConfig.id, snippetVersion);
   }
+};
+
+export const sanitizeConfig = (config) => {
+  const customTheme =
+    typeof config.themeConfig !== 'undefined' &&
+    typeof config.themeConfig.customTheme !== 'undefined'
+      ? config.themeConfig.customTheme
+      : {
+          primary: '#fc055b',
+          secondary: '#219aaf',
+          accent: '#e8d03a',
+          neutral: '#2A2730',
+          'base-100': '#E3E3ED',
+          '--rounded-box': '3rem',
+          '--rounded-btn': '3rem',
+        };
+
+  const themes =
+    typeof config.themeConfig !== 'undefined' &&
+    typeof config.themeConfig.themes !== 'undefined'
+      ? config.themeConfig.themes
+      : [
+          'light',
+          'dark',
+          'cupcake',
+          'bumblebee',
+          'emerald',
+          'corporate',
+          'synthwave',
+          'retro',
+          'cyberpunk',
+          'valentine',
+          'halloween',
+          'garden',
+          'forest',
+          'aqua',
+          'lofi',
+          'pastel',
+          'fantasy',
+          'wireframe',
+          'black',
+          'luxury',
+          'dracula',
+          'cmyk',
+          'autumn',
+          'business',
+          'acid',
+          'lemonade',
+          'night',
+          'coffee',
+          'winter',
+          'procyon',
+        ];
+
+  return {
+    github: {
+      username: config.github.username,
+      sortBy:
+        typeof config.github.sortBy !== 'undefined'
+          ? config.github.sortBy
+          : 'stars',
+      limit:
+        typeof config.github.limit !== 'undefined' ? config.github.limit : 8,
+      exclude: {
+        forks:
+          typeof config.github.exclude !== 'undefined' &&
+          typeof config.github.exclude.forks !== 'undefined'
+            ? config.github.exclude.forks
+            : false,
+        projects:
+          typeof config.github.exclude !== 'undefined' &&
+          typeof config.github.exclude.projects !== 'undefined'
+            ? config.github.exclude.projects
+            : [],
+      },
+    },
+    social: {
+      linkedin:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.linkedin !== 'undefined'
+          ? config.social.linkedin
+          : '',
+      twitter:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.twitter !== 'undefined'
+          ? config.social.twitter
+          : '',
+      facebook:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.facebook !== 'undefined'
+          ? config.social.facebook
+          : '',
+      dribbble:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.dribbble !== 'undefined'
+          ? config.social.dribbble
+          : '',
+      behance:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.behance !== 'undefined'
+          ? config.social.behance
+          : '',
+      medium:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.medium !== 'undefined'
+          ? config.social.medium
+          : '',
+      devto:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.devto !== 'undefined'
+          ? config.social.devto
+          : '',
+      website:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.website !== 'undefined'
+          ? config.social.website
+          : '',
+      phone:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.phone !== 'undefined'
+          ? config.social.phone
+          : '',
+      email:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.email !== 'undefined'
+          ? config.social.email
+          : '',
+    },
+    skills: typeof config.skills !== 'undefined' ? config.skills : [],
+    experiences:
+      typeof config.experiences !== 'undefined' ? config.experiences : [],
+    education: typeof config.education !== 'undefined' ? config.education : [],
+    blog: {
+      source:
+        typeof config.blog !== 'undefined' &&
+        typeof config.blog.source !== 'undefined'
+          ? config.blog.source
+          : '',
+      username:
+        typeof config.blog !== 'undefined' &&
+        typeof config.blog.username !== 'undefined'
+          ? config.blog.username
+          : '',
+      limit:
+        typeof config.blog !== 'undefined' &&
+        typeof config.blog.limit !== 'undefined'
+          ? config.blog.limit
+          : 5,
+    },
+    googleAnalytics: {
+      id:
+        typeof config.googleAnalytics !== 'undefined' &&
+        typeof config.googleAnalytics.id !== 'undefined'
+          ? config.googleAnalytics.id
+          : '',
+    },
+    hotjar: {
+      id:
+        typeof config.hotjar !== 'undefined' &&
+        typeof config.hotjar.id !== 'undefined'
+          ? config.hotjar.id
+          : '',
+      snippetVersion:
+        typeof config.hotjar !== 'undefined' &&
+        typeof config.hotjar.snippetVersion !== 'undefined'
+          ? config.hotjar.snippetVersion
+          : 6,
+    },
+    themeConfig: {
+      defaultTheme:
+        typeof config.themeConfig !== 'undefined' &&
+        typeof config.themeConfig.defaultTheme !== 'undefined'
+          ? config.themeConfig.defaultTheme
+          : themes[0],
+      disableSwitch:
+        typeof config.themeConfig !== 'undefined' &&
+        typeof config.themeConfig.disableSwitch !== 'undefined'
+          ? config.themeConfig.disableSwitch
+          : false,
+      respectPrefersColorScheme:
+        typeof config.themeConfig !== 'undefined' &&
+        typeof config.themeConfig.respectPrefersColorScheme !== 'undefined'
+          ? config.themeConfig.respectPrefersColorScheme
+          : false,
+      themes: themes,
+      customTheme: customTheme,
+    },
+  };
+};
+
+export const noConfigError = {
+  status: 500,
+  title: 'No Config is provided.',
+  subTitle: 'Pass the required config as prop.',
+};
+
+export const tooManyRequestError = (reset) => {
+  return {
+    status: 429,
+    title: 'Too Many Requests.',
+    subTitle: (
+      <p>
+        Oh no, you hit the{' '}
+        <a
+          href="https://developer.github.com/v3/rate_limit/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          rate limit.
+        </a>
+        ! Try again later{` ${reset}`}.
+      </p>
+    ),
+  };
+};
+
+export const notFoundError = {
+  status: 404,
+  title: 'The Github Username is Incorrect.',
+  subTitle: (
+    <p>
+      Please provide correct github username in <code>config</code>.
+    </p>
+  ),
+};
+
+export const genericError = {
+  status: 500,
+  title: 'Ops!!',
+  subTitle: 'Something went wrong.',
 };

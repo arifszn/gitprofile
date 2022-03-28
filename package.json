@@ -1,7 +1,6 @@
 {
-  "name": "gitprofile",
-  "description": "Kickstart your personal portfolio with Github Api and blog",
-  "private": true,
+  "name": "@arifszn/gitprofile",
+  "description": "Create an automatic portfolio based on GitHub profile",
   "version": "2.0.0",
   "license": "Apache-2.0",
   "author": "arifszn",
@@ -9,10 +8,30 @@
     "type": "git",
     "url": "https://github.com/arifszn/gitprofile.git"
   },
+  "bugs": {
+    "url": "https://github.com/arifszn/gitprofile/issues"
+  },
+  "files": [
+    "dist/gitprofile.es.js",
+    "dist/gitprofile.umd.js",
+    "dist/style.css",
+    "types"
+  ],
+  "main": "./dist/gitprofile.umd.js",
+  "module": "./dist/gitprofile.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/gitprofile.es.js",
+      "require": "./dist/gitprofile.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "typings": "./types/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "build:library": "vite build --config library.config.js",
     "lint": "eslint --ext .js,.jsx .",
     "lint:fix": "eslint --ext .js,.jsx --fix .",
     "prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
@@ -43,9 +62,14 @@
     "vite": "^2.8.0"
   },
   "keywords": [
+    "git-profile",
+    "gitprofile",
+    "gitportfolio",
     "personal-site",
     "template",
     "portfolio",
+    "resume",
+    "cv",
     "personal-website",
     "portfolio-website",
     "portfolio-site",
@@ -54,7 +78,13 @@
     "developer-portfolio",
     "portfolio-project",
     "github-portfolio",
+    "tailwind-portfolio",
+    "vite-portfolio",
+    "projects",
+    "open-source",
+    "git",
     "react-portfolio",
+    "github",
     "github-api"
   ]
 }

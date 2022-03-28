@@ -76,8 +76,8 @@ const config = {
       to: '2012',
     },
   ],
+  // Display blog posts from your medium or dev.to account. (Optional)
   blog: {
-    // Display blog posts from your medium or dev.to account. (Optional)
     source: 'dev.to', // medium | dev.to
     username: 'arifszn',
     limit: 3, // How many posts to display. Max is 10.
@@ -91,14 +91,14 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    default: 'corporate',
+    defaultTheme: 'corporate',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
     disableSwitch: false,
 
-    // Should we use the prefers-color-scheme media-query,
-    // using user system preferences, instead of the hardcoded default
+    // Should use the prefers-color-scheme media-query,
+    // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: false,
 
     // Available themes. To remove any theme, exclude from here.
@@ -137,15 +137,13 @@ const config = {
 
     // Custom theme
     customTheme: {
-      procyon: {
-        primary: '#fc055b',
-        secondary: '#219aaf',
-        accent: '#e8d03a',
-        neutral: '#2A2730',
-        'base-100': '#E3E3ED',
-        '--rounded-box': '3rem',
-        '--rounded-btn': '3rem',
-      },
+      primary: '#fc055b',
+      secondary: '#219aaf',
+      accent: '#e8d03a',
+      neutral: '#2A2730',
+      'base-100': '#E3E3ED',
+      '--rounded-box': '3rem',
+      '--rounded-btn': '3rem',
     },
   },
 };

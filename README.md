@@ -1,14 +1,20 @@
-<p align="center">
-  <a href="http://arifszn.github.io/gitprofile" target="_blank">
-    <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/logo.png" alt="GitProfile" title="GitProfile" width="50">
-  </a>
-</p>
-
 <h1 align="center">GitProfile</h1>
-<p align="center">A modern, responsive and customizable portfolio builder for Developers!</p>
-<p align="center">https://arifszn.github.io/gitprofile</p>
+<p align="center">Easy to use portfolio builder for every GitHub user!</p>
 
-<br/>
+<p align="center">
+<a href="https://www.npmjs.com/package/@arifszn/gitprofile">
+  <img src="https://img.shields.io/npm/v/@arifszn/gitprofile"/>
+</a>
+<a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
+  <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
+</a>
+<a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE">
+  <img src="https://img.shields.io/github/license/arifszn/gitprofile"/>
+</a>
+<a href="https://twitter.com/intent/tweet?text=Check%20out%20the%20portfolio%20builder.%20Create%20an%20automatic%20portfolio%20based%20on%20GitHub%20profile.&url=https://github.com/arifszn/gitprofile&hashtags=javascript,opensource,js,webdev,developers">
+  <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"/>
+</a>
+</p>
 
 <p align="center">
   <a href="https://arifszn.github.io/gitprofile">
@@ -18,14 +24,16 @@
   <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
 </p>
 
-**GitProfile** is an easy-to-customize personal dev portfolio builder that is created with React.js. When you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and public repositories. Also, it includes space to highlight your details, job history, education history, skills, and recent blog posts.
+What if you could create your portfolio in 5 minutes just by providing your GitHub username and even host it without any cost? Do you want to display your skills, job history, education, or even blog posts on your website? Introducing **GitProfile**.
 
-It's all possible using [GitHub API](https://developer.github.com/v3/) (for automatically populating your website with content) and [Article-api](https://github.com/arifszn/article-api) (for fetching recent blog posts).
+**GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. It is built using React.js on top of Vite.js. But it's not necessary to have knowledge on these to get you started. You can make your own copy with zero coding experience.
+
+**Features:**
 
 ✓ [30 Themes](#themes)\
 ✓ [Google Analytics](#google-analytics)\
 ✓ [Hotjar](#hotjar)\
-✓ [Meta Tags](#meta-tags)\
+✓ [SEO](#seo)\
 ✓ [Avatar and Bio](#avatar-and-bio)\
 ✓ [Social Links](#social-links)\
 ✓ [Skills](#skills)\
@@ -36,12 +44,52 @@ It's all possible using [GitHub API](https://developer.github.com/v3/) (for auto
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
+![Preview](https://arifszn.github.io/assets/img/hosted/gitprofile/preview.png)
+
 ## 🛠 Installation & Set Up
+
+There are two ways to use **GitProfile**.
+
+- Installing as a NPM package.
+- Forking this repo.
+
+### Installing as a NPM package
+
+Install via <a href="https://www.npmjs.com/package/@arifszn/gitprofile">NPM</a>
+
+```
+npm install @arifszn/gitprofile
+```
+
+Then, import the package, import and style and provide the config.
+
+```js
+import GitProfile from '@arifszn/gitprofile';
+import '@arifszn/gitprofile/dist/style.css';
+
+function App() {
+  return (
+    <GitProfile
+      config={{
+        github: {
+          username: 'arifszn',
+        },
+      }}
+    />
+  );
+}
+
+export default App;
+```
+
+List of all config [here](#-customization).
+
+### Forking this repo
 
 These instructions will get you a copy of the project and deploy your website online!
 
 - **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repo so you have your own project to customize by clicking the fork icon on the top right side. A "fork" is a copy of a repository.
-- Rename your forked repository to `username.github.io` in github, where `username` is your GitHub username (or organization name).
+- Rename your forked repository to `username.github.io` in GitHub, where `username` is your GitHub username (or organization name).
 - Go to your repo's **Actions** page and enable workflows.
 
   ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
@@ -74,13 +122,9 @@ As this is a vite project, you can also host your website to Netlify, Vercel, He
 
 All the magic happens in the file `gitprofile.config.js`. Open it and modify it according to your preference.
 
-These are the default values:
-
-<details>
-<summary>gitprofile.config.js</summary>
-
 ```js
 // gitprofile.config.js
+
 const config = {
   github: {
     username: 'arifszn', // Your GitHub org/user name. (Required)
@@ -132,8 +176,8 @@ const config = {
       to: '2014',
     },
   ],
+  // Display blog posts from your medium or dev.to account. (Optional)
   blog: {
-    // Display blog posts from your medium or dev.to account. (Optional)
     source: 'dev.to', // medium | dev.to
     username: 'arifszn',
     limit: 5, // How many posts to display. Max is 10.
@@ -147,14 +191,14 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    default: 'light',
+    defaultTheme: 'light',
 
     // Hides the theme change switch
     // Useful if you want to support a single color mode
     disableSwitch: false,
 
-    // Should we use the prefers-color-scheme media-query,
-    // using user system preferences, instead of the hardcoded default
+    // Should use the prefers-color-scheme media-query,
+    // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: true,
 
     // Available themes. To remove any theme, exclude from here.
@@ -193,21 +237,17 @@ const config = {
 
     // Custom theme
     customTheme: {
-      procyon: {
-        primary: '#fc055b',
-        secondary: '#219aaf',
-        accent: '#e8d03a',
-        neutral: '#2A2730',
-        'base-100': '#E3E3ED',
-        '--rounded-box': '3rem',
-        '--rounded-btn': '3rem',
-      },
+      primary: '#fc055b',
+      secondary: '#219aaf',
+      accent: '#e8d03a',
+      neutral: '#2A2730',
+      'base-100': '#E3E3ED',
+      '--rounded-box': '3rem',
+      '--rounded-btn': '3rem',
     },
   },
 };
 ```
-
-</details>
 
 ### Themes
 
@@ -220,13 +260,15 @@ The default theme can be specified.
 module.exports = {
   // ...
   themeConfig: {
-    default: 'light',
+    defaultTheme: 'light',
     // ...
   },
 };
 ```
 
-You can create your own custom theme by modifying these values:
+![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/gitprofile/theme-dropdown.png)
+
+You can create your own custom theme by modifying these values. Theme `procyon` will have the custom styles.
 
 ```js
 // gitprofile.config.js
@@ -234,34 +276,28 @@ module.exports = {
   // ...
   themeConfig: {
     customTheme: {
-      procyon: {
-        primary: '#fc055b',
-        secondary: '#219aaf',
-        accent: '#e8d03a',
-        neutral: '#2A2730',
-        'base-100': '#E3E3ED',
-        '--rounded-box': '3rem',
-        '--rounded-btn': '3rem',
-      },
+      primary: '#fc055b',
+      secondary: '#219aaf',
+      accent: '#e8d03a',
+      neutral: '#2A2730',
+      'base-100': '#E3E3ED',
+      '--rounded-box': '3rem',
+      '--rounded-btn': '3rem',
     },
     // ...
   },
 };
 ```
 
-![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/gitprofile/themes-1.png)
+![Theme Procyon](https://arifszn.github.io/assets/img/hosted/gitprofile/theme-procyon.png)
 
-Here are some screenshots of different themes.\
-<br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/gitprofile/themes-2.png)\
-<br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/gitprofile/themes-6.png)\
-<br/>
-![Themes](https://arifszn.github.io/assets/img/hosted/gitprofile/themes-7.png)
+![Theme Garden](https://arifszn.github.io/assets/img/hosted/gitprofile/theme-garden.png)
+
+![Theme Night](https://arifszn.github.io/assets/img/hosted/gitprofile/theme-night.png)
 
 ### Google Analytics
 
-ezFolio supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
+**GitProfile** supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
 
 ```js
 // gitprofile.config.js
@@ -273,13 +309,11 @@ module.exports = {
 };
 ```
 
-Besides tracking visitors, ezFolio will track click events on projects and blog posts, and send them to Google Analytics.\
-<br/>
-![Event](https://www.arifszn.com/assets/img/hosted/gitprofile/event.png)
+Besides tracking visitors, it will track `click events` on projects and blog posts, and send them to Google Analytics.
 
 ### Hotjar
 
-GitProfile supports hotjar. If you do not want to use Hotjar, keep the `id` empty.
+**GitProfile** supports hotjar. If you do not want to use Hotjar, keep the `id` empty.
 
 ```js
 // gitprofile.config.js
@@ -292,19 +326,17 @@ module.exports = {
 };
 ```
 
-### Meta Tags
+### SEO
 
-Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public\index.html`.
+Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public/index.html`.
 
 ### Avatar and Bio
 
-Your github avatar and bio will be displayed here.\
-<br/>
-![Avatar Bio](https://arifszn.github.io/assets/img/hosted/gitprofile/avatar-card.png)
+Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-GitProfile supports linking your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -395,7 +427,7 @@ Empty array will hide the education section.
 
 ### Projects
 
-Your public repo from github will be displayed here automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
+Your public repo from GitHub will be displayed here automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
 
 ```js
 // gitprofile.config.js
@@ -432,10 +464,6 @@ module.exports = {
 ![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
 
 The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
-
-## 📢 Please Read
-
-I intend to keep my works open source. Please do not discourage me by claiming this work by copying it as your own. However, You are open to use this project by forking it and change any code necessary by giving attribute to the original author. Please see this [issue](https://github.com/arifszn/gitprofile/issues/11) for more info.
 
 ## 💖 Support
 
