@@ -50,10 +50,10 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 There are two ways to use **GitProfile**.
 
-- Installing as a NPM package.
+- Installing as an NPM package.
 - Forking this repo.
 
-### Installing as a NPM package
+### Installing as an NPM package
 
 Install via <a href="https://www.npmjs.com/package/@arifszn/gitprofile">NPM</a>
 
