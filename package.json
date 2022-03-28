@@ -1,13 +1,16 @@
 {
   "name": "gitprofile",
-  "description": "Kickstart your personal portfolio with Github Api and blog",
-  "private": true,
+  "description": "Create an automatic portfolio based on GitHub profile",
+  "private": false,
   "version": "2.0.0",
   "license": "Apache-2.0",
   "author": "arifszn",
   "repository": {
     "type": "git",
     "url": "https://github.com/arifszn/gitprofile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arifszn/gitprofile/issues"
   },
   "files": [
     "dist/gitprofile.es.js",
@@ -60,9 +63,14 @@
     "vite": "^2.8.0"
   },
   "keywords": [
+    "git-profile",
+    "gitprofile",
+    "gitportfolio",
     "personal-site",
     "template",
     "portfolio",
+    "resume",
+    "cv",
     "personal-website",
     "portfolio-website",
     "portfolio-site",
@@ -71,7 +79,13 @@
     "developer-portfolio",
     "portfolio-project",
     "github-portfolio",
+    "tailwind-portfolio",
+    "vite-portfolio",
+    "projects",
+    "open-source",
+    "git",
     "react-portfolio",
+    "github",
     "github-api"
   ]
 }
