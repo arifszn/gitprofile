@@ -8,9 +8,9 @@ const ListItem = ({ time, position, company }) => (
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs opacity-80">{time}</div>
-    <h3 className="font-semibold opacity-90">{position}</h3>
-    <div className="mb-4 font-normal opacity-90">{company}</div>
+    <div className="my-0.5 text-xs">{time}</div>
+    <h3 className="font-semibold">{position}</h3>
+    <div className="mb-4 font-normal">{company}</div>
   </li>
 );
 
