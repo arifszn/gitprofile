@@ -44,6 +44,8 @@ What if you could create your portfolio in 5 minutes just by providing your GitH
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
+Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
+
 ![Preview](https://arifszn.github.io/assets/img/hosted/gitprofile/preview.png)
 
 ## 🛠 Installation & Set Up
@@ -142,7 +144,7 @@ const config = {
     dribbble: '',
     behance: '',
     medium: '',
-    devto: '',
+    dev: '',
     website: '',
     phone: '',
     email: '',
@@ -176,9 +178,9 @@ const config = {
       to: '2014',
     },
   ],
-  // Display blog posts from your medium or dev.to account. (Optional)
+  // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev.to', // medium | dev.to
+    source: 'dev', // medium | dev
     username: 'arifszn',
     limit: 5, // How many posts to display. Max is 10.
   },
@@ -336,7 +338,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -349,7 +351,7 @@ module.exports = {
     dribbble: '',
     behance: '',
     medium: '',
-    devto: '',
+    dev: '',
     website: 'https://arifszn.github.io',
     phone: '',
     email: '',
@@ -447,14 +449,14 @@ module.exports = {
 
 ### Blog Posts
 
-If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is `10`).
+If you have [medium](https://medium.com) or [dev](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev username. You can limit how many posts to display (Max is `10`).
 
 ```js
 // gitprofile.config.js
 module.exports = {
   // ...
   blog: {
-    source: 'dev.to',
+    source: 'dev',
     username: 'arifszn',
     limit: 5,
   },
@@ -463,7 +465,7 @@ module.exports = {
 
 ![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
 
-The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
+The posts are fetched by [Blog-js](https://github.com/arifszn/blog-js).
 
 ## 💖 Support
 

@@ -17,7 +17,7 @@ const config = {
     dribbble: '',
     behance: '',
     medium: '',
-    devto: 'arifszn',
+    dev: 'arifszn',
     website: 'https://arifszn.github.io',
     phone: '',
     email: 'arifulalamszn@gmail.com',
@@ -76,9 +76,9 @@ const config = {
       to: '2012',
     },
   ],
-  // Display blog posts from your medium or dev.to account. (Optional)
+  // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev.to', // medium | dev.to
+    source: 'dev', // medium | dev
     username: 'arifszn',
     limit: 3, // How many posts to display. Max is 10.
   },

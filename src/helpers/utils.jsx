@@ -206,10 +206,10 @@ export const sanitizeConfig = (config) => {
         typeof config.social.medium !== 'undefined'
           ? config.social.medium
           : '',
-      devto:
+      dev:
         typeof config.social !== 'undefined' &&
-        typeof config.social.devto !== 'undefined'
-          ? config.social.devto
+        typeof config.social.dev !== 'undefined'
+          ? config.social.dev
           : '',
       website:
         typeof config.social !== 'undefined' &&

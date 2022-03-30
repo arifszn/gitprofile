@@ -70,9 +70,9 @@ export interface Social {
   medium?: string;
 
   /**
-   * dev.to
+   * dev
    */
-  devto?: string;
+  dev?: string;
 
   /**
    * Website
@@ -92,7 +92,7 @@ export interface Social {
 
 export interface Blog {
   /**
-   * medium | dev.to
+   * medium | dev
    */
   source?: string;
 
