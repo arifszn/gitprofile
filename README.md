@@ -142,7 +142,7 @@ const config = {
     dribbble: '',
     behance: '',
     medium: '',
-    devto: '',
+    dev: '',
     website: '',
     phone: '',
     email: '',
@@ -463,7 +463,7 @@ module.exports = {
 
 ![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
 
-The posts are fetched by [Article-api](https://github.com/arifszn/article-api).
+The posts are fetched by [Blog-js](https://github.com/arifszn/blog-js).
 
 ## 💖 Support
 

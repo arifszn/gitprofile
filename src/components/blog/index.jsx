@@ -1,9 +1,9 @@
-import { getDevtoArticle, getMediumArticle } from 'article-api';
 import moment from 'moment';
 import { Fragment, useEffect, useState } from 'react';
 import { ga, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
 import PropTypes from 'prop-types';
+import { getDevPost, getMediumPost } from '@arifszn/blog-js';
 
 const displaySection = (blog) => {
   if (
@@ -25,13 +25,13 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
   useEffect(() => {
     if (displaySection(blog)) {
       if (blog.source === 'medium') {
-        getMediumArticle({
+        getMediumPost({
           user: blog.username,
         }).then((res) => {
           setArticles(res);
         });
       } else if (blog.source === 'dev.to') {
-        getDevtoArticle({
+        getDevPost({
           user: blog.username,
         }).then((res) => {
           setArticles(res);
