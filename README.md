@@ -44,6 +44,8 @@ What if you could create your portfolio in 5 minutes just by providing your GitH
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
+Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
+
 ![Preview](https://arifszn.github.io/assets/img/hosted/gitprofile/preview.png)
 
 ## 🛠 Installation & Set Up
