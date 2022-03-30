@@ -176,9 +176,9 @@ const config = {
       to: '2014',
     },
   ],
-  // Display blog posts from your medium or dev.to account. (Optional)
+  // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev.to', // medium | dev.to
+    source: 'dev', // medium | dev
     username: 'arifszn',
     limit: 5, // How many posts to display. Max is 10.
   },
@@ -336,7 +336,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev.to, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Dribbble, Behance, Medium, dev, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -349,7 +349,7 @@ module.exports = {
     dribbble: '',
     behance: '',
     medium: '',
-    devto: '',
+    dev: '',
     website: 'https://arifszn.github.io',
     phone: '',
     email: '',
@@ -447,14 +447,14 @@ module.exports = {
 
 ### Blog Posts
 
-If you have [medium](https://medium.com) or [dev.to](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev.to username. You can limit how many posts to display (Max is `10`).
+If you have [medium](https://medium.com) or [dev](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev username. You can limit how many posts to display (Max is `10`).
 
 ```js
 // gitprofile.config.js
 module.exports = {
   // ...
   blog: {
-    source: 'dev.to',
+    source: 'dev',
     username: 'arifszn',
     limit: 5,
   },

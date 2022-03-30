@@ -30,7 +30,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
         }).then((res) => {
           setArticles(res);
         });
-      } else if (blog.source === 'dev.to') {
+      } else if (blog.source === 'dev') {
         getDevPost({
           user: blog.username,
         }).then((res) => {

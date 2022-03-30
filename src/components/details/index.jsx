@@ -136,12 +136,12 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://medium.com/@${social.medium}`}
                 />
               )}
-              {typeof social.devto !== 'undefined' && social.devto && (
+              {typeof social.dev !== 'undefined' && social.dev && (
                 <ListItem
                   icon={<FaDev className="mr-2" />}
                   title="Dev:"
-                  value={social.devto}
-                  link={`https://dev.to/${social.devto}`}
+                  value={social.dev}
+                  link={`https://dev.to/${social.dev}`}
                 />
               )}
               {typeof social.website !== 'undefined' && social.website && (
