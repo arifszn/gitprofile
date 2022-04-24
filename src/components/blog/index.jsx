@@ -3,6 +3,7 @@ import { Fragment, useEffect, useState } from 'react';
 import { ga, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
 import PropTypes from 'prop-types';
+import { AiOutlineContainer } from 'react-icons/ai';
 import { getDevPost, getMediumPost } from '@arifszn/blog-js';
 
 const displaySection = (blog) => {
@@ -98,8 +99,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
   };
 
   const renderArticles = () => {
-    return (
-      articles &&
+    return articles && articles.length ? (
       articles.slice(0, blog.limit).map((article, index) => (
         <a
           className="card shadow-lg compact bg-base-100 cursor-pointer"
@@ -169,6 +169,11 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
           </div>
         </a>
       ))
+    ) : (
+      <div className="text-center mb-6">
+        <AiOutlineContainer className="mx-auto h-12 w-12 opacity-30" />
+        <p className="mt-1 text-sm opacity-50">No recent post</p>
+      </div>
     );
   };
 
@@ -178,7 +183,13 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
         <div className="col-span-1 lg:col-span-2">
           <div className="grid grid-cols-2 gap-6">
             <div className="col-span-2">
-              <div className="card compact shadow-sm glass">
+              <div
+                className={`card compact ${
+                  loading || (articles && articles.length)
+                    ? 'bg-gradient-to-b to-base-300 from-base-100'
+                    : 'bg-base-100 shadow-lg'
+                }`}
+              >
                 <div className="card-body">
                   <div className="mx-3 mb-2">
                     <h5 className="card-title">
