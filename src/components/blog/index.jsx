@@ -186,7 +186,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
               <div
                 className={`card compact ${
                   loading || (articles && articles.length)
-                    ? 'bg-gradient-to-br to-base-300 from-base-100'
+                    ? 'bg-gradient-to-br to-base-200 from-base-100 shadow'
                     : 'bg-base-100 shadow-lg'
                 }`}
               >
