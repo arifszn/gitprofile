@@ -1,0 +1,14 @@
+public
+src
+.eslintignore
+.eslintrc.js
+.prettierignore
+.prettierrc
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+gitprofile.config.js
+index.html
+library.config.js
+tailwind.config.js
+vite.config.js
+stats.html

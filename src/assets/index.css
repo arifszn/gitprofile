@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 966px) {
+  ::-webkit-scrollbar,
+  .scroller {
+    width: 8px;
+    height: 8px;
+    background-color: #f1f1f1;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.text-base-content-important {
+  color: hsla(var(--bc) / var(--tw-text-opacity)) !important;
+}
+
+svg {
+  vertical-align: unset;
+}
+
+.z-hover {
+  transition: all ease-in-out 0.3s !important;
+}
+
+.z-hover:hover,
+.z-hover:focus,
+.z-hover:active {
+  transition: transform 0.3s !important;
+  -ms-transform: scale(1.01) !important;
+  -webkit-transform: scale(1.01) !important;
+  transform: scale(1.01) !important;
+}
+
+.pb-0-important {
+  padding-bottom: 0 !important;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
