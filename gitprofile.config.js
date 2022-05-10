@@ -49,12 +49,6 @@ const config = {
       from: 'July 2019',
       to: 'August 2021',
     },
-    {
-      company: 'Techvillage',
-      position: 'Jr. Software Engineer',
-      from: 'January 2019',
-      to: ' June 2019',
-    },
   ],
   education: [
     {

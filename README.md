@@ -1,19 +1,16 @@
 <h1 align="center">GitProfile</h1>
-<p align="center">Easy to use portfolio builder for every GitHub user!</p>
+<p align="center">Easy to use automatic portfolio builder for every GitHub user!</p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/@arifszn/gitprofile">
-  <img src="https://img.shields.io/npm/v/@arifszn/gitprofile"/>
-</a>
-<a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
-  <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
-</a>
-<a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE">
-  <img src="https://img.shields.io/github/license/arifszn/gitprofile"/>
-</a>
-<a href="https://twitter.com/intent/tweet?text=Check%20out%20the%20portfolio%20builder.%20Create%20an%20automatic%20portfolio%20based%20on%20GitHub%20profile.&url=https://github.com/arifszn/gitprofile&hashtags=javascript,opensource,js,webdev,developers">
-  <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"/>
-</a>
+  <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
+  </a>
+  <a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/arifszn/gitprofile"/>
+  </a>
+  <a href="https://twitter.com/intent/tweet?text=Check%20out%20the%20portfolio%20builder.%20Create%20an%20automatic%20portfolio%20based%20on%20GitHub%20profile.&url=https://github.com/arifszn/gitprofile&hashtags=javascript,opensource,js,webdev,developers">
+    <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"/>
+  </a>
 </p>
 
 <p align="center">
@@ -24,43 +21,89 @@
   <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
 </p>
 
-What if you could create your portfolio in 5 minutes just by providing your GitHub username and even host it without any cost? Do you want to display your skills, job history, education, or even blog posts on your website? Introducing **GitProfile**.
+What if you could create your portfolio in 5 minutes just by providing your GitHub username and even host it without any cost? Do you want to display your skills, job history, education, or blog posts on your portfolio? Introducing **GitProfile**.
 
 **GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. It is built using React.js on top of Vite.js. But it's not necessary to have knowledge on these to get you started. You can make your own copy with zero coding experience.
 
 **Features:**
 
-✓ [30 Themes](#themes)\
-✓ [Google Analytics](#google-analytics)\
-✓ [Hotjar](#hotjar)\
-✓ [SEO](#seo)\
-✓ [Avatar and Bio](#avatar-and-bio)\
-✓ [Social Links](#social-links)\
-✓ [Skills](#skills)\
-✓ [Experience](#experience)\
-✓ [Education](#education)\
-✓ [Projects](#projects)\
+✓ [Easy to Setup](#-installation--set-up)  
+✓ [30 Themes](#themes)  
+✓ [Google Analytics](#google-analytics)  
+✓ [Hotjar](#hotjar)  
+✓ [SEO](#seo)  
+✓ [Avatar and Bio](#avatar-and-bio)  
+✓ [Social Links](#social-links)  
+✓ [Skills](#skills)  
+✓ [Experience](#experience)  
+✓ [Education](#education)  
+✓ [Projects](#projects)  
 ✓ [Blog Posts](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
-![Preview](https://arifszn.github.io/assets/img/hosted/gitprofile/preview.png)
-
 ## 🛠 Installation & Set Up
 
-There are two ways to use **GitProfile**.
+There are two ways to use **GitProfile**. Use either one.
 
-- Installing as an NPM package.
-- Forking this repo.
+<details>
+<summary>Forking this repo (Click to expand)</summary>
 
-### Installing as an NPM package
+<br/>
 
-Install via <a href="https://www.npmjs.com/package/@arifszn/gitprofile">NPM</a>
+These instructions will get you a copy of the project and deploy your portfolio online!
 
-```
+- **Fork repo:** Click [here](https://github.com/arifszn/gitprofile/fork) to fork the repo so you have your own project to customize. A "fork" is a copy of a repository.
+- **Rename repo:** Rename your forked repository to `username.github.io` in GitHub, where `username` is your GitHub username (or organization name).
+- **Workflow permissions:** Go to your forked repo's settings. Select **Actions** ➜ **General**. In **Workflow permissions** section, select `Read and write permissions`.
+- **Enable workflows:** Go to your repo's **Actions** page and enable workflows.
+
+  ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
+
+- **Base Value:** Open `vite.config.js`, and change `base`'s value.
+
+  - If you are deploying to `https://<USERNAME>.github.io/`, set `base` to `'/'`.
+
+  - If you are deploying to `https://<USERNAME>.github.io/<REPO>/`, for example your repository is at `https://github.com/<USERNAME>/<REPO>`, then set `base` to `'/<REPO>/'`.
+
+  ```js
+  // vite.config.js
+  {
+    base: '/',
+    // ...
+  }
+  ```
+
+- **First Commit:** Now commit to your **main** branch with your changes. The CI/CD pipeline will publish your page at the `gh-pages` branch automatically.
+- **Change deploy branch:** Go to your repo's **Settings** ➜ **Pages** ➜ **Source** and change the branch to `gh-pages` and click **save**.
+
+Your personal portfolio will be live at `username.github.io`. Any time you commit a change to the **main** branch, the website will be automatically updated.
+
+If you see only `README` at `username.github.io`, be sure to change your GitHub Page's source to `gh-pages` branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Also, if you face any issue rendering the website, double-check the `base` value in the `vite.config.js`.
+
+As this is a vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+
+</details>
+
+Or
+
+<details>
+<summary>Installing as package (Click to expand)</summary>
+
+<br/>
+
+First Install **GitProfile** via <a href="https://www.npmjs.com/package/@arifszn/gitprofile">NPM</a>.
+
+```sh
 npm install @arifszn/gitprofile
+```
+
+Or via <a href="https://yarnpkg.com/package/@arifszn/gitprofile">Yarn</a>.
+
+```sh
+yarn add @arifszn/gitprofile
 ```
 
 Then, import the package, import and style and provide the config.
@@ -86,39 +129,7 @@ export default App;
 
 List of all config [here](#-customization).
 
-### Forking this repo
-
-These instructions will get you a copy of the project and deploy your website online!
-
-- **[Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo)** the repo so you have your own project to customize by clicking the fork icon on the top right side. A "fork" is a copy of a repository.
-- Rename your forked repository to `username.github.io` in GitHub, where `username` is your GitHub username (or organization name).
-- Go to your repo's **Actions** page and enable workflows.
-
-  ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
-
-- Open `vite.config.js`, and change `base`'s value.
-
-  - If you are deploying to `https://<USERNAME>.github.io/`, set `base` to `'/'`.
-
-  - If you are deploying to `https://<USERNAME>.github.io/<REPO>/`, for example your repository is at `https://github.com/<USERNAME>/<REPO>`, then set `base` to `'/<REPO>/'`.
-
-  ```js
-  // vite.config.js
-  {
-    base: '/',
-    // ...
-  }
-  ```
-
-- Now commit to your **main** branch with your changes.
-- The CI/CD pipeline will publish your page at the gh-pages branch automatically.
-- Go to your repo's **Settings** -> **Pages** -> **Source** and change the branch to gh-pages and click **save**.
-- Your personal portfolio will be live at `username.github.io`.
-- Any time you commit a change to the **main** branch, the website will be automatically updated.
-
-If you see only `README` at `username.github.io`, be sure to change your GitHub Page's source to `gh-pages` branch. See [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Also, if you face any issue rendering the website, double-check the `base` value in the `vite.config.js`.
-
-As this is a vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+</details>
 
 ## 🎨 Customization
 
@@ -268,7 +279,9 @@ module.exports = {
 };
 ```
 
-![Theme Dropdown](https://arifszn.github.io/assets/img/hosted/gitprofile/theme-dropdown.png)
+<p align="center">
+  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/theme-dropdown.png" alt="Theme Dropdown" width="50%">
+</p>
 
 You can create your own custom theme by modifying these values. Theme `procyon` will have the custom styles.
 
@@ -291,11 +304,9 @@ module.exports = {
 };
 ```
 
-![Theme Procyon](https://arifszn.github.io/assets/img/hosted/gitprofile/theme-procyon.png)
-
-![Theme Garden](https://arifszn.github.io/assets/img/hosted/gitprofile/theme-garden.png)
-
-![Theme Night](https://arifszn.github.io/assets/img/hosted/gitprofile/theme-night.png)
+<p align="center">
+  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
+</p>
 
 ### Google Analytics
 
