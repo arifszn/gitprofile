@@ -28,13 +28,20 @@ const config = {
     'MongoDB',
     "MySQL",
     'Discord.js',
-    'VMware',
-    'Ubuntu',
     'Node.js',
-    'Git',
+    'VMware',
+    'Proxmox',
+    'Ubuntu',
     'HTML5',
+    'Git'
   ],
   experiences: [
+    {
+      company: 'University of Wisconsin Milwaukee',
+      position: 'Maintenance - University Housing',
+      from: 'May 2022',
+      to: 'Present'
+    },
     {
       company: 'University of Wisconsin Milwaukee',
       position: 'Audio Visual Technician',
@@ -66,7 +73,7 @@ const config = {
   blog: {
     source: 'dev', // medium | dev
     username: 'nathen418',
-    limit: 3, // How many posts to display. Max is 10.
+    limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
     // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
