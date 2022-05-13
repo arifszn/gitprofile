@@ -44,8 +44,8 @@ const config = {
       to: 'Present',
     },
     {
-      company: 'Orangetoolz',
-      position: 'Jr. Full Stack Engineer',
+      company: 'My Offer 360 Degree',
+      position: 'Web Application Developer',
       from: 'July 2019',
       to: 'August 2021',
     },
