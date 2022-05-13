@@ -27,7 +27,7 @@ What if you could create your portfolio in 5 minutes just by providing your GitH
 
 **Features:**
 
-✓ [Easy to Setup](#-installation--set-up)  
+✓ [Easy to Setup](#-installation--setup)  
 ✓ [30 Themes](#themes)  
 ✓ [Google Analytics](#google-analytics)  
 ✓ [Hotjar](#hotjar)  
@@ -44,7 +44,7 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
-## 🛠 Installation & Set Up
+## 🛠 Installation & Setup
 
 There are two ways to use **GitProfile**. Use either one.
 
@@ -57,7 +57,6 @@ These instructions will get you a copy of the project and deploy your portfolio 
 
 - **Fork repo:** Click [here](https://github.com/arifszn/gitprofile/fork) to fork the repo so you have your own project to customize. A "fork" is a copy of a repository.
 - **Rename repo:** Rename your forked repository to `username.github.io` in GitHub, where `username` is your GitHub username (or organization name).
-- **Workflow permissions:** Go to your forked repo's settings. Select **Actions** ➜ **General**. In **Workflow permissions** section, select `Read and write permissions` and click **save**..
 - **Enable workflows:** Go to your repo's **Actions** page and enable workflows.
 
   ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
