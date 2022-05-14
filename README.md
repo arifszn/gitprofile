@@ -130,6 +130,8 @@ List of all config [here](#-customization).
 
 </details>
 
+**If you face any problems or have any questions, open an issue [here](https://github.com/arifszn/gitprofile/issues).**
+
 ## 🎨 Customization
 
 All the magic happens in the file `gitprofile.config.js`. Open it and modify it according to your preference.
@@ -177,13 +179,13 @@ const config = {
   education: [
     {
       institution: 'Institution name 1',
-      degree: 'Bachelor of Science',
+      degree: 'ABC',
       from: '2015',
       to: '2019',
     },
     {
       institution: 'Institution name 2',
-      degree: 'Higher Secondary Certificate (HSC)',
+      degree: 'XYZ',
       from: '2012',
       to: '2014',
     },
