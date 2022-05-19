@@ -1,10 +1,10 @@
-import moment from 'moment';
 import { Fragment, useEffect, useState } from 'react';
 import { ga, skeleton } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
 import PropTypes from 'prop-types';
 import { AiOutlineContainer } from 'react-icons/ai';
 import { getDevPost, getMediumPost } from '@arifszn/blog-js';
+import { formatDistance } from 'date-fns';
 
 const displaySection = (blog) => {
   if (
@@ -147,7 +147,9 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
                       {article.title}
                     </h2>
                     <p className="opacity-50 text-xs">
-                      {moment(article.publishedAt).fromNow()}
+                      {formatDistance(article.publishedAt, new Date(), {
+                        addSuffix: true,
+                      })}
                     </p>
                     <p className="mt-3 text-base-content text-opacity-60 text-sm">
                       {article.description}

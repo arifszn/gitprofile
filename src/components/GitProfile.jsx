@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { Fragment, useCallback, useEffect, useState } from 'react';
-import moment from 'moment';
 import HeadTagEditor from './head-tag-editor';
 import ErrorPage from './error-page';
 import ThemeChanger from './theme-changer';
@@ -23,6 +22,7 @@ import {
 import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import '../assets/index.css';
+import { formatDistance } from 'date-fns';
 
 const GitProfile = ({ config }) => {
   const [error, setError] = useState(
@@ -103,9 +103,13 @@ const GitProfile = ({ config }) => {
   const handleError = (error) => {
     console.error('Error:', error);
     try {
-      let reset = moment(
-        new Date(error.response.headers['x-ratelimit-reset'] * 1000)
-      ).fromNow();
+      let reset = formatDistance(
+        new Date(error.response.headers['x-ratelimit-reset'] * 1000),
+        new Date(),
+        {
+          addSuffix: true,
+        }
+      );
 
       if (error.response.status === 403) {
         setError(tooManyRequestError(reset));
@@ -129,7 +133,7 @@ const GitProfile = ({ config }) => {
           social={sanitizedConfig.social}
         />
       )}
-      <div className="fade-in h-screen">
+      <div className="fade-in">
         {error ? (
           <ErrorPage
             status={`${error.status}`}
