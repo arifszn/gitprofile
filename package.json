@@ -1,7 +1,7 @@
 {
   "name": "@arifszn/gitprofile",
   "description": "Create an automatic portfolio based on GitHub profile",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "license": "Apache-2.0",
   "author": "arifszn",
   "repository": {
