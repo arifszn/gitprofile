@@ -133,7 +133,7 @@ const GitProfile = ({ config }) => {
           social={sanitizedConfig.social}
         />
       )}
-      <div className="fade-in">
+      <div className="fade-in h-screen">
         {error ? (
           <ErrorPage
             status={`${error.status}`}
