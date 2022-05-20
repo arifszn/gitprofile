@@ -15,10 +15,8 @@
 
 <p align="center">
   <a href="https://arifszn.github.io/gitprofile">
-      <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/preview.gif" width="60%" alt="Preview"/>
+      <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/preview.gif" alt="Preview"/>
   </a>
-  <br/>
-  <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
 </p>
 
 What if you could create your portfolio in 5 minutes just by providing your GitHub username and even host it without any cost? Do you want to display your skills, job history, education, or blog posts on your portfolio? Introducing **GitProfile**.
