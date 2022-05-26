@@ -7,7 +7,7 @@ const config = {
     limit: 10, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
-      projects: ['laravel-ecommerce'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
@@ -28,9 +28,11 @@ const config = {
     'JavaScript',
     'React.js',
     'Node.js',
+    'Nest.js',
     'MySQL',
     'Git',
     'Docker',
+    'PHPUnit',
     'CSS',
     'Antd',
     'Tailwind',
