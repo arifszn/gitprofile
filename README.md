@@ -132,6 +132,11 @@ List of all config [here](#-customization).
 
 **If you face any problems or have any questions, open an issue [here](https://github.com/arifszn/gitprofile/issues).**
 
+### Setting up GitHub Pages Deployment
+
+  - Set your **GitHub pages** source to ***gh-pages*** branch.
+  - Edit the `vite.config.js` file's `base` property according to your needs. If you are deploying to `https://<USERNAME>.github.io`, set base to `'/'`. If you are deploying to `https://<USERNAME>.github.io/<REPO>/`, then set base to `'/<REPO>/'`.
+
 ## 🎨 Customization
 
 All the magic happens in the file `gitprofile.config.js`. Open it and modify it according to your preference.
