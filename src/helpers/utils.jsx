@@ -191,6 +191,11 @@ export const sanitizeConfig = (config) => {
         typeof config.social.facebook !== 'undefined'
           ? config.social.facebook
           : '',
+      instagram:
+        typeof config.social !== 'undefined' &&
+        typeof config.social.instagram !== 'undefined'
+          ? config.social.instagram
+          : '',
       dribbble:
         typeof config.social !== 'undefined' &&
         typeof config.social.dribbble !== 'undefined'

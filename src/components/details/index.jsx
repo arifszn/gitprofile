@@ -10,6 +10,7 @@ import {
   FaBuilding,
   FaDev,
   FaFacebook,
+  FaInstagram,
   FaGlobe,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
@@ -126,6 +127,14 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Facebook:"
                   value={social.facebook}
                   link={`https://www.facebook.com/${social.facebook}`}
+                />
+              )}
+              {typeof social.instagram !== 'undefined' && social.instagram && (
+                <ListItem
+                  icon={<FaInstagram className="mr-2" />}
+                  title="Instagram:"
+                  value={social.instagram}
+                  link={`https://www.instagram.com/${social.instagram}`}
                 />
               )}
               {typeof social.medium !== 'undefined' && social.medium && (

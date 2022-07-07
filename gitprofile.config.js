@@ -14,6 +14,7 @@ const config = {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
     facebook: '',
+    instagram: '',
     dribbble: '',
     behance: '',
     medium: '',

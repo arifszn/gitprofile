@@ -164,6 +164,7 @@ const config = {
     linkedin: '',
     twitter: '',
     facebook: '',
+    instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
