@@ -1,5 +1,9 @@
 import { MdLocationOn, MdMail } from 'react-icons/md';
-import { AiFillGithub, AiFillMediumSquare } from 'react-icons/ai';
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillMediumSquare,
+} from 'react-icons/ai';
 import { SiTwitter } from 'react-icons/si';
 import { GrLinkedinOption } from 'react-icons/gr';
 import { CgDribbble } from 'react-icons/cg';
@@ -10,7 +14,6 @@ import {
   FaBuilding,
   FaDev,
   FaFacebook,
-  FaInstagram,
   FaGlobe,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
@@ -131,7 +134,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {typeof social.instagram !== 'undefined' && social.instagram && (
                 <ListItem
-                  icon={<FaInstagram className="mr-2" />}
+                  icon={<AiFillInstagram className="mr-2" />}
                   title="Instagram:"
                   value={social.instagram}
                   link={`https://www.instagram.com/${social.instagram}`}
