@@ -372,6 +372,7 @@ module.exports = {
     linkedin: 'ariful-alam',
     twitter: 'arif_swozon',
     facebook: '',
+    instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
