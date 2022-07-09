@@ -370,14 +370,14 @@ module.exports = {
   // ...
   social: {
     linkedin: 'ariful-alam',
-    twitter: 'arif_swozon',
+    twitter: 'arif_szn',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
     dev: '',
-    website: 'https://arifszn.github.io',
+    website: '',
     phone: '',
     email: '',
   },
