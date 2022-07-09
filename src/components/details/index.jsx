@@ -1,5 +1,9 @@
 import { MdLocationOn, MdMail } from 'react-icons/md';
-import { AiFillGithub, AiFillMediumSquare } from 'react-icons/ai';
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillMediumSquare,
+} from 'react-icons/ai';
 import { SiTwitter } from 'react-icons/si';
 import { GrLinkedinOption } from 'react-icons/gr';
 import { CgDribbble } from 'react-icons/cg';
@@ -126,6 +130,14 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Facebook:"
                   value={social.facebook}
                   link={`https://www.facebook.com/${social.facebook}`}
+                />
+              )}
+              {typeof social.instagram !== 'undefined' && social.instagram && (
+                <ListItem
+                  icon={<AiFillInstagram className="mr-2" />}
+                  title="Instagram:"
+                  value={social.instagram}
+                  link={`https://www.instagram.com/${social.instagram}`}
                 />
               )}
               {typeof social.medium !== 'undefined' && social.medium && (
