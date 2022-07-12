@@ -46,6 +46,14 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
   );
 };
 
+const isCompanyMention = (company) => {
+  return company.startsWith('@') && !company.includes(' ');
+};
+
+const companyLink = (company) => {
+  return `https://github.com/${company.substring(1)}`;
+};
+
 const Details = ({ profile, loading, social, github }) => {
   const renderSkeleton = () => {
     let array = [];
@@ -84,6 +92,11 @@ const Details = ({ profile, loading, social, github }) => {
                   icon={<FaBuilding className="mr-2" />}
                   title="Company:"
                   value={profile.company}
+                  link={
+                    isCompanyMention(profile.company)
+                      ? companyLink(profile.company)
+                      : null
+                  }
                 />
               )}
               <ListItem
