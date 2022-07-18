@@ -69,7 +69,7 @@ export const ga = {
   // log specific events happening
   event: ({ action, params }) => {
     try {
-      typeof window !== 'undefined' && window.gtag('event', action, params);
+      window?.gtag('event', action, params);
     } catch (error) {
       console.error(error);
     }
@@ -77,217 +77,105 @@ export const ga = {
 };
 
 export const isThemeDarkish = (theme) => {
-  if (
-    theme === 'dark' ||
-    theme === 'halloween' ||
-    theme === 'forest' ||
-    theme === 'black' ||
-    theme === 'luxury' ||
-    theme === 'dracula'
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+  return ['dark', 'halloween', 'forest', 'black', 'luxury', 'dracula'].includes(
+    theme
+  );
 };
 
 export const setupHotjar = (hotjarConfig) => {
   if (hotjarConfig?.id) {
-    let snippetVersion = hotjarConfig?.snippetVersion
-      ? hotjarConfig?.snippetVersion
-      : 6;
+    let snippetVersion = hotjarConfig?.snippetVersion || 6;
 
     hotjar.initialize(hotjarConfig.id, snippetVersion);
   }
 };
 
 export const sanitizeConfig = (config) => {
-  const customTheme =
-    typeof config.themeConfig !== 'undefined' &&
-    typeof config.themeConfig.customTheme !== 'undefined'
-      ? config.themeConfig.customTheme
-      : {
-          primary: '#fc055b',
-          secondary: '#219aaf',
-          accent: '#e8d03a',
-          neutral: '#2A2730',
-          'base-100': '#E3E3ED',
-          '--rounded-box': '3rem',
-          '--rounded-btn': '3rem',
-        };
+  const customTheme = config?.themeConfig?.customTheme || {
+    primary: '#fc055b',
+    secondary: '#219aaf',
+    accent: '#e8d03a',
+    neutral: '#2A2730',
+    'base-100': '#E3E3ED',
+    '--rounded-box': '3rem',
+    '--rounded-btn': '3rem',
+  };
 
-  const themes =
-    typeof config.themeConfig !== 'undefined' &&
-    typeof config.themeConfig.themes !== 'undefined'
-      ? config.themeConfig.themes
-      : [
-          'light',
-          'dark',
-          'cupcake',
-          'bumblebee',
-          'emerald',
-          'corporate',
-          'synthwave',
-          'retro',
-          'cyberpunk',
-          'valentine',
-          'halloween',
-          'garden',
-          'forest',
-          'aqua',
-          'lofi',
-          'pastel',
-          'fantasy',
-          'wireframe',
-          'black',
-          'luxury',
-          'dracula',
-          'cmyk',
-          'autumn',
-          'business',
-          'acid',
-          'lemonade',
-          'night',
-          'coffee',
-          'winter',
-          'procyon',
-        ];
+  const themes = config?.themeConfig?.themes || [
+    'light',
+    'dark',
+    'cupcake',
+    'bumblebee',
+    'emerald',
+    'corporate',
+    'synthwave',
+    'retro',
+    'cyberpunk',
+    'valentine',
+    'halloween',
+    'garden',
+    'forest',
+    'aqua',
+    'lofi',
+    'pastel',
+    'fantasy',
+    'wireframe',
+    'black',
+    'luxury',
+    'dracula',
+    'cmyk',
+    'autumn',
+    'business',
+    'acid',
+    'lemonade',
+    'night',
+    'coffee',
+    'winter',
+    'procyon',
+  ];
 
   return {
     github: {
       username: config.github.username,
-      sortBy:
-        typeof config.github.sortBy !== 'undefined'
-          ? config.github.sortBy
-          : 'stars',
-      limit:
-        typeof config.github.limit !== 'undefined' ? config.github.limit : 8,
+      sortBy: config.github.sortBy || 'stars',
+      limit: config.github.limit || 8,
       exclude: {
-        forks:
-          typeof config.github.exclude !== 'undefined' &&
-          typeof config.github.exclude.forks !== 'undefined'
-            ? config.github.exclude.forks
-            : false,
-        projects:
-          typeof config.github.exclude !== 'undefined' &&
-          typeof config.github.exclude.projects !== 'undefined'
-            ? config.github.exclude.projects
-            : [],
+        forks: config?.github?.exclude?.forks,
+        projects: config?.github?.exclude?.projects || [],
       },
     },
     social: {
-      linkedin:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.linkedin !== 'undefined'
-          ? config.social.linkedin
-          : '',
-      twitter:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.twitter !== 'undefined'
-          ? config.social.twitter
-          : '',
-      facebook:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.facebook !== 'undefined'
-          ? config.social.facebook
-          : '',
-      instagram:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.instagram !== 'undefined'
-          ? config.social.instagram
-          : '',
-      dribbble:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.dribbble !== 'undefined'
-          ? config.social.dribbble
-          : '',
-      behance:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.behance !== 'undefined'
-          ? config.social.behance
-          : '',
-      medium:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.medium !== 'undefined'
-          ? config.social.medium
-          : '',
-      dev:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.dev !== 'undefined'
-          ? config.social.dev
-          : '',
-      website:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.website !== 'undefined'
-          ? config.social.website
-          : '',
-      phone:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.phone !== 'undefined'
-          ? config.social.phone
-          : '',
-      email:
-        typeof config.social !== 'undefined' &&
-        typeof config.social.email !== 'undefined'
-          ? config.social.email
-          : '',
+      linkedin: config?.social?.twitter,
+      twitter: config?.social?.twitter,
+      facebook: config?.social?.facebook,
+      instagram: config?.social?.instagram,
+      dribbble: config?.social?.dribble,
+      behance: config?.social?.behance,
+      medium: config?.social?.medium,
+      dev: config?.social?.dev,
+      website: config?.social?.website,
+      phone: config?.social?.phone,
+      email: config?.social?.email,
     },
-    skills: typeof config.skills !== 'undefined' ? config.skills : [],
-    experiences:
-      typeof config.experiences !== 'undefined' ? config.experiences : [],
-    education: typeof config.education !== 'undefined' ? config.education : [],
+    skills: config?.skills || [],
+    experiences: config?.experiences || [],
+    education: config?.education || [],
     blog: {
-      source:
-        typeof config.blog !== 'undefined' &&
-        typeof config.blog.source !== 'undefined'
-          ? config.blog.source
-          : '',
-      username:
-        typeof config.blog !== 'undefined' &&
-        typeof config.blog.username !== 'undefined'
-          ? config.blog.username
-          : '',
-      limit:
-        typeof config.blog !== 'undefined' &&
-        typeof config.blog.limit !== 'undefined'
-          ? config.blog.limit
-          : 5,
+      source: config?.blog?.source,
+      username: config?.blog?.username,
+      limit: config?.blog?.limit || 5,
     },
     googleAnalytics: {
-      id:
-        typeof config.googleAnalytics !== 'undefined' &&
-        typeof config.googleAnalytics.id !== 'undefined'
-          ? config.googleAnalytics.id
-          : '',
+      id: config?.googleAnalytics?.id,
     },
     hotjar: {
-      id:
-        typeof config.hotjar !== 'undefined' &&
-        typeof config.hotjar.id !== 'undefined'
-          ? config.hotjar.id
-          : '',
-      snippetVersion:
-        typeof config.hotjar !== 'undefined' &&
-        typeof config.hotjar.snippetVersion !== 'undefined'
-          ? config.hotjar.snippetVersion
-          : 6,
+      id: config?.hotjar?.id,
+      snippetVersion: config?.hotjar?.snippetVersion || 6,
     },
     themeConfig: {
-      defaultTheme:
-        typeof config.themeConfig !== 'undefined' &&
-        typeof config.themeConfig.defaultTheme !== 'undefined'
-          ? config.themeConfig.defaultTheme
-          : themes[0],
-      disableSwitch:
-        typeof config.themeConfig !== 'undefined' &&
-        typeof config.themeConfig.disableSwitch !== 'undefined'
-          ? config.themeConfig.disableSwitch
-          : false,
-      respectPrefersColorScheme:
-        typeof config.themeConfig !== 'undefined' &&
-        typeof config.themeConfig.respectPrefersColorScheme !== 'undefined'
-          ? config.themeConfig.respectPrefersColorScheme
-          : false,
+      defaultTheme: config?.themeConfig?.defaultTheme || themes[0],
+      disableSwitch: config?.themeConfig?.disableSwitch,
+      respectPrefersColorScheme: config?.themeConfig?.respectPrefersColorScheme,
       themes: themes,
       customTheme: customTheme,
     },
