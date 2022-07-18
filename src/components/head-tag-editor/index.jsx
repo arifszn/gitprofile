@@ -34,12 +34,7 @@ const HeadTagEditor = ({ profile, theme, googleAnalytics, social }) => {
           <meta itemProp="description" content={profile.bio} />
           <meta itemProp="image" content={profile.avatar} />
 
-          <meta
-            property="og:url"
-            content={
-              typeof social.website !== 'undefined' ? social.website : ''
-            }
-          />
+          <meta property="og:url" content={social?.website || ''} />
           <meta property="og:type" content="website" />
           <meta property="og:title" content={`Portfolio of ${profile.name}`} />
           <meta property="og:description" content={profile.bio} />

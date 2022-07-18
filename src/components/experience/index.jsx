@@ -40,7 +40,7 @@ const Experience = ({ experiences, loading }) => {
 
   return (
     <>
-      {typeof experiences !== 'undefined' && experiences.length !== 0 && (
+      {experiences?.length !== 0 && (
         <div className="card shadow-lg compact bg-base-100">
           <div className="card-body">
             <div className="mx-3">

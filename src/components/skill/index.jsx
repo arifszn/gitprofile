@@ -17,7 +17,7 @@ const Skill = ({ loading, skills }) => {
 
   return (
     <>
-      {typeof skills !== 'undefined' && skills.length !== 0 && (
+      {skills?.length !== 0 && (
         <div className="card shadow-lg compact bg-base-100">
           <div className="card-body">
             <div className="mx-3">
