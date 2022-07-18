@@ -40,7 +40,7 @@ const Education = ({ loading, education }) => {
 
   return (
     <>
-      {typeof education !== 'undefined' && education.length !== 0 && (
+      {education?.length !== 0 && (
         <div className="card shadow-lg compact bg-base-100">
           <div className="card-body">
             <div className="mx-3">

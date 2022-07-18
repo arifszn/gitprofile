@@ -76,7 +76,7 @@ export const ga = {
   },
 };
 
-export const isThemeDarkish = (theme) => {
+export const isDarkishTheme = (theme) => {
   return ['dark', 'halloween', 'forest', 'black', 'luxury', 'dracula'].includes(
     theme
   );
@@ -136,11 +136,11 @@ export const sanitizeConfig = (config) => {
 
   return {
     github: {
-      username: config.github.username,
-      sortBy: config.github.sortBy || 'stars',
-      limit: config.github.limit || 8,
+      username: config?.github?.username || '',
+      sortBy: config?.github?.sortBy || 'stars',
+      limit: config?.github?.limit || 8,
       exclude: {
-        forks: config?.github?.exclude?.forks,
+        forks: config?.github?.exclude?.forks || false,
         projects: config?.github?.exclude?.projects || [],
       },
     },
@@ -174,8 +174,9 @@ export const sanitizeConfig = (config) => {
     },
     themeConfig: {
       defaultTheme: config?.themeConfig?.defaultTheme || themes[0],
-      disableSwitch: config?.themeConfig?.disableSwitch,
-      respectPrefersColorScheme: config?.themeConfig?.respectPrefersColorScheme,
+      disableSwitch: config?.themeConfig?.disableSwitch || false,
+      respectPrefersColorScheme:
+        config?.themeConfig?.respectPrefersColorScheme || false,
       themes: themes,
       customTheme: customTheme,
     },
