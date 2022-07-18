@@ -76,7 +76,7 @@ export const ga = {
   },
 };
 
-export const isThemeDarkish = (theme) => {
+export const isDarkishTheme = (theme) => {
   return ['dark', 'halloween', 'forest', 'black', 'luxury', 'dracula'].includes(
     theme
   );

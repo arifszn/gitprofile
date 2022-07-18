@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
-import { isThemeDarkish } from '../../helpers/utils';
+import { isDarkishTheme } from '../../helpers/utils';
 
 const HeadTagEditor = ({ profile, theme, googleAnalytics, social }) => {
   return (
@@ -25,7 +25,7 @@ const HeadTagEditor = ({ profile, theme, googleAnalytics, social }) => {
           <title>Portfolio of {profile.name}</title>
           <meta
             name="theme-color"
-            content={isThemeDarkish(theme) ? '#000000' : '#ffffff'}
+            content={isDarkishTheme(theme) ? '#000000' : '#ffffff'}
           />
 
           <meta name="description" content={profile.bio} />
