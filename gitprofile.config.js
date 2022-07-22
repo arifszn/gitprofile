@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 'thirumald', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
@@ -12,16 +12,16 @@ const config = {
   },
   social: {
     linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    twitter: '',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
     dev: 'arifszn',
-    website: 'https://arifszn.github.io',
+    website: 'https://thirumald.github.io',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'd.thirumal@gmail.com',
   },
   skills: [
     'PHP',
@@ -41,50 +41,57 @@ const config = {
   ],
   experiences: [
     {
-      company: 'Monstarlab Bangladesh',
-      position: 'Backend Engineer II',
-      from: 'September 2021',
+      company: 'Global Aerospace Logistics LLC',
+      position: 'Software Specialist',
+      from: 'JUL 2011',
       to: 'Present',
     },
     {
-      company: 'My Offer 360 Degree',
-      position: 'Web Application Developer',
-      from: 'July 2019',
-      to: 'August 2021',
+      company: 'Hadeed Emirates Cont. Co.',
+      position: 'Software Engineer',
+      from: 'May 2010',
+      to: 'May 2011',
+    },
+    {
+      company: 'PetroGas Piping',
+      position: 'Software Engineer',
+      from: 'Apr 2008',
+      to: 'Apr 2010',
+    },
+    {
+      company: 'Unilever',
+      position: 'Software Engineer',
+      from: 'Oct 2006',
+      to: 'Mar 2008',
     },
   ],
   education: [
     {
-      institution: 'American International University-Bangladesh',
-      degree: 'Bachelor of Science',
-      from: '2015',
-      to: '2019',
+      institution: 'Anna University-Chennai,India',
+      degree: 'Master Of Computer Applications',
+      from: '2003',
+      to: '2006',
     },
     {
-      institution: 'Cantonment College, Jessore',
-      degree: 'Higher Secondary Certificate (HSC)',
-      from: '2012',
-      to: '2014',
+      institution: 'Periyar University-Salem,India',
+      degree: 'Bachelor of Computer Applications',
+      from: '2000',
+      to: '2003',
     },
-    {
-      institution: 'Chowgacha Shahadat Pilot High School',
-      degree: 'Secondary School Certificate (SSC)',
-      from: '2007',
-      to: '2012',
-    },
+    
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn',
+    source: '', // medium | dev
+    username: '',
     limit: 3, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
     // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
-    id: 'G-WLLB5E14M6', // Please remove this and use your own tag id or keep it empty
+    id: '', // Please remove this and use your own tag id or keep it empty
   },
   hotjar: {
-    id: '2617601', //  Please remove this and use your own id or keep it empty
+    id: '', //  Please remove this and use your own id or keep it empty
     snippetVersion: 6,
   },
   themeConfig: {
