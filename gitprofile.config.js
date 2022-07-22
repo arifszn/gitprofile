@@ -18,7 +18,7 @@ const config = {
     dribbble: '',
     behance: '',
     medium: '',
-    dev: '',
+    dev: 'thirumald',
     website: 'https://thirumald.github.io',
     phone: '',
     email: 'd.thirumal@gmail.com',
