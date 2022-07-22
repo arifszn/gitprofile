@@ -52,21 +52,7 @@ const AvatarCard = ({ profile, loading }) => {
             {loading || !profile ? (
               skeleton({ width: 'w-48', height: 'h-8' })
             ) : (
-              <span className="opacity-70">{profile.name}</span>
-            )}
-          </h5>
-          <div className="mt-3 text-base-content text-opacity-60 font-mono">
-            {loading || !profile
-              ? skeleton({ width: 'w-48', height: 'h-5' })
-              : profile.bio}
-          </div>
-        </div>
-        <div className="text-center mx-auto px-8">
-          <h5 className="font-bold text-2xl">
-            {loading || !profile ? (
-              skeleton({ width: 'w-48', height: 'h-8' })
-            ) : (
-              <span className="opacity-70">{profile.position}</span>
+              <span className="opacity-70 card-title text-lg">{profile.position}</span>
             )}
           </h5>
           <div className="mt-3 text-base-content text-opacity-60 font-mono">
