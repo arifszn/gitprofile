@@ -203,7 +203,7 @@ const GitProfile = ({ config }) => {
                 <div className="card compact bg-base-100 shadow">
                   <a
                     className="card-body"
-                    href="https://github.com/arifszn/gitprofile"
+                    href="https://github.com/thirumald/thirumald.github.io"
                     target="_blank"
                     rel="noreferrer"
                   >
