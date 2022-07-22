@@ -6,38 +6,38 @@ const config = {
     sortBy: 'stars', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
-      forks: false, // Forked projects will not be displayed if set to true.
+      forks: true, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'ariful-alam',
+    linkedin: 'thirumal-dharmalingam',
     twitter: '',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
-    dev: 'arifszn',
+    dev: '',
     website: 'https://thirumald.github.io',
     phone: '',
     email: 'd.thirumal@gmail.com',
   },
   skills: [
-    'PHP',
-    'Laravel',
+    'ASP.NET',
+    'C#',
+    'VB.NET',
     'JavaScript',
-    'React.js',
+    'angular',
     'Node.js',
-    'Nest.js',
-    'MySQL',
+    'Python',
+    'MSSQL',
     'Git',
     'Docker',
-    'PHPUnit',
     'CSS',
     'Antd',
-    'Tailwind',
     'Bootstrap',
+    'TFS',
   ],
   experiences: [
     {
