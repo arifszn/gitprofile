@@ -86,8 +86,8 @@ const config = {
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: '', // medium | dev
-    username: '',
+    source: 'dev', // medium | dev
+    username: 'thirumald',
     limit: 3, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
