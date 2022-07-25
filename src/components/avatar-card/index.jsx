@@ -48,13 +48,7 @@ const AvatarCard = ({ profile, loading }) => {
           </div>
         </div>
         <div className="text-center mx-auto px-8">
-          <h5 className="font-bold text-lg">
-            {loading || !profile ? (
-              skeleton({ width: 'w-48', height: 'h-8' })
-            ) : (
-              <span className="opacity-70">{profile.position}</span>
-            )}
-          </h5>
+        
           <div className="mt-3 text-base-content text-opacity-60 font-mono">
             {loading || !profile
               ? skeleton({ width: 'w-48', height: 'h-5' })
