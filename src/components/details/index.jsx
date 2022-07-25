@@ -117,7 +117,7 @@ const Details = ({ profile, loading, social, github }) => {
                 <ListItem
                   icon={<GrLinkedinOption className="mr-2" />}
                   title="LinkedIn:"
-                  value={social.linkedin}
+                  value="thirumald"
                   link={`https://www.linkedin.com/in/thirumald`}
                 />
              
