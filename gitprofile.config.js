@@ -17,7 +17,7 @@ const config = {
     instagram: '',
     dribbble: '',
     behance: '',
-    medium: '',
+    medium: 'arifszn',
     dev: 'arifszn',
     website: 'https://arifszn.github.io',
     phone: '',
