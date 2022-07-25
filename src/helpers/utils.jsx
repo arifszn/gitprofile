@@ -145,11 +145,11 @@ export const sanitizeConfig = (config) => {
       },
     },
     social: {
-      linkedin: config?.social?.twitter,
+      linkedin: config?.social?.linkedin,
       twitter: config?.social?.twitter,
       facebook: config?.social?.facebook,
       instagram: config?.social?.instagram,
-      dribbble: config?.social?.dribble,
+      dribbble: config?.social?.dribbble,
       behance: config?.social?.behance,
       medium: config?.social?.medium,
       dev: config?.social?.dev,
