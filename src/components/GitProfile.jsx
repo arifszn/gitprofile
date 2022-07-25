@@ -18,6 +18,7 @@ import {
   setupHotjar,
   tooManyRequestError,
   sanitizeConfig,
+  skeleton,
 } from '../helpers/utils';
 import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
@@ -208,10 +209,15 @@ const GitProfile = ({ config }) => {
                     rel="noreferrer"
                   >
                     <div>
-                      <p className="font-mono text-sm">
-                        Made with{' '}
-                        <span className="text-primary">GitProfile</span> and ❤️
-                      </p>
+                      {loading ? (
+                        skeleton({ width: 'w-52', height: 'h-6' })
+                      ) : (
+                        <p className="font-mono text-sm">
+                          Made with{' '}
+                          <span className="text-primary">GitProfile</span> and
+                          ❤️
+                        </p>
+                      )}
                     </div>
                   </a>
                 </div>
