@@ -38,7 +38,9 @@ const AvatarCard = ({ profile, loading }) => {
             {loading || !profile ? (
               skeleton({ width: 'w-48', height: 'h-8' })
             ) : (
-              <span className="opacity-70">{profile.name}</span>
+              <span className="text-base-content opacity-70">
+                {profile.name}
+              </span>
             )}
           </h5>
           <div className="mt-3 text-base-content text-opacity-60 font-mono">

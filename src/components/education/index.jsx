@@ -48,7 +48,9 @@ const Education = ({ loading, education }) => {
                 {loading ? (
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
-                  <span className="opacity-70">Education</span>
+                  <span className="text-base-content opacity-70">
+                    Education
+                  </span>
                 )}
               </h5>
             </div>

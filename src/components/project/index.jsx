@@ -82,7 +82,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-5 h-5 mr-2 stroke-current"
+                className="text-base-content inline-block w-5 h-5 mr-2 stroke-current"
               >
                 <path
                   strokeLinecap="round"
@@ -92,7 +92,9 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                 ></path>
               </svg>
               <span>
-                <h5 className="card-title text-lg">{item.name}</h5>
+                <h5 className="card-title text-lg text-base-content">
+                  {item.name}
+                </h5>
               </span>
             </div>
             <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
@@ -137,7 +139,9 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                     {loading ? (
                       skeleton({ width: 'w-28', height: 'h-8' })
                     ) : (
-                      <span className="opacity-70">My Projects</span>
+                      <span className="text-base-content opacity-70">
+                        My Projects
+                      </span>
                     )}
                   </h5>
                   {loading ? (
@@ -147,7 +151,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                       href={`https://github.com/${github.username}?tab=repositories`}
                       target="_blank"
                       rel="noreferrer"
-                      className="opacity-50"
+                      className="text-base-content opacity-50"
                     >
                       See All
                     </a>
