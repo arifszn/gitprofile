@@ -17,7 +17,7 @@ const config = {
     instagram: '',
     dribbble: '',
     behance: '',
-    medium: '',
+    medium: 'thirumald',
     dev: 'thirumald',
     website: 'https://thirumald.github.io',
     phone: '+971 50 4422327',
