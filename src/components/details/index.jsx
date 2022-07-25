@@ -113,14 +113,14 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://twitter.com/${social.twitter}`}
                 />
               )}
-              {social?.linkedin && (
+             
                 <ListItem
                   icon={<GrLinkedinOption className="mr-2" />}
                   title="LinkedIn:"
                   value={social.linkedin}
-                  link={`https://www.linkedin.com/in/${social.linkedin}`}
+                  link={`https://www.linkedin.com/in/thirumald`}
                 />
-              )}
+             
               {social?.dribbble && (
                 <ListItem
                   icon={<CgDribbble className="mr-2" />}
