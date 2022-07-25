@@ -60,7 +60,7 @@ const GitProfile = ({ config }) => {
           bio: data.bio ? data.bio : '',
           location: data.location ? data.location : '',
           company: data.company ? data.company : '',
-          tittle:'Senior Software Specialist • Risk & Control Assessment • Business Analysis • Requirement Elicitation • Digital Transformation • Stakeholder Management • Program Management • Project Lifecycle Management • Training and Development • Change Management • Process Re-engineering • Solution Architect • Contracts / Team Management • Delivery Management • Post-implementation Support • Strategy Formulation & Implementation • Reporting & Documentation',
+          tittle:'• Risk & Control Assessment • Business Analysis • Requirement Elicitation • Digital Transformation • Stakeholder Management • Program Management • Project Lifecycle Management • Training and Development • Change Management • Process Re-engineering • Solution Architect • Contracts / Team Management • Delivery Management • Post-implementation Support • Strategy Formulation & Implementation • Reporting & Documentation',
           position:'Senior Software Specialist'
         };
 
