@@ -48,7 +48,9 @@ const Experience = ({ experiences, loading }) => {
                 {loading ? (
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
-                  <span className="opacity-70">Experience</span>
+                  <span className="text-base-content opacity-70">
+                    Experience
+                  </span>
                 )}
               </h5>
             </div>
