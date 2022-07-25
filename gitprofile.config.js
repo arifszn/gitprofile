@@ -11,7 +11,7 @@ const config = {
     },
   },
   social: {
-    linkedin: 'thirumal-dharmalingam',
+    linkedin: 'thirumald',
     twitter: '',
     facebook: '',
     instagram: '',
