@@ -29,10 +29,12 @@ const config = {
     "MySQL",
     'Discord.js',
     'Node.js',
-    'VMware',
+    'Traefik',
+    'Docker',
+    'Authelia'
+    'OIDC/IAM',
     'Proxmox',
     'Ubuntu',
-    'HTML5',
     'Git'
   ],
   experiences: [
