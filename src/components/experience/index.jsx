@@ -40,7 +40,7 @@ const Experience = ({ experiences, loading }) => {
 
   return (
     <>
-      {typeof experiences !== 'undefined' && experiences.length !== 0 && (
+      {experiences?.length !== 0 && (
         <div className="card shadow-lg compact bg-base-100">
           <div className="card-body">
             <div className="mx-3">
@@ -48,7 +48,9 @@ const Experience = ({ experiences, loading }) => {
                 {loading ? (
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
-                  <span className="opacity-70">Experience</span>
+                  <span className="text-base-content opacity-70">
+                    Experience
+                  </span>
                 )}
               </h5>
             </div>
