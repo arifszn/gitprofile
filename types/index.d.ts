@@ -55,6 +55,11 @@ export interface Social {
   facebook?: string;
 
   /**
+   * Instagram
+   */
+  instagram?: string;
+
+  /**
    * Dribbble
    */
   dribbble?: string;

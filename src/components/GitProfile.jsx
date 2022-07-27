@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { Fragment, useCallback, useEffect, useState } from 'react';
-import moment from 'moment';
 import HeadTagEditor from './head-tag-editor';
 import ErrorPage from './error-page';
 import ThemeChanger from './theme-changer';
@@ -19,10 +18,12 @@ import {
   setupHotjar,
   tooManyRequestError,
   sanitizeConfig,
+  skeleton,
 } from '../helpers/utils';
 import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import '../assets/index.css';
+import { formatDistance } from 'date-fns';
 
 const GitProfile = ({ config }) => {
   const [error, setError] = useState(
@@ -103,9 +104,13 @@ const GitProfile = ({ config }) => {
   const handleError = (error) => {
     console.error('Error:', error);
     try {
-      let reset = moment(
-        new Date(error.response.headers['x-ratelimit-reset'] * 1000)
-      ).fromNow();
+      let reset = formatDistance(
+        new Date(error.response.headers['x-ratelimit-reset'] * 1000),
+        new Date(),
+        {
+          addSuffix: true,
+        }
+      );
 
       if (error.response.status === 403) {
         setError(tooManyRequestError(reset));
@@ -204,10 +209,15 @@ const GitProfile = ({ config }) => {
                     rel="noreferrer"
                   >
                     <div>
-                      <p className="font-mono text-sm">
-                        Made with{' '}
-                        <span className="text-primary">GitProfile</span> and ❤️
-                      </p>
+                      {loading ? (
+                        skeleton({ width: 'w-52', height: 'h-6' })
+                      ) : (
+                        <p className="font-mono text-sm">
+                          Made with{' '}
+                          <span className="text-primary">GitProfile</span> and
+                          ❤️
+                        </p>
+                      )}
                     </div>
                   </a>
                 </div>
@@ -235,6 +245,7 @@ GitProfile.propTypes = {
       linkedin: PropTypes.string,
       twitter: PropTypes.string,
       facebook: PropTypes.string,
+      instagram: PropTypes.string,
       dribbble: PropTypes.string,
       behance: PropTypes.string,
       medium: PropTypes.string,

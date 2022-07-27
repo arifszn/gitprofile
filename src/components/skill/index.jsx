@@ -17,7 +17,7 @@ const Skill = ({ loading, skills }) => {
 
   return (
     <>
-      {typeof skills !== 'undefined' && skills.length !== 0 && (
+      {skills?.length !== 0 && (
         <div className="card shadow-lg compact bg-base-100">
           <div className="card-body">
             <div className="mx-3">
@@ -25,7 +25,9 @@ const Skill = ({ loading, skills }) => {
                 {loading ? (
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
-                  <span className="opacity-70">Tech Stack</span>
+                  <span className="text-base-content opacity-70">
+                    Tech Stack
+                  </span>
                 )}
               </h5>
             </div>

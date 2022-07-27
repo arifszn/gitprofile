@@ -40,7 +40,7 @@ const Education = ({ loading, education }) => {
 
   return (
     <>
-      {typeof education !== 'undefined' && education.length !== 0 && (
+      {education?.length !== 0 && (
         <div className="card shadow-lg compact bg-base-100">
           <div className="card-body">
             <div className="mx-3">
@@ -48,7 +48,9 @@ const Education = ({ loading, education }) => {
                 {loading ? (
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
-                  <span className="opacity-70">Education</span>
+                  <span className="text-base-content opacity-70">
+                    Education
+                  </span>
                 )}
               </h5>
             </div>

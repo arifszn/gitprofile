@@ -1,5 +1,9 @@
 import { MdLocationOn, MdMail } from 'react-icons/md';
-import { AiFillGithub, AiFillMediumSquare } from 'react-icons/ai';
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillMediumSquare,
+} from 'react-icons/ai';
 import { SiTwitter } from 'react-icons/si';
 import { GrLinkedinOption } from 'react-icons/gr';
 import { CgDribbble } from 'react-icons/cg';
@@ -42,6 +46,14 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
   );
 };
 
+const isCompanyMention = (company) => {
+  return company.startsWith('@') && !company.includes(' ');
+};
+
+const companyLink = (company) => {
+  return `https://github.com/${company.substring(1)}`;
+};
+
 const Details = ({ profile, loading, social, github }) => {
   const renderSkeleton = () => {
     let array = [];
@@ -71,7 +83,7 @@ const Details = ({ profile, loading, social, github }) => {
               {profile.location && (
                 <ListItem
                   icon={<MdLocationOn className="mr-2" />}
-                  title="Based on:"
+                  title="Based in:"
                   value={profile.location}
                 />
               )}
@@ -80,6 +92,11 @@ const Details = ({ profile, loading, social, github }) => {
                   icon={<FaBuilding className="mr-2" />}
                   title="Company:"
                   value={profile.company}
+                  link={
+                    isCompanyMention(profile.company)
+                      ? companyLink(profile.company)
+                      : null
+                  }
                 />
               )}
               <ListItem
@@ -88,7 +105,7 @@ const Details = ({ profile, loading, social, github }) => {
                 value={github.username}
                 link={`https://github.com/${github.username}`}
               />
-              {typeof social.twitter !== 'undefined' && social.twitter && (
+              {social?.twitter && (
                 <ListItem
                   icon={<SiTwitter className="mr-2" />}
                   title="Twitter:"
@@ -96,7 +113,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://twitter.com/${social.twitter}`}
                 />
               )}
-              {typeof social.linkedin !== 'undefined' && social.linkedin && (
+              {social?.linkedin && (
                 <ListItem
                   icon={<GrLinkedinOption className="mr-2" />}
                   title="LinkedIn:"
@@ -104,7 +121,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://www.linkedin.com/in/${social.linkedin}`}
                 />
               )}
-              {typeof social.dribbble !== 'undefined' && social.dribbble && (
+              {social?.dribbble && (
                 <ListItem
                   icon={<CgDribbble className="mr-2" />}
                   title="Dribbble:"
@@ -112,7 +129,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://dribbble.com/${social.dribbble}`}
                 />
               )}
-              {typeof social.behance !== 'undefined' && social.behance && (
+              {social?.behance && (
                 <ListItem
                   icon={<FaBehanceSquare className="mr-2" />}
                   title="Behance:"
@@ -120,7 +137,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://www.behance.net/${social.behance}`}
                 />
               )}
-              {typeof social.facebook !== 'undefined' && social.facebook && (
+              {social?.facebook && (
                 <ListItem
                   icon={<FaFacebook className="mr-2" />}
                   title="Facebook:"
@@ -128,7 +145,15 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://www.facebook.com/${social.facebook}`}
                 />
               )}
-              {typeof social.medium !== 'undefined' && social.medium && (
+              {social?.instagram && (
+                <ListItem
+                  icon={<AiFillInstagram className="mr-2" />}
+                  title="Instagram:"
+                  value={social.instagram}
+                  link={`https://www.instagram.com/${social.instagram}`}
+                />
+              )}
+              {social?.medium && (
                 <ListItem
                   icon={<AiFillMediumSquare className="mr-2" />}
                   title="Medium:"
@@ -136,7 +161,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://medium.com/@${social.medium}`}
                 />
               )}
-              {typeof social.dev !== 'undefined' && social.dev && (
+              {social?.dev && (
                 <ListItem
                   icon={<FaDev className="mr-2" />}
                   title="Dev:"
@@ -144,7 +169,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`https://dev.to/${social.dev}`}
                 />
               )}
-              {typeof social.website !== 'undefined' && social.website && (
+              {social?.website && (
                 <ListItem
                   icon={<FaGlobe className="mr-2" />}
                   title="Website:"
@@ -152,7 +177,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={social.website}
                 />
               )}
-              {typeof social.phone !== 'undefined' && social.phone && (
+              {social?.phone && (
                 <ListItem
                   icon={<RiPhoneFill className="mr-2" />}
                   title="Phone:"
@@ -160,7 +185,7 @@ const Details = ({ profile, loading, social, github }) => {
                   link={`tel:${social.phone}`}
                 />
               )}
-              {typeof social.email !== 'undefined' && social.email && (
+              {social?.email && (
                 <ListItem
                   icon={<MdMail className="mr-2" />}
                   title="Email:"
