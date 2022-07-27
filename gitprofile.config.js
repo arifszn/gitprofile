@@ -32,7 +32,7 @@ const config = {
     'Node.js',
     'Traefik',
     'Docker',
-    'Authelia'
+    'Authelia',
     'OIDC/IAM',
     'Proxmox',
     'Ubuntu',
