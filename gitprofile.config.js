@@ -53,7 +53,7 @@ const config = {
     },
     {
       company: 'College of DuPage',
-      position: 'Health Screening',
+      position: 'COVID Screening',
       from: 'August 2020',
       to: 'May 2021'
     }
