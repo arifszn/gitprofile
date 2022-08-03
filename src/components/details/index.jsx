@@ -93,8 +93,8 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Company:"
                   value={profile.company}
                   link={
-                    isCompanyMention(profile.company)
-                      ? companyLink(profile.company)
+                    isCompanyMention(profile.company.trim())
+                      ? companyLink(profile.company.trim())
                       : null
                   }
                 />
