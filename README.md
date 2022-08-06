@@ -27,8 +27,8 @@
     <a href="https://www.buymeacoffee.com/arifszn">
       <img src="https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-yellow?logo=buymeacoffee"/>
     </a>
-    <a href="https://twitter.com/arif_szn">
-      <img src="https://img.shields.io/twitter/follow/arif_szn?style=social"/>
+    <a href="https://twitter.com/intent/tweet?text=Check%20out%20the%20portfolio%20builder.%20Create%20an%20automatic%20portfolio%20based%20on%20GitHub%20profile.&url=https://github.com/arifszn/gitprofile&hashtags=javascript,opensource,js,webdev,developers">
+      <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"/>
     </a>
   </p>
 
@@ -106,7 +106,7 @@ These instructions will get you a copy of the project and deploy your portfolio 
 - **First Commit:** Now commit to your **main** branch with your changes. The CI/CD pipeline will publish your page at the `gh-pages` branch automatically.
 - **Change deploy branch:** Go to your repo's **Settings** ➜ **Pages** ➜ **Source** and change the branch to `gh-pages` and click **save**.
 
-Your portfolio website will be live by now. Any time you commit a change to the **main** branch, the website will be automatically updated.
+Your portfolio website will be live by now. Any time you commit a change to the **main** branch, the website will be automatically updated. You can also add custom domain by following [this guide](https://github.com/arifszn/gitprofile/discussions/126).
 
 If you see only `README` at your website, be sure to change your GitHub Page's source to `gh-pages` branch (see [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)). Also, if you face any issue rendering the website, double-check the `base` value in the `vite.config.js`.
 
@@ -213,7 +213,7 @@ const config = {
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn',
+    username: 'arifszn', // to hide blog section, keep it empty
     limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
