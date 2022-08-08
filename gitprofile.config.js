@@ -14,7 +14,7 @@ const config = {
     linkedin: 'nate-goldsborough',
     twitter: 'nathen418',
     facebook: '',
-    instagram: '',
+    instagram: 'nathen418',
     dribbble: '',
     behance: '',
     medium: '',
