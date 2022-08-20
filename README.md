@@ -49,7 +49,7 @@
   <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
 </p>
 
-**GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. It is built using React.js on top of Vite.js. But it's not necessary to have knowledge on these to get you started. You can make your own copy with zero coding experience.
+**GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. It is built using React.js on top of Vite. But it's not necessary to have knowledge on these to get you started. You can make your own copy with zero coding experience.
 
 **Features:**
 
@@ -85,7 +85,7 @@ These instructions will get you a copy of the project and deploy your portfolio 
 - **Rename repo:**
   - If you want to host your portfolio at `https://<USERNAME>.github.io`, rename your forked repository to `username.github.io` in GitHub, where `username` is your GitHub username (or organization name).
   - If you want to host your portfolio at `https://<USERNAME>.github.io/<REPO>` (e.g. `https://<USERNAME>.github.io/portfolio`), rename your forked repository to `<REPO>` (e.g. `portfolio`) in GitHub.
-- **Enable workflows:** Go to your repo's **Actions** page and enable workflows.
+- **Enable workflows:** Go to your repo's **Actions** tab and enable workflows.
 
   ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
 
@@ -103,14 +103,13 @@ These instructions will get you a copy of the project and deploy your portfolio 
   }
   ```
 
-- **First Commit:** Now commit to your **main** branch with your changes. The CI/CD pipeline will publish your page at the `gh-pages` branch automatically.
-- **Change deploy branch:** Go to your repo's **Settings** ➜ **Pages** ➜ **Source** and change the branch to `gh-pages` and click **save**.
+- **Commit the changes:** Now commit to your **main** branch with your changes. Wait a few minutes so that the CI/CD pipeline can publish your website to GitHub Pages. You can check the progress in the [Actions](https://github.com/arifszn/gitprofile/actions) tab.
 
-Your portfolio website will be live by now. Any time you commit a change to the **main** branch, the website will be automatically updated. You can also add custom domain by following [this guide](https://github.com/arifszn/gitprofile/discussions/126).
+Your portfolio website will be live shortly. Any time you commit a change to the **main** branch, the website will be automatically updated. If you face any issue viewing the website, double-check the `base` value in the `vite.config.js` file.
 
-If you see only `README` at your website, be sure to change your GitHub Page's source to `gh-pages` branch (see [how to](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)). Also, if you face any issue rendering the website, double-check the `base` value in the `vite.config.js`.
+If you wish to add a custom domain, no CNAME file is required. Just add it to your repo's **Settings** ➜ **Pages** ➜ **Custom domain**.
 
-As this is a vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
 
 ### Installing as package
 
