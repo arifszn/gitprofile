@@ -4,10 +4,10 @@ const config = {
   github: {
     username: 'nathen418', // Your GitHub org/user name. (Required)
     sortBy: 'updated', // stars | updated
-    limit: 10, // How many projects to display.
+    limit: 15, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
-      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['nathen418.com'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
@@ -33,7 +33,6 @@ const config = {
     'Traefik',
     'Docker',
     'Authelia',
-    'OIDC/IAM',
     'Proxmox',
     'Ubuntu',
     'Git'
@@ -41,15 +40,15 @@ const config = {
   experiences: [
     {
       company: 'University of Wisconsin Milwaukee',
-      position: 'Maintenance - University Housing',
-      from: 'May 2022',
+      position: 'Audio Visual Technician - Event Services',
+      from: 'October 2021',
       to: 'Present'
     },
     {
       company: 'University of Wisconsin Milwaukee',
-      position: 'Audio Visual Technician',
-      from: 'November 2021',
-      to: 'Present'
+      position: 'Maintenance - University Housing',
+      from: 'May 2022',
+      to: 'September2022'
     },
     {
       company: 'College of DuPage',
