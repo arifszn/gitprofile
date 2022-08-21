@@ -9,6 +9,6 @@ CONTRIBUTING.md
 gitprofile.config.js
 index.html
 library.config.js
-tailwind.config.js
+tailwind.config.mjs
 vite.config.js
 stats.html
