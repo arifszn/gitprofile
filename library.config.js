@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwind from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
-import tailwindConfig from './tailwind.config.js';
+import tailwindConfig from './tailwind.config.mjs';
 import path from 'path';
 
 // https://vitejs.dev/config/
