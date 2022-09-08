@@ -187,6 +187,11 @@ export interface ThemeConfig {
   respectPrefersColorScheme?: boolean;
 
   /**
+   * Hide the ring in Profile picture
+   */
+  hideAvatarRing?: boolean;
+
+  /**
    * Available themes
    */
   themes?: Array<string>;
