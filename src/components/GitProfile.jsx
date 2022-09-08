@@ -194,12 +194,6 @@ const GitProfile = ({ config }) => {
                   </div>
                 </div>
               </div>
-
-              {/* The below attribution notice shall be
-              included in all copies or substantial portions of the Software. */}
-              {/* DO NOT REMOVE/MODIFY THE BELOW FOOTER. */}
-              {/* SEE 4(C) SECTION OF THE LICENSE FOR MORE DETAILS. */}
-              {/* https://github.com/arifszn/gitprofile/blob/main/LICENSE */}
               <footer className="p-4 footer bg-base-200 text-base-content footer-center">
                 <div className="card compact bg-base-100 shadow">
                   <a
