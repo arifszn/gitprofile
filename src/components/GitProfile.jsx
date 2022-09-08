@@ -156,7 +156,11 @@ const GitProfile = ({ config }) => {
                           themeConfig={sanitizedConfig.themeConfig}
                         />
                       )}
-                      <AvatarCard profile={profile} loading={loading} />
+                      <AvatarCard
+                        profile={profile}
+                        loading={loading}
+                        avatarRing={!sanitizedConfig.themeConfig.hideAvatarRing}
+                      />
                       <Details
                         profile={profile}
                         loading={loading}
@@ -281,6 +285,7 @@ GitProfile.propTypes = {
       defaultTheme: PropTypes.string,
       disableSwitch: PropTypes.bool,
       respectPrefersColorScheme: PropTypes.bool,
+      hideAvatarRing: PropTypes.bool,
       themes: PropTypes.array,
       customTheme: PropTypes.shape({
         primary: PropTypes.string,

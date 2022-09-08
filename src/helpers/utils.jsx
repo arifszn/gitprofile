@@ -177,6 +177,7 @@ export const sanitizeConfig = (config) => {
       disableSwitch: config?.themeConfig?.disableSwitch || false,
       respectPrefersColorScheme:
         config?.themeConfig?.respectPrefersColorScheme || false,
+      hideAvatarRing: config?.themeConfig?.hideAvatarRing || false,
       themes: themes,
       customTheme: customTheme,
     },
