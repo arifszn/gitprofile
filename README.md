@@ -512,4 +512,4 @@ To contribute, see the [Contributing guide](https://github.com/arifszn/gitprofil
 
 ## 📄 License
 
-[Apache-2.0 License](https://github.com/arifszn/gitprofile/blob/main/LICENSE)
+[MIT](https://github.com/arifszn/gitprofile/blob/main/LICENSE)
