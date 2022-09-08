@@ -75,9 +75,10 @@ Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
 ## 🛠 Installation & Setup
 
-There are two ways to use **GitProfile**. Use either one.
+There are three ways to use **GitProfile**. Use any.
 
 - Forking this repo
+- Setting up locally
 - Installing as package
 
 ### Forking this repo
@@ -113,6 +114,29 @@ Your portfolio website will be live shortly. Any time you commit a change to the
 If you wish to add a custom domain, no CNAME file is required. Just add it to your repo's **Settings** ➜ **Pages** ➜ **Custom domain**.
 
 As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+
+### Setting up locally
+
+- Clone the project and change directory.
+
+  ```shell
+  git clone https://github.com/arifszn/gitprofile.git
+  cd gitprofile
+  ```
+
+- Install dependencies.
+
+  ```shell
+  npm install
+  ```
+
+- Run dev server.
+
+  ```shell
+  npm run dev
+  ```
+
+- Finally, visit [`http://localhost:5173/gitprofile/`](http://localhost:5173/gitprofile/) from your browser.
 
 ### Installing as package
 
