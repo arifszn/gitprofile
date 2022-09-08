@@ -18,6 +18,9 @@
     <a href="https://github.com/arifszn/gitprofile/stargazers">
       <img src="https://img.shields.io/github/stars/arifszn/gitprofile"/>
     </a>
+    <a href="https://github.com/arifszn/gitprofile/network/members">
+      <img src="https://img.shields.io/github/forks/arifszn/gitprofile"/>
+    </a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/package-lock.json">
       <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/gitprofile"/>
     </a>
