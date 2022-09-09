@@ -76,14 +76,13 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
-## 🎉 Thank you for the 400 stars!!
+## 🎉 Thank you for the 400 ★
 
 <p>
   <a href="https://arifszn.github.io/gitprofile">
     <img src="https://user-images.githubusercontent.com/45073703/189209364-fc4df315-b66a-4654-907d-b0b7a9d2161e.gif" alt="Thank You" width="60%"/>
   </a>
 </p>
-
 
 ## 🛠 Installation & Setup
 
@@ -543,7 +542,7 @@ The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
 
 ## 💖 Support
 
-<p>You can show your support by starring this project.</p>
+<p>You can show your support by starring this project. ★</p>
 <a href="https://github.com/arifszn/gitprofile/stargazers">
   <img src="https://img.shields.io/github/stars/arifszn/gitprofile?style=social" alt="Github Star">
 </a>
