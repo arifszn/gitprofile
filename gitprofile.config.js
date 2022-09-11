@@ -27,7 +27,7 @@ const config = {
     'JavaScript',
     'TypeScript',
     'MongoDB',
-    "MySQL",
+    'MySQL',
     'Discord.js',
     'Node.js',
     'Traefik',
@@ -35,41 +35,59 @@ const config = {
     'Authelia',
     'Proxmox',
     'Ubuntu',
-    'Git'
+    'Git',
   ],
   experiences: [
     {
       company: 'University of Wisconsin Milwaukee',
+      position: 'Lead Audio Visual Technician - Event Services',
+      from: 'August 2022',
+      to: 'Present',
+    },
+    {
+      company: 'University of Wisconsin Milwaukee',
       position: 'Audio Visual Technician - Event Services',
       from: 'October 2021',
-      to: 'Present'
+      to: 'August 2022',
     },
     {
       company: 'University of Wisconsin Milwaukee',
       position: 'Maintenance - University Housing',
       from: 'May 2022',
-      to: 'September2022'
+      to: 'September 2022',
     },
     {
       company: 'College of DuPage',
-      position: 'COVID Screening',
+      position: 'COVID Screener - Event Services',
       from: 'August 2020',
-      to: 'May 2021'
-    }
+      to: 'May 2021',
+    },
+  ],
+  certifications: [
+    {
+      body: 'LinkedIn',
+      name: 'UX Foundations: Prototyping',
+      year: 'March 2022',
+    },
+    {
+      body: 'LinkedIn',
+      name: 'Adobe XCD: Prototyping',
+      year: 'April 2022',
+    },
   ],
   education: [
-    { 
+    {
       institution: 'University of Wisconsin Milwaukee',
       degree: 'Bachelor of Science in Information Science and Technology',
       from: '2020',
-      to: 'Present'
-  },
-  { 
+      to: 'Present',
+    },
+    {
       institution: 'College of DuPage',
       degree: 'Pre-Engineering',
       from: '2019',
       to: '2020',
-  }
+    },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {

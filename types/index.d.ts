@@ -204,6 +204,12 @@ export interface Experience {
   to?: string;
 }
 
+export interface Certifications {
+  body?: string;
+  name?: string;
+  year?: string;
+}
+
 export interface Education {
   institution?: string;
   degree?: string;
@@ -232,6 +238,10 @@ export interface Config {
    */
   experiences?: Array<Experience>;
 
+  /**
+   * Certifications list
+   */
+  certifications?: Array<Certifications>;
   /**
    * Education list
    */

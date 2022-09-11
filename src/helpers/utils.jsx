@@ -159,6 +159,7 @@ export const sanitizeConfig = (config) => {
     },
     skills: config?.skills || [],
     experiences: config?.experiences || [],
+    certifications: config?.certifications || [],
     education: config?.education || [],
     blog: {
       source: config?.blog?.source,
@@ -195,7 +196,7 @@ export const tooManyRequestError = (reset) => {
     title: 'Too Many Requests.',
     subTitle: (
       <p>
-        Oh no, you hit the{' '}
+        Oh no, you hit a Github{' '}
         <a
           href="https://developer.github.com/v3/rate_limit/"
           target="_blank"

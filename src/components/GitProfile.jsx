@@ -7,6 +7,7 @@ import AvatarCard from './avatar-card';
 import Details from './details';
 import Skill from './skill';
 import Experience from './experience';
+import Certifications from './certifications';
 import Education from './education';
 import Project from './project';
 import Blog from './blog';
@@ -171,6 +172,10 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         experiences={sanitizedConfig.experiences}
                       />
+                      <Certifications
+                        loading={loading}
+                        certifications={sanitizedConfig.certifications}
+                      />
                       <Education
                         loading={loading}
                         education={sanitizedConfig.education}
@@ -261,6 +266,13 @@ GitProfile.propTypes = {
         position: PropTypes.string,
         from: PropTypes.string,
         to: PropTypes.string,
+      })
+    ),
+    certifications: PropTypes.arrayOf(
+      PropTypes.shape({
+        body: PropTypes.string,
+        name: PropTypes.string,
+        year: PropTypes.string,
       })
     ),
     education: PropTypes.arrayOf(
