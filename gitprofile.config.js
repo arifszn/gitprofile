@@ -2,26 +2,26 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 'HackerSM9', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
-    limit: 10, // How many projects to display.
+    limit: 14, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    linkedin: 'Samarth-Magdum',
+    twitter: 'HackerSM9_',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    website: 'https://arifszn.github.io',
+    medium: '',
+    dev: 'HackerSM9',
+    website: 'https://HACKERSM9.github.io',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'sm9hacking@gmail.com',
   },
   skills: [
     'PHP',
