@@ -205,6 +205,9 @@ const config = {
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
+  resume:{
+    fileName: 'resume.pdf' // Place the resume file in public folder with the same name as the 'fileName' property.
+  },
   social: {
     linkedin: '',
     twitter: '',
