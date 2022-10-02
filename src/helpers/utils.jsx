@@ -133,7 +133,7 @@ export const sanitizeConfig = (config) => {
     'winter',
     'procyon',
   ];
-
+  
   return {
     github: {
       username: config?.github?.username || '',
@@ -143,6 +143,9 @@ export const sanitizeConfig = (config) => {
         forks: config?.github?.exclude?.forks || false,
         projects: config?.github?.exclude?.projects || [],
       },
+    },
+    resume:{
+      fileName: config?.resume?.fileName || false
     },
     social: {
       linkedin: config?.social?.linkedin,
