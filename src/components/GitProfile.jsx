@@ -9,6 +9,7 @@ import Skill from './skill';
 import Experience from './experience';
 import Education from './education';
 import Project from './project';
+import Showcase from './showcase';
 import Blog from './blog';
 import {
   genericError,
@@ -183,6 +184,11 @@ const GitProfile = ({ config }) => {
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
+                      <Showcase
+                        loading={loading}
+                        cases={sanitizedConfig.showcase}
+                        github={sanitizedConfig.github}
+                      />
                       <Project
                         repo={repo}
                         loading={loading}
@@ -253,6 +259,7 @@ GitProfile.propTypes = {
       email: PropTypes.string,
     }),
     skills: PropTypes.array,
+    showcase: PropTypes.any,
     experiences: PropTypes.arrayOf(
       PropTypes.shape({
         company: PropTypes.string,
