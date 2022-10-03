@@ -144,9 +144,6 @@ export const sanitizeConfig = (config) => {
         projects: config?.github?.exclude?.projects || [],
       },
     },
-    resume: {
-      fileUrl: config?.resume?.fileUrl || '',
-    },
     social: {
       linkedin: config?.social?.linkedin,
       twitter: config?.social?.twitter,
@@ -159,6 +156,9 @@ export const sanitizeConfig = (config) => {
       website: config?.social?.website,
       phone: config?.social?.phone,
       email: config?.social?.email,
+    },
+    resume: {
+      fileUrl: config?.resume?.fileUrl || '',
     },
     skills: config?.skills || [],
     experiences: config?.experiences || [],

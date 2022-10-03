@@ -216,6 +216,10 @@ export interface Education {
   to?: string;
 }
 
+export interface Resume {
+  fileUrl?: string;
+}
+
 export interface Config {
   /**
    * GitHub Config
@@ -226,6 +230,11 @@ export interface Config {
    * Social links
    */
   social?: Social;
+
+  /**
+   * Resume
+   */
+  resume?: Resume;
 
   /**
    * Skill list
