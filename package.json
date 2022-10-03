@@ -34,8 +34,8 @@
     "build:library": "vite build --config library.config.js",
     "lint": "eslint --ext .js,.jsx .",
     "lint:fix": "eslint --ext .js,.jsx --fix .",
-    "prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,md,json}'",
-    "prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}'"
+    "prettier": "prettier --check \"./**/*.{js,jsx,ts,tsx,css,md,json}\"",
+    "prettier:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\""
   },
   "dependencies": {
     "react": "^18.2.0",
