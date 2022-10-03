@@ -145,7 +145,7 @@ export const sanitizeConfig = (config) => {
       },
     },
     resume: {
-      fileName: config?.resume?.fileName || false,
+      fileUrl: config?.resume?.fileUrl || '',
     },
     social: {
       linkedin: config?.social?.linkedin,

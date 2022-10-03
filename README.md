@@ -206,7 +206,7 @@ const config = {
     },
   },
   resume: {
-    fileName: 'resume.pdf', // Place the resume file in public folder with the same name as the 'fileName' property.
+    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
   },
   social: {
     linkedin: '',
