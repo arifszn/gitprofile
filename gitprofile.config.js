@@ -10,9 +10,6 @@ const config = {
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
-  resume: {
-    fileName: 'resume.pdf', // Place the resume file in public folder with the same name as the 'fileName' property.
-  },
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
@@ -25,6 +22,9 @@ const config = {
     website: 'https://arifszn.github.io',
     phone: '',
     email: 'arifulalamszn@gmail.com',
+  },
+  resume: {
+    fileUrl: 'resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',

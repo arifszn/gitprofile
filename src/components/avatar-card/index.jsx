@@ -55,9 +55,9 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               : profile.bio}
           </div>
         </div>
-        {resume?.fileName && (
+        {resume?.fileUrl && (
           <a
-            href={resume.fileName}
+            href={resume.fileUrl}
             target="_blank"
             className="btn btn-outline btn-primary text-xs mt-6"
             download
@@ -75,7 +75,9 @@ AvatarCard.propTypes = {
   profile: PropTypes.object,
   loading: PropTypes.bool.isRequired,
   avatarRing: PropTypes.bool.isRequired,
-  resume: PropTypes.object,
+  resume: PropTypes.shape({
+    fileUrl: PropTypes.string,
+  }),
 };
 
 export default AvatarCard;
