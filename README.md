@@ -66,11 +66,11 @@
 ✓ [SEO](#seo)  
 ✓ [Avatar and Bio](#avatar-and-bio)  
 ✓ [Social Links](#social-links)  
-✓ [Skills](#skills)  
-✓ [Experience](#experience)  
-✓ [Education](#education)  
-✓ [Projects](#projects)  
-✓ [Blog Posts](#blog-posts)
+✓ [Skill Section](#skills)  
+✓ [Experience Section](#experience)  
+✓ [Education Section](#education)  
+✓ [Projects Section](#projects)  
+✓ [Blog Posts Section](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
@@ -205,9 +205,6 @@ const config = {
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
-  resume: {
-    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
-  },
   social: {
     linkedin: '',
     twitter: '',
@@ -220,6 +217,9 @@ const config = {
     website: '',
     phone: '',
     email: '',
+  },
+  resume: {
+    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: ['JavaScript', 'React.js'],
   experiences: [
