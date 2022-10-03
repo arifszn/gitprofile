@@ -55,16 +55,17 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               : profile.bio}
           </div>
         </div>
-        { resume?.fileName &&
+        {resume?.fileName && (
           <a
             href={resume.fileName}
             target="_blank"
             className="btn btn-outline btn-primary text-xs mt-6"
             download
+            rel="noreferrer"
           >
             Download Resume
           </a>
-        }
+        )}
       </div>
     </div>
   );
@@ -74,7 +75,7 @@ AvatarCard.propTypes = {
   profile: PropTypes.object,
   loading: PropTypes.bool.isRequired,
   avatarRing: PropTypes.bool.isRequired,
-  resume: PropTypes.object
+  resume: PropTypes.object,
 };
 
 export default AvatarCard;
