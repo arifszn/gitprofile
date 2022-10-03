@@ -2,9 +2,9 @@ import { Fragment } from 'react';
 import { AiOutlineLink } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
+import { ga } from '../../helpers/utils';
 
-const Showcase = ({ cases, loading, github }) => {
-  console.log('cases', cases);
+const Showcase = ({ cases, loading, github, googleAnalytics }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < github.limit; index++) {
@@ -59,6 +59,20 @@ const Showcase = ({ cases, loading, github }) => {
         key={index}
         onClick={(e) => {
           e.preventDefault();
+
+          try {
+            if (googleAnalytics?.id) {
+              ga.event({
+                action: 'Click showcase',
+                params: {
+                  project: item.title,
+                },
+              });
+            }
+          } catch (error) {
+            console.error(error);
+          }
+
           window?.open(item.url, '_blank');
         }}
       >
@@ -129,6 +143,7 @@ Showcase.propTypes = {
   cases: PropTypes.array,
   loading: PropTypes.bool.isRequired,
   github: PropTypes.object.isRequired,
+  googleAnalytics: PropTypes.object,
 };
 
 export default Showcase;

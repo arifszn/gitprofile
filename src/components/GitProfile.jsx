@@ -188,6 +188,7 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         cases={sanitizedConfig.showcase}
                         github={sanitizedConfig.github}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
                       <Project
                         repo={repo}
