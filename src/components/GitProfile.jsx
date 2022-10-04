@@ -186,7 +186,7 @@ const GitProfile = ({ config }) => {
                     <div className="grid grid-cols-1 gap-6">
                       <Showcase
                         loading={loading}
-                        cases={sanitizedConfig.showcase}
+                        cases={sanitizedConfig.showcases}
                         github={sanitizedConfig.github}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
@@ -260,7 +260,7 @@ GitProfile.propTypes = {
       email: PropTypes.string,
     }),
     skills: PropTypes.array,
-    showcase: PropTypes.any,
+    showcases: PropTypes.array,
     experiences: PropTypes.arrayOf(
       PropTypes.shape({
         company: PropTypes.string,

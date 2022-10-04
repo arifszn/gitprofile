@@ -55,7 +55,7 @@ const Showcase = ({ cases, loading, github, googleAnalytics }) => {
     return cases.map((item, index) => (
       <a
         className="card shadow-lg compact bg-base-100 cursor-pointer"
-        href={item.url}
+        href={item.html_url}
         key={index}
         onClick={(e) => {
           e.preventDefault();
@@ -65,7 +65,7 @@ const Showcase = ({ cases, loading, github, googleAnalytics }) => {
               ga.event({
                 action: 'Click showcase',
                 params: {
-                  project: item.title,
+                  project: item.name,
                 },
               });
             }
@@ -73,7 +73,7 @@ const Showcase = ({ cases, loading, github, googleAnalytics }) => {
             console.error(error);
           }
 
-          window?.open(item.url, '_blank');
+          window?.open(item.html_url, '_blank');
         }}
       >
         <div className="flex justify-between flex-col p-8 h-full w-full">
@@ -82,7 +82,7 @@ const Showcase = ({ cases, loading, github, googleAnalytics }) => {
               <AiOutlineLink className="mr-2" />
               <span>
                 <h5 className="card-title text-lg text-base-content">
-                  {item.title}
+                  {item.name}
                 </h5>
               </span>
             </div>
@@ -112,18 +112,6 @@ const Showcase = ({ cases, loading, github, googleAnalytics }) => {
                       </span>
                     )}
                   </h5>
-                  {loading ? (
-                    skeleton({ width: 'w-10', height: 'h-5' })
-                  ) : (
-                    <a
-                      href={`https://github.com/${github.username}?tab=repositories`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-base-content opacity-50"
-                    >
-                      See All
-                    </a>
-                  )}
                 </div>
                 <div className="col-span-2">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
