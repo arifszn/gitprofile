@@ -157,6 +157,9 @@ export const sanitizeConfig = (config) => {
       phone: config?.social?.phone,
       email: config?.social?.email,
     },
+    resume: {
+      fileUrl: config?.resume?.fileUrl || '',
+    },
     skills: config?.skills || [],
     showcases: config?.showcases || [],
     experiences: config?.experiences || [],

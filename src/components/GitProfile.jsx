@@ -161,6 +161,7 @@ const GitProfile = ({ config }) => {
                         profile={profile}
                         loading={loading}
                         avatarRing={!sanitizedConfig.themeConfig.hideAvatarRing}
+                        resume={sanitizedConfig.resume}
                       />
                       <Details
                         profile={profile}

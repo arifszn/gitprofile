@@ -20,7 +20,25 @@ const config = {
     phone: '',
     email: '',
   },
-  skills: ['JavaScript', 'React.js'],
+  resume: {
+    fileUrl: 'resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+  },
+  skills: [
+    'PHP',
+    'Laravel',
+    'JavaScript',
+    'React.js',
+    'Node.js',
+    'Nest.js',
+    'MySQL',
+    'Git',
+    'Docker',
+    'PHPUnit',
+    'CSS',
+    'Antd',
+    'Tailwind',
+    'Bootstrap',
+  ],
   experiences: [
     {
       company: 'Company name 1',
