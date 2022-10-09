@@ -55,17 +55,22 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               : profile.bio}
           </div>
         </div>
-        {resume?.fileUrl && (
-          <a
-            href={resume.fileUrl}
-            target="_blank"
-            className="btn btn-outline btn-primary text-xs mt-6"
-            download
-            rel="noreferrer"
-          >
-            Download Resume
-          </a>
-        )}
+        {resume?.fileUrl &&
+          (loading ? (
+            <div className="mt-3">
+              {skeleton({ width: 'w-48', height: 'h-5' })}
+            </div>
+          ) : (
+            <a
+              href={resume.fileUrl}
+              target="_blank"
+              className="btn btn-outline btn-primary text-xs mt-6"
+              download
+              rel="noreferrer"
+            >
+              Download Resume
+            </a>
+          ))}
       </div>
     </div>
   );
