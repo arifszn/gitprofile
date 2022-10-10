@@ -82,6 +82,22 @@ const config = {
       to: '2014',
     },
   ],
+  showcases: [
+    {
+      name: 'Website name 1',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
+      //   image_url: 'https://via.placeholder.com/250x250',
+      html_url: 'https://example.com',
+    },
+    {
+      name: 'Website name 2',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
+      image_url: 'https://via.placeholder.com/250x250',
+      html_url: 'https://example.com',
+    },
+  ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
