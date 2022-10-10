@@ -8,6 +8,7 @@ import Details from './details';
 import Skill from './skill';
 import Experience from './experience';
 import Education from './education';
+import Showcase from './showcase';
 import Project from './project';
 import Blog from './blog';
 import {
@@ -184,6 +185,12 @@ const GitProfile = ({ config }) => {
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
+                      <Showcase
+                        loading={loading}
+                        cases={sanitizedConfig.showcases}
+                        github={sanitizedConfig.github}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
+                      />
                       <Project
                         repo={repo}
                         loading={loading}
@@ -254,6 +261,7 @@ GitProfile.propTypes = {
       email: PropTypes.string,
     }),
     skills: PropTypes.array,
+    showcases: PropTypes.array,
     experiences: PropTypes.arrayOf(
       PropTypes.shape({
         company: PropTypes.string,
