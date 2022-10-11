@@ -207,6 +207,7 @@ export interface Experience {
   position?: string;
   from?: string;
   to?: string;
+  companyLink?: string;
 }
 
 export interface Education {
