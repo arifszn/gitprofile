@@ -3,69 +3,65 @@ import { AiOutlineLink } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
 import { ga } from '../../helpers/utils';
+import LazyImage from '../lazy-image';
 
-const Showcase = ({ cases, loading, github, googleAnalytics }) => {
+const Showcase = ({ cases, loading, googleAnalytics }) => {
   const renderSkeleton = () => {
-    let array = [];
-    for (let index = 0; index < github.limit; index++) {
-      array.push(
-        <div className="card shadow-lg compact bg-base-100" key={index}>
-          <div className="flex justify-between flex-col p-8 h-full w-full">
-            <div>
-              <div className="flex items-center">
-                <span>
-                  <h5 className="card-title text-lg">
-                    {skeleton({ width: 'w-32', height: 'h-8' })}
-                  </h5>
-                </span>
-              </div>
-              <div className="mb-5 mt-1">
-                {skeleton({
-                  width: 'w-full',
-                  height: 'h-4',
-                  className: 'mb-2',
-                })}
-                {skeleton({ width: 'w-full', height: 'h-4' })}
-              </div>
+    return [
+      <div className="card shadow-lg compact bg-base-100" key="">
+        <div className="flex justify-between flex-col p-8 h-full w-full">
+          <div>
+            <div className="flex items-center">
+              <span>
+                <h5 className="card-title text-lg">
+                  {skeleton({ width: 'w-32', height: 'h-8' })}
+                </h5>
+              </span>
             </div>
-            <div className="flex justify-between">
-              <div className="flex flex-grow">
-                <span className="mr-3 flex items-center">
-                  {skeleton({ width: 'w-12', height: 'h-4' })}
-                </span>
-                <span className="flex items-center">
-                  {skeleton({ width: 'w-12', height: 'h-4' })}
-                </span>
-              </div>
-              <div>
-                <span className="flex items-center">
-                  {skeleton({ width: 'w-12', height: 'h-4' })}
-                </span>
-              </div>
+            <div className="mb-5 mt-1">
+              {skeleton({
+                width: 'w-full',
+                height: 'h-4',
+                className: 'mb-2',
+              })}
+              {skeleton({ width: 'w-full', height: 'h-4' })}
+            </div>
+          </div>
+          <div className="flex justify-between">
+            <div className="flex flex-grow">
+              <span className="mr-3 flex items-center">
+                {skeleton({ width: 'w-12', height: 'h-4' })}
+              </span>
+              <span className="flex items-center">
+                {skeleton({ width: 'w-12', height: 'h-4' })}
+              </span>
+            </div>
+            <div>
+              <span className="flex items-center">
+                {skeleton({ width: 'w-12', height: 'h-4' })}
+              </span>
             </div>
           </div>
         </div>
-      );
-    }
-
-    return array;
+      </div>,
+    ];
   };
 
   const renderShowcases = () => {
     return cases.map((item, index) => (
       <a
         className="card shadow-lg compact bg-base-100 cursor-pointer"
-        href={item.html_url}
         key={index}
+        href={item.link}
         onClick={(e) => {
           e.preventDefault();
 
           try {
             if (googleAnalytics?.id) {
               ga.event({
-                action: 'Click showcase',
+                action: 'Click Showcase',
                 params: {
-                  project: item.name,
+                  post: item.name,
                 },
               });
             }
@@ -73,29 +69,38 @@ const Showcase = ({ cases, loading, github, googleAnalytics }) => {
             console.error(error);
           }
 
-          window?.open(item.html_url, '_blank');
+          window?.open(item.link, '_blank');
         }}
       >
-        <div className="flex justify-between flex-col p-8 h-full w-full">
-          <div>
-            <div className="flex items-center opacity-60">
-              <AiOutlineLink className="mr-2" />
-              <span>
-                <h5 className="card-title text-lg text-base-content">
-                  {item.name}
-                </h5>
-              </span>
-            </div>
-            <div className="mt-1 flex flex-col md:flex-row">
-              {item?.image_url && (
-                <div className="flex flex-col md:mr-5">
-                  <img src={item.image_url} alt={item.name} />
+        <div className="p-8 h-full w-full">
+          <div className="flex items-center flex-col md:flex-row">
+            {item.imageUrl && (
+              <div className="avatar mb-5 md:mb-0 opacity-90">
+                <div className="w-24 h-24 mask mask-squircle">
+                  <LazyImage
+                    src={item.imageUrl}
+                    alt={'thumbnail'}
+                    placeholder={skeleton({
+                      width: 'w-full',
+                      height: 'h-full',
+                      shape: '',
+                    })}
+                  />
                 </div>
-              )}
-              <div className="flex flex-col">
-                <p className="mt-1 text-base-content text-opacity-60 text-sm">
-                  {item.description}
-                </p>
+              </div>
+            )}
+            <div className="w-full">
+              <div className="flex items-start px-4">
+                <div className="text-center md:text-left w-full">
+                  <h2 className="font-semibold text-base-content opacity-60">
+                    <div className="flex flex-row items-center">
+                      <AiOutlineLink className="mr-1" /> {item.name}
+                    </div>
+                  </h2>
+                  <p className="mt-3 text-base-content text-opacity-60 text-sm">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -139,7 +144,6 @@ const Showcase = ({ cases, loading, github, googleAnalytics }) => {
 Showcase.propTypes = {
   cases: PropTypes.array,
   loading: PropTypes.bool.isRequired,
-  github: PropTypes.object.isRequired,
   googleAnalytics: PropTypes.object,
 };
 
