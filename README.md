@@ -579,6 +579,37 @@ module.exports = {
 
 The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
 
+## Showcases
+
+In this section you can showcase your projects with just a url and description. Furthermore, there is the possibility to add an image.
+
+```js
+// gitprofile.config.js
+module.exports = {
+  // ...
+  showcases: [
+      {
+        name: 'Website name 1',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. \
+          Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
+        link: 'https://example.com',
+      },
+      {
+        name: 'Website name 2',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. \
+          Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
+        imageUrl: 'https://via.placeholder.com/250x250',
+        link: 'https://example.com',
+      },
+    ],
+ };
+```
+
+The above configuration will look like this:
+![screenshot-rocks(2)](https://user-images.githubusercontent.com/22073531/195196309-1e55fdc2-791d-453e-9341-3f66201f830d.png)
+
 ## 💖 Support
 
 <p>You can show your support by starring this project. ★</p>
