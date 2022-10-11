@@ -57,8 +57,8 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
         </div>
         {resume?.fileUrl &&
           (loading ? (
-            <div className="mt-3">
-              {skeleton({ width: 'w-48', height: 'h-5' })}
+            <div className="mt-6">
+              {skeleton({ width: 'w-40', height: 'h-10' })}
             </div>
           ) : (
             <a
