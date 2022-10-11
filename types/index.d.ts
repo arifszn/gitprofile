@@ -221,6 +221,13 @@ export interface Certifications {
   link?: string;
 }
 
+export interface Showcase {
+  name?: string;
+  description?: string;
+  imageUrl?: string;
+  link?: string;
+}
+
 export interface Education {
   institution?: string;
   degree?: string;
@@ -257,6 +264,11 @@ export interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
+  
+  /**
+   * Showcase list
+   */
+  showcases?: Array<Showcase>;
 
   /**
    * Certifications list

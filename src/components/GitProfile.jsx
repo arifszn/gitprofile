@@ -197,16 +197,15 @@ const GitProfile = ({ config }) => {
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
-                      <Showcase
-                        loading={loading}
-                        cases={sanitizedConfig.showcases}
-                        github={sanitizedConfig.github}
-                        googleAnalytics={sanitizedConfig.googleAnalytics}
-                      />
                       <Project
                         repo={repo}
                         loading={loading}
                         github={sanitizedConfig.github}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
+                      />
+                      <Showcase
+                        loading={loading}
+                        cases={sanitizedConfig.showcases}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
                       <Blog
