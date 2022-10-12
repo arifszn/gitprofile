@@ -222,10 +222,10 @@ export interface Certifications {
 }
 
 export interface ExternalProjects {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   imageUrl?: string;
-  link?: string;
+  link: string;
 }
 
 export interface Education {
