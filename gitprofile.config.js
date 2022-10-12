@@ -82,16 +82,18 @@ const config = {
       to: '2014',
     },
   ],
-  showcases: [
+
+  // To hide the `Other Projects` section, keep it empty.
+  externalProjects: [
     {
-      name: 'Website name 1',
+      title: 'Website name 1',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. \
         Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
       link: 'https://example.com',
     },
     {
-      name: 'Website name 2',
+      title: 'Website name 2',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. \
         Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
@@ -99,6 +101,7 @@ const config = {
       link: 'https://example.com',
     },
   ],
+
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev

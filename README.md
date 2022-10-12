@@ -579,29 +579,20 @@ module.exports = {
 
 The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
 
-## Showcases
+## External Projects
 
-In this section you can showcase your projects with just a url and description. Furthermore, there is the possibility to add an image.
+In this section you can showcase your external projects.
 
 ```js
 // gitprofile.config.js
 module.exports = {
   // ...
-  showcases: [
+  externalProjects: [
     {
-      name: 'Website name 1',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. \
-          Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
+      title: 'Title',
+      description: 'Description',
       link: 'https://example.com',
-    },
-    {
-      name: 'Website name 2',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. \
-          Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
       imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
     },
   ],
 };

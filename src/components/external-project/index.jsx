@@ -5,7 +5,19 @@ import { skeleton } from '../../helpers/utils';
 import { ga } from '../../helpers/utils';
 import LazyImage from '../lazy-image';
 
-const Showcase = ({ cases, loading, googleAnalytics }) => {
+const displaySection = (externalProjects) => {
+  if (
+    externalProjects &&
+    Array.isArray(externalProjects) &&
+    externalProjects.length
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
   const renderSkeleton = () => {
     return [
       <div className="card shadow-lg compact bg-base-100" key="">
@@ -47,8 +59,8 @@ const Showcase = ({ cases, loading, googleAnalytics }) => {
     ];
   };
 
-  const renderShowcases = () => {
-    return cases.map((item, index) => (
+  const renderExternalProjects = () => {
+    return externalProjects.map((item, index) => (
       <a
         className="card shadow-lg compact bg-base-100 cursor-pointer"
         key={index}
@@ -59,9 +71,9 @@ const Showcase = ({ cases, loading, googleAnalytics }) => {
           try {
             if (googleAnalytics?.id) {
               ga.event({
-                action: 'Click Showcase',
+                action: 'Click External Project',
                 params: {
-                  post: item.name,
+                  post: item.title,
                 },
               });
             }
@@ -94,7 +106,7 @@ const Showcase = ({ cases, loading, googleAnalytics }) => {
                 <div className="text-center md:text-left w-full">
                   <h2 className="font-semibold text-base-content opacity-60">
                     <div className="flex flex-row items-center">
-                      <AiOutlineLink className="mr-1" /> {item.name}
+                      <AiOutlineLink className="mr-1" /> {item.title}
                     </div>
                   </h2>
                   <p className="mt-3 text-base-content text-opacity-60 text-sm">
@@ -111,40 +123,42 @@ const Showcase = ({ cases, loading, googleAnalytics }) => {
 
   return (
     <Fragment>
-      <div className="col-span-1 lg:col-span-2">
-        <div className="grid grid-cols-2 gap-6">
-          <div className="col-span-2">
-            <div className="card compact bg-gradient-to-br to-base-200 from-base-100 shadow">
-              <div className="card-body">
-                <div className="mx-3 flex items-center justify-between mb-2">
-                  <h5 className="card-title">
-                    {loading ? (
-                      skeleton({ width: 'w-28', height: 'h-8' })
-                    ) : (
-                      <span className="text-base-content opacity-70">
-                        My Showcases
-                      </span>
-                    )}
-                  </h5>
-                </div>
-                <div className="col-span-2">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {loading || !cases ? renderSkeleton() : renderShowcases()}
+      {displaySection(externalProjects) && (
+        <div className="col-span-1 lg:col-span-2">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="col-span-2">
+              <div className="card compact bg-gradient-to-br to-base-200 from-base-100 shadow">
+                <div className="card-body">
+                  <div className="mx-3 flex items-center justify-between mb-2">
+                    <h5 className="card-title">
+                      {loading ? (
+                        skeleton({ width: 'w-28', height: 'h-8' })
+                      ) : (
+                        <span className="text-base-content opacity-70">
+                          Other Projects
+                        </span>
+                      )}
+                    </h5>
+                  </div>
+                  <div className="col-span-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {loading ? renderSkeleton() : renderExternalProjects()}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </Fragment>
   );
 };
 
-Showcase.propTypes = {
-  cases: PropTypes.array,
+ExternalProject.propTypes = {
+  externalProjects: PropTypes.array,
   loading: PropTypes.bool.isRequired,
   googleAnalytics: PropTypes.object,
 };
 
-export default Showcase;
+export default ExternalProject;

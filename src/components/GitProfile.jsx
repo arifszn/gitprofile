@@ -9,7 +9,6 @@ import Skill from './skill';
 import Experience from './experience';
 import Certification from './certification';
 import Education from './education';
-import Showcase from './showcase';
 import Project from './project';
 import Blog from './blog';
 import {
@@ -26,6 +25,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import '../assets/index.css';
 import { formatDistance } from 'date-fns';
+import ExternalProject from './external-project';
 
 const bgColor = 'bg-base-300';
 
@@ -203,9 +203,9 @@ const GitProfile = ({ config }) => {
                         github={sanitizedConfig.github}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
-                      <Showcase
+                      <ExternalProject
                         loading={loading}
-                        cases={sanitizedConfig.showcases}
+                        externalProjects={sanitizedConfig.externalProjects}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
                       <Blog
@@ -275,7 +275,14 @@ GitProfile.propTypes = {
       email: PropTypes.string,
     }),
     skills: PropTypes.array,
-    showcases: PropTypes.array,
+    externalProjects: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        link: PropTypes.string,
+        imageUrl: PropTypes.string,
+      })
+    ),
     experiences: PropTypes.arrayOf(
       PropTypes.shape({
         company: PropTypes.string,
