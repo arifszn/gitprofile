@@ -264,7 +264,7 @@ export interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
-  
+
   /**
    * Showcase list
    */
