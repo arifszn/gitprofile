@@ -228,7 +228,7 @@ const config = {
       position: 'Software Engineer',
       from: 'July 2019',
       to: 'Present',
-      companyLink: 'https://comapny.com'
+      companyLink: 'https://comapny.com',
     },
     {
       company: 'Company name 2',
@@ -464,7 +464,7 @@ module.exports = {
       position: 'Software Engineer',
       from: 'July 2019',
       to: 'Present',
-      companyLink: 'https://company1.com'
+      companyLink: 'https://company1.com',
     },
     {
       company: 'Company name 2',
