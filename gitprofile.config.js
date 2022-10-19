@@ -48,6 +48,7 @@ const config = {
       position: 'Backend Engineer II',
       from: 'September 2021',
       to: 'Present',
+      companyLink: 'https://monstar-lab.com/bd/',
     },
     {
       company: 'My Offer 360 Degree',
