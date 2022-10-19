@@ -218,7 +218,8 @@ export const notFoundError = {
   title: 'The Github Username is Incorrect.',
   subTitle: (
     <p>
-      Please provide correct github username in <code>config</code>.
+      Please provide correct github username in{' '}
+      <code>gitprofile.config.js</code>.
     </p>
   ),
 };
