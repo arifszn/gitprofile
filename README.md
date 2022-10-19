@@ -224,29 +224,30 @@ const config = {
   skills: ['JavaScript', 'React.js'],
   experiences: [
     {
-      company: 'Company name 1',
-      position: 'Software Engineer',
-      from: 'July 2019',
+      company: 'Company Name',
+      position: 'Position',
+      from: 'September 2021',
       to: 'Present',
-      companyLink: 'https://comapny.com',
+      companyLink: 'https://example.com',
     },
     {
-      company: 'Company name 2',
-      position: 'Jr. Software Engineer',
-      from: 'January 2019',
-      to: ' June 2019',
+      company: 'Company Name',
+      position: 'Position',
+      from: 'July 2019',
+      to: 'August 2021',
+      companyLink: 'https://example.com',
     },
   ],
   education: [
     {
-      institution: 'Institution name 1',
-      degree: 'ABC',
+      institution: 'Institution Name',
+      degree: 'Degree',
       from: '2015',
       to: '2019',
     },
     {
-      institution: 'Institution name 2',
-      degree: 'XYZ',
+      institution: 'Institution Name',
+      degree: 'Degree',
       from: '2012',
       to: '2014',
     },
@@ -258,9 +259,9 @@ const config = {
     limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
-    // GA3 tracking id/GA4 tag id
-    id: '', // UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
+  // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
     id: '',
     snippetVersion: 6,
@@ -460,17 +461,18 @@ module.exports = {
   // ...
   experiences: [
     {
-      company: 'Company name 1',
-      position: 'Software Engineer',
-      from: 'July 2019',
+      company: 'Company Name',
+      position: 'Position',
+      from: 'September 2021',
       to: 'Present',
-      companyLink: 'https://company1.com',
+      companyLink: 'https://example.com',
     },
     {
-      company: 'Company name 2',
-      position: 'Jr. Software Engineer',
-      from: 'January 2019',
-      to: ' June 2019',
+      company: 'Company Name',
+      position: 'Position',
+      from: 'July 2019',
+      to: 'August 2021',
+      companyLink: 'https://example.com',
     },
   ],
 };
