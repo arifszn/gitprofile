@@ -76,6 +76,10 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
+<p align="center">
+  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
+</p>
+
 ## 🎉 Thank you for the 400 ★
 
 <p>
@@ -370,10 +374,6 @@ module.exports = {
 };
 ```
 
-<p align="center">
-  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
-</p>
-
 ### Google Analytics
 
 **GitProfile** supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
@@ -392,7 +392,7 @@ Besides tracking visitors, it will track `click events` on projects and blog pos
 
 ### Hotjar
 
-**GitProfile** supports hotjar. If you do not want to use Hotjar, keep the `id` empty.
+**GitProfile** supports [hotjar](https://www.hotjar.com) to track visitor interaction and behavior. If you do not want to use Hotjar, keep the `id` empty.
 
 ```js
 // gitprofile.config.js
