@@ -2,7 +2,7 @@ import { skeleton } from '../../helpers/utils';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const ListItem = ({ time, position, company, link }) => (
+const ListItem = ({ time, position, company, companyLink }) => (
   <li className="mb-5 ml-4">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
@@ -11,12 +11,7 @@ const ListItem = ({ time, position, company, link }) => (
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{position}</h3>
     <div className="mb-4 font-normal">
-      <a
-        href={link}
-        target="_blank"
-        rel="noreferrer"
-        className="flex justify-start py-2 px-1 items-center"
-      >
+      <a href={companyLink} target="_blank" rel="noreferrer">
         {company}
       </a>
     </div>
@@ -74,7 +69,7 @@ const Experience = ({ experiences, loading }) => {
                         time={`${experience.from} - ${experience.to}`}
                         position={experience.position}
                         company={experience.company}
-                        link={
+                        companyLink={
                           experience.companyLink ? experience.companyLink : null
                         }
                       />
@@ -94,7 +89,7 @@ ListItem.propTypes = {
   time: PropTypes.node,
   position: PropTypes.node,
   company: PropTypes.node,
-  link: PropTypes.string,
+  companyLink: PropTypes.string,
 };
 
 Experience.propTypes = {

@@ -34,47 +34,42 @@ const config = {
     'Node.js',
     'Nest.js',
     'MySQL',
+    'PostgreSQL',
     'Git',
     'Docker',
     'PHPUnit',
     'CSS',
     'Antd',
     'Tailwind',
-    'Bootstrap',
   ],
   experiences: [
     {
-      company: 'Monstarlab Bangladesh',
-      position: 'Backend Engineer II',
+      company: 'Company Name',
+      position: 'Position',
       from: 'September 2021',
       to: 'Present',
-      companyLink: 'https://monstar-lab.com/bd/',
+      companyLink: 'https://example.com',
     },
     {
-      company: 'My Offer 360 Degree',
-      position: 'Web Application Developer',
+      company: 'Company Name',
+      position: 'Position',
       from: 'July 2019',
       to: 'August 2021',
+      companyLink: 'https://example.com',
     },
   ],
   education: [
     {
-      institution: 'American International University-Bangladesh',
-      degree: 'Bachelor of Science',
+      institution: 'Institution Name',
+      degree: 'Degree',
       from: '2015',
       to: '2019',
     },
     {
-      institution: 'Cantonment College, Jessore',
-      degree: 'Higher Secondary Certificate (HSC)',
+      institution: 'Institution Name',
+      degree: 'Degree',
       from: '2012',
       to: '2014',
-    },
-    {
-      institution: 'Chowgacha Shahadat Pilot High School',
-      degree: 'Secondary School Certificate (SSC)',
-      from: '2007',
-      to: '2012',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
@@ -84,15 +79,15 @@ const config = {
     limit: 3, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
-    // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
-    id: 'G-WLLB5E14M6', // Please remove this and use your own tag id or keep it empty
+    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
+  // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
-    id: '2617601', //  Please remove this and use your own id or keep it empty
+    id: '',
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'corporate',
+    defaultTheme: 'night',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode

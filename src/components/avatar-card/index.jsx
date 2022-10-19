@@ -58,13 +58,13 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
         {resume?.fileUrl &&
           (loading ? (
             <div className="mt-6">
-              {skeleton({ width: 'w-40', height: 'h-10' })}
+              {skeleton({ width: 'w-40', height: 'h-8' })}
             </div>
           ) : (
             <a
               href={resume.fileUrl}
               target="_blank"
-              className="btn btn-outline btn-primary text-xs mt-6"
+              className="btn btn-outline btn-sm text-xs mt-6"
               download
               rel="noreferrer"
             >
