@@ -2,9 +2,9 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
-    limit: 10, // How many projects to display.
+    username: 'h-kod', // Your GitHub org/user name. (Required)
+    sortBy: 'updated', // stars | updated
+    limit: 5, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -12,35 +12,33 @@ const config = {
   },
   social: {
     linkedin: 'hkod',
-    twitter: 'arif_szn',
-    facebook: '',
-    instagram: '',
-    dribbble: '',
+    // twitter: 'arif_szn',
+    // facebook: '',
+    // instagram: '',
+    dribbble: 'https://dribbble.com/hkod',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    website: 'https://arifszn.github.io',
+    // medium: 'arifszn',
+    dev: 'hkod',
+    website: 'https://h-kod.github.io',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'husemecen@gmail.com',
   },
   resume: {
-    fileUrl: 'resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: 'resume2.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
     'JavaScript',
+    'jQuery',
     'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'Vue.js',
     'Git',
-    'Docker',
-    'PHPUnit',
     'CSS',
-    'Antd',
     'Tailwind',
+    'Bootstrap',
+    'Adobe XD',
+    'Adobe Photoshop',
+    'HTML',
+    'Many CMS',
   ],
   experiences: [
     {
@@ -75,7 +73,7 @@ const config = {
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    username: 'hkod', // to hide blog section, keep it empty
     limit: 3, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
