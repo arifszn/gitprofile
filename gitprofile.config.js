@@ -17,7 +17,7 @@ const config = {
     // instagram: '',
     dribbble: 'https://dribbble.com/hkod',
     behance: '',
-    // medium: 'arifszn',
+    medium: 'hkod',
     dev: 'hkod',
     website: 'https://h-kod.github.io',
     phone: '',
