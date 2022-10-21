@@ -11,7 +11,7 @@ const config = {
     },
   },
   social: {
-    linkedin: 'ariful-alam',
+    linkedin: 'hkod',
     twitter: 'arif_szn',
     facebook: '',
     instagram: '',
