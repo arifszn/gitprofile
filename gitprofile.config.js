@@ -74,6 +74,11 @@ const config = {
       name: 'Adobe XCD: Prototyping',
       year: 'April 2022',
     },
+    {
+      body: 'LinkedIn',
+      name: 'Business Analysis Foundations: Business Process Modeling',
+      year: 'October 2022',
+    },
   ],
   education: [
     {
