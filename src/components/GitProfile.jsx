@@ -25,6 +25,8 @@ import PropTypes from 'prop-types';
 import '../assets/index.css';
 import { formatDistance } from 'date-fns';
 
+const bgColor = 'bg-base-300';
+
 const GitProfile = ({ config }) => {
   const [error, setError] = useState(
     typeof config === 'undefined' && !config ? noConfigError : null
@@ -144,7 +146,7 @@ const GitProfile = ({ config }) => {
         ) : (
           sanitizedConfig && (
             <Fragment>
-              <div className="p-4 lg:p-10 min-h-full bg-base-200">
+              <div className={`p-4 lg:p-10 min-h-full ${bgColor}`}>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                   <div className="col-span-1">
                     <div className="grid grid-cols-1 gap-6">
@@ -199,7 +201,9 @@ const GitProfile = ({ config }) => {
                   </div>
                 </div>
               </div>
-              <footer className="p-4 footer bg-base-200 text-base-content footer-center">
+              <footer
+                className={`p-4 footer ${bgColor} text-base-content footer-center`}
+              >
                 <div className="card compact bg-base-100 shadow">
                   <a
                     className="card-body"
