@@ -66,9 +66,14 @@ const GitProfile = ({ config }) => {
         };
 
         setProfile(profileData);
+        return data;
       })
-      .then(() => {
+      .then((userData) => {
         let excludeRepo = ``;
+        if (userData.public_repos === 0) {
+          setRepo([]);
+          return;
+        }
 
         sanitizedConfig.github.exclude.projects.forEach((project) => {
           excludeRepo += `+-repo:${sanitizedConfig.github.username}/${project}`;
