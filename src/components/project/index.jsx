@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
 
 const Project = ({ repo, loading, github, googleAnalytics }) => {
+  if (!loading && Array.isArray(repo) && repo.length === 0) {
+    return <></>;
+  }
+
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < github.limit; index++) {
