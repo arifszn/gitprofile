@@ -92,7 +92,11 @@ const GitProfile = ({ config }) => {
             setRepo(data.items);
           })
           .catch((error) => {
-            handleError(error);
+            if (error.response.status === 422) {
+              setRepo([]);
+            } else {
+              handleError(error);
+            }
           });
       })
       .catch((error) => {

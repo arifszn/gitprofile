@@ -50,7 +50,39 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
     return array;
   };
 
+  const renderProjectIcon = () => {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        className="text-base-content inline-block w-5 h-5 mr-2 stroke-current"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+        ></path>
+      </svg>
+    );
+  };
+
   const renderProjects = () => {
+    if (!repo.length) {
+      return (
+        <div className="card shadow-lg compact bg-base-100">
+          <div className="flex justify-between flex-col p-8 h-full w-full">
+            <div className="flex items-center opacity-60">
+              {renderProjectIcon()}
+              <h5 className="card-title text-lg text-base-content">
+                This user doesn't have any public repositories yet.
+              </h5>
+            </div>
+          </div>
+        </div>
+      );
+    }
     return repo.map((item, index) => (
       <a
         className="card shadow-lg compact bg-base-100 cursor-pointer"
@@ -78,19 +110,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
         <div className="flex justify-between flex-col p-8 h-full w-full">
           <div>
             <div className="flex items-center opacity-60">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="text-base-content inline-block w-5 h-5 mr-2 stroke-current"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-                ></path>
-              </svg>
+              {renderProjectIcon()}
               <span>
                 <h5 className="card-title text-lg text-base-content">
                   {item.name}
