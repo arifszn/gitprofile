@@ -49,6 +49,7 @@ const config = {
       from: 'September 2021',
       to: 'Present',
       companyLink: 'https://example.com',
+      list: ['responsibility 1', 'task 2', 'important project 3'],
     },
     {
       company: 'Company Name',

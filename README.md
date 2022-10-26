@@ -233,6 +233,7 @@ const config = {
       from: 'September 2021',
       to: 'Present',
       companyLink: 'https://example.com',
+      list: ['task 1', 'responsibility 2'],
     },
     {
       company: 'Company Name',
@@ -466,6 +467,7 @@ module.exports = {
       from: 'September 2021',
       to: 'Present',
       companyLink: 'https://example.com',
+      list: ['task 1', 'responsibility 2'],
     },
     {
       company: 'Company Name',
