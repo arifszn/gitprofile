@@ -19,6 +19,7 @@ const config = {
     behance: '',
     medium: 'arifszn',
     dev: 'arifszn',
+    stackoverflow: '', // format: userid/username
     website: 'https://arifszn.github.io',
     phone: '',
     email: 'arifulalamszn@gmail.com',

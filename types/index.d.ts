@@ -80,6 +80,11 @@ export interface Social {
   dev?: string;
 
   /**
+   * Stack Overflow
+   */
+  stackoverflow?: string;
+
+  /**
    * Website
    */
   website?: string;

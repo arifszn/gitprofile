@@ -15,6 +15,7 @@ import {
   FaDev,
   FaFacebook,
   FaGlobe,
+  FaStackOverflow,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
@@ -167,6 +168,14 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Dev:"
                   value={social.dev}
                   link={`https://dev.to/${social.dev}`}
+                />
+              )}
+              {social?.stackoverflow && (
+                <ListItem
+                  icon={<FaStackOverflow className="mr-2" />}
+                  title="Stack Overflow:"
+                  value={social.stackoverflow.split('/').slice(-1)}
+                  link={`https://stackoverflow.com/users/${social.stackoverflow}`}
                 />
               )}
               {social?.website && (
