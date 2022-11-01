@@ -59,6 +59,13 @@ const config = {
       companyLink: 'https://example.com',
     },
   ],
+  certifications: [
+    {
+      body: 'Certification Body Name',
+      name: 'My Sample Certification',
+      year: 'March 2022',
+    },
+  ],
   education: [
     {
       institution: 'Institution Name',
