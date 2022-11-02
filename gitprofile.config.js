@@ -12,7 +12,7 @@ const config = {
   },
   social: {
     linkedin: 'nate-goldsborough',
-    twitter: 'nathen418',
+    twitter: '',
     facebook: '',
     instagram: 'nathen418',
     dribbble: '',
