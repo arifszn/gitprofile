@@ -64,6 +64,7 @@ const config = {
       body: 'Certification Body Name',
       name: 'My Sample Certification',
       year: 'March 2022',
+      certLink: 'https://example.com'
     },
   ],
   education: [

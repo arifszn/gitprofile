@@ -2,15 +2,19 @@ import { skeleton } from '../../helpers/utils';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const ListItem = ({ year, name, body }) => (
+const ListItem = ({ year, name, body, certLink }) => (
   <li className="mb-5 ml-4">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
     <div className="my-0.5 text-xs">{year}</div>
-    <h3 className="font-semibold">{name}</h3>
-    <div className="mb-4 font-normal">{body}</div>
+    <div className="font-semibold">
+      <a href={certLink} target="_blank" rel="noreferrer">
+        {name}
+      </a>
+    </div>
+    <h3 className="mb-4 font-normal">{body}</h3>
   </li>
 );
 
@@ -66,6 +70,9 @@ const Certifications = ({ certifications, loading }) => {
                         year={`${certification.year}`}
                         name={certification.name}
                         body={certification.body}
+                        certLink={
+                          certification.certLink ? certification.certLink : null
+                        }
                       />
                     ))}
                   </Fragment>
@@ -83,6 +90,7 @@ ListItem.propTypes = {
   year: PropTypes.node,
   name: PropTypes.node,
   body: PropTypes.node,
+  certLink: PropTypes.string,
 };
 
 Certifications.propTypes = {
