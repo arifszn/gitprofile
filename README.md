@@ -80,11 +80,11 @@ Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
   <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
 </p>
 
-## 🎉 Thank you for the 400 ★
+## 🎉 Thank you for the 500 ★
 
 <p>
   <a href="https://arifszn.github.io/gitprofile">
-    <img src="https://user-images.githubusercontent.com/45073703/189209364-fc4df315-b66a-4654-907d-b0b7a9d2161e.gif" alt="Thank You" width="60%"/>
+    <img src="https://user-images.githubusercontent.com/45073703/202119579-eae272bd-ed39-434d-9361-df25308e0691.gif" alt="Thank You" width="50%"/>
   </a>
 </p>
 
