@@ -25,11 +25,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
-  },
-  resume: {
-    fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      '',
   },
   skills: [
     'JavaScript',
@@ -84,16 +80,10 @@ const config = {
   ],
   certifications: [
     {
-      name: 'UX Foundations: Prototyping',
+      name: 'Becoming a Product Manager',
       body: 'LinkedIn',
-      year: 'March 2022',
-      link: 'https://www.linkedin.com/learning/certificates/e29f04083830acd0a23f75962d29830a039b7d421064f7b8b255a705aa5db2e4?u=77313426'
-    },
-    {
-      name: 'Adobe XD: Prototyping',
-      body: 'LinkedIn',
-      year: 'April 2022',
-      link: 'https://www.linkedin.com/learning/certificates/0e9e94da0ab17e2acd12e7fa8e1fa47112756cc6a21560c08a440874397a790b?u=77313426'
+      year: 'October 2022',
+      link: 'https://www.linkedin.com/learning/certificates/06618a2ccb788af62bb88d799aad8baad3656f98b5972609bb898c703c5b1975?u=77313426'
     },
     {
       name: 'Business Analysis Foundations: Business Process Modeling',
@@ -102,10 +92,16 @@ const config = {
       link: 'https://www.linkedin.com/learning/certificates/e88b0d48ca07ca8f0c43dd82754bb49775e02781317e9fd3fae6651b869af557?u=77313426'
     },
     {
-      name: 'Becoming a Product Manager',
+      name: 'Adobe XD: Prototyping',
       body: 'LinkedIn',
-      year: 'October 2022',
-      link: 'https://www.linkedin.com/learning/certificates/06618a2ccb788af62bb88d799aad8baad3656f98b5972609bb898c703c5b1975?u=77313426'
+      year: 'April 2022',
+      link: 'https://www.linkedin.com/learning/certificates/0e9e94da0ab17e2acd12e7fa8e1fa47112756cc6a21560c08a440874397a790b?u=77313426'
+    },
+    {
+      name: 'UX Foundations: Prototyping',
+      body: 'LinkedIn',
+      year: 'March 2022',
+      link: 'https://www.linkedin.com/learning/certificates/e29f04083830acd0a23f75962d29830a039b7d421064f7b8b255a705aa5db2e4?u=77313426'
     },
   ],
   education: [
