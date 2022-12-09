@@ -24,8 +24,7 @@ const config = {
     email: 'nathen418@playantares.com',
   },
   resume: {
-    fileUrl:
-      '',
+    fileUrl: '',
   },
   skills: [
     'JavaScript',
@@ -68,7 +67,8 @@ const config = {
       position: 'COVID Screener - Conference and Event Services',
       from: 'August 2020',
       to: 'May 2021',
-      companyLink: 'https://www.cod.edu/about/campus-departments/conference-event-services/',
+      companyLink:
+        'https://www.cod.edu/about/campus-departments/conference-event-services/',
     },
     {
       company: 'College of DuPage',
@@ -83,25 +83,25 @@ const config = {
       name: 'Becoming a Product Manager',
       body: 'LinkedIn',
       year: 'October 2022',
-      link: 'https://www.linkedin.com/learning/certificates/06618a2ccb788af62bb88d799aad8baad3656f98b5972609bb898c703c5b1975?u=77313426'
+      link: 'https://www.linkedin.com/learning/certificates/06618a2ccb788af62bb88d799aad8baad3656f98b5972609bb898c703c5b1975?u=77313426',
     },
     {
       name: 'Business Analysis Foundations: Business Process Modeling',
       body: 'LinkedIn',
       year: 'October 2022',
-      link: 'https://www.linkedin.com/learning/certificates/e88b0d48ca07ca8f0c43dd82754bb49775e02781317e9fd3fae6651b869af557?u=77313426'
+      link: 'https://www.linkedin.com/learning/certificates/e88b0d48ca07ca8f0c43dd82754bb49775e02781317e9fd3fae6651b869af557?u=77313426',
     },
     {
       name: 'Adobe XD: Prototyping',
       body: 'LinkedIn',
       year: 'April 2022',
-      link: 'https://www.linkedin.com/learning/certificates/0e9e94da0ab17e2acd12e7fa8e1fa47112756cc6a21560c08a440874397a790b?u=77313426'
+      link: 'https://www.linkedin.com/learning/certificates/0e9e94da0ab17e2acd12e7fa8e1fa47112756cc6a21560c08a440874397a790b?u=77313426',
     },
     {
       name: 'UX Foundations: Prototyping',
       body: 'LinkedIn',
       year: 'March 2022',
-      link: 'https://www.linkedin.com/learning/certificates/e29f04083830acd0a23f75962d29830a039b7d421064f7b8b255a705aa5db2e4?u=77313426'
+      link: 'https://www.linkedin.com/learning/certificates/e29f04083830acd0a23f75962d29830a039b7d421064f7b8b255a705aa5db2e4?u=77313426',
     },
   ],
   education: [

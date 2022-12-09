@@ -41,7 +41,10 @@ const HeadTagEditor = ({ profile, theme, googleAnalytics, social }) => {
           <meta property="og:image" content={profile.avatar} />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={`${profile.name} | A Portfolio`} />
+          <meta
+            name="twitter:title"
+            content={`${profile.name} | A Portfolio`}
+          />
           <meta name="twitter:description" content={profile.bio} />
           <meta name="twitter:image" content={profile.avatar} />
         </Helmet>
