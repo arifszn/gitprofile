@@ -218,7 +218,7 @@ export interface Certifications {
   body?: string;
   name?: string;
   year?: string;
-  certLink?: string;
+  link?: string;
 }
 
 export interface Education {

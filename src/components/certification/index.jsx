@@ -2,7 +2,7 @@ import { skeleton } from '../../helpers/utils';
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const ListItem = ({ year, name, body, certLink }) => (
+const ListItem = ({ year, name, body, link }) => (
   <li className="mb-5 ml-4">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
@@ -10,7 +10,7 @@ const ListItem = ({ year, name, body, certLink }) => (
     ></div>
     <div className="my-0.5 text-xs">{year}</div>
     <div className="font-semibold">
-      <a href={certLink} target="_blank" rel="noreferrer">
+      <a href={link} target="_blank" rel="noreferrer">
         {name}
       </a>
     </div>
@@ -18,7 +18,7 @@ const ListItem = ({ year, name, body, certLink }) => (
   </li>
 );
 
-const Certifications = ({ certifications, loading }) => {
+const Certification = ({ certifications, loading }) => {
   const renderSkeleton = () => {
     let array = [];
     for (let index = 0; index < 2; index++) {
@@ -53,7 +53,7 @@ const Certifications = ({ certifications, loading }) => {
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
                   <span className="text-base-content opacity-70">
-                    Certifications
+                    Certification
                   </span>
                 )}
               </h5>
@@ -70,9 +70,7 @@ const Certifications = ({ certifications, loading }) => {
                         year={`${certification.year}`}
                         name={certification.name}
                         body={certification.body}
-                        certLink={
-                          certification.certLink ? certification.certLink : null
-                        }
+                        link={certification.link ? certification.link : null}
                       />
                     ))}
                   </Fragment>
@@ -90,12 +88,12 @@ ListItem.propTypes = {
   year: PropTypes.node,
   name: PropTypes.node,
   body: PropTypes.node,
-  certLink: PropTypes.string,
+  link: PropTypes.string,
 };
 
-Certifications.propTypes = {
+Certification.propTypes = {
   certifications: PropTypes.array.isRequired,
   loading: PropTypes.bool.isRequired,
 };
 
-export default Certifications;
+export default Certification;
