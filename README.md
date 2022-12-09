@@ -68,6 +68,7 @@
 ✓ [Social Links](#social-links)  
 ✓ [Skill Section](#skills)  
 ✓ [Experience Section](#experience)  
+✓ [Certifications Section](#certifications)  
 ✓ [Education Section](#education)  
 ✓ [Projects Section](#projects)  
 ✓ [Blog Posts Section](#blog-posts)
@@ -241,6 +242,14 @@ const config = {
       from: 'July 2019',
       to: 'August 2021',
       companyLink: 'https://example.com',
+    },
+  ],
+  certifications: [
+    {
+      body: 'Certification Body Name',
+      name: 'Sample Certification',
+      year: 'March 2022',
+      certLink: 'https://example.com'
     },
   ],
   education: [
@@ -481,6 +490,27 @@ module.exports = {
 ```
 
 Empty array will hide the experience section.
+
+### Certifications
+
+Provide your industry certifications in `certifications`.
+
+```js
+// gitprofile.config.js
+module.exports = {
+  // ...
+  certifications: [
+    {
+      body: 'Certification Body Name',
+      name: 'My Sample Certification',
+      year: 'March 2022',
+      certLink: 'https://example.com'
+    },
+  ],
+};
+```
+
+Empty array will hide the certifications section.
 
 ### Education
 

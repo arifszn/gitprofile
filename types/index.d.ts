@@ -214,6 +214,12 @@ export interface Experience {
   to?: string;
   companyLink?: string;
 }
+export interface Certifications {
+  body?: string;
+  name?: string;
+  year?: string;
+  certLink?: string;
+}
 
 export interface Education {
   institution?: string;
@@ -251,6 +257,11 @@ export interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
+
+  /**
+   * Certifications list
+   */
+  certifications?: Array<Certifications>;
 
   /**
    * Education list
