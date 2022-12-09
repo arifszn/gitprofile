@@ -34,14 +34,17 @@ const HeadTagEditor = ({ profile, theme, googleAnalytics, social }) => {
           <meta itemProp="description" content={profile.bio} />
           <meta itemProp="image" content={profile.avatar} />
 
-          <meta property="og:url" content="https://nathen418.com" />
+          <meta property="og:url" content={social?.website || ''} />
           <meta property="og:type" content="website" />
           <meta property="og:title" content={`${profile.name} | A Portfolio`} />
           <meta property="og:description" content={profile.bio} />
           <meta property="og:image" content={profile.avatar} />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={`${profile.name} | A Portfolio`} />
+          <meta
+            name="twitter:title"
+            content={`${profile.name} | A Portfolio`}
+          />
           <meta name="twitter:description" content={profile.bio} />
           <meta name="twitter:image" content={profile.avatar} />
         </Helmet>

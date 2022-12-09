@@ -23,6 +23,9 @@ const config = {
     phone: '',
     email: 'nathen418@playantares.com',
   },
+  resume: {
+    fileUrl: '',
+  },
   skills: [
     'JavaScript',
     'TypeScript',
@@ -43,41 +46,62 @@ const config = {
       position: 'Lead Audio Visual Technician - Event Services',
       from: 'August 2022',
       to: 'Present',
+      companyLink: 'https://uwm.edu/union/evs/',
     },
     {
       company: 'University of Wisconsin Milwaukee',
       position: 'Audio Visual Technician - Event Services',
       from: 'October 2021',
       to: 'August 2022',
+      companyLink: 'https://uwm.edu/union/evs/',
     },
     {
       company: 'University of Wisconsin Milwaukee',
       position: 'Maintenance - University Housing',
       from: 'May 2022',
       to: 'September 2022',
+      companyLink: 'https://uwm.edu/housing/',
     },
     {
       company: 'College of DuPage',
-      position: 'COVID Screener - Event Services',
+      position: 'COVID Screener - Conference and Event Services',
       from: 'August 2020',
       to: 'May 2021',
+      companyLink:
+        'https://www.cod.edu/about/campus-departments/conference-event-services/',
+    },
+    {
+      company: 'College of DuPage',
+      position: 'Assistant Theatre Technician - ',
+      from: 'August 2020',
+      to: 'May 2021',
+      companyLink: 'https://www.cod.edu/academics/programs/theater/index.aspx',
     },
   ],
   certifications: [
     {
+      name: 'Becoming a Product Manager',
       body: 'LinkedIn',
-      name: 'UX Foundations: Prototyping',
-      year: 'March 2022',
-    },
-    {
-      body: 'LinkedIn',
-      name: 'Adobe XCD: Prototyping',
-      year: 'April 2022',
-    },
-    {
-      body: 'LinkedIn',
-      name: 'Business Analysis Foundations: Business Process Modeling',
       year: 'October 2022',
+      link: 'https://www.linkedin.com/learning/certificates/06618a2ccb788af62bb88d799aad8baad3656f98b5972609bb898c703c5b1975?u=77313426',
+    },
+    {
+      name: 'Business Analysis Foundations: Business Process Modeling',
+      body: 'LinkedIn',
+      year: 'October 2022',
+      link: 'https://www.linkedin.com/learning/certificates/e88b0d48ca07ca8f0c43dd82754bb49775e02781317e9fd3fae6651b869af557?u=77313426',
+    },
+    {
+      name: 'Adobe XD: Prototyping',
+      body: 'LinkedIn',
+      year: 'April 2022',
+      link: 'https://www.linkedin.com/learning/certificates/0e9e94da0ab17e2acd12e7fa8e1fa47112756cc6a21560c08a440874397a790b?u=77313426',
+    },
+    {
+      name: 'UX Foundations: Prototyping',
+      body: 'LinkedIn',
+      year: 'March 2022',
+      link: 'https://www.linkedin.com/learning/certificates/e29f04083830acd0a23f75962d29830a039b7d421064f7b8b255a705aa5db2e4?u=77313426',
     },
   ],
   education: [
@@ -104,6 +128,7 @@ const config = {
     // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
     id: 'G-F8K6NR9ZJ2', // Please remove this and use your own tag id or keep it empty
   },
+  // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
     id: '', //  Please remove this and use your own id or keep it empty
     snippetVersion: 6,
@@ -118,6 +143,9 @@ const config = {
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: true,
+
+    // Hide the ring in Profile picture
+    hideAvatarRing: false,
 
     // Available themes. To remove any theme, exclude from here.
     themes: [

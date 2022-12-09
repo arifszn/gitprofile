@@ -153,9 +153,13 @@ export const sanitizeConfig = (config) => {
       behance: config?.social?.behance,
       medium: config?.social?.medium,
       dev: config?.social?.dev,
+      stackoverflow: config?.social?.stackoverflow,
       website: config?.social?.website,
       phone: config?.social?.phone,
       email: config?.social?.email,
+    },
+    resume: {
+      fileUrl: config?.resume?.fileUrl || '',
     },
     skills: config?.skills || [],
     experiences: config?.experiences || [],
@@ -178,6 +182,7 @@ export const sanitizeConfig = (config) => {
       disableSwitch: config?.themeConfig?.disableSwitch || false,
       respectPrefersColorScheme:
         config?.themeConfig?.respectPrefersColorScheme || false,
+      hideAvatarRing: config?.themeConfig?.hideAvatarRing || false,
       themes: themes,
       customTheme: customTheme,
     },
@@ -215,7 +220,8 @@ export const notFoundError = {
   title: 'The Github Username is Incorrect.',
   subTitle: (
     <p>
-      Please provide correct github username in <code>config</code>.
+      Please provide correct github username in{' '}
+      <code>gitprofile.config.js</code>.
     </p>
   ),
 };

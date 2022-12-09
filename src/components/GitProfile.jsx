@@ -7,7 +7,7 @@ import AvatarCard from './avatar-card';
 import Details from './details';
 import Skill from './skill';
 import Experience from './experience';
-import Certifications from './certifications';
+import Certification from './certification';
 import Education from './education';
 import Project from './project';
 import Blog from './blog';
@@ -25,6 +25,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import '../assets/index.css';
 import { formatDistance } from 'date-fns';
+
+const bgColor = 'bg-base-300';
 
 const GitProfile = ({ config }) => {
   const [error, setError] = useState(
@@ -65,9 +67,14 @@ const GitProfile = ({ config }) => {
         };
 
         setProfile(profileData);
+        return data;
       })
-      .then(() => {
+      .then((userData) => {
         let excludeRepo = ``;
+        if (userData.public_repos === 0) {
+          setRepo([]);
+          return;
+        }
 
         sanitizedConfig.github.exclude.projects.forEach((project) => {
           excludeRepo += `+-repo:${sanitizedConfig.github.username}/${project}`;
@@ -145,7 +152,7 @@ const GitProfile = ({ config }) => {
         ) : (
           sanitizedConfig && (
             <Fragment>
-              <div className="p-4 lg:p-10 min-h-full bg-base-200">
+              <div className={`p-4 lg:p-10 min-h-full ${bgColor}`}>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                   <div className="col-span-1">
                     <div className="grid grid-cols-1 gap-6">
@@ -157,7 +164,12 @@ const GitProfile = ({ config }) => {
                           themeConfig={sanitizedConfig.themeConfig}
                         />
                       )}
-                      <AvatarCard profile={profile} loading={loading} />
+                      <AvatarCard
+                        profile={profile}
+                        loading={loading}
+                        avatarRing={!sanitizedConfig.themeConfig.hideAvatarRing}
+                        resume={sanitizedConfig.resume}
+                      />
                       <Details
                         profile={profile}
                         loading={loading}
@@ -172,7 +184,7 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         experiences={sanitizedConfig.experiences}
                       />
-                      <Certifications
+                      <Certification
                         loading={loading}
                         certifications={sanitizedConfig.certifications}
                       />
@@ -199,13 +211,9 @@ const GitProfile = ({ config }) => {
                   </div>
                 </div>
               </div>
-
-              {/* The below attribution notice shall be
-              included in all copies or substantial portions of the Software. */}
-              {/* DO NOT REMOVE/MODIFY THE BELOW FOOTER. */}
-              {/* SEE 4(C) SECTION OF THE LICENSE FOR MORE DETAILS. */}
-              {/* https://github.com/arifszn/gitprofile/blob/main/LICENSE */}
-              <footer className="p-4 footer bg-base-200 text-base-content footer-center">
+              <footer
+                className={`p-4 footer ${bgColor} text-base-content footer-center`}
+              >
                 <div className="card compact bg-base-100 shadow">
                   <a
                     className="card-body"
@@ -255,6 +263,7 @@ GitProfile.propTypes = {
       behance: PropTypes.string,
       medium: PropTypes.string,
       dev: PropTypes.string,
+      stackoverflow: PropTypes.string,
       website: PropTypes.string,
       phone: PropTypes.string,
       email: PropTypes.string,
@@ -273,6 +282,7 @@ GitProfile.propTypes = {
         body: PropTypes.string,
         name: PropTypes.string,
         year: PropTypes.string,
+        link: PropTypes.string,
       })
     ),
     education: PropTypes.arrayOf(
@@ -299,6 +309,7 @@ GitProfile.propTypes = {
       defaultTheme: PropTypes.string,
       disableSwitch: PropTypes.bool,
       respectPrefersColorScheme: PropTypes.bool,
+      hideAvatarRing: PropTypes.bool,
       themes: PropTypes.array,
       customTheme: PropTypes.shape({
         primary: PropTypes.string,
