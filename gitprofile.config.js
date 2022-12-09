@@ -25,7 +25,8 @@ const config = {
     email: 'arifulalamszn@gmail.com',
   },
   resume: {
-    fileUrl: 'resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl:
+      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',
@@ -59,6 +60,14 @@ const config = {
       companyLink: 'https://example.com',
     },
   ],
+  /* certifications: [
+    {
+      name: 'Lorem ipsum',
+      body: 'Lorem ipsum dolor sit amet',
+      year: 'March 2022',
+      link: 'https://example.com'
+    },
+  ], */
   education: [
     {
       institution: 'Institution Name',
