@@ -2,110 +2,151 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
-    limit: 10, // How many projects to display.
+    username: 'nathen418', // Your GitHub org/user name. (Required)
+    sortBy: 'updated', // stars | updated
+    limit: 15, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
-      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['nathen418.com', 'nathen418'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    linkedin: 'nate-goldsborough',
+    twitter: '',
     facebook: '',
-    instagram: '',
+    instagram: 'nathen418',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // format: userid/username
-    website: 'https://arifszn.github.io',
+    medium: '',
+    dev: 'nathen418',
+    website: 'https://nathen418.com',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'nathen418@playantares.com',
+  },
+  resume: {
+    fileUrl:
+      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   resume: {
     fileUrl:
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
     'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
+    'TypeScript',
+    'MongoDB',
     'MySQL',
-    'PostgreSQL',
-    'Git',
+    'Discord.js',
+    'Node.js',
+    'Traefik',
     'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'Authelia',
+    'Proxmox',
+    'Ubuntu',
+    'Git',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'University of Wisconsin Milwaukee',
+      position: 'Lead Audio Visual Technician - Event Services',
+      from: 'August 2022',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://uwm.edu/union/evs/',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'University of Wisconsin Milwaukee',
+      position: 'Audio Visual Technician - Event Services',
+      from: 'October 2021',
+      to: 'August 2022',
+      companyLink: 'https://uwm.edu/union/evs/',
+    },
+    {
+      company: 'University of Wisconsin Milwaukee',
+      position: 'Maintenance - University Housing',
+      from: 'May 2022',
+      to: 'September 2022',
+      companyLink: 'https://uwm.edu/housing/',
+    },
+    {
+      company: 'College of DuPage',
+      position: 'COVID Screener - Conference and Event Services',
+      from: 'August 2020',
+      to: 'May 2021',
+      companyLink: 'https://www.cod.edu/about/campus-departments/conference-event-services/',
+    },
+    {
+      company: 'College of DuPage',
+      position: 'Assistant Theatre Technician - ',
+      from: 'August 2020',
+      to: 'May 2021',
+      companyLink: 'https://www.cod.edu/academics/programs/theater/index.aspx',
     },
   ],
-  /* certifications: [
+  certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
+      name: 'UX Foundations: Prototyping',
+      body: 'LinkedIn',
       year: 'March 2022',
-      link: 'https://example.com'
+      link: 'https://www.linkedin.com/learning/certificates/e29f04083830acd0a23f75962d29830a039b7d421064f7b8b255a705aa5db2e4?u=77313426'
     },
-  ], */
+    {
+      name: 'Adobe XD: Prototyping',
+      body: 'LinkedIn',
+      year: 'April 2022',
+      link: 'https://www.linkedin.com/learning/certificates/0e9e94da0ab17e2acd12e7fa8e1fa47112756cc6a21560c08a440874397a790b?u=77313426'
+    },
+    {
+      name: 'Business Analysis Foundations: Business Process Modeling',
+      body: 'LinkedIn',
+      year: 'October 2022',
+      link: 'https://www.linkedin.com/learning/certificates/e88b0d48ca07ca8f0c43dd82754bb49775e02781317e9fd3fae6651b869af557?u=77313426'
+    },
+    {
+      name: 'Becoming a Product Manager',
+      body: 'LinkedIn',
+      year: 'October 2022',
+      link: 'https://www.linkedin.com/learning/certificates/06618a2ccb788af62bb88d799aad8baad3656f98b5972609bb898c703c5b1975?u=77313426'
+    },
+  ],
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'University of Wisconsin Milwaukee',
+      degree: 'Bachelor of Science in Information Science and Technology',
+      from: '2020',
+      to: 'Present',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'College of DuPage',
+      degree: 'Pre-Engineering',
+      from: '2019',
+      to: '2020',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 3, // How many posts to display. Max is 10.
+    username: 'nathen418',
+    limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: 'G-F8K6NR9ZJ2', // Please remove this and use your own tag id or keep it empty
   },
   // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
-    id: '',
+    id: '', //  Please remove this and use your own id or keep it empty
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'business',
+    defaultTheme: 'dark',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: false,
+    disableSwitch: true,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
-    respectPrefersColorScheme: false,
+    respectPrefersColorScheme: true,
 
     // Hide the ring in Profile picture
     hideAvatarRing: false,

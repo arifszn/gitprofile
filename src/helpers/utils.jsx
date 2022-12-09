@@ -201,7 +201,7 @@ export const tooManyRequestError = (reset) => {
     title: 'Too Many Requests.',
     subTitle: (
       <p>
-        Oh no, you hit the{' '}
+        Oh no, you hit a Github{' '}
         <a
           href="https://developer.github.com/v3/rate_limit/"
           target="_blank"
