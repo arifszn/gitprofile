@@ -20,7 +20,7 @@ const config = {
     medium: 'arifszn',
     dev: 'arifszn',
     stackoverflow: '', // format: userid/username
-    website: 'https://arifszn.github.io',
+    website: 'www.arifszn.com',
     phone: '',
     email: 'arifulalamszn@gmail.com',
   },
