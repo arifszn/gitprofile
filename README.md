@@ -425,7 +425,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -434,6 +434,7 @@ module.exports = {
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
+    mastodon: 'mastodon-server/@arifszn',
     facebook: '',
     instagram: '',
     dribbble: '',
@@ -446,6 +447,18 @@ module.exports = {
     email: '',
   },
 };
+```
+
+In case you need to implement the Mastodon verification link, you can add it directly in the `index.html` file.
+
+E.g. you could add a footer section right before the closing `body` tag:
+
+```html
+<footer style="position: fixed; bottom: 0; color: transparent;">
+  <a rel="me" href="https://mastodon-server/@username"
+    >Mastodon verification link</a
+  >
+</footer>
 ```
 
 ### Skills

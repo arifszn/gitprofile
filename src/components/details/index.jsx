@@ -15,6 +15,7 @@ import {
   FaDev,
   FaFacebook,
   FaGlobe,
+  FaMastodon,
   FaStackOverflow,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
@@ -112,6 +113,14 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Twitter:"
                   value={social.twitter}
                   link={`https://twitter.com/${social.twitter}`}
+                />
+              )}
+              {social?.mastodon && (
+                <ListItem
+                  icon={<FaMastodon className="mr-2" />}
+                  title="Mastodon:"
+                  value={social.mastodon}
+                  link={`https://${social.mastodon}`}
                 />
               )}
               {social?.linkedin && (
