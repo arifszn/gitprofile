@@ -86,17 +86,16 @@ const config = {
   // To hide the `Other Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Website name 1',
+      title: 'Project Name',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. \
-        Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+      imageUrl: 'https://via.placeholder.com/250x250',
       link: 'https://example.com',
     },
     {
-      title: 'Website name 2',
+      title: 'Project Name',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. \
-        Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris. Donec euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nunc vel mauris.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
       imageUrl: 'https://via.placeholder.com/250x250',
       link: 'https://example.com',
     },

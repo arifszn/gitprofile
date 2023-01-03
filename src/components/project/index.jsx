@@ -141,10 +141,10 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                 <div className="mx-3 flex items-center justify-between mb-2">
                   <h5 className="card-title">
                     {loading ? (
-                      skeleton({ width: 'w-28', height: 'h-8' })
+                      skeleton({ width: 'w-40', height: 'h-8' })
                     ) : (
                       <span className="text-base-content opacity-70">
-                        My Projects
+                        GitHub Projects
                       </span>
                     )}
                   </h5>
