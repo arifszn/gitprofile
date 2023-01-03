@@ -266,6 +266,23 @@ const config = {
       to: '2014',
     },
   ],
+  // To hide the `Other Projects` section, keep it empty.
+  externalProjects: [
+    {
+      title: 'Project Name',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+      imageUrl: 'https://via.placeholder.com/250x250',
+      link: 'https://example.com',
+    },
+    {
+      title: 'Project Name',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+      imageUrl: 'https://via.placeholder.com/250x250',
+      link: 'https://example.com',
+    },
+  ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
@@ -541,7 +558,9 @@ Empty array will hide the certifications section.
 
 ### Projects
 
-Your public repo from GitHub will be displayed here automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
+#### Github Projects
+
+Your public repo from GitHub will be displayed in the `Github Projects` section automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
 
 ```js
 // gitprofile.config.js
@@ -556,6 +575,25 @@ module.exports = {
       projects: ['my-project1', 'my-project2'],
     },
   },
+};
+```
+
+#### External Projects
+
+In this section you can showcase your external/personal projects.
+
+```js
+// gitprofile.config.js
+module.exports = {
+  // ...
+  externalProjects: [
+    {
+      title: 'Project Name',
+      description: 'Description',
+      link: 'https://example.com',
+      imageUrl: 'https://via.placeholder.com/250x250',
+    },
+  ],
 };
 ```
 

@@ -162,6 +162,7 @@ export const sanitizeConfig = (config) => {
       fileUrl: config?.resume?.fileUrl || '',
     },
     skills: config?.skills || [],
+    externalProjects: config?.externalProjects || [],
     experiences: config?.experiences || [],
     certifications: config?.certifications || [],
     education: config?.education || [],

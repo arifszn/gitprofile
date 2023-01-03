@@ -25,6 +25,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import '../assets/index.css';
 import { formatDistance } from 'date-fns';
+import ExternalProject from './external-project';
 
 const bgColor = 'bg-base-300';
 
@@ -202,6 +203,11 @@ const GitProfile = ({ config }) => {
                         github={sanitizedConfig.github}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
+                      <ExternalProject
+                        loading={loading}
+                        externalProjects={sanitizedConfig.externalProjects}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
+                      />
                       <Blog
                         loading={loading}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
@@ -269,6 +275,14 @@ GitProfile.propTypes = {
       email: PropTypes.string,
     }),
     skills: PropTypes.array,
+    externalProjects: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string,
+      })
+    ),
     experiences: PropTypes.arrayOf(
       PropTypes.shape({
         company: PropTypes.string,
