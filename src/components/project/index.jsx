@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 import PropTypes from 'prop-types';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
+import { MdInsertLink } from 'react-icons/md';
 
 const Project = ({ repo, loading, github, googleAnalytics }) => {
   if (!loading && Array.isArray(repo) && repo.length === 0) {
@@ -18,7 +19,11 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
               <div className="flex items-center">
                 <span>
                   <h5 className="card-title text-lg">
-                    {skeleton({ width: 'w-32', height: 'h-8' })}
+                    {skeleton({
+                      width: 'w-32',
+                      height: 'h-8',
+                      className: 'mb-1',
+                    })}
                   </h5>
                 </span>
               </div>
@@ -81,25 +86,11 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
       >
         <div className="flex justify-between flex-col p-8 h-full w-full">
           <div>
-            <div className="flex items-center opacity-60">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="text-base-content inline-block w-5 h-5 mr-2 stroke-current"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-                ></path>
-              </svg>
-              <span>
-                <h5 className="card-title text-lg text-base-content">
-                  {item.name}
-                </h5>
-              </span>
+            <div class="flex items-center">
+              <div class="card-title text-lg tracking-wide flex text-base-content opacity-60">
+                <MdInsertLink className="my-auto" />
+                <span className="capitalize">{item.name}</span>
+              </div>
             </div>
             <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
               {item.description}
