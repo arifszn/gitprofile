@@ -86,8 +86,8 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
       >
         <div className="flex justify-between flex-col p-8 h-full w-full">
           <div>
-            <div class="flex items-center">
-              <div class="card-title text-lg tracking-wide flex text-base-content opacity-60">
+            <div className="flex items-center">
+              <div className="card-title text-lg tracking-wide flex text-base-content opacity-60">
                 <MdInsertLink className="my-auto" />
                 <span className="capitalize">{item.name}</span>
               </div>
