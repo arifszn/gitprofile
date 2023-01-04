@@ -266,7 +266,7 @@ const config = {
       to: '2014',
     },
   ],
-  // To hide the `Other Projects` section, keep it empty.
+  // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
       title: 'Project Name',
