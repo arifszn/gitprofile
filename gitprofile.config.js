@@ -82,6 +82,11 @@ const config = {
       to: '2014',
     },
   ],
+
+  // Optional custom footer. See README file, section "custom-footer", for details
+  /*
+  footer: '[...]',
+  */
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev

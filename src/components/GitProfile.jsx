@@ -11,6 +11,7 @@ import Certification from './certification';
 import Education from './education';
 import Project from './project';
 import Blog from './blog';
+import Footer from './footer';
 import {
   genericError,
   getInitialTheme,
@@ -19,7 +20,6 @@ import {
   setupHotjar,
   tooManyRequestError,
   sanitizeConfig,
-  skeleton,
 } from '../helpers/utils';
 import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
@@ -215,24 +215,7 @@ const GitProfile = ({ config }) => {
                 className={`p-4 footer ${bgColor} text-base-content footer-center`}
               >
                 <div className="card compact bg-base-100 shadow">
-                  <a
-                    className="card-body"
-                    href="https://github.com/arifszn/gitprofile"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div>
-                      {loading ? (
-                        skeleton({ width: 'w-52', height: 'h-6' })
-                      ) : (
-                        <p className="font-mono text-sm">
-                          Made with{' '}
-                          <span className="text-primary">GitProfile</span> and
-                          ❤️
-                        </p>
-                      )}
-                    </div>
-                  </a>
+                  <Footer content={sanitizedConfig.footer} loading={loading} />
                 </div>
               </footer>
             </Fragment>

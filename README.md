@@ -71,7 +71,8 @@
 ✓ [Certification Section](#certifications)  
 ✓ [Education Section](#education)  
 ✓ [Projects Section](#projects)  
-✓ [Blog Posts Section](#blog-posts)
+✓ [Blog Posts Section](#blog-posts)  
+✓ [Custom footer](#custom-footer)
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
@@ -350,7 +351,7 @@ The default theme can be specified.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   themeConfig: {
     defaultTheme: 'light',
@@ -367,7 +368,7 @@ You can create your own custom theme by modifying these values. Theme `procyon` 
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   themeConfig: {
     customTheme: {
@@ -390,7 +391,7 @@ module.exports = {
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   googleAnalytics: {
     id: '',
@@ -406,7 +407,7 @@ Besides tracking visitors, it will track `click events` on projects and blog pos
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   hotjar: {
     id: '',
@@ -429,7 +430,7 @@ You can link your social media services you're using, including LinkedIn, Twitte
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   social: {
     linkedin: 'ariful-alam',
@@ -454,7 +455,7 @@ To showcase your skills provide them here.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   skills: ['JavaScript', 'React.js'],
 };
@@ -468,7 +469,7 @@ Provide your job history in `experiences`.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   experiences: [
     {
@@ -497,7 +498,7 @@ Provide your education history in `education`.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   education: [
     {
@@ -524,7 +525,7 @@ Provide your industry certifications in `certifications`.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   certifications: [
     {
@@ -545,7 +546,7 @@ Your public repo from GitHub will be displayed here automatically. You can limit
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   github: {
     username: 'arifszn',
@@ -565,7 +566,7 @@ If you have [medium](https://medium.com) or [dev](https://dev.to) account, you c
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   blog: {
     source: 'dev',
@@ -578,6 +579,48 @@ module.exports = {
 ![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
 
 The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
+
+
+### Custom footer (Optional)
+In the configuration file you can optionally 
+define a custom HTML footer for your page.
+
+If it's not defined, a default footer "Made with GitProfile and ❤️" will be used instead.
+   
+Examples:
+```js
+// gitprofile.config.js
+
+// This is an HTML footer
+const config = {
+  [...]
+  footer: `
+    <p class="font-mono text-sm">
+      Built by <a href="https://www.example.com" class="text-primary" target="_blank" rel="noreferrer">
+        John Doe
+      </a>
+      in <strong>2023</strong>
+      with ❤️ and 
+      <a
+        class="text-primary"
+        href="https://github.com/arifszn/gitprofile"
+        target="_blank"
+        rel="noreferrer"
+      >GitProfile</a>
+    </p>
+    `,
+```
+or:
+
+```js
+// gitprofile.config.js
+
+// This is a plain text footer
+const config = {
+  [...]
+  footer: 'Copyright 2002, John Doe'
+```
+
 
 ## 💖 Support
 
