@@ -83,7 +83,7 @@ const config = {
     },
   ],
 
-  // Optional custom footer
+  // Optional custom footer. To hide the footer, just remove it from here
   footer: `<p class="font-mono text-sm">
     Made with <a
       class="text-primary"
@@ -92,6 +92,7 @@ const config = {
       rel="noreferrer"
     >GitProfile</a> and ❤️
     </p>`,
+
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
