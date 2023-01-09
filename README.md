@@ -72,7 +72,6 @@
 ✓ [Education Section](#education)  
 ✓ [Projects Section](#projects)  
 ✓ [Blog Posts Section](#blog-posts)  
-✓ [Custom footer](#custom-footer)
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
@@ -289,6 +288,17 @@ const config = {
     source: 'dev', // medium | dev
     username: 'arifszn', // to hide blog section, keep it empty
     limit: 5, // How many posts to display. Max is 10.
+  },
+  // Display a footer. Supports plain text or HTML. (Optional)
+  footer: {
+    `<p class="font-mono text-sm">
+      Made with <a
+        class="text-primary"
+        href="https://github.com/arifszn/gitprofile"
+        target="_blank"
+        rel="noreferrer"
+      >GitProfile</a>
+      and ❤️</p>`
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -617,48 +627,6 @@ const config = {
 ![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
 
 The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
-
-
-### Custom footer (Optional)
-In the configuration file you can optionally 
-define a custom HTML footer for your page.
-
-If it's not defined, a default footer "Made with GitProfile and ❤️" will be used instead.
-   
-Examples:
-```js
-// gitprofile.config.js
-
-// This is an HTML footer
-const config = {
-  [...]
-  footer: `
-    <p class="font-mono text-sm">
-      Built by <a href="https://www.example.com" class="text-primary" target="_blank" rel="noreferrer">
-        John Doe
-      </a>
-      in <strong>2023</strong>
-      with ❤️ and 
-      <a
-        class="text-primary"
-        href="https://github.com/arifszn/gitprofile"
-        target="_blank"
-        rel="noreferrer"
-      >GitProfile</a>
-    </p>
-    `,
-```
-or:
-
-```js
-// gitprofile.config.js
-
-// This is a plain text footer
-const config = {
-  [...]
-  footer: 'Copyright 2002, John Doe'
-```
-
 
 ## 💖 Support
 

@@ -83,10 +83,15 @@ const config = {
     },
   ],
 
-  // Optional custom footer. See README file, section "custom-footer", for details
-  /*
-  footer: '[...]',
-  */
+  // Optional custom footer
+  footer: `<p class="font-mono text-sm">
+    Made with <a
+      class="text-primary"
+      href="https://github.com/arifszn/gitprofile"
+      target="_blank"
+      rel="noreferrer"
+    >GitProfile</a> and ❤️
+    </p>`,
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
