@@ -71,7 +71,7 @@
 ✓ [Certification Section](#certifications)  
 ✓ [Education Section](#education)  
 ✓ [Projects Section](#projects)  
-✓ [Blog Posts Section](#blog-posts)  
+✓ [Blog Posts Section](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
