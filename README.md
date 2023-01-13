@@ -289,17 +289,6 @@ const config = {
     username: 'arifszn', // to hide blog section, keep it empty
     limit: 5, // How many posts to display. Max is 10.
   },
-  // Display a footer. Supports plain text or HTML. (Optional)
-  footer: {
-    `<p class="font-mono text-sm">
-      Made with <a
-        class="text-primary"
-        href="https://github.com/arifszn/gitprofile"
-        target="_blank"
-        rel="noreferrer"
-      >GitProfile</a>
-      and ❤️</p>`
-  },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
@@ -367,6 +356,9 @@ const config = {
       '--rounded-btn': '3rem',
     },
   },
+
+  // Optional Footer. Supports plain text or HTML.
+  footer: `Copyright © 2023 John Doe`,
 };
 ```
 

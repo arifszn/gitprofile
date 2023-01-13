@@ -83,16 +83,6 @@ const config = {
     },
   ],
 
-  // Optional custom footer. To hide the footer, just remove it from here
-  footer: `<p class="font-mono text-sm">
-    Made with <a
-      class="text-primary"
-      href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️
-    </p>`,
-
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
@@ -183,6 +173,13 @@ const config = {
       '--rounded-btn': '3rem',
     },
   },
+
+  // Optional Footer. Supports plain text or HTML.
+  footer: `Made with <a 
+      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      target="_blank"
+      rel="noreferrer"
+    >GitProfile</a> and ❤️`,
 };
 
 export default config;

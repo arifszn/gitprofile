@@ -135,7 +135,6 @@ export const sanitizeConfig = (config) => {
   ];
 
   return {
-    footer: config?.footer,
     github: {
       username: config?.github?.username || '',
       sortBy: config?.github?.sortBy || 'stars',
@@ -188,6 +187,7 @@ export const sanitizeConfig = (config) => {
       themes: themes,
       customTheme: customTheme,
     },
+    footer: config?.footer,
   };
 };
 
