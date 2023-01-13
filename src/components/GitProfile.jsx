@@ -257,6 +257,9 @@ GitProfile.propTypes = {
       phone: PropTypes.string,
       email: PropTypes.string,
     }),
+    resume: PropTypes.shape({
+      fileUrl: PropTypes.string,
+    }),
     skills: PropTypes.array,
     externalProjects: PropTypes.arrayOf(
       PropTypes.shape({
@@ -318,6 +321,7 @@ GitProfile.propTypes = {
         '--rounded-btn': PropTypes.string,
       }),
     }),
+    footer: PropTypes.string,
   }).isRequired,
 };
 
