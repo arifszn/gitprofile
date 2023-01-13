@@ -135,6 +135,7 @@ export const sanitizeConfig = (config) => {
   ];
 
   return {
+    footer: config?.footer,
     github: {
       username: config?.github?.username || '',
       sortBy: config?.github?.sortBy || 'stars',
@@ -208,7 +209,7 @@ export const tooManyRequestError = (reset) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          rate limit.
+          rate limit
         </a>
         ! Try again later{` ${reset}`}.
       </p>

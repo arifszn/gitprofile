@@ -83,6 +83,16 @@ const config = {
     },
   ],
 
+  // Optional custom footer. To hide the footer, just remove it from here
+  footer: `<p class="font-mono text-sm">
+    Made with <a
+      class="text-primary"
+      href="https://github.com/arifszn/gitprofile"
+      target="_blank"
+      rel="noreferrer"
+    >GitProfile</a> and ❤️
+    </p>`,
+
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
@@ -100,7 +110,6 @@ const config = {
       link: 'https://example.com',
     },
   ],
-
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
