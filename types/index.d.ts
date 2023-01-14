@@ -299,6 +299,11 @@ export interface Config {
    * Theme config
    */
   themeConfig?: ThemeConfig;
+
+  /**
+   * Custom footer
+   */
+  footer?: string;
 }
 
 export interface GitProfileProps {
