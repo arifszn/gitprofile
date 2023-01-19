@@ -34,14 +34,11 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
         className={`${
           skeleton ? 'flex-grow' : ''
         } text-sm font-normal text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
+        style={{
+          wordBreak: 'break-word',
+        }}
       >
-        <div
-          style={{
-            wordBreak: 'break-word',
-          }}
-        >
-          {value}
-        </div>
+        {value}
       </div>
     </a>
   );
