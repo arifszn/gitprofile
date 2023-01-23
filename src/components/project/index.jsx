@@ -142,14 +142,16 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                   {loading ? (
                     skeleton({ width: 'w-10', height: 'h-5' })
                   ) : (
-                    <a
-                      href={`https://github.com/${github.username}?tab=repositories`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-base-content opacity-50 hover:underline"
-                    >
-                      See All
-                    </a>
+                    <div className='flex items-center'>
+                      <img src="/public/eye-fill.png" alt="eye-seeAll" className='text-base-content opacity-50 mr-1'/><a
+                        href={`https://github.com/${github.username}?tab=repositories`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-base-content opacity-50 hover:underline"
+                      >
+                        See All
+                      </a>
+                    </div>
                   )}
                 </div>
                 <div className="col-span-2">
