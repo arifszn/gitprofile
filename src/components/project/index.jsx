@@ -146,7 +146,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                       href={`https://github.com/${github.username}?tab=repositories`}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-base-content opacity-50"
+                      className="text-base-content opacity-50 hover:underline"
                     >
                       See All
                     </a>
