@@ -10,6 +10,9 @@ const config = {
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
+  avatar: {
+    url: '', //Set an URL to display an image instead of your GitHub avatar. If left empty, your GitHub avatar will be displayed.
+  },
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',

@@ -60,7 +60,7 @@ const GitProfile = ({ config }) => {
         let data = response.data;
 
         let profileData = {
-          avatar: data.avatar_url,
+          avatar: sanitizedConfig.avatar.url || data.avatar_url,
           name: data.name ? data.name : '',
           bio: data.bio ? data.bio : '',
           location: data.location ? data.location : '',

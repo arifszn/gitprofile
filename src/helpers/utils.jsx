@@ -144,6 +144,9 @@ export const sanitizeConfig = (config) => {
         projects: config?.github?.exclude?.projects || [],
       },
     },
+    avatar: {
+      url: config?.avatar?.url || '',
+    },
     social: {
       linkedin: config?.social?.linkedin,
       twitter: config?.social?.twitter,
