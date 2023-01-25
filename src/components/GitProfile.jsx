@@ -80,43 +80,45 @@ const GitProfile = ({ config }) => {
         sanitizedConfig.github.exclude.projects.forEach((project) => {
           excludeRepo += `+-repo:${project}`;
         });
-        
+
         let query = `user:${
           sanitizedConfig.github.username
         }+fork:${!sanitizedConfig.github.exclude.forks}${excludeRepo}`;
 
         axios
-          .get(`https://api.github.com/users/${sanitizedConfig.github.username}/orgs`)
+          .get(
+            `https://api.github.com/users/${sanitizedConfig.github.username}/orgs`
+          )
           .then((response) => {
             let data = response.data;
             data.forEach((org) => {
               query += `+org:${org.login}`;
             });
 
-        let url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.github.sortBy}&per_page=${sanitizedConfig.github.limit}&type=Repositories`;
+            let url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.github.sortBy}&per_page=${sanitizedConfig.github.limit}&type=Repositories`;
 
-        axios
-          .get(url, {
-            headers: {
-              'Content-Type': 'application/vnd.github.v3+json',
-            },
-          })
-          .then((response) => {
-            let data = response.data;
+            axios
+              .get(url, {
+                headers: {
+                  'Content-Type': 'application/vnd.github.v3+json',
+                },
+              })
+              .then((response) => {
+                let data = response.data;
 
-            setRepo(data.items);
+                setRepo(data.items);
+              })
+              .catch((error) => {
+                handleError(error);
+              });
           })
           .catch((error) => {
             handleError(error);
+          })
+          .finally(() => {
+            setLoading(false);
           });
-      })
-      .catch((error) => {
-        handleError(error);
-      })
-      .finally(() => {
-        setLoading(false);
       });
-    });
   }, [setLoading]);
 
   const handleError = (error) => {
