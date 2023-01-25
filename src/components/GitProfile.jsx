@@ -78,12 +78,20 @@ const GitProfile = ({ config }) => {
         }
 
         sanitizedConfig.github.exclude.projects.forEach((project) => {
-          excludeRepo += `+-repo:${sanitizedConfig.github.username}/${project}`;
+          excludeRepo += `+-repo:${project}`;
         });
-
+        
         let query = `user:${
           sanitizedConfig.github.username
         }+fork:${!sanitizedConfig.github.exclude.forks}${excludeRepo}`;
+
+        axios
+          .get(`https://api.github.com/users/${sanitizedConfig.github.username}/orgs`)
+          .then((response) => {
+            let data = response.data;
+            data.forEach((org) => {
+              query += `+org:${org.login}`;
+            });
 
         let url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.github.sortBy}&per_page=${sanitizedConfig.github.limit}&type=Repositories`;
 
@@ -108,6 +116,7 @@ const GitProfile = ({ config }) => {
       .finally(() => {
         setLoading(false);
       });
+    });
   }, [setLoading]);
 
   const handleError = (error) => {

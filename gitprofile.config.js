@@ -7,8 +7,9 @@ const config = {
     limit: 10, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
-      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: [], // These projects will not be displayed. example: ['username/my-project1', 'username/my-project2']
     },
+    organizations: true, // Set to true, if you want to display projects from public organizations of your GitHub account.
   },
   social: {
     linkedin: 'ariful-alam',
