@@ -4,7 +4,7 @@ const config = {
   github: {
     username: 'nathen418', // Your GitHub org/user name. (Required)
     sortBy: 'updated', // stars | updated
-    limit: 15, // How many projects to display.
+    limit: 30, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: ['nathen418.com', 'nathen418'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -43,14 +43,14 @@ const config = {
   experiences: [
     {
       company: 'University of Wisconsin Milwaukee',
-      position: 'Lead Audio Visual Technician - Event Services',
+      position: 'Lead Audio Visual Technician - Union Event Services',
       from: 'August 2022',
       to: 'Present',
       companyLink: 'https://uwm.edu/union/evs/',
     },
     {
       company: 'University of Wisconsin Milwaukee',
-      position: 'Audio Visual Technician - Event Services',
+      position: 'Audio Visual Technician - Union Event Services',
       from: 'October 2021',
       to: 'August 2022',
       companyLink: 'https://uwm.edu/union/evs/',
@@ -72,7 +72,7 @@ const config = {
     },
     {
       company: 'College of DuPage',
-      position: 'Assistant Theatre Technician - ',
+      position: 'Assistant Theatre Technician - McAninch Arts Center',
       from: 'August 2020',
       to: 'May 2021',
       companyLink: 'https://www.cod.edu/academics/programs/theater/index.aspx',
