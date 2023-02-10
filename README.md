@@ -466,18 +466,6 @@ module.exports = {
 };
 ```
 
-In case you need to implement the Mastodon verification link, you can add it directly in the `index.html` file.
-
-E.g. you could add a footer section right before the closing `body` tag:
-
-```html
-<footer style="position: fixed; bottom: 0; color: transparent;">
-  <a rel="me" href="https://mastodon-server/@username"
-    >Mastodon verification link</a
-  >
-</footer>
-```
-
 ### Skills
 
 To showcase your skills provide them here.
