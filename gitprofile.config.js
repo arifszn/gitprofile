@@ -69,14 +69,14 @@ const config = {
   ],
   certifications: [
     {
-      name: 'Google Mobile Sites',
-      year: 'May 2017',
-      link: 'https://goo.gl/3m5XLB',
-    },
-    {
       name: 'Certified Scrum Master',
       year: 'September 2020',
       link: 'http://bcert.me/sfincsanf',
+    },
+    {
+      name: 'Google Mobile Sites',
+      year: 'May 2017',
+      link: 'https://goo.gl/3m5XLB',
     },
   ],
   education: [
