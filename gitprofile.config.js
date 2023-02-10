@@ -23,6 +23,8 @@ const config = {
     website: 'https://arifszn.com',
     phone: '',
     email: 'arifulalamszn@gmail.com',
+    skype: 'arifszn',
+    telegram: 'arifszn',
   },
   resume: {
     fileUrl:
