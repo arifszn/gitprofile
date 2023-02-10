@@ -107,7 +107,7 @@ const config = {
     {
       title: 'Pretzel News',
       description:
-        'Pretzel uses advanced algorithms to identify what web searches are trending. Based on these searches we know what people are actually interested in and not just what the news cycle dictates. Using these trends we aggregate news in an unfiltered and unbiased way to keep you better informed.',
+        'Pretzel uses algorithms to track trending web searches, allowing it to provide unbiased and unfiltered news based on what people are truly interested in, rather than just following the news cycle.',
       imageUrl:
         'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
       link: 'https://github.com/jameskip/pretzel-native',
