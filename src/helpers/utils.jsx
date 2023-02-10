@@ -189,6 +189,7 @@ export const sanitizeConfig = (config) => {
       themes: themes,
       customTheme: customTheme,
     },
+    footer: config?.footer,
   };
 };
 
@@ -210,7 +211,7 @@ export const tooManyRequestError = (reset) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          rate limit.
+          rate limit
         </a>
         ! Try again later{` ${reset}`}.
       </p>
