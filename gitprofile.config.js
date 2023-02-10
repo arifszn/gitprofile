@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 'jameskip', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
@@ -11,14 +11,14 @@ const config = {
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    linkedin: 'jameskip',
+    // twitter: 'arif_szn',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    // medium: 'arifszn',
+    // dev: 'arifszn',
     stackoverflow: '', // format: userid/username
     website: 'https://arifszn.com',
     phone: '',
@@ -29,9 +29,7 @@ const config = {
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
+    'TypeScript',
     'React.js',
     'Node.js',
     'Nest.js',
@@ -39,9 +37,7 @@ const config = {
     'PostgreSQL',
     'Git',
     'Docker',
-    'PHPUnit',
     'CSS',
-    'Antd',
     'Tailwind',
   ],
   experiences: [
@@ -175,11 +171,7 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  footer: `Made with ❤️`,
 };
 
 export default config;
