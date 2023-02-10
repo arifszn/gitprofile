@@ -97,24 +97,26 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'Represent',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'Built to help understand your representatives voting history and positions.',
+      imageUrl:
+        'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      link: 'https://github.com/jameskip/represent',
     },
     {
-      title: 'Project Name',
+      title: 'Pretzel News',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'Pretzel uses advanced algorithms to identify what web searches are trending. Based on these searches we know what people are actually interested in and not just what the news cycle dictates. Using these trends we aggregate news in an unfiltered and unbiased way to keep you better informed.',
+      imageUrl:
+        'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+      link: 'https://github.com/jameskip/pretzel-native',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    source: 'medium', // medium | dev
+    username: 'jameskip', // to hide blog section, keep it empty
     limit: 2, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
