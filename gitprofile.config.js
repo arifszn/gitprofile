@@ -7,7 +7,7 @@ const config = {
     limit: 10, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
-      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['auto-liker-extension'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
@@ -20,9 +20,9 @@ const config = {
     // medium: 'arifszn',
     // dev: 'arifszn',
     stackoverflow: '', // format: userid/username
-    website: 'https://arifszn.com',
+    website: 'https://jameskip.com',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'me@jameskip.com',
   },
   resume: {
     fileUrl:
