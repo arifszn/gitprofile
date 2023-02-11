@@ -188,7 +188,7 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with ❤️`,
+  footer: `Made in Austin, Texas. 🤠`,
 };
 
 export default config;
