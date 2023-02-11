@@ -99,7 +99,7 @@ const config = {
     {
       title: 'Represent',
       description:
-        'Built to help understand your representatives voting history and positions.',
+        "A front end to ProPublica's Congress API. Built to help understand your representatives voting history and positions.",
       imageUrl:
         'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
       link: 'https://github.com/jameskip/represent',
