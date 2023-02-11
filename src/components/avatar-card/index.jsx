@@ -28,7 +28,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               {
                 <LazyImage
                   src={profile.avatar ? profile.avatar : fallbackImage}
-                  alt={profile.name}
+                  alt="James Kip"
                   placeholder={skeleton({
                     width: 'w-full',
                     height: 'h-full',
