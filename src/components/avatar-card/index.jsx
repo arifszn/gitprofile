@@ -27,7 +27,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
             >
               {
                 <LazyImage
-                  src="https://media.licdn.com/dms/image/C5603AQHfw8jWdsUIqw/profile-displayphoto-shrink_800_800/0/1653498075975?e=1681344000&v=beta&t=2baePXnQGTINqWKEzipS0uT5oeXC2xFD1DKntvoJH-E"
+                  src={profile.avatar ? profile.avatar : fallbackImage}
                   alt="James Kip"
                   placeholder={skeleton({
                     width: 'w-full',
