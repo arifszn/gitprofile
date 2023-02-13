@@ -32,7 +32,7 @@ const config = {
     'TypeScript',
     'Playwright',
     'Test Automation',
-    'Seleunium',
+    'Selenium',
     'MySQL',
     'Git',
     'Docker',
