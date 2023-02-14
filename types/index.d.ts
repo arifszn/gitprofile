@@ -50,6 +50,11 @@ export interface Social {
   twitter?: string;
 
   /**
+   * Mastodon
+   */
+  mastodon?: string;
+
+  /**
    * Facebook
    */
   facebook?: string;

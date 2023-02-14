@@ -263,6 +263,7 @@ GitProfile.propTypes = {
     social: PropTypes.shape({
       linkedin: PropTypes.string,
       twitter: PropTypes.string,
+      mastodon: PropTypes.string,
       facebook: PropTypes.string,
       instagram: PropTypes.string,
       dribbble: PropTypes.string,
