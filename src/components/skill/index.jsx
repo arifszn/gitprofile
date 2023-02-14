@@ -46,6 +46,38 @@ const Skill = ({ loading, skills }) => {
               </div>
             </div>
           </div>
+          <div className="card-body">
+            <div className="mx-3">
+              <h5 className="card-title">
+                {loading ? (
+                  skeleton({ width: 'w-32', height: 'h-8' })
+                ) : (
+                  <span className="text-base-content opacity-70">
+                    Tune Stack
+                  </span>
+                )}
+              </h5>
+            </div>
+            <div className="p-3 flow-root">
+              <div className="-m-1 flex flex-wrap justify-center">
+                {loading ? (
+                  renderSkeleton()
+                ) : (
+                  <div className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full">
+                    <iframe
+                      style="border-radius:12px"
+                      src="https://open.spotify.com/embed/playlist/6GiH4L7Cvqfwfl7qfaHjmx?utm_source=generator&theme=0"
+                      width="100%"
+                      height="352"
+                      allowfullscreen=""
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </>
