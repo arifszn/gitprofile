@@ -39,7 +39,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-spotify-embed": "^1.0.4"
   },
   "devDependencies": {
     "@arifszn/blog-js": "^2.0.0",

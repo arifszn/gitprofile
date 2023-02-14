@@ -1,5 +1,6 @@
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
+import Spotify from 'react-spotify-embed';
 
 const Skill = ({ loading, skills }) => {
   const renderSkeleton = () => {
@@ -64,14 +65,7 @@ const Skill = ({ loading, skills }) => {
                   renderSkeleton()
                 ) : (
                   <div className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full">
-                    <iframe
-                      src="https://open.spotify.com/embed/playlist/6GiH4L7Cvqfwfl7qfaHjmx?utm_source=generator&theme=0"
-                      width="100%"
-                      height="352"
-                      allowfullscreen=""
-                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                      loading="lazy"
-                    ></iframe>
+                    <Spotify link="https://open.spotify.com/playlist/6GiH4L7Cvqfwfl7qfaHjmx?si=ed9d7e7e67794ec1" />
                   </div>
                 )}
               </div>
