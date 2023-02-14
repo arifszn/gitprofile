@@ -65,7 +65,6 @@ const Skill = ({ loading, skills }) => {
                 ) : (
                   <div className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full">
                     <iframe
-                      style="border-radius:12px"
                       src="https://open.spotify.com/embed/playlist/6GiH4L7Cvqfwfl7qfaHjmx?utm_source=generator&theme=0"
                       width="100%"
                       height="352"
