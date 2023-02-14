@@ -13,7 +13,7 @@ const config = {
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
-    mastodon: 'mastodon.social/@arifszn', // format: mastodon-server/@username
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',

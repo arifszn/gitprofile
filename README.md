@@ -213,13 +213,14 @@ const config = {
   social: {
     linkedin: '',
     twitter: '',
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
     dev: '',
-    stackoverflow: '',
+    stackoverflow: '', // format: userid/username
     website: '',
     phone: '',
     email: '',
@@ -451,7 +452,7 @@ module.exports = {
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
-    mastodon: 'mastodon-server/@arifszn',
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',
