@@ -64,7 +64,7 @@ const Skill = ({ loading, skills }) => {
                 {loading ? (
                   renderSkeleton()
                 ) : (
-                  <div className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 bg-opacity-90 rounded-full">
+                  <div className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full">
                     <Spotify link="https://open.spotify.com/playlist/6GiH4L7Cvqfwfl7qfaHjmx?si=ed9d7e7e67794ec1" />
                   </div>
                 )}
