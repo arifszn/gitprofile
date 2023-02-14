@@ -213,13 +213,14 @@ const config = {
   social: {
     linkedin: '',
     twitter: '',
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
     dev: '',
-    stackoverflow: '',
+    stackoverflow: '', // format: userid/username
     website: '',
     phone: '',
     email: '',
@@ -445,7 +446,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -454,6 +455,7 @@ const config = {
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',

@@ -15,10 +15,37 @@ import {
   FaDev,
   FaFacebook,
   FaGlobe,
+  FaMastodon,
   FaStackOverflow,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
+
+const isCompanyMention = (company) => {
+  return company.startsWith('@') && !company.includes(' ');
+};
+
+const companyLink = (company) => {
+  return `https://github.com/${company.substring(1)}`;
+};
+
+const getMastodonValue = (mastodonURL) => {
+  const regex = /(https?:\/\/)?(www\.)?([^\s/]+)\/@(\w+)/;
+
+  const match = mastodonURL.match(regex);
+
+  if (match) {
+    const domain = match[3];
+    const username = match[4];
+    return `${domain}/@${username}`;
+  }
+
+  return mastodonURL;
+};
+
+const getMastodonLink = (mastodonURL) => {
+  return mastodonURL.replace(/^(https?:\/\/)?(www\.)?/, 'https://');
+};
 
 const ListItem = ({ icon, title, value, link, skeleton = false }) => {
   return (
@@ -42,14 +69,6 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
       </div>
     </a>
   );
-};
-
-const isCompanyMention = (company) => {
-  return company.startsWith('@') && !company.includes(' ');
-};
-
-const companyLink = (company) => {
-  return `https://github.com/${company.substring(1)}`;
 };
 
 const Details = ({ profile, loading, social, github }) => {
@@ -109,6 +128,14 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Twitter:"
                   value={social.twitter}
                   link={`https://twitter.com/${social.twitter}`}
+                />
+              )}
+              {social?.mastodon && (
+                <ListItem
+                  icon={<FaMastodon className="mr-2" />}
+                  title="Mastodon:"
+                  value={getMastodonValue(social.mastodon)}
+                  link={getMastodonLink(social.mastodon)}
                 />
               )}
               {social?.linkedin && (
