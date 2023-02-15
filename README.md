@@ -213,13 +213,14 @@ const config = {
   social: {
     linkedin: '',
     twitter: '',
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
     dev: '',
-    stackoverflow: '',
+    stackoverflow: '', // format: userid/username
     website: '',
     skype: '',
     telegram: '',
@@ -358,6 +359,9 @@ const config = {
       '--rounded-btn': '3rem',
     },
   },
+
+  // Optional Footer. Supports plain text or HTML.
+  footer: `Copyright © 2023 John Doe`,
 };
 ```
 
@@ -369,7 +373,7 @@ The default theme can be specified.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   themeConfig: {
     defaultTheme: 'light',
@@ -386,7 +390,7 @@ You can create your own custom theme by modifying these values. Theme `procyon` 
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   themeConfig: {
     customTheme: {
@@ -409,7 +413,7 @@ module.exports = {
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   googleAnalytics: {
     id: '',
@@ -425,7 +429,7 @@ Besides tracking visitors, it will track `click events` on projects and blog pos
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   hotjar: {
     id: '',
@@ -444,15 +448,16 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',
@@ -475,7 +480,7 @@ To showcase your skills provide them here.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   skills: ['JavaScript', 'React.js'],
 };
@@ -489,7 +494,7 @@ Provide your job history in `experiences`.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   experiences: [
     {
@@ -518,7 +523,7 @@ Provide your education history in `education`.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   education: [
     {
@@ -545,7 +550,7 @@ Provide your industry certifications in `certifications`.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   certifications: [
     {
@@ -568,7 +573,7 @@ Your public repo from GitHub will be displayed in the `Github Projects` section 
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   github: {
     username: 'arifszn',
@@ -588,7 +593,7 @@ In this section you can showcase your external/personal projects.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   externalProjects: [
     {
@@ -607,7 +612,7 @@ If you have [medium](https://medium.com) or [dev](https://dev.to) account, you c
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   blog: {
     source: 'dev',

@@ -96,7 +96,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
               {item.description}
             </p>
           </div>
-          <div className="flex justify-between text-sm text-base-content text-opacity-60">
+          <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
             <div className="flex flex-grow">
               <span className="mr-3 flex items-center">
                 <AiOutlineStar className="mr-0.5" />
@@ -146,7 +146,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                       href={`https://github.com/${github.username}?tab=repositories`}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-base-content opacity-50"
+                      className="text-base-content opacity-50 hover:underline"
                     >
                       See All
                     </a>

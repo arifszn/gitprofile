@@ -50,6 +50,11 @@ export interface Social {
   twitter?: string;
 
   /**
+   * Mastodon
+   */
+  mastodon?: string;
+
+  /**
    * Facebook
    */
   facebook?: string;
@@ -299,6 +304,11 @@ export interface Config {
    * Theme config
    */
   themeConfig?: ThemeConfig;
+
+  /**
+   * Custom footer
+   */
+  footer?: string;
 }
 
 export interface GitProfileProps {
