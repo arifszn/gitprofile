@@ -95,6 +95,16 @@ export interface Social {
   website?: string;
 
   /**
+   * Skype username
+   */
+  skype?: string;
+
+  /**
+     * Telegram username
+     */
+  telegram?: string;
+
+  /**
    * Phone
    */
   phone?: string;
@@ -318,6 +328,6 @@ export interface GitProfileProps {
   config: Config;
 }
 
-declare class GitProfile extends Component<GitProfileProps> {}
+declare class GitProfile extends Component<GitProfileProps> { }
 
 export default GitProfile;
