@@ -100,8 +100,8 @@ export interface Social {
   skype?: string;
 
   /**
-     * Telegram username
-     */
+   * Telegram username
+   */
   telegram?: string;
 
   /**
@@ -328,6 +328,6 @@ export interface GitProfileProps {
   config: Config;
 }
 
-declare class GitProfile extends Component<GitProfileProps> { }
+declare class GitProfile extends Component<GitProfileProps> {}
 
 export default GitProfile;
