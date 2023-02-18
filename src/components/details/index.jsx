@@ -1,4 +1,4 @@
-import { MdLocationOn, MdMail } from 'react-icons/md';
+import { MdLocationOn } from 'react-icons/md';
 import {
   AiFillGithub,
   AiFillInstagram,
@@ -6,7 +6,7 @@ import {
 } from 'react-icons/ai';
 import { SiTwitter } from 'react-icons/si';
 import { CgDribbble } from 'react-icons/cg';
-import { RiPhoneFill } from 'react-icons/ri';
+import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
 import { Fragment } from 'react';
 import {
   FaBehanceSquare,
@@ -232,7 +232,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.email && (
                 <ListItem
-                  icon={<MdMail />}
+                  icon={<RiMailFill />}
                   title="Email:"
                   value={social.email}
                   link={`mailto:${social.email}`}
