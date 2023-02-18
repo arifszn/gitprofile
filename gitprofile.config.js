@@ -21,11 +21,11 @@ const config = {
     medium: 'arifszn',
     dev: 'arifszn',
     stackoverflow: '', // format: userid/username
+    skype: '',
+    telegram: '',
     website: 'https://arifszn.com',
     phone: '',
     email: 'arifulalamszn@gmail.com',
-    skype: 'arifszn',
-    telegram: 'arifszn',
   },
   resume: {
     fileUrl:
