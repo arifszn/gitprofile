@@ -255,6 +255,8 @@ GitProfile.propTypes = {
       dev: PropTypes.string,
       stackoverflow: PropTypes.string,
       website: PropTypes.string,
+      skype: PropTypes.string,
+      telegram: PropTypes.string,
       phone: PropTypes.string,
       email: PropTypes.string,
     }),

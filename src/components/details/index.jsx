@@ -15,8 +15,10 @@ import {
   FaDev,
   FaFacebook,
   FaGlobe,
+  FaSkype,
   FaMastodon,
   FaStackOverflow,
+  FaTelegram,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
@@ -210,6 +212,23 @@ const Details = ({ profile, loading, social, github }) => {
                   link={social.website}
                 />
               )}
+              {social?.skype && (
+                <ListItem
+                  icon={<FaSkype className="mr-2" />}
+                  title="Skype"
+                  value={social.skype}
+                  link={`skype:${social.skype}?chat`}
+                />
+              )}
+              {social?.telegram && (
+                <ListItem
+                  icon={<FaTelegram className="mr-2" />}
+                  title="Telegram"
+                  value={social.telegram}
+                  link={`https://t.me/${social.telegram}`}
+                />
+              )}
+
               {social?.phone && (
                 <ListItem
                   icon={<RiPhoneFill className="mr-2" />}

@@ -95,6 +95,16 @@ export interface Social {
   website?: string;
 
   /**
+   * Skype username
+   */
+  skype?: string;
+
+  /**
+   * Telegram username
+   */
+  telegram?: string;
+
+  /**
    * Phone
    */
   phone?: string;
