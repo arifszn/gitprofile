@@ -457,7 +457,7 @@ const config = {
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
-    mastodon: '',
+    mastodon: 'arifszn@mastodon.social',
     facebook: '',
     instagram: '',
     dribbble: '',

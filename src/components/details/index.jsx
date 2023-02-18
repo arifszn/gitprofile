@@ -31,22 +31,14 @@ const companyLink = (company) => {
   return `https://github.com/${company.substring(1)}`;
 };
 
-const getMastodonValue = (mastodonURL) => {
-  const regex = /(https?:\/\/)?(www\.)?([^\s/]+)\/@(\w+)/;
+const getFormattedMastodonValue = (mastodonValue, isLink) => {
+  const [username, server] = mastodonValue.split('@');
 
-  const match = mastodonURL.match(regex);
-
-  if (match) {
-    const domain = match[3];
-    const username = match[4];
-    return `${domain}/@${username}`;
+  if (isLink) {
+    return `https://${server}/@${username}`;
+  } else {
+    return `${username}@${server}`;
   }
-
-  return mastodonURL;
-};
-
-const getMastodonLink = (mastodonURL) => {
-  return mastodonURL.replace(/^(https?:\/\/)?(www\.)?/, 'https://');
 };
 
 const ListItem = ({ icon, title, value, link, skeleton = false }) => {
@@ -136,8 +128,8 @@ const Details = ({ profile, loading, social, github }) => {
                 <ListItem
                   icon={<FaMastodon className="mr-2" />}
                   title="Mastodon:"
-                  value={getMastodonValue(social.mastodon)}
-                  link={getMastodonLink(social.mastodon)}
+                  value={getFormattedMastodonValue(social.mastodon, false)}
+                  link={getFormattedMastodonValue(social.mastodon, true)}
                 />
               )}
               {social?.linkedin && (
