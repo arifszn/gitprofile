@@ -93,9 +93,9 @@ Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
 There are three ways to use **GitProfile**. Use any.
 
-- Forking this repo _(recommended)_
-- Setting up locally
-- Installing as package
+- [Forking this repo _(recommended)_](#forking-this-repo)
+- [Setting up locally](#setting-up-locally)
+- [Installing as package](#installing-as-package)
 
 ### Forking this repo
 
