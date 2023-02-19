@@ -32,20 +32,21 @@ const config = {
       'https://drive.google.com/uc?export=download&id=1_vpm9hZLrhLZGL6JUOEhZXvl1SQwEZJa', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'Docker Swarm',
     'Git',
-    'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'Bash',
+    'Nginx',
+    'Apache',
+    'Ansible',
+    'HAProxy',
+    'PostgreSQL',
+    'Mariadb',
+    'Mysql',
+    'Selenium',
+    'Prometheus',
+    'Zabbix',
+    'KVM',
+    'DevOps',
   ],
   experiences: [
     {
@@ -63,27 +64,27 @@ const config = {
       companyLink: 'https://',
     },
   ],
-  /* certifications: [
+  certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com'
+      name: 'IBM',
+      body: 'Introduction to DevOps',
+      year: 'Jan 2023',
+      link: 'https://www.coursera.org/account/accomplishments/certificate/FN3EXMG3LMR5'
     },
-  ], */
+  ],
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Tehran',
+      degree: 'Bachelor of Computer Engineering',
+      from: '2008',
+      to: '2012',
     },
-    {
+    /*{
       institution: 'Institution Name',
       degree: 'Degree',
       from: '2012',
       to: '2014',
-    },
+    },*/
   ],
 
   // To hide the `My Projects` section, keep it empty.
