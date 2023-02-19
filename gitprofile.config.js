@@ -89,6 +89,12 @@ const config = {
       year: 'Jan 2012',
       link: ''
     },
+    {
+      name: 'CompTIA',
+      body: 'A+',
+      year: 'Jan 2011',
+      link: ''
+    },
   ],
   education: [
     {
