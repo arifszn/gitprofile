@@ -71,6 +71,24 @@ const config = {
       year: 'Jan 2023',
       link: 'https://www.coursera.org/account/accomplishments/certificate/FN3EXMG3LMR5'
     },
+    {
+      name: 'Linux Professional Institute',
+      body: 'Essentials - 1 - 2',
+      year: 'Jan 2020',
+      link: 'https://zakops.com/_next/image?url=%2FLPIC2.png&w=1920&q=75'
+    },
+    {
+      name: 'CISCO',
+      body: 'CCNA - CCNP',
+      year: 'Jan 2012',
+      link: ''
+    },
+     {
+      name: 'Microsoft',
+      body: 'MCITP',
+      year: 'Jan 2012',
+      link: ''
+    },
   ],
   education: [
     {
@@ -88,7 +106,7 @@ const config = {
   ],
 
   // To hide the `My Projects` section, keep it empty.
-  externalProjects: [
+  /* externalProjects: [
     {
       title: 'Project Name',
       description:
@@ -103,12 +121,12 @@ const config = {
       imageUrl: 'https://via.placeholder.com/250x250',
       link: 'https://example.com',
     },
-  ],
+  ], */
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many posts to display. Max is 10.
+    username: 'zakery1369', // to hide blog section, keep it empty
+    limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -119,7 +137,7 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'winter',
+    defaultTheme: 'business',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -180,10 +198,10 @@ const config = {
 
   // Optional Footer. Supports plain text or HTML.
   footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      class="text-primary" href="https://Zakops.com"
       target="_blank"
       rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+    >Zakops</a> and ❤️`,
 };
 
 export default config;
