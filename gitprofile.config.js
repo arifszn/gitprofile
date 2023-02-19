@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 'zakery1369', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
@@ -11,25 +11,25 @@ const config = {
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'zakery1369',
+    twitter: 'zakery1369',
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: 'zakery1369',
+    dev: 'zakery1369',
     stackoverflow: '', // format: userid/username
-    skype: '',
-    telegram: '',
-    website: 'https://arifszn.com',
+    skype: 'zakery1369',
+    telegram: 'zakery1369',
+    website: 'https://zakops.com',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'zakery1369@gmail.com',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.google.com/uc?export=download&id=1_vpm9hZLrhLZGL6JUOEhZXvl1SQwEZJa', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',
@@ -49,18 +49,18 @@ const config = {
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Kavano',
+      position: 'DevOps Engineer',
+      from: 'Jun 2021',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://kavano.co',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'ATCCE',
+      position: 'IT Manager',
+      from: 'Feb 2015',
+      to: 'May 2021',
+      companyLink: 'https://',
     },
   ],
   /* certifications: [
