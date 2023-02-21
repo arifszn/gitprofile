@@ -182,7 +182,7 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         skills={sanitizedConfig.skills}
                       />
-                      <Music loading={loading} skills={sanitizedConfig.music} />
+                      <Music loading={loading} url={sanitizedConfig.music} />
                       <Experience
                         loading={loading}
                         experiences={sanitizedConfig.experiences}

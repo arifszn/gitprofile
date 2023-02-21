@@ -1,6 +1,5 @@
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
-import Spotify from 'react-spotify-embed';
 
 const Skill = ({ loading, skills }) => {
   const renderSkeleton = () => {
