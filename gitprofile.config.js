@@ -44,6 +44,10 @@ const config = {
     'JavaScript',
     'DevTools',
   ],
+  music: {
+    spotify:
+      'https://open.spotify.com/playlist/6GiH4L7Cvqfwfl7qfaHjmx?si=ed9d7e7e67794ec1',
+  },
   experiences: [
     {
       company: 'Bolt',

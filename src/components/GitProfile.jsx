@@ -6,6 +6,7 @@ import ThemeChanger from './theme-changer';
 import AvatarCard from './avatar-card';
 import Details from './details';
 import Skill from './skill';
+import Music from './music';
 import Experience from './experience';
 import Certification from './certification';
 import Education from './education';
@@ -181,6 +182,7 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         skills={sanitizedConfig.skills}
                       />
+                      <Music loading={loading} skills={sanitizedConfig.music} />
                       <Experience
                         loading={loading}
                         experiences={sanitizedConfig.experiences}
