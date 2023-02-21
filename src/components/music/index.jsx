@@ -3,19 +3,6 @@ import PropTypes from 'prop-types';
 import Spotify from 'react-spotify-embed';
 
 const Music = ({ loading, url }) => {
-  const renderSkeleton = () => {
-    let array = [];
-    for (let index = 0; index < 12; index++) {
-      array.push(
-        <div key={index}>
-          {skeleton({ width: 'w-16', height: 'h-4', className: 'm-1' })}
-        </div>
-      );
-    }
-
-    return array;
-  };
-
   return (
     <>
       <div className="card shadow-lg compact bg-base-100">
@@ -32,7 +19,7 @@ const Music = ({ loading, url }) => {
           <div className="p-3 flow-root">
             <div className="-m-1 flex flex-wrap justify-center">
               {loading ? (
-                renderSkeleton()
+                skeleton({ width: 'w-300', height: 'h-380' })
               ) : (
                 <div className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 bg-opacity-90 rounded-full">
                   <Spotify style={{ borderRadius: '.75rem' }} link={url} />
