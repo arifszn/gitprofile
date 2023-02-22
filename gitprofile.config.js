@@ -124,7 +124,7 @@ const config = {
   blog: {
     source: 'medium', // medium | dev
     username: 'jameskip', // to hide blog section, keep it empty
-    limit: 2, // How many posts to display. Max is 10.
+    limit: 8, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
     id: 'G-HCHM0NX2TM', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
