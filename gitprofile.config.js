@@ -16,7 +16,7 @@ const config = {
   },
   social: {
     linkedin: 'jameskip',
-    // twitter: 'arif_szn',
+    twitter: 'jvmeskip',
     facebook: '',
     instagram: '',
     dribbble: '',
