@@ -178,11 +178,11 @@ const GitProfile = ({ config }) => {
                         github={sanitizedConfig.github}
                         social={sanitizedConfig.social}
                       />
+                      <Music loading={loading} url={sanitizedConfig.music} />
                       <Skill
                         loading={loading}
                         skills={sanitizedConfig.skills}
                       />
-                      <Music loading={loading} url={sanitizedConfig.music} />
                       <Experience
                         loading={loading}
                         experiences={sanitizedConfig.experiences}
