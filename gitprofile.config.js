@@ -56,7 +56,7 @@ const config = {
       company: 'Bolt',
       position: 'Software Development Engineer In Test',
       from: 'January 2022',
-      to: 'January 2023',
+      to: 'February 2023',
       companyLink: 'https://bolt.com',
     },
     {
