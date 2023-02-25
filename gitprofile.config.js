@@ -44,6 +44,8 @@ const config = {
     'AWS',
     'React',
     'Node',
+    'BrowserStack',
+    'Cypress',
     'CircleCI',
     'JavaScript',
     'DevTools',
