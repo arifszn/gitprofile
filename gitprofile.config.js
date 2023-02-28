@@ -43,9 +43,9 @@ const config = {
   education: [],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: '', // medium | dev
-    username: '',
-    limit: 3, // How many posts to display. Max is 10.
+    source: 'dev', // medium | dev
+    username: 'gifflet',
+    limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
     // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
