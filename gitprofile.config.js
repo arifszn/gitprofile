@@ -24,7 +24,7 @@ const config = {
     email: 'nathen418@playantares.com',
   },
   resume: {
-    fileUrl: '',
+    fileUrl: 'https://github.com/nathen418/nathen418.com/raw/main/ResumeForUpload.pdf',
   },
   skills: [
     'JavaScript',
