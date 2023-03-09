@@ -32,32 +32,31 @@ const config = {
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
+    'Python',
+    'Java',
+    'Kotlin',
     'JavaScript',
     'React.js',
     'Node.js',
-    'Nest.js',
     'MySQL',
-    'PostgreSQL',
     'Git',
-    'Docker',
-    'PHPUnit',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'Robotics',
+    'Machine Learning',
+    'System Design',
+    'Network Architecture',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Freelancer',
+      position: 'Software Developer',
+      from: 'June 2020',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://24task.com/',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
+      company: 'IBM Philippines',
+      position: 'Intern',
       from: 'July 2019',
       to: 'August 2021',
       companyLink: 'https://example.com',
@@ -73,16 +72,10 @@ const config = {
   ], */
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
-    },
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'AMA Computer College',
+      degree: 'Bachelor of Science in Computer Engineering',
+      from: '2019',
+      to: '2023',
     },
   ],
 
@@ -179,7 +172,7 @@ const config = {
 
   // Optional Footer. Supports plain text or HTML.
   footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      class="text-primary" href="https://github.com/alexisvalentino/gitprofile"
       target="_blank"
       rel="noreferrer"
     ></a>❤️`,
