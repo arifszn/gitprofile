@@ -62,14 +62,14 @@ const config = {
       companyLink: 'https://example.com',
     },
   ],
-  /* certifications: [
+  certifications: [
     {
       name: 'Lorem ipsum',
       body: 'Lorem ipsum dolor sit amet',
       year: 'March 2022',
       link: 'https://example.com'
     },
-  ], */
+  ],
   education: [
     {
       institution: 'AMA Computer College',
@@ -82,14 +82,14 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'Voice Assistant GPT3',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
       imageUrl: 'https://via.placeholder.com/250x250',
       link: 'https://example.com',
     },
     {
-      title: 'Project Name',
+      title: 'IOT Powered Smart Security Surveillance Robot with Android app, Gps Tracking and Threat Detection',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
       imageUrl: 'https://via.placeholder.com/250x250',
@@ -128,34 +128,7 @@ const config = {
     themes: [
       'light',
       'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
       'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
-      'dracula',
-      'cmyk',
-      'autumn',
-      'business',
-      'acid',
-      'lemonade',
-      'night',
-      'coffee',
-      'winter',
-      'procyon',
     ],
 
     // Custom theme
