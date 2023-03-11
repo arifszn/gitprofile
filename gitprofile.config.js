@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 'yousri11', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
@@ -11,11 +11,11 @@ const config = {
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
-    facebook: '',
-    instagram: '',
+    //linkedin: 'ariful-alam',
+    // twitter: 'arif_szn',
+    //mastodon: 'arifszn@mastodon.social',
+    facebook: '100013359993271',
+    /*instagram: '',
     dribbble: '',
     behance: '',
     medium: 'arifszn',
@@ -25,11 +25,11 @@ const config = {
     telegram: '',
     website: 'https://arifszn.com',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'arifulalamszn@gmail.com',*/
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',
@@ -73,30 +73,30 @@ const config = {
   ], */
   education: [
     {
-      institution: 'Institution Name',
+      institution: 'Ecole superieur de science et informatique Hammam Soussa (ESSTHS)',
       degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      from: '2021',
+      to: '2022',
     },
     {
-      institution: 'Institution Name',
+      institution: `Institut superieur d'informatique et mathematique monastir (ISIMM) `,
       degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      from: '2022',
+      to: '2024',
     },
   ],
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'Social media website',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
+      imageUrl: 'logo.jpg',
       link: 'https://example.com',
     },
     {
-      title: 'Project Name',
+      title: 'Template 1 ',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
       imageUrl: 'https://via.placeholder.com/250x250',
@@ -178,11 +178,11 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  // footer: `Made with <a 
+  //     class="text-primary" href="https://github.com/arifszn/gitprofile"
+  //     target="_blank"
+  //     rel="noreferrer"
+  //   >GitProfile</a> and ❤️`,
 };
 
 export default config;
