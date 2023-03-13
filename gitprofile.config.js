@@ -60,14 +60,14 @@ const config = {
       //companyLink: 'https://example.com',
     //},
   ],
-  /* certifications: [
+  certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com'
+      name: 'Microsoft Certified: Azure Fundamentals',
+      //body: 'Lorem ipsum dolor sit amet',
+      year: 'December 2022',
+      link: 'https://www.credly.com/badges/88f6af9d-1ab5-40e5-9b15-d03b2338e254/linked_in?t=rmt3ud'
     },
-  ], */
+  ], 
   education: [
     {
       institution: 'Institution Name',
