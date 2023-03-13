@@ -29,7 +29,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/ssinnard_resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Microsoft Office Suite',
