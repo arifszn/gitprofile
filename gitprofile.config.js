@@ -6,8 +6,8 @@ const config = {
     sortBy: 'stars', // stars | updated
     limit: 0, // How many projects to display.
     exclude: {
-      forks: true, // Forked projects will not be displayed if set to true.
-      projects: ['MyFirstRepo','-Hello_World-','somer-sinnard.github.io_temp','HW12','profile_page','profile_sites','Page','somer-sinnard','bio','bio_page','somer-sinnard.github.io_temp_1','somer-sinnard.github.io'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      forks: false, // Forked projects will not be displayed if set to true.
+      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
@@ -119,7 +119,7 @@ const config = {
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: true,
+    disableSwitch: false,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
@@ -130,8 +130,8 @@ const config = {
 
     // Available themes. To remove any theme, exclude from here.
     //themes: [
-      //'light',
-      //'dark',
+      'light',
+      'dark',
       //'cupcake',
       //'bumblebee',
       //'emerald',
@@ -145,7 +145,7 @@ const config = {
       //'forest',
       //'aqua',
       //'lofi',
-      //'pastel',
+      'pastel'
       //'fantasy',
       //'wireframe',
       //'black',
