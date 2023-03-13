@@ -2,55 +2,58 @@
 
 const config = {
   github: {
-    username: 'somer-sinnard', // Your GitHub org/user name. (Required)
+    username: 'arifszn', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
-    limit: 3, // How many projects to display.
+    limit: 10, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'somer-sinnard',
-    // twitter: 'arif_szn',
-    // mastodon: 'arifszn@mastodon.social',
-    // facebook: '',
-    // instagram: '',
-    // dribbble: '',
-    // behance: '',
-    // medium: 'arifszn',
-    // dev: 'arifszn',
-    // stackoverflow: '', // format: userid/username
-    // skype: '',
-    // telegram: '',
-    // website: 'https://arifszn.com',
-    phone: '(712) 210-2409',
-    email: 'sgsinnard@gmail.com',
+    linkedin: 'ariful-alam',
+    twitter: 'arif_szn',
+    mastodon: 'arifszn@mastodon.social',
+    facebook: '',
+    instagram: '',
+    dribbble: '',
+    behance: '',
+    medium: 'arifszn',
+    dev: 'arifszn',
+    stackoverflow: '', // format: userid/username
+    skype: '',
+    telegram: '',
+    website: 'https://arifszn.com',
+    phone: '',
+    email: 'arifulalamszn@gmail.com',
   },
   resume: {
     fileUrl:
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'Microsoft Office Suite',
-    'Python',
-    'SQL',
-    'Tableau',
-    'JMP',
-    'Orange',
-    'Omeda',
-    'Hubspot',
-    'Microsoft Azure',
-    'Microsoft VBA',
-    'Power BI',
+    'PHP',
+    'Laravel',
+    'JavaScript',
+    'React.js',
+    'Node.js',
+    'Nest.js',
+    'MySQL',
+    'PostgreSQL',
+    'Git',
+    'Docker',
+    'PHPUnit',
+    'CSS',
+    'Antd',
+    'Tailwind',
   ],
   experiences: [
     {
-      company: "Becker's Healthcare",
-      position: 'Data and Operations Intern',
-      from: 'May 2022',
+      company: 'Company Name',
+      position: 'Position',
+      from: 'September 2021',
       to: 'Present',
-      companyLink: 'https://www.beckershospitalreview.com/',
+      companyLink: 'https://example.com',
     },
     {
       company: 'Company Name',
@@ -70,16 +73,16 @@ const config = {
   ], */
   education: [
     {
-      institution: 'University of Iowa, Tippie College of Business',
-      degree: 'Master of Science, Business Analytics',
-      from: 'August 2021',
-      to: 'May 2023',
+      institution: 'Institution Name',
+      degree: 'Degree',
+      from: '2015',
+      to: '2019',
     },
     {
-      institution: 'University of Iowa, Tippie College of Business',
-      degree: 'Bachelor of Business Administration, Economics',
-      from: 'August 2018',
-      to: 'May 2022',
+      institution: 'Institution Name',
+      degree: 'Degree',
+      from: '2012',
+      to: '2014',
     },
   ],
 
@@ -145,7 +148,7 @@ const config = {
       'forest',
       'aqua',
       'lofi',
-      'pastel'
+      'pastel',
       'fantasy',
       'wireframe',
       'black',
