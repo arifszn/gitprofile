@@ -4,7 +4,7 @@ const config = {
   github: {
     username: 'somer-sinnard', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
-    limit: 0, // How many projects to display.
+    limit: 3, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -51,14 +51,14 @@ const config = {
       from: 'May 2022',
       to: 'Present',
       companyLink: 'https://www.beckershospitalreview.com/',
-    },
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
-    },
+    }
+    //{
+      //company: 'Company Name',
+      //position: 'Position',
+      //from: 'July 2019',
+      //to: 'August 2021',
+      //companyLink: 'https://example.com',
+    //},
   ],
   /* certifications: [
     {
@@ -77,7 +77,7 @@ const config = {
     },
     {
       institution: 'University of Iowa, Tippie College of Business',
-      degree: 'Bachelor of Business Administration, Economics; minor, Political Science',
+      degree: 'Bachelor of Business Administration, Economics',
       from: 'August 2018',
       to: 'May 2022',
     },
