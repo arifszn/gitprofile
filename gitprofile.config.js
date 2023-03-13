@@ -70,16 +70,16 @@ const config = {
   ], 
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'University of Iowa, Tippie College of Business',
+      degree: 'Master of Science, Business Analytics',
+      from: 'August 2021',
+      to: 'May 2023',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'University of Iowa, Tippie College of Business',
+      degree: 'Bachelor of Business Administration, Economics',
+      from: 'August 2018',
+      to: 'May 2022',
     },
   ],
 
