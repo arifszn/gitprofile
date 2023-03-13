@@ -51,14 +51,14 @@ const config = {
       from: 'May 2022',
       to: 'Present',
       companyLink: 'https://www.beckershospitalreview.com/',
-    }
-    //{
-      //company: 'Company Name',
-      //position: 'Position',
-      //from: 'July 2019',
-      //to: 'August 2021',
-      //companyLink: 'https://example.com',
-    //},
+    },
+    {
+      company: 'Company Name',
+      position: 'Position',
+      from: 'July 2019',
+      to: 'August 2021',
+      companyLink: 'https://example.com',
+    },
   ],
   /* certifications: [
     {
@@ -115,7 +115,7 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'pastel',
+    defaultTheme: 'winter',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -132,54 +132,54 @@ const config = {
     themes: [
       'light',
       'dark',
-      //'cupcake',
-      //'bumblebee',
-      //'emerald',
-      //'corporate',
-      //'synthwave',
-      //'retro',
-      //'cyberpunk',
-      //'valentine',
-      //'halloween',
-      //'garden',
-      //'forest',
-      //'aqua',
-      //'lofi',
+      'cupcake',
+      'bumblebee',
+      'emerald',
+      'corporate',
+      'synthwave',
+      'retro',
+      'cyberpunk',
+      'valentine',
+      'halloween',
+      'garden',
+      'forest',
+      'aqua',
+      'lofi',
       'pastel'
-      //'fantasy',
-      //'wireframe',
-      //'black',
-      //'luxury',
-      //'dracula',
-      //'cmyk',
-      //'autumn',
-      //'business',
-      //'acid',
-      //'lemonade',
-      //'night',
-      //'coffee',
-      //'winter',
-      //'procyon',
-    //],
+      'fantasy',
+      'wireframe',
+      'black',
+      'luxury',
+      'dracula',
+      'cmyk',
+      'autumn',
+      'business',
+      'acid',
+      'lemonade',
+      'night',
+      'coffee',
+      'winter',
+      'procyon',
+    ],
 
     // Custom theme
-    //customTheme: {
-      //primary: '#fc055b',
-      //secondary: '#219aaf',
-      //accent: '#e8d03a',
-      //neutral: '#2A2730',
-      //'base-100': '#E3E3ED',
-      //'--rounded-box': '3rem',
-      //'--rounded-btn': '3rem',
-    //},
-  //},
+    customTheme: {
+      primary: '#fc055b',
+      secondary: '#219aaf',
+      accent: '#e8d03a',
+      neutral: '#2A2730',
+      'base-100': '#E3E3ED',
+      '--rounded-box': '3rem',
+      '--rounded-btn': '3rem',
+    },
+  },
 
   // Optional Footer. Supports plain text or HTML.
-  //footer: `Made with <a 
-      //class="text-primary" href="https://github.com/arifszn/gitprofile"
-      //target="_blank"
-      //rel="noreferrer"
-   // >GitProfile</a> and ❤️`,
-//};
+  footer: `Made with <a 
+      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      target="_blank"
+      rel="noreferrer"
+    >GitProfile</a> and ❤️`,
+};
 
 export default config;
