@@ -129,7 +129,7 @@ const config = {
     hideAvatarRing: false,
 
     // Available themes. To remove any theme, exclude from here.
-    //themes: [
+    themes: [
       'light',
       'dark',
       //'cupcake',
