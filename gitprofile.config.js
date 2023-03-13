@@ -46,19 +46,19 @@ const config = {
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: "Becker's Healthcare",
+      position: 'Data and Operations Intern',
+      from: 'May 2022',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://www.beckershospitalreview.com/',
     },
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
-    },
+    //{
+      //company: 'Company Name',
+      //position: 'Position',
+      //from: 'July 2019',
+      //to: 'August 2021',
+      //companyLink: 'https://example.com',
+    //},
   ],
   /* certifications: [
     {
