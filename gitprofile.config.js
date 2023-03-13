@@ -129,7 +129,7 @@ const config = {
     hideAvatarRing: false,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: [
+    //themes: [
       //'light',
       //'dark',
       //'cupcake',
@@ -145,7 +145,7 @@ const config = {
       //'forest',
       //'aqua',
       //'lofi',
-      'pastel',
+      //'pastel',
       //'fantasy',
       //'wireframe',
       //'black',
@@ -160,7 +160,7 @@ const config = {
       //'coffee',
       //'winter',
       //'procyon',
-    ],
+    //],
 
     // Custom theme
     //customTheme: {
@@ -171,8 +171,8 @@ const config = {
       //'base-100': '#E3E3ED',
       //'--rounded-box': '3rem',
       //'--rounded-btn': '3rem',
-    },
-  },
+    //},
+  //},
 
   // Optional Footer. Supports plain text or HTML.
   //footer: `Made with <a 
