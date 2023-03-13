@@ -6,8 +6,8 @@ const config = {
     sortBy: 'stars', // stars | updated
     limit: 0, // How many projects to display.
     exclude: {
-      forks: false, // Forked projects will not be displayed if set to true.
-      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      forks: true, // Forked projects will not be displayed if set to true.
+      projects: ['MyFirstRepo','-Hello_World-','somer-sinnard.github.io_temp','HW12','profile_page','profile_sites','Page','somer-sinnard','bio','bio_page','somer-sinnard.github.io_temp_1','somer-sinnard.github.io'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
