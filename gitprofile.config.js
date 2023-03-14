@@ -82,7 +82,7 @@ const config = {
       to: 'May 2022',
     },
   ],
-
+  
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
