@@ -93,7 +93,7 @@ const config = {
       link: 'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/Wine%20Case%20Study%20.pdf?login_hint=ssinnard%40uiowa.edu',
     },
     {
-      title: 'Predicting Loan Defaults',
+      title: 'Predicting Loan Defaults Using the Orange Platform',
       description:
         'A group report on predicting individuals that will default on loans using machine learning classfication methods.',
       imageUrl: 'https://www.incimages.com/uploaded_files/image/1920x1080/business-loan-illustration-1940x900_35212.jpg',
