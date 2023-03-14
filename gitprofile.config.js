@@ -7,7 +7,7 @@ const config = {
     limit: 2, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
-      projects: ['Bio','-Hello_World-','MyFirstRepo','somer-sinnard.github.io_temp','HW12'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['Bio','-Hello_World-','MyFirstRepo','somer-sinnard.github.io_temp','HW12','Somer-Sinnard'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
