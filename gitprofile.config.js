@@ -7,7 +7,7 @@ const config = {
     limit: 2, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
-      projects: ['Bio','-Hello_World-','MyFirstRepo','somer-sinnard.github.io_temp','HW12','Somer-Sinnard','Somer-Sinnard.Github.Io_temp_1], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['-Hello_World-','MyFirstRepo','somer-sinnard.github.io_temp','HW12','somer-sinnard','somer-sinnard.github.io_temp_1','somer-sinnard.github.io_temp'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
@@ -86,11 +86,11 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'Modeling the Characteristics of an Exceptional Vinho Verde; An Analysis of Wine Quality Ratings',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'A group report on a multiple regression analysis of wine data with the goal of determining which factors improve Vinho Verde wine ratings.',
+      imageUrl: 'https://www.realsimple.com/thmb/5GPNGPLNH228wa7jUJ2HPpaRBao=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-wine-health-benefits-ce3be96b730b41cc82f128abb75c2395.jpg',
+      link: 'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/Wine%20Case%20Study%20.pdf?login_hint=ssinnard%40uiowa.edu',
     },
     {
       title: 'Project Name',
