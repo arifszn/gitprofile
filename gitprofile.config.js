@@ -89,7 +89,7 @@ const config = {
       title: 'Modeling the Characteristics of an Exceptional Vinho Verde; An Analysis of Wine Quality Ratings',
       description: 
           'A group report on a multiple regression analysis of wine data with the goal of determining which factors improve Vinho Verde wine ratings.',
-      imageUrl: 'https://www.realsimple.com/thmb/5GPNGPLNH228wa7jUJ2HPpaRBao=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-wine-health-benefits-ce3be96b730b41cc82f128abb75c2395.jpg',
+      //imageUrl: 
       link: 'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/Wine%20Case%20Study%20.pdf?login_hint=ssinnard%40uiowa.edu',
     },
     {
