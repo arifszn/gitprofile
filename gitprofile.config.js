@@ -86,11 +86,11 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Modeling the Characteristics of an Exceptional Vinho Verde; An Analysis of Wine Quality Ratings',
-      description: 
-          'A group report on a multiple regression analysis of wine data with the goal of determining which factors improve Vinho Verde wine ratings.',
-      //imageUrl: 
-      //link: 'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/Wine%20Case%20Study%20.pdf?login_hint=ssinnard%40uiowa.edu',
+      title: 'Project Name',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+      imageUrl: 'https://via.placeholder.com/250x250',
+      link: 'https://example.com',
     },
     {
       title: 'Project Name',
