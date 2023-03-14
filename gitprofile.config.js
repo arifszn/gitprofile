@@ -93,11 +93,11 @@ const config = {
       link: 'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/Wine%20Case%20Study%20.pdf?login_hint=ssinnard%40uiowa.edu',
     },
     {
-      title: 'Project Name',
+      title: 'Predicting Loan Defaults',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'A group report on predicting individuals that will default on loans using machine learning classfication methods.',
+      imageUrl: 'https://www.incimages.com/uploaded_files/image/1920x1080/business-loan-illustration-1940x900_35212.jpg',
+      link: 'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/Data%20Science%20Project%20Report.pdf?login_hint=ssinnard%40uiowa.edu',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
