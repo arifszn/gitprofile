@@ -21,7 +21,7 @@ const config = {
     instagram: '',
     dribbble: '',
     behance: '',
-    // medium: 'arifszn',
+    medium: 'jameskip',
     // dev: 'arifszn',
     stackoverflow: '', // format: userid/username
     website: 'https://jameskip.com',
