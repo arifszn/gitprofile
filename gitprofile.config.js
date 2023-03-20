@@ -48,7 +48,7 @@ const config = {
   ],
   experiences: [
     {
-      company: 'Freelancer',
+      company: 'Freelance',
       position: 'Software Developer',
       from: 'June 2020',
       to: 'Present',
@@ -64,7 +64,7 @@ const config = {
   ],
   certifications: [
     {
-      name: 'Lorem ipsum',
+      name: 'Microsoft certified technology specialist',
       body: 'Lorem ipsum dolor sit amet',
       year: 'March 2022',
       link: 'https://example.com'
@@ -98,8 +98,8 @@ const config = {
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    source: 'medium', // medium | dev
+    username: 'alexisvalentino', // to hide blog section, keep it empty
     limit: 2, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
