@@ -2,8 +2,8 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
+    username: 'jalexandercarr', // Your GitHub org/user name. (Required)
+    sortBy: 'updated', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
@@ -11,21 +11,21 @@ const config = {
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
-    facebook: '',
-    instagram: '',
-    dribbble: '',
-    behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // format: userid/username
-    skype: '',
-    telegram: '',
-    website: 'https://arifszn.com',
-    phone: '',
-    email: 'arifulalamszn@gmail.com',
+    linkedin: 'jalexandercarr',
+    // twitter: 'arif_szn',
+    // mastodon: 'arifszn@mastodon.social',
+    // facebook: '',
+    // instagram: '',
+    // dribbble: '',
+    // behance: '',
+    // medium: 'arifszn',
+    // dev: 'arifszn',
+    // stackoverflow: '', // format: userid/username
+    // skype: '',
+    // telegram: '',
+    // website: 'https://arifszn.com',
+    // phone: '',
+    email: 'jalexandercarr@gmail.com',
   },
   resume: {
     fileUrl:
@@ -118,11 +118,11 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'winter',
+    defaultTheme: 'corporate',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: false,
+    disableSwitch: true,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
