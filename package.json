@@ -42,7 +42,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@arifszn/blog-js": "^2.0.0",
+    "@arifszn/blog-js": "^2.0.4",
     "@vitejs/plugin-react": "^3.0.0",
     "autoprefixer": "^10.4.4",
     "axios": "^1.1.3",
