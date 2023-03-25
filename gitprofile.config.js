@@ -105,12 +105,12 @@ const config = {
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many posts to display. Max is 10.
+    source: 'medium', // medium | dev
+    username: 'pandiyashwanth', // to hide blog section, keep it empty
+    limit: 6, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: 'G-B8WD7N1C4J', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
   // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
@@ -135,30 +135,6 @@ const config = {
     themes: [
       'light',
       'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
-      'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
-      'dracula',
-      'cmyk',
-      'autumn',
-      'business',
-      'acid',
-      'lemonade',
       'night',
       'coffee',
       'winter',
@@ -178,11 +154,11 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
+  footer: `All rights reserved | <a 
       class="text-primary" href="https://yashwanth.co.in"
       target="_blank"
       rel="noreferrer"
-    >Homepage</a> and ❤️`,
+    >Developed by @Yashwanth</a> and ❤️`,
 };
 
 export default config;
