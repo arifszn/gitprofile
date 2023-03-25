@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 'YashwanthPandi', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
@@ -11,25 +11,25 @@ const config = {
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'yashwanthpandi',
+    twitter: 'yashwanthpandi',
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: '',
+    dev: '',
     stackoverflow: '', // format: userid/username
     skype: '',
     telegram: '',
-    website: 'https://arifszn.com',
+    website: 'https://yashwanth.co.in',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'me@yashwanth.co.in',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.google.com/file/d/1Ws2wNTsSJHfiPrm7aRQKs6me8yaul4AS/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',
@@ -49,18 +49,18 @@ const config = {
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
+      company: 'Cisco Systems',
+      position: 'Software Engineer 1',
+      from: 'June 2020',
+      to: 'November 2022',
+      companyLink: 'https://cisco.com',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
+      company: 'Fiverr',
+      position: 'Freelance',
       from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      to: 'may 2020',
+      companyLink: 'https://fiverr.com',
     },
   ],
   /* certifications: [
@@ -73,16 +73,16 @@ const config = {
   ], */
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'California Lutheran University',
+      degree: " Master's in Information Technology ",
+      from: '2023',
+      to: '2025',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Andhra University',
+      degree: 'Bachelor of Engineering (Electronics and Communication Engineering)',
+      from: '2020',
+      to: '2016',
     },
   ],
 
@@ -179,10 +179,10 @@ const config = {
 
   // Optional Footer. Supports plain text or HTML.
   footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      class="text-primary" href="https://yashwanth.co.in"
       target="_blank"
       rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+    >Homepage</a> and ❤️`,
 };
 
 export default config;
