@@ -2,30 +2,18 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
-    limit: 10, // How many projects to display.
+    username: 'tracympham', // Your GitHub org/user name. (Required)
+    sortBy: 'updated', // stars | updated
+    limit: 5, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
-    facebook: '',
-    instagram: '',
-    dribbble: '',
-    behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // format: userid/username
-    skype: '',
-    telegram: '',
-    website: 'https://arifszn.com',
-    phone: '',
-    email: 'arifulalamszn@gmail.com',
+    linkedin: 'tracympham',
+    website: 'https://tracympham.github.io',
+    email: 'tphamm@uw.edu',
   },
   resume: {
     fileUrl:
@@ -49,17 +37,24 @@ const config = {
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Starbucks Corporation',
+      position: 'Barista Trainer',
+      from: 'March 2022',
       to: 'Present',
       companyLink: 'https://example.com',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
+      company: 'Co Lam Pagoda',
+      position: 'Youth Group Lead',
+      from: 'September 2017',
+      to: 'Present',
+      companyLink: 'https://example.com',
+    },
+    {
+      company: 'Team Read',
+      position: 'Assistant Site Coordinator',
+      from: 'September 2021',
+      to: 'March 2023',
       companyLink: 'https://example.com',
     },
   ],
@@ -73,16 +68,10 @@ const config = {
   ], */
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
-    },
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'University of Washington, Bothell',
+      degree: 'Bachelor of Science in Computer Science and Software Engineering (CSSE)',
+      from: '2021',
+      to: '2024',
     },
   ],
 
@@ -118,7 +107,7 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'winter',
+    defaultTheme: 'valentine',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -176,13 +165,6 @@ const config = {
       '--rounded-btn': '3rem',
     },
   },
-
-  // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
 };
 
 export default config;
