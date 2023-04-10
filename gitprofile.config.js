@@ -90,14 +90,14 @@ const config = {
       description:
         'A group report on a multiple regression analysis of wine data with the goal of determining which factors improve Vinho Verde wine ratings.',
       imageUrl: 'https://www.realsimple.com/thmb/5GPNGPLNH228wa7jUJ2HPpaRBao=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-wine-health-benefits-ce3be96b730b41cc82f128abb75c2395.jpg',
-      link: 'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/Wine%20Case%20Study%20.pdf?login_hint=ssinnard%40uiowa.edu',
+      link: 'https://drive.google.com/file/d/1OW5G7hOYptfURg1Sh7LNFvCgRDuEH-ck/view',
     },
     {
       title: 'Predicting Loan Defaults Using the Orange Platform',
       description:
-        'A group report on predicting individuals that will default on loans using machine learning classfication methods.',
+        'A group report on predicting individuals that will default on loans using machine learning binary classfication methods.',
       imageUrl: 'https://www.incimages.com/uploaded_files/image/1920x1080/business-loan-illustration-1940x900_35212.jpg',
-      link: 'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/Data%20Science%20Project%20Report.pdf?login_hint=ssinnard%40uiowa.edu',
+      link: 'https://drive.google.com/file/d/1m-Azo4A4T5CP4LbATzrS-xtd2EJfNUNl/view',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
