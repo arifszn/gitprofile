@@ -32,17 +32,20 @@ const config = {
       'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/ssinnard_resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'Microsoft Office Suite',
+    'Microsoft Excel',
     'Python',
     'SQL',
     'Tableau',
     'JMP',
     'Orange',
+    'Microsoft Azure',
+    'Visual Basic for Application (VBA)',
+    'Power BI',
+    'Alteryx',
+    'R',
+    'Azure Databricks',
     'Omeda',
     'Hubspot',
-    'Microsoft Azure',
-    'Microsoft VBA',
-    'Power BI',
   ],
   experiences: [
     {
