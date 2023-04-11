@@ -92,7 +92,7 @@ const config = {
       title: 'Modeling the Characteristics of Favorable Vinho Verde Wines in JMP',
       description:
         'A group report on a multiple regression analysis of wine data in JMP with the goal of determining which factors improve Vinho Verde wine ratings.',
-      imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.everydayhealth.com%2Flongevity%2Fis-red-wine-good-for-you.aspx&psig=AOvVaw0kNPc7kts80YoajSDiAIiv&ust=1681268740248000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNC0wqLsoP4CFQAAAAAdAAAAABAE',
+      imageUrl: 'https://images.freeimages.com/365/images/istock/previews/1005/100517621-wine-cartoon-vector-illustration.jpg',
       link: 'https://drive.google.com/file/d/1OW5G7hOYptfURg1Sh7LNFvCgRDuEH-ck/view',
     },
     {
