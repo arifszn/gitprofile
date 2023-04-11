@@ -7,7 +7,7 @@ const config = {
     limit: 3, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
-      projects: ['-Hello_World-','MyFirstRepo','somer-sinnard.github.io_temp','HW12','somer-sinnard','somer-sinnard.github.io_temp_1','somer-sinnard.github.io_temp'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['Energy_sector_analysis','-Hello_World-','MyFirstRepo','somer-sinnard.github.io_temp','HW12','somer-sinnard','somer-sinnard.github.io_temp_1','somer-sinnard.github.io_temp'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
