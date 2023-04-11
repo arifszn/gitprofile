@@ -89,18 +89,25 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Modeling the Characteristics of an Exceptional Vinho Verde; An Analysis of Wine Quality Ratings',
+      title: 'Modeling the Characteristics of Favorable Vinho Verde Wines in JMP',
       description:
-        'A group report on a multiple regression analysis of wine data with the goal of determining which factors improve Vinho Verde wine ratings.',
+        'A group report on a multiple regression analysis of wine data in JMP with the goal of determining which factors improve Vinho Verde wine ratings.',
       imageUrl: 'https://www.realsimple.com/thmb/5GPNGPLNH228wa7jUJ2HPpaRBao=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-wine-health-benefits-ce3be96b730b41cc82f128abb75c2395.jpg',
       link: 'https://drive.google.com/file/d/1OW5G7hOYptfURg1Sh7LNFvCgRDuEH-ck/view',
     },
     {
       title: 'Predicting Loan Defaults Using the Orange Platform',
       description:
-        'A group report on predicting individuals that will default on loans using machine learning binary classfication methods.',
+        'A group report predicting individuals that will default on loans using machine learning binary classfication methods.',
       imageUrl: 'https://www.incimages.com/uploaded_files/image/1920x1080/business-loan-illustration-1940x900_35212.jpg',
       link: 'https://drive.google.com/file/d/1m-Azo4A4T5CP4LbATzrS-xtd2EJfNUNl/view',
+    },
+    {
+      title: 'Modeling Global Temperature Change in JMP and Excel',
+      description:
+        'A group report where a multiple linear regression model was produced using cross-sectional, time series data on variables believed to impact global temperature.',
+      imageUrl: 'https://media.istockphoto.com/id/1184482788/vector/thermometer-illustration-vector-in-flat-design.jpg?s=612x612&w=0&k=20&c=JRG8FxJG8ZnqnGthqTD0NzmQKPf4zzXfU0PAdkjLLng=',
+      link: 'https://drive.google.com/file/d/1xLHCQsRHofPp2seJzN3YMp-L0WXQ8AEC/view',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
