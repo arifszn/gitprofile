@@ -4,7 +4,7 @@ const config = {
   github: {
     username: 'somer-sinnard', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
-    limit: 2, // How many projects to display.
+    limit: 3, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
       projects: ['-Hello_World-','MyFirstRepo','somer-sinnard.github.io_temp','HW12','somer-sinnard','somer-sinnard.github.io_temp_1','somer-sinnard.github.io_temp'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
