@@ -92,7 +92,7 @@ const config = {
       title: 'Modeling the Characteristics of Favorable Vinho Verde Wines in JMP',
       description:
         'A group report on a multiple regression analysis of wine data in JMP with the goal of determining which factors improve Vinho Verde wine ratings.',
-      imageUrl: 'https://www.realsimple.com/thmb/5GPNGPLNH228wa7jUJ2HPpaRBao=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/red-wine-health-benefits-ce3be96b730b41cc82f128abb75c2395.jpg',
+      imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.everydayhealth.com%2Flongevity%2Fis-red-wine-good-for-you.aspx&psig=AOvVaw0kNPc7kts80YoajSDiAIiv&ust=1681268740248000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNC0wqLsoP4CFQAAAAAdAAAAABAE',
       link: 'https://drive.google.com/file/d/1OW5G7hOYptfURg1Sh7LNFvCgRDuEH-ck/view',
     },
     {
@@ -106,7 +106,7 @@ const config = {
       title: 'Modeling Global Temperature Change in JMP and Excel',
       description:
         'A group report where a multiple linear regression model was produced using cross-sectional, time series data on variables believed to impact global temperature.',
-      imageUrl: 'https://media.istockphoto.com/id/1184482788/vector/thermometer-illustration-vector-in-flat-design.jpg?s=612x612&w=0&k=20&c=JRG8FxJG8ZnqnGthqTD0NzmQKPf4zzXfU0PAdkjLLng=',
+      imageUrl: 'https://www.psychologicalscience.org/redesign/wp-content/uploads/2022/04/Earth-Day-Online-1-1024x819.jpg',
       link: 'https://drive.google.com/file/d/1xLHCQsRHofPp2seJzN3YMp-L0WXQ8AEC/view',
     },
   ],
