@@ -29,7 +29,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://iowa-my.sharepoint.com/personal/ssinnard_uiowa_edu/Documents/ssinnard_resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.google.com/file/d/1aNfgcPnlvOj3E9UqyoK6Mfxfc2ixx0z-/view', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Microsoft Excel',
