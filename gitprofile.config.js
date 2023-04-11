@@ -112,7 +112,7 @@ const config = {
     {
       title: 'Report Deck on the Food Bank of Iowa',
       description:
-        'A group project focused on written business communication skills in which we took on a consulting role with the goal of pitching this charity to a fictitious donor looking to make a philanthropic donation.',
+        'A undergraduate group project focused on written business communication skills. In a consulting role, our group produced a detailed report on this charity for a fictitious donor looking to make a philanthropic donation.',
       imageUrl: 'https://us.123rf.com/450wm/ahe555/ahe5552109/ahe555210900092/175137690-spaghetti-with-tomato-sauce-on-plate-vector-design-and-isolated-background.jpg?ver=6',
       link: 'https://drive.google.com/file/d/1dqmfQx6-Uym0fB1mS0Nlh5fQmMCsDzHf/view',
     },
