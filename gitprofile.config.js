@@ -3,10 +3,10 @@
 const config = {
   github: {
     username: 'AckonSamuel', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
+    sortBy: '', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
-      forks: false, // Forked projects will not be displayed if set to true.
+      forks: true, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
@@ -33,18 +33,18 @@ const config = {
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Microverse',
+      position: ' Student Mentor(Volunteer)',
+      from: 'February 2021',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://www.microverse.org',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'Accra Technical University',
+      position: 'IT support engineer intern',
+      from: 'December 2022',
+      to: 'January 2023',
+      companyLink: 'https://atu.edu.gh',
     },
   ],
   /* certifications: [
@@ -57,10 +57,10 @@ const config = {
   ], */
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Kwame Nkrumah University of Science and Technology',
+      degree: 'BSc Electrical and Electronics Engineering',
+      from: '2019',
+      to: '2022',
     },
     {
       institution: 'Institution Name',
@@ -89,8 +89,8 @@ const config = {
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    source: 'medium', // medium | dev
+    username: '@ackons433', // to hide blog section, keep it empty
     limit: 2, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
