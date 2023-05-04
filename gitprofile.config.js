@@ -80,11 +80,13 @@ const config = {
       link: 'https://famous-klepon-e50d82.netlify.app/',
     },
     {
-      title: 'Project Name',
+      title: 'Space flight news',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'A web app to release the latest space and space travel news updates.
+- Built with: HTML5, CSS3, JavaScript
+ ',
+      imageUrl: 'https://user-images.githubusercontent.com/92922987/236264916-85d98531-d901-4a9d-98e4-dcc957a7652d.jpg',
+      link: 'https://ackonsamuel.github.io/space-flight-news/',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
