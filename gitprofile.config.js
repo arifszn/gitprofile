@@ -73,11 +73,11 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'Space traveller hub',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'A web app platform that renders information from the Space-X API about space rockets and their related missions',
+      imageUrl: 'https://user-images.githubusercontent.com/92922987/236263407-5214f883-ca68-47af-9425-ee8daa50dcb4.jpg',
+      link: 'https://famous-klepon-e50d82.netlify.app/',
     },
     {
       title: 'Project Name',
