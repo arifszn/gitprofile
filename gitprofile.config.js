@@ -82,9 +82,7 @@ const config = {
     {
       title: 'Space flight news',
       description:
-        'A web app to release the latest space and space travel news updates.
-- Built with: HTML5, CSS3, JavaScript
- ',
+        'A web app to release the latest space and space travel news updates. Built with HTML5, CSS3 and JavaScript',
       imageUrl: 'https://user-images.githubusercontent.com/92922987/236264916-85d98531-d901-4a9d-98e4-dcc957a7652d.jpg',
       link: 'https://ackonsamuel.github.io/space-flight-news/',
     },
