@@ -4,7 +4,7 @@ const config = {
   github: {
     username: 'nathen418', // Your GitHub org/user name. (Required)
     sortBy: 'updated', // stars | updated
-    limit: 30, // How many projects to display.
+    limit: 22, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: ['nathen418.com', 'nathen418'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -44,6 +44,13 @@ const config = {
     'Git',
   ],
   experiences: [
+    {
+      company: 'WEC Energy Group',
+      position: 'Information Technology Intern',
+      from: 'May 2023',
+      to: 'Present',
+      companyLink: 'https://www.wecenergygroup.com/',
+    },
     {
       company: 'University of Wisconsin Milwaukee',
       position: 'Lead Audio Visual Technician - Union Event Services',
@@ -125,19 +132,12 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'Purpose Driven Sisters Website Redesign',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
-    },
-    {
-      title: 'Project Name',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
-    },
+        'Worked with a small student team to complete a digital presence redesign for Purpose Driven Sisters, a nonprofit organization focused on youth mentorship that strives to empower young girls in Milwaukee. Designed a new website by creating new and transforming existing content, refined their brand story, and defined donation and involvement incentives to prospective sponsors and members so they can better serve their community and grow as an organization. Worked on improving SEO and basic web accessibility and improving the mobile site design. This project was completed as part of the Nonprof-IT program at UW-Milwaukee',
+      imageUrl: 'https://static.wixstatic.com/media/40724f_2012372710cf4d099208a3349999d4ce~mv2.png',
+      link: 'https://purposedsisters.com',
+    }
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
