@@ -1,13 +1,12 @@
-import { MdLocationOn, MdMail } from 'react-icons/md';
+import { MdLocationOn } from 'react-icons/md';
 import {
   AiFillGithub,
   AiFillInstagram,
   AiFillMediumSquare,
 } from 'react-icons/ai';
 import { SiTwitter } from 'react-icons/si';
-import { GrLinkedinOption } from 'react-icons/gr';
 import { CgDribbble } from 'react-icons/cg';
-import { RiPhoneFill } from 'react-icons/ri';
+import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
 import { Fragment } from 'react';
 import {
   FaBehanceSquare,
@@ -15,10 +14,32 @@ import {
   FaDev,
   FaFacebook,
   FaGlobe,
+  FaSkype,
+  FaMastodon,
   FaStackOverflow,
+  FaTelegram,
+  FaLinkedin,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { skeleton } from '../../helpers/utils';
+
+const isCompanyMention = (company) => {
+  return company.startsWith('@') && !company.includes(' ');
+};
+
+const companyLink = (company) => {
+  return `https://github.com/${company.substring(1)}`;
+};
+
+const getFormattedMastodonValue = (mastodonValue, isLink) => {
+  const [username, server] = mastodonValue.split('@');
+
+  if (isLink) {
+    return `https://${server}/@${username}`;
+  } else {
+    return `${username}@${server}`;
+  }
+};
 
 const ListItem = ({ icon, title, value, link, skeleton = false }) => {
   return (
@@ -28,31 +49,21 @@ const ListItem = ({ icon, title, value, link, skeleton = false }) => {
       rel="noreferrer"
       className="flex justify-start py-2 px-1 items-center"
     >
-      <span className="w-2 m-2">{icon}</span>
-      <div className="flex-grow font-medium px-2">{title}</div>
+      <div className="flex-grow font-medium gap-2 flex items-center my-1">
+        {icon} {title}
+      </div>
       <div
         className={`${
           skeleton ? 'flex-grow' : ''
         } text-sm font-normal text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
+        style={{
+          wordBreak: 'break-word',
+        }}
       >
-        <div
-          style={{
-            wordBreak: 'break-word',
-          }}
-        >
-          {value}
-        </div>
+        {value}
       </div>
     </a>
   );
-};
-
-const isCompanyMention = (company) => {
-  return company.startsWith('@') && !company.includes(' ');
-};
-
-const companyLink = (company) => {
-  return `https://github.com/${company.substring(1)}`;
 };
 
 const Details = ({ profile, loading, social, github }) => {
@@ -83,14 +94,14 @@ const Details = ({ profile, loading, social, github }) => {
             <Fragment>
               {profile.location && (
                 <ListItem
-                  icon={<MdLocationOn className="mr-2" />}
+                  icon={<MdLocationOn />}
                   title="Based in:"
                   value={profile.location}
                 />
               )}
               {profile.company && (
                 <ListItem
-                  icon={<FaBuilding className="mr-2" />}
+                  icon={<FaBuilding />}
                   title="Company:"
                   value={profile.company}
                   link={
@@ -101,22 +112,30 @@ const Details = ({ profile, loading, social, github }) => {
                 />
               )}
               <ListItem
-                icon={<AiFillGithub className="mr-2" />}
+                icon={<AiFillGithub />}
                 title="GitHub:"
                 value={github.username}
                 link={`https://github.com/${github.username}`}
               />
               {social?.twitter && (
                 <ListItem
-                  icon={<SiTwitter className="mr-2" />}
+                  icon={<SiTwitter />}
                   title="Twitter:"
                   value={social.twitter}
                   link={`https://twitter.com/${social.twitter}`}
                 />
               )}
+              {social?.mastodon && (
+                <ListItem
+                  icon={<FaMastodon />}
+                  title="Mastodon:"
+                  value={getFormattedMastodonValue(social.mastodon, false)}
+                  link={getFormattedMastodonValue(social.mastodon, true)}
+                />
+              )}
               {social?.linkedin && (
                 <ListItem
-                  icon={<GrLinkedinOption className="mr-2" />}
+                  icon={<FaLinkedin />}
                   title="LinkedIn:"
                   value={social.linkedin}
                   link={`https://www.linkedin.com/in/${social.linkedin}`}
@@ -124,7 +143,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.dribbble && (
                 <ListItem
-                  icon={<CgDribbble className="mr-2" />}
+                  icon={<CgDribbble />}
                   title="Dribbble:"
                   value={social.dribbble}
                   link={`https://dribbble.com/${social.dribbble}`}
@@ -132,7 +151,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.behance && (
                 <ListItem
-                  icon={<FaBehanceSquare className="mr-2" />}
+                  icon={<FaBehanceSquare />}
                   title="Behance:"
                   value={social.behance}
                   link={`https://www.behance.net/${social.behance}`}
@@ -140,7 +159,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.facebook && (
                 <ListItem
-                  icon={<FaFacebook className="mr-2" />}
+                  icon={<FaFacebook />}
                   title="Facebook:"
                   value={social.facebook}
                   link={`https://www.facebook.com/${social.facebook}`}
@@ -148,7 +167,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.instagram && (
                 <ListItem
-                  icon={<AiFillInstagram className="mr-2" />}
+                  icon={<AiFillInstagram />}
                   title="Instagram:"
                   value={social.instagram}
                   link={`https://www.instagram.com/${social.instagram}`}
@@ -156,7 +175,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.medium && (
                 <ListItem
-                  icon={<AiFillMediumSquare className="mr-2" />}
+                  icon={<AiFillMediumSquare />}
                   title="Medium:"
                   value={social.medium}
                   link={`https://medium.com/@${social.medium}`}
@@ -164,7 +183,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.dev && (
                 <ListItem
-                  icon={<FaDev className="mr-2" />}
+                  icon={<FaDev />}
                   title="Dev:"
                   value={social.dev}
                   link={`https://dev.to/${social.dev}`}
@@ -172,7 +191,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.stackoverflow && (
                 <ListItem
-                  icon={<FaStackOverflow className="mr-2" />}
+                  icon={<FaStackOverflow />}
                   title="Stack Overflow:"
                   value={social.stackoverflow.split('/').slice(-1)}
                   link={`https://stackoverflow.com/users/${social.stackoverflow}`}
@@ -180,15 +199,32 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.website && (
                 <ListItem
-                  icon={<FaGlobe className="mr-2" />}
+                  icon={<FaGlobe />}
                   title="Website:"
                   value={social.website}
                   link={social.website}
                 />
               )}
+              {social?.skype && (
+                <ListItem
+                  icon={<FaSkype />}
+                  title="Skype"
+                  value={social.skype}
+                  link={`skype:${social.skype}?chat`}
+                />
+              )}
+              {social?.telegram && (
+                <ListItem
+                  icon={<FaTelegram />}
+                  title="Telegram"
+                  value={social.telegram}
+                  link={`https://t.me/${social.telegram}`}
+                />
+              )}
+
               {social?.phone && (
                 <ListItem
-                  icon={<RiPhoneFill className="mr-2" />}
+                  icon={<RiPhoneFill />}
                   title="Phone:"
                   value={social.phone}
                   link={`tel:${social.phone}`}
@@ -196,7 +232,7 @@ const Details = ({ profile, loading, social, github }) => {
               )}
               {social?.email && (
                 <ListItem
-                  icon={<MdMail className="mr-2" />}
+                  icon={<RiMailFill />}
                   title="Email:"
                   value={social.email}
                   link={`mailto:${social.email}`}

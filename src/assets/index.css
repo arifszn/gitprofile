@@ -40,8 +40,8 @@ code {
     monospace;
 }
 
-.text-base-content-important {
-  color: hsla(var(--bc) / var(--tw-text-opacity)) !important;
+.text-base-content {
+  color: rgb(201, 201, 201);
 }
 
 svg {

@@ -1,6 +1,7 @@
-import { Fragment } from 'react';
-import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai';
 import PropTypes from 'prop-types';
+import { Fragment } from 'react';
+import { AiOutlineFork, AiOutlineStar } from 'react-icons/ai';
+import { MdInsertLink } from 'react-icons/md';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
 
 const Project = ({ repo, loading, github, googleAnalytics }) => {
@@ -18,7 +19,11 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
               <div className="flex items-center">
                 <span>
                   <h5 className="card-title text-lg">
-                    {skeleton({ width: 'w-32', height: 'h-8' })}
+                    {skeleton({
+                      width: 'w-32',
+                      height: 'h-8',
+                      className: 'mb-1',
+                    })}
                   </h5>
                 </span>
               </div>
@@ -81,31 +86,17 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
       >
         <div className="flex justify-between flex-col p-8 h-full w-full">
           <div>
-            <div className="flex items-center opacity-60">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="text-base-content inline-block w-5 h-5 mr-2 stroke-current"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-                ></path>
-              </svg>
-              <span>
-                <h5 className="card-title text-lg text-base-content">
-                  {item.name}
-                </h5>
-              </span>
+            <div className="flex items-center">
+              <div className="card-title text-lg tracking-wide flex text-base-content opacity-60">
+                <MdInsertLink className="my-auto" />
+                <span>{item.name}</span>
+              </div>
             </div>
             <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
               {item.description}
             </p>
           </div>
-          <div className="flex justify-between text-sm text-base-content text-opacity-60">
+          <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
             <div className="flex flex-grow">
               <span className="mr-3 flex items-center">
                 <AiOutlineStar className="mr-0.5" />
@@ -141,10 +132,10 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                 <div className="mx-3 flex items-center justify-between mb-2">
                   <h5 className="card-title">
                     {loading ? (
-                      skeleton({ width: 'w-28', height: 'h-8' })
+                      skeleton({ width: 'w-40', height: 'h-8' })
                     ) : (
                       <span className="text-base-content opacity-70">
-                        My Projects
+                        GitHub Projects
                       </span>
                     )}
                   </h5>
@@ -155,7 +146,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                       href={`https://github.com/${github.username}?tab=repositories`}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-base-content opacity-50"
+                      className="text-base-content opacity-50 hover:underline"
                     >
                       See All
                     </a>

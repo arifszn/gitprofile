@@ -50,6 +50,11 @@ export interface Social {
   twitter?: string;
 
   /**
+   * Mastodon
+   */
+  mastodon?: string;
+
+  /**
    * Facebook
    */
   facebook?: string;
@@ -88,6 +93,16 @@ export interface Social {
    * Website
    */
   website?: string;
+
+  /**
+   * Skype username
+   */
+  skype?: string;
+
+  /**
+   * Telegram username
+   */
+  telegram?: string;
 
   /**
    * Phone
@@ -221,6 +236,13 @@ export interface Certifications {
   link?: string;
 }
 
+export interface ExternalProjects {
+  title: string;
+  description: string;
+  imageUrl?: string;
+  link: string;
+}
+
 export interface Education {
   institution?: string;
   degree?: string;
@@ -259,6 +281,11 @@ export interface Config {
   experiences?: Array<Experience>;
 
   /**
+   * External Projects
+   */
+  externalProjects?: Array<ExternalProjects>;
+
+  /**
    * Certifications list
    */
   certifications?: Array<Certifications>;
@@ -287,6 +314,11 @@ export interface Config {
    * Theme config
    */
   themeConfig?: ThemeConfig;
+
+  /**
+   * Custom footer
+   */
+  footer?: string;
 }
 
 export interface GitProfileProps {
