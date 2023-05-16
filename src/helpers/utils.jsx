@@ -147,6 +147,7 @@ export const sanitizeConfig = (config) => {
     social: {
       linkedin: config?.social?.linkedin,
       twitter: config?.social?.twitter,
+      mastodon: config?.social?.mastodon,
       facebook: config?.social?.facebook,
       instagram: config?.social?.instagram,
       dribbble: config?.social?.dribbble,
@@ -157,11 +158,14 @@ export const sanitizeConfig = (config) => {
       website: config?.social?.website,
       phone: config?.social?.phone,
       email: config?.social?.email,
+      skype: config?.social?.skype,
+      telegram: config?.social?.telegram,
     },
     resume: {
       fileUrl: config?.resume?.fileUrl || '',
     },
     skills: config?.skills || [],
+    externalProjects: config?.externalProjects || [],
     experiences: config?.experiences || [],
     certifications: config?.certifications || [],
     education: config?.education || [],
@@ -186,6 +190,7 @@ export const sanitizeConfig = (config) => {
       themes: themes,
       customTheme: customTheme,
     },
+    footer: config?.footer,
   };
 };
 
@@ -207,7 +212,7 @@ export const tooManyRequestError = (reset) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          rate limit.
+          rate limit
         </a>
         ! Try again later{` ${reset}`}.
       </p>

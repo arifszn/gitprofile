@@ -11,6 +11,7 @@ import Certification from './certification';
 import Education from './education';
 import Project from './project';
 import Blog from './blog';
+import Footer from './footer';
 import {
   genericError,
   getInitialTheme,
@@ -19,12 +20,12 @@ import {
   setupHotjar,
   tooManyRequestError,
   sanitizeConfig,
-  skeleton,
 } from '../helpers/utils';
 import { HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import '../assets/index.css';
 import { formatDistance } from 'date-fns';
+import ExternalProject from './external-project';
 
 const bgColor = 'bg-base-300';
 
@@ -202,6 +203,11 @@ const GitProfile = ({ config }) => {
                         github={sanitizedConfig.github}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
+                      <ExternalProject
+                        loading={loading}
+                        externalProjects={sanitizedConfig.externalProjects}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
+                      />
                       <Blog
                         loading={loading}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
@@ -215,24 +221,7 @@ const GitProfile = ({ config }) => {
                 className={`p-4 footer ${bgColor} text-base-content footer-center`}
               >
                 <div className="card compact bg-base-100 shadow">
-                  <a
-                    className="card-body"
-                    href="https://github.com/arifszn/gitprofile"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div>
-                      {loading ? (
-                        skeleton({ width: 'w-52', height: 'h-6' })
-                      ) : (
-                        <p className="font-mono text-sm">
-                          Made with{' '}
-                          <span className="text-primary">GitProfile</span> and
-                          ❤️
-                        </p>
-                      )}
-                    </div>
-                  </a>
+                  <Footer content={sanitizedConfig.footer} loading={loading} />
                 </div>
               </footer>
             </Fragment>
@@ -257,6 +246,7 @@ GitProfile.propTypes = {
     social: PropTypes.shape({
       linkedin: PropTypes.string,
       twitter: PropTypes.string,
+      mastodon: PropTypes.string,
       facebook: PropTypes.string,
       instagram: PropTypes.string,
       dribbble: PropTypes.string,
@@ -265,10 +255,23 @@ GitProfile.propTypes = {
       dev: PropTypes.string,
       stackoverflow: PropTypes.string,
       website: PropTypes.string,
+      skype: PropTypes.string,
+      telegram: PropTypes.string,
       phone: PropTypes.string,
       email: PropTypes.string,
     }),
+    resume: PropTypes.shape({
+      fileUrl: PropTypes.string,
+    }),
     skills: PropTypes.array,
+    externalProjects: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string,
+      })
+    ),
     experiences: PropTypes.arrayOf(
       PropTypes.shape({
         company: PropTypes.string,
@@ -321,6 +324,7 @@ GitProfile.propTypes = {
         '--rounded-btn': PropTypes.string,
       }),
     }),
+    footer: PropTypes.string,
   }).isRequired,
 };
 

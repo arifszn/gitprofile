@@ -183,7 +183,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
               <div
                 className={`card compact bg-base-100 ${
                   loading || (articles && articles.length)
-                    ? 'card compact shadow bg-opacity-40'
+                    ? 'shadow bg-opacity-40'
                     : 'shadow-lg'
                 }`}
               >

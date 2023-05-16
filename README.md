@@ -93,9 +93,9 @@ Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
 There are three ways to use **GitProfile**. Use any.
 
-- Forking this repo _(recommended)_
-- Setting up locally
-- Installing as package
+- [Forking this repo _(recommended)_](#forking-this-repo)
+- [Setting up locally](#setting-up-locally)
+- [Installing as package](#installing-as-package)
 
 ### Forking this repo
 
@@ -213,14 +213,17 @@ const config = {
   social: {
     linkedin: '',
     twitter: '',
+    mastodon: '',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
     dev: '',
-    stackoverflow: '',
+    stackoverflow: '', // format: userid/username
     website: '',
+    skype: '',
+    telegram: '',
     phone: '',
     email: '',
   },
@@ -264,6 +267,23 @@ const config = {
       degree: 'Degree',
       from: '2012',
       to: '2014',
+    },
+  ],
+  // To hide the `My Projects` section, keep it empty.
+  externalProjects: [
+    {
+      title: 'Project Name',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+      imageUrl: 'https://via.placeholder.com/250x250',
+      link: 'https://example.com',
+    },
+    {
+      title: 'Project Name',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+      imageUrl: 'https://via.placeholder.com/250x250',
+      link: 'https://example.com',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
@@ -339,6 +359,9 @@ const config = {
       '--rounded-btn': '3rem',
     },
   },
+
+  // Optional Footer. Supports plain text or HTML.
+  footer: `Copyright © 2023 John Doe`,
 };
 ```
 
@@ -350,7 +373,7 @@ The default theme can be specified.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   themeConfig: {
     defaultTheme: 'light',
@@ -367,7 +390,7 @@ You can create your own custom theme by modifying these values. Theme `procyon` 
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   themeConfig: {
     customTheme: {
@@ -390,7 +413,7 @@ module.exports = {
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   googleAnalytics: {
     id: '',
@@ -406,7 +429,7 @@ Besides tracking visitors, it will track `click events` on projects and blog pos
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   hotjar: {
     id: '',
@@ -425,15 +448,16 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
+    mastodon: 'arifszn@mastodon.social',
     facebook: '',
     instagram: '',
     dribbble: '',
@@ -441,6 +465,8 @@ module.exports = {
     medium: '',
     dev: '',
     stackoverflow: '',
+    skype: '',
+    telegram: '',
     website: '',
     phone: '',
     email: '',
@@ -454,7 +480,7 @@ To showcase your skills provide them here.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   skills: ['JavaScript', 'React.js'],
 };
@@ -468,7 +494,7 @@ Provide your job history in `experiences`.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   experiences: [
     {
@@ -497,7 +523,7 @@ Provide your education history in `education`.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   education: [
     {
@@ -524,7 +550,7 @@ Provide your industry certifications in `certifications`.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   certifications: [
     {
@@ -541,11 +567,13 @@ Empty array will hide the certifications section.
 
 ### Projects
 
-Your public repo from GitHub will be displayed here automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
+#### Github Projects
+
+Your public repo from GitHub will be displayed in the `Github Projects` section automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   github: {
     username: 'arifszn',
@@ -559,13 +587,32 @@ module.exports = {
 };
 ```
 
+#### External Projects
+
+In this section you can showcase your external/personal projects.
+
+```js
+// gitprofile.config.js
+const config = {
+  // ...
+  externalProjects: [
+    {
+      title: 'Project Name',
+      description: 'Description',
+      link: 'https://example.com',
+      imageUrl: 'https://via.placeholder.com/250x250',
+    },
+  ],
+};
+```
+
 ### Blog Posts
 
 If you have [medium](https://medium.com) or [dev](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev username. You can limit how many posts to display (Max is `10`).
 
 ```js
 // gitprofile.config.js
-module.exports = {
+const config = {
   // ...
   blog: {
     source: 'dev',
