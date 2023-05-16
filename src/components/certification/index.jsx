@@ -52,14 +52,14 @@ const Certification = ({ certifications, loading }) => {
                 {loading ? (
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
-                  <span className="text-base-content opacity-70">
+                  <span className="text-base-content opacity-100">
                     Certification
                   </span>
                 )}
               </h5>
             </div>
-            <div className="text-base-content text-opacity-60">
-              <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
+            <div className="text-base-content text-opacity-100">
+              <ol className="relative border-l border-base-300 border-opacity-100 my-2 mx-4">
                 {loading ? (
                   renderSkeleton()
                 ) : (

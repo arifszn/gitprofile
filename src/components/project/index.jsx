@@ -87,16 +87,16 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
         <div className="flex justify-between flex-col p-8 h-full w-full">
           <div>
             <div className="flex items-center">
-              <div className="card-title text-lg tracking-wide flex text-base-content opacity-60">
+              <div className="card-title text-lg tracking-wide flex text-base-content opacity-100">
                 <MdInsertLink className="my-auto" />
                 <span>{item.name}</span>
               </div>
             </div>
-            <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
+            <p className="mb-5 mt-1 text-base-content text-opacity-100 text-sm">
               {item.description}
             </p>
           </div>
-          <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
+          <div className="flex justify-between text-sm text-base-content text-opacity-100 truncate">
             <div className="flex flex-grow">
               <span className="mr-3 flex items-center">
                 <AiOutlineStar className="mr-0.5" />
@@ -110,7 +110,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
             <div>
               <span className="flex items-center">
                 <div
-                  className="w-3 h-3 rounded-full mr-1 opacity-60"
+                  className="w-3 h-3 rounded-full mr-1 opacity-100"
                   style={{ backgroundColor: languageColor(item.language) }}
                 />
                 <span>{item.language}</span>
@@ -127,14 +127,14 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
       <div className="col-span-1 lg:col-span-2">
         <div className="grid grid-cols-2 gap-6">
           <div className="col-span-2">
-            <div className="card compact bg-base-100 shadow bg-opacity-40">
+            <div className="card compact bg-base-100 shadow bg-opacity-100">
               <div className="card-body">
                 <div className="mx-3 flex items-center justify-between mb-2">
                   <h5 className="card-title">
                     {loading ? (
                       skeleton({ width: 'w-40', height: 'h-8' })
                     ) : (
-                      <span className="text-base-content opacity-70">
+                      <span className="text-base-content opacity-100">
                         GitHub Projects
                       </span>
                     )}
@@ -146,7 +146,7 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
                       href={`https://github.com/${github.username}?tab=repositories`}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-base-content opacity-50 hover:underline"
+                      className="text-base-content opacity-100 hover:underline"
                     >
                       See All
                     </a>
