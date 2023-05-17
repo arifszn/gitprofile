@@ -43,7 +43,7 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
             <div title="Change Theme" className="dropdown dropdown-end">
               <div
                 tabIndex={0}
-                className="btn btn-ghost m-1 normal-case opacity-50 text-base-content"
+                className="btn btn-ghost m-1 normal-case opacity-100 text-base-content"
               >
                 <AiOutlineControl className="inline-block w-5 h-5 stroke-current md:mr-2" />
                 <span className="hidden md:inline">Change Theme</span>
@@ -72,7 +72,7 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
                         onClick={(e) => changeTheme(e, item)}
                         className={`${theme === item ? 'active' : ''}`}
                       >
-                        <span className="opacity-60 capitalize">
+                        <span className="opacity-100 capitalize">
                           {item === themeConfig.defaultTheme ? 'Default' : item}
                         </span>
                       </a>

@@ -10,14 +10,14 @@ const ErrorPage = (props) => {
               {props.status}
             </h1>
             <p className="text-lg pb-2 text-base-content">{props.title}</p>
-            <div className="text-base-content text-opacity-60">
+            <div className="text-base-content text-opacity-100">
               {props.subTitle}
             </div>
           </div>
         </div>
       </div>
-      <div className="w-64 md:w-96 h-96 md:h-full bg-accent bg-opacity-10 absolute -top-64 md:-top-96 right-20 md:right-32 rounded-full pointer-events-none -rotate-45 transform"></div>
-      <div className="w-96 h-full bg-secondary bg-opacity-10 absolute -bottom-96 right-64 rounded-full pointer-events-none -rotate-45 transform"></div>
+      <div className="w-64 md:w-96 h-96 md:h-full bg-accent bg-opacity-100 absolute -top-64 md:-top-96 right-20 md:right-32 rounded-full pointer-events-none -rotate-45 transform"></div>
+      <div className="w-96 h-full bg-secondary bg-opacity-100 absolute -bottom-96 right-64 rounded-full pointer-events-none -rotate-45 transform"></div>
     </div>
   );
 };

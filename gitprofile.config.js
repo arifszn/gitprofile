@@ -14,7 +14,7 @@ const config = {
     linkedin: 'nate-goldsborough',
     twitter: '',
     facebook: '',
-    instagram: 'nathen418',
+    instagram: '',
     dribbble: '',
     behance: '',
     medium: '',
@@ -46,7 +46,7 @@ const config = {
   experiences: [
     {
       company: 'WEC Energy Group',
-      position: 'Information Technology Intern',
+      position: 'Information Technology Intern - IT Infrastructure and Operations',
       from: 'May 2023',
       to: 'Present',
       companyLink: 'https://www.wecenergygroup.com/',
@@ -135,8 +135,15 @@ const config = {
       title: 'Purpose Driven Sisters Website Redesign',
       description:
         'Worked with a small student team to complete a digital presence redesign for Purpose Driven Sisters, a nonprofit organization focused on youth mentorship that strives to empower young girls in Milwaukee. Designed a new website by creating new and transforming existing content, refined their brand story, and defined donation and involvement incentives to prospective sponsors and members so they can better serve their community and grow as an organization. Worked on improving SEO and basic web accessibility and improving the mobile site design. This project was completed as part of the Nonprof-IT program at UW-Milwaukee',
-      imageUrl: 'https://static.wixstatic.com/media/40724f_2012372710cf4d099208a3349999d4ce~mv2.png',
-      link: 'https://purposedsisters.com',
+      imageUrl: 'https://antaresnetwork.com/resources/PDS_Logo.jpg',
+      link: 'https://purposedsisters.org',
+    },
+    {
+      title: 'Antares Bot',
+      description:
+        'AntaresBot a small bot with a bunch of features and cool commands. Join in the fun by adding AntaresBot to your server today. Developed for fun by me to learn type script and discord.js. Verified by Discord and in over 250 servers with over 1 million commands used and a 99% uptime. Using Discord\'s new "Slash Commands", Antares Bot supports many commands from fun random images, counting and chance games, a counting game, and more. Use /help in any channel to get a list of commands and features that are accessible. Admins can use /adminhelp',
+      imageUrl: 'https://antaresnetwork.com/resources/icon.png',
+      link: 'https://bot.antaresnetwork.com',
     }
   ],
   // Display blog posts from your medium or dev account. (Optional)
