@@ -120,7 +120,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
         >
           <div className="p-8 h-full w-full">
             <div className="flex items-center flex-col md:flex-row">
-              <div className="avatar mb-5 md:mb-0 opacity-100">
+              <div className="avatar mb-5 md:mb-0 opacity-90">
                 <div className="w-24 h-24 mask mask-squircle">
                   <LazyImage
                     src={article.thumbnail}
@@ -183,7 +183,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
               <div
                 className={`card compact bg-base-100 ${
                   loading || (articles && articles.length)
-                    ? 'shadow bg-opacity-100'
+                    ? 'shadow bg-opacity-40'
                     : 'shadow-lg'
                 }`}
               >
@@ -193,7 +193,7 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
                       {loading ? (
                         skeleton({ width: 'w-28', height: 'h-8' })
                       ) : (
-                        <span className="text-base-content opacity-100">
+                        <span className="text-base-content opacity-70">
                           Recent Posts
                         </span>
                       )}

@@ -48,7 +48,7 @@ const Certifications = ({ certifications, loading }) => {
                 {loading ? (
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
-                  <span className="text-base-content opacity-100">Certs</span>
+                  <span className="text-base-content opacity-70">Certs</span>
                 )}
               </h5>
             </div>

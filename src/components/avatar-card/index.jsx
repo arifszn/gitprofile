@@ -7,7 +7,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
     <div className="card shadow-lg compact bg-base-100">
       <div className="grid place-items-center py-8">
         {loading || !profile ? (
-          <div className="avatar opacity-100">
+          <div className="avatar opacity-90">
             <div className="mb-8 rounded-full w-32 h-32">
               {skeleton({
                 width: 'w-full',
@@ -17,7 +17,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
             </div>
           </div>
         ) : (
-          <div className="avatar opacity-100">
+          <div className="avatar opacity-90">
             <div
               className={`mb-8 rounded-full w-32 h-32 ${
                 avatarRing
@@ -44,7 +44,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
             {loading || !profile ? (
               skeleton({ width: 'w-48', height: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-100">
+              <span className="text-base-content opacity-70">
                 {profile.name}
               </span>
             )}

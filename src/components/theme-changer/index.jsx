@@ -21,10 +21,10 @@ const ThemeChanger = ({ theme, setTheme, loading, themeConfig }) => {
             {loading ? (
               skeleton({ width: 'w-20', height: 'h-8', className: 'mb-1' })
             ) : (
-              <span className="text-base-content opacity-100">Theme</span>
+              <span className="text-base-content opacity-70">Theme</span>
             )}
           </h5>
-          <span className="text-base-content text-opacity-100 capitalize text-sm">
+          <span className="text-base-content text-opacity-40 capitalize text-sm">
             {loading
               ? skeleton({ width: 'w-16', height: 'h-5' })
               : theme === themeConfig.defaultTheme

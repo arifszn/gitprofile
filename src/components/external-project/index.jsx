@@ -102,7 +102,7 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
                     {item.title}
                   </h2>
                   {item.imageUrl && (
-                    <div className="avatar opacity-100">
+                    <div className="avatar opacity-90">
                       <div className="w-20 h-20 mask mask-squircle">
                         <LazyImage
                           src={item.imageUrl}
@@ -134,14 +134,14 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
         <div className="col-span-1 lg:col-span-2">
           <div className="grid grid-cols-2 gap-6">
             <div className="col-span-2">
-              <div className="card compact bg-base-100 shadow bg-opacity-100">
+              <div className="card compact bg-base-100 shadow bg-opacity-40">
                 <div className="card-body">
                   <div className="mx-3 flex items-center justify-between mb-2">
                     <h5 className="card-title">
                       {loading ? (
                         skeleton({ width: 'w-40', height: 'h-8' })
                       ) : (
-                        <span className="text-base-content opacity-100">
+                        <span className="text-base-content opacity-70">
                           My Projects
                         </span>
                       )}
