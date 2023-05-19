@@ -58,6 +58,7 @@ const config = {
       company: 'Janus Health',
       position: 'Software Test Engineer',
       from: 'May 2023',
+      to: 'Present',
       companyLink: 'https://janus-ai.com',
     },
     {
