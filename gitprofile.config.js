@@ -55,6 +55,12 @@ const config = {
   },
   experiences: [
     {
+      company: 'Janus Health',
+      position: 'Software Test Engineer',
+      from: 'May 2023',
+      companyLink: 'https://janus-ai.com',
+    },
+    {
       company: 'Bolt',
       position: 'Software Development Engineer In Test',
       from: 'January 2022',
