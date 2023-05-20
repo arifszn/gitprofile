@@ -3,8 +3,8 @@
 const config = {
   github: {
     username: 'AckonSamuel', // Your GitHub org/user name. (Required)
-    sortBy: '', // stars | updated
-    limit: 10, // How many projects to display.
+    sortBy: 'updated', // stars | updated
+    limit: 4, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -18,7 +18,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      "https://drive.google.com/file/d/194SESbW-mXxzbIfyFDtwCH-AAnUDC8IB/view?usp=sharing", // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'JavaScript',
@@ -29,7 +29,7 @@ const config = {
     'CSS',
     'Ruby',
     'Ruby on Rails',
-    'Linux'
+    'Linux',
   ],
   experiences: [
     {
@@ -73,18 +73,31 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
+      title: 'Rest Countries',
+      description:
+        'This is a web app that displays a collection of countries from the rest countries api. Filter countries by search and filter options, toggle between light and dark modes',
+      imageUrl:
+        'https://user-images.githubusercontent.com/92922987/238102947-0dae2ebc-7867-4f61-b0b1-9188f16ebf13.jpg',
+      link: 'https://rest-countries-theta.vercel.app/',
+      source: 'https://www.github.com/AckonSamuel/rest_countries',
+    },
+    {
       title: 'Space traveller hub',
       description:
         'A web app platform that renders information from the Space-X API about space rockets and their related missions',
-      imageUrl: 'https://user-images.githubusercontent.com/92922987/236263407-5214f883-ca68-47af-9425-ee8daa50dcb4.jpg',
+      imageUrl:
+        'https://user-images.githubusercontent.com/92922987/236263407-5214f883-ca68-47af-9425-ee8daa50dcb4.jpg',
       link: 'https://famous-klepon-e50d82.netlify.app/',
+      source: 'https://www.github.com/AckonSamuel/space-travellers-hub',
     },
     {
       title: 'Space flight news',
       description:
         'A web app to release the latest space and space travel news updates. Built with HTML5, CSS3 and JavaScript',
-      imageUrl: 'https://user-images.githubusercontent.com/92922987/236264916-85d98531-d901-4a9d-98e4-dcc957a7652d.jpg',
+      imageUrl:
+        'https://user-images.githubusercontent.com/92922987/236264916-85d98531-d901-4a9d-98e4-dcc957a7652d.jpg',
       link: 'https://ackonsamuel.github.io/space-flight-news/',
+      source: 'https://www.github.com/AckonSamuel/space-flight-news',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)

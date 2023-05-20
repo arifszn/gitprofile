@@ -70,28 +70,9 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
 
   const renderExternalProjects = () => {
     return externalProjects.map((item, index) => (
-      <a
+      <span
         className="card shadow-lg compact bg-base-100 cursor-pointer"
         key={index}
-        href={item.link}
-        onClick={(e) => {
-          e.preventDefault();
-
-          try {
-            if (googleAnalytics?.id) {
-              ga.event({
-                action: 'Click External Project',
-                params: {
-                  post: item.title,
-                },
-              });
-            }
-          } catch (error) {
-            console.error(error);
-          }
-
-          window?.open(item.link, '_blank');
-        }}
       >
         <div className="p-8 h-full w-full">
           <div className="flex items-center flex-col">
@@ -122,9 +103,55 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
                 </div>
               </div>
             </div>
+            <div className="w-full flex flex-row">
+            <button 
+              class="mt-2 card shadow-lg no-underline compact bg-base-100 cursor-pointer text-base-content text-opacity-60 text-sm btn btn-link" 
+              href={item.source} 
+              alt="source code"
+              onClick={(e) => {
+                e.preventDefault();
+      
+                try {
+                  if (googleAnalytics?.id) {
+                    ga.event({
+                      action: 'Click External Project',
+                      params: {
+                        post: item.title,
+                      },
+                    });
+                  }
+                } catch (error) {
+                  console.error(error);
+                }
+      
+                window?.open(item.source, '_blank');
+              }}>Source code</button>
+            <button 
+              className="mt-2 ml-auto no-underline card shadow-lg compact bg-base-70 cursor-pointer text-base-content text-opacity-60 text-sm btn btn-link" 
+              href={item.link} 
+              alt="live link"
+              onClick={(e) => {
+                e.preventDefault();
+      
+                try {
+                  if (googleAnalytics?.id) {
+                    ga.event({
+                      action: 'Click External Project',
+                      params: {
+                        post: item.title,
+                      },
+                    });
+                  }
+                } catch (error) {
+                  console.error(error);
+                }
+      
+                window?.open(item.link, '_blank');
+              }}>Live link</button>
+              </div>
           </div>
         </div>
-      </a>
+      </span>
     ));
   };
 

@@ -241,6 +241,7 @@ export interface ExternalProjects {
   description: string;
   imageUrl?: string;
   link: string;
+  source: string;
 }
 
 export interface Education {
