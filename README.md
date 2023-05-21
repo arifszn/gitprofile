@@ -64,6 +64,7 @@
 ✓ [Google Analytics](#google-analytics)  
 ✓ [Hotjar](#hotjar)  
 ✓ [SEO](#seo)  
+✓ [PWA](#pwa)  
 ✓ [Avatar and Bio](#avatar-and-bio)  
 ✓ [Social Links](#social-links)  
 ✓ [Skill Section](#skills)  
@@ -441,6 +442,12 @@ const config = {
 ### SEO
 
 Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public/index.html`.
+
+### PWA
+
+GitProfile is PWA enabled. The site can be installed as a Progressive Web App.
+
+![PWA](https://github.com/arifszn/gitprofile/assets/45073703/9dc7cc5c-4262-4445-a7a5-1e3566ef43fa)
 
 ### Avatar and Bio
 
