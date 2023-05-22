@@ -28,10 +28,10 @@ const config = {
     phone: '',
     email: 'me@jameskip.com',
   },
-  resume: {
-    fileUrl:
-      'https://docs.google.com/document/d/12qbyWOAc-K3GTLUcBlQXpWLcuC-Xu2-gdsL3_TpnQ7A/edit?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
-  },
+  // resume: {
+  //   fileUrl:
+  //     'https://docs.google.com/document/d/12qbyWOAc-K3GTLUcBlQXpWLcuC-Xu2-gdsL3_TpnQ7A/edit?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
+  // },
   skills: [
     'TypeScript',
     'Playwright',
