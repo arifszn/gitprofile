@@ -16,9 +16,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['logo.png'],
       manifest: {
-        name: 'Portfolio',
-        short_name: 'Portfolio',
-        description: 'Personal Portfolio',
+        name: 'Vishal Portfolio',
+        short_name: 'vishal',
+        description: 'Portfolio of Vishal',
         icons: [
           {
             src: 'logo.png',
