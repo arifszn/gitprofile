@@ -27,7 +27,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://github.com/vishu42/me/releases/download/0.0.8/resume-0.0.8.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Azure',
