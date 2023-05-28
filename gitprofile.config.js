@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 'vishu42', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
@@ -11,76 +11,72 @@ const config = {
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'vishu42',
     facebook: '',
     instagram: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: '',
+    dev: 'vishu42',
     stackoverflow: '', // format: userid/username
     skype: '',
     telegram: '',
-    website: 'https://arifszn.com',
+    website: 'https://vishaltewatia.com',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'tewatiavishal3@gmail.com',
   },
   resume: {
     fileUrl:
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
+    'Azure',
+    'Go',
     'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'Kubernetes',
+    'Github Actions',
     'Git',
     'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'Terraform',
+    'Python',
+    'Linux',
+    'Bash',
+    'Helm',
+    'Kube-Builder',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Successive Technologies',
+      position: 'Senior Associate Engineer',
+      from: 'Feb 2019',
       to: 'Present',
-      companyLink: 'https://example.com',
-    },
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      companyLink: 'https://successive.tech',
     },
   ],
-  /* certifications: [
+  certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com'
+      name: 'CKAD: Certified Kubernetes Application Developer',
+      body: 'The Linux Foundation',
+      year: 'Feb 2023',
+      link: 'https://www.credly.com/badges/7f3dd84f-b5a4-4346-818a-0e3219896284/linked_in_profile',
     },
-  ], */
+    {
+      name: 'Microsoft Certified: Azure Fundamentals',
+      body: 'Microsoft',
+      year: 'Jan 2022',
+      link: 'https://www.credly.com/badges/7f3dd84f-b5a4-4346-818a-0e3219896284/linked_in_profile',
+    },
+  ],
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
+      institution: 'Manav Rachna University, Faridabad',
+      degree: 'B.Tech in Computer Science',
       from: '2015',
       to: '2019',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
+      institution: 'Tagore Academy Public School, Faridabad',
+      degree: 'High School',
       from: '2012',
       to: '2014',
     },
@@ -106,7 +102,7 @@ const config = {
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    username: 'vishu42', // to hide blog section, keep it empty
     limit: 2, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
@@ -118,7 +114,7 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'winter',
+    defaultTheme: 'Cupcake',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
