@@ -4,7 +4,7 @@ const config = {
   github: {
     username: 'AckonSamuel', // Your GitHub org/user name. (Required)
     sortBy: 'updated', // stars | updated
-    limit: 4, // How many projects to display.
+    limit: 2, // How many projects to display.
     exclude: {
       forks: true, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -13,7 +13,7 @@ const config = {
   social: {
     linkedin: 'samuel-yaw-ackon',
     twitter: 'dude_ackon',
-    medium: '@ackons433',
+    medium: 'ackons433',
     email: 'ackons433@gmail.com',
   },
   resume: {
@@ -61,12 +61,6 @@ const config = {
       degree: 'BSc Electrical and Electronics Engineering',
       from: '2019',
       to: '2022',
-    },
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
     },
   ],
 
