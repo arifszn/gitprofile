@@ -26,6 +26,7 @@ import PropTypes from 'prop-types';
 import '../assets/index.css';
 import { formatDistance } from 'date-fns';
 import ExternalProject from './external-project';
+import ContactForm from './contact-form';
 
 const bgColor = 'bg-base-300';
 
@@ -193,6 +194,7 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         certifications={sanitizedConfig.certifications}
                       />
+                      
                     </div>
                   </div>
                   <div className="lg:col-span-2 col-span-1">
@@ -213,6 +215,7 @@ const GitProfile = ({ config }) => {
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                         blog={sanitizedConfig.blog}
                       />
+                      <ContactForm />
                     </div>
                   </div>
                 </div>

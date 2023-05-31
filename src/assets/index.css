@@ -90,3 +90,8 @@ svg {
     opacity: 1;
   }
 }
+
+.custom-input {
+  background-color: hsla(0, 0%, 98%, 0.8) !important;
+  border-radius: 16px;
+}
