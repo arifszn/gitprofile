@@ -27,7 +27,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://github.com/vishu42/me/releases/download/0.0.9/Vishal.Tewatia.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://github.com/vishu42/me/releases/download/0.0.10/resume2023.jun.docx', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Azure',
