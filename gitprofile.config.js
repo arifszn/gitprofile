@@ -71,6 +71,12 @@ const config = {
       year: 'Jan 2023',
       link: 'https://www.coursera.org/account/accomplishments/certificate/FN3EXMG3LMR5'
     },
+      {
+      name: 'IBM',
+      body: 'Introduction to Cloud Computing',
+      year: 'Jun 2023',
+      link: 'https://www.coursera.org/account/accomplishments/certificate/7M2EKSM2W4NM'
+    },
     {
       name: 'Linux Professional Institute',
       body: 'Essentials - 1 - 2',
