@@ -27,7 +27,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'mailto:pjotrw15@gmail.com', // Empty fileUrl will hide the `Download Resume` button.
+      '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',
