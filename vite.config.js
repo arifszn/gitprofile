@@ -9,7 +9,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   // If you are deploying to https://<USERNAME>.github.io/, set base to '/'.
   // If you are deploying to https://<USERNAME>.github.io/<REPO>/, for example your repository is at https://github.com/<USERNAME>/<REPO>, then set base to '/<REPO>/'.
-  base: '/gitprofile/',
+  base: '/portfolio/',
   plugins: [
     react(),
     VitePWA({
