@@ -25,10 +25,6 @@ const config = {
     phone: '',
     email: 'peter-the-great.io@protonmail.com',
   },
-  resume: {
-    fileUrl:
-      , // Empty fileUrl will hide the `Download Resume` button.
-  },
   skills: [
     'PHP',
     'Laravel',
