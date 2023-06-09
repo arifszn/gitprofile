@@ -82,11 +82,11 @@ Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
   <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
 </p>
 
-## 🎉 Thank you for the 500 ★
+## 🎉 Thank you for the 800 ★
 
 <p>
   <a href="https://arifszn.github.io/gitprofile">
-    <img src="https://user-images.githubusercontent.com/45073703/202119579-eae272bd-ed39-434d-9361-df25308e0691.gif" alt="Thank You" width="50%"/>
+    <img src="https://github.com/arifszn/gitprofile/assets/45073703/b3d34d17-cf55-4c74-bf44-3196b1f0ac66" alt="Thank You" width="50%"/>
   </a>
 </p>
 
@@ -105,7 +105,7 @@ These instructions will get you a copy of the project and deploy your portfolio 
 - **Fork repo:** Click [here](https://github.com/arifszn/gitprofile/fork) to fork the repo so you have your own project to customize. A "fork" is a copy of a repository.
 - **Rename repo:**
   - If you want to host your portfolio at `https://<USERNAME>.github.io`, rename your forked repository to `username.github.io` in GitHub, where `username` is your GitHub username (or organization name).
-  - If you want to host your portfolio at `https://<USERNAME>.github.io/<REPO>` (e.g. `https://<USERNAME>.github.io/portfolio`), rename your forked repository to `<REPO>` (e.g. `portfolio`) in GitHub.
+  - If you want to host your portfolio at `https://<USERNAME>.github.io/<REPO_NAME>` (e.g. `https://<USERNAME>.github.io/portfolio`), rename your forked repository to `<REPO_NAME>` (e.g. `portfolio`) in GitHub.
 - **Enable workflows:** Go to your repo's **Actions** tab and enable workflows.
 
   ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
@@ -114,7 +114,7 @@ These instructions will get you a copy of the project and deploy your portfolio 
 
   - If you are deploying to `https://<USERNAME>.github.io`, set `base` to `'/'`.
 
-  - If you are deploying to `https://<USERNAME>.github.io/<REPO>` (e.g. `https://<USERNAME>.github.io/portfolio`), then set `base` to `'/<REPO>/'` (e.g. `'/portfolio/'`).
+  - If you are deploying to `https://<USERNAME>.github.io/<REPO_NAME>` (e.g. `https://<USERNAME>.github.io/portfolio`), then set `base` to `'/<REPO_NAME>/'` (e.g. `'/portfolio/'`).
 
   ```js
   // vite.config.js
@@ -157,7 +157,9 @@ As this is a Vite project, you can also host your website to Netlify, Vercel, He
 
 ### Installing as package
 
-You can also use **GitProfile** by installing as an NPM package. First Install **GitProfile** via <a href="https://www.npmjs.com/package/@arifszn/gitprofile">NPM</a>.
+You can also use **GitProfile** by installing as an NPM package.
+
+First Install **GitProfile** via <a href="https://www.npmjs.com/package/@arifszn/gitprofile">NPM</a>.
 
 ```sh
 npm install @arifszn/gitprofile
