@@ -46,7 +46,7 @@ const config = {
   experiences: [
     {
       company: 'WEC Energy Group',
-      position: 'Information Technology Intern - IT Infrastructure and Operations',
+      position: 'Information Technology Intern - IT Telecom and Infrastructure Operations',
       from: 'May 2023',
       to: 'Present',
       companyLink: 'https://www.wecenergygroup.com/',
@@ -55,7 +55,7 @@ const config = {
       company: 'University of Wisconsin Milwaukee',
       position: 'Lead Audio Visual Technician - Union Event Services',
       from: 'August 2022',
-      to: 'Present',
+      to: 'May 2023',
       companyLink: 'https://uwm.edu/union/evs/',
     },
     {
