@@ -254,6 +254,25 @@ export interface Resume {
   fileUrl?: string;
 }
 
+export interface ProblemSolving {
+  codeforces: {
+    /**
+     * Codeforces username
+     * */
+    username: string;
+    
+    /**
+     * How many problems to display
+    */
+    limit?: number;
+  },
+  leetcode: {
+    /**
+     * Leetcode username
+     * */
+    username: string;
+  }
+}
 export interface Config {
   /**
    * GitHub Config
@@ -279,6 +298,11 @@ export interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
+
+  /**
+   * Problem Solving Skills
+   * */
+  problemSolving? : ProblemSolving;
 
   /**
    * External Projects

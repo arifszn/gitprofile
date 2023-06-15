@@ -10,6 +10,7 @@ import Experience from './experience';
 import Certification from './certification';
 import Education from './education';
 import Project from './project';
+import ProblemSolving from './problem-solving';
 import Blog from './blog';
 import Footer from './footer';
 import {
@@ -81,9 +82,8 @@ const GitProfile = ({ config }) => {
           excludeRepo += `+-repo:${sanitizedConfig.github.username}/${project}`;
         });
 
-        let query = `user:${
-          sanitizedConfig.github.username
-        }+fork:${!sanitizedConfig.github.exclude.forks}${excludeRepo}`;
+        let query = `user:${sanitizedConfig.github.username
+          }+fork:${!sanitizedConfig.github.exclude.forks}${excludeRepo}`;
 
         let url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.github.sortBy}&per_page=${sanitizedConfig.github.limit}&type=Repositories`;
 
@@ -197,6 +197,11 @@ const GitProfile = ({ config }) => {
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
+                      <ProblemSolving
+                        loading={loading}
+                        problemSolving={sanitizedConfig.problemSolving}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
+                      />
                       <Project
                         repo={repo}
                         loading={loading}
@@ -212,7 +217,7 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                         blog={sanitizedConfig.blog}
-                      />
+                        />
                     </div>
                   </div>
                 </div>

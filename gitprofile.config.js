@@ -85,7 +85,15 @@ const config = {
       to: '2014',
     },
   ],
-
+  problemSolving: {
+    codeforces: {
+      username: 'iron_lad',
+      limit: 20, // Limit the number of problems to be displayed
+    },
+    leetcode: {
+      username: 'mujahidali88094',
+    },
+  },
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {

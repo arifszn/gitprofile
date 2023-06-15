@@ -272,6 +272,16 @@ const config = {
       to: '2014',
     },
   ],
+  // To hide the `Problem Solving Section` section, remove it or keep username empty.
+  problemSolving: {
+    codeforces: {
+      username: 'iron_lad',
+      limit: 20,
+    },
+    leetcode: {
+      username: 'mujahidali88094',
+    }
+  }
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {

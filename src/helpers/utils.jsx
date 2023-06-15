@@ -1,3 +1,4 @@
+import { ca } from 'date-fns/locale';
 import colors from '../data/colors.json';
 import { hotjar } from 'react-hotjar';
 
@@ -165,6 +166,15 @@ export const sanitizeConfig = (config) => {
       fileUrl: config?.resume?.fileUrl || '',
     },
     skills: config?.skills || [],
+    problemSolving: {
+      codeforces: {
+        username: config?.problemSolving?.codeforces?.username || '',
+        limit: config?.problemSolving?.codeforces?.limit || 20,
+      },
+      leetcode: {
+        username: config?.problemSolving?.leetcode?.username || '',
+      },
+    },
     externalProjects: config?.externalProjects || [],
     experiences: config?.experiences || [],
     certifications: config?.certifications || [],
@@ -236,3 +246,31 @@ export const genericError = {
   title: 'Ops!!',
   subTitle: 'Something went wrong.',
 };
+
+export async function getCodeforcesSolvedProblems(username) {
+  const url = `https://codeforces.com/api/user.status?handle=${username}&from=1&count=10000`;
+  const response = await fetch(url);
+  if (response.status == 400) {
+    throw new Error('User not found');
+  }
+  if (response.status !== 200) {
+    throw new Error('Failed to fetch data');
+  }
+  const data = await response.json();
+  const solvedProblems = [];
+
+  for (const submission of data.result) {
+    if (submission.verdict === 'OK') {
+      const problem = submission.problem;
+      const { points, type, ...rest } = problem;
+      solvedProblems.push(rest);
+    }
+  }
+  return solvedProblems;
+}
+
+export async function getLeetCodeStats(username) {
+  const url = `https://leetcode-stats-api.herokuapp.com//${username}`;
+  const response = await fetch(url);
+  return response.json();
+}
