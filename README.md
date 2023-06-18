@@ -49,10 +49,10 @@
 
 <p align="center">
   <a href="https://arifszn.github.io/gitprofile">
-    <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/preview.gif" alt="Preview" width="60%"/>
+    <img src="https://arifszn.netlify.app/assets/img/hosted/gitprofile/preview.gif" alt="Preview" width="60%"/>
   </a>
   <br/>
-  <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
+  <a href="#arifszn"><img src="https://arifszn.netlify.app/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
 </p>
 
 **GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. It is built using React.js on top of Vite. But it's not necessary to have knowledge on these to get you started. You can make your own copy with zero coding experience.
@@ -79,7 +79,7 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
 <p align="center">
-  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
+  <img src="https://arifszn.netlify.app/assets/img/hosted/gitprofile/themes.png" alt="Themes">
 </p>
 
 ## 🎉 Thank you for the 800 ★
@@ -108,7 +108,7 @@ These instructions will get you a copy of the project and deploy your portfolio 
   - If you want to host your portfolio at `https://<USERNAME>.github.io/<REPO_NAME>` (e.g. `https://<USERNAME>.github.io/portfolio`), rename your forked repository to `<REPO_NAME>` (e.g. `portfolio`) in GitHub.
 - **Enable workflows:** Go to your repo's **Actions** tab and enable workflows.
 
-  ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
+  ![Workflows](https://arifszn.netlify.app/assets/img/hosted/gitprofile/workflows.png)
 
 - **Base Value:** Open `vite.config.js`, and change `base`'s value.
 
@@ -386,7 +386,7 @@ const config = {
 ```
 
 <p align="center">
-  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/theme-dropdown.png" alt="Theme Dropdown" width="50%">
+  <img src="https://arifszn.netlify.app/assets/img/hosted/gitprofile/theme-dropdown.png" alt="Theme Dropdown" width="50%">
 </p>
 
 You can create your own custom theme by modifying these values. Theme `procyon` will have the custom styles.
@@ -631,7 +631,7 @@ const config = {
 };
 ```
 
-![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
+![Blog](https://arifszn.netlify.app/assets/img/hosted/gitprofile/blog.png)
 
 The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
 
