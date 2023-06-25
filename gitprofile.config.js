@@ -85,7 +85,7 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'dark',
+    defaultTheme: '',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -149,7 +149,7 @@ const config = {
       class="text-primary" href="https://github.com/arifszn/gitprofile"
       target="_blank"
       rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+    >GitProfile</a> and ❤️. Don't think I forgot to remove this one while setting up.`,
 };
 
 export default config;
