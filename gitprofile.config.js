@@ -60,7 +60,7 @@ const config = {
   ], */
   education: [
     {
-      institution: 'Delhi Public Schhol, Nadergul',
+      institution: 'Delhi Public School, Nadergul',
       degree: 'Grade 9',
       from: '2022',
       to: 'Present',
