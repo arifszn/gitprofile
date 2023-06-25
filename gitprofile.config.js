@@ -43,7 +43,7 @@ const config = {
       companyLink: '',
     },
     {
-      company: 'YouTube and Google',
+      company: 'YouTube and Google. Click on me!',
       position: 'Advertising Manager',
       from: 'July 2009',
       to: 'Present',
