@@ -36,13 +36,6 @@ const config = {
   ],
   experiences: [
     {
-      company: '',
-      position: '',
-      from: '',
-      to: '',
-      companyLink: '',
-    },
-    {
       company: 'YouTube and Google. Click on me!',
       position: 'Advertising Manager',
       from: 'July 2009',
