@@ -20,7 +20,7 @@ const config = {
     behance: '',
     medium: 'https://medium.com/@AkhilProto', //update
     dev: '',
-    stackoverflow: '', // format: userid/username
+    stackoverflow: '22127096/akhilproto', // format: userid/username
     skype: '',
     telegram: '',
     website: 'https://akhilproto.github.io',
