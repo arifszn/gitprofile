@@ -18,7 +18,7 @@ const config = {
     instagram: '',
     dribbble: '',
     behance: '',
-    medium: 'https://medium.com/@AkhilProto', //update
+    medium: 'AkhilProto', //update
     dev: '',
     stackoverflow: '22127096/akhilproto', // format: userid/username
     skype: '',
