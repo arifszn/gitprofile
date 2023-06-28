@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta charset="utf-8">
-		<title>SAPUI5 Walkthrough</title>
-		<script
-			id="sap-ui-bootstrap"
-			src="/resources/sap-ui-core.js"
-			data-sap-ui-theme="sap_bluecrystal"
-			data-sap-ui-modules="sap.m.library"
-			data-sap-ui-compatVersion="edge"
-			data-sap-ui-preload="async" >
-		</script>
-		<script>
-			sap.ui.getCore().attachInit(function () {
-				new sap.m.Text({
-					text : "SAPUI5 is loaded successfully!"
-				}).placeAt("content");
-			});
-		</script>
-	</head>
-	<body class="sapUiBody" id="content">
-	</body>
+
+<head>
+    <title>Space | tsParticles 404</title>
+    <link type="text/css" rel="stylesheet" href="src/assets/404.css" />
+    <link rel="icon" type="image/x-icon" href="../images/tsParticles-64.png">
+</head>
+
+<body class="permission_denied">
+    <div id="tsparticles"></div>
+    <div class="denied__wrapper">
+        <h1>404</h1>
+        <h3>LOST IN <span>SPACE</span> Akhil's Website? Hmm, looks like that page doesn't exist.</h3>
+        <img id="astronaut" src="images/astronaut.svg" />
+        <img id="planet" src="images/planet.svg" />
+        <a href="#"><button class="denied__link">Go Home</button></a>
+    </div>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/tsparticles@2.3.4/tsparticles.bundle.min.js"></script>
+    <script type="text/javascript" src="404.js"></script>
+
 </html>
