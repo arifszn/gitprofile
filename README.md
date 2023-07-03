@@ -21,8 +21,8 @@
     <a href="https://github.com/arifszn/gitprofile/network/members">
       <img src="https://img.shields.io/github/forks/arifszn/gitprofile"/>
     </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/package-lock.json">
-      <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/gitprofile"/>
+    <a href="https://github.com/arifszn/gitprofile/commits/main">
+      <img src="https://img.shields.io/github/last-commit/arifszn/gitprofile/main"/>
     </a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
       <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
