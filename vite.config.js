@@ -17,6 +17,9 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+       workbox: {
+        navigateFallback: undefined,
+      },
       includeAssets: ['logo.png'],
       manifest: {
         name: 'Portfolio',
