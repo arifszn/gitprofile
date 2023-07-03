@@ -16,11 +16,12 @@ const config = {
     mastodon: 'arifszn@mastodon.social',
     facebook: '',
     instagram: '',
+    youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
     medium: 'arifszn',
     dev: 'arifszn',
-    stackoverflow: '', // format: userid/username
+    stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
     website: 'https://arifszn.com',
