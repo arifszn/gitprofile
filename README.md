@@ -100,7 +100,7 @@ There are three ways to use **GitProfile**. Use any.
 
 ### Forking this repo
 
-These instructions will get you a copy of the project and deploy your portfolio online!
+These instructions will get you a copy of the project and deploy your portfolio online using GitHub Pages!
 
 - **Fork repo:** Click [here](https://github.com/arifszn/gitprofile/fork) to fork the repo so you have your own project to customize. A "fork" is a copy of a repository.
 - **Rename repo:**
