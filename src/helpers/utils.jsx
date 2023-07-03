@@ -150,6 +150,7 @@ export const sanitizeConfig = (config) => {
       mastodon: config?.social?.mastodon,
       facebook: config?.social?.facebook,
       instagram: config?.social?.instagram,
+      youtube: config?.social?.youtube,
       dribbble: config?.social?.dribbble,
       behance: config?.social?.behance,
       medium: config?.social?.medium,
