@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/45073703/177566625-9b84e793-4559-4475-ba54-8d3d5f4123d4.png" width="35%">
 
-  <h4 align="center">Easy to use automatic portfolio builder for every GitHub user!</h4>.
+  <h4 align="center">Easy to use automatic portfolio builder for every GitHub user!</h4>
 
   <p align="center">
     <a href="https://codeclimate.com/github/arifszn/gitprofile/maintainability">
@@ -64,6 +64,7 @@
 ✓ [Google Analytics](#google-analytics)  
 ✓ [Hotjar](#hotjar)  
 ✓ [SEO](#seo)  
+✓ [PWA](#pwa)  
 ✓ [Avatar and Bio](#avatar-and-bio)  
 ✓ [Social Links](#social-links)  
 ✓ [Skill Section](#skills)  
@@ -99,7 +100,7 @@ There are three ways to use **GitProfile**. Use any.
 
 ### Forking this repo
 
-These instructions will get you a copy of the project and deploy your portfolio online!
+These instructions will get you a copy of the project and deploy your portfolio online using GitHub Pages!
 
 - **Fork repo:** Click [here](https://github.com/arifszn/gitprofile/fork) to fork the repo so you have your own project to customize. A "fork" is a copy of a repository.
 - **Rename repo:**
@@ -129,7 +130,7 @@ Your portfolio website will be live shortly. Any time you commit a change to the
 
 If you wish to add a custom domain, no CNAME file is required. Just add it to your repo's **Settings** ➜ **Pages** ➜ **Custom domain**.
 
-As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services. Also, if you are not deploying to GitHub pages, `base:` might need to be deleted from `vite.config.js`.
 
 ### Setting up locally
 
@@ -443,6 +444,12 @@ const config = {
 ### SEO
 
 Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public/index.html`.
+
+### PWA
+
+GitProfile is PWA enabled. The site can be installed as a Progressive Web App.
+
+![PWA](https://github.com/arifszn/gitprofile/assets/45073703/9dc7cc5c-4262-4445-a7a5-1e3566ef43fa)
 
 ### Avatar and Bio
 
