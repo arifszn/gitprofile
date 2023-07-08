@@ -50,9 +50,14 @@ export interface Social {
   twitter?: string;
 
   /**
+   * Threads
+   */
+  threads?: string;
+
+    /**
    * Mastodon
    */
-  mastodon?: string;
+    mastodon?: string;
 
   /**
    * Facebook
@@ -94,6 +99,12 @@ export interface Social {
    */
   website?: string;
 
+  /**
+   * Discord username
+   */
+  discord?: string;
+
+  
   /**
    * Skype username
    */
