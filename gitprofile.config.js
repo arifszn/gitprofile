@@ -27,7 +27,8 @@ const config = {
     email: 'nathen418@playantares.com',
   },
   resume: {
-    fileUrl: 'https://github.com/nathen418/nathen418.com/raw/main/ResumeForUpload.pdf',
+    fileUrl:
+      'https://github.com/nathen418/nathen418.com/raw/main/ResumeForUpload.pdf',
   },
   skills: [
     'JavaScript',
@@ -46,7 +47,8 @@ const config = {
   experiences: [
     {
       company: 'WEC Energy Group',
-      position: 'Information Technology Intern - IT Infrastructure and Operations',
+      position:
+        'Information Technology Intern - IT Telecom and Infrastructure Operations',
       from: 'May 2023',
       to: 'Present',
       companyLink: 'https://www.wecenergygroup.com/',
@@ -55,7 +57,7 @@ const config = {
       company: 'University of Wisconsin Milwaukee',
       position: 'Lead Audio Visual Technician - Union Event Services',
       from: 'August 2022',
-      to: 'Present',
+      to: 'May 2023',
       companyLink: 'https://uwm.edu/union/evs/',
     },
     {
@@ -144,7 +146,7 @@ const config = {
         'AntaresBot a small bot with a bunch of features and cool commands. Join in the fun by adding AntaresBot to your server today. Developed for fun by me to learn type script and discord.js. Verified by Discord and in over 250 servers with over 1 million commands used and a 99% uptime. Using Discord\'s new "Slash Commands", Antares Bot supports many commands from fun random images, counting and chance games, a counting game, and more. Use /help in any channel to get a list of commands and features that are accessible. Admins can use /adminhelp',
       imageUrl: 'https://antaresnetwork.com/resources/icon.png',
       link: 'https://bot.antaresnetwork.com',
-    }
+    },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
