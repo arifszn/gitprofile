@@ -13,6 +13,7 @@ const config = {
   social: {
     linkedin: 'nate-goldsborough',
     twitter: '',
+    threads: 'nathen418@threads.net',
     facebook: '',
     instagram: '',
     dribbble: '',
@@ -20,6 +21,7 @@ const config = {
     medium: '',
     stackoverflow: '', // format: userid/username
     skype: '',
+    discord: 'nathen418',
     telegram: '',
     dev: 'nathen418',
     website: 'https://nathen418.com',
