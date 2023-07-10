@@ -105,6 +105,11 @@ export interface Social {
   skype?: string;
 
   /**
+   * Discord link
+   */
+  discord?: string;
+
+  /**
    * Telegram username
    */
   telegram?: string;

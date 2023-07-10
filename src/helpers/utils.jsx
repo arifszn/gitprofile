@@ -160,6 +160,7 @@ export const sanitizeConfig = (config) => {
       phone: config?.social?.phone,
       email: config?.social?.email,
       skype: config?.social?.skype,
+      discord: config?.social?.discord,
       telegram: config?.social?.telegram,
     },
     resume: {

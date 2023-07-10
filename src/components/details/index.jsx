@@ -15,6 +15,7 @@ import {
   FaFacebook,
   FaGlobe,
   FaSkype,
+  FaDiscord,
   FaMastodon,
   FaStackOverflow,
   FaTelegram,
@@ -220,6 +221,14 @@ const Details = ({ profile, loading, social, github }) => {
                   title="Skype"
                   value={social.skype}
                   link={`skype:${social.skype}?chat`}
+                />
+              )}
+              {social?.discord && (
+                <ListItem
+                  icon={<FaDiscord />}
+                  title="Discord:"
+                  value={social.discord}
+                  link={`https://discord.gg/${social.discord}`}
                 />
               )}
               {social?.telegram && (

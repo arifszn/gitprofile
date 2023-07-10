@@ -227,6 +227,7 @@ const config = {
     stackoverflow: '', // format: userid/username
     website: '',
     skype: '',
+    discord: '',
     telegram: '',
     phone: '',
     email: '',
@@ -458,7 +459,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Discord, Telegram, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -477,6 +478,7 @@ const config = {
     dev: '',
     stackoverflow: '',
     skype: '',
+    discord: '',
     telegram: '',
     website: '',
     phone: '',
