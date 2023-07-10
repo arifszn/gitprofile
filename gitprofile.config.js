@@ -23,7 +23,7 @@ const config = {
     dev: 'arifszn',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
-    discord:'', // Put the invite code. example: `2345678` from https://discord.gg/invite/12345678
+    discord:'', // Put the invite code. example: `12345678` from https://discord.gg/invite/12345678
     telegram: '',
     website: 'https://arifszn.com',
     phone: '',
