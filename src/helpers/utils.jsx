@@ -137,11 +137,22 @@ export const sanitizeConfig = (config) => {
   return {
     github: {
       username: config?.github?.username || '',
-      sortBy: config?.github?.sortBy || 'stars',
-      limit: config?.github?.limit || 8,
-      exclude: {
-        forks: config?.github?.exclude?.forks || false,
-        projects: config?.github?.exclude?.projects || [],
+    },
+    projects: {
+      github: {
+        header: config?.projects?.github?.header || 'GitHub Projects',
+        display: config?.projects?.github?.display || true,
+        sortBy: config?.projects?.github?.sortBy || 'stars',
+        limit: config?.projects?.github?.limit || 8,
+        exclude: {
+          forks: config?.projects?.github?.exclude?.forks || false,
+          projects: config?.projects?.github?.exclude?.projects || [],
+        },
+      },
+      external: {
+        header: config?.projects?.external?.header || 'External Projects',
+        display: config?.projects?.external?.display || true,
+        projects: config?.projects?.external?.projects || [],
       },
     },
     social: {
@@ -166,7 +177,6 @@ export const sanitizeConfig = (config) => {
       fileUrl: config?.resume?.fileUrl || '',
     },
     skills: config?.skills || [],
-    externalProjects: config?.externalProjects || [],
     experiences: config?.experiences || [],
     certifications: config?.certifications || [],
     education: config?.education || [],

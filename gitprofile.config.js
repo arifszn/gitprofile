@@ -15,7 +15,6 @@ const config = {
         projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
       },
     },
-
     external: {
       header: 'External Projects',
       display: true, // Display external projects?

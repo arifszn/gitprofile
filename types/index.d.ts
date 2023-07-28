@@ -9,32 +9,63 @@ export interface Github {
    * GitHub org/user name
    */
   username: string;
+}
 
-  /**
-   * stars | updated
-   */
-  sortBy?: string;
-
-  /**
-   * How many projects to display
-   */
-  limit?: number;
-
-  /**
-   * Exclude projects option
-   */
-  exclude?: {
+export interface Projects {
+  github: {
     /**
-     * Forked projects will not be displayed if set to true
+     * Header Title
      */
-    forks?: boolean;
+    header?: string;
 
     /**
-     * These projects will not be displayed
-     *
-     * example: ['my-project1', 'my-project2']
+     * Display GitHub projects?
      */
-    projects?: Array<string>;
+    display?: boolean;
+
+    /**
+     * stars | updated
+     */
+    sortBy?: string;
+
+    /**
+     * How many projects to display
+     */
+    limit?: number;
+
+    /**
+     * Exclude projects option
+     */
+    exclude?: {
+      /**
+       * Forked projects will not be displayed if set to true
+       */
+      forks?: boolean;
+
+      /**
+       * These projects will not be displayed
+       *
+       * example: ['my-project1', 'my-project2']
+       */
+      projects?: Array<string>;
+    };
+  };
+
+  external: {
+    /**
+     * Header Title
+     */
+    header?: string;
+
+    /**
+     * Display external projects?
+     */
+    display?: boolean;
+
+    /**
+     * External Projects
+     */
+    projects?: Array<ExternalProjects>;
   };
 }
 
@@ -266,6 +297,11 @@ export interface Config {
   github: Github;
 
   /**
+   * Projects
+   */
+  projects?: Projects;
+
+  /**
    * Social links
    */
   social?: Social;
@@ -284,11 +320,6 @@ export interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
-
-  /**
-   * External Projects
-   */
-  externalProjects?: Array<ExternalProjects>;
 
   /**
    * Certifications list

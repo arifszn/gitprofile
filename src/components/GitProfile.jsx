@@ -77,15 +77,15 @@ const GitProfile = ({ config }) => {
           return;
         }
 
-        sanitizedConfig.github.exclude.projects.forEach((project) => {
+        sanitizedConfig.projects.github.exclude.projects.forEach((project) => {
           excludeRepo += `+-repo:${sanitizedConfig.github.username}/${project}`;
         });
 
         let query = `user:${
           sanitizedConfig.github.username
-        }+fork:${!sanitizedConfig.github.exclude.forks}${excludeRepo}`;
+        }+fork:${!sanitizedConfig.projects.github.exclude.forks}${excludeRepo}`;
 
-        let url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.github.sortBy}&per_page=${sanitizedConfig.github.limit}&type=Repositories`;
+        let url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.projects.github.sortBy}&per_page=${sanitizedConfig.projects.github.limit}&type=Repositories`;
 
         axios
           .get(url, {
@@ -236,13 +236,31 @@ GitProfile.propTypes = {
   config: PropTypes.shape({
     github: PropTypes.shape({
       username: PropTypes.string.isRequired,
-      sortBy: PropTypes.oneOf(['stars', 'updated']),
-      limit: PropTypes.number,
-      exclude: PropTypes.shape({
-        forks: PropTypes.bool,
-        projects: PropTypes.array,
-      }),
     }).isRequired,
+    projects: {
+      github: PropTypes.shape({
+        header: PropTypes.string,
+        display: PropTypes.bool,
+        sortBy: PropTypes.oneOf(['stars', 'updated']),
+        limit: PropTypes.number,
+        exclude: PropTypes.shape({
+          forks: PropTypes.bool,
+          projects: PropTypes.array,
+        }),
+      }),
+      projects: PropTypes.shape({
+        header: PropTypes.string,
+        display: PropTypes.bool,
+        projects: PropTypes.arrayOf(
+          PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired,
+            imageUrl: PropTypes.string,
+          })
+        ),
+      }),
+    },
     social: PropTypes.shape({
       linkedin: PropTypes.string,
       twitter: PropTypes.string,
@@ -265,14 +283,6 @@ GitProfile.propTypes = {
       fileUrl: PropTypes.string,
     }),
     skills: PropTypes.array,
-    externalProjects: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        imageUrl: PropTypes.string,
-      })
-    ),
     experiences: PropTypes.arrayOf(
       PropTypes.shape({
         company: PropTypes.string,
