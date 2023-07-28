@@ -4,7 +4,7 @@ import { AiOutlineFork, AiOutlineStar } from 'react-icons/ai';
 import { MdInsertLink } from 'react-icons/md';
 import { ga, languageColor, skeleton } from '../../helpers/utils';
 
-const Project = ({ repo, loading, github, googleAnalytics }) => {
+const GitHubProject = ({ repo, loading, github, googleAnalytics }) => {
   if (!loading && Array.isArray(repo) && repo.length === 0) {
     return <></>;
   }
@@ -166,11 +166,11 @@ const Project = ({ repo, loading, github, googleAnalytics }) => {
   );
 };
 
-Project.propTypes = {
+GitHubProject.propTypes = {
   repo: PropTypes.array,
   loading: PropTypes.bool.isRequired,
   github: PropTypes.object.isRequired,
   googleAnalytics: PropTypes.object.isRequired,
 };
 
-export default Project;
+export default GitHubProject;

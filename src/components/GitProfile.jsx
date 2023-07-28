@@ -9,7 +9,7 @@ import Skill from './skill';
 import Experience from './experience';
 import Certification from './certification';
 import Education from './education';
-import Project from './project';
+import GitHubProject from './github-project';
 import Blog from './blog';
 import Footer from './footer';
 import {
@@ -197,7 +197,7 @@ const GitProfile = ({ config }) => {
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
-                      <Project
+                      <GitHubProject
                         repo={repo}
                         loading={loading}
                         github={sanitizedConfig.github}
