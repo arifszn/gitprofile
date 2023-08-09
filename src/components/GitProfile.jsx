@@ -110,6 +110,105 @@ const GitProfile = ({ config }) => {
       });
   }, [setLoading]);
 
+  let leftPanel = [];
+  let rightPanel = [];
+
+  for (let i = 0; i < sanitizedConfig.composition.left_panel.length; i++) {
+    switch (sanitizedConfig.composition.left_panel[i]) {
+      case 'theme-switch':
+        if (!sanitizedConfig.themeConfig.disableSwitch) {
+          leftPanel.push(
+            <ThemeChanger
+              theme={theme}
+              setTheme={setTheme}
+              loading={loading}
+              themeConfig={sanitizedConfig.themeConfig}
+            />
+          );
+        }
+        break;
+      case 'personal-info':
+        leftPanel.push(
+          <AvatarCard
+            profile={profile}
+            loading={loading}
+            avatarRing={!sanitizedConfig.themeConfig.hideAvatarRing}
+            resume={sanitizedConfig.resume}
+          />
+        );
+        break;
+      case 'social-info':
+        leftPanel.push(
+          <Details
+            profile={profile}
+            loading={loading}
+            github={sanitizedConfig.github}
+            social={sanitizedConfig.social}
+          />
+        );
+        break;
+      case 'tech-stack':
+        leftPanel.push(
+          <Skill loading={loading} skills={sanitizedConfig.skills} />
+        );
+        break;
+      case 'experience':
+        leftPanel.push(
+          <Experience
+            loading={loading}
+            experiences={sanitizedConfig.experiences}
+          />
+        );
+        break;
+      case 'education':
+        leftPanel.push(
+          <Education loading={loading} education={sanitizedConfig.education} />
+        );
+        break;
+      case 'certifications':
+        leftPanel.push(
+          <Certification
+            loading={loading}
+            certifications={sanitizedConfig.certifications}
+          />
+        );
+        break;
+    }
+  }
+
+  for (let i = 0; i < sanitizedConfig.composition.right_panel.length; i++) {
+    switch (sanitizedConfig.composition.right_panel[i]) {
+      case 'github-projects':
+        rightPanel.push(
+          <Project
+            repo={repo}
+            loading={loading}
+            github={sanitizedConfig.github}
+            googleAnalytics={sanitizedConfig.googleAnalytics}
+          />
+        );
+        break;
+      case 'my-projects':
+        rightPanel.push(
+          <ExternalProject
+            loading={loading}
+            externalProjects={sanitizedConfig.externalProjects}
+            googleAnalytics={sanitizedConfig.googleAnalytics}
+          />
+        );
+        break;
+      case 'recent-posts':
+        rightPanel.push(
+          <Blog
+            loading={loading}
+            googleAnalytics={sanitizedConfig.googleAnalytics}
+            blog={sanitizedConfig.blog}
+          />
+        );
+        break;
+    }
+  }
+
   const handleError = (error) => {
     console.error('Error:', error);
     try {
@@ -157,62 +256,20 @@ const GitProfile = ({ config }) => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                   <div className="col-span-1">
                     <div className="grid grid-cols-1 gap-6">
-                      {!sanitizedConfig.themeConfig.disableSwitch && (
-                        <ThemeChanger
-                          theme={theme}
-                          setTheme={setTheme}
-                          loading={loading}
-                          themeConfig={sanitizedConfig.themeConfig}
-                        />
-                      )}
-                      <AvatarCard
-                        profile={profile}
-                        loading={loading}
-                        avatarRing={!sanitizedConfig.themeConfig.hideAvatarRing}
-                        resume={sanitizedConfig.resume}
-                      />
-                      <Details
-                        profile={profile}
-                        loading={loading}
-                        github={sanitizedConfig.github}
-                        social={sanitizedConfig.social}
-                      />
-                      <Skill
-                        loading={loading}
-                        skills={sanitizedConfig.skills}
-                      />
-                      <Experience
-                        loading={loading}
-                        experiences={sanitizedConfig.experiences}
-                      />
-                      <Education
-                        loading={loading}
-                        education={sanitizedConfig.education}
-                      />
-                      <Certification
-                        loading={loading}
-                        certifications={sanitizedConfig.certifications}
-                      />
+                      {leftPanel.map((component, index) => (
+                        <Fragment key={`left-panel-${index}`}>
+                          {component}
+                        </Fragment>
+                      ))}
                     </div>
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
-                      <Project
-                        repo={repo}
-                        loading={loading}
-                        github={sanitizedConfig.github}
-                        googleAnalytics={sanitizedConfig.googleAnalytics}
-                      />
-                      <ExternalProject
-                        loading={loading}
-                        externalProjects={sanitizedConfig.externalProjects}
-                        googleAnalytics={sanitizedConfig.googleAnalytics}
-                      />
-                      <Blog
-                        loading={loading}
-                        googleAnalytics={sanitizedConfig.googleAnalytics}
-                        blog={sanitizedConfig.blog}
-                      />
+                      {rightPanel.map((component, index) => (
+                        <Fragment key={`right-panel-${index}`}>
+                          {component}
+                        </Fragment>
+                      ))}
                     </div>
                   </div>
                 </div>

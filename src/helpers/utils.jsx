@@ -91,6 +91,50 @@ export const setupHotjar = (hotjarConfig) => {
 };
 
 export const sanitizeConfig = (config) => {
+  const defaultComposition = {
+    left_panel: [
+      'theme-switch',
+      'personal-info',
+      'social-info',
+      'tech-stack',
+      'experience',
+      'education',
+      'certifications',
+    ],
+    right_panel: ['github-projects', 'my-projects', 'recent-posts'],
+  };
+
+  let leftPanelState = true;
+  let rightPanelState = true;
+  if (
+    config?.composition?.left_panel &&
+    config?.composition?.right_panel &&
+    config?.composition?.left_panel.length == 7 &&
+    config?.composition?.right_panel.length == 3
+  ) {
+    for (let i = 0; i < config?.composition?.left_panel.length; i++) {
+      if (
+        !defaultComposition.left_panel.includes(
+          config?.composition?.left_panel[i]
+        )
+      ) {
+        leftPanelState = false;
+        break;
+      }
+    }
+
+    for (let i = 0; i < config?.composition?.right_panel.length; i++) {
+      if (
+        !defaultComposition.right_panel.includes(
+          config?.composition?.right_panel[i]
+        )
+      ) {
+        rightPanelState = false;
+        break;
+      }
+    }
+  }
+
   const customTheme = config?.themeConfig?.customTheme || {
     primary: '#fc055b',
     secondary: '#219aaf',
@@ -143,6 +187,14 @@ export const sanitizeConfig = (config) => {
         forks: config?.github?.exclude?.forks || false,
         projects: config?.github?.exclude?.projects || [],
       },
+    },
+    composition: {
+      left_panel: leftPanelState
+        ? config?.composition?.left_panel
+        : defaultComposition.left_panel,
+      right_panel: rightPanelState
+        ? config?.composition?.right_panel
+        : defaultComposition.right_panel,
     },
     social: {
       linkedin: config?.social?.linkedin,

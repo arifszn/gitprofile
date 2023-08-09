@@ -10,6 +10,19 @@ const config = {
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
+  // Page panels. You can change the order of the panels.
+  composition: {
+    left_panel: [
+      'theme-switch',
+      'personal-info',
+      'social-info',
+      'tech-stack',
+      'experience',
+      'education',
+      'certifications',
+    ],
+    right_panel: ['github-projects', 'my-projects', 'recent-posts'],
+  },
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
