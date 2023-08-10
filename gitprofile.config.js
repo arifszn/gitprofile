@@ -10,7 +10,18 @@ const config = {
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
-  // Page panels. You can change the order of the panels.
+  // Page panels. You can change the order of the panels by edit panel name order.
+  // If you want theme-switch is under social-info
+  // example: left_panel: [
+  //   'personal-info',
+  //   'social-info',
+  //   'theme-switch',
+  //   'tech-stack',
+  //   'experience',
+  //   'education',
+  //   'certifications',
+  // ],
+  // Important: Don't remove any panel in left_panel or right_panel, even it is empty. (Just put it in the back)
   composition: {
     left_panel: [
       'theme-switch',
