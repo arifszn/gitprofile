@@ -146,7 +146,9 @@ export const sanitizeConfig = (config) => {
     },
     tabInfo: {
       title: config?.tabInfo?.title ? config?.tabInfo?.title : 'Portfolio',
-      faviconUrl: config?.tabInfo?.faviconUrl ? config?.tabInfo?.faviconUrl : '/favicon.ico',
+      faviconUrl: config?.tabInfo?.faviconUrl
+        ? config?.tabInfo?.faviconUrl
+        : '/favicon.ico',
     },
     social: {
       linkedin: config?.social?.linkedin,
