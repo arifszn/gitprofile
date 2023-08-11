@@ -138,6 +138,7 @@ const GitProfile = ({ config }) => {
       {sanitizedConfig && (
         <HeadTagEditor
           profile={profile}
+          tabInfo={sanitizedConfig.tabInfo}
           theme={theme}
           googleAnalytics={sanitizedConfig.googleAnalytics}
           social={sanitizedConfig.social}

@@ -144,6 +144,10 @@ export const sanitizeConfig = (config) => {
         projects: config?.github?.exclude?.projects || [],
       },
     },
+    tabInfo: {
+      title: config?.tabInfo?.title ? config?.tabInfo?.title : 'Portfolio',
+      faviconUrl: config?.tabInfo?.faviconUrl ? config?.tabInfo?.faviconUrl : '/favicon.ico',
+    },
     social: {
       linkedin: config?.social?.linkedin,
       twitter: config?.social?.twitter,

@@ -10,6 +10,10 @@ const config = {
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
+  tabInfo: {
+    title: 'Portfolio', // Tab title for the browser.
+    faviconUrl: '/favicon.ico', // Tab favicon for the browser.
+  },
   social: {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
