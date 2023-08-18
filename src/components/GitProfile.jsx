@@ -249,6 +249,7 @@ GitProfile.propTypes = {
       mastodon: PropTypes.string,
       facebook: PropTypes.string,
       instagram: PropTypes.string,
+      youtube: PropTypes.string,
       dribbble: PropTypes.string,
       behance: PropTypes.string,
       medium: PropTypes.string,

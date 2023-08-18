@@ -21,8 +21,8 @@
     <a href="https://github.com/arifszn/gitprofile/network/members">
       <img src="https://img.shields.io/github/forks/arifszn/gitprofile"/>
     </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/package-lock.json">
-      <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/gitprofile"/>
+    <a href="https://github.com/arifszn/gitprofile/commits/main">
+      <img src="https://img.shields.io/github/last-commit/arifszn/gitprofile/main"/>
     </a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
       <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
@@ -219,6 +219,7 @@ const config = {
     mastodon: '',
     facebook: '',
     instagram: '',
+    youtube: '',
     dribbble: '',
     behance: '',
     medium: '',
@@ -457,7 +458,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -469,6 +470,7 @@ const config = {
     mastodon: 'arifszn@mastodon.social',
     facebook: '',
     instagram: '',
+    youtube: '',
     dribbble: '',
     behance: '',
     medium: '',
