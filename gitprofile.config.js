@@ -36,7 +36,7 @@ const config = {
     'Git',
     'Bash',
     'Nginx',
-    'Apache',
+    'Kafka',
     'Ansible',
     'HAProxy',
     'PostgreSQL',
