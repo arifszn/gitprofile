@@ -26,7 +26,7 @@ const Skill = ({ loading, skills }) => {
                   skeleton({ width: 'w-32', height: 'h-8' })
                 ) : (
                   <span className="text-base-content opacity-70">
-                    Tech Stack
+                    Proficient in:
                   </span>
                 )}
               </h5>
