@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 't0mer', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
@@ -11,58 +11,81 @@ const config = {
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
-    facebook: '',
+    linkedin: 'tomer-klein-4bb8ab24/',
+    twitter: 'tomerklein',
+    mastodon: '',
+    facebook: 'tomer.klein',
     instagram: '',
     youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: 'tomer.klein',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://arifszn.com',
+    website: 'https://techblog.co.il',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'tomer.klein@gmail.com',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
+    'Python',
+    'c#',
+    'Bash',
+    '.Net',
+    'FastAPI',
+    'Flask',
+    'BootStrap'
+    'Selenium',
     'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
     'MySQL',
-    'PostgreSQL',
-    'Git',
+    'MSSQL',
+    'SQLite',
+    'GitHub',
     'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
-  ],
+    'RabbitMQ',
+    'Mosquitto',
+    'AWS',
+    'Azure DevOps',
+    'Apache',
+    'Nginx',
+    'Traefik',
+    'Cloudflare',
+    'Checkpoint',
+    'Sophos',
+    'Fortigate',
+    'F5 Big-IP',
+    'Solarwinds Siem',
+    'Mcaffe DLP',
+    'Cloudflare ZeroTrust',
+    'Teleport',
+    'IoT',
+    'Raspberry Pi',
+    'Arduino',
+    'LoRa/LoRaWAN',
+    'MQTT',
+    'ESP',
+    'AWS IoT Core',
+    ],
   experiences: [
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
-    },
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
-    },
+    // {
+    //   company: 'Company Name',
+    //   position: 'Position',
+    //   from: 'September 2021',
+    //   to: 'Present',
+    //   companyLink: 'https://example.com',
+    // },
+    // {
+    //   company: 'Company Name',
+    //   position: 'Position',
+    //   from: 'July 2019',
+    //   to: 'August 2021',
+    //   companyLink: 'https://example.com',
+    // },
   ],
   /* certifications: [
     {
@@ -73,42 +96,42 @@ const config = {
     },
   ], */
   education: [
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
-    },
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
-    },
+    // {
+    //   institution: 'Institution Name',
+    //   degree: 'Degree',
+    //   from: '2015',
+    //   to: '2019',
+    // },
+    // {
+    //   institution: 'Institution Name',
+    //   degree: 'Degree',
+    //   from: '2012',
+    //   to: '2014',
+    // },
   ],
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
-    {
-      title: 'Project Name',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
-    },
-    {
-      title: 'Project Name',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
-    },
+    // {
+    //   title: 'Project Name',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+    //   imageUrl: 'https://via.placeholder.com/250x250',
+    //   link: 'https://example.com',
+    // },
+    // {
+    //   title: 'Project Name',
+    //   description:
+    //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+    //   imageUrl: 'https://via.placeholder.com/250x250',
+    //   link: 'https://example.com',
+    // },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many posts to display. Max is 10.
+    source: 'medium', // medium | dev
+    username: 'tomer.klein', // to hide blog section, keep it empty
+    limit: 3, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -119,11 +142,11 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'wireframe',
+    defaultTheme: 'dark',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: false,
+    disableSwitch: true,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
