@@ -39,7 +39,7 @@ const config = {
     '.Net',
     'FastAPI',
     'Flask',
-    'BootStrap'
+    'BootStrap',
     'Selenium',
     'JavaScript',
     'MySQL',
