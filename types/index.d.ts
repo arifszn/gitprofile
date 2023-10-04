@@ -70,6 +70,11 @@ export interface Social {
   instagram?: string;
 
   /**
+   * YouTube
+   */
+  youtube?: string;
+
+  /**
    * Dribbble
    */
   dribbble?: string;

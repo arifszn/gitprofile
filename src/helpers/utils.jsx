@@ -150,6 +150,7 @@ export const sanitizeConfig = (config) => {
       threads: config?.social?.threads,
       facebook: config?.social?.facebook,
       instagram: config?.social?.instagram,
+      youtube: config?.social?.youtube,
       dribbble: config?.social?.dribbble,
       behance: config?.social?.behance,
       medium: config?.social?.medium,

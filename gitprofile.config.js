@@ -15,15 +15,16 @@ const config = {
     twitter: '',
     threads: 'nathen418@threads.net',
     facebook: '',
-    instagram: '',
+    instagram: 'nathen418',
+    youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
     medium: '',
-    stackoverflow: '', // format: userid/username
+    dev: 'nathen418',
+    stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     discord: 'nathen418',
     telegram: '',
-    dev: 'nathen418',
     website: 'https://nathen418.com',
     phone: '',
     email: 'nathen418@playantares.com',
@@ -40,6 +41,9 @@ const config = {
     'Discord.js',
     'Node.js',
     'Traefik',
+    'Nginx Proxy Manager',
+    'ZFS',
+    'Cisco Switching and Routing',
     'Docker',
     'Authelia',
     'Proxmox',
@@ -50,7 +54,7 @@ const config = {
     {
       company: 'WEC Energy Group',
       position:
-        'Information Technology Intern - IT Telecom and Infrastructure Operations',
+        'Intern - IT Telecom and Infrastructure Operations',
       from: 'May 2023',
       to: 'Present',
       companyLink: 'https://www.wecenergygroup.com/',
@@ -59,7 +63,7 @@ const config = {
       company: 'University of Wisconsin Milwaukee',
       position: 'Lead Audio Visual Technician - Union Event Services',
       from: 'August 2022',
-      to: 'May 2023',
+      to: 'Present',
       companyLink: 'https://uwm.edu/union/evs/',
     },
     {
@@ -93,6 +97,12 @@ const config = {
     },
   ],
   certifications: [
+    {
+      name: 'Cert Prep: Scrum Master',
+      body: 'LinkedIn',
+      year: 'September 2023',
+      link: 'https://www.linkedin.com/learning/certificates/b20de7c6ddf1c80a514b15a091f9309b83ccfeb278cc9190c49544102cb498f9?u=77313426',
+    },
     {
       name: 'Becoming a Product Manager',
       body: 'LinkedIn',

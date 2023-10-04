@@ -21,8 +21,8 @@
     <a href="https://github.com/arifszn/gitprofile/network/members">
       <img src="https://img.shields.io/github/forks/arifszn/gitprofile"/>
     </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/package-lock.json">
-      <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/gitprofile"/>
+    <a href="https://github.com/arifszn/gitprofile/commits/main">
+      <img src="https://img.shields.io/github/last-commit/arifszn/gitprofile/main"/>
     </a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
       <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
@@ -49,10 +49,10 @@
 
 <p align="center">
   <a href="https://arifszn.github.io/gitprofile">
-    <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/preview.gif" alt="Preview" width="60%"/>
+    <img src="https://arifszn.netlify.app/assets/img/hosted/gitprofile/preview.gif" alt="Preview" width="60%"/>
   </a>
   <br/>
-  <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
+  <a href="#arifszn"><img src="https://arifszn.netlify.app/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
 </p>
 
 **GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. It is built using React.js on top of Vite. But it's not necessary to have knowledge on these to get you started. You can make your own copy with zero coding experience.
@@ -79,7 +79,7 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
 
 <p align="center">
-  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
+  <img src="https://arifszn.netlify.app/assets/img/hosted/gitprofile/themes.png" alt="Themes">
 </p>
 
 ## 🎉 Thank you for the 800 ★
@@ -100,7 +100,7 @@ There are three ways to use **GitProfile**. Use any.
 
 ### Forking this repo
 
-These instructions will get you a copy of the project and deploy your portfolio online!
+These instructions will get you a copy of the project and deploy your portfolio online using GitHub Pages!
 
 - **Fork repo:** Click [here](https://github.com/arifszn/gitprofile/fork) to fork the repo so you have your own project to customize. A "fork" is a copy of a repository.
 - **Rename repo:**
@@ -108,7 +108,7 @@ These instructions will get you a copy of the project and deploy your portfolio 
   - If you want to host your portfolio at `https://<USERNAME>.github.io/<REPO_NAME>` (e.g. `https://<USERNAME>.github.io/portfolio`), rename your forked repository to `<REPO_NAME>` (e.g. `portfolio`) in GitHub.
 - **Enable workflows:** Go to your repo's **Actions** tab and enable workflows.
 
-  ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
+  ![Workflows](https://arifszn.netlify.app/assets/img/hosted/gitprofile/workflows.png)
 
 - **Base Value:** Open `vite.config.js`, and change `base`'s value.
 
@@ -130,7 +130,7 @@ Your portfolio website will be live shortly. Any time you commit a change to the
 
 If you wish to add a custom domain, no CNAME file is required. Just add it to your repo's **Settings** ➜ **Pages** ➜ **Custom domain**.
 
-As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services. Also, if you are not deploying to GitHub pages, `base:` might need to be deleted from `vite.config.js`.
 
 ### Setting up locally
 
@@ -220,6 +220,7 @@ const config = {
     mastodon: '',
     facebook: '',
     instagram: '',
+    youtube: '',
     dribbble: '',
     behance: '',
     medium: '',
@@ -388,7 +389,7 @@ const config = {
 ```
 
 <p align="center">
-  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/theme-dropdown.png" alt="Theme Dropdown" width="50%">
+  <img src="https://arifszn.netlify.app/assets/img/hosted/gitprofile/theme-dropdown.png" alt="Theme Dropdown" width="50%">
 </p>
 
 You can create your own custom theme by modifying these values. Theme `procyon` will have the custom styles.
@@ -459,7 +460,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Threads, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Discord, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
 ```js
 // gitprofile.config.js
@@ -472,6 +473,7 @@ const config = {
     threads: '',
     facebook: '',
     instagram: '',
+    youtube: '',
     dribbble: '',
     behance: '',
     medium: '',
@@ -635,7 +637,7 @@ const config = {
 };
 ```
 
-![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
+![Blog](https://arifszn.netlify.app/assets/img/hosted/gitprofile/blog.png)
 
 The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
 
