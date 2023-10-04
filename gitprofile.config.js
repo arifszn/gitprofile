@@ -15,7 +15,7 @@ const config = {
     twitter: '',
     threads: 'nathen418@threads.net',
     facebook: '',
-    instagram: '',
+    instagram: 'nathen418',
     youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
