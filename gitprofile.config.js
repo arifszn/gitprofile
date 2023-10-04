@@ -2,132 +2,181 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
-    limit: 10, // How many projects to display.
+    username: 'nathen418', // Your GitHub org/user name. (Required)
+    sortBy: 'updated', // stars | updated
+    limit: 22, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
-      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+      projects: ['nathen418.com', 'nathen418'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'nate-goldsborough',
+    twitter: '',
+    threads: 'nathen418@threads.net',
     facebook: '',
     instagram: '',
     youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: '',
+    dev: 'nathen418',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
+    discord: 'nathen418',
     telegram: '',
-    website: 'https://arifszn.com',
+    dev: 'nathen418',
+    website: 'https://nathen418.com',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'nathen418@playantares.com',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://github.com/nathen418/nathen418.com/raw/main/ResumeForUpload.pdf',
   },
   skills: [
-    'PHP',
-    'Laravel',
     'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
+    'TypeScript',
+    'MongoDB',
     'MySQL',
-    'PostgreSQL',
-    'Git',
+    'Discord.js',
+    'Node.js',
+    'Traefik',
     'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'Authelia',
+    'Proxmox',
+    'Ubuntu',
+    'Git',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'WEC Energy Group',
+      position:
+        'Information Technology Intern - IT Telecom and Infrastructure Operations',
+      from: 'May 2023',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://www.wecenergygroup.com/',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'University of Wisconsin Milwaukee',
+      position: 'Lead Audio Visual Technician - Union Event Services',
+      from: 'August 2022',
+      to: 'May 2023',
+      companyLink: 'https://uwm.edu/union/evs/',
+    },
+    {
+      company: 'University of Wisconsin Milwaukee',
+      position: 'Audio Visual Technician - Union Event Services',
+      from: 'October 2021',
+      to: 'August 2022',
+      companyLink: 'https://uwm.edu/union/evs/',
+    },
+    {
+      company: 'University of Wisconsin Milwaukee',
+      position: 'Maintenance - University Housing',
+      from: 'May 2022',
+      to: 'September 2022',
+      companyLink: 'https://uwm.edu/housing/',
+    },
+    {
+      company: 'College of DuPage',
+      position: 'COVID Screener - Conference and Event Services',
+      from: 'August 2020',
+      to: 'May 2021',
+      companyLink:
+        'https://www.cod.edu/about/campus-departments/conference-event-services/',
+    },
+    {
+      company: 'College of DuPage',
+      position: 'Assistant Theatre Technician - McAninch Arts Center',
+      from: 'August 2020',
+      to: 'May 2021',
+      companyLink: 'https://www.cod.edu/academics/programs/theater/index.aspx',
     },
   ],
-  /* certifications: [
+  certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com'
+      name: 'Becoming a Product Manager',
+      body: 'LinkedIn',
+      year: 'October 2022',
+      link: 'https://www.linkedin.com/learning/certificates/06618a2ccb788af62bb88d799aad8baad3656f98b5972609bb898c703c5b1975?u=77313426',
     },
-  ], */
+    {
+      name: 'Business Analysis Foundations: Business Process Modeling',
+      body: 'LinkedIn',
+      year: 'October 2022',
+      link: 'https://www.linkedin.com/learning/certificates/e88b0d48ca07ca8f0c43dd82754bb49775e02781317e9fd3fae6651b869af557?u=77313426',
+    },
+    {
+      name: 'Adobe XD: Prototyping',
+      body: 'LinkedIn',
+      year: 'April 2022',
+      link: 'https://www.linkedin.com/learning/certificates/0e9e94da0ab17e2acd12e7fa8e1fa47112756cc6a21560c08a440874397a790b?u=77313426',
+    },
+    {
+      name: 'UX Foundations: Prototyping',
+      body: 'LinkedIn',
+      year: 'March 2022',
+      link: 'https://www.linkedin.com/learning/certificates/e29f04083830acd0a23f75962d29830a039b7d421064f7b8b255a705aa5db2e4?u=77313426',
+    },
+  ],
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'University of Wisconsin Milwaukee',
+      degree: 'Bachelor of Science in Information Science and Technology',
+      from: '2020',
+      to: 'Present',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'College of DuPage',
+      degree: 'Pre-Engineering',
+      from: '2019',
+      to: '2020',
     },
   ],
 
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'Purpose Driven Sisters Website Redesign',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'Worked with a small student team to complete a digital presence redesign for Purpose Driven Sisters, a nonprofit organization focused on youth mentorship that strives to empower young girls in Milwaukee. Designed a new website by creating new and transforming existing content, refined their brand story, and defined donation and involvement incentives to prospective sponsors and members so they can better serve their community and grow as an organization. Worked on improving SEO and basic web accessibility and improving the mobile site design. This project was completed as part of the Nonprof-IT program at UW-Milwaukee',
+      imageUrl: 'https://antaresnetwork.com/resources/PDS_Logo.jpg',
+      link: 'https://purposedsisters.org',
     },
     {
-      title: 'Project Name',
+      title: 'Antares Bot',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        'AntaresBot a small bot with a bunch of features and cool commands. Join in the fun by adding AntaresBot to your server today. Developed for fun by me to learn type script and discord.js. Verified by Discord and in over 250 servers with over 1 million commands used and a 99% uptime. Using Discord\'s new "Slash Commands", Antares Bot supports many commands from fun random images, counting and chance games, a counting game, and more. Use /help in any channel to get a list of commands and features that are accessible. Admins can use /adminhelp',
+      imageUrl: 'https://antaresnetwork.com/resources/icon.png',
+      link: 'https://bot.antaresnetwork.com',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many posts to display. Max is 10.
+    username: 'nathen418',
+    limit: 5, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: 'G-F8K6NR9ZJ2', // Please remove this and use your own tag id or keep it empty
   },
   // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
-    id: '',
+    id: '', //  Please remove this and use your own id or keep it empty
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'wireframe',
+    defaultTheme: 'dark',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: false,
+    disableSwitch: true,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
-    respectPrefersColorScheme: false,
+    respectPrefersColorScheme: true,
 
     // Hide the ring in Profile picture
     hideAvatarRing: false,

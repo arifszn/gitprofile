@@ -136,21 +136,21 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
               <div className="w-full">
                 <div className="flex items-start px-4">
                   <div className="text-center md:text-left w-full">
-                    <h2 className="font-semibold text-base-content opacity-60">
+                    <h2 className="font-semibold text-base-content opacity-100">
                       {article.title}
                     </h2>
-                    <p className="text-base-content opacity-50 text-xs">
+                    <p className="text-base-content opacity-100 text-xs">
                       {formatDistance(article.publishedAt, new Date(), {
                         addSuffix: true,
                       })}
                     </p>
-                    <p className="mt-3 text-base-content text-opacity-60 text-sm">
+                    <p className="mt-3 text-base-content text-opacity-100 text-sm">
                       {article.description}
                     </p>
                     <div className="mt-4 flex items-center flex-wrap justify-center md:justify-start">
                       {article.categories.map((category, index2) => (
                         <div
-                          className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-50 text-base-content"
+                          className="py-2 px-4 text-xs leading-3 rounded-full bg-base-300 mr-1 mb-1 opacity-100 text-base-content"
                           key={index2}
                         >
                           #{category}
@@ -166,8 +166,8 @@ const Blog = ({ loading, blog, googleAnalytics }) => {
       ))
     ) : (
       <div className="text-center mb-6">
-        <AiOutlineContainer className="mx-auto h-12 w-12 opacity-30" />
-        <p className="mt-1 text-sm opacity-50 text-base-content">
+        <AiOutlineContainer className="mx-auto h-12 w-12 opacity-100" />
+        <p className="mt-1 text-sm opacity-100 text-base-content">
           No recent post
         </p>
       </div>

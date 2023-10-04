@@ -49,7 +49,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               </span>
             )}
           </h5>
-          <div className="mt-3 text-base-content text-opacity-60 font-mono">
+          <div className="mt-3 text-base-content text-opacity-100 font-mono">
             {loading || !profile
               ? skeleton({ width: 'w-48', height: 'h-5' })
               : profile.bio}
@@ -64,7 +64,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
             <a
               href={resume.fileUrl}
               target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
+              className="btn btn-outline btn-sm text-xs mt-6 opacity-100"
               download
               rel="noreferrer"
             >

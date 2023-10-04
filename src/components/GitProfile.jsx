@@ -185,27 +185,27 @@ const GitProfile = ({ config }) => {
                         loading={loading}
                         experiences={sanitizedConfig.experiences}
                       />
-                      <Education
-                        loading={loading}
-                        education={sanitizedConfig.education}
-                      />
                       <Certification
                         loading={loading}
                         certifications={sanitizedConfig.certifications}
+                      />
+                      <Education
+                        loading={loading}
+                        education={sanitizedConfig.education}
                       />
                     </div>
                   </div>
                   <div className="lg:col-span-2 col-span-1">
                     <div className="grid grid-cols-1 gap-6">
+                      <ExternalProject
+                        loading={loading}
+                        externalProjects={sanitizedConfig.externalProjects}
+                        googleAnalytics={sanitizedConfig.googleAnalytics}
+                      />
                       <Project
                         repo={repo}
                         loading={loading}
                         github={sanitizedConfig.github}
-                        googleAnalytics={sanitizedConfig.googleAnalytics}
-                      />
-                      <ExternalProject
-                        loading={loading}
-                        externalProjects={sanitizedConfig.externalProjects}
                         googleAnalytics={sanitizedConfig.googleAnalytics}
                       />
                       <Blog
@@ -247,6 +247,7 @@ GitProfile.propTypes = {
       linkedin: PropTypes.string,
       twitter: PropTypes.string,
       mastodon: PropTypes.string,
+      threads: PropTypes.string,
       facebook: PropTypes.string,
       instagram: PropTypes.string,
       youtube: PropTypes.string,
@@ -257,6 +258,7 @@ GitProfile.propTypes = {
       stackoverflow: PropTypes.string,
       website: PropTypes.string,
       skype: PropTypes.string,
+      discord: PropTypes.string,
       telegram: PropTypes.string,
       phone: PropTypes.string,
       email: PropTypes.string,

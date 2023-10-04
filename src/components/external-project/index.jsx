@@ -98,7 +98,7 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
             <div className="w-full">
               <div className="px-4">
                 <div className="text-center w-full">
-                  <h2 className="font-semibold text-lg tracking-wide text-center opacity-60 mb-2">
+                  <h2 className="font-semibold text-lg tracking-wide text-center opacity-100 mb-2">
                     {item.title}
                   </h2>
                   {item.imageUrl && (
@@ -116,7 +116,7 @@ const ExternalProject = ({ externalProjects, loading, googleAnalytics }) => {
                       </div>
                     </div>
                   )}
-                  <p className="mt-1 text-base-content text-opacity-60 text-sm">
+                  <p className="mt-1 text-base-content text-opacity-100 text-sm">
                     {item.description}
                   </p>
                 </div>

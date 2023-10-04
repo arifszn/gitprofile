@@ -216,6 +216,7 @@ const config = {
   social: {
     linkedin: '',
     twitter: '',
+    threads: '',
     mastodon: '',
     facebook: '',
     instagram: '',
@@ -227,6 +228,7 @@ const config = {
     stackoverflow: '', // format: userid/username
     website: '',
     skype: '',
+    discord: '',
     telegram: '',
     phone: '',
     email: '',
@@ -468,6 +470,7 @@ const config = {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
+    threads: '',
     facebook: '',
     instagram: '',
     youtube: '',
@@ -477,6 +480,7 @@ const config = {
     dev: '',
     stackoverflow: '',
     skype: '',
+    discord: '',
     telegram: '',
     website: '',
     phone: '',
