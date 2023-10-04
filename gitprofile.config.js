@@ -25,7 +25,6 @@ const config = {
     skype: '',
     discord: 'nathen418',
     telegram: '',
-    dev: 'nathen418',
     website: 'https://nathen418.com',
     phone: '',
     email: 'nathen418@playantares.com',
