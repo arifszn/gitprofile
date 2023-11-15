@@ -2,9 +2,9 @@
 
 const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
+    username: 'Abhay T S', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
-    limit: 10, // How many projects to display.
+    limit: 4, // How many projects to display.
     exclude: {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
@@ -24,43 +24,50 @@ const config = {
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://arifszn.com',
-    phone: '',
-    email: 'arifulalamszn@gmail.com',
+    website: '',
+    phone: '9744121719',
+    email: 'abhayfzv2@gmail.com',
   },
   resume: {
     fileUrl:
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
+    'Esri Products',
+    'QGIS',
+    'Postgres/PostGIS',
     'React.js',
     'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
-    'Git',
+    'ENVI',
+    'ERDAS IMAGINE',
+    'Leaflet JS',
+    'Mapbox GL JS',
     'Docker',
-    'PHPUnit',
+    'Openlayers',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'HTML',
+    'Python',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
+      company: 'District planning office -  Alappuzha',
+      position: 'Planning Assistant- GIS',
+      from: 'December 2017',
+      to: 'February 2018',
       companyLink: 'https://example.com',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
+      company: 'Redleaf Technologies',
+      position: 'GIS Engineer',
+      from: 'August 2018',
+      to: 'December 2022',
+      companyLink: 'https://example.com',
+    },
+    {
+      company: 'Timesworld Media and Technolgy Solutions',
+      position: 'Jr Mapbox Developer',
+      from: 'April 2023',
+      to: 'present',
       companyLink: 'https://example.com',
     },
   ],
@@ -74,16 +81,16 @@ const config = {
   ], */
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'NSS College Nilamel, Kollam',
+      degree: 'BSc Physics',
+      from: '2012',
+      to: '2015',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'IIITM - Kerala',
+      degree: 'MSc Geoinformatics',
+      from: '2015',
+      to: '2017',
     },
   ],
 
