@@ -11,7 +11,7 @@ export default defineConfig({
 
   // If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/, for example your repository is at https://github.com/<USERNAME>/<REPO_NAME>, then set base to '/<REPO_NAME>/'.
 
-  base: '/gitprofile/',
+  base: '/portfolio/',
   plugins: [
     react(),
     VitePWA({
