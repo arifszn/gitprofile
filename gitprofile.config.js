@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: 'Abhay T S', // Your GitHub org/user name. (Required)
+    username: 'binary-sunrise', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 4, // How many projects to display.
     exclude: {
@@ -11,16 +11,16 @@ const config = {
     },
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
-    facebook: '',
-    instagram: '',
+    linkedin: 'binary-sunrise',
+    twitter: 'binary-sunrise',
+    mastodon: 'binary-sunrise',
+    facebook: 'binary-sunrise',
+    instagram: 'binary-sunrise',
     youtube: '', // example: 'pewdiepie'
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: 'binary-sunrise',
+    dev: 'binary-sunrise',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
