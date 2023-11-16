@@ -651,3 +651,6 @@ To contribute, see the [Contributing guide](https://github.com/arifszn/gitprofil
 ## 📄 License
 
 [MIT](https://github.com/arifszn/gitprofile/blob/main/LICENSE)
+
+this is new line added
+
