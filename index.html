@@ -1,15 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title><%- metaTitle %></title>
+
+    <meta property="title" content="<%- metaTitle %>" />
+    <meta name="description" content="<%- metaDescription %>" />
+
+    <meta itemprop="name" content="<%- metaTitle %>" />
+    <meta itemprop="description" content="<%- metaDescription %>" />
+    <meta itemprop="image" content="<%- metaImageURL %>" />
+
+    <meta property="og:title" content="<%- metaTitle %>" />
+    <meta property="og:description" content="<%- metaDescription %>" />
+    <meta property="og:image" content="<%- metaImageURL %>" />
+    <meta property="og:image:secure_url" content="<%- metaImageURL %>" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<%- metaTitle %>" />
+    <meta name="twitter:description" content="<%- metaDescription %>" />
+    <meta name="twitter:image" content="<%- metaImageURL %>" />
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
