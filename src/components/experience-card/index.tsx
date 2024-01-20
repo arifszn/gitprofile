@@ -58,48 +58,42 @@ const ExperienceCard = ({
     return array;
   };
   return (
-    <>
-      {experiences?.length !== 0 && (
-        <div className="card shadow-lg compact bg-base-100">
-          <div className="card-body">
-            <div className="mx-3">
-              <h5 className="card-title">
-                {loading ? (
-                  skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
-                ) : (
-                  <span className="text-base-content opacity-70">
-                    Experience
-                  </span>
-                )}
-              </h5>
-            </div>
-            <div className="text-base-content text-opacity-60">
-              <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
-                {loading ? (
-                  renderSkeleton()
-                ) : (
-                  <Fragment>
-                    {experiences.map((experience, index) => (
-                      <ListItem
-                        key={index}
-                        time={`${experience.from} - ${experience.to}`}
-                        position={experience.position}
-                        company={experience.company}
-                        companyLink={
-                          experience.companyLink
-                            ? experience.companyLink
-                            : undefined
-                        }
-                      />
-                    ))}
-                  </Fragment>
-                )}
-              </ol>
-            </div>
-          </div>
+    <div className="card shadow-lg compact bg-base-100">
+      <div className="card-body">
+        <div className="mx-3">
+          <h5 className="card-title">
+            {loading ? (
+              skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
+            ) : (
+              <span className="text-base-content opacity-70">Experience</span>
+            )}
+          </h5>
         </div>
-      )}
-    </>
+        <div className="text-base-content text-opacity-60">
+          <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
+            {loading ? (
+              renderSkeleton()
+            ) : (
+              <Fragment>
+                {experiences.map((experience, index) => (
+                  <ListItem
+                    key={index}
+                    time={`${experience.from} - ${experience.to}`}
+                    position={experience.position}
+                    company={experience.company}
+                    companyLink={
+                      experience.companyLink
+                        ? experience.companyLink
+                        : undefined
+                    }
+                  />
+                ))}
+              </Fragment>
+            )}
+          </ol>
+        </div>
+      </div>
+    </div>
   );
 };
 

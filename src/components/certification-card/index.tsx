@@ -59,46 +59,40 @@ const CertificationCard = ({
   };
 
   return (
-    <>
-      {certifications?.length !== 0 && (
-        <div className="card shadow-lg compact bg-base-100">
-          <div className="card-body">
-            <div className="mx-3">
-              <h5 className="card-title">
-                {loading ? (
-                  skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
-                ) : (
-                  <span className="text-base-content opacity-70">
-                    Certification
-                  </span>
-                )}
-              </h5>
-            </div>
-            <div className="text-base-content text-opacity-60">
-              <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
-                {loading ? (
-                  renderSkeleton()
-                ) : (
-                  <>
-                    {certifications.map((certification, index) => (
-                      <ListItem
-                        key={index}
-                        year={`${certification.year}`}
-                        name={certification.name}
-                        body={certification.body}
-                        link={
-                          certification.link ? certification.link : undefined
-                        }
-                      />
-                    ))}
-                  </>
-                )}
-              </ol>
-            </div>
-          </div>
+    <div className="card shadow-lg compact bg-base-100">
+      <div className="card-body">
+        <div className="mx-3">
+          <h5 className="card-title">
+            {loading ? (
+              skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
+            ) : (
+              <span className="text-base-content opacity-70">
+                Certification
+              </span>
+            )}
+          </h5>
         </div>
-      )}
-    </>
+        <div className="text-base-content text-opacity-60">
+          <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
+            {loading ? (
+              renderSkeleton()
+            ) : (
+              <>
+                {certifications.map((certification, index) => (
+                  <ListItem
+                    key={index}
+                    year={`${certification.year}`}
+                    name={certification.name}
+                    body={certification.body}
+                    link={certification.link ? certification.link : undefined}
+                  />
+                ))}
+              </>
+            )}
+          </ol>
+        </div>
+      </div>
+    </div>
   );
 };
 

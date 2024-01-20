@@ -217,22 +217,30 @@ const GitProfile = ({ config }: { config: Config }) => {
                       github={sanitizedConfig.github}
                       social={sanitizedConfig.social}
                     />
-                    <SkillCard
-                      loading={loading}
-                      skills={sanitizedConfig.skills}
-                    />
-                    <ExperienceCard
-                      loading={loading}
-                      experiences={sanitizedConfig.experiences}
-                    />
-                    <CertificationCard
-                      loading={loading}
-                      certifications={sanitizedConfig.certifications}
-                    />
-                    <EducationCard
-                      loading={loading}
-                      educations={sanitizedConfig.educations}
-                    />
+                    {sanitizedConfig.skills.length !== 0 && (
+                      <SkillCard
+                        loading={loading}
+                        skills={sanitizedConfig.skills}
+                      />
+                    )}
+                    {sanitizedConfig.experiences.length !== 0 && (
+                      <ExperienceCard
+                        loading={loading}
+                        experiences={sanitizedConfig.experiences}
+                      />
+                    )}
+                    {sanitizedConfig.certifications.length !== 0 && (
+                      <CertificationCard
+                        loading={loading}
+                        certifications={sanitizedConfig.certifications}
+                      />
+                    )}
+                    {sanitizedConfig.educations.length !== 0 && (
+                      <EducationCard
+                        loading={loading}
+                        educations={sanitizedConfig.educations}
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="lg:col-span-2 col-span-1">

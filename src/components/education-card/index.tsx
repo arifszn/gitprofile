@@ -53,43 +53,37 @@ const EducationCard = ({
   };
 
   return (
-    <>
-      {educations?.length !== 0 && (
-        <div className="card shadow-lg compact bg-base-100">
-          <div className="card-body">
-            <div className="mx-3">
-              <h5 className="card-title">
-                {loading ? (
-                  skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
-                ) : (
-                  <span className="text-base-content opacity-70">
-                    Education
-                  </span>
-                )}
-              </h5>
-            </div>
-            <div className="text-base-content text-opacity-60">
-              <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
-                {loading ? (
-                  renderSkeleton()
-                ) : (
-                  <>
-                    {educations.map((item, index) => (
-                      <ListItem
-                        key={index}
-                        time={`${item.from} - ${item.to}`}
-                        degree={item.degree}
-                        institution={item.institution}
-                      />
-                    ))}
-                  </>
-                )}
-              </ol>
-            </div>
-          </div>
+    <div className="card shadow-lg compact bg-base-100">
+      <div className="card-body">
+        <div className="mx-3">
+          <h5 className="card-title">
+            {loading ? (
+              skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
+            ) : (
+              <span className="text-base-content opacity-70">Education</span>
+            )}
+          </h5>
         </div>
-      )}
-    </>
+        <div className="text-base-content text-opacity-60">
+          <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
+            {loading ? (
+              renderSkeleton()
+            ) : (
+              <>
+                {educations.map((item, index) => (
+                  <ListItem
+                    key={index}
+                    time={`${item.from} - ${item.to}`}
+                    degree={item.degree}
+                    institution={item.institution}
+                  />
+                ))}
+              </>
+            )}
+          </ol>
+        </div>
+      </div>
+    </div>
   );
 };
 
