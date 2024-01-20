@@ -28,5 +28,8 @@ export const DEFAULT_THEMES = [
   'night',
   'coffee',
   'winter',
+  'dim',
+  'nord',
+  'sunset',
   'procyon',
 ];

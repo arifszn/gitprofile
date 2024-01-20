@@ -331,9 +331,7 @@ interface Config {
   github: Github;
 
   /**
-   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn, set base to '/'.
-   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
-   * for example your repository is at https://github.com/arifszn/example, then set base to '/example/'.
+   * Vite's base url
    */
   base?: string;
 

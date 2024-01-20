@@ -5,7 +5,7 @@ const CONFIG = {
     username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
   },
   /**
-   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn, set base to '/'.
+   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
    * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
    * for example your repository is at https://github.com/arifszn/example, then set base to '/example/'.
    */
@@ -147,7 +147,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'wireframe',
+    defaultTheme: 'nord',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -191,6 +191,9 @@ const CONFIG = {
       'night',
       'coffee',
       'winter',
+      'dim',
+      'nord',
+      'sunset',
       'procyon',
     ],
 
