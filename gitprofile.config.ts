@@ -76,7 +76,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      '', // Empty fileUrl will hide the `Download Resume` button.
+      'https://awd.my.id/cv.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',
