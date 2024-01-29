@@ -50,7 +50,7 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.12",
     "vite-plugin-html": "^3.2.2",
-    "vite-plugin-pwa": "^0.17.4"
+    "vite-plugin-pwa": "^0.17.5"
   },
   "keywords": [
     "git-profile",
