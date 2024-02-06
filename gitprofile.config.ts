@@ -77,8 +77,15 @@ const CONFIG = {
       company: 'Successive Technologies',
       position: 'Senior Associate Engineer',
       from: 'Feb 2019',
-      to: 'Present',
+      to: 'Dec 2023',
       companyLink: 'https://successive.tech',
+    },
+    {
+      company: 'The Talent Enterprise',
+      position: 'Senior Devops Engineer',
+      from: 'Jan 2024',
+      to: 'Present',
+      companyLink: 'https://thetalententerprise.com/',
     },
   ],
   certifications: [
