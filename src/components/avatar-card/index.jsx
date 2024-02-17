@@ -49,7 +49,7 @@ const AvatarCard = ({ profile, loading, avatarRing, resume }) => {
               </span>
             )}
           </h5>
-          <div className="mt-3 text-base-content text-opacity-60 font-mono">
+          <div className="mt-3 text-base-content text-opacity-60 font-cambria">
             {loading || !profile
               ? skeleton({ width: 'w-48', height: 'h-5' })
               : profile.bio}
