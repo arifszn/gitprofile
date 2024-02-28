@@ -78,15 +78,22 @@ const CertificationCard = ({
               renderSkeleton()
             ) : (
               <>
-                {certifications.map((certification, index) => (
-                  <ListItem
-                    key={index}
-                    year={`${certification.year}`}
-                    name={certification.name}
-                    body={certification.body}
-                    link={certification.link ? certification.link : undefined}
-                  />
-                ))}
+                {certifications
+                  .filter(
+                    (certification) =>
+                      certification.year ||
+                      certification.name ||
+                      certification.body,
+                  )
+                  .map((certification, index) => (
+                    <ListItem
+                      key={index}
+                      year={certification.year}
+                      name={certification.name}
+                      body={certification.body}
+                      link={certification.link}
+                    />
+                  ))}
               </>
             )}
           </ol>
