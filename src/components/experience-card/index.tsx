@@ -75,19 +75,27 @@ const ExperienceCard = ({
               renderSkeleton()
             ) : (
               <Fragment>
-                {experiences.map((experience, index) => (
-                  <ListItem
-                    key={index}
-                    time={`${experience.from} - ${experience.to}`}
-                    position={experience.position}
-                    company={experience.company}
-                    companyLink={
-                      experience.companyLink
-                        ? experience.companyLink
-                        : undefined
-                    }
-                  />
-                ))}
+                {experiences
+                  .filter(
+                    (experience) =>
+                      experience.company ||
+                      experience.position ||
+                      experience.from ||
+                      experience.to,
+                  )
+                  .map((experience, index) => (
+                    <ListItem
+                      key={index}
+                      time={`${experience.from} - ${experience.to}`}
+                      position={experience.position}
+                      company={experience.company}
+                      companyLink={
+                        experience.companyLink
+                          ? experience.companyLink
+                          : undefined
+                      }
+                    />
+                  ))}
               </Fragment>
             )}
           </ol>
