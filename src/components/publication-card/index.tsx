@@ -26,41 +26,41 @@ const PublicationCard = ({
                         className: 'mb-2 mx-auto',
                       })}
                     </h2>
-                    <p>
+                    <div>
                       {skeleton({
                         widthCls: 'w-20',
                         heightCls: 'h-4',
                         className: 'mb-2 mx-auto',
                       })}
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                       {skeleton({
                         widthCls: 'w-20',
                         heightCls: 'h-4',
                         className: 'mb-2 mx-auto',
                       })}
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                       {skeleton({
                         widthCls: 'w-full',
                         heightCls: 'h-4',
                         className: 'mb-2 mx-auto',
                       })}
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                       {skeleton({
                         widthCls: 'w-full',
                         heightCls: 'h-4',
                         className: 'mb-2 mx-auto',
                       })}
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                       {skeleton({
                         widthCls: 'w-full',
                         heightCls: 'h-4',
                         className: 'mb-2 mx-auto',
                       })}
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
