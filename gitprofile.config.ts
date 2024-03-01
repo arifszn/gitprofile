@@ -60,6 +60,7 @@ const CONFIG = {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
+    researchGate: '',
     facebook: '',
     instagram: '',
     youtube: '', // example: 'pewdiepie'
@@ -156,7 +157,7 @@ const CONFIG = {
   blog: {
     source: 'dev', // medium | dev
     username: 'arifszn', // to hide blog section, keep it empty
-    limit: 3, // How many articles to display. Max is 10.
+    limit: 2, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX

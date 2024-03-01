@@ -211,6 +211,7 @@ const CONFIG = {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
+    researchGate: '',
     facebook: '',
     instagram: '',
     youtube: '', // example: 'pewdiepie'
@@ -485,7 +486,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, ResearchGate, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
 ```ts
 // gitprofile.config.ts
@@ -495,6 +496,7 @@ const CONFIG = {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
+    researchGate: '',
     facebook: '',
     instagram: '',
     youtube: '',
