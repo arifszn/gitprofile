@@ -82,9 +82,23 @@ export const getSanitizedConfig = (
         fileUrl: config?.resume?.fileUrl || '',
       },
       skills: config?.skills || [],
-      experiences: config?.experiences || [],
-      certifications: config?.certifications || [],
-      educations: config?.educations || [],
+      experiences:
+        config?.experiences?.filter(
+          (experience) =>
+            experience.company ||
+            experience.position ||
+            experience.from ||
+            experience.to,
+        ) || [],
+      certifications:
+        config?.certifications?.filter(
+          (certification) =>
+            certification.year || certification.name || certification.body,
+        ) || [],
+      educations:
+        config?.educations?.filter(
+          (item) => item.institution || item.degree || item.from || item.to,
+        ) || [],
       googleAnalytics: {
         id: config?.googleAnalytics?.id,
       },
