@@ -106,7 +106,7 @@ const PublicationCard = ({
                     </p>
                   )}
                   {item.description && (
-                    <p className="mt-1 text-base-content text-opacity-60 text-sm">
+                    <p className="mt-2 text-base-content text-opacity-60 text-sm">
                       {item.description}
                     </p>
                   )}
