@@ -87,6 +87,15 @@ export interface SanitizedEducation {
   to: string;
 }
 
+export interface SanitizedPublication {
+  title: string;
+  conferenceName?: string;
+  journalName?: string;
+  authors?: string;
+  link?: string;
+  description?: string;
+}
+
 export interface SanitizedGoogleAnalytics {
   id?: string;
 }
@@ -132,6 +141,7 @@ export interface SanitizedConfig {
   experiences: Array<SanitizedExperience>;
   educations: Array<SanitizedEducation>;
   certifications: Array<SanitizedCertification>;
+  publications: Array<SanitizedPublication>;
   googleAnalytics: SanitizedGoogleAnalytics;
   hotjar: SanitizedHotjar;
   blog: SanitizedBlog;
