@@ -70,19 +70,14 @@ const EducationCard = ({
               renderSkeleton()
             ) : (
               <>
-                {educations
-                  .filter(
-                    (item) =>
-                      item.institution || item.degree || item.from || item.to,
-                  )
-                  .map((item, index) => (
-                    <ListItem
-                      key={index}
-                      time={`${item.from} - ${item.to}`}
-                      degree={item.degree}
-                      institution={item.institution}
-                    />
-                  ))}
+                {educations.map((item, index) => (
+                  <ListItem
+                    key={index}
+                    time={`${item.from} - ${item.to}`}
+                    degree={item.degree}
+                    institution={item.institution}
+                  />
+                ))}
               </>
             )}
           </ol>

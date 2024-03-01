@@ -69,6 +69,7 @@
 ✓ [Certification Section](#certifications)  
 ✓ [Education Section](#education)  
 ✓ [Projects Section](#projects)  
+✓ [Publication Section](#publications)  
 ✓ [Blog Posts Section](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
@@ -280,6 +281,17 @@ const CONFIG = {
       degree: 'Degree',
       from: '2012',
       to: '2014',
+    },
+  ],
+  publications: [
+    {
+      title: 'Publication Title',
+      conferenceName: 'Conference Name',
+      journalName: 'Journal Name',
+      authors: 'John Doe, Jane Smith',
+      link: 'https://example.com',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
@@ -659,6 +671,30 @@ const CONFIG = {
   },
 };
 ```
+
+### Publications
+
+Provide your academic publishing in `publications`.
+
+```ts
+// gitprofile.config.ts
+const CONFIG = {
+  // ...
+  publications: [
+    {
+      title: 'Publication Title',
+      conferenceName: 'Conference Name',
+      journalName: 'Journal Name',
+      authors: 'John Doe, Jane Smith',
+      link: 'https://example.com',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+    },
+  ],
+};
+```
+
+Empty array will hide the publications section.
 
 ### Blog Posts
 

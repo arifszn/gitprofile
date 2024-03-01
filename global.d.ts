@@ -217,6 +217,15 @@ interface Education {
   to: string;
 }
 
+interface Publication {
+  title: string;
+  conferenceName?: string;
+  journalName?: string;
+  authors?: string;
+  link?: string;
+  description?: string;
+}
+
 interface GoogleAnalytics {
   /**
    * GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -369,6 +378,11 @@ interface Config {
    * Education list
    */
   educations?: Array<Education>;
+
+  /**
+   * Publication list
+   */
+  publications?: Array<Publication>;
 
   /**
    * Resume
