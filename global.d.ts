@@ -123,6 +123,11 @@ interface Social {
   mastodon?: string;
 
   /**
+   * ResearchGate username
+   */
+  researchGate?: string;
+
+  /**
    * Facebook
    */
   facebook?: string;

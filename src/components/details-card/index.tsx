@@ -4,7 +4,7 @@ import {
   AiFillInstagram,
   AiFillMediumSquare,
 } from 'react-icons/ai';
-import { SiTwitter } from 'react-icons/si';
+import { SiTwitter, SiResearchgate } from 'react-icons/si';
 import { CgDribbble } from 'react-icons/cg';
 import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
 import { Fragment } from 'react';
@@ -147,6 +147,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 value={github.username}
                 link={`https://github.com/${github.username}`}
               />
+              {social?.researchGate && (
+                <ListItem
+                  icon={<SiResearchgate />}
+                  title="ResearchGate:"
+                  value={social.researchGate}
+                  link={`https://www.researchgate.net/profile/${social.researchGate}`}
+                />
+              )}
               {social?.twitter && (
                 <ListItem
                   icon={<SiTwitter />}
@@ -265,7 +273,6 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   link={`https://t.me/${social.telegram}`}
                 />
               )}
-
               {social?.phone && (
                 <ListItem
                   icon={<RiPhoneFill />}

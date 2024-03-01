@@ -60,6 +60,7 @@ const CONFIG = {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
+    researchGate: '',
     facebook: '',
     instagram: '',
     youtube: '', // example: 'pewdiepie'
