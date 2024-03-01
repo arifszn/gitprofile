@@ -123,6 +123,11 @@ interface Social {
   mastodon?: string;
 
   /**
+   * ResearchGate username
+   */
+  researchGate?: string;
+
+  /**
    * Facebook
    */
   facebook?: string;
@@ -215,6 +220,15 @@ interface Education {
   degree?: string;
   from: string;
   to: string;
+}
+
+interface Publication {
+  title: string;
+  conferenceName?: string;
+  journalName?: string;
+  authors?: string;
+  link?: string;
+  description?: string;
 }
 
 interface GoogleAnalytics {
@@ -369,6 +383,11 @@ interface Config {
    * Education list
    */
   educations?: Array<Education>;
+
+  /**
+   * Publication list
+   */
+  publications?: Array<Publication>;
 
   /**
    * Resume

@@ -69,6 +69,7 @@
 ✓ [Certification Section](#certifications)  
 ✓ [Education Section](#education)  
 ✓ [Projects Section](#projects)  
+✓ [Publication Section](#publications)  
 ✓ [Blog Posts Section](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
@@ -210,6 +211,7 @@ const CONFIG = {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
+    researchGate: '',
     facebook: '',
     instagram: '',
     youtube: '', // example: 'pewdiepie'
@@ -280,6 +282,17 @@ const CONFIG = {
       degree: 'Degree',
       from: '2012',
       to: '2014',
+    },
+  ],
+  publications: [
+    {
+      title: 'Publication Title',
+      conferenceName: 'Conference Name',
+      journalName: 'Journal Name',
+      authors: 'John Doe, Jane Smith',
+      link: 'https://example.com',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
@@ -473,7 +486,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, ResearchGate, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
 ```ts
 // gitprofile.config.ts
@@ -483,6 +496,7 @@ const CONFIG = {
     linkedin: 'ariful-alam',
     twitter: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
+    researchGate: '',
     facebook: '',
     instagram: '',
     youtube: '',
@@ -659,6 +673,30 @@ const CONFIG = {
   },
 };
 ```
+
+### Publications
+
+Provide your academic publishing in `publications`.
+
+```ts
+// gitprofile.config.ts
+const CONFIG = {
+  // ...
+  publications: [
+    {
+      title: 'Publication Title',
+      conferenceName: 'Conference Name',
+      journalName: 'Journal Name',
+      authors: 'John Doe, Jane Smith',
+      link: 'https://example.com',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+    },
+  ],
+};
+```
+
+Empty array will hide the publications section.
 
 ### Blog Posts
 
