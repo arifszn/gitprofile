@@ -119,6 +119,8 @@ If you wish to add a custom domain, no CNAME file is required. Just add it to yo
 
 As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
 
+[**Not working?**](https://github.com/arifszn/gitprofile/discussions/548)
+
 ### Setting up locally
 
 - Clone the project and change directory.
