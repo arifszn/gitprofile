@@ -55,7 +55,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://github.com/vishu42/me/releases/download/0.0.11/resume2023-25-jul.docx', // Empty fileUrl will hide the `Download Resume` button.
+      'https://github.com/vishu42/me/releases/download/0.0.12/resume1.0.4.docx.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Azure',
