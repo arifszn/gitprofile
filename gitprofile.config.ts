@@ -5,7 +5,7 @@ const CONFIG = {
     username: 'Noraxx1', // Your GitHub org/user name. (This is the only required config)
   },
 
-  base: '/gitprofile/',
+  base: '/',
   projects: {
     github: {
       display: true,
