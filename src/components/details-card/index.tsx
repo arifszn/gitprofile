@@ -126,19 +126,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<MdLocationOn />}
                   title="Based in:"
-                  value={profile.location}
-                />
-              )}
-              {profile.company && (
-                <ListItem
-                  icon={<FaBuilding />}
-                  title="Company:"
-                  value={profile.company}
-                  link={
-                    isCompanyMention(profile.company.trim())
-                      ? companyLink(profile.company.trim())
-                      : undefined
-                  }
+                  value={`${profile.company}, ${profile.location}`}
                 />
               )}
               <ListItem

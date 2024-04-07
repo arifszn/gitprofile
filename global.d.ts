@@ -77,6 +77,8 @@ interface ExternalProjects {
    */
   projects?: {
     title: string;
+    year: string;
+    engine: string;
     description?: string;
     imageUrl?: string;
     link: string;
@@ -86,6 +88,7 @@ interface ExternalProjects {
 interface Projects {
   github?: GitHubProjects;
 
+  exp?: ExternalProjects;
   external?: ExternalProjects;
   jams?: ExternalProjects;
 }

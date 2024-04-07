@@ -88,7 +88,7 @@ const ExternalProjectCard = ({
           window?.open(item.link, '_blank');
         }}
       >
-        <div className="p-8 h-full w-full">
+        <div className="p-8 h-full w-full" style={{backgroundImage: `url(${item.imageUrl})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}} >
           <div className="flex items-center flex-col">
             <div className="w-full">
               <div className="px-4">
@@ -96,7 +96,7 @@ const ExternalProjectCard = ({
                   <h2 className="font-medium text-center opacity-60 mb-2">
                     {item.title}
                   </h2>
-                  {item.imageUrl && (
+                  {/* {item.imageUrl && (
                     <div className="avatar opacity-90">
                       <div className="w-24 h-24 mask mask-squircle">
                         <LazyImage
@@ -110,7 +110,7 @@ const ExternalProjectCard = ({
                         />
                       </div>
                     </div>
-                  )}
+                  )} */}
                   <p className="mt-2 text-base-content text-opacity-60 text-sm text-justify">
                     {item.description}
                   </p>

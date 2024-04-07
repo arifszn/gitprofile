@@ -50,6 +50,10 @@ export const getSanitizedConfig = (
             projects: config?.projects?.github?.manual?.projects || [],
           },
         },
+        exp: {
+          header: config?.projects?.exp?.header || 'My Projects',
+          projects: config?.projects?.exp?.projects || [],
+        },
         external: {
           header: config?.projects?.external?.header || 'My Projects',
           projects: config?.projects?.external?.projects || [],

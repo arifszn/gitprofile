@@ -21,6 +21,8 @@ export interface SanitizedGitHubProjects {
 
 export interface SanitizedExternalProject {
   title: string;
+  year: string;
+  engine: string;
   description?: string;
   imageUrl?: string;
   link: string;
@@ -33,6 +35,7 @@ export interface SanitizedExternalProjects {
 
 export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
+  exp: SanitizedExternalProjects;
   external: SanitizedExternalProjects;
   jams: SanitizedExternalProjects;
 }

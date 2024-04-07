@@ -33,11 +33,13 @@ const CONFIG = {
       },
     },
     external: {
-      header: 'Modding',
+      header: 'Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
           title: 'RTS Project',
+          engine: 'Unity',
+          year: '2023',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
@@ -45,7 +47,29 @@ const CONFIG = {
           link: 'https://example.com',
         },
         {
+          title: 'Darkest Hour',
+          engine: 'Unreal II',
+          year: '2024',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://cdn.cloudflare.steamstatic.com/steam/apps/1280/ss_f7fbb658f9ce4f68787ddd3e507b87090b696208.jpg',
+          link: 'https://store.steampowered.com/app/1280/Darkest_Hour_Europe_4445/',
+        },
+        {
+          title: 'Jabroni Brawl',
+          engine: 'Source Engine',
+          year: '2022',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://store.steampowered.com/app/869480/Jabroni_Brawl_Episode_3/',
+        },
+        {
           title: 'Nova Coop',
+          engine: 'Starcraft II',
+          year: '2022',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
@@ -54,6 +78,8 @@ const CONFIG = {
         },
         {
           title: 'Legacy of the Void Coop',
+          engine: 'Starcraft II - StarEdit',
+          year: '2021',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
@@ -62,6 +88,8 @@ const CONFIG = {
         },
         {
           title: 'Heart of the Swarm Coop',
+          engine: 'Starcraft II - StarEdit',
+          year: '2020',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
@@ -70,42 +98,52 @@ const CONFIG = {
         },
         {
           title: 'Wings of Liberty Coop',
+          engine: 'Starcraft II - StarEdit',
+          year: '2020',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://lorddz.github.io/website/static/media/sc2_04.4ee657cb.jpg',
           link: 'https://example.com',
         },
         {
           title: 'Reversed German Campaign',
+          engine: 'Gates of Hell - Gem Editor',
+          year: '2021',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://steamuserimages-a.akamaihd.net/ugc/1695024784763189171/3410158069D0140AF7353220DC1FA31CAEEDF92E/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
+          link: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2528549347',
         },
         {
           title: 'Pacific Island',
+          engine: 'Men of War II - Gem Editor',
+          year: '2017',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://steamuserimages-a.akamaihd.net/ugc/871867654862148500/69FCC6471A9E339B2307676CE99A8B187025EF6B/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
           link: 'https://example.com',
         },
         {
           title: 'Black Mesa Spy Campaign Part 2',
+          engine: 'Black Mesa - Hammer Editor',
+          year: '2017',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://lorddz.github.io/website/static/media/bms02.7ab9140b.jpg',
           link: 'https://example.com',
         },
         {
           title: 'Black Mesa Spy Campaign Part 1',
+          engine: 'Black Mesa - Hammer Editor',
+          year: '2016',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://lorddz.github.io/website/static/media/bms01.95335645.jpg',
           link: 'https://example.com',
         },
       ],
@@ -115,7 +153,45 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Nova Coop',
+          title: 'Global Game Jam',
+          engine: 'unity',
+          year: '2024',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Global Game Jam',
+          engine: 'unity',
+          year: '2023',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Global Game Jam',
+          engine: 'unity',
+          year: '2022',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+      ],
+    },
+    exp: {
+      header: 'Experiences',
+      // To hide the `External Projects` section, keep it empty.
+      projects: [
+        {
+          title: 'Ericsson',
+          engine: 'Lead Frontend',
+          year: '2024',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
           imageUrl:
@@ -125,6 +201,7 @@ const CONFIG = {
       ],
     },
   },
+
   seo: {
     title: 'David Zetterdahl',
     description: '',
@@ -160,28 +237,27 @@ const CONFIG = {
     'Git',
     'Docker',
     'CSS',
-    'Antd',
     'C#',
     'C++',
     'Unity',
     'Unreal',
   ],
-  experiences: [
-    // {
-    //   company: 'Company Name',
-    //   position: 'Position',
-    //   from: 'September 2021',
-    //   to: 'Present',
-    //   companyLink: 'https://example.com',
-    // },
-    // {
-    //   company: 'Company Name',
-    //   position: 'Position',
-    //   from: 'July 2019',
-    //   to: 'August 2021',
-    //   companyLink: 'https://example.com',
-    // },
-  ],
+  // experiences: [
+  //   {
+  //     company: 'Company Name',
+  //     position: 'Position',
+  //     from: 'September 2021',
+  //     to: 'Present',
+  //     companyLink: 'https://example.com',
+  //   },
+  //   {
+  //     company: 'Company Name',
+  //     position: 'Position',
+  //     from: 'July 2019',
+  //     to: 'August 2021',
+  //     companyLink: 'https://example.com',
+  //   },
+  // ],
   certifications: [
     // {
     //   name: 'Lorem ipsum',
