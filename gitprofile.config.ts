@@ -189,11 +189,91 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
+          title: 'Geely Design',
+          engine: 'Unity Prototyper',
+          year: '2023-2024',
+          description: '',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Stena Line',
+          engine: 'Frontend Developer',
+          year: '2022-2023',
+          description: '',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
           title: 'Ericsson',
-          engine: 'Lead Frontend',
-          year: '2024',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          engine: 'Frontend Lead',
+          year: '2020-2022',
+          description: '',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Bitwave',
+          engine: 'Level designer',
+          year: '2019',
+          description: '',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Telia',
+          engine: 'Frontend Developer',
+          year: '2019',
+          description: '',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Viscando',
+          engine: 'Frontend Developer',
+          year: '2018',
+          description: '',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Norrkoping IT',
+          engine: 'System Developer',
+          year: '2018',
+          description: '',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Insert Coin',
+          engine: 'Xamarin Developer',
+          year: '2017',
+          description: '',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Extenda Express',
+          engine: 'Xamarin Developer',
+          year: '2017',
+          description: '',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Mindmancer',
+          engine: 'Frontend Developer',
+          year: '2015-2017',
+          description: '',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
           link: 'https://example.com',
