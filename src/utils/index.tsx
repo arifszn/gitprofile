@@ -54,6 +54,10 @@ export const getSanitizedConfig = (
           header: config?.projects?.external?.header || 'My Projects',
           projects: config?.projects?.external?.projects || [],
         },
+        jams: {
+          header: config?.projects?.jams?.header || 'My Projects',
+          projects: config?.projects?.jams?.projects || [],
+        },
       },
       seo: {
         title: config?.seo?.title,
