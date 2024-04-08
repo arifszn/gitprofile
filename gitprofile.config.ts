@@ -182,6 +182,16 @@ const CONFIG = {
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
           link: 'https://example.com',
         },
+        {
+          title: 'Castle Game Jam',
+          engine: 'unity',
+          year: '2016',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
       ],
     },
     exp: {
@@ -390,6 +400,7 @@ const CONFIG = {
 
     // Available themes. To remove any theme, exclude from here.
     themes: [
+      'halloween',
       'light',
       'dark',
       'cupcake',
@@ -400,7 +411,6 @@ const CONFIG = {
       'retro',
       'cyberpunk',
       'valentine',
-      'halloween',
       'garden',
       'forest',
       'aqua',
