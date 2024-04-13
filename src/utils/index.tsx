@@ -209,7 +209,7 @@ export const skeleton = ({
 export const setupHotjar = (hotjarConfig: SanitizedHotjar): void => {
   if (hotjarConfig?.id) {
     const snippetVersion = hotjarConfig?.snippetVersion || 6;
-    hotjar.initialize(parseInt(hotjarConfig.id), snippetVersion);
+    hotjar.initialize({ id: parseInt(hotjarConfig.id), sv: snippetVersion });
   }
 };
 
