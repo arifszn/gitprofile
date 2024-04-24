@@ -96,6 +96,11 @@ const ThemeChanger = ({
                           e.preventDefault();
                           changeTheme(item);
                         }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') {
+                            changeTheme(item);
+                          }
+                        }}
                         className={`${theme === item ? 'active' : ''}`}
                       >
                         <span className="opacity-60 capitalize">
