@@ -63,7 +63,10 @@ const CONFIG = {
     researchGate: '',
     facebook: '',
     instagram: '',
+    reddit: '',
+    threads: '', // example: '@username'
     youtube: '', // example: 'pewdiepie'
+    udemy: '',
     dribbble: '',
     behance: '',
     medium: 'arifszn',
@@ -134,6 +137,7 @@ const CONFIG = {
     },
   ],
   publications: [
+    // leave this section empty if you don't have any publications
     {
       title: 'Publication Title',
       conferenceName: '',

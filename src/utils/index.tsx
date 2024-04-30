@@ -1,13 +1,13 @@
+import { hotjar } from 'react-hotjar';
 import { LOCAL_STORAGE_KEY_NAME } from '../constants';
 import { DEFAULT_CUSTOM_THEME } from '../constants/default-custom-theme';
 import { DEFAULT_THEMES } from '../constants/default-themes';
+import colors from '../data/colors.json';
 import {
   SanitizedConfig,
   SanitizedHotjar,
   SanitizedThemeConfig,
 } from '../interfaces/sanitized-config';
-import { hotjar } from 'react-hotjar';
-import colors from '../data/colors.json';
 
 export const isDarkishTheme = (appliedTheme: string): boolean => {
   return ['dark', 'halloween', 'forest', 'black', 'luxury', 'dracula'].includes(
@@ -66,7 +66,10 @@ export const getSanitizedConfig = (
         mastodon: config?.social?.mastodon,
         facebook: config?.social?.facebook,
         instagram: config?.social?.instagram,
+        reddit: config?.social?.reddit,
+        threads: config?.social?.threads,
         youtube: config?.social?.youtube,
+        udemy: config?.social?.udemy,
         dribbble: config?.social?.dribbble,
         behance: config?.social?.behance,
         medium: config?.social?.medium,
