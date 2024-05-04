@@ -686,7 +686,6 @@ The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
 </a>
 
 ## 💡 Contribute
-
 To contribute, see the [Contributing guide](https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md).
 
 ## 📄 License
