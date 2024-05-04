@@ -64,7 +64,7 @@ const CONFIG = {
     facebook: '',
     instagram: '',
     reddit: '',
-    threads: '', // example: '@username'
+    threads: '',
     youtube: '', // example: 'pewdiepie'
     udemy: '',
     dribbble: '',
@@ -137,7 +137,6 @@ const CONFIG = {
     },
   ],
   publications: [
-    // leave this section empty if you don't have any publications
     {
       title: 'Publication Title',
       conferenceName: '',
