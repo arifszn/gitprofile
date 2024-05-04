@@ -226,7 +226,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   icon={<FaSquareThreads />}
                   title="Threads:"
                   value={social.threads}
-                  link={`https://www.threads.net/${social.threads}`}
+                  link={`https://www.threads.net/@${social.threads.replace('@', '')}`}
                 />
               )}
               {social?.youtube && (
@@ -241,7 +241,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<SiUdemy />}
                   title="Udemy:"
-                  value={`@${social.udemy}`}
+                  value={social.udemy}
                   link={`https://www.udemy.com/user/${social.udemy}`}
                 />
               )}
