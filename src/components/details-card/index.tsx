@@ -1,32 +1,34 @@
-import { MdLocationOn } from 'react-icons/md';
+import { Fragment } from 'react';
 import {
   AiFillGithub,
   AiFillInstagram,
   AiFillMediumSquare,
 } from 'react-icons/ai';
-import { SiTwitter, SiResearchgate } from 'react-icons/si';
 import { CgDribbble } from 'react-icons/cg';
-import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
-import { Fragment } from 'react';
 import {
   FaBehanceSquare,
   FaBuilding,
   FaDev,
   FaFacebook,
   FaGlobe,
-  FaSkype,
+  FaLinkedin,
   FaMastodon,
+  FaReddit,
+  FaSkype,
   FaStackOverflow,
   FaTelegram,
-  FaLinkedin,
   FaYoutube,
 } from 'react-icons/fa';
-import { skeleton } from '../../utils';
+import { FaSquareThreads } from 'react-icons/fa6';
+import { MdLocationOn } from 'react-icons/md';
+import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
+import { SiResearchgate, SiTwitter, SiUdemy } from 'react-icons/si';
 import { Profile } from '../../interfaces/profile';
 import {
   SanitizedGithub,
   SanitizedSocial,
 } from '../../interfaces/sanitized-config';
+import { skeleton } from '../../utils';
 
 type Props = {
   profile: Profile | null;
@@ -211,12 +213,36 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   link={`https://www.instagram.com/${social.instagram}`}
                 />
               )}
+              {social?.reddit && (
+                <ListItem
+                  icon={<FaReddit />}
+                  title="Reddit:"
+                  value={social.reddit}
+                  link={`https://www.reddit.com/user/${social.reddit}`}
+                />
+              )}
+              {social?.threads && (
+                <ListItem
+                  icon={<FaSquareThreads />}
+                  title="Threads:"
+                  value={social.threads}
+                  link={`https://www.threads.net/@${social.threads.replace('@', '')}`}
+                />
+              )}
               {social?.youtube && (
                 <ListItem
                   icon={<FaYoutube />}
                   title="YouTube:"
                   value={`@${social.youtube}`}
                   link={`https://www.youtube.com/@${social.youtube}`}
+                />
+              )}
+              {social?.udemy && (
+                <ListItem
+                  icon={<SiUdemy />}
+                  title="Udemy:"
+                  value={social.udemy}
+                  link={`https://www.udemy.com/user/${social.udemy}`}
                 />
               )}
               {social?.medium && (

@@ -49,7 +49,10 @@ export interface SanitizedSocial {
   researchGate?: string;
   facebook?: string;
   instagram?: string;
+  reddit?: string;
+  threads?: string;
   youtube?: string;
+  udemy?: string;
   dribbble?: string;
   behance?: string;
   medium?: string;
