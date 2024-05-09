@@ -118,9 +118,9 @@ interface Social {
   twitter?: string;
 
   /**
-   * Mastodon
+   * Fediverse
    */
-  mastodon?: string;
+  fediverse?: string;
 
   /**
    * ResearchGate username

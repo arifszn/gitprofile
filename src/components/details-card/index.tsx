@@ -12,7 +12,7 @@ import {
   FaFacebook,
   FaGlobe,
   FaLinkedin,
-  FaMastodon,
+  FaAtom,
   FaReddit,
   FaSkype,
   FaStackOverflow,
@@ -45,16 +45,18 @@ const companyLink = (company: string): string => {
   return `https://github.com/${company.substring(1)}`;
 };
 
-const getFormattedMastodonValue = (
-  mastodonValue: string,
+const getFormattedFediverseValue = (
+  fediverseValue: string,
   isLink: boolean,
 ): string => {
-  const [username, server] = mastodonValue.split('@');
+  const indexOfAt = fediverseValue.lastIndexOf('@');
+  const username = fediverseValue.substring(1, indexOfAt);
+  const server = fediverseValue.substring(indexOfAt + 1);
 
   if (isLink) {
     return `https://${server}/@${username}`;
   } else {
-    return `${username}@${server}`;
+    return `@${username}@${server}`;
   }
 };
 
@@ -165,12 +167,12 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   link={`https://twitter.com/${social.twitter}`}
                 />
               )}
-              {social?.mastodon && (
+              {social?.fediverse && (
                 <ListItem
-                  icon={<FaMastodon />}
-                  title="Mastodon:"
-                  value={getFormattedMastodonValue(social.mastodon, false)}
-                  link={getFormattedMastodonValue(social.mastodon, true)}
+                  icon={<FaAtom />}
+                  title="Fediverse:"
+                  value={getFormattedFediverseValue(social.fediverse, false)}
+                  link={getFormattedFediverseValue(social.fediverse, true)}
                 />
               )}
               {social?.linkedin && (
