@@ -122,12 +122,12 @@ const CONFIG = {
       degree: 'Bachelor's of Computer Science',
       to: '2024',
     },
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
-    },
+    //{
+      //institution: 'Institution Name',
+      //degree: 'Degree',
+      //from: '2012',
+      //to: '2014',
+    //},
   ],
   //publications: [
     //{
