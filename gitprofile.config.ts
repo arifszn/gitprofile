@@ -83,20 +83,14 @@ const CONFIG = {
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
+    'C++',
+    'C',
     'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
-    'Git',
-    'Docker',
-    'PHPUnit',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'Python',
+    'Arduino',
+    'FreeRTOS',
+    'Embedded Systems'
   ],
   experiences: [
     {
@@ -114,20 +108,19 @@ const CONFIG = {
       companyLink: 'https://example.com',
     },
   ],
-  certifications: [
-    {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
-    },
-  ],
+  //certifications: [
+    //{
+      //name: 'Lorem ipsum',
+      //body: 'Lorem ipsum dolor sit amet',
+      //year: 'March 2022',
+      //link: 'https://example.com',
+    //},
+  //],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'University of Idaho',
+      degree: 'Bachelor's of Computer Science',
+      to: '2024',
     },
     {
       institution: 'Institution Name',
