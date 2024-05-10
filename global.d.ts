@@ -210,7 +210,14 @@ interface Social {
 
 interface Resume {
   /**
-   * Resume file urlm
+   * Resume file url
+   */
+  fileUrl?: string;
+}
+
+interface PublicKey {
+  /**
+   * Public key file url
    */
   fileUrl?: string;
 }
@@ -408,6 +415,11 @@ interface Config {
    * Resume
    */
   resume?: Resume;
+
+  /**
+   * Public key
+   */
+  publicKey?: PublicKey;
 
   /**
    * Google Analytics config
