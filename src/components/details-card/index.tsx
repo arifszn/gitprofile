@@ -385,7 +385,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<RiMailFill />}
                   title="Email:"
-                  value={social.email}
+                  value={social.email.split("?")[0]}
                   link={`mailto:${social.email}`}
                 />
               )}
