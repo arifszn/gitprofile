@@ -11,6 +11,7 @@ import {
   FaDev,
   FaFacebook,
   FaGlobe,
+  FaKey,
   FaLinkedin,
   FaAtom,
   FaReddit,
@@ -67,6 +68,10 @@ const ListItem: React.FC<{
   link?: string;
   skeleton?: boolean;
 }> = ({ icon, title, value, link, skeleton = false }) => {
+  const mailtoRegex = /^mailto:(.+)\?key=(.+)$/;
+  const isMailto = link && link.startsWith("mailto:");
+  const mailtoMatches = isMailto ? link.match(mailtoRegex) : [];
+  const decodedKeyLink = mailtoMatches ? decodeURIComponent(mailtoMatches[2]) : '';
   return (
     <div
       className="flex justify-start py-2 px-1 items-center"
@@ -82,6 +87,16 @@ const ListItem: React.FC<{
           wordBreak: 'break-word',
         }}
       >
+        {isMailto ? (
+          <div className="inline-flex space-x-2">
+            <a href={`mailto:${mailtoMatches![1]}`} target="_blank" rel="noreferrer">
+              {value}
+            </a>
+            <a href={decodedKeyLink} target="_blank" rel="noreferrer" download>
+              <FaKey />
+            </a>
+          </div>
+        ) : (
         <a
           href={link}
           target="_blank"
@@ -90,6 +105,7 @@ const ListItem: React.FC<{
         >
           {value}
         </a>
+        )}
       </div>
     </div>
   );
