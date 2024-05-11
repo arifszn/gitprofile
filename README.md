@@ -171,6 +171,7 @@ const CONFIG = {
       header: 'Github Projects',
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
+        type: 'projects', // 'commits' will display user's commit, 'projects' will display projects by user.
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
         limit: 8, // How many projects to display.
         exclude: {
@@ -650,6 +651,7 @@ const CONFIG = {
       header: 'Github Projects',
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
+        type: 'projects', // 'commits' will display user's commit, 'projects' will display projects by user.
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
         limit: 8, // How many projects to display.
         exclude: {

@@ -16,7 +16,8 @@ const CONFIG = {
       header: 'Github Projects',
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
+        type: 'projects', // 'commits' will display user's commit, 'projects' will display projects by user.
+        sortBy: 'stars', // Sort projects by 'stars', 'updated' or 'committer-date'.
         limit: 8, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.

@@ -34,9 +34,10 @@ export const getSanitizedConfig = (
       projects: {
         github: {
           display: config?.projects?.github?.display ?? true,
-          header: config?.projects?.github?.header || 'Github Projects',
+          header: config?.projects?.github?.header || (config?.projects?.github?.automatic?.type === 'commits' ? 'Github Commits' : 'Github Projects'),
           mode: config?.projects?.github?.mode || 'automatic',
           automatic: {
+            type: config?.projects?.github?.automatic?.type || 'projects',
             sortBy: config?.projects?.github?.automatic?.sortBy || 'stars',
             limit: config?.projects?.github?.automatic?.limit || 8,
             exclude: {

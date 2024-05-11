@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { AiOutlineFork, AiOutlineStar } from 'react-icons/ai';
+import { AiOutlineCode, AiOutlineComment, AiOutlineFork, AiOutlineStar } from 'react-icons/ai';
 import { MdInsertLink } from 'react-icons/md';
 import { ga, getLanguageColor, skeleton } from '../../utils';
 import { GithubProject } from '../../interfaces/github-project';
@@ -11,6 +11,8 @@ const GithubProjectCard = ({
   limit,
   username,
   googleAnalyticsId,
+  type,
+  sortBy,
 }: {
   header: string;
   githubProjects: GithubProject[];
@@ -18,6 +20,8 @@ const GithubProjectCard = ({
   limit: number;
   username: string;
   googleAnalyticsId?: string;
+  type?: string;
+  sortBy?: string;
 }) => {
   if (!loading && githubProjects.length === 0) {
     return;
@@ -75,61 +79,103 @@ const GithubProjectCard = ({
 
   const renderProjects = () => {
     return githubProjects.map((item, index) => (
-      <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
-        href={item.html_url}
-        key={index}
-        onClick={(e) => {
-          e.preventDefault();
-
-          try {
-            if (googleAnalyticsId) {
-              ga.event('Click project', {
-                project: item.name,
-              });
-            }
-          } catch (error) {
-            console.error(error);
-          }
-
-          window?.open(item.html_url, '_blank');
-        }}
-      >
+      <div className="card shadow-lg compact bg-base-100">
         <div className="flex justify-between flex-col p-8 h-full w-full">
-          <div>
+          <a
+            className="cursor-pointer"
+            href={item.html_url}
+            key={index}
+            onClick={(e) => {
+              e.preventDefault();
+
+              try {
+                if (googleAnalyticsId) {
+                  ga.event(type === 'commits' ? 'Click commit' : 'Click project', {
+                    project: item.name,
+                  });
+                }
+              } catch (error) {
+                console.error(error);
+              }
+
+              window?.open(item.html_url, '_blank');
+            }}
+          >
             <div className="flex items-center truncate">
               <div className="card-title text-lg tracking-wide flex text-base-content opacity-60">
                 <MdInsertLink className="my-auto" />
-                <span>{item.name}</span>
+                <span>{type === 'commits' ? item.repository.name : item.name}</span>
               </div>
             </div>
             <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
-              {item.description}
+              {type === 'commits' ? item.commit.message : item.description}
             </p>
-          </div>
+          </a>
           <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
-            <div className="flex flex-grow">
-              <span className="mr-3 flex items-center">
-                <AiOutlineStar className="mr-0.5" />
-                <span>{item.stargazers_count}</span>
-              </span>
-              <span className="flex items-center">
-                <AiOutlineFork className="mr-0.5" />
-                <span>{item.forks_count}</span>
-              </span>
-            </div>
+            {type === 'commits' ?
+              <div className="flex flex-grow gap-x-2">
+                <a
+                  className="flex items-center cursor-pointer truncate"
+                  href={`https://github.com/${item.repository.owner.login}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={item.repository.owner.avatar_url} className="w-5 h-5 rounded-full mr-0.5" alt="avatar" />
+                  <span>{item.repository.owner.login}</span>
+                </a>
+                <a
+                  className="flex items-center cursor-pointer truncate"
+                  href={`${item.html_url}#comments`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiOutlineComment className="mr-0.5" />
+                  <span>{item.commit.comment_count}</span>
+                </a>
+              </div>
+            :
+              <div className="flex flex-grow gap-x-2">
+                <a
+                  className="flex items-center cursor-pointer truncate"
+                  href={`${item.html_url}/pulse`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiOutlineStar className="mr-0.5" />
+                  <span>{item.stargazers_count}</span>
+                </a>
+                <a
+                  className="flex items-center cursor-pointer truncate"
+                  href={`${item.html_url}/forks`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiOutlineFork className="mr-0.5" />
+                  <span>{item.forks_count}</span>
+                </a>
+              </div>
+            }
             <div>
-              <span className="flex items-center">
-                <div
-                  className="w-3 h-3 rounded-full mr-1 opacity-60"
-                  style={{ backgroundColor: getLanguageColor(item.language) }}
-                />
-                <span>{item.language}</span>
-              </span>
+              <a
+                className="flex items-center cursor-pointer truncate"
+                href={type === 'commits' ?
+                  `https://github.com/${item.repository.full_name}/tree/${item.sha}` :
+                  `https://github.com/search?type=code&q=repo%3A${item.full_name}+language%3A${item.language}` }
+                target="_blank"
+                rel="noreferrer"
+              >
+                {type === 'commits' ? <AiOutlineCode className="mr-0.5" /> :
+                  <div
+                    className="w-3 h-3 rounded-full mr-1 opacity-60"
+                    style={{ backgroundColor: getLanguageColor(item.language) }}
+                  />
+                }
+                <span>{type === 'commits' ? item.sha.substring(0,4)+item.sha.substring(36) : item.language}</span>
+              </a>
             </div>
           </div>
         </div>
-      </a>
+      </div>
     ));
   };
 
@@ -154,12 +200,14 @@ const GithubProjectCard = ({
                     skeleton({ widthCls: 'w-10', heightCls: 'h-5' })
                   ) : (
                     <a
-                      href={`https://github.com/${username}?tab=repositories`}
+                      href={type === 'commits' ?
+                        `https://github.com/search?q=author%3A${username}&type=commits&s=${sortBy}&o=desc` :
+                        `https://github.com/${username}?tab=repositories`}
                       target="_blank"
                       rel="noreferrer"
                       className="text-base-content opacity-50 hover:underline"
                     >
-                      See All
+                      {type === 'commits' ? 'Recent Commits' : 'See All'}
                     </a>
                   )}
                 </div>

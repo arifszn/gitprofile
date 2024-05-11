@@ -54,14 +54,22 @@ const GitProfile = ({ config }: { config: Config }) => {
           return [];
         }
 
-        const excludeRepo =
-          sanitizedConfig.projects.github.automatic.exclude.projects
-            .map((project) => `+-repo:${project}`)
-            .join('');
+        let url = 'https://api.github.com/';
 
-        const query = `user:${sanitizedConfig.github.username}+fork:${!sanitizedConfig.projects.github.automatic.exclude.forks}${excludeRepo}`;
-        const url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.projects.github.automatic.sortBy}&per_page=${sanitizedConfig.projects.github.automatic.limit}&type=Repositories`;
+        if (sanitizedConfig.projects.github.automatic.type === 'commits') {
+          const query = `author:${
+            sanitizedConfig.github.username
+          }`;
+          url += `search/commits?q=${query}&sort=${sanitizedConfig.projects.github.automatic.sortBy}&per_page=${sanitizedConfig.projects.github.automatic.limit}&order=desc`;
+        } else {
+          const excludeRepo =
+            sanitizedConfig.projects.github.automatic.exclude.projects
+              .map((project) => `+-repo:${project}`)
+              .join('');
 
+          const query = `user:${sanitizedConfig.github.username}+fork:${!sanitizedConfig.projects.github.automatic.exclude.forks}${excludeRepo}`;
+          url += `search/repositories?q=${query}&sort=${sanitizedConfig.projects.github.automatic.sortBy}&per_page=${sanitizedConfig.projects.github.automatic.limit}&type=Repositories`;
+        }
         const repoResponse = await axios.get(url, {
           headers: { 'Content-Type': 'application/vnd.github.v3+json' },
         });
@@ -254,6 +262,8 @@ const GitProfile = ({ config }: { config: Config }) => {
                         loading={loading}
                         username={sanitizedConfig.github.username}
                         googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
+                        type={sanitizedConfig.projects.github.automatic.type}
+                        sortBy={sanitizedConfig.projects.github.automatic.sortBy}
                       />
                     )}
                     {sanitizedConfig.publications.length !== 0 && (

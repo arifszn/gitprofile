@@ -7,6 +7,7 @@ export interface SanitizedGitHubProjects {
   header: string;
   mode: string;
   automatic: {
+    type: string;
     sortBy: string;
     limit: number;
     exclude: {

@@ -26,7 +26,12 @@ interface GitHubProjects {
    */
   automatic?: {
     /**
-     * 'stars' | 'updated'
+     * 'commits' | 'projects'
+     */
+    type?: string;
+
+    /**
+     * 'stars' | 'updated' | 'committer-date'
      */
     sortBy?: string;
 
