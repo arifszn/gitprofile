@@ -2,7 +2,7 @@
 
 const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: 'rachiddaoudii', // Your GitHub org/user name. (This is the only required config)
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
@@ -57,83 +57,113 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'rachid-daoudi-a560a3193',
+    twitter: '',
+    mastodon: '',
     researchGate: '',
     facebook: '',
-    instagram: '',
+    instagram: 'rachid18daoudi',
     reddit: '',
     threads: '',
     youtube: '', // example: 'pewdiepie'
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: '',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
-    phone: '',
-    email: 'arifulalamszn@gmail.com',
+    website: '',
+    phone: '+212628557066',
+    email: 'rachiddaoudi533@gmail.com',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://um6p.cvdesignr.com/p/6429f3d5c81e8', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'PHP',
     'Laravel',
     'JavaScript',
-    'React.js',
     'Node.js',
-    'Nest.js',
+    'Nestjs',
+    'Nextjs',
+    'React',
+    'React Native',
+    'Expressjs',
+    'SQL',
     'MySQL',
+    'MongoDB',
     'PostgreSQL',
     'Git',
     'Docker',
-    'PHPUnit',
     'CSS',
-    'Antd',
     'Tailwind',
+    'Test unitaire',
+    'RabbitMQ'
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
+      company: 'CEGEDIM',
+      position: 'internship - functional technical consultant',
+      from: 'June 2023',
+      to: 'Jul 2023',
+      companyLink: '#',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
-    },
+      company: 'MAJORMEDIA',
+      position: 'internship - Developer front-end',
+      from: 'May 2023',
+      to: 'June 2023',
+      companyLink: '#',
+    }
+    
   ],
   certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      name: 'SQL (Basic) Certificate',
+      body: 'HackerRank',
+      year: '2023',
+      link: 'https://www.hackerrank.com/certificates/44b89731c434',
+    },
+    {
+      name: 'SQL (Intermediate) Certificate',
+      body: 'HackerRank',
+      year: '2023',
+      link: 'https://www.hackerrank.com/certificates/ef634fa59fd4',
+    },
+    {
+      name: 'Build a Full Website using WordPress',
+      body: 'Coursera',
+      year: '2023',
+      link: 'https://coursera.org/share/3b6ebb0a5075ac9560943a1e8944a9d3',
+    },
+    {
+      name: 'PHP',
+      body: 'Sololearn',
+      year: '2023',
+      link: 'https://www.sololearn.com/certificates/CT-V98BTUXO',
+    },
+    {
+      name: 'SQl',
+      body: 'Sololearn',
+      year: '2023',
+      link: 'https://www.sololearn.com/certificates/CT-13LUFQN9',
     },
   ],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Youcode',
+      degree: 'Developer Web et Mobile',
+      from: '2022',
+      to: '2024',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Institut Spécialisé de Technologie Appliquée NTIC',
+      degree: 'software development technician',
+      from: '2020',
+      to: '2022',
     },
   ],
   publications: [
