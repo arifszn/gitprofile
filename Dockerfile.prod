@@ -1,0 +1,11 @@
+FROM node:lts-alpine
+
+WORKDIR /app
+
+RUN npm install serve -g
+
+COPY dist/ .
+
+EXPOSE 3000
+
+CMD [ "serve", "-s", "."]

@@ -3,12 +3,11 @@ services:
     container_name: logasme
     build:
       context: .
-      dockerfile: ./node_modules/vail/runtimes/npm/Dockerfile
+      dockerfile: Dockerfile.prod
       args:
         VAIL_NODE_VERSION: 20
-    command: npm run dev -- --host 0.0.0.0
     # ports:
-    #   - '5173:5173'
+    #   - '3000:3000'
     volumes:
       - .:/var/www/html
     networks:
