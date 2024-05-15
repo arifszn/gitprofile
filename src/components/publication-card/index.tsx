@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { SanitizedPublication } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
+import { SemanticScholar } from 'semanticscholarjs';
 
 const PublicationCard = ({
   publications,
@@ -9,6 +10,12 @@ const PublicationCard = ({
   publications: SanitizedPublication[];
   loading: boolean;
 }) => {
+  const sch = new SemanticScholar();
+
+  sch.get_author('90122146').then((result) => {
+    console.log(result);
+  });
+
   const renderSkeleton = () => {
     const array = [];
     for (let index = 0; index < publications.length; index++) {
