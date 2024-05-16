@@ -32,6 +32,7 @@ import Footer from './footer';
 import { Paper, SemanticScholar } from 'semanticscholarjs';
 // import PublicationCard from './publication-card';
 import SemanticPublicationCard from './semantic-publication-card';
+import { SiPaperspace } from 'react-icons/si';
 
 /**
  * Renders the GitProfile component.
@@ -54,6 +55,8 @@ const GitProfile = ({ config }: { config: Config }) => {
     async (): Promise<Paper[]> => {
       const client = new SemanticScholar();
 
+      let papers;
+
       if (sanitizedConfig.publications.semanticScholar.mode === 'automatic') {
         let authorID = sanitizedConfig.semanticScholar.id
         if (!authorID) {      // If no id provided, no result will be returned
@@ -65,15 +68,15 @@ const GitProfile = ({ config }: { config: Config }) => {
         //     sanitizedConfig.publications.semanticScholar.automatic.exclude.papers
         //       .map((paper) => '')
 
-        let papers = (await client.get_author_papers(authorID, null, sanitizedConfig.publications.semanticScholar.automatic.limit)).nextPage();
-        return papers;
+        papers = (await client.get_author_papers(authorID, null, sanitizedConfig.publications.semanticScholar.automatic.limit)).nextPage();
       } else {
         if (sanitizedConfig.publications.semanticScholar.manual.papers.length === 0) {
           return [];
         }
-        const papers = client.get_papers(sanitizedConfig.publications.semanticScholar.manual.papers)
-        return papers;
+        papers = client.get_papers(sanitizedConfig.publications.semanticScholar.manual.papers)
       }
+      console.debug(papers);
+      return papers;
     },
     [
       sanitizedConfig.semanticScholar.id,
