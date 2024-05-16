@@ -32,7 +32,6 @@ import Footer from './footer';
 import { Paper, SemanticScholar } from 'semanticscholarjs';
 // import PublicationCard from './publication-card';
 import SemanticPublicationCard from './semantic-publication-card';
-import { SiPaperspace } from 'react-icons/si';
 
 /**
  * Renders the GitProfile component.
