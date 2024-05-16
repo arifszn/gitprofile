@@ -29,7 +29,9 @@ import GithubProjectCard from './github-project-card';
 import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
-import PublicationCard from './publication-card';
+import { Paper, SemanticScholar } from 'semanticscholarjs';
+// import PublicationCard from './publication-card';
+import SemanticPublicationCard from './semantic-publication-card';
 
 /**
  * Renders the GitProfile component.
@@ -46,6 +48,44 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
+  const [semanticPapers, setSemanticPapers] = useState<Paper[]>([]);
+
+  const getSemanticPapers = useCallback(
+    async (): Promise<Paper[]> => {
+      const client = new SemanticScholar();
+
+      if (sanitizedConfig.publications.semanticScholar.mode === 'automatic') {
+        let authorID = sanitizedConfig.semanticScholar.id
+        if (!authorID) {      // If no id provided, no result will be returned
+          return [];
+        }
+
+        // TODO: Exclude by provided id
+        //   const excludePaper = 
+        //     sanitizedConfig.publications.semanticScholar.automatic.exclude.papers
+        //       .map((paper) => '')
+
+        let papers = (await client.get_author_papers(authorID, null, sanitizedConfig.publications.semanticScholar.automatic.limit)).nextPage();
+        return papers;
+      } else {
+        if (sanitizedConfig.publications.semanticScholar.manual.papers.length === 0) {
+          return [];
+        }
+        const papers = client.get_papers(sanitizedConfig.publications.semanticScholar.manual.papers)
+        return papers;
+      }
+    },
+    [
+      sanitizedConfig.semanticScholar.id,
+      sanitizedConfig.publications.semanticScholar.display,
+      sanitizedConfig.publications.semanticScholar.mode,
+      sanitizedConfig.publications.semanticScholar.manual.papers,
+      sanitizedConfig.publications.semanticScholar.automatic.sortBy,
+      sanitizedConfig.publications.semanticScholar.automatic.limit,
+      sanitizedConfig.publications.semanticScholar.automatic.exclude.papers,
+
+    ]
+  )
 
   const getGithubProjects = useCallback(
     async (publicRepoCount: number): Promise<GithubProject[]> => {
@@ -119,6 +159,7 @@ const GitProfile = ({ config }: { config: Config }) => {
       }
 
       setGithubProjects(await getGithubProjects(data.public_repos));
+      setSemanticPapers(await getSemanticPapers());
     } catch (error) {
       handleError(error as AxiosError | Error);
     } finally {
@@ -127,7 +168,10 @@ const GitProfile = ({ config }: { config: Config }) => {
   }, [
     sanitizedConfig.github.username,
     sanitizedConfig.projects.github.display,
+    sanitizedConfig.semanticScholar.id,
+    sanitizedConfig.publications.semanticScholar.display,
     getGithubProjects,
+    getSemanticPapers,
   ]);
 
   useEffect(() => {
@@ -246,12 +290,23 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
                 <div className="lg:col-span-2 col-span-1">
                   <div className="grid grid-cols-1 gap-6">
-                  {sanitizedConfig.publications.length !== 0 && (
-                      <PublicationCard
+                    {sanitizedConfig.publications.semanticScholar.display && sanitizedConfig.semanticScholar.id && (
+                      <SemanticPublicationCard
+                        header={sanitizedConfig.publications.semanticScholar.header}
+                        limit={sanitizedConfig.publications.semanticScholar.automatic.limit}
+                        semanticPapers={semanticPapers}
                         loading={loading}
-                        publications={sanitizedConfig.publications}
+                        id={sanitizedConfig.semanticScholar.id}
+                        googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
                       />
                     )}
+                    {/* {sanitizedConfig.publications.length !== 0 && (
+                      <PublicationCard
+                        loading={loading}
+                        limit={sanitizedConfig.publications.semanticScholar.automatic.limit}
+                        publications={sanitizedConfig.publications}
+                      />
+                    )} */}
                     {sanitizedConfig.projects.github.display && (
                       <GithubProjectCard
                         header={sanitizedConfig.projects.github.header}
