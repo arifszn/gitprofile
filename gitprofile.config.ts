@@ -4,6 +4,9 @@ const CONFIG = {
   github: {
     username: 'logasja', // Your GitHub org/user name. (This is the only required config)
   },
+  semanticScholar: {
+    id: '90122146',      // The id number listed on your semantic scholar author page
+  },
   base: '/',
   projects: {
     github: {
@@ -94,28 +97,28 @@ const CONFIG = {
     'Tailwind',
   ],
   experiences: [
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
-    },
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
-    },
+    // {
+    //   company: 'Company Name',
+    //   position: 'Position',
+    //   from: 'September 2021',
+    //   to: 'Present',
+    //   companyLink: 'https://example.com',
+    // },
+    // {
+    //   company: 'Company Name',
+    //   position: 'Position',
+    //   from: 'July 2019',
+    //   to: 'August 2021',
+    //   companyLink: 'https://example.com',
+    // },
   ],
   certifications: [
-    {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
-    },
+    // {
+    //   name: 'Lorem ipsum',
+    //   body: 'Lorem ipsum dolor sit amet',
+    //   year: 'March 2022',
+    //   link: 'https://example.com',
+    // },
   ],
   educations: [
     {
@@ -138,20 +141,41 @@ const CONFIG = {
     },
   ],
   publications: {
-    display: true, // Display GitHub projects?
-    header: 'Github Projects',
-    mode: 'automatic', // Mode can be: 'automatic' or 'manual'
-    automatic: {
-      sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-      limit: 8, // How many projects to display.
-      exclude: {
-        forks: false, // Forked projects will not be displayed if set to true.
-        projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+    semanticScholar: {
+      display: true, // Display publications?
+      header: 'Publications',
+      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      automatic: {
+        sortBy: 'date', // Sort papers by 'date' or 'citations'
+        limit: 8, // How many papers to display.
+        exclude: {
+          papers: [], // These papers will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        },
       },
+      manual: {
+        // Properties for manually specifying publication
+        // papers: ['doi-0', 'doi-1'], // List of repository names to display.
+      }
     },
-    manual: {
-      // Properties for manually specifying publication
-      // projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+    // external: {
+    //   header: "Manually Added",
+
+    //   papers: [
+    //     // {
+    //     //   title="Lorem ipsum",
+    //     //   conferenceName: "Conference on Latin",
+    //     //   journalName: "LSLW",
+    //     //   authors: {
+    //     //      first: "Jennifer",
+    //     //      last: "Lopez",
+    //     //      url: "jlo.com",
+    //     //      thumbnail: "jlo.webp"
+    //     //   }
+    //     //   link?: string;
+    //     //   description?: string;
+    //     // }
+    //   ] // List of self-defined papers
+    // }
   },
   // Display articles from your medium or dev account. (Optional)
   blog: {

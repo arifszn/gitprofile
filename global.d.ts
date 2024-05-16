@@ -237,13 +237,99 @@ interface Education {
   to: string;
 }
 
+interface SemanticScholar {
+  id: string;
+}
+
+
+interface SemanticScholarPublications {
+  /**
+   * Display SemS projects?
+   */
+  display?: boolean;
+
+  /**
+   * Header
+   */
+  header?: string;
+
+  /**
+   * 'automatic' | 'manual'
+   */
+  mode?: "automatic" | "manual";
+
+  /**
+   * Config of automatic mode
+   */
+  automatic?: {
+    /**
+     * 'stars' | 'updated'
+     */
+    sortBy?: "date" | "citations";
+
+    /**
+     * How many projects to display
+     */
+    limit?: number;
+
+    /**
+     * Exclude projects option
+     */
+    exclude?: {
+      /**
+       * These papers will not be displayed
+       *
+       * example: ['doi-1', 'doi-2']
+       */
+      papers?: Array<string>;
+    };
+  };
+
+  /**
+   * Config of manual mode
+   */
+  manual?: {
+    /**
+     * These papers will be displayed
+     *
+     * example: ['doi-1', 'doi-2']
+     */
+    papers?: Array<string>;
+  };
+}
+
+interface ExternalPublications {
+  /**
+   * Header
+   */
+  header?: string;
+
+  /**
+   * Paper list
+   */
+  papers?: Array<Publication>;
+}
+
+interface Publications {
+  semanticScholar?: SemanticScholarPublications;
+
+  external?: ExternalPublications;
+}
+
 interface Publication {
   title: string;
   conferenceName?: string;
   journalName?: string;
-  authors?: string;
+  authors?: Array<Author>;
   link?: string;
   description?: string;
+}
+
+interface Author {
+  first: string;
+  last: string;
+  url?: string;
+  thumbnail?: string;
 }
 
 interface GoogleAnalytics {
@@ -360,6 +446,11 @@ interface Config {
   github: Github;
 
   /**
+   * Semantic Scholar config
+   */
+  semanticScholar?: SemanticScholar;
+
+  /**
    * Vite's base url
    */
   base?: string;
@@ -402,7 +493,7 @@ interface Config {
   /**
    * Publication list
    */
-  publications?: Array<Publication>;
+  publications?: Publications;
 
   /**
    * Resume

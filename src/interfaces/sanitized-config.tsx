@@ -91,11 +91,48 @@ export interface SanitizedEducation {
   to: string;
 }
 
+export interface SanitizedSemanticScholar {
+  id?: string;
+}
+
+export interface SanitizedSemanticScholarPublications {
+  display: boolean;
+  header: string;
+  mode: "automatic" | "manual";
+  automatic: {
+    sortBy: "date" | "citations";
+    limit: number;
+    exclude: {
+      papers: Array<string>;
+    };
+  };
+  manual: {
+    papers: Array<string>;
+  };
+}
+
+export interface SanitizedExternalPublications {
+  header: string;
+  papers: SanitizedPublication[];
+}
+
+export interface SanitizedPublications {
+  semanticScholar: SanitizedSemanticScholarPublications;
+  external: SanitizedExternalPublications;
+}
+
+export interface SanitizedAuthor {
+  first: string;
+  last: string;
+  url?: string;
+  thumbnail?: string;
+}
+
 export interface SanitizedPublication {
   title: string;
   conferenceName?: string;
   journalName?: string;
-  authors?: string;
+  authors?: Array<SanitizedAuthor>;
   link?: string;
   description?: string;
 }
@@ -137,6 +174,7 @@ export interface SanitizedThemeConfig {
 
 export interface SanitizedConfig {
   github: SanitizedGithub;
+  semanticScholar: SanitizedSemanticScholar;
   projects: SanitizedProjects;
   seo: SanitizedSEO;
   social: SanitizedSocial;
@@ -145,7 +183,7 @@ export interface SanitizedConfig {
   experiences: Array<SanitizedExperience>;
   educations: Array<SanitizedEducation>;
   certifications: Array<SanitizedCertification>;
-  publications: Array<SanitizedPublication>;
+  publications: SanitizedPublications;
   googleAnalytics: SanitizedGoogleAnalytics;
   hotjar: SanitizedHotjar;
   blog: SanitizedBlog;

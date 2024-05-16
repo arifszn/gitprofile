@@ -31,6 +31,9 @@ export const getSanitizedConfig = (
       github: {
         username: config.github.username,
       },
+      semanticScholar: {
+        id: config?.semanticScholar?.id,
+      },
       projects: {
         github: {
           display: config?.projects?.github?.display ?? true,
@@ -103,7 +106,28 @@ export const getSanitizedConfig = (
         config?.educations?.filter(
           (item) => item.institution || item.degree || item.from || item.to,
         ) || [],
-      publications: config?.publications?.filter((item) => item.title) || [],
+      publications: {
+        semanticScholar: {
+          display: config?.publications?.semanticScholar?.display ?? true,
+          header: config?.publications?.semanticScholar?.header || 'Github Projects',
+          mode: config?.publications?.semanticScholar?.mode || 'automatic',
+          automatic: {
+            sortBy: config?.publications?.semanticScholar?.automatic?.sortBy || 'date',
+            limit: config?.publications?.semanticScholar?.automatic?.limit || 8,
+            exclude: {
+              papers:
+                config?.publications?.semanticScholar?.automatic?.exclude?.papers || [],
+            },
+          },
+          manual: {
+            papers: config?.publications?.semanticScholar?.manual?.papers || [],
+          },
+        },
+        external: {
+          header: config?.publications?.external?.header || 'My Projects',
+          papers: config?.publications?.external?.papers || [],
+        },
+      },
       googleAnalytics: {
         id: config?.googleAnalytics?.id,
       },
