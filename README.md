@@ -78,14 +78,6 @@
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
-<a href="https://idx.google.com/import?url=">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.idx.dev/btn/open_dark_32.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://cdn.idx.dev/btn/open_light_32.svg">
-    <img height="32" alt="Open in IDX" src="https://cdn.idx.dev/btn/open_purple_32.svg">
-  </picture>
-</a>
-
 <p align="center">
   <img src="https://github.com/arifszn/gitprofile/assets/45073703/406e8368-415a-42ef-89c5-d43cc8bbeb19" alt="Themes">
 </p>
