@@ -210,7 +210,7 @@ interface Social {
 
 interface Resume {
   /**
-   * Resume file urlm
+   * Resume file url
    */
   fileUrl?: string;
 }
