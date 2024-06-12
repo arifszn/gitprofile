@@ -7,6 +7,7 @@ const CONFIG = {
 
   base: '/gitprofile',
   projects: {
+    
     github: {
       display: true,
       header: 'Github Projects',
@@ -19,6 +20,7 @@ const CONFIG = {
           projects: ['Noraxx1'],
         },
       },
+      
       manual: {
         projects: [],
       },
