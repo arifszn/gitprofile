@@ -50,7 +50,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'dracula',
+    defaultTheme: 'cupcake',
 
 
     disableSwitch: false,
