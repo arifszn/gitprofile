@@ -52,14 +52,14 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of Ariful Alam',
+    title: 'Developer Portfolio of Adebayo Adetunji',
     description: '',
     imageURL: '',
   },
   social: {
-    linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'adetunji003',
+    twitter: '',
+    mastodon: 'ade6ayo@mastodon.social',
     researchGate: '',
     facebook: '',
     instagram: '',
@@ -69,74 +69,80 @@ const CONFIG = {
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: '',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
+    website: '',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'adetunji003@gmail.com',
   },
   resume: {
     fileUrl:
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'Java',
+    'Kotlin',
+    'Python',
+    'Selenium Webdriver, IDE & Grid',
+    'Trello & Zephyr Scale',
+    'Apache JMeter',
+    'Blazemeter',
+    'Postman',
+    'Playright',
     'Git',
     'Docker',
-    'PHPUnit',
+    'Http',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'MySQL',
+    'PostgreSQL',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'test IO',
+      position: 'Quality Assurance Tester',
+      from: 'November 2021',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://test.io/',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'Scale AI',
+      position: 'Artificial Intelligence Trainer & Researcher',
+      from: 'February 2023',
+      to: 'November 2023',
+      companyLink: 'https://scale.com/',
     },
   ],
   certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
+      name: 'The Complete 2023 Software Testing Bootcamp',
+      body: 'Udemy',
+      year: 'March 2024',
       link: 'https://example.com',
+    },
+    {
+      name: 'Kotlin Development Masterclass',
+      body: 'Udemy',
+      year: 'March 2022',
     },
   ],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'University of Ibadan',
+      degree: 'MSc. Managerial Psychology',
+      from: '2023',
+      to: '2024',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'University of Ibadan',
+      degree: 'B.Ed. Counseling Psychology',
+      from: '2016',
+      to: '2020',
     },
   ],
-  publications: [
+  /* publications: [
     {
       title: 'Publication Title',
       conferenceName: '',
@@ -155,7 +161,7 @@ const CONFIG = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
-  ],
+  ], */
   // Display articles from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
@@ -171,11 +177,11 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'lofi',
+    defaultTheme: 'business',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
-    disableSwitch: false,
+    disableSwitch: true,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
