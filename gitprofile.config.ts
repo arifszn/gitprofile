@@ -41,12 +41,12 @@ const CONFIG = {
           link: 'https://example.com',
         },
         {
-          title: 'Project Name',
+          title: 'Budget Manager Screens',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Displayed screenshots of the Budget Manager app, which serve as a basis for creating Zephyr Scale tests.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://github.com/ade6ayo/developerPortfolio/blob/main/Screenshot%20(319).png',
+          link: 'https://docs.google.com/document/d/12RK0MWpR0x1pfwOY17TGDfMFJk9fSNrHf9rNOJEGD6k/edit',
         },
       ],
     },
