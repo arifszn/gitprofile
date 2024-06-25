@@ -45,7 +45,7 @@ const CONFIG = {
           description:
             'Showcased demo budget manager app with screenshots, providing the basis for creating and executing Zephyr Scale tests.',
           imageUrl:
-            'https://github.com/ade6ayo/developerPortfolio/blob/main/Screenshot%20(319).jpg',
+            'https://github.com/ade6ayo/developerPortfolio/blob/main/Screenshot%20(319).jpg?raw=true',
           link: 'https://docs.google.com/document/d/12RK0MWpR0x1pfwOY17TGDfMFJk9fSNrHf9rNOJEGD6k/edit',
         },
       ],
