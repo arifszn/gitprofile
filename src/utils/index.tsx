@@ -33,7 +33,7 @@ export const getSanitizedConfig = (
       },
       projects: {
         github: {
-          display: config?.projects?.github?.display ?? true,
+          display: config?.projects?.github?.display ?? false,
           header: config?.projects?.github?.header || 'Github Projects',
           mode: config?.projects?.github?.mode || 'automatic',
           automatic: {
