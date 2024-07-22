@@ -105,6 +105,8 @@ const GitProfile = ({ config }: { config: Config }) => {
         `https://api.github.com/users/${sanitizedConfig.github.username}`,
       );
       const data = response.data;
+      data.company = 'TomTom International';
+      data.bio = `Software Engineer | Mobile Developer | Automation Enthusiast`;
 
       setProfile({
         avatar: data.avatar_url,
