@@ -288,9 +288,7 @@ const GitProfile = ({ config }: { config: Config }) => {
               <footer
                 className={`p-4 footer ${BG_COLOR} text-base-content footer-center`}
               >
-                <div className="card compact bg-base-100 shadow">
-                  <Footer content={sanitizedConfig.footer} loading={loading} />
-                </div>
+                <Footer content={sanitizedConfig.footer} loading={loading} />
               </footer>
             )}
           </>
