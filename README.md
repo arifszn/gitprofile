@@ -19,7 +19,7 @@
   - **UI Toolkit:** `Shadcnui` • `MUI`
   - **Utils:** `Tailwind`
   
-- 🖥 **Mobile:**
+- 📱 **Mobile:**
   - **Programming:** `Dart` • `Kotlin`
   - **Framework/Library:** `Flutter` • `Jetpack Compose`
 
