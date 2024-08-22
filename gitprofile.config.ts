@@ -54,7 +54,7 @@ const CONFIG = {
   seo: {
     title: 'Portfolio of RAZAFIMBELO Titosy Manankasina',
     description: 'Software Engineer | Dart & Flutter Developer',
-    imageURL: '',
+    imageURL: 'https://avatars.githubusercontent.com/u/75468986?v=4',
   },
   social: {
     linkedin: 'titosy-manankasina',
@@ -190,12 +190,12 @@ const CONFIG = {
 
   // Optional Footer. Supports plain text or HTML.
   footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      class="text-primary" href="https://github.com/titoo-dev/titoo-dev"
       target="_blank"
       rel="noreferrer"
     >GitProfile</a> and ❤️`,
 
-  enablePWA: false,
+  enablePWA: true,
 };
 
 export default CONFIG;
