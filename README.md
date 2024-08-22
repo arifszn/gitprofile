@@ -1,5 +1,3 @@
-<br/>
-
 #### What am I up to?
 
 - Writing `JavaScript`, `Dart`, `Java`, `Kotlin`, `PHP`.
