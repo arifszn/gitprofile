@@ -20,10 +20,12 @@
   - **Utils:** `Tailwind`
   
 - 📱 **Mobile:**
+- 
   - **Programming:** `Dart` • `Kotlin`
   - **Framework/Library:** `Flutter` • `Jetpack Compose`
 
 - 🎡 **Ecosystem:**
+- 
   - **Containerization:** `Docker`
   - **Version Control:** `Git` • `GitHub`
   - **CI/CD:** `Github Actions` • `Gitlab CI`
