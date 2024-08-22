@@ -1,16 +1,13 @@
 {
-  "name": "@arifszn/gitprofile",
+  "name": "@titoo-dev/gitprofile",
   "description": "Create an automatic portfolio based on GitHub profile",
   "version": "3.1.0",
   "type": "module",
   "license": "MIT",
-  "author": "arifszn",
+  "author": "titoo-dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arifszn/gitprofile.git"
-  },
-  "bugs": {
-    "url": "https://github.com/arifszn/gitprofile/issues"
+    "url": "https://github.com/titoo-dev/titoo-dev.git"
   },
   "scripts": {
     "dev": "vite",
