@@ -65,9 +65,22 @@ const GitProfile = ({ config }: { config: Config }) => {
         const repoResponse = await axios.get(url, {
           headers: { 'Content-Type': 'application/vnd.github.v3+json' },
         });
-        const repoData = repoResponse.data;
+        
+        let repoItems = repoResponse.data.items;
 
-        return repoData.items;
+        for (let item of repoItems) {
+          if (!item.fork) continue;
+
+          const repoUrl = `https://api.github.com/repos/${item.full_name}`;
+
+          const response = await axios.get(repoUrl, {
+            headers: { 'Content-Type': 'application/vnd.github.v3+json' },
+          });
+
+          item.parent = response.data.parent.full_name;
+        }
+
+        return repoItems;
       } else {
         if (sanitizedConfig.projects.github.manual.projects.length === 0) {
           return [];
@@ -81,9 +94,22 @@ const GitProfile = ({ config }: { config: Config }) => {
         const repoResponse = await axios.get(url, {
           headers: { 'Content-Type': 'application/vnd.github.v3+json' },
         });
-        const repoData = repoResponse.data;
 
-        return repoData.items;
+        let repoItems = repoResponse.data.items;
+
+        for (let item of repoItems) {
+          if (!item.fork) continue;
+
+          const repoUrl = `https://api.github.com/repos/${item.full_name}`;
+
+          const response = await axios.get(repoUrl, {
+            headers: { 'Content-Type': 'application/vnd.github.v3+json' },
+          });
+
+          item.parent = response.data.parent.full_name;
+        }
+
+        return repoItems;
       }
     },
     [
