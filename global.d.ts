@@ -118,6 +118,11 @@ interface Social {
   twitter?: string;
 
   /**
+   * Matrix username
+   */
+  matrix?: string;
+
+  /**
    * Mastodon
    */
   mastodon?: string;
