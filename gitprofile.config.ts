@@ -9,6 +9,7 @@ const CONFIG = {
       forks: false, // Forked projects will not be displayed if set to true.
       projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
+    base: "/",
     external: {
       // header: 'My Projects',
       // // To hide the `External Projects` section, keep it empty.
