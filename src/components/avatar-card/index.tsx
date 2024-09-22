@@ -15,7 +15,7 @@ interface AvatarCardProps {
  * @param profile - The profile object.
  * @param loading - A boolean indicating if the profile is loading.
  * @param avatarRing - A boolean indicating if the avatar should have a ring.
- * @param resumeFileUrl - The URL of the resume file.
+ * @param resumeFileUrl  - The URL of the resume file.
  * @returns JSX element representing the AvatarCard.
  */
 const AvatarCard: React.FC<AvatarCardProps> = ({
@@ -83,13 +83,13 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             </div>
           ) : (
             <a
-              href={resumeFileUrl}
+              href={`https://www.dropbox.com/scl/fi/u6v6yvglqc0ntdxii4ymk/belevibaris.pdf?rlkey=ffo1pgyyu1fiw2gq3qrzr8f9a&st=8wenlude&dl=0f`}
               target="_blank"
               className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
-              download
+              download="public/belevibaris.pdf"
               rel="noreferrer"
             >
-              Download Resume
+              Download CV
             </a>
           ))}
       </div>
