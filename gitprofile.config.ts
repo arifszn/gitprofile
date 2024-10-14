@@ -57,9 +57,9 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: '',
-    instagram: 'gad_"3dart',
-    youtube: 'Sinoué GAD', // example: 'pewdiepie'
+    linkedin: 'Sinoué GAD',
+    instagram: 'gad_3dart',
+    youtube: 'sinoue_gad', // example: 'pewdiepie'
     email: 'sinoue.gad@telecom-sudparis.eu',
   },
   resume: {
@@ -67,20 +67,16 @@ const CONFIG = {
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
+    'Python',
+    'Pytorch',
+    'Tensorflow',
+    'Scikit learn',
+    'Java',
+    'C',
+    'C++',
     'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
     'MySQL',
-    'PostgreSQL',
     'Git',
-    'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
   ],
   experiences: [
     {
@@ -91,10 +87,10 @@ const CONFIG = {
       companyLink: 'https://example.com',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
+      company: 'Vidéo Club',
+      position: 'Président',
+      from: 'June 2023',
+      to: 'June 2024',
       companyLink: 'https://example.com',
     },
   ],
