@@ -2,7 +2,7 @@
 
 const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: 'GAD-cell', // Your GitHub org/user name. (This is the only required config)
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
@@ -63,20 +63,8 @@ const CONFIG = {
     researchGate: '',
     facebook: '',
     instagram: '',
-    reddit: '',
-    threads: '',
     youtube: '', // example: 'pewdiepie'
-    udemy: '',
-    dribbble: '',
-    behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // example: '1/jeff-atwood'
-    skype: '',
-    telegram: '',
-    website: 'https://www.arifszn.com',
-    phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'sinoue.gad@telecom-sudparis.eu',
   },
   resume: {
     fileUrl:
@@ -100,10 +88,10 @@ const CONFIG = {
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
+      company: 'X&Immersion',
+      position: 'Data science & IA engineer',
+      from: 'June 2024',
+      to: 'August 2025',
       companyLink: 'https://example.com',
     },
     {
