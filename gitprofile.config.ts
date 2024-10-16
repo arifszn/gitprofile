@@ -193,7 +193,6 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: 
-};
+
 
 export default CONFIG;
