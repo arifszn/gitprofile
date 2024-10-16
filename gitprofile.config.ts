@@ -33,17 +33,18 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'Automated Meta-analysis of Scientific Papers',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            ' Developed a database of over 5,000 research papers; applied NLP techniques using BERT models and analytics to analyze paper success factors.',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
           link: 'https://example.com',
         },
         {
-          title: 'Project Name',
+          title: 'AI for Diabetic Retinopathy Diagnosis'
+',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            ' Created a convolutional neural network for diagnosing diabetic retinopathy from an indian retinal images database, under supervision by the WHO and ITU.',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
           link: 'https://example.com',
@@ -101,7 +102,7 @@ const CONFIG = {
   educations: [
     {
       institution: 'Politecnico di Milano',
-      degree: 'Master 2 Track cs/AI - Academic exchange',
+      degree: 'Master 2 Track CS/AI - Academic exchange',
       from: 'september 2024',
       to: 'Present',
     },
