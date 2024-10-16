@@ -41,8 +41,7 @@ const CONFIG = {
           link: 'https://example.com',
         },
         {
-          title: 'AI for Diabetic Retinopathy Diagnosis'
-',
+          title: 'AI for Diabetic Retinopathy Diagnosis',
           description:
             ' Created a convolutional neural network for diagnosing diabetic retinopathy from an indian retinal images database, under supervision by the WHO and ITU.',
           imageUrl:
