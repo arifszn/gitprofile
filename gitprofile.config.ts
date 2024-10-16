@@ -65,6 +65,40 @@ const CONFIG = {
           link: '',
         },
       ],
+      projects: [
+        {
+          title: 'Automated Meta-analysis of Scientific Papers',
+          description:
+            ' Developed a database of over 5,000 research papers; applied NLP techniques using BERT models and analytics to analyze paper success factors.',
+          imageUrl:
+            'https://img.freepik.com/free-photo/still-life-documents-stack_23-2151088762.jpg?t=st=1729086919~exp=1729090519~hmac=fb63fe4ecffadfd34e6a4b1acadf7202f33144a2d8b6139bdad3b125b69c75a2&w=360',
+          link: '',
+        },
+        {
+          title: 'AI for Diabetic Retinopathy Diagnosis',
+          description:
+            ' Created a convolutional neural network for diagnosing diabetic retinopathy from an indian retinal images database, under supervision by the WHO and ITU.',
+          imageUrl:
+            'https://img.freepik.com/free-photo/portrait-patient-having-eye-checkup_23-2151196678.jpg?t=st=1729086317~exp=1729089917~hmac=80c9466a22980da006016bbf1211f47fd6d8d79225dc09e46b8e6bb4c13cc6d0&w=1060',
+          link: ''
+        },
+        {
+          title: 'Real-time Human Segmentation AI',
+          description:
+            ' Developed an AI as part of the Télécom-SudParis curriculum to segment humans in real-time videos using the U2-net network.',
+          imageUrl:
+            'https://img.freepik.com/free-photo/combination-facial-features-concept_23-2150039736.jpg?t=st=1729088233~exp=1729091833~hmac=fc37ea85a9324baaf9ade29f4a79d4b3fd377d80aa92083213fb6dcbb1430669&w=1060',
+          link: '',
+        },
+        {
+          title: 'Audio converter to music score',
+          description:
+            ' Project aimed at converting audio files into musical scores using spectral analysis',
+          imageUrl:
+            'https://www.freepik.com/free-photo/music-notes-sheet_7783772.htm#fromView=search&page=1&position=33&uuid=b80bf6f5-e3cb-4105-b075-d850e0df5ebf',
+          link: '',
+        },
+      ],
     },
   },
   seo: {
