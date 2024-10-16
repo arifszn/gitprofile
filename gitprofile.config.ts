@@ -37,7 +37,7 @@ const CONFIG = {
           description:
             ' Developed a database of over 5,000 research papers; applied NLP techniques using BERT models and analytics to analyze paper success factors.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://img.freepik.com/free-photo/still-life-documents-stack_23-2151088762.jpg?t=st=1729086919~exp=1729090519~hmac=fb63fe4ecffadfd34e6a4b1acadf7202f33144a2d8b6139bdad3b125b69c75a2&w=360',
           link: 'https://example.com',
         },
         {
