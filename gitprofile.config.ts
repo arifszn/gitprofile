@@ -57,7 +57,7 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: 'Sinoué GAD',
+    linkedin: 'sinoué-gad',
     instagram: 'gad_3dart',
     youtube: 'sinoue_gad', // example: 'pewdiepie'
     email: 'sinoue.gad@telecom-sudparis.eu',
@@ -193,13 +193,7 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
-
-  enablePWA: true,
+  footer: 
 };
 
 export default CONFIG;
