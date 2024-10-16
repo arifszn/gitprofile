@@ -45,7 +45,7 @@ const CONFIG = {
           description:
             ' Created a convolutional neural network for diagnosing diabetic retinopathy from an indian retinal images database, under supervision by the WHO and ITU.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://img.freepik.com/free-photo/portrait-patient-having-eye-checkup_23-2151196678.jpg?t=st=1729086317~exp=1729089917~hmac=80c9466a22980da006016bbf1211f47fd6d8d79225dc09e46b8e6bb4c13cc6d0&w=1060',
           link: 'https://example.com',
         },
       ],
@@ -84,14 +84,14 @@ const CONFIG = {
       position: 'Data science & IA engineer',
       from: 'June 2024',
       to: 'August 2025',
-      companyLink: 'https://example.com',
+      companyLink: 'https://www.xandimmersion.com/',
     },
     {
       company: 'Vidéo Club',
       position: 'Président',
       from: 'June 2023',
       to: 'June 2024',
-      companyLink: 'https://example.com',
+      companyLink: '',
     },
   ],
   certifications: [
