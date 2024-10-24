@@ -1,3 +1,4 @@
+
 // gitprofile.config.ts
 
 const CONFIG = {
@@ -102,7 +103,7 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of Ariful Alam',
+    title: 'Portfolio of Sinoué GAD',
     description: '',
     imageURL: '',
   },
