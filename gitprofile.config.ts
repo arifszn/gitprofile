@@ -112,6 +112,8 @@ const CONFIG = {
     instagram: 'gad_3dart',
     youtube: 'sinoue_gad', // example: 'pewdiepie'
     email: 'sinoue.gad@telecom-sudparis.eu',
+    kaggle: 'sinouegad',
+    leetcode: 'Sinoue_GAD"
   },
   resume: {
     fileUrl:
