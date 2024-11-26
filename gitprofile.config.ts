@@ -35,17 +35,10 @@ const CONFIG = {
         {
           title: 'News Explorer App',
           description:
-            '
-The News Explorer is a modern web application designed for news enthusiasts who want to explore trending topics, save relevant articles, and revisit them at their leisure. Users can:
-+Search for news articles by entering a topic.
-+View a curated list of articles from the past week.
-+Save articles for later reading.
-+Explore all their saved articles on a dedicated page.
-
-This project focuses on responsive design, clean UI, and efficient handling of dynamic data.',
+            'The News Explorer is a modern web application designed for news enthusiasts who want to explore trending topics, save relevant articles, and revisit them at their leisure. Users can: Search for news articles by entering a topic, view a curated list of articles from the past week, save articles for later reading, and explore all their saved articles on a dedicated page. This project focuses on responsive design, clean UI, and efficient handling of dynamic data.',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+          link: 'https://jac874.github.io/news-explorer-frontend/',
         },
         {
           title: 'Project Name',
