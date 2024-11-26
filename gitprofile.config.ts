@@ -25,7 +25,7 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: ['JAC874/gitprofile', 'JAC874/news-explorer-frontend'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -33,9 +33,16 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'News Explorer App',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            '
+The News Explorer is a modern web application designed for news enthusiasts who want to explore trending topics, save relevant articles, and revisit them at their leisure. Users can:
++Search for news articles by entering a topic.
++View a curated list of articles from the past week.
++Save articles for later reading.
++Explore all their saved articles on a dedicated page.
+
+This project focuses on responsive design, clean UI, and efficient handling of dynamic data.',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
           link: 'https://example.com',
