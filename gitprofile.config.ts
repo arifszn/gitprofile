@@ -16,11 +16,16 @@ const CONFIG = {
       header: 'Github Projects',
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
+        sortBy: 'updated', // Sort projects by 'stars' or 'updated'
         limit: 8, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          projects: [
+            'JAC874/gitprofile',
+            'JAC874/clone-example',
+            'JAC874/new-repo',
+            'JAC874/news-explorer-backend',
+          ], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {
@@ -37,16 +42,16 @@ const CONFIG = {
           description:
             'The News Explorer is a modern web application designed for news enthusiasts who want to explore trending topics, save relevant articles, and revisit them at their leisure. Users can: Search for news articles by entering a topic, view a curated list of articles from the past week, save articles for later reading, and explore all their saved articles on a dedicated page. This project focuses on responsive design, clean UI, and efficient handling of dynamic data.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+            'https://previews.dropbox.com/p/thumb/ACc5K9dV4enFo_IhZpWT5bHRsn3NaIkJHnkhhTPrySy8Nruba5dkV_OG3dMFvHTFdlUkqyP_nzm3P1l_Q6Vyz7HzCODy1Ad6V82UxAUp2xaaAcPkZe3nV2OhoFGmzWOmr4O61zTNnoFKJLjF8R6kSsP7ib35N_R6cpVWybe06TBrUSaWu9KiJj-LpMozZ4NaF4-8Zn2t6HXKY1-THkKVrtGL0mVRQ1wlCwOvxgwpH21rbDdpkOjnjzaiNAUxfYGQCBxaaeVLSucKYEqdSh3hLNZ7kdH7YbQsCkQ2Vz6nfnkk9NIX6cmJ6vMq-enfiHr5Nr_aPMCsNQZhYXcALENSndsD/p.png?is_prewarmed=true',
           link: 'https://jac874.github.io/news-explorer-frontend/',
         },
         {
-          title: 'Project Name',
+          title: 'What to Wear',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'This project implements modern back-end concepts to create a robust server for HTTP requests and routing. It includes secure user authentication and authorization for protected routes and session management. Comprehensive error handling is achieved with custom error classes and global handlers for synchronous and asynchronous operations. Middleware enhances code organization, while environment variables and configuration files ensure scalability and security across environments.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://previews.dropbox.com/p/thumb/ACff5sKE8Wg6j_rtPxr-lVRAAVmMMa2eMZyJDTT-xykIOmezdUvD7ULUd7glmBc-Lzya_2qvc2TsxiP9nj75oCjDDacdzMUaSb08wVmR6YTGzYVb-6XqCXdsATZj024LrNZU1fxmUzegDQAjaAX3NCxzQBaqUEoLRJFjD5prewEmVApMUkn0TfUI83CBPNpm-zQdV2XO7stjCcZf7FwS7Ej1a_Gm1vSAQSfy9DRYU6fTa_rLg65WHpqgKqhChOndtTRiSf_Vk5ledePSDRM19nMmw0Xl1U4D2X8TKMnKKow8FoxSahVlR1xHlt_823-x0g-t_9NMwW03pi3F64gRzzgY/p.png?is_prewarmed=true',
+          link: 'https://www.wtwr.pixelfucker.com/',
         },
       ],
     },
@@ -58,7 +63,7 @@ const CONFIG = {
   },
   social: {
     linkedin: 'jordoncunningham',
-    twitter: 'arif_szn',
+    // twitter: 'arif_szn',
     // mastodon: 'arifszn@mastodon.social',
     // researchGate: '',
     facebook: 'jordon.cunningham',
