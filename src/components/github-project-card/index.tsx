@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { AiOutlineFork, AiOutlineStar } from 'react-icons/ai';
+import { AiOutlineFork, AiOutlineGithub, AiOutlineStar } from 'react-icons/ai';
 import { MdInsertLink } from 'react-icons/md';
 import { ga, getLanguageColor, skeleton } from '../../utils';
 import { GithubProject } from '../../interfaces/github-project';
@@ -113,10 +113,16 @@ const GithubProjectCard = ({
                 <AiOutlineStar className="mr-0.5" />
                 <span>{item.stargazers_count}</span>
               </span>
-              <span className="flex items-center">
+              <span className="mr-3 flex items-center">
                 <AiOutlineFork className="mr-0.5" />
                 <span>{item.forks_count}</span>
               </span>
+              {item.parent && (
+                <span className="flex items-center">
+                  <AiOutlineGithub className="mr-0.5" />
+                  <span className="text-m">{item.parent}</span>
+                </span>
+              )}
             </div>
             <div>
               <span className="flex items-center">
