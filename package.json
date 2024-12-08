@@ -31,7 +31,7 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.3.1",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.8",
     "daisyui": "^4.11.1",
@@ -49,9 +49,9 @@
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5",
     "vail": "^1.0.3",
-    "vite": "^5.2.11",
+    "vite": "^6.0.3",
     "vite-plugin-html": "^3.2.2",
-    "vite-plugin-pwa": "^0.20.0"
+    "vite-plugin-pwa": "^0.21.1"
   },
   "keywords": [
     "git-profile",
