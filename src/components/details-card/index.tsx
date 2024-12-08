@@ -20,6 +20,7 @@ import {
   FaYoutube,
 } from 'react-icons/fa';
 import { FaSquareThreads } from 'react-icons/fa6';
+import { PiMatrixLogoFill } from 'react-icons/pi';
 import { MdLocationOn } from 'react-icons/md';
 import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
 import { SiResearchgate, SiTwitter, SiUdemy } from 'react-icons/si';
@@ -224,6 +225,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   title="Mastodon:"
                   value={getFormattedMastodonValue(social.mastodon, false)}
                   link={getFormattedMastodonValue(social.mastodon, true)}
+                />
+              )}
+              {social?.matrix && (
+                <ListItem
+                icon={<PiMatrixLogoFill />}
+                title="Matrix"
+                value={social.matrix}
+                link={`https://matrix.to/#/${social.matrix}`}
                 />
               )}
               {social?.linkedin && (
