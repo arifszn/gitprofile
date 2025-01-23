@@ -3,7 +3,7 @@ const CONFIG = {
     username: 'uktgh',
   },
 
-  base: '/home/',
+  base: '/',
   projects: {
     github: {
       display: true,
