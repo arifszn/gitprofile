@@ -18,7 +18,7 @@ const CONFIG = {
         },
       },
       manual: {
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], 
+        projects: [], 
       },
     },
     external: {
@@ -82,7 +82,7 @@ const CONFIG = {
     'C#',
     'SQL',
     'Python',
-    'x86asm'
+    'x86asm',
   ],
   experiences: [
     {
