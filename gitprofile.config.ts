@@ -58,7 +58,7 @@ const CONFIG = {
   },
   social: {
     linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    x: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
     researchGate: '',
     facebook: '',

@@ -44,7 +44,7 @@ export interface SanitizedSEO {
 
 export interface SanitizedSocial {
   linkedin?: string;
-  twitter?: string;
+  x?: string;
   mastodon?: string;
   researchGate?: string;
   facebook?: string;
