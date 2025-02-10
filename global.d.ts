@@ -113,9 +113,9 @@ interface Social {
   linkedin?: string;
 
   /**
-   * Twitter
+   * X (formerly Twitter)
    */
-  twitter?: string;
+  x?: string;
 
   /**
    * Mastodon
