@@ -78,10 +78,10 @@ const CONFIG = {
     phone: '',
     email: 'arifulalamszn@gmail.com',
   },
-  resume: {
-    fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
-  },
+  // resume: {
+  //   fileUrl:
+  //     'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+  // },
   skills: [
     'PHP',
     'Laravel',
