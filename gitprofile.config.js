@@ -16,7 +16,7 @@ const config = {
   },
   social: {
     linkedin: 'jameskip',
-    twitter: 'jvmeskip',
+    twitter: '',
     facebook: '',
     instagram: '',
     dribbble: '',
@@ -24,9 +24,9 @@ const config = {
     medium: 'jameskip',
     // dev: 'arifszn',
     stackoverflow: '', // format: userid/username
-    website: 'https://jameskip.com',
+    website: 'https://jmekip.com',
     phone: '',
-    email: 'me@jameskip.com',
+    email: 'jameskip@me.com',
   },
   // resume: {
   //   fileUrl:
@@ -54,6 +54,13 @@ const config = {
     url: 'https://open.spotify.com/playlist/6GiH4L7Cvqfwfl7qfaHjmx?si=ed9d7e7e67794ec1',
   },
   experiences: [
+    {
+      company: 'Bolt',
+      position: 'Software Development Engineer In Test',
+      from: 'March 2024',
+      to: 'Present',
+      companyLink: 'https://vetspire.com',
+    },
     {
       company: 'Bolt',
       position: 'Software Development Engineer In Test',
