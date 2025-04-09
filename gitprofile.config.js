@@ -55,7 +55,7 @@ const config = {
   },
   experiences: [
     {
-      company: 'Bolt',
+      company: 'Vetspire',
       position: 'Software Development Engineer In Test',
       from: 'March 2024',
       to: 'Present',
