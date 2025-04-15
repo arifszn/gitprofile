@@ -28,7 +28,7 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -89,15 +89,16 @@ const CONFIG = {
     'Laravel',
     'JavaScript',
     'React.js',
-    'Node.js',
-    'Nest.js',
+    'Vue.js',
+    'C#',
+    'Java',
+    'Django'
     'MySQL',
-    'PostgreSQL',
+    'Swift',
     'Git',
     'Docker',
-    'PHPUnit',
+    'Test Driven Development',
     'CSS',
-    'Antd',
     'Tailwind',
   ],
   experiences: [
@@ -144,7 +145,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'dim',
+    defaultTheme: 'light',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -160,9 +161,6 @@ const CONFIG = {
     // Available themes. To remove any theme, exclude from here.
     themes: [
       'light',
-      'dark',
-      'retro',
-      'lofi',
       'dim',
     ],
 
