@@ -35,20 +35,12 @@ const CONFIG = {
       header: 'My Projects',
       projects: [
         {
-          title: 'Project Name',
+          title: 'Xamarin mobile app',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Xamarin (C#) iOS and Android application for real world company.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://ibb.co/nM4rn3zc',
+          link: '',
         },
       ],
     },
@@ -92,7 +84,7 @@ const CONFIG = {
     'Vue.js',
     'C#',
     'Java',
-    'Django'
+    'Django',
     'MySQL',
     'Swift',
     'Git',
@@ -128,7 +120,7 @@ const CONFIG = {
   educations: [
     {
       institution: 'Newcastle University ',
-      degree: 'Computer Science with Industrial Placement - Grade: 1st',
+      degree: 'Computer Science - Grade: 1st',
       from: '2019',
       to: '2023',
     },
