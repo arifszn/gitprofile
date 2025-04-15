@@ -21,9 +21,10 @@ const CONFIG = {
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
           projects: [
-            'joel-carter/ord-joel', 
+            'joel-carter/ord-joel',
             'joel-carter/State_Of_The_Nation_Data',
-            'joel-carter/portfolio'],
+            'joel-carter/portfolio',
+          ],
         },
       },
       manual: {
@@ -38,8 +39,7 @@ const CONFIG = {
           title: 'Xamarin mobile app',
           description:
             'Xamarin (C#) iOS and Android application for real world company.',
-          imageUrl:
-            'https://ibb.co/nM4rn3zc',
+          imageUrl: 'https://ibb.co/nM4rn3zc',
           link: '',
         },
       ],
@@ -151,10 +151,7 @@ const CONFIG = {
     displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: [
-      'light',
-      'dim',
-    ],
+    themes: ['light', 'dim'],
 
     // Custom theme, applied to `procyon` theme
     customTheme: {
