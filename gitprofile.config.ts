@@ -80,7 +80,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      '', // Empty fileUrl will hide the `Download Resume` button.
+      'https://raw.githubusercontent.com/KatKeilty/katkeilty.github.io/resume/public/Kat-Keilty.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'SQL',
