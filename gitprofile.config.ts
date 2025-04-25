@@ -29,20 +29,48 @@ const CONFIG = {
       },
     },
     external: {
-      header: 'My Projects',
+      header: 'My Experience & Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
-        {
-          title: 'Audit',
+          {
+          title: 'Tracking & Metrics',
           description:
-            'Developed new standardized audit process. Created and delivered training and controlled documentation',
+            'Developed bilingual dashboards and automated scorecard delivery, leveraging data from ERP, QMS, and other sources. Maintained PowerBI reports using SQL, DAX, and Azure DevOps, improving accuracy by transitioning from manual to automated systems. #DataVisualization #PowerBI #WorkflowManagement'
+          imageUrl: '',
+          link: '',
+        },
+          {
+          title: 'Software Implementation & Database Administration',
+          description:
+            'Managed Quality Management Software (QMS) implementation, training staff, and transitioning legacy systems. Oversaw software configuration, updates, and access rights while coordinating with IT teams for seamless operation and troubleshooting. #SoftwareImplementation #DatabaseManagement #ProjectManagement'
           imageUrl: '',
           link: '',
         },
         {
-          title: 'Digital transormation, software implementation',
+          title: 'Audit Digitization & Process Standardization',
           description:
-            'Worked with stakeholders to move processes off manual entry. Trained teams and managers to work with and maintain digital processes',
+            'Modernized audit processes by leading software implementation, training auditors, and migrating legacy systems seamlessly. Improved efficiency, accuracy & consistency with standardized procedures and innovative tools. #ISOCompliance #ProjectManagement #ProcessImprovement #Auditing',
+          imageUrl: '',
+          link: '',
+        },
+        {
+          title: 'Digital Transformation & ERP Implementation',
+          description:
+            'Facilitated seamless collaboration among stakeholders, including francophone partners, while leading training on Oracle NetSuite, M365 and Isovision. Championed data migration with SQL tools, bridging system gaps & driving tech adoption. #ERP #DataMigration #StakeholderManagement',
+          imageUrl: '',
+          link: '',
+        },
+        {
+          title: 'Dynamic Documentation Design and Management',
+          description:
+            'Streamlined documentation processes by designing dynamic templates, resolving version control issues, and advising on versioning and branding needs. Supported French translations to ensure cohesive, multilingual materials. #Documentation #WorkflowManagement #VersionControl'
+          imageUrl: '',
+          link: '',
+        },
+        {
+          title: 'Leadership and Training',
+          description:
+            'Led training programs for 365, QMS, ERP, and reporting while mentoring staff and improving departmental performance. Developed bilingual SharePoint resources, standardized documentation, and collaborated on adapting processes to new technologies. #Leadership #Training #ProcessImprovement'
           imageUrl: '',
           link: '',
         },
@@ -234,8 +262,8 @@ const CONFIG = {
     // Custom theme, applied to `procyon` theme
     customTheme: {
       primary: '#e98403',
-      secondary: '#e98403',
-      accent: '#a0c2c4',
+      secondary: '#0368E9',
+      accent: '##FC910A',
       neutral: '#b7b2c4',
       'base-100': '#1a103d',
       '--rounded-box': '2rem',
