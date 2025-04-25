@@ -32,17 +32,17 @@ const CONFIG = {
       header: 'My Experience & Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
-          {
+        {
           title: 'Tracking & Metrics',
           description:
-            'Developed bilingual dashboards and automated scorecard delivery, leveraging data from ERP, QMS, and other sources. Maintained PowerBI reports using SQL, DAX, and Azure DevOps, improving accuracy by transitioning from manual to automated systems. #DataVisualization #PowerBI #WorkflowManagement'
+            'Developed bilingual dashboards and automated scorecard delivery, leveraging data from ERP, QMS, and other sources. Maintained PowerBI reports using SQL, DAX, and Azure DevOps, improving accuracy by transitioning from manual to automated systems. #DataVisualization #PowerBI #WorkflowManagement',
           imageUrl: '',
           link: '',
         },
-          {
+        {
           title: 'Software Implementation & Database Administration',
           description:
-            'Managed Quality Management Software (QMS) implementation, training staff, and transitioning legacy systems. Oversaw software configuration, updates, and access rights while coordinating with IT teams for seamless operation and troubleshooting. #SoftwareImplementation #DatabaseManagement #ProjectManagement'
+            'Managed Quality Management Software (QMS) implementation, training staff, and transitioning legacy systems. Oversaw software configuration, updates, and access rights while coordinating with IT teams for seamless operation and troubleshooting. #SoftwareImplementation #DatabaseManagement #ProjectManagement',
           imageUrl: '',
           link: '',
         },
@@ -63,14 +63,14 @@ const CONFIG = {
         {
           title: 'Dynamic Documentation Design and Management',
           description:
-            'Streamlined documentation processes by designing dynamic templates, resolving version control issues, and advising on versioning and branding needs. Supported French translations to ensure cohesive, multilingual materials. #Documentation #WorkflowManagement #VersionControl'
+            'Streamlined documentation processes by designing dynamic templates, resolving version control issues, and advising on versioning and branding needs. Supported French translations to ensure cohesive, multilingual materials. #Documentation #WorkflowManagement #VersionControl',
           imageUrl: '',
           link: '',
         },
         {
           title: 'Leadership and Training',
           description:
-            'Led training programs for 365, QMS, ERP, and reporting while mentoring staff and improving departmental performance. Developed bilingual SharePoint resources, standardized documentation, and collaborated on adapting processes to new technologies. #Leadership #Training #ProcessImprovement'
+            'Led training programs for 365, QMS, ERP, and reporting while mentoring staff and improving departmental performance. Developed bilingual SharePoint resources, standardized documentation, and collaborated on adapting processes to new technologies. #Leadership #Training #ProcessImprovement',
           imageUrl: '',
           link: '',
         },
@@ -84,7 +84,7 @@ const CONFIG = {
   },
   social: {
     linkedin: 'katkeilty',
-    website: 'https://www.katkeilty.com',
+    website: '',
     email: 'katkeilty@gmail.com',
     x: '',
     mastodon: '',
@@ -102,7 +102,6 @@ const CONFIG = {
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: '',
   },
   resume: {
     fileUrl:
