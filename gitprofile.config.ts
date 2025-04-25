@@ -36,16 +36,14 @@ const CONFIG = {
           title: 'Audit',
           description:
             'Developed new standardized audit process. Created and delivered training and controlled documentation',
-          imageUrl:
-            '',
+          imageUrl: '',
           link: '',
         },
         {
           title: 'Digital transormation, software implementation',
           description:
             'Worked with stakeholders to move processes off manual entry. Trained teams and managers to work with and maintain digital processes',
-          imageUrl:
-            '',
+          imageUrl: '',
           link: '',
         },
       ],
@@ -56,7 +54,7 @@ const CONFIG = {
     description: '',
     imageURL: '',
   },
-  social: {    
+  social: {
     linkedin: 'katkeilty',
     website: 'https://www.katkeilty.com',
     email: 'katkeilty@gmail.com',
@@ -80,7 +78,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      '', // Empty fileUrl will hide the `Download Resume` button.
+      'https://raw.githubusercontent.com/KatKeilty/katkeilty.github.io/resume/public/Kat-Keilty.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'SQL',
@@ -99,7 +97,7 @@ const CONFIG = {
     'Solutions Development',
     'Process Improvement',
   ],
-  experiences: [    
+  experiences: [
     {
       company: 'Beclawat Manufacturing',
       position: 'Quality Specialist (remote/hybrid)',
@@ -123,7 +121,7 @@ const CONFIG = {
     },
   ],
   certifications: [
-        {
+    {
       name: 'Lean Six Sigma Black Belt',
       body: 'Six Sigma Body of Knowledge: Team leadership & dynamics, DMAIC model, Hypothesis testing, Design of Experiment',
       year: '2024',
@@ -165,8 +163,7 @@ const CONFIG = {
       journalName: '',
       authors: '',
       link: '',
-      description:
-        '',
+      description: '',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
