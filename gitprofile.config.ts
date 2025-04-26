@@ -105,7 +105,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://raw.githubusercontent.com/KatKeilty/katkeilty.github.io/resume/public/Kat-Keilty.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/7891003a4e08d13b94223849fde1a27d54921e7a/public/Kat-Keilty.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'SQL',
