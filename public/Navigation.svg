@@ -6,7 +6,7 @@
   <path d="M80 50 L220 50 L220 250 Q220 270 200 290 H100 Q80 270 80 250 Z" stroke="#e98403" stroke-width="8" fill="none" />
 
   <!-- Lantern base -->
-  <rect x="70" y="290" width="160" height="30" rx="5" ry="5" stroke="#e98403" stroke-width="8" fill="none" />
+  <rect x="70" y="290" width="160" height="30" rx="15" ry="15" stroke="#e98403" stroke-width="8" fill="none" />
 
   <!-- Star Compass Rose -->
   <g stroke="#e98403" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
