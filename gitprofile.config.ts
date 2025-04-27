@@ -43,14 +43,16 @@ const CONFIG = {
           title: 'Software Implementation & Database Administration',
           description:
             'Managed Quality Management Software (QMS) implementation, training staff, and transitioning legacy systems. Oversaw software configuration, updates, and access rights while coordinating with IT teams for seamless operation and troubleshooting. #SoftwareImplementation #DatabaseManagement #ProjectManagement',
-          imageUrl: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/dataMan%20(1).png',
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/dataMan%20(1).png',
           link: '',
         },
         {
           title: 'Audit Digitization & Process Standardization',
           description:
             'Modernized audit processes by leading software implementation, training auditors, and migrating legacy systems seamlessly. Improved efficiency, accuracy & consistency with standardized procedures and innovative tools. #ISOCompliance #ProjectManagement #ProcessImprovement #Auditing',
-          imageUrl: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/ideaMeeting.png',
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/ideaMeeting.png',
           link: '',
         },
         {
@@ -64,14 +66,16 @@ const CONFIG = {
           title: 'Dynamic Documentation Design and Management',
           description:
             'Streamlined documentation processes by designing dynamic templates, resolving version control issues, and advising on versioning and branding needs. Supported French translations to ensure cohesive, multilingual materials. #Documentation #WorkflowManagement #VersionControl',
-          imageUrl: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/ideaMeeting.png',
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/ideaMeeting.png',
           link: '',
         },
         {
           title: 'Leadership and Training',
           description:
             'Led training programs for 365, QMS, ERP, and reporting while mentoring staff and improving departmental performance. Developed bilingual SharePoint resources, standardized documentation, and collaborated on adapting processes to new technologies. #Leadership #Training #ProcessImprovement',
-          imageUrl: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/ideaMeeting.png',
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/ideaMeeting.png',
           link: '',
         },
       ],
