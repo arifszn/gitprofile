@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" fill="none">
+  <!-- Handle -->
+  <rect x="100" y="10" width="100" height="40" rx="20" ry="20" stroke="#e98403" stroke-width="8" fill="none" />
+
+  <!-- Lantern body -->
+  <path d="M80 50 L220 50 L220 250 Q220 270 200 290 H100 Q80 270 80 250 Z" stroke="#e98403" stroke-width="8" fill="none" />
+
+  <!-- Lantern base -->
+  <rect x="70" y="290" width="160" height="30" rx="5" ry="5" stroke="#e98403" stroke-width="8" fill="none" />
+
+  <!-- Star Compass Rose -->
+  <g stroke="#e98403" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Long arms -->
+    <line x1="150" y1="130" x2="150" y2="90" />
+    <line x1="150" y1="130" x2="190" y2="130" />
+    <line x1="150" y1="130" x2="150" y2="170" />
+    <line x1="150" y1="130" x2="110" y2="130" />
+
+    <!-- Diagonal arms -->
+    <line x1="150" y1="130" x2="175" y2="105" />
+    <line x1="150" y1="130" x2="175" y2="155" />
+    <line x1="150" y1="130" x2="125" y2="155" />
+    <line x1="150" y1="130" x2="125" y2="105" />
+
+    <!-- Solid small star center -->
+    <polygon points="150,120 155,130 150,140 145,130" fill="#e98403"/>
+  </g>
+
+  <!-- Math Compass -->
+  <g stroke="#e98403" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Top hinge circle -->
+    <circle cx="150" cy="130" r="6" fill="white" stroke="#e98403" stroke-width="4" />
+    <!-- Compass legs -->
+    <line x1="147" y1="135" x2="130" y2="190" />
+    <line x1="153" y1="135" x2="170" y2="190" />
+    <!-- Connecting bar -->
+    <line x1="138" y1="170" x2="162" y2="170" />
+  </g>
+</svg>
