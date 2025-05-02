@@ -35,8 +35,8 @@ const CONFIG = {
         {
           title: 'Tracking & Metrics',
           description:
-            'Developed bilingual dashboards and automated scorecard delivery, leveraging data from ERP, QMS, and other sources. Maintained PowerBI reports using SQL, DAX, and Azure DevOps, improving accuracy by transitioning from manual to automated systems. #DataVisualization #PowerBI #WorkflowManagement',
-          imageUrl: '',
+            'Develop bilingual dashboards and automated scorecard delivery, leveraging data from ERP, QMS, and other sources. Maintain PowerBI reports using SQL, DAX, and Azure DevOps, improving accuracy by transitioning from manual to automated systems. #DataVisualization #PowerBI #WorkflowManagement',
+          imageUrl: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Metrics.png',
           link: '',
         },
         {
@@ -44,7 +44,7 @@ const CONFIG = {
           description:
             'Managed Quality Management Software (QMS) implementation, training staff, and transitioning legacy systems. Oversaw software configuration, updates, and access rights while coordinating with IT teams for seamless operation and troubleshooting. #SoftwareImplementation #DatabaseManagement #ProjectManagement',
           imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/dataMan%20(1).png',
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/QMS.png',
           link: '',
         },
         {
@@ -52,14 +52,14 @@ const CONFIG = {
           description:
             'Modernized audit processes by leading software implementation, training auditors, and migrating legacy systems seamlessly. Improved efficiency, accuracy & consistency with standardized procedures and innovative tools. #ISOCompliance #ProjectManagement #ProcessImprovement #Auditing',
           imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/ideaMeeting.png',
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Audit.png',
           link: '',
         },
         {
           title: 'Digital Transformation & ERP Implementation',
           description:
             'Facilitated seamless collaboration among stakeholders, including francophone partners, while leading training on Oracle NetSuite, M365 and Isovision. Championed data migration with SQL tools, bridging system gaps & driving tech adoption. #ERP #DataMigration #StakeholderManagement',
-          imageUrl: '',
+          imageUrl: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/ERP.png',
           link: '',
         },
         {
@@ -67,7 +67,7 @@ const CONFIG = {
           description:
             'Streamlined documentation processes by designing dynamic templates, resolving version control issues, and advising on versioning and branding needs. Supported French translations to ensure cohesive, multilingual materials. #Documentation #WorkflowManagement #VersionControl',
           imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/ideaMeeting.png',
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Documentation.png',
           link: '',
         },
         {
@@ -75,7 +75,7 @@ const CONFIG = {
           description:
             'Led training programs for 365, QMS, ERP, and reporting while mentoring staff and improving departmental performance. Developed bilingual SharePoint resources, standardized documentation, and collaborated on adapting processes to new technologies. #Leadership #Training #ProcessImprovement',
           imageUrl:
-            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/c103c98c5b573e01055b66cbd16797010616e522/public/MOMO_illustrations/ideaMeeting.png',
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Leadership.png',
           link: '',
         },
       ],
@@ -83,13 +83,13 @@ const CONFIG = {
   },
   seo: {
     title: 'Portfolio of Kat Keilty',
-    description: '',
-    imageURL: '',
+    description: 'I make work smoother by connecting the dots between business, technology, and people. I simplify processes, solve problems, and help teams work better together. ',
+    imageURL: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/9b65af2610bfe6eab4cdf4fb9f5a63222db8bb90/public/logoBranding/womanLogo.png',
   },
   social: {
     linkedin: 'katkeilty',
     website: '',
-    email: 'katkeilty@gmail.com',
+    email: 'katkeilty@outlook.com',
     x: '',
     mastodon: '',
     researchGate: '',
@@ -109,7 +109,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/7891003a4e08d13b94223849fde1a27d54921e7a/public/Kat-Keilty.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://github.com/KatKeilty/katkeilty.github.io/blob/images/public/resume/katKeiltySummaryResume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'SQL',
@@ -117,9 +117,10 @@ const CONFIG = {
     'DAX',
     'PowerQuery',
     'Git',
-    'M365',
     'HTML',
     'ETL',
+    'M365',
+    'SharePoint',
     'Data Analysis',
     'Data Modeling',
     'Database Administration',
@@ -266,8 +267,8 @@ const CONFIG = {
     customTheme: {
       primary: '#e98403',
       secondary: '#0368E9',
-      accent: '##FC910A',
-      neutral: '#b7b2c4',
+      accent: '#FC910A',
+      neutral: '#FFD580',
       'base-100': '#1a103d',
       '--rounded-box': '2rem',
       '--rounded-btn': '2rem',
