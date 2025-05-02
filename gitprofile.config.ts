@@ -36,7 +36,8 @@ const CONFIG = {
           title: 'Tracking & Metrics',
           description:
             'Develop bilingual dashboards and automated scorecard delivery, leveraging data from ERP, QMS, and other sources. Maintain PowerBI reports using SQL, DAX, and Azure DevOps, improving accuracy by transitioning from manual to automated systems. #DataVisualization #PowerBI #WorkflowManagement',
-          imageUrl: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Metrics.png',
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Metrics.png',
           link: '',
         },
         {
@@ -59,7 +60,8 @@ const CONFIG = {
           title: 'Digital Transformation & ERP Implementation',
           description:
             'Facilitated seamless collaboration among stakeholders, including francophone partners, while leading training on Oracle NetSuite, M365 and Isovision. Championed data migration with SQL tools, bridging system gaps & driving tech adoption. #ERP #DataMigration #StakeholderManagement',
-          imageUrl: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/ERP.png',
+          imageUrl:
+            'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/ERP.png',
           link: '',
         },
         {
@@ -83,8 +85,10 @@ const CONFIG = {
   },
   seo: {
     title: 'Portfolio of Kat Keilty',
-    description: 'I make work smoother by connecting the dots between business, technology, and people. I simplify processes, solve problems, and help teams work better together. ',
-    imageURL: 'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/9b65af2610bfe6eab4cdf4fb9f5a63222db8bb90/public/logoBranding/womanLogo.png',
+    description:
+      'I make work smoother by connecting the dots between business, technology, and people. I simplify processes, solve problems, and help teams work better together. ',
+    imageURL:
+      'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/9b65af2610bfe6eab4cdf4fb9f5a63222db8bb90/public/logoBranding/womanLogo.png',
   },
   social: {
     linkedin: 'katkeilty',
