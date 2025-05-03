@@ -38,7 +38,7 @@ const CONFIG = {
             'Develop bilingual dashboards and automated scorecard delivery, leveraging data from ERP, QMS, and other sources. Maintain PowerBI reports using SQL, DAX, and Azure DevOps, improving accuracy by transitioning from manual to automated systems. #DataVisualization #PowerBI #WorkflowManagement',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Metrics.png',
-          link: '',
+          link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Software Implementation & Database Administration',
@@ -46,7 +46,7 @@ const CONFIG = {
             'Managed Quality Management Software (QMS) implementation, training staff, and transitioning legacy systems. Oversaw software configuration, updates, and access rights while coordinating with IT teams for seamless operation and troubleshooting. #SoftwareImplementation #DatabaseManagement #ProjectManagement',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/QMS.png',
-          link: '',
+          link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Audit Digitization & Process Standardization',
@@ -54,7 +54,7 @@ const CONFIG = {
             'Modernized audit processes by leading software implementation, training auditors, and migrating legacy systems seamlessly. Improved efficiency, accuracy & consistency with standardized procedures and innovative tools. #ISOCompliance #ProjectManagement #ProcessImprovement #Auditing',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Audit.png',
-          link: '',
+          link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Digital Transformation & ERP Implementation',
@@ -62,7 +62,7 @@ const CONFIG = {
             'Facilitated seamless collaboration among stakeholders, including francophone partners, while leading training on Oracle NetSuite, M365 and Isovision. Championed data migration with SQL tools, bridging system gaps & driving tech adoption. #ERP #DataMigration #StakeholderManagement',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/ERP.png',
-          link: '',
+          link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Dynamic Documentation Design and Management',
@@ -70,7 +70,7 @@ const CONFIG = {
             'Streamlined documentation processes by designing dynamic templates, resolving version control issues, and advising on versioning and branding needs. Supported French translations to ensure cohesive, multilingual materials. #Documentation #WorkflowManagement #VersionControl',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Documentation.png',
-          link: '',
+          link: 'https://www.linkedin.com/in/katkeilty',
         },
         {
           title: 'Leadership and Training',
@@ -78,7 +78,7 @@ const CONFIG = {
             'Led training programs for 365, QMS, ERP, and reporting while mentoring staff and improving departmental performance. Developed bilingual SharePoint resources, standardized documentation, and collaborated on adapting processes to new technologies. #Leadership #Training #ProcessImprovement',
           imageUrl:
             'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/dfd3501de272872a72f7ef40358be11abb769bd8/public/canvaCreations/icon/Leadership.png',
-          link: '',
+          link: 'https://www.linkedin.com/in/katkeilty',
         },
       ],
     },
@@ -113,7 +113,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://github.com/KatKeilty/katkeilty.github.io/blob/images/public/resume/katKeiltySummaryResume.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://rawcdn.githack.com/KatKeilty/katkeilty.github.io/9f8c78ea29e12ebfd160186dc9adf42f781cec46/public/resume/katKeiltySummaryResume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'SQL',
