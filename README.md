@@ -66,7 +66,7 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 ## 🛠 Installation & Setup
 
-There are three ways to use **GitProfile**. Use any.
+There are two ways to use **GitProfile**. Use any.
 
 - [Forking this repo _(recommended)_](#forking-this-repo)
 - [Setting up locally](#setting-up-locally)
@@ -210,7 +210,7 @@ const CONFIG = {
   },
   social: {
     linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    x: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
     researchGate: '',
     facebook: '',
@@ -508,7 +508,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, ResearchGate, Facebook, Instagram, Reddit, Threads, YouTube, Udemy, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, X, Mastodon, ResearchGate, Facebook, Instagram, Reddit, Threads, YouTube, Udemy, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
 ```ts
 // gitprofile.config.ts
@@ -516,7 +516,7 @@ const CONFIG = {
   // ...
   social: {
     linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    x: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
     researchGate: '',
     facebook: '',
