@@ -58,7 +58,7 @@ const CONFIG = {
   seo: {
     title: 'Portfolio of James Kip',
     description: 'Software Engineer | Open Source Contributor',
-    imageURL: '',
+    imageURL: 'https://avatars.githubusercontent.com/u/16872140?v=4',
   },
   social: {
     linkedin: 'jameskip',
