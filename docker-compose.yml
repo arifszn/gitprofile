@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./node_modules/vail/runtimes/npm/Dockerfile
+      args:
+        VAIL_NODE_VERSION: 20
+    command: npm run dev -- --host 0.0.0.0
+    ports:
+      - '5173:5173'
+    volumes:
+      - .:/var/www/html
+    networks:
+      - vail
+networks:
+  vail:
+    driver: bridge

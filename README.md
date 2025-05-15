@@ -6,36 +6,19 @@
   <h4 align="center">Easy to use automatic portfolio builder for every GitHub user!</h4>
 
   <p align="center">
-    <a href="https://codeclimate.com/github/arifszn/gitprofile/maintainability">
-      <img src="https://api.codeclimate.com/v1/badges/c60f42d7d0b61bd33e98/maintainability" />
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/actions/workflows/test-deploy.yml">
-      <img src="https://github.com/arifszn/gitprofile/actions/workflows/test-deploy.yml/badge.svg" />
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/issues">
-      <img src="https://img.shields.io/github/issues/arifszn/gitprofile"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/stargazers">
-      <img src="https://img.shields.io/github/stars/arifszn/gitprofile"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/network/members">
-      <img src="https://img.shields.io/github/forks/arifszn/gitprofile"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/package-lock.json">
-      <img src="https://img.shields.io/snyk/vulnerabilities/github/arifszn/gitprofile"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
-      <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/arifszn/gitprofile"/>
-    </a>
-    <a href="https://www.buymeacoffee.com/arifszn">
-      <img src="https://img.shields.io/badge/sponsor-buy%20me%20a%20coffee-yellow?logo=buymeacoffee"/>
-    </a>
-    <a href="https://twitter.com/intent/tweet?text=Check%20out%20the%20portfolio%20builder.%20Create%20an%20automatic%20portfolio%20based%20on%20GitHub%20profile.&url=https://github.com/arifszn/gitprofile&hashtags=javascript,opensource,js,webdev,developers">
-      <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"/>
-    </a>
+    <a href="https://codeclimate.com/github/arifszn/gitprofile/maintainability"><img src="https://api.codeclimate.com/v1/badges/c60f42d7d0b61bd33e98/maintainability" /></a>
+    <a href="https://github.com/arifszn/gitprofile/actions/workflows/test-deploy.yml"><img src="https://github.com/arifszn/gitprofile/actions/workflows/test-deploy.yml/badge.svg" /></a>
+    <a href="https://github.com/arifszn/gitprofile/issues"><img src="https://img.shields.io/github/issues/arifszn/gitprofile"/></a>
+    <a href="https://github.com/arifszn/gitprofile/stargazers"><img src="https://img.shields.io/github/stars/arifszn/gitprofile"/></a>
+    <a href="https://github.com/arifszn/gitprofile/network/members"><img src="https://img.shields.io/github/forks/arifszn/gitprofile"/></a>
+    <a href="https://github.com/arifszn/gitprofile/commits/main"><img src="https://img.shields.io/github/last-commit/arifszn/gitprofile/main"/></a>
+    <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
+    <a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE"><img src="https://img.shields.io/github/license/arifszn/gitprofile"/></a>
+    <a href="https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"><picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://cdn.idx.dev/btn/open_dark_20.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://cdn.idx.dev/btn/open_light_20.svg">
+        <img height="20" alt="Open in IDX" src="https://cdn.idx.dev/btn/open_purple_20.svg">
+      </picture></a>
   </p>
 
   <p align="center">
@@ -49,21 +32,22 @@
 
 <p align="center">
   <a href="https://arifszn.github.io/gitprofile">
-    <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/preview.gif" alt="Preview" width="60%"/>
+    <img src="https://github.com/arifszn/gitprofile/assets/45073703/eb6c38a4-ac92-4006-869b-e4e24f6f5cf6" alt="Preview" width="60%"/>
   </a>
   <br/>
-  <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
+  <a href="#arifszn"><img src="https://github.com/arifszn/gitprofile/assets/45073703/4d2ccd45-e566-4743-bf61-cadc03ece54c" width="50%" alt="Shadow"/></a>
 </p>
 
-**GitProfile** is an easy to use portfolio builder where you can create a portfolio page automatically by just providing your GitHub username. It is built using React.js on top of Vite. But it's not necessary to have knowledge on these to get you started. You can make your own copy with zero coding experience.
+**GitProfile** is a powerful portfolio builder that allows you to create a stunning and personalized portfolio site in minutes, even if you have no coding experience. Simply provide your GitHub username, and GitProfile will automatically generate a portfolio. Best of all, you can easily deploy your portfolio to GitHub Pages with just a few clicks, making it accessible to the world in no time.
 
 **Features:**
 
 ✓ [Easy to Setup](#-installation--setup)  
-✓ [30 Themes](#themes)  
+✓ [33 Themes](#themes)  
 ✓ [Google Analytics](#google-analytics)  
 ✓ [Hotjar](#hotjar)  
 ✓ [SEO](#seo)  
+✓ [PWA](#pwa)  
 ✓ [Avatar and Bio](#avatar-and-bio)  
 ✓ [Social Links](#social-links)  
 ✓ [Skill Section](#skills)  
@@ -71,52 +55,42 @@
 ✓ [Certification Section](#certifications)  
 ✓ [Education Section](#education)  
 ✓ [Projects Section](#projects)  
+✓ [Publication Section](#publications)  
 ✓ [Blog Posts Section](#blog-posts)
 
 To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
-Or try it **[online](https://stackblitz.com/edit/gitprofile)**.
-
 <p align="center">
-  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/themes.png" alt="Themes">
-</p>
-
-## 🎉 Thank you for the 500 ★
-
-<p>
-  <a href="https://arifszn.github.io/gitprofile">
-    <img src="https://user-images.githubusercontent.com/45073703/202119579-eae272bd-ed39-434d-9361-df25308e0691.gif" alt="Thank You" width="50%"/>
-  </a>
+  <img src="https://github.com/arifszn/gitprofile/assets/45073703/406e8368-415a-42ef-89c5-d43cc8bbeb19" alt="Themes">
 </p>
 
 ## 🛠 Installation & Setup
 
-There are three ways to use **GitProfile**. Use any.
+There are two ways to use **GitProfile**. Use any.
 
-- Forking this repo _(recommended)_
-- Setting up locally
-- Installing as package
+- [Forking this repo _(recommended)_](#forking-this-repo)
+- [Setting up locally](#setting-up-locally)
 
 ### Forking this repo
 
-These instructions will get you a copy of the project and deploy your portfolio online!
+These instructions will get you a copy of the project and deploy your portfolio online using GitHub Pages!
 
 - **Fork repo:** Click [here](https://github.com/arifszn/gitprofile/fork) to fork the repo so you have your own project to customize. A "fork" is a copy of a repository.
 - **Rename repo:**
   - If you want to host your portfolio at `https://<USERNAME>.github.io`, rename your forked repository to `username.github.io` in GitHub, where `username` is your GitHub username (or organization name).
-  - If you want to host your portfolio at `https://<USERNAME>.github.io/<REPO>` (e.g. `https://<USERNAME>.github.io/portfolio`), rename your forked repository to `<REPO>` (e.g. `portfolio`) in GitHub.
+  - If you want to host your portfolio at `https://<USERNAME>.github.io/<REPO_NAME>` (e.g. `https://<USERNAME>.github.io/portfolio`), rename your forked repository to `<REPO_NAME>` (e.g. `portfolio`) in GitHub.
 - **Enable workflows:** Go to your repo's **Actions** tab and enable workflows.
 
-  ![Workflows](https://arifszn.github.io/assets/img/hosted/gitprofile/workflows.png)
+  ![Workflows](https://github.com/arifszn/gitprofile/assets/45073703/7e82f7d4-900c-4cb9-83f9-bcaa1ca2b910)
 
-- **Base Value:** Open `vite.config.js`, and change `base`'s value.
+- **Base Value:** Open `gitprofile.config.ts`, and change `base`'s value.
 
   - If you are deploying to `https://<USERNAME>.github.io`, set `base` to `'/'`.
 
-  - If you are deploying to `https://<USERNAME>.github.io/<REPO>` (e.g. `https://<USERNAME>.github.io/portfolio`), then set `base` to `'/<REPO>/'` (e.g. `'/portfolio/'`).
+  - If you are deploying to `https://<USERNAME>.github.io/<REPO_NAME>` (e.g. `https://<USERNAME>.github.io/portfolio`), then set `base` to `'/<REPO_NAME>/'` (e.g. `'/portfolio/'`).
 
-  ```js
-  // vite.config.js
+  ```ts
+  // gitprofile.config.ts
   {
     base: '/',
     // ...
@@ -125,11 +99,24 @@ These instructions will get you a copy of the project and deploy your portfolio 
 
 - **Commit the changes:** Now commit to your **main** branch with your changes. Wait a few minutes so that the CI/CD pipeline can publish your website to GitHub Pages. You can check the progress in the [Actions](https://github.com/arifszn/gitprofile/actions) tab.
 
-Your portfolio website will be live shortly. Any time you commit a change to the **main** branch, the website will be automatically updated. If you face any issue viewing the website, double-check the `base` value in the `vite.config.js` file. Also, check if **Source** is set to **GitHub Actions** in **Settings** ➜ **Pages** ➜ **Build and deployment**.
+Your portfolio website will be live shortly. Any time you commit a change to the **main** branch, the website will be automatically updated. If you face any issue viewing the website, double-check the `base` value in the `gitprofile.config.ts` file. Also, check if **Source** is set to **GitHub Actions** in **Settings** ➜ **Pages** ➜ **Build and deployment**.
 
 If you wish to add a custom domain, no CNAME file is required. Just add it to your repo's **Settings** ➜ **Pages** ➜ **Custom domain**.
 
 As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
+
+> [!NOTE]
+> If you are going to deploy using **Vercel**, remember to set the `base` as `/`.
+
+```ts
+// gitprofile.config.ts
+{
+  base: '/',
+  // ...
+}
+```
+
+[**Not working?**](https://github.com/arifszn/gitprofile/discussions/548)
 
 ### Setting up locally
 
@@ -152,82 +139,117 @@ As this is a Vite project, you can also host your website to Netlify, Vercel, He
   npm run dev
   ```
 
-- Finally, visit [`http://localhost:5173/gitprofile/`](http://localhost:5173/gitprofile/) from your browser.
+- Finally, visit `http://localhost:5173/gitprofile/` from your browser.
 
-### Installing as package
-
-You can also use **GitProfile** by installing as an NPM package. First Install **GitProfile** via <a href="https://www.npmjs.com/package/@arifszn/gitprofile">NPM</a>.
-
-```sh
-npm install @arifszn/gitprofile
-```
-
-Or via <a href="https://yarnpkg.com/package/@arifszn/gitprofile">Yarn</a>.
-
-```sh
-yarn add @arifszn/gitprofile
-```
-
-Then, import the package, import and style and provide the config.
-
-```js
-import GitProfile from '@arifszn/gitprofile';
-import '@arifszn/gitprofile/dist/style.css';
-
-function App() {
-  return (
-    <GitProfile
-      config={{
-        github: {
-          username: 'arifszn',
-        },
-      }}
-    />
-  );
-}
-
-export default App;
-```
-
-List of all config [here](#-customization).
-
-**If you face any problems or have any questions, open an issue [here](https://github.com/arifszn/gitprofile/issues).**
+> Alternatively, you can set up and run the project using Docker with **[Vail](https://github.com/arifszn/vail)**, a powerful tool for local development of JavaScript/TypeScript Apps.
 
 ## 🎨 Customization
 
-All the magic happens in the file `gitprofile.config.js`. Open it and modify it according to your preference.
+All the magic happens in the file `gitprofile.config.ts`. Open it and modify it according to your preference.
 
-```js
-// gitprofile.config.js
+You can leave most of the sections empty if you don't want to display them on your portfolio.
 
-const config = {
+```ts
+// gitprofile.config.ts
+
+const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
-    limit: 8, // How many projects to display.
-    exclude: {
-      forks: false, // Forked projects will not be displayed if set to true.
-      projects: [], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+  },
+  /**
+   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
+   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
+   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
+   */
+  base: '/gitprofile/',
+  projects: {
+    github: {
+      display: true, // Display GitHub projects?
+      header: 'Github Projects',
+      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      automatic: {
+        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
+        limit: 8, // How many projects to display.
+        exclude: {
+          forks: false, // Forked projects will not be displayed if set to true.
+          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        },
+      },
+      manual: {
+        // Properties for manually specifying projects
+        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+      },
+    },
+    external: {
+      header: 'My Projects',
+      // To hide the `External Projects` section, keep it empty.
+      projects: [
+        {
+          title: 'Project Name',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Project Name',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+      ],
     },
   },
+  seo: {
+    title: 'Portfolio of Ariful Alam',
+    description: '',
+    imageURL: '',
+  },
   social: {
-    linkedin: '',
-    twitter: '',
+    linkedin: 'ariful-alam',
+    x: 'arif_szn',
+    mastodon: 'arifszn@mastodon.social',
+    researchGate: '',
     facebook: '',
     instagram: '',
+    reddit: '',
+    threads: '',
+    youtube: '', // example: 'pewdiepie'
+    udemy: '',
     dribbble: '',
     behance: '',
-    medium: '',
-    dev: '',
-    stackoverflow: '',
-    website: '',
+    medium: 'arifszn',
+    dev: 'arifszn',
+    stackoverflow: '', // example: '1/jeff-atwood'
+    skype: '',
+    telegram: '',
+    website: 'https://www.arifszn.com',
     phone: '',
-    email: '',
+    email: 'arifulalamszn@gmail.com',
   },
   resume: {
-    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl:
+      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
-  skills: ['JavaScript', 'React.js'],
+  skills: [
+    'PHP',
+    'Laravel',
+    'JavaScript',
+    'React.js',
+    'Node.js',
+    'Nest.js',
+    'MySQL',
+    'PostgreSQL',
+    'Git',
+    'Docker',
+    'PHPUnit',
+    'CSS',
+    'Antd',
+    'Tailwind',
+  ],
   experiences: [
     {
       company: 'Company Name',
@@ -246,13 +268,13 @@ const config = {
   ],
   certifications: [
     {
-      body: 'Certification Body Name',
-      name: 'Sample Certification',
+      name: 'Lorem ipsum',
+      body: 'Lorem ipsum dolor sit amet',
       year: 'March 2022',
       link: 'https://example.com',
     },
   ],
-  education: [
+  educations: [
     {
       institution: 'Institution Name',
       degree: 'Degree',
@@ -266,28 +288,31 @@ const config = {
       to: '2014',
     },
   ],
-  // To hide the `My Projects` section, keep it empty.
-  externalProjects: [
+  publications: [
     {
-      title: 'Project Name',
+      title: 'Publication Title',
+      conferenceName: '',
+      journalName: 'Journal Name',
+      authors: 'John Doe, Jane Smith',
+      link: 'https://example.com',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
     },
     {
-      title: 'Project Name',
+      title: 'Publication Title',
+      conferenceName: 'Conference Name',
+      journalName: '',
+      authors: 'John Doe, Jane Smith',
+      link: 'https://example.com',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
     },
   ],
-  // Display blog posts from your medium or dev account. (Optional)
+  // Display articles from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
     username: 'arifszn', // to hide blog section, keep it empty
-    limit: 5, // How many posts to display. Max is 10.
+    limit: 3, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -298,18 +323,18 @@ const config = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'light',
+    defaultTheme: 'nord',
 
-    // Hides the theme change switch
+    // Hides the switch in the navbar
     // Useful if you want to support a single color mode
     disableSwitch: false,
 
     // Should use the prefers-color-scheme media-query,
     // using user system preferences, instead of the hardcoded defaultTheme
-    respectPrefersColorScheme: true,
+    respectPrefersColorScheme: false,
 
-    // Hide the ring in Profile picture
-    hideAvatarRing: false,
+    // Display the ring in Profile picture
+    displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
     themes: [
@@ -342,10 +367,13 @@ const config = {
       'night',
       'coffee',
       'winter',
+      'dim',
+      'nord',
+      'sunset',
       'procyon',
     ],
 
-    // Custom theme
+    // Custom theme, applied to `procyon` theme
     customTheme: {
       primary: '#fc055b',
       secondary: '#219aaf',
@@ -358,19 +386,27 @@ const config = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Copyright © 2023 John Doe`,
+  footer: `Made with <a 
+      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      target="_blank"
+      rel="noreferrer"
+    >GitProfile</a> and ❤️`,
+
+  enablePWA: true,
 };
+
+export default CONFIG;
 ```
 
 ### Themes
 
-There are 30 themes available that can be selected from the dropdown.
+There are 33 themes available that can be selected from the dropdown.
 
 The default theme can be specified.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
   themeConfig: {
     defaultTheme: 'light',
@@ -380,15 +416,25 @@ const config = {
 ```
 
 <p align="center">
-  <img src="https://arifszn.github.io/assets/img/hosted/gitprofile/theme-dropdown.png" alt="Theme Dropdown" width="50%">
+  <img src="https://github.com/arifszn/gitprofile/assets/45073703/91a2d9e6-67e5-47b4-9752-1881ac0f907f" alt="Theme Dropdown" width="50%">
 </p>
 
 You can create your own custom theme by modifying these values. Theme `procyon` will have the custom styles.
 
-```js
-// gitprofile.config.js
-const config = {
-  // ...
+```ts
+// gitprofile.config.ts
+const CONFIG = {
+  /**
+   * Defines the custom theme colors and styles for the application.
+   * The theme includes the following properties:
+   * - `primary`: The primary color used throughout the application.
+   * - `secondary`: The secondary color used for accents and highlights.
+   * - `accent`: The accent color used for special elements.
+   * - `neutral`: The neutral color used for backgrounds and text.
+   * - `base-100`: The base background color.
+   * - `--rounded-box`: The border radius for boxes and containers.
+   * - `--rounded-btn`: The border radius for buttons.
+   */
   themeConfig: {
     customTheme: {
       primary: '#fc055b',
@@ -399,7 +445,6 @@ const config = {
       '--rounded-box': '3rem',
       '--rounded-btn': '3rem',
     },
-    // ...
   },
 };
 ```
@@ -408,12 +453,12 @@ const config = {
 
 **GitProfile** supports both GA3 and GA4. If you do not want to use Google Analytics, keep the `id` empty.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
   googleAnalytics: {
-    id: '',
+    id: 'G-XXXXXXXXX',
   },
 };
 ```
@@ -424,9 +469,9 @@ Besides tracking visitors, it will track `click events` on projects and blog pos
 
 **GitProfile** supports [hotjar](https://www.hotjar.com) to track visitor interaction and behavior. If you do not want to use Hotjar, keep the `id` empty.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
   hotjar: {
     id: '',
@@ -437,7 +482,25 @@ const config = {
 
 ### SEO
 
-Meta tags will be auto-generated from configs dynamically. However, you can also manually add meta tags in `public/index.html`.
+You can customize the meta tags for SEO in `seo`.
+
+```ts
+// gitprofile.config.ts
+const CONFIG = {
+  // ...
+  seo: {
+    title: 'Portfolio of Ariful Alam',
+    description: '',
+    imageURL: '',
+  },
+};
+```
+
+### PWA
+
+GitProfile is PWA enabled. The site can be installed as a Progressive Web App. To turn it off, set `enablePWA` to `false`.
+
+![PWA](https://github.com/arifszn/gitprofile/assets/45073703/9dc7cc5c-4262-4445-a7a5-1e3566ef43fa)
 
 ### Avatar and Bio
 
@@ -445,22 +508,30 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Facebook, Instagram, Dribbble, Behance, Medium, dev, Stack Overflow, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, X, Mastodon, ResearchGate, Facebook, Instagram, Reddit, Threads, YouTube, Udemy, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
   social: {
     linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    x: 'arif_szn',
+    mastodon: 'arifszn@mastodon.social',
+    researchGate: '',
     facebook: '',
     instagram: '',
+    reddit: '',
+    threads: '',
+    youtube: '',
+    udemy: '',
     dribbble: '',
     behance: '',
     medium: '',
     dev: '',
     stackoverflow: '',
+    skype: '',
+    telegram: '',
     website: '',
     phone: '',
     email: '',
@@ -472,9 +543,9 @@ const config = {
 
 To showcase your skills provide them here.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
   skills: ['JavaScript', 'React.js'],
 };
@@ -486,9 +557,9 @@ Empty array will hide the skills section.
 
 Provide your job history in `experiences`.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
   experiences: [
     {
@@ -513,13 +584,13 @@ Empty array will hide the experience section.
 
 ### Education
 
-Provide your education history in `education`.
+Provide your education history in `educations`.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
-  education: [
+  educations: [
     {
       institution: 'Institution name 1',
       degree: 'Bachelor of Science',
@@ -542,9 +613,9 @@ Empty array will hide the education section.
 
 Provide your industry certifications in `certifications`.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
   certifications: [
     {
@@ -563,19 +634,30 @@ Empty array will hide the certifications section.
 
 #### Github Projects
 
-Your public repo from GitHub will be displayed in the `Github Projects` section automatically. You can limit how many projects do you want to be displayed. Also, you can hide forked or specific repo.
+- **Automatic Mode:** Seamlessly showcase your top GitHub projects based on stars or last updated date.
+- **Manual Mode:** Choose specific repositories to highlight.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
-  github: {
-    username: 'arifszn',
-    sortBy: 'stars',
-    limit: 8,
-    exclude: {
-      forks: false,
-      projects: ['my-project1', 'my-project2'],
+  projects: {
+    github: {
+      display: true, // Display GitHub projects?
+      header: 'Github Projects',
+      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      automatic: {
+        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
+        limit: 8, // How many projects to display.
+        exclude: {
+          forks: false, // Forked projects will not be displayed if set to true.
+          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        },
+      },
+      manual: {
+        // Properties for manually specifying projects
+        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+      },
     },
   },
 };
@@ -583,30 +665,71 @@ const config = {
 
 #### External Projects
 
-In this section you can showcase your external/personal projects.
+- **Highlight Projects Beyond GitHub:** Feature projects hosted on other platforms or personal websites.
+- **Control over Content:** Provide custom titles, descriptions, images, and links for each external project.
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
-  externalProjects: [
+  projects: {
+    external: {
+      header: 'My Projects',
+      // To hide the `External Projects` section, keep it empty.
+      projects: [
+        {
+          title: 'Project Name',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+        {
+          title: 'Project Name',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+          imageUrl:
+            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+          link: 'https://example.com',
+        },
+      ],
+    },
+  },
+};
+```
+
+### Publications
+
+Provide your academic publishing in `publications`.
+
+```ts
+// gitprofile.config.ts
+const CONFIG = {
+  // ...
+  publications: [
     {
-      title: 'Project Name',
-      description: 'Description',
+      title: 'Publication Title',
+      conferenceName: 'Conference Name',
+      journalName: 'Journal Name',
+      authors: 'John Doe, Jane Smith',
       link: 'https://example.com',
-      imageUrl: 'https://via.placeholder.com/250x250',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
     },
   ],
 };
 ```
 
+Empty array will hide the publications section.
+
 ### Blog Posts
 
 If you have [medium](https://medium.com) or [dev](https://dev.to) account, you can show your recent blog posts in here just by providing your medium/dev username. You can limit how many posts to display (Max is `10`).
 
-```js
-// gitprofile.config.js
-const config = {
+```ts
+// gitprofile.config.ts
+const CONFIG = {
   // ...
   blog: {
     source: 'dev',
@@ -616,7 +739,7 @@ const config = {
 };
 ```
 
-![Blog](https://arifszn.github.io/assets/img/hosted/gitprofile/blog.png)
+![Blog](https://github.com/arifszn/gitprofile/assets/45073703/410124f2-a3c2-48f1-8ec8-0c6fae74ae3d)
 
 The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
 
