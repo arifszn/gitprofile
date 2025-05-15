@@ -56,7 +56,7 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of James Kip',
+    title: 'James Kip',
     description: 'Software Engineer | Open Source Contributor',
     imageURL: 'https://avatars.githubusercontent.com/u/16872140?v=4',
   },
@@ -237,7 +237,7 @@ const CONFIG = {
   // Optional Footer. Supports plain text or HTML.
   footer: `Made in Austin, Texas. 🤠`,
 
-  enablePWA: false,
+  enablePWA: true,
 };
 
 export default CONFIG;
