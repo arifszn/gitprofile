@@ -65,6 +65,10 @@ export interface SanitizedSocial {
   email?: string;
 }
 
+export interface SanitizedMusic {
+  url: string;
+}
+
 export interface SanitizedResume {
   fileUrl?: string;
 }
@@ -142,6 +146,7 @@ export interface SanitizedConfig {
   social: SanitizedSocial;
   resume: SanitizedResume;
   skills: Array<string>;
+  music: SanitizedMusic;
   experiences: Array<SanitizedExperience>;
   educations: Array<SanitizedEducation>;
   certifications: Array<SanitizedCertification>;

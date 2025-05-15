@@ -1,10 +1,10 @@
 {
-  "name": "@arifszn/gitprofile",
-  "description": "Create an automatic portfolio based on GitHub profile",
+  "name": "jameskip",
+  "description": "SDET | James Kip",
   "version": "3.1.0",
   "type": "module",
   "license": "MIT",
-  "author": "arifszn",
+  "author": "jameskip",
   "repository": {
     "type": "git",
     "url": "https://github.com/arifszn/gitprofile.git"
@@ -46,6 +46,7 @@
     "react-helmet-async": "^2.0.5",
     "react-hotjar": "^6.3.1",
     "react-icons": "^5.4.0",
+    "react-spotify-embed": "^2.0.4",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.6.2",
     "vail": "^1.0.3",
@@ -82,6 +83,8 @@
     "github-portfolio",
     "vite-portfolio",
     "academic-portfolio",
-    "github-api"
+    "github-api",
+    "qa",
+    "sdet"
   ]
 }

@@ -400,6 +400,13 @@ interface Config {
   educations?: Array<Education>;
 
   /**
+   * Music URL
+   */
+  music?: {
+    url: string;
+  };
+
+  /**
    * Publication list
    */
   publications?: Array<Publication>;

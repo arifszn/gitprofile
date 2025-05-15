@@ -2,7 +2,7 @@
 
 const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: 'jameskip', // Your GitHub org/user name. (This is the only required config)
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
@@ -17,7 +17,7 @@ const CONFIG = {
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'updated', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
+        limit: 4, // How many projects to display.
         exclude: {
           forks: true, // Forked projects will not be displayed if set to true.
           projects: [
@@ -172,7 +172,7 @@ const CONFIG = {
   //   snippetVersion: 6,
   // },
   themeConfig: {
-    defaultTheme: 'forest',
+    defaultTheme: 'sunset',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -183,7 +183,7 @@ const CONFIG = {
     respectPrefersColorScheme: false,
 
     // Display the ring in Profile picture
-    displayAvatarRing: false,
+    displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
     themes: [

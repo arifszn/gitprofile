@@ -30,6 +30,7 @@ import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
 import PublicationCard from './publication-card';
+import Music from './music';
 
 /**
  * Renders the GitProfile component.
@@ -218,6 +219,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                       github={sanitizedConfig.github}
                       social={sanitizedConfig.social}
                     />
+                    {sanitizedConfig.music.url && (
+                      <Music
+                        loading={loading}
+                        url={sanitizedConfig.music.url}
+                      />
+                    )}
                     {sanitizedConfig.skills.length !== 0 && (
                       <SkillCard
                         loading={loading}
