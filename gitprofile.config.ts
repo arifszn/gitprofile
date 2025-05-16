@@ -9,7 +9,7 @@ const CONFIG = {
    * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
    * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
    */
-  base: '/',
+  base: '/jameskip.github.io/',
   projects: {
     github: {
       display: true, // Display GitHub projects?
@@ -62,30 +62,29 @@ const CONFIG = {
   },
   social: {
     linkedin: 'jameskip',
-    // x: 'arif_szn',
-    // mastodon: 'arifszn@mastodon.social',
-    // researchGate: '',
-    // facebook: '',
-    // instagram: '',
-    // reddit: '',
-    // threads: '',
-    // youtube: '', // example: 'pewdiepie'
-    // udemy: '',
-    // dribbble: '',
-    // behance: '',
+    x: '',
+    mastodon: '',
+    researchGate: '',
+    facebook: '',
+    instagram: '',
+    reddit: '',
+    threads: '',
+    youtube: '', // example: 'pewdiepie'
+    udemy: '',
+    dribbble: '',
+    behance: '',
     medium: 'jameskip',
-    // dev: '',
-    // stackoverflow: '', // example: '1/jeff-atwood'
-    // skype: '',
-    // telegram: '',
+    dev: '',
+    stackoverflow: '', // example: '1/jeff-atwood'
+    skype: '',
+    telegram: '',
     website: 'https://www.jmekip.com',
     phone: '',
     email: 'jameskip@me.com',
   },
-  // resume: {
-  //   fileUrl:
-  //     'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
-  // },
+  resume: {
+    fileUrl: '',
+  },
   skills: [
     'TypeScript',
     'Playwright',
@@ -167,10 +166,10 @@ const CONFIG = {
     id: 'G-HCHM0NX2TM', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
   // Track visitor interaction and behavior. https://www.hotjar.com
-  // hotjar: {
-  //   id: '',
-  //   snippetVersion: 6,
-  // },
+  hotjar: {
+    id: '',
+    snippetVersion: 6,
+  },
   themeConfig: {
     defaultTheme: 'sunset',
 
