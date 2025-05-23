@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/biotyk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://shyper.pro
+  * I am biotyk (https://keybase.io/biotyk) on keybase.
+  * I have a public key ASBouFWBP1s1CpwASrWtMclv7UT5PYQWbgn_k6SBqdO7Ngo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01208aa1efa14c25d2d67f520ede1078b9f81b7c3430e5e395c87f956bfe898e83ff0a",
+      "host": "keybase.io",
+      "kid": "012068b855813f5b350a9c004ab5ad31c96fed44f93d84166e09ff93a481a9d3bb360a",
+      "uid": "af43ba38a4f248082502ed83c4cfef19",
+      "username": "biotyk"
+    },
+    "merkle_root": {
+      "ctime": 1620805574,
+      "hash": "7deb8a35e19bb042c04c96fdbfcd143ce4364cccd762dee5c66d16907143c5753a08e81e931ea2193ebe5ef06edd19faade7c52fca95879f16eb0ca55120191f",
+      "hash_meta": "7598cee110e6b74ae00b2a4066ff3e8fd8e02924044ef3bebf400acec169e5a6",
+      "seqno": 19916462
+    },
+    "service": {
+      "entropy": "cT6dVZ3533GpT5Af9mZ9Inqp",
+      "hostname": "shyper.pro",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.2"
+  },
+  "ctime": 1620805630,
+  "expire_in": 504576000,
+  "prev": "039898a661f3985c37a731d3c588c82e68ecbd312e820f773b8ca9bba75eb6d0",
+  "seqno": 36,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgaLhVgT9bNQqcAEq1rTHJb+1E+T2EFm4J/5OkganTuzYKp3BheWxvYWTESpcCJMQgA5iYpmHzmFw3pzHTxYjILmjsvTEugg93O4ypu6dettDEIIpqK+H+SCRC73njA+W3oj15K838BvGYzwCFOd9e93zAAgHCo3NpZ8RAk4Z5MF1nJ/+Aa+0GiKSkAhSOjs1ycd+wwYRJZSOb9FxFvVdGsY36i0J3oXyb2WioMMPs1l1EWw+huCEQyvjmCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEII8v05H8hWjLArOrznDZRist0utQ6hEg6Y4v4wqUds23o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/biotyk
+
+==================================================================
