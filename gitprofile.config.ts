@@ -25,7 +25,14 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [
+            'devops-infra/docker-terragrunt',
+            'devops-infra/velez',
+            'devops-infra/action-commit-push',
+            'devops-infra/action-pull-request',
+            'devops-infra/action-format-hcl',
+            'devops-infra/action-tflint',
+        ], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -33,137 +40,142 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'DevOps-Infra',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Set of tools for DevOps and Cloud Engineers. It includes tools for managing infrastructure, CI/CD pipelines, and more.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://avatars.githubusercontent.com/u/63716145?s=400&u=37eea168495a5abfc24e66eac21f4cb85f72f222&v=4',
+          link: 'https://github.com/devops-infra',
         },
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
+//         {
+//           title: 'Project Name',
+//           description:
+//             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+//           imageUrl:
+//             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
+//           link: 'https://example.com',
+//         },
       ],
     },
   },
   seo: {
-    title: 'Portfolio of Ariful Alam',
+    title: 'Portfolio of Krzysztof Szyper',
     description: '',
     imageURL: '',
   },
   social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'krzysztof-szyper',
+    x: '',
+    mastodon: '',
     researchGate: '',
-    facebook: '',
-    instagram: '',
+    facebook: 'ChristophShyper',
+    instagram: 'ChristophShyper',
     reddit: '',
     threads: '',
-    youtube: '', // example: 'pewdiepie'
+    youtube: 'ChristophShyper', // example: 'pewdiepie'
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: 'krzysztof.szyper',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
+    website: 'https://shyper.pro',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: '',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'AWS',
+    'GCP',
+    'Terraform',
+    'Python',
+    'Makefile',
+    'Bash',
     'Git',
     'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'DevOps',
+    'CI/CD',
   ],
   experiences: [
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
-    },
-    {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
-    },
+//     {
+//       company: 'Company Name',
+//       position: 'Position',
+//       from: 'September 2021',
+//       to: 'Present',
+//       companyLink: 'https://example.com',
+//     },
+//     {
+//       company: 'Company Name',
+//       position: 'Position',
+//       from: 'July 2019',
+//       to: 'August 2021',
+//       companyLink: 'https://example.com',
+//     },
   ],
   certifications: [
-    {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
-    },
+//     {
+//       name: 'Lorem ipsum',
+//       body: 'Lorem ipsum dolor sit amet',
+//       year: 'March 2022',
+//       link: 'https://example.com',
+//     },
   ],
   educations: [
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
-    },
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
-    },
+//     {
+//       institution: 'Institution Name',
+//       degree: 'Degree',
+//       from: '2015',
+//       to: '2019',
+//     },
+//     {
+//       institution: 'Institution Name',
+//       degree: 'Degree',
+//       from: '2012',
+//       to: '2014',
+//     },
   ],
   publications: [
     {
-      title: 'Publication Title',
-      conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      title: 'Getting started with AWS - the proper way - no more IAM users',
+      conferenceName: 'AWS User Group Kraków',
+      journalName: '',
+      authors: '',
+      link: 'https://github.com/ChristophShyper/presentation-okta-saml-aws',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Information about setting up 3rd party IdPs in AWS with SAML.',
     },
     {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
+      title: 'Managing networking chaos while migrating to AWS multi-account architecture',
+      conferenceName: 'AWS User Group Kraków',
       journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      authors: '',
+      link: 'https://github.com/ChristophShyper/presentation-routing',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Information about ways of leveraging AWS Transit Gateway to simply networking management in AWS at scale.',
+    },
+    {
+      title: 'Understanding AWS Lambda',
+      conferenceName: 'DevOps Community Poland (EPAM)',
+      journalName: '',
+      authors: '',
+      link: 'https://github.com/ChristophShyper/presentation-lambda',
+      description:
+        'Deep dive into AWS Lambda, its architecture and how to use it properly and efficiently.',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
+    source: 'medium', // medium | dev
+    username: 'krzysztof.szyper', // to hide blog section, keep it empty
     limit: 2, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: 'G-CGVLLZ6088', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
   // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
