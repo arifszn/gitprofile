@@ -44,12 +44,15 @@ export interface SanitizedSEO {
 
 export interface SanitizedSocial {
   linkedin?: string;
-  twitter?: string;
+  x?: string;
   mastodon?: string;
   researchGate?: string;
   facebook?: string;
   instagram?: string;
+  reddit?: string;
+  threads?: string;
   youtube?: string;
+  udemy?: string;
   dribbble?: string;
   behance?: string;
   medium?: string;

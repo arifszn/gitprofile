@@ -6,33 +6,19 @@
   <h4 align="center">Easy to use automatic portfolio builder for every GitHub user!</h4>
 
   <p align="center">
-    <a href="https://codeclimate.com/github/arifszn/gitprofile/maintainability">
-      <img src="https://api.codeclimate.com/v1/badges/c60f42d7d0b61bd33e98/maintainability" />
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/actions/workflows/test-deploy.yml">
-      <img src="https://github.com/arifszn/gitprofile/actions/workflows/test-deploy.yml/badge.svg" />
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/issues">
-      <img src="https://img.shields.io/github/issues/arifszn/gitprofile"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/stargazers">
-      <img src="https://img.shields.io/github/stars/arifszn/gitprofile"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/network/members">
-      <img src="https://img.shields.io/github/forks/arifszn/gitprofile"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/commits/main">
-      <img src="https://img.shields.io/github/last-commit/arifszn/gitprofile/main"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md">
-      <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/>
-    </a>
-    <a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/arifszn/gitprofile"/>
-    </a>
-    <a href="https://twitter.com/intent/tweet?text=Check%20out%20the%20portfolio%20builder.%20Create%20an%20automatic%20portfolio%20based%20on%20GitHub%20profile.&url=https://github.com/arifszn/gitprofile&hashtags=javascript,opensource,js,webdev,developers">
-      <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"/>
-    </a>
+    <a href="https://codeclimate.com/github/arifszn/gitprofile/maintainability"><img src="https://api.codeclimate.com/v1/badges/c60f42d7d0b61bd33e98/maintainability" /></a>
+    <a href="https://github.com/arifszn/gitprofile/actions/workflows/deploy.yml"><img src="https://github.com/arifszn/gitprofile/actions/workflows/deploy.yml/badge.svg" /></a>
+    <a href="https://github.com/arifszn/gitprofile/issues"><img src="https://img.shields.io/github/issues/arifszn/gitprofile"/></a>
+    <a href="https://github.com/arifszn/gitprofile/stargazers"><img src="https://img.shields.io/github/stars/arifszn/gitprofile"/></a>
+    <a href="https://github.com/arifszn/gitprofile/network/members"><img src="https://img.shields.io/github/forks/arifszn/gitprofile"/></a>
+    <a href="https://github.com/arifszn/gitprofile/commits/main"><img src="https://img.shields.io/github/last-commit/arifszn/gitprofile/main"/></a>
+    <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
+    <a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE"><img src="https://img.shields.io/github/license/arifszn/gitprofile"/></a>
+    <a href="https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"><picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://cdn.idx.dev/btn/open_dark_20.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://cdn.idx.dev/btn/open_light_20.svg">
+        <img height="20" alt="Open in IDX" src="https://cdn.idx.dev/btn/open_purple_20.svg">
+      </picture></a>
   </p>
 
   <p align="center">
@@ -80,7 +66,7 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 ## 🛠 Installation & Setup
 
-There are three ways to use **GitProfile**. Use any.
+There are two ways to use **GitProfile**. Use any.
 
 - [Forking this repo _(recommended)_](#forking-this-repo)
 - [Setting up locally](#setting-up-locally)
@@ -119,6 +105,17 @@ If you wish to add a custom domain, no CNAME file is required. Just add it to yo
 
 As this is a Vite project, you can also host your website to Netlify, Vercel, Heroku, or other popular services. Please refer to this [doc](https://vitejs.dev/guide/static-deploy.html) for a detailed deployment guide to other services.
 
+> [!NOTE]
+> If you are going to deploy using **Vercel**, remember to set the `base` as `/`.
+
+```ts
+// gitprofile.config.ts
+{
+  base: '/',
+  // ...
+}
+```
+
 [**Not working?**](https://github.com/arifszn/gitprofile/discussions/548)
 
 ### Setting up locally
@@ -149,6 +146,8 @@ As this is a Vite project, you can also host your website to Netlify, Vercel, He
 ## 🎨 Customization
 
 All the magic happens in the file `gitprofile.config.ts`. Open it and modify it according to your preference.
+
+You can leave most of the sections empty if you don't want to display them on your portfolio.
 
 ```ts
 // gitprofile.config.ts
@@ -211,12 +210,15 @@ const CONFIG = {
   },
   social: {
     linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    x: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
     researchGate: '',
     facebook: '',
     instagram: '',
+    reddit: '',
+    threads: '',
     youtube: '', // example: 'pewdiepie'
+    udemy: '',
     dribbble: '',
     behance: '',
     medium: 'arifszn',
@@ -289,8 +291,17 @@ const CONFIG = {
   publications: [
     {
       title: 'Publication Title',
-      conferenceName: 'Conference Name',
+      conferenceName: '',
       journalName: 'Journal Name',
+      authors: 'John Doe, Jane Smith',
+      link: 'https://example.com',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+    },
+    {
+      title: 'Publication Title',
+      conferenceName: 'Conference Name',
+      journalName: '',
       authors: 'John Doe, Jane Smith',
       link: 'https://example.com',
       description:
@@ -413,7 +424,17 @@ You can create your own custom theme by modifying these values. Theme `procyon` 
 ```ts
 // gitprofile.config.ts
 const CONFIG = {
-  // ...
+  /**
+   * Defines the custom theme colors and styles for the application.
+   * The theme includes the following properties:
+   * - `primary`: The primary color used throughout the application.
+   * - `secondary`: The secondary color used for accents and highlights.
+   * - `accent`: The accent color used for special elements.
+   * - `neutral`: The neutral color used for backgrounds and text.
+   * - `base-100`: The base background color.
+   * - `--rounded-box`: The border radius for boxes and containers.
+   * - `--rounded-btn`: The border radius for buttons.
+   */
   themeConfig: {
     customTheme: {
       primary: '#fc055b',
@@ -424,7 +445,6 @@ const CONFIG = {
       '--rounded-box': '3rem',
       '--rounded-btn': '3rem',
     },
-    // ...
   },
 };
 ```
@@ -438,7 +458,7 @@ const CONFIG = {
 const CONFIG = {
   // ...
   googleAnalytics: {
-    id: '',
+    id: 'G-XXXXXXXXX',
   },
 };
 ```
@@ -488,7 +508,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, Twitter, Mastodon, ResearchGate, Facebook, Instagram, YouTube, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, X, Mastodon, ResearchGate, Facebook, Instagram, Reddit, Threads, YouTube, Udemy, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
 
 ```ts
 // gitprofile.config.ts
@@ -496,12 +516,15 @@ const CONFIG = {
   // ...
   social: {
     linkedin: 'ariful-alam',
-    twitter: 'arif_szn',
+    x: 'arif_szn',
     mastodon: 'arifszn@mastodon.social',
     researchGate: '',
     facebook: '',
     instagram: '',
+    reddit: '',
+    threads: '',
     youtube: '',
+    udemy: '',
     dribbble: '',
     behance: '',
     medium: '',
