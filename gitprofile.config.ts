@@ -2,14 +2,14 @@
 
 const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: 'narendranathe', // Your GitHub org/user name. (This is the only required config)
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
    * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
    * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
    */
-  base: '/gitprofile/',
+  base: '/',
   projects: {
     github: {
       display: true, // Display GitHub projects?
@@ -52,7 +52,7 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of Ariful Alam',
+    title: 'Portfolio of Narendranath Edara',
     description: '',
     imageURL: '',
   },
@@ -69,49 +69,74 @@ const CONFIG = {
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: 'narendranathedara',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
+    website: 'https://narendranathe.github.io',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'edara.narendranath@gmail.com',
   },
   resume: {
     fileUrl:
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
+    'SQL',
+    'Python',
+    'Power BI (DAX)',
+    'Tableau',
+    'AWS RedShift',
+    'PySpark',
+    'Snowflake',
+    'Big Query',
+    'Looker Studio',
+    'Visio',
+    'Share point',
+    'Data APIs',
+    'Data warehouse',
+    'Github',
+    'Confluence',
+    'JIRA',
     'MySQL',
     'PostgreSQL',
     'Git',
     'Docker',
-    'PHPUnit',
+    'Prompt Engineering',
+    'NLP',
+    'Machine Learning',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'HTML',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Missouri S&T',
+      position: 'NLP Engineer',
+      from: 'August 2023',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://c2fo.com/',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'C2FO',
+      position: 'Engineering Intern',
+      from: 'June 2023',
+      to: 'August 2023',
+      companyLink: 'https://c2fo.com/',
+    },
+     {
+      company: 'Udaan',
+      position: 'Business Intelligence Analyst',
+      from: 'September 2020',
+      to: 'March 2021',
+      companyLink: 'https://udaan.com/',
+    },
+     {
+      company: 'Zomato',
+      position: 'Business Analyst',
+      from: 'March 2018',
+      to: 'September 2020',
+      companyLink: 'https://www.zomato.com/',
     },
   ],
   certifications: [
