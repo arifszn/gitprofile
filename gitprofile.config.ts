@@ -59,9 +59,9 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'greenwilliam',
+    x: ' ',
+    mastodon: ' ',
     researchGate: '',
     facebook: '',
     instagram: '',
@@ -71,25 +71,25 @@ const CONFIG = {
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: 'dskswu',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
+    website: ' ',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'william.green@explainableai2021.com',
   },
   resume: {
     fileUrl:
       'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
+    'SQL',
+    'Python',
+    'Azure',
+    'AWS',
+    'Machine Learning',
     'Nest.js',
     'MySQL',
     'PostgreSQL',
@@ -118,7 +118,7 @@ const CONFIG = {
   ],
   certifications: [
     {
-      name: 'Lorem ipsum',
+      name: 'Azure AI Engineer Associate',
       body: 'Lorem ipsum dolor sit amet',
       year: 'March 2022',
       link: 'https://example.com',
@@ -126,16 +126,16 @@ const CONFIG = {
   ],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Eastern University',
+      degree: 'Master of Science in Data Science',
+      from: '2024',
+      to: '2024',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Webster University',
+      degree: 'Master of Science in Business',
+      from: '2009',
+      to: '2010',
     },
   ],
   publications: [
