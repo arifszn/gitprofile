@@ -16,7 +16,7 @@ const CONFIG = {
     github: {
       display: true, // Display GitHub projects?
       header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      mode: 'manual', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
         limit: 8, // How many projects to display.
@@ -27,7 +27,7 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: ['wbgreen0405/FraudShield', 'wbgreen0405/Cuisine-Assistant','wbgreen0405/Financial-Reporting-Agent'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -35,20 +35,20 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'Insurance Claims Fraud Detection',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'This AI system detects fraud in insurance claims using advanced computer vision, semantic image search, and machine learning techniques.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://wbgreen0405.github.io/williamgreen.github.io/assets/images/fraud.webp',
+          link: '',
         },
         {
-          title: 'Project Name',
+          title: 'Mapping Kidney Cells',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'This video presents a final project demonstration for the "Hacking the Kidney" competition, highlighting key aspects and outcomes.',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+          link: 'https://wbgreen0405.github.io/williamgreen.github.io/assets/images/kidney.webp',
         },
       ],
     },
@@ -60,8 +60,8 @@ const CONFIG = {
   },
   social: {
     linkedin: 'greenwilliam',
-    x: ' ',
-    mastodon: ' ',
+    x: '',
+    mastodon: '',
     researchGate: '',
     facebook: '',
     instagram: '',
@@ -86,42 +86,52 @@ const CONFIG = {
   },
   skills: [
     'SQL',
-    'Python',
-    'Azure',
-    'AWS',
+    'Python (TensorFlow, Keras)',
+    'Cloud & DevOps',
+    'Statistical Modeling',
     'Machine Learning',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'Database management',
+    'R programming',
+    'Natural Language Processing',
     'Git',
     'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'TensorFlow and Keras',
+    'Problem-Solving',
+    'Spark',
+    'Scikit-Learn',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
+      company: 'Department of VA',
+      position: 'Data Scientist',
+      from: '2017',
+      to: 'Present'
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'Explainable AI, LLC',
+      position: 'Owner and AI Consultant',
+      from: '2021',
+      to: 'Present'
+    },
+    {
+      company: 'Omdena',
+      position: 'Volunteer- Lead ML Engineer',
+      from: '2021',
+      to: 'Present'
     },
   ],
   certifications: [
     {
       name: 'Azure AI Engineer Associate',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      year: '2025',
+    },
+    {
+      name: 'Azure Azure Data Scientist Associate',
+      year: '2025',
+    },
+    {
+      name: 'Github Foundations',
+      year: '2025',
     },
   ],
   educations: [
@@ -146,23 +156,23 @@ const CONFIG = {
       authors: 'John Doe, Jane Smith',
       link: 'https://example.com',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        '',
     },
     {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
+      title: '',
+      conferenceName: '',
       journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      authors: '',
+      link: '',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        '',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many articles to display. Max is 10.
+    source: 'medium', // medium | dev
+    username: 'dskswu', // to hide blog section, keep it empty
+    limit: 4, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
