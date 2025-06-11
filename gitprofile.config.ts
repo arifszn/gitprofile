@@ -122,16 +122,24 @@ const CONFIG = {
   ],
   certifications: [
     {
+      name: 'Azure Data Fundamentals',
+      year: '2025',
+    },
+    {
       name: 'Azure AI Engineer Associate',
       year: '2025',
     },
     {
-      name: 'Azure Azure Data Scientist Associate',
+      name: 'Azure Data Scientist Associate',
       year: '2025',
     },
     {
       name: 'Github Foundations',
       year: '2025',
+    },
+    {
+      name: 'Azure Fundamentals',
+      year: '2022',
     },
   ],
   educations: [
