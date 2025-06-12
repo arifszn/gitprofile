@@ -43,14 +43,6 @@ const CONFIG = {
           link: '',
         },
         {
-          title: 'Mapping Kidney Cells',
-          description:
-            'This video presents a final project demonstration for the "Hacking the Kidney" competition, highlighting key aspects and outcomes.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://wbgreen0405.github.io/williamgreen.github.io/assets/images/kidney.webp',
-        },
-        {
           title: 'Omdena Sonocare project: Capturing Biometrics through Camera',
           description:
             'Led the development of a modular, end-to-end pipeline for contactless health monitoring at Omdena Sonocare by integrating advanced data preprocessing, self-supervised learning (using synthetic data from GANs), clustering, regression, and model deployment, resulting in seamless transformation of raw video data into actionable health insights. Engineered scalable and maintainable code components, positioning the solution as a strong candidate for real-world, camera-based vital sign monitoring applications.',
