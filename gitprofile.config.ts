@@ -57,6 +57,13 @@ const CONFIG = {
           imageUrl:
             'https://github.com/wbgreen0405/wgportfolio/blob/main/public/SonoCare.webp',
           link: 'https://www.omdena.com/projects/ai-vital-signs-monitoring',
+        {
+          title: 'Omdena Automated Left Ventricular Ejection Fraction Assessment using Deep Learning',
+          description:
+            'Developed an artificial intelligence (AI) solution that automates the measurement of left ventricular ejection fraction (LVEF) from both echocardiogram images and videos',
+          imageUrl:
+            'https://i.ytimg.com/vi/bto6HzsW3mU/maxresdefault.jpg',
+          link: 'https://www.youtube.com/watch?v=bto6HzsW3mU',
         },
       ],
     },
