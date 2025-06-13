@@ -53,7 +53,7 @@ const CONFIG = {
           link: 'https://github.com/wbgreen0405/HuBMAP---Hacking-the-Kidney',
         },
         {
-          title: 'Omdena Sonocare project: Capturing Biometrics through Camera',
+          title: 'Omdena: Sonocare project: Capturing Biometrics through Camera',
           description:
             'Led the development of a modular, end-to-end pipeline for contactless health monitoring at Omdena Sonocare by integrating advanced data preprocessing, self-supervised learning (using synthetic data from GANs), clustering, regression, and model deployment, resulting in seamless transformation of raw video data into actionable health insights. Engineered scalable and maintainable code components, positioning the solution as a strong candidate for real-world, camera-based vital sign monitoring applications.',
           imageUrl:
@@ -61,7 +61,15 @@ const CONFIG = {
           link: 'https://www.omdena.com/projects/ai-vital-signs-monitoring',
         },
         {
-          title: 'Omdena Automated Left Ventricular Ejection Fraction Assessment using Deep Learning',
+          title: 'Omdena:Building and Deploying AI Chatbot for Disaster Assistance',
+          description:
+            'Collaborated on the engineering and deployment of an AI chatbot to deliver real-time information and guidance to individuals in disaster-affected areas, significantly improving access to critical resources like shelter locations and safety tips. This involved developing core AI functionalities for natural language processing, integrating with disaster monitoring APIs, and building a robust system with a CI/CD pipeline.',
+          imageUrl:
+            'https://github.com/wbgreen0405/wgportfolio/blob/main/public/Dima.jpg',
+          link: 'https://www.dropbox.com/scl/fi/boal39gs67e33gkkl5p9q/OmdenaDatacampDimaShort.mp4?rlkey=7miucgluumh8numty3g95rm7j&st=ijjgc1sc&dl=0',
+        },
+        {
+          title: 'Omdena: Automated Left Ventricular Ejection Fraction Assessment using Deep Learning',
           description:
             'Developed an artificial intelligence (AI) solution that automates the measurement of left ventricular ejection fraction (LVEF) from both echocardiogram images and videos',
           imageUrl:
