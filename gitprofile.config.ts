@@ -2,19 +2,19 @@
 
 const CONFIG = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
+    username: 'wbgreen0405', // Your GitHub org/user name. (This is the only required config)
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
    * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
    * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
    */
-  base: '/gitprofile/',
+  base: '/wgportfolio/',
   projects: {
     github: {
       display: true, // Display GitHub projects?
       header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      mode: 'manual', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
         limit: 8, // How many projects to display.
@@ -25,7 +25,11 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [
+          'wbgreen0405/FraudShield',
+          'wbgreen0405/Cuisine-Assistant',
+          'wbgreen0405/Financial-Reporting-Agent'
+        ], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -33,20 +37,44 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'Insurance Claims Fraud Detection',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'This AI system detects fraud in insurance claims using advanced computer vision, semantic image search, and machine learning techniques.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://wbgreen0405.github.io/williamgreen.github.io/assets/images/fraud.webp',
+          link: '',
         },
         {
-          title: 'Project Name',
+          title: 'Mapping Kidney Cells',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'This video presents a final project demonstration for the "Hacking the Kidney" competition, highlighting key aspects and outcomes.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://raw.githubusercontent.com/wbgreen0405/williamgreen.github.io/refs/heads/main/assets/images/kidney.webp',
+          link: 'https://github.com/wbgreen0405/HuBMAP---Hacking-the-Kidney',
+        },
+        {
+          title: 'Omdena: Sonocare project: Capturing Biometrics through Camera',
+          description:
+            'Led the development of a modular, end-to-end pipeline for contactless health monitoring at Omdena Sonocare by integrating advanced data preprocessing, self-supervised learning (using synthetic data from GANs), clustering, regression, and model deployment, resulting in seamless transformation of raw video data into actionable health insights. Engineered scalable and maintainable code components, positioning the solution as a strong candidate for real-world, camera-based vital sign monitoring applications.',
+          imageUrl:
+            'https://github.com/wbgreen0405/wgportfolio/blob/main/public/SonoCare.webp',
+          link: 'https://www.omdena.com/projects/ai-vital-signs-monitoring',
+        },
+        {
+          title: 'Omdena:Building and Deploying AI Chatbot for Disaster Assistance',
+          description:
+            'Collaborated on the engineering and deployment of an AI chatbot to deliver real-time information and guidance to individuals in disaster-affected areas, significantly improving access to critical resources like shelter locations and safety tips. This involved developing core AI functionalities for natural language processing, integrating with disaster monitoring APIs, and building a robust system with a CI/CD pipeline.',
+          imageUrl:
+            'https://github.com/wbgreen0405/wgportfolio/blob/main/public/Dima.jpg',
+          link: 'https://www.dropbox.com/scl/fi/boal39gs67e33gkkl5p9q/OmdenaDatacampDimaShort.mp4?rlkey=7miucgluumh8numty3g95rm7j&st=ijjgc1sc&dl=0',
+        },
+        {
+          title: 'Omdena: Automated Left Ventricular Ejection Fraction Assessment using Deep Learning',
+          description:
+            'Developed an artificial intelligence (AI) solution that automates the measurement of left ventricular ejection fraction (LVEF) from both echocardiogram images and videos',
+          imageUrl:
+            'https://i.ytimg.com/vi/bto6HzsW3mU/maxresdefault.jpg',
+          link: 'https://www.youtube.com/watch?v=bto6HzsW3mU',
         },
       ],
     },
@@ -57,9 +85,9 @@ const CONFIG = {
     imageURL: '',
   },
   social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'greenwilliam',
+    x: '',
+    mastodon: '',
     researchGate: '',
     facebook: '',
     instagram: '',
@@ -69,98 +97,116 @@ const CONFIG = {
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: 'dskswu',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
+    website: '',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'william.green@explainableai2021.com',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://www.dropbox.com/scl/fi/twmj7i6d5vkbi9mxo1n22/William_Green_Resume.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'SQL',
+    'Python (TensorFlow, Keras)',
+    'Cloud & DevOps',
+    'Statistical Modeling',
+    'Machine Learning',
+    'Database management',
+    'R programming',
+    'Natural Language Processing',
     'Git',
     'Docker',
-    'PHPUnit',
-    'CSS',
-    'Antd',
-    'Tailwind',
+    'TensorFlow and Keras',
+    'Problem-Solving',
+    'Spark',
+    'Scikit-Learn',
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
-      to: 'Present',
-      companyLink: 'https://example.com',
+      company: 'Department of VA',
+      position: 'Data Scientist',
+      from: '2017',
+      to: 'Present'
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'Explainable AI, LLC',
+      position: 'Owner and AI Consultant',
+      from: '2021',
+      to: 'Present'
+    },
+    {
+      company: 'Omdena',
+      position: 'Volunteer- Lead ML Engineer',
+      from: '2021',
+      to: 'Present'
     },
   ],
   certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      name: 'Azure Data Fundamentals',
+      year: '2025',
+    },
+    {
+      name: 'Azure AI Engineer Associate',
+      year: '2025',
+    },
+    {
+      name: 'Azure Data Scientist Associate',
+      year: '2025',
+    },
+    {
+      name: 'Github Foundations',
+      year: '2025',
+    },
+    {
+      name: 'Azure Fundamentals',
+      year: '2022',
     },
   ],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Eastern University',
+      degree: 'Master of Science in Data Science',
+      from: '2024',
+      to: '2024',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Webster University',
+      degree: 'Master of Science in Business',
+      from: '2009',
+      to: '2010',
     },
   ],
   publications: [
     {
-      title: 'Publication Title',
+      title: '',
       conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      journalName: '',
+      authors: '',
+      link: '',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        '',
     },
     {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
+      title: '',
+      conferenceName: '',
       journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      authors: '',
+      link: '',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        '',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many articles to display. Max is 10.
+    source: 'medium', // medium | dev
+    username: 'dskswu', // to hide blog section, keep it empty
+    limit: 4, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
