@@ -91,13 +91,13 @@ const CONFIG = {
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: ' ',
+    website: '',
     phone: '',
     email: 'william.green@explainableai2021.com',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://www.dropbox.com/scl/fi/twmj7i6d5vkbi9mxo1n22/William_Green_Resume.pdf?rlkey=2vrycyeqcek3vzp4291y4590d&st=ushkrn34&dl=0', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'SQL',
