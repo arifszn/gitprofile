@@ -133,14 +133,21 @@ const CONFIG = {
   ],
   experiences: [
     {
+      company: 'Ampere',
+      position: 'AI research engineer intern',
+      from: 'March 2025',
+      to: 'August 2025',
+      companyLink: 'https://www.ampere.cars/',
+    },
+    {
       company: 'X&Immersion',
-      position: 'Data science & IA engineer',
+      position: 'AI research engineer intern',
       from: 'June 2024',
       to: 'August 2025',
       companyLink: 'https://www.xandimmersion.com/',
     },
     {
-      company: 'Vidéo Club',
+      company: 'Vidéo Association',
       position: 'Président',
       from: 'June 2023',
       to: 'June 2024',
