@@ -9,8 +9,6 @@ const CONFIG = {
    * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
    * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
    */
-
-
   base: '/wgportfolio/',
   projects: {
     github: {
@@ -27,7 +25,11 @@ const CONFIG = {
       },
       manual: {
         // Properties for manually specifying projects
-        projects: ['wbgreen0405/FraudShield', 'wbgreen0405/Cuisine-Assistant','wbgreen0405/Financial-Reporting-Agent'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [
+          'wbgreen0405/FraudShield',
+          'wbgreen0405/Cuisine-Assistant',
+          'wbgreen0405/Financial-Reporting-Agent'
+        ], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -57,6 +59,7 @@ const CONFIG = {
           imageUrl:
             'https://github.com/wbgreen0405/wgportfolio/blob/main/public/SonoCare.webp',
           link: 'https://www.omdena.com/projects/ai-vital-signs-monitoring',
+        },
         {
           title: 'Omdena Automated Left Ventricular Ejection Fraction Assessment using Deep Learning',
           description:
