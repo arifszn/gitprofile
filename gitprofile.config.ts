@@ -113,7 +113,7 @@ const CONFIG = {
     youtube: 'sinoue_gad', // example: 'pewdiepie'
     email: 'sinoue.gad@telecom-sudparis.eu',
     kaggle: 'sinouegad',
-    leetcode: 'Sinoue_GAD"
+    leetcode: 'Sinoue_GAD",
   },
   resume: {
     fileUrl:
@@ -177,7 +177,7 @@ const CONFIG = {
   ],
 
   themeConfig: {
-    defaultTheme: 'lofi',
+    defaultTheme: 'dark',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
