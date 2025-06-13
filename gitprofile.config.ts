@@ -117,7 +117,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      '', // Empty fileUrl will hide the `Download Resume` button.
+      'https://github.com/GAD-cell/GAD-cell.github.io/blob/main/CV_GAD.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Python',
