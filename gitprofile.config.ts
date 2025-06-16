@@ -80,7 +80,7 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of Ariful Alam',
+    title: 'Portfolio of William Green',
     description: '',
     imageURL: '',
   },
