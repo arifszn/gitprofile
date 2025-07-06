@@ -13,7 +13,7 @@ const PublicationCard = ({
     const array = [];
     for (let index = 0; index < publications.length; index++) {
       array.push(
-        <div className="card shadow-lg compact bg-base-100" key={index}>
+        <div className="card shadow-lg card-sm bg-base-100" key={index}>
           <div className="p-8 h-full w-full">
             <div className="flex items-center flex-col">
               <div className="w-full">
@@ -76,7 +76,7 @@ const PublicationCard = ({
   const renderPublications = () => {
     return publications.map((item, index) => (
       <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
+        className="card shadow-lg card-sm bg-base-100 cursor-pointer"
         key={index}
         href={item.link}
         target="_blank"
@@ -122,7 +122,7 @@ const PublicationCard = ({
       <div className="col-span-1 lg:col-span-2">
         <div className="grid grid-cols-2 gap-6">
           <div className="col-span-2">
-            <div className="card compact bg-base-100 shadow bg-opacity-40">
+            <div className="card card-sm bg-base-100 shadow-sm bg-opacity-40">
               <div className="card-body">
                 <div className="mx-3 flex items-center justify-between mb-2">
                   <h5 className="card-title">

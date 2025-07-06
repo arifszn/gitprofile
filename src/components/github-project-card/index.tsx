@@ -27,7 +27,7 @@ const GithubProjectCard = ({
     const array = [];
     for (let index = 0; index < limit; index++) {
       array.push(
-        <div className="card shadow-lg compact bg-base-100" key={index}>
+        <div className="card shadow-lg card-sm bg-base-100" key={index}>
           <div className="flex justify-between flex-col p-8 h-full w-full">
             <div>
               <div className="flex items-center">
@@ -51,7 +51,7 @@ const GithubProjectCard = ({
               </div>
             </div>
             <div className="flex justify-between">
-              <div className="flex flex-grow">
+              <div className="flex grow">
                 <span className="mr-3 flex items-center">
                   {skeleton({ widthCls: 'w-12', heightCls: 'h-4' })}
                 </span>
@@ -76,7 +76,7 @@ const GithubProjectCard = ({
   const renderProjects = () => {
     return githubProjects.map((item, index) => (
       <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
+        className="card shadow-lg card-sm bg-base-100 cursor-pointer"
         href={item.html_url}
         key={index}
         onClick={(e) => {
@@ -108,7 +108,7 @@ const GithubProjectCard = ({
             </p>
           </div>
           <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
-            <div className="flex flex-grow">
+            <div className="flex grow">
               <span className="mr-3 flex items-center">
                 <AiOutlineStar className="mr-0.5" />
                 <span>{item.stargazers_count}</span>
@@ -138,7 +138,7 @@ const GithubProjectCard = ({
       <div className="col-span-1 lg:col-span-2">
         <div className="grid grid-cols-2 gap-6">
           <div className="col-span-2">
-            <div className="card compact bg-base-100 shadow bg-opacity-40">
+            <div className="card card-sm bg-base-100 shadow-sm bg-opacity-40">
               <div className="card-body">
                 <div className="mx-3 flex items-center justify-between mb-2">
                   <h5 className="card-title">
