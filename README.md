@@ -84,7 +84,6 @@ These instructions will get you a copy of the project and deploy your portfolio 
   ![Workflows](https://github.com/arifszn/gitprofile/assets/45073703/7e82f7d4-900c-4cb9-83f9-bcaa1ca2b910)
 
 - **Base Value:** Open `gitprofile.config.ts`, and change `base`'s value.
-
   - If you are deploying to `https://<USERNAME>.github.io`, set `base` to `'/'`.
 
   - If you are deploying to `https://<USERNAME>.github.io/<REPO_NAME>` (e.g. `https://<USERNAME>.github.io/portfolio`), then set `base` to `'/<REPO_NAME>/'` (e.g. `'/portfolio/'`).
