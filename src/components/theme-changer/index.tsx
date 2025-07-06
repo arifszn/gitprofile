@@ -1,4 +1,4 @@
-import { AiOutlineControl } from 'react-icons/ai';
+import { RiDice4Line } from 'react-icons/ri';
 import { SanitizedThemeConfig } from '../../interfaces/sanitized-config';
 import { LOCAL_STORAGE_KEY_NAME } from '../../constants';
 import { skeleton } from '../../utils';
@@ -73,21 +73,13 @@ const ThemeChanger = ({
             <div title="Change Theme" className="dropdown dropdown-end">
               <div
                 tabIndex={0}
-                className="btn btn-ghost m-1 normal-case opacity-50 text-base-content"
+                className="btn btn-ghost m-1 normal-case opacity-50 text-base-content flex items-center whitespace-nowrap"
               >
-                <AiOutlineControl className="inline-block w-5 h-5 stroke-current md:mr-2" />
-                <span className="hidden md:inline">Change Theme</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1792 1792"
-                  className="inline-block w-4 h-4 ml-1 fill-current"
-                >
-                  <path d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z" />
-                </svg>
+                <RiDice4Line className="inline-block w-5 h-5 stroke-current" />
               </div>
               <div
                 tabIndex={0}
-                className="mt-16 overflow-y-auto shadow-2xl top-px dropdown-content max-h-96 w-52 rounded-lg bg-base-200 text-base-content z-10"
+                className="mt-16 overflow-y-auto shadow-2xl top-px dropdown-content max-h-96 min-w-max rounded-lg bg-base-200 text-base-content z-10"
               >
                 <ul className="p-4 menu menu-sm">
                   {[
