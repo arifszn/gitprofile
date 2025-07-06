@@ -99,11 +99,11 @@ const GithubProjectCard = ({
                 <span>{item.name}</span>
               </div>
             </div>
-            <p className="mb-5 mt-1 text-base-content text-opacity-60 text-sm">
+            <p className="mb-5 mt-1 text-base-content text-sm">
               {item.description}
             </p>
           </div>
-          <div className="flex justify-between text-sm text-base-content text-opacity-60 truncate">
+          <div className="flex justify-between text-sm text-base-content truncate">
             <div className="flex grow">
               <span className="mr-3 flex items-center">
                 <AiOutlineStar className="mr-0.5" />

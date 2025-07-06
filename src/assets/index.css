@@ -74,9 +74,7 @@ code {
     source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.text-base-content-important {
-  color: hsla(var(--bc) / var(--tw-text-opacity)) !important;
-}
+
 
 svg {
   vertical-align: unset;
