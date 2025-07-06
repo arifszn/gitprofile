@@ -14,11 +14,6 @@
     <a href="https://github.com/arifszn/gitprofile/commits/main"><img src="https://img.shields.io/github/last-commit/arifszn/gitprofile/main"/></a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE"><img src="https://img.shields.io/github/license/arifszn/gitprofile"/></a>
-    <a href="https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"><picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://cdn.idx.dev/btn/open_dark_20.svg">
-        <source media="(prefers-color-scheme: light)" srcset="https://cdn.idx.dev/btn/open_light_20.svg">
-        <img height="20" alt="Open in IDX" src="https://cdn.idx.dev/btn/open_purple_20.svg">
-      </picture></a>
   </p>
 
   <p align="center">
