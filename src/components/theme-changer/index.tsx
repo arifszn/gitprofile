@@ -65,7 +65,7 @@ const ThemeChanger = ({
         <div className="flex-0">
           {loading ? (
             skeleton({
-              widthCls: 'w-14 md:w-28',
+              widthCls: 'w-12',
               heightCls: 'h-10',
               className: 'mr-6',
             })
