@@ -1,3 +1,4 @@
+import React from 'react';
 import { hotjar } from 'react-hotjar';
 import { LOCAL_STORAGE_KEY_NAME } from '../constants';
 
@@ -171,7 +172,7 @@ export const skeleton = ({
   style?: React.CSSProperties;
   shape?: string;
   className?: string | null;
-}): JSX.Element => {
+}): React.JSX.Element => {
   const classNames = ['bg-base-300', 'animate-pulse', shape];
   if (className) {
     classNames.push(className);
