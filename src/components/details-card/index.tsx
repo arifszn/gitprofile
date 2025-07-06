@@ -14,7 +14,6 @@ import {
   FaLinkedin,
   FaMastodon,
   FaReddit,
-  FaSkype,
   FaStackOverflow,
   FaTelegram,
   FaYoutube,
@@ -334,14 +333,6 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                       ? `http://${social.website}`
                       : social.website
                   }
-                />
-              )}
-              {social?.skype && (
-                <ListItem
-                  icon={<FaSkype />}
-                  title="Skype"
-                  value={social.skype}
-                  link={`skype:${social.skype}?chat`}
                 />
               )}
               {social?.telegram && (

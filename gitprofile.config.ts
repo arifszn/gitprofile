@@ -72,7 +72,7 @@ const CONFIG = {
     medium: 'arifszn',
     dev: 'arifszn',
     stackoverflow: '', // example: '1/jeff-atwood'
-    skype: '',
+    discord: '',
     telegram: '',
     website: 'https://www.arifszn.com',
     phone: '',
