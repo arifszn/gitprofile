@@ -193,11 +193,11 @@ const BlogCard = ({
                     ? skeleton({ widthCls: 'w-28', heightCls: 'h-8' })
                     : 'My Articles'}
                 </h3>
-                <p className="text-base-content/60 text-xs sm:text-sm mt-1 truncate">
+                <div className="text-base-content/60 text-xs sm:text-sm mt-1 truncate">
                   {loading
                     ? skeleton({ widthCls: 'w-32', heightCls: 'h-4' })
                     : 'Recent posts'}
-                </p>
+                </div>
               </div>
             </div>
           </div>
