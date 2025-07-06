@@ -408,13 +408,13 @@ You can create your own custom theme by modifying the CSS variables in `src/asse
 ```css
 /* src/assets/index.css */
 @plugin "daisyui/theme" {
-  name: "procyon";
+  name: 'procyon';
   color-scheme: light;
 
-  --color-base-100: #E3E3ED;
+  --color-base-100: #e3e3ed;
   --color-base-200: #d1d1db;
   --color-base-300: #bfbfc9;
-  --color-base-content: #2A2730;
+  --color-base-content: #2a2730;
   --color-primary: #fc055b;
   --color-primary-content: #ffffff;
   --color-secondary: #219aaf;
