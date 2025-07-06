@@ -224,7 +224,7 @@ const CONFIG = {
     medium: 'arifszn',
     dev: 'arifszn',
     stackoverflow: '', // example: '1/jeff-atwood'
-    skype: '',
+    discord: '',
     telegram: '',
     website: 'https://www.arifszn.com',
     phone: '',
@@ -508,7 +508,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, X, Mastodon, ResearchGate, Facebook, Instagram, Reddit, Threads, YouTube, Udemy, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, X, Mastodon, ResearchGate, Facebook, Instagram, Reddit, Threads, YouTube, Udemy, Dribbble, Behance, Medium, dev, Stack Overflow, Discord, Telegram, personal website, phone and email.
 
 ```ts
 // gitprofile.config.ts
@@ -530,7 +530,7 @@ const CONFIG = {
     medium: '',
     dev: '',
     stackoverflow: '',
-    skype: '',
+    discord: '',
     telegram: '',
     website: '',
     phone: '',
