@@ -22,6 +22,7 @@ import { FaSquareThreads } from 'react-icons/fa6';
 import { MdLocationOn } from 'react-icons/md';
 import { RiDiscordFill, RiMailFill, RiPhoneFill } from 'react-icons/ri';
 import { SiResearchgate, SiX, SiUdemy } from 'react-icons/si';
+import { IoMdLink } from 'react-icons/io';
 import { Profile } from '../../interfaces/profile';
 import {
   SanitizedGithub,
@@ -81,8 +82,10 @@ const ListItem: React.FC<{
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="flex justify-start py-2 px-1 items-center"
+          className="flex justify-start py-2 px-1 items-center gap-1 "
         >
+          {link && <IoMdLink />}
+
           {value}
         </a>
       </div>
@@ -356,7 +359,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   icon={<RiMailFill />}
                   title="Email:"
                   value={social.email}
-                  link={`mailto:${social.email}`}
+                  // link={`mailto:${social.email}`}
                 />
               )}
               {social?.discord && (

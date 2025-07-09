@@ -75,7 +75,7 @@ const SkillCard = ({
                                 <div className="-m-1 flex flex-wrap justify-start gap-2">
                                   {skills[skillType].map((skill, index2) => (
                                     <div
-                                      className="badge badge-primary badge-sm"
+                                      className="badge badge-primary font-bold text-xs"
                                       key={index2}
                                     >
                                       {skill.title}

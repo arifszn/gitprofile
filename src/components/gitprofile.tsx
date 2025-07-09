@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import axios, { AxiosError } from 'axios';
+import { AxiosError } from 'axios';
 import { formatDistance } from 'date-fns';
 import {
   CustomError,
@@ -8,12 +8,10 @@ import {
   INVALID_GITHUB_USERNAME_ERROR,
   setTooManyRequestError,
 } from '../constants/errors';
-import { HelmetProvider } from 'react-helmet-async';
 import '../assets/index.css';
 import { getInitialTheme, getSanitizedConfig, setupHotjar } from '../utils';
 import { SanitizedConfig } from '../interfaces/sanitized-config';
 import ErrorPage from './error-page';
-import HeadTagEditor from './head-tag-editor';
 import { DEFAULT_THEMES } from '../constants/default-themes';
 import ThemeChanger from './theme-changer';
 import { BG_COLOR } from '../constants';
@@ -56,13 +54,13 @@ const GitProfile = ({ config }: { config: Config }) => {
           return [];
         }
 
-        const excludeRepo =
-          sanitizedConfig.projects.github.automatic.exclude.projects
-            .map((project) => `+-repo:${project}`)
-            .join('');
+        // const excludeRepo =
+        //   sanitizedConfig.projects.github.automatic.exclude.projects
+        //     .map((project) => `+-repo:${project}`)
+        //     .join('');
 
-        const query = `user:${sanitizedConfig.github.username}+fork:${!sanitizedConfig.projects.github.automatic.exclude.forks}${excludeRepo}`;
-        const url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.projects.github.automatic.sortBy}&per_page=${sanitizedConfig.projects.github.automatic.limit}&type=Repositories`;
+        // const query = `user:${sanitizedConfig.github.username}+fork:${!sanitizedConfig.projects.github.automatic.exclude.forks}${excludeRepo}`;
+        // const url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.projects.github.automatic.sortBy}&per_page=${sanitizedConfig.projects.github.automatic.limit}&type=Repositories`;
 
         // const repoResponse = await axios.get(url, {
         //   headers: { 'Content-Type': 'application/vnd.github.v3+json' },
@@ -77,11 +75,11 @@ const GitProfile = ({ config }: { config: Config }) => {
         if (sanitizedConfig.projects.github.manual.projects.length === 0) {
           return [];
         }
-        const repos = sanitizedConfig.projects.github.manual.projects
-          .map((project) => `+repo:${project}`)
-          .join('');
+        // const repos = sanitizedConfig.projects.github.manual.projects
+        //   .map((project) => `+repo:${project}`)
+        //   .join('');
 
-        const url = `https://api.github.com/search/repositories?q=${repos}+fork:true&type=Repositories`;
+        // const url = `https://api.github.com/search/repositories?q=${repos}+fork:true&type=Repositories`;
 
         // const repoResponse = await axios.get(url, {
         //   headers: { 'Content-Type': 'application/vnd.github.v3+json' },
@@ -194,146 +192,138 @@ const GitProfile = ({ config }: { config: Config }) => {
   };
 
   return (
-    <HelmetProvider>
-      <div className="fade-in h-screen">
-        {error ? (
-          <ErrorPage
-            status={error.status}
-            title={error.title}
-            subTitle={error.subTitle}
-          />
-        ) : (
-          <>
-            <HeadTagEditor
-              googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
-              appliedTheme={theme}
-            />
-            <div className={`p-4 lg:p-10 min-h-full ${BG_COLOR}`}>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
-                <div className="col-span-1">
-                  <div className="grid grid-cols-1 gap-6">
-                    {!sanitizedConfig.themeConfig.disableSwitch && (
-                      <ThemeChanger
-                        theme={theme}
-                        setTheme={setTheme}
-                        loading={loading}
-                        themeConfig={sanitizedConfig.themeConfig}
-                      />
-                    )}
-                    <AvatarCard
-                      profile={profile}
+    <div className="fade-in h-screen">
+      {error ? (
+        <ErrorPage
+          status={error.status}
+          title={error.title}
+          subTitle={error.subTitle}
+        />
+      ) : (
+        <>
+          <div className={`p-4 lg:p-10 min-h-full ${BG_COLOR}`}>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
+              <div className="col-span-1">
+                <div className="grid grid-cols-1 gap-6">
+                  {!sanitizedConfig.themeConfig.disableSwitch && (
+                    <ThemeChanger
+                      theme={theme}
+                      setTheme={setTheme}
                       loading={loading}
-                      avatarRing={sanitizedConfig.themeConfig.displayAvatarRing}
-                      resumeFileUrl={sanitizedConfig.resume.fileUrl}
+                      themeConfig={sanitizedConfig.themeConfig}
                     />
-                    <DetailsCard
-                      profile={profile}
+                  )}
+                  <AvatarCard
+                    profile={profile}
+                    loading={loading}
+                    avatarRing={sanitizedConfig.themeConfig.displayAvatarRing}
+                    resumeFileUrl={sanitizedConfig.resume.fileUrl}
+                  />
+                  <DetailsCard
+                    profile={profile}
+                    loading={loading}
+                    github={sanitizedConfig.github}
+                    social={sanitizedConfig.social}
+                  />
+                  {sanitizedConfig.experiences.length !== 0 && (
+                    <ExperienceCard
                       loading={loading}
-                      github={sanitizedConfig.github}
-                      social={sanitizedConfig.social}
+                      experiences={sanitizedConfig.experiences}
                     />
-                    {sanitizedConfig.experiences.length !== 0 && (
-                      <ExperienceCard
-                        loading={loading}
-                        experiences={sanitizedConfig.experiences}
-                      />
-                    )}
-                    {sanitizedConfig.educations.length !== 0 && (
-                      <EducationCard
-                        loading={loading}
-                        educations={sanitizedConfig.educations}
-                      />
-                    )}
-                    {sanitizedConfig.certifications.length !== 0 && (
-                      <CertificationCard
-                        loading={loading}
-                        certifications={sanitizedConfig.certifications}
-                      />
-                    )}
-                    {sanitizedConfig.community.length !== 0 && (
-                      <CommunityCard
-                        loading={loading}
-                        communities={sanitizedConfig.community}
-                      />
-                    )}
-                    {/* {sanitizedConfig.hobbies.length !== 0 && (
+                  )}
+                  {sanitizedConfig.educations.length !== 0 && (
+                    <EducationCard
+                      loading={loading}
+                      educations={sanitizedConfig.educations}
+                    />
+                  )}
+                  {sanitizedConfig.certifications.length !== 0 && (
+                    <CertificationCard
+                      loading={loading}
+                      certifications={sanitizedConfig.certifications}
+                    />
+                  )}
+                  {sanitizedConfig.community.length !== 0 && (
+                    <CommunityCard
+                      loading={loading}
+                      communities={sanitizedConfig.community}
+                    />
+                  )}
+                  {/* {sanitizedConfig.hobbies.length !== 0 && (
                       <HobbiesCard
                         loading={loading}
                         skills={sanitizedConfig.skills}
                       />
                     )} */}
-                  </div>
                 </div>
-                <div className="lg:col-span-2 col-span-1">
-                  <div className="grid grid-cols-1 gap-6">
-                    {sanitizedConfig.projects.github.display && (
-                      <GithubProjectCard
-                        header={sanitizedConfig.projects.github.header}
-                        limit={sanitizedConfig.projects.github.automatic.limit}
-                        githubProjects={githubProjects}
-                        loading={loading}
-                        username={sanitizedConfig.github.username}
-                        googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
-                      />
-                    )}
-                    {sanitizedConfig.projects.external.projects.length !==
-                      0 && (
-                      <ExternalProjectCard
-                        loading={loading}
-                        header={sanitizedConfig.projects.external.header}
-                        externalProjects={
-                          sanitizedConfig.projects.external.projects
-                        }
-                        googleAnalyticId={sanitizedConfig.googleAnalytics.id}
-                      />
-                    )}
-                    {sanitizedConfig.featuredProjects.length !== 0 && (
-                      <ProjectCard
-                        title="Featured Projects"
-                        loading={loading}
-                        projects={sanitizedConfig.featuredProjects}
-                      />
-                    )}
-                    {Object.keys(sanitizedConfig.skills).length !== 0 && (
-                      <SkillCard
-                        loading={loading}
-                        skills={sanitizedConfig.skills}
-                      />
-                    )}
-                    {sanitizedConfig.professionalProjects.length !== 0 && (
-                      <ProjectCard
-                        title="Professional Projects"
-                        loading={loading}
-                        projects={sanitizedConfig.professionalProjects}
-                      />
-                    )}
-                    {sanitizedConfig.publications.length !== 0 && (
-                      <PublicationCard
-                        loading={loading}
-                        publications={sanitizedConfig.publications}
-                      />
-                    )}
-                    {sanitizedConfig.blog.display && (
-                      <BlogCard
-                        loading={loading}
-                        googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
-                        blog={sanitizedConfig.blog}
-                      />
-                    )}
-                  </div>
+              </div>
+              <div className="lg:col-span-2 col-span-1">
+                <div className="grid grid-cols-1 gap-6">
+                  {sanitizedConfig.projects.github.display && (
+                    <GithubProjectCard
+                      header={sanitizedConfig.projects.github.header}
+                      limit={sanitizedConfig.projects.github.automatic.limit}
+                      githubProjects={githubProjects}
+                      loading={loading}
+                      googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
+                    />
+                  )}
+                  {sanitizedConfig.projects.external.projects.length !== 0 && (
+                    <ExternalProjectCard
+                      loading={loading}
+                      header={sanitizedConfig.projects.external.header}
+                      externalProjects={
+                        sanitizedConfig.projects.external.projects
+                      }
+                      googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                    />
+                  )}
+                  {sanitizedConfig.featuredProjects.length !== 0 && (
+                    <ProjectCard
+                      title="Featured Projects"
+                      loading={loading}
+                      projects={sanitizedConfig.featuredProjects}
+                    />
+                  )}
+                  {Object.keys(sanitizedConfig.skills).length !== 0 && (
+                    <SkillCard
+                      loading={loading}
+                      skills={sanitizedConfig.skills}
+                    />
+                  )}
+                  {sanitizedConfig.professionalProjects.length !== 0 && (
+                    <ProjectCard
+                      title="Professional Projects"
+                      loading={loading}
+                      projects={sanitizedConfig.professionalProjects}
+                    />
+                  )}
+                  {sanitizedConfig.publications.length !== 0 && (
+                    <PublicationCard
+                      loading={loading}
+                      publications={sanitizedConfig.publications}
+                    />
+                  )}
+                  {sanitizedConfig.blog.display && (
+                    <BlogCard
+                      loading={loading}
+                      googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
+                      blog={sanitizedConfig.blog}
+                    />
+                  )}
                 </div>
               </div>
             </div>
-            <footer
-              style={{ marginBottom: '-200px' }}
-              onClick={() => setLoading(!loading)}
-            >
-              <Footer />
-            </footer>
-          </>
-        )}
-      </div>
-    </HelmetProvider>
+          </div>
+          <footer
+            style={{ marginBottom: '-200px' }}
+            onClick={() => setLoading(!loading)}
+          >
+            <Footer />
+          </footer>
+        </>
+      )}
+    </div>
   );
 };
 

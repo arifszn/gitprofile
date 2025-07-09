@@ -117,21 +117,23 @@ const ProjectCard = ({
                   <p className="mt-1 text-base-content text-opacity-60 text-sm">
                     {project.description}
                   </p>
-                  <div className="mt-2 flex items-center flex-wrap justify-start">
-                    {project.link && (
-                      <div className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-neutral bg-opacity-90 rounded-full gap-1">
-                        <IoMdLink style={{ marginTop: '1px' }} />
-                        {project.link}
-                      </div>
-                    )}
-                    {project.skills?.map((skill: string, index2: number) => (
-                      <div
-                        className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full"
-                        key={index2}
-                      >
-                        {skill}
-                      </div>
-                    ))}
+                  <div className="p-3 flow-root">
+                    <div className="-m-1 flex flex-wrap justify-start gap-2">
+                      {project.link && (
+                        <div className="badge badge-neutral font-bold items-center gap-1 text-xs">
+                          <IoMdLink style={{ marginTop: '1px' }} />
+                          {project.link}
+                        </div>
+                      )}
+                      {project.skills?.map((skill: string, index2: number) => (
+                        <div
+                          className="badge badge-primary font-bold text-xs"
+                          key={index2}
+                        >
+                          {skill}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,7 +149,7 @@ const ProjectCard = ({
       <div className="grid grid-cols-2 gap-6">
         <div className="col-span-2">
           <div
-            className={`card compact bg-base-100 ${
+            className={`card compact bg-base-200 ${
               loading || (projects && projects.length)
                 ? 'shadow bg-opacity-40'
                 : 'shadow-lg'

@@ -1,20 +1,18 @@
 {
-  "name": "@arifszn/gitprofile",
-  "description": "Create an automatic portfolio based on GitHub profile",
+  "name": "nick-pasquariello-portfolio",
+  "description": "Nick Pasquariello's Portfolio Website",
+  "homepage": "https://nick.cat",
   "version": "4.0.0",
   "type": "module",
   "license": "MIT",
-  "author": "arifszn",
+  "author": "whatifnick",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arifszn/gitprofile.git"
-  },
-  "bugs": {
-    "url": "https://github.com/arifszn/gitprofile/issues"
+    "url": "https://github.com/whatifnick/gitprofile.git"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "DISABLE_ESLINT_PLUGIN=true tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier --check \"./**/*.{js,jsx,ts,tsx,css,md,json}\"",
