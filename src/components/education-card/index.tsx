@@ -21,11 +21,16 @@ const ListItem = ({
     ></div>
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{degree}</h3>
-    <div className="mb-4 font-normal flex items-center gap-1">
-      <a href={link} target="_blank" rel="noreferrer">
+    <div className="mb-4 font-normal">
+      <a
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+        className="flex items-center gap-1"
+      >
         {institution}
+        {link && <IoMdLink />}
       </a>
-      {link && <IoMdLink />}
     </div>
   </li>
 );
