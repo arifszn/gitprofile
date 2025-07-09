@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoMdLink } from 'react-icons/io';
 import { SanitizedEducation } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
@@ -6,10 +7,12 @@ const ListItem = ({
   time,
   degree,
   institution,
+  link,
 }: {
   time: React.ReactNode;
   degree?: React.ReactNode;
   institution?: React.ReactNode;
+  link?: string;
 }) => (
   <li className="mb-5 ml-4">
     <div
@@ -18,7 +21,12 @@ const ListItem = ({
     ></div>
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{degree}</h3>
-    <div className="mb-4 font-normal">{institution}</div>
+    <div className="mb-4 font-normal flex items-center gap-1">
+      <a href={link} target="_blank" rel="noreferrer">
+        {institution}
+      </a>
+      {link && <IoMdLink />}
+    </div>
   </li>
 );
 
@@ -76,6 +84,7 @@ const EducationCard = ({
                     time={`${item.from} - ${item.to}`}
                     degree={item.degree}
                     institution={item.institution}
+                    link={item.link}
                   />
                 ))}
               </>

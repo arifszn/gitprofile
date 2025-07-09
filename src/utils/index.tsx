@@ -55,6 +55,8 @@ export const getSanitizedConfig = (
           projects: config?.projects?.external?.projects || [],
         },
       },
+      featuredProjects: config?.featuredProjects || [],
+      professionalProjects: config?.professionalProjects || [],
       seo: {
         title: config?.seo?.title,
         description: config?.seo?.description,
@@ -98,6 +100,10 @@ export const getSanitizedConfig = (
         config?.certifications?.filter(
           (certification) =>
             certification.year || certification.name || certification.body,
+        ) || [],
+      community:
+        config?.community?.filter(
+          (community) => community.year || community.name || community.body,
         ) || [],
       educations:
         config?.educations?.filter(

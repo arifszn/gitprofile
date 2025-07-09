@@ -89,6 +89,15 @@ interface Projects {
   external?: ExternalProjects;
 }
 
+interface Project {
+  title: string;
+  company?: string;
+  description?: string;
+  imageUrl?: string;
+  link?: string;
+  skills?: Array<string>;
+}
+
 interface SEO {
   /**
    * Meta title
@@ -230,11 +239,20 @@ interface Certification {
   link?: string;
 }
 
+interface Community {
+  body?: string;
+  name?: string;
+  year?: string;
+  link?: string;
+  description?: string;
+}
+
 interface Education {
   institution?: string;
   degree?: string;
   from: string;
   to: string;
+  link?: string;
 }
 
 interface Publication {
@@ -244,6 +262,12 @@ interface Publication {
   authors?: string;
   link?: string;
   description?: string;
+}
+
+interface Skill {
+  title: string;
+  iconURL?: string;
+  color?: string;
 }
 
 interface GoogleAnalytics {
@@ -370,6 +394,16 @@ interface Config {
   projects?: Projects;
 
   /**
+   * Featured Projects config
+   */
+  featuredProjects?: Array<Project>;
+
+  /**
+   * Professional Projects config
+   */
+  professionalProjects?: Array<Project>;
+
+  /**
    * SEO config
    */
   seo?: SEO;
@@ -382,7 +416,7 @@ interface Config {
   /**
    * Skill list
    */
-  skills?: Array<string>;
+  skills?: Record<string, Skill[]>;
 
   /**
    * Experience list
@@ -393,6 +427,11 @@ interface Config {
    * Certifications list
    */
   certifications?: Array<Certification>;
+
+  /**
+   * Community list
+   */
+  community?: Array<Community>;
 
   /**
    * Education list

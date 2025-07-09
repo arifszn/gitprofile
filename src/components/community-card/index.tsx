@@ -1,40 +1,41 @@
-import React, { Fragment } from 'react';
-import { IoMdLink } from 'react-icons/io';
-import { SanitizedExperience } from '../../interfaces/sanitized-config';
+import React from 'react';
+import { SanitizedCommunity } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
 const ListItem = ({
-  time,
-  position,
-  company,
-  companyLink,
+  year,
+  name,
+  body,
+  description,
+  link,
 }: {
-  time: React.ReactNode;
-  position?: React.ReactNode;
-  company?: React.ReactNode;
-  companyLink?: string;
+  year?: React.ReactNode;
+  name?: React.ReactNode;
+  body?: React.ReactNode;
+  description?: React.ReactNode;
+  link?: string;
 }) => (
   <li className="mb-5 ml-4">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs">{time}</div>
-    <h3 className="font-semibold">{position}</h3>
-    <div className="mb-4 font-normal flex items-center gap-1">
-      <a href={companyLink} target="_blank" rel="noreferrer">
-        {company}
+    <div className="my-0.5 text-xs">{year}</div>
+    <div className="font-medium">
+      <a href={link} target="_blank" rel="noreferrer">
+        {name}
       </a>
-      {companyLink && <IoMdLink />}
     </div>
+    <h3 className="font-normal">{body}</h3>
+    <h4 className="mb-4 text-xs">{description}</h4>
   </li>
 );
 
-const ExperienceCard = ({
-  experiences,
+const CommunityCard = ({
+  communities,
   loading,
 }: {
-  experiences: SanitizedExperience[];
+  communities: SanitizedCommunity[];
   loading: boolean;
 }) => {
   const renderSkeleton = () => {
@@ -43,22 +44,23 @@ const ExperienceCard = ({
       array.push(
         <ListItem
           key={index}
-          time={skeleton({
+          year={skeleton({
             widthCls: 'w-5/12',
             heightCls: 'h-4',
           })}
-          position={skeleton({
+          name={skeleton({
             widthCls: 'w-6/12',
             heightCls: 'h-4',
             className: 'my-1.5',
           })}
-          company={skeleton({ widthCls: 'w-6/12', heightCls: 'h-3' })}
+          body={skeleton({ widthCls: 'w-6/12', heightCls: 'h-3' })}
         />,
       );
     }
 
     return array;
   };
+
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
@@ -67,7 +69,7 @@ const ExperienceCard = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-70">Experience</span>
+              <span className="text-base-content opacity-70">Community</span>
             )}
           </h5>
         </div>
@@ -76,21 +78,18 @@ const ExperienceCard = ({
             {loading ? (
               renderSkeleton()
             ) : (
-              <Fragment>
-                {experiences.map((experience, index) => (
+              <>
+                {communities.map((community, index) => (
                   <ListItem
                     key={index}
-                    time={`${experience.from} - ${experience.to}`}
-                    position={experience.position}
-                    company={experience.company}
-                    companyLink={
-                      experience.companyLink
-                        ? experience.companyLink
-                        : undefined
-                    }
+                    year={community.year}
+                    name={community.name}
+                    body={community.body}
+                    description={community.description}
+                    link={community.link}
                   />
                 ))}
-              </Fragment>
+              </>
             )}
           </ol>
         </div>
@@ -99,4 +98,4 @@ const ExperienceCard = ({
   );
 };
 
-export default ExperienceCard;
+export default CommunityCard;

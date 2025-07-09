@@ -84,11 +84,35 @@ export interface SanitizedCertification {
   link?: string;
 }
 
+export interface SanitizedCommunity {
+  body?: string;
+  name?: string;
+  year?: string;
+  link?: string;
+  description?: string;
+}
+
+export interface Project {
+  title: string;
+  company?: string;
+  description?: string;
+  imageUrl?: string;
+  link?: string;
+  skills?: Array<string>;
+}
+
+export interface Skill {
+  title: string;
+  iconURL?: string;
+  color?: string;
+}
+
 export interface SanitizedEducation {
   institution?: string;
   degree?: string;
   from: string;
   to: string;
+  link?: string;
 }
 
 export interface SanitizedPublication {
@@ -138,13 +162,16 @@ export interface SanitizedThemeConfig {
 export interface SanitizedConfig {
   github: SanitizedGithub;
   projects: SanitizedProjects;
+  featuredProjects: Array<Project>;
+  professionalProjects: Array<Project>;
   seo: SanitizedSEO;
   social: SanitizedSocial;
   resume: SanitizedResume;
-  skills: Array<string>;
+  skills: Record<string, Skill[]>;
   experiences: Array<SanitizedExperience>;
   educations: Array<SanitizedEducation>;
   certifications: Array<SanitizedCertification>;
+  community: Array<SanitizedCommunity>;
   publications: Array<SanitizedPublication>;
   googleAnalytics: SanitizedGoogleAnalytics;
   hotjar: SanitizedHotjar;

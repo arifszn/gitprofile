@@ -30,6 +30,8 @@ import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
 import PublicationCard from './publication-card';
+import CommunityCard from './community-card';
+import ProjectCard from './project-card';
 
 /**
  * Renders the GitProfile component.
@@ -62,10 +64,13 @@ const GitProfile = ({ config }: { config: Config }) => {
         const query = `user:${sanitizedConfig.github.username}+fork:${!sanitizedConfig.projects.github.automatic.exclude.forks}${excludeRepo}`;
         const url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.projects.github.automatic.sortBy}&per_page=${sanitizedConfig.projects.github.automatic.limit}&type=Repositories`;
 
-        const repoResponse = await axios.get(url, {
-          headers: { 'Content-Type': 'application/vnd.github.v3+json' },
-        });
-        const repoData = repoResponse.data;
+        // const repoResponse = await axios.get(url, {
+        //   headers: { 'Content-Type': 'application/vnd.github.v3+json' },
+        // });
+        // const repoData = repoResponse.data;
+        const repoData = {
+          items: [],
+        };
 
         return repoData.items;
       } else {
@@ -78,12 +83,13 @@ const GitProfile = ({ config }: { config: Config }) => {
 
         const url = `https://api.github.com/search/repositories?q=${repos}+fork:true&type=Repositories`;
 
-        const repoResponse = await axios.get(url, {
-          headers: { 'Content-Type': 'application/vnd.github.v3+json' },
-        });
-        const repoData = repoResponse.data;
+        // const repoResponse = await axios.get(url, {
+        //   headers: { 'Content-Type': 'application/vnd.github.v3+json' },
+        // });
+        // const repoData = repoResponse.data;
 
-        return repoData.items;
+        // return repoData.items;
+        return [];
       }
     },
     [
@@ -101,17 +107,25 @@ const GitProfile = ({ config }: { config: Config }) => {
     try {
       setLoading(true);
 
-      const response = await axios.get(
-        `https://api.github.com/users/${sanitizedConfig.github.username}`,
-      );
-      const data = response.data;
+      // const response = await axios.get(
+      //   `https://api.github.com/users/${sanitizedConfig.github.username}`,
+      // );
+      // const data = response.data;
+      const data = {
+        avatar_url: '',
+        name: 'Nick Pasquariello',
+        bio: 'Software Engineer',
+        location: 'Brisbane, Australia',
+        // company: 'Tech Company',
+        public_repos: 0,
+      };
 
       setProfile({
-        avatar: data.avatar_url,
+        avatar: data.avatar_url || '',
         name: data.name || ' ',
         bio: data.bio || '',
         location: data.location || '',
-        company: data.company || '',
+        // company: data.company || '',
       });
 
       if (!sanitizedConfig.projects.github.display) {
@@ -218,22 +232,10 @@ const GitProfile = ({ config }: { config: Config }) => {
                       github={sanitizedConfig.github}
                       social={sanitizedConfig.social}
                     />
-                    {sanitizedConfig.skills.length !== 0 && (
-                      <SkillCard
-                        loading={loading}
-                        skills={sanitizedConfig.skills}
-                      />
-                    )}
                     {sanitizedConfig.experiences.length !== 0 && (
                       <ExperienceCard
                         loading={loading}
                         experiences={sanitizedConfig.experiences}
-                      />
-                    )}
-                    {sanitizedConfig.certifications.length !== 0 && (
-                      <CertificationCard
-                        loading={loading}
-                        certifications={sanitizedConfig.certifications}
                       />
                     )}
                     {sanitizedConfig.educations.length !== 0 && (
@@ -242,6 +244,24 @@ const GitProfile = ({ config }: { config: Config }) => {
                         educations={sanitizedConfig.educations}
                       />
                     )}
+                    {sanitizedConfig.certifications.length !== 0 && (
+                      <CertificationCard
+                        loading={loading}
+                        certifications={sanitizedConfig.certifications}
+                      />
+                    )}
+                    {sanitizedConfig.community.length !== 0 && (
+                      <CommunityCard
+                        loading={loading}
+                        communities={sanitizedConfig.community}
+                      />
+                    )}
+                    {/* {sanitizedConfig.hobbies.length !== 0 && (
+                      <HobbiesCard
+                        loading={loading}
+                        skills={sanitizedConfig.skills}
+                      />
+                    )} */}
                   </div>
                 </div>
                 <div className="lg:col-span-2 col-span-1">
@@ -256,12 +276,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
                       />
                     )}
-                    {sanitizedConfig.publications.length !== 0 && (
-                      <PublicationCard
-                        loading={loading}
-                        publications={sanitizedConfig.publications}
-                      />
-                    )}
                     {sanitizedConfig.projects.external.projects.length !==
                       0 && (
                       <ExternalProjectCard
@@ -271,6 +285,32 @@ const GitProfile = ({ config }: { config: Config }) => {
                           sanitizedConfig.projects.external.projects
                         }
                         googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                      />
+                    )}
+                    {sanitizedConfig.featuredProjects.length !== 0 && (
+                      <ProjectCard
+                        title="Featured Projects"
+                        loading={loading}
+                        projects={sanitizedConfig.featuredProjects}
+                      />
+                    )}
+                    {Object.keys(sanitizedConfig.skills).length !== 0 && (
+                      <SkillCard
+                        loading={loading}
+                        skills={sanitizedConfig.skills}
+                      />
+                    )}
+                    {sanitizedConfig.professionalProjects.length !== 0 && (
+                      <ProjectCard
+                        title="Professional Projects"
+                        loading={loading}
+                        projects={sanitizedConfig.professionalProjects}
+                      />
+                    )}
+                    {sanitizedConfig.publications.length !== 0 && (
+                      <PublicationCard
+                        loading={loading}
+                        publications={sanitizedConfig.publications}
                       />
                     )}
                     {sanitizedConfig.blog.display && (
@@ -284,15 +324,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
               </div>
             </div>
-            {sanitizedConfig.footer && (
-              <footer
-                className={`p-4 footer ${BG_COLOR} text-base-content footer-center`}
-              >
-                <div className="card compact bg-base-100 shadow">
-                  <Footer content={sanitizedConfig.footer} loading={loading} />
-                </div>
-              </footer>
-            )}
+            <footer
+              style={{ marginBottom: '-200px' }}
+              onClick={() => setLoading(!loading)}
+            >
+              <Footer />
+            </footer>
           </>
         )}
       </div>
