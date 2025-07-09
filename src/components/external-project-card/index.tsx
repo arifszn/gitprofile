@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import LazyImage from '../lazy-image';
+import { MdOpenInNew } from 'react-icons/md';
 import { ga, skeleton } from '../../utils';
 import { SanitizedExternalProject } from '../../interfaces/sanitized-config';
 
@@ -18,7 +19,7 @@ const ExternalProjectCard = ({
     const array = [];
     for (let index = 0; index < externalProjects.length; index++) {
       array.push(
-        <div className="card shadow-lg compact bg-base-100" key={index}>
+        <div className="card shadow-md card-sm bg-base-100" key={index}>
           <div className="p-8 h-full w-full">
             <div className="flex items-center flex-col">
               <div className="w-full">
@@ -69,7 +70,7 @@ const ExternalProjectCard = ({
   const renderExternalProjects = () => {
     return externalProjects.map((item, index) => (
       <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
+        className="card shadow-md card-sm bg-base-100 cursor-pointer"
         key={index}
         href={item.link}
         onClick={(e) => {
@@ -111,7 +112,7 @@ const ExternalProjectCard = ({
                       </div>
                     </div>
                   )}
-                  <p className="mt-2 text-base-content text-opacity-60 text-sm text-justify">
+                  <p className="mt-2 text-base-content text-sm text-justify">
                     {item.description}
                   </p>
                 </div>
@@ -126,27 +127,37 @@ const ExternalProjectCard = ({
   return (
     <Fragment>
       <div className="col-span-1 lg:col-span-2">
-        <div className="grid grid-cols-2 gap-6">
-          <div className="col-span-2">
-            <div className="card compact bg-base-100 shadow bg-opacity-40">
-              <div className="card-body">
-                <div className="mx-3 flex items-center justify-between mb-2">
-                  <h5 className="card-title">
-                    {loading ? (
-                      skeleton({ widthCls: 'w-40', heightCls: 'h-8' })
-                    ) : (
-                      <span className="text-base-content opacity-70">
-                        {header}
-                      </span>
-                    )}
-                  </h5>
-                </div>
-                <div className="col-span-2">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {loading ? renderSkeleton() : renderExternalProjects()}
+        <div className="card bg-base-200 shadow-xl border border-base-300">
+          <div className="card-body p-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+              <div className="flex items-center space-x-3">
+                {loading ? (
+                  skeleton({
+                    widthCls: 'w-12',
+                    heightCls: 'h-12',
+                    className: 'rounded-xl',
+                  })
+                ) : (
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl">
+                    <MdOpenInNew className="text-2xl" />
+                  </div>
+                )}
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-base sm:text-lg font-bold text-base-content truncate">
+                    {loading
+                      ? skeleton({ widthCls: 'w-40', heightCls: 'h-8' })
+                      : header}
+                  </h3>
+                  <div className="text-base-content/60 text-xs sm:text-sm mt-1 truncate">
+                    {loading
+                      ? skeleton({ widthCls: 'w-32', heightCls: 'h-4' })
+                      : `Showcasing ${externalProjects.length} projects`}
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {loading ? renderSkeleton() : renderExternalProjects()}
             </div>
           </div>
         </div>

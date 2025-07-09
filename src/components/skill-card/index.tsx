@@ -71,15 +71,17 @@ const SkillCard = ({
                                 {skillType.charAt(0).toUpperCase() +
                                   skillType.slice(1)}
                               </h2>
-                              <div className="mt-2 flex items-center flex-wrap justify-start">
-                                {skills[skillType].map((skill, index2) => (
-                                  <div
-                                    className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full"
-                                    key={index2}
-                                  >
-                                    {skill.title}
-                                  </div>
-                                ))}
+                              <div className="p-3 flow-root">
+                                <div className="-m-1 flex flex-wrap justify-start gap-2">
+                                  {skills[skillType].map((skill, index2) => (
+                                    <div
+                                      className="badge badge-primary badge-sm"
+                                      key={index2}
+                                    >
+                                      {skill.title}
+                                    </div>
+                                  ))}
+                                </div>
                               </div>
                             </div>
                           </div>

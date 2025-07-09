@@ -14,11 +14,6 @@
     <a href="https://github.com/arifszn/gitprofile/commits/main"><img src="https://img.shields.io/github/last-commit/arifszn/gitprofile/main"/></a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"/></a>
     <a href="https://github.com/arifszn/gitprofile/blob/main/LICENSE"><img src="https://img.shields.io/github/license/arifszn/gitprofile"/></a>
-    <a href="https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Farifszn%2Fgitprofile"><picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://cdn.idx.dev/btn/open_dark_20.svg">
-        <source media="(prefers-color-scheme: light)" srcset="https://cdn.idx.dev/btn/open_light_20.svg">
-        <img height="20" alt="Open in IDX" src="https://cdn.idx.dev/btn/open_purple_20.svg">
-      </picture></a>
   </p>
 
   <p align="center">
@@ -43,7 +38,7 @@
 **Features:**
 
 ✓ [Easy to Setup](#-installation--setup)  
-✓ [33 Themes](#themes)  
+✓ [37 Themes](#themes)  
 ✓ [Google Analytics](#google-analytics)  
 ✓ [Hotjar](#hotjar)  
 ✓ [SEO](#seo)  
@@ -84,7 +79,6 @@ These instructions will get you a copy of the project and deploy your portfolio 
   ![Workflows](https://github.com/arifszn/gitprofile/assets/45073703/7e82f7d4-900c-4cb9-83f9-bcaa1ca2b910)
 
 - **Base Value:** Open `gitprofile.config.ts`, and change `base`'s value.
-
   - If you are deploying to `https://<USERNAME>.github.io`, set `base` to `'/'`.
 
   - If you are deploying to `https://<USERNAME>.github.io/<REPO_NAME>` (e.g. `https://<USERNAME>.github.io/portfolio`), then set `base` to `'/<REPO_NAME>/'` (e.g. `'/portfolio/'`).
@@ -203,11 +197,7 @@ const CONFIG = {
       ],
     },
   },
-  seo: {
-    title: 'Portfolio of Ariful Alam',
-    description: '',
-    imageURL: '',
-  },
+  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
   social: {
     linkedin: 'ariful-alam',
     x: 'arif_szn',
@@ -224,7 +214,7 @@ const CONFIG = {
     medium: 'arifszn',
     dev: 'arifszn',
     stackoverflow: '', // example: '1/jeff-atwood'
-    skype: '',
+    discord: '',
     telegram: '',
     website: 'https://www.arifszn.com',
     phone: '',
@@ -318,10 +308,7 @@ const CONFIG = {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
   // Track visitor interaction and behavior. https://www.hotjar.com
-  hotjar: {
-    id: '',
-    snippetVersion: 6,
-  },
+  hotjar: { id: '', snippetVersion: 6 },
   themeConfig: {
     defaultTheme: 'nord',
 
@@ -370,19 +357,11 @@ const CONFIG = {
       'dim',
       'nord',
       'sunset',
+      'caramellatte',
+      'abyss',
+      'silk',
       'procyon',
     ],
-
-    // Custom theme, applied to `procyon` theme
-    customTheme: {
-      primary: '#fc055b',
-      secondary: '#219aaf',
-      accent: '#e8d03a',
-      neutral: '#2A2730',
-      'base-100': '#E3E3ED',
-      '--rounded-box': '3rem',
-      '--rounded-btn': '3rem',
-    },
   },
 
   // Optional Footer. Supports plain text or HTML.
@@ -400,7 +379,7 @@ export default CONFIG;
 
 ### Themes
 
-There are 33 themes available that can be selected from the dropdown.
+There are 37 themes available that can be selected from the dropdown.
 
 The default theme can be specified.
 
@@ -419,34 +398,23 @@ const CONFIG = {
   <img src="https://github.com/arifszn/gitprofile/assets/45073703/91a2d9e6-67e5-47b4-9752-1881ac0f907f" alt="Theme Dropdown" width="50%">
 </p>
 
-You can create your own custom theme by modifying these values. Theme `procyon` will have the custom styles.
+You can create your own custom theme by modifying the CSS variables in `src/assets/index.css`. Theme `procyon` is defined as a custom theme.
 
-```ts
-// gitprofile.config.ts
-const CONFIG = {
-  /**
-   * Defines the custom theme colors and styles for the application.
-   * The theme includes the following properties:
-   * - `primary`: The primary color used throughout the application.
-   * - `secondary`: The secondary color used for accents and highlights.
-   * - `accent`: The accent color used for special elements.
-   * - `neutral`: The neutral color used for backgrounds and text.
-   * - `base-100`: The base background color.
-   * - `--rounded-box`: The border radius for boxes and containers.
-   * - `--rounded-btn`: The border radius for buttons.
-   */
-  themeConfig: {
-    customTheme: {
-      primary: '#fc055b',
-      secondary: '#219aaf',
-      accent: '#e8d03a',
-      neutral: '#2A2730',
-      'base-100': '#E3E3ED',
-      '--rounded-box': '3rem',
-      '--rounded-btn': '3rem',
-    },
-  },
-};
+```css
+/* src/assets/index.css */
+@plugin "daisyui/theme" {
+  name: 'procyon';
+  color-scheme: light;
+
+  --color-base-100: #e3e3ed;
+  --color-base-200: #d1d1db;
+  --color-base-300: #bfbfc9;
+  --color-base-content: #2a2730;
+  --color-primary: #fc055b;
+  --color-primary-content: #ffffff;
+  --color-secondary: #219aaf;
+  --color-secondary-content: #ffffff;
+}
 ```
 
 ### Google Analytics
@@ -457,9 +425,7 @@ const CONFIG = {
 // gitprofile.config.ts
 const CONFIG = {
   // ...
-  googleAnalytics: {
-    id: 'G-XXXXXXXXX',
-  },
+  googleAnalytics: { id: 'G-XXXXXXXXX' },
 };
 ```
 
@@ -473,10 +439,7 @@ Besides tracking visitors, it will track `click events` on projects and blog pos
 // gitprofile.config.ts
 const CONFIG = {
   // ...
-  hotjar: {
-    id: '',
-    snippetVersion: 6,
-  },
+  hotjar: { id: '', snippetVersion: 6 },
 };
 ```
 
@@ -488,11 +451,7 @@ You can customize the meta tags for SEO in `seo`.
 // gitprofile.config.ts
 const CONFIG = {
   // ...
-  seo: {
-    title: 'Portfolio of Ariful Alam',
-    description: '',
-    imageURL: '',
-  },
+  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
 };
 ```
 
@@ -508,7 +467,7 @@ Your avatar and bio will be fetched from GitHub automatically.
 
 ### Social Links
 
-You can link your social media services you're using, including LinkedIn, X, Mastodon, ResearchGate, Facebook, Instagram, Reddit, Threads, YouTube, Udemy, Dribbble, Behance, Medium, dev, Stack Overflow, Skype, Telegram, personal website, phone and email.
+You can link your social media services you're using, including LinkedIn, X, Mastodon, ResearchGate, Facebook, Instagram, Reddit, Threads, YouTube, Udemy, Dribbble, Behance, Medium, dev, Stack Overflow, Discord, Telegram, personal website, phone and email.
 
 ```ts
 // gitprofile.config.ts
@@ -530,7 +489,7 @@ const CONFIG = {
     medium: '',
     dev: '',
     stackoverflow: '',
-    skype: '',
+    discord: '',
     telegram: '',
     website: '',
     phone: '',
@@ -731,11 +690,7 @@ If you have [medium](https://medium.com) or [dev](https://dev.to) account, you c
 // gitprofile.config.ts
 const CONFIG = {
   // ...
-  blog: {
-    source: 'dev',
-    username: 'arifszn',
-    limit: 5,
-  },
+  blog: { source: 'dev', username: 'arifszn', limit: 5 },
 };
 ```
 
