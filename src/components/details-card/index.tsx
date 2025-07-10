@@ -82,7 +82,7 @@ const ListItem: React.FC<{
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="flex justify-start py-2 px-1 items-center gap-1 "
+          className="flex justify-start py-2 px-1 items-center gap-1"
         >
           {link && <IoMdLink />}
 

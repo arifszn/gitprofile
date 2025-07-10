@@ -29,7 +29,6 @@ const Footer = () => {
           const scrollDistance =
             footerRef.current.scrollHeight -
             (document.body.scrollHeight - window.innerHeight - window.scrollY);
-          console.log(444, 'scrollDistance', scrollDistance);
 
           if (scrollDistance > 0) {
             setCounter((prev) => {
