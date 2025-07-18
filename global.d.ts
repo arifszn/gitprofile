@@ -1,6 +1,7 @@
 interface Github {
   /**
    * GitHub org/user name
+   
    */
   username: string;
 }
