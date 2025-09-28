@@ -50,6 +50,6 @@ export const INVALID_GITHUB_USERNAME_ERROR: CustomError = {
 
 export const GENERIC_ERROR: CustomError = {
   status: 500,
-  title: 'Ops!!',
+  title: 'Oops!!',
   subTitle: 'Something went wrong.',
 };

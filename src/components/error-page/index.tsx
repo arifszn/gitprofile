@@ -16,9 +16,7 @@ const ErrorPage: React.FC<CustomError> = (props) => {
               {`${props.status}`}
             </h1>
             <p className="text-lg pb-2 text-base-content">{props.title}</p>
-            <div className="text-base-content text-opacity-60">
-              {props.subTitle}
-            </div>
+            <div className="text-base-content">{props.subTitle}</div>
           </div>
         </div>
       </div>

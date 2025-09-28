@@ -59,7 +59,7 @@ const CertificationCard = ({
   };
 
   return (
-    <div className="card shadow-lg compact bg-base-100">
+    <div className="card shadow-lg card-sm bg-base-100">
       <div className="card-body">
         <div className="mx-3">
           <h5 className="card-title">
@@ -72,7 +72,7 @@ const CertificationCard = ({
             )}
           </h5>
         </div>
-        <div className="text-base-content text-opacity-60">
+        <div className="text-base-content">
           <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
             {loading ? (
               renderSkeleton()
