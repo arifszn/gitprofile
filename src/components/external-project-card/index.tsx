@@ -69,34 +69,28 @@ const ExternalProjectCard = ({
 
   const renderExternalProjects = () => {
     return externalProjects.map((item, index) => (
-      <a
-        className="card shadow-md card-sm bg-base-100 cursor-pointer"
+      <div
+        className="card shadow-md card-sm bg-base-100 relative"
         key={index}
-        href={item.link}
-        onClick={(e) => {
-          e.preventDefault();
-
-          try {
-            if (googleAnalyticId) {
-              ga.event('Click External Project', {
-                post: item.title,
-              });
-            }
-          } catch (error) {
-            console.error(error);
-          }
-
-          window?.open(item.link, '_blank');
-        }}
       >
         <div className="p-8 h-full w-full">
           <div className="flex items-center flex-col">
             <div className="w-full">
               <div className="px-4">
                 <div className="text-center w-full">
-                  <h2 className="font-medium text-center opacity-60 mb-2">
-                    {item.title}
-                  </h2>
+                  {item.title.startsWith('## ') ? (
+                    <h2 className="text-xl font-bold text-center opacity-60 mb-2 whitespace-pre-line">
+                      {item.title.slice(3)}
+                    </h2>
+                  ) : item.title.startsWith('# ') ? (
+                    <h1 className="text-2xl font-bold text-center opacity-60 mb-2 whitespace-pre-line">
+                      {item.title.slice(2)}
+                    </h1>
+                  ) : (
+                    <h2 className="font-medium text-center opacity-60 mb-2 whitespace-pre-line">
+                      {item.title}
+                    </h2>
+                  )}
                   {item.imageUrl && (
                     <div className="avatar opacity-90">
                       <div className="w-24 h-24 mask mask-squircle">
@@ -112,15 +106,63 @@ const ExternalProjectCard = ({
                       </div>
                     </div>
                   )}
-                  <p className="mt-2 text-base-content text-sm text-justify">
-                    {item.description}
-                  </p>
+                  <div className="mt-2 text-base-content text-sm text-left whitespace-pre-line">
+                    {item.description?.split('\n').map((line, i) => {
+                      if (line.startsWith('### ')) {
+                        return (
+                          <h3 key={i} className="text-lg font-bold mt-3 mb-1">
+                            {line.slice(4)}
+                          </h3>
+                        );
+                      }
+                      if (line.startsWith('## ')) {
+                        return (
+                          <h2 key={i} className="text-xl font-bold mt-4 mb-2">
+                            {line.slice(3)}
+                          </h2>
+                        );
+                      }
+                      if (line.startsWith('# ')) {
+                        return (
+                          <h1 key={i} className="text-2xl font-bold mt-4 mb-2">
+                            {line.slice(2)}
+                          </h1>
+                        );
+                      }
+                      return line ? <p key={i}>{line}</p> : <br key={i} />;
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </a>
+        <a
+          href={item.link}
+          target="_blank"
+          rel="noreferrer"
+          className="absolute top-4 right-4 btn btn-sm btn-circle btn-ghost"
+          onClick={(e) => {
+            e.stopPropagation();
+            try {
+              if (googleAnalyticId) {
+                ga.event('Click External Project', {
+                  post: item.title,
+                });
+              }
+            } catch (error) {
+              console.error(error);
+            }
+          }}
+        >
+          <MdOpenInNew className="text-lg" />
+        </a>
+        {item.year && (
+          <div className="absolute bottom-4 right-4 badge badge-sm badge-neutral">
+            {item.year}
+          </div>
+        )}
+      </div>
     ));
   };
 
