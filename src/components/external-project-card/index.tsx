@@ -69,10 +69,7 @@ const ExternalProjectCard = ({
 
   const renderExternalProjects = () => {
     return externalProjects.map((item, index) => (
-      <div
-        className="card shadow-md card-sm bg-base-100 relative"
-        key={index}
-      >
+      <div className="card shadow-md card-sm bg-base-100 relative" key={index}>
         <div className="p-8 h-full w-full">
           <div className="flex items-center flex-col">
             <div className="w-full">
