@@ -43,6 +43,10 @@ const CONFIG = {
   },
   seo: { title: 'Portfolio of Yves Straten', description: '', imageURL: '' },
   social: {
+    linkedin: {
+      user_name: 'yves-straten-10aa73266',
+      display_name: 'Yves Straten',
+    },
     x: '',
     mastodon: '',
     researchGate: '',

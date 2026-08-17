@@ -106,11 +106,16 @@ interface SEO {
   imageURL?: string;
 }
 
+interface LinkedIn {
+  user_name?: string;
+  display_name?: string;
+}
+
 interface Social {
   /**
    * LinkedIn
    */
-  linkedin?: string;
+  linkedin?: LinkedIn;
 
   /**
    * X (formerly Twitter)

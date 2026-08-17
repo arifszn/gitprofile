@@ -229,8 +229,8 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<FaLinkedin />}
                   title="LinkedIn:"
-                  value={social.linkedin}
-                  link={`https://www.linkedin.com/in/${social.linkedin}`}
+                  value={social.linkedin.display_name}
+                  link={`https://www.linkedin.com/in/${social.linkedin.user_name}`}
                 />
               )}
               {social?.dribbble && (

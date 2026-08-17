@@ -42,8 +42,13 @@ export interface SanitizedSEO {
   imageURL?: string;
 }
 
+export interface SanitizedLinkedIn {
+  user_name?: string,
+  display_name?: string,
+}
+
 export interface SanitizedSocial {
-  linkedin?: string;
+  linkedin?: SanitizedLinkedIn;
   x?: string;
   mastodon?: string;
   researchGate?: string;
