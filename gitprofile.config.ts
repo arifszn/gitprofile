@@ -16,16 +16,15 @@ const CONFIG = {
       header: 'Github Projects',
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
+        sortBy: 'updated', // Sort projects by 'stars' or 'updated'
         limit: 8, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          projects: [
+            'YvesStraten/dotfiles',
+            'YvesStraten/YvesStraten.github.io',
+          ],
         },
-      },
-      manual: {
-        // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
       },
     },
     external: {
@@ -33,50 +32,39 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'Dante',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'A rust based discord bot which allows for GMs to schedule sessions regardless of timezone, manage players and be reminded when their sessions are live. Extensively uses async tokio channels with async traits to allow for a decoupled and testable implementation. Makes heavy use of diesel orm to allow for interfacing safely with sqlite',
           imageUrl:
             'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
         },
       ],
     },
   },
   seo: { title: 'Portfolio of Yves Straten', description: '', imageURL: '' },
   social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    x: '',
+    mastodon: '',
     researchGate: '',
     facebook: '',
     instagram: '',
     reddit: '',
     threads: '',
-    youtube: '', // example: 'pewdiepie'
+    youtube: '',
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // example: '1/jeff-atwood'
+    medium: '',
+    dev: '',
+    stackoverflow: '',
     discord: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
+    website: 'https://www.yvesstraten.github.io',
     phone: '',
     email: '',
   },
   resume: {
-    fileUrl:
-      '', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Rust',
@@ -90,14 +78,16 @@ const CONFIG = {
     'Gitlab CI',
     'Github Actions',
   ],
-  experiences: [
-  ],
-  certifications: [
-  ],
-  educations: [
-  ],
-  publications: [
-  ],
+  experiences: [],
+  certifications: [],
+  educations: [],
+  publications: [],
+  // Display articles from your medium or dev account. (Optional)
+  googleAnalytics: {
+    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+  },
+  // Track visitor interaction and behavior. https://www.hotjar.com
+  hotjar: { id: '', snippetVersion: 6 },
   themeConfig: {
     defaultTheme: 'lofi',
 
@@ -113,44 +103,7 @@ const CONFIG = {
     displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: [
-      'light',
-      'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
-      'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
-      'dracula',
-      'cmyk',
-      'autumn',
-      'business',
-      'acid',
-      'lemonade',
-      'night',
-      'coffee',
-      'winter',
-      'dim',
-      'nord',
-      'sunset',
-      'caramellatte',
-      'abyss',
-      'silk',
-      'procyon',
-    ],
+    themes: ['light', 'dark'],
   },
 
   // Optional Footer. Supports plain text or HTML.
