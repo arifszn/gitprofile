@@ -104,7 +104,7 @@ const GithubProjectCard = ({
             </p>
           </div>
           <div className="flex justify-between text-sm text-base-content truncate">
-            <div className="flex grow">
+            <div className="flex grow opacity-60">
               <span className="mr-3 flex items-center">
                 <AiOutlineStar className="mr-0.5" />
                 <span>{item.stargazers_count}</span>

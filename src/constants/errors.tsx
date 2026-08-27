@@ -16,7 +16,9 @@ export const INVALID_CONFIG_ERROR: CustomError = {
   ),
 };
 
-export const setTooManyRequestError = (resetTime: string): CustomError => {
+export const setTooManyRequestError = (
+  resetTime?: string | null,
+): CustomError => {
   return {
     status: 429,
     title: 'Too Many Requests!',
@@ -31,7 +33,7 @@ export const setTooManyRequestError = (resetTime: string): CustomError => {
         >
           rate limit
         </a>
-        ! Try again later{` ${resetTime}`}.
+        ! Try again later{resetTime ? ` ${resetTime}` : ''}.
       </p>
     ),
   };

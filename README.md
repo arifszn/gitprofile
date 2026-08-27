@@ -114,6 +114,8 @@ As this is a Vite project, you can also host your website to Netlify, Vercel, He
 
 ### Setting up locally
 
+> Requires Node.js `20.19+`, `22.13+` or `24+`.
+
 - Clone the project and change directory.
 
   ```shell
