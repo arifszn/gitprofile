@@ -30,7 +30,7 @@
     <img src="https://github.com/arifszn/gitprofile/assets/45073703/eb6c38a4-ac92-4006-869b-e4e24f6f5cf6" alt="Preview" width="60%"/>
   </a>
   <br/>
-  <a href="#arifszn"><img src="https://github.com/arifszn/gitprofile/assets/45073703/4d2ccd45-e566-4743-bf61-cadc03ece54c" width="50%" alt="Shadow"/></a>
+  <img src="https://github.com/arifszn/gitprofile/assets/45073703/4d2ccd45-e566-4743-bf61-cadc03ece54c" width="50%" alt="Shadow"/>
 </p>
 
 **GitProfile** is a powerful portfolio builder that allows you to create a stunning and personalized portfolio site in minutes, even if you have no coding experience. Simply provide your GitHub username, and GitProfile will automatically generate a portfolio. Best of all, you can easily deploy your portfolio to GitHub Pages with just a few clicks, making it accessible to the world in no time.
@@ -38,7 +38,7 @@
 **Features:**
 
 ✓ [Easy to Setup](#-installation--setup)  
-✓ [37 Themes](#themes)  
+✓ [36 Themes](#themes)  
 ✓ [Google Analytics](#google-analytics)  
 ✓ [Hotjar](#hotjar)  
 ✓ [SEO](#seo)  
@@ -61,10 +61,11 @@ To view a live example, **[click here](https://arifszn.github.io/gitprofile)**.
 
 ## 🛠 Installation & Setup
 
-There are two ways to use **GitProfile**. Use any.
+There are three ways to use **GitProfile**. Use any.
 
 - [Forking this repo _(recommended)_](#forking-this-repo)
 - [Setting up locally](#setting-up-locally)
+- [Letting an AI agent do it](#letting-an-ai-agent-do-it)
 
 ### Forking this repo
 
@@ -101,20 +102,20 @@ As this is a Vite project, you can also host your website to Netlify, Vercel, He
 
 > [!NOTE]
 > If you are going to deploy using **Vercel**, remember to set the `base` as `/`.
-
-```ts
-// gitprofile.config.ts
-{
-  base: '/',
-  // ...
-}
-```
+>
+> ```ts
+> // gitprofile.config.ts
+> {
+>   base: '/',
+>   // ...
+> }
+> ```
 
 [**Not working?**](https://github.com/arifszn/gitprofile/discussions/548)
 
 ### Setting up locally
 
-> Requires Node.js `20.19+`, `22.13+` or `24+`.
+> Requires Node.js `20+`.
 
 - Clone the project and change directory.
 
@@ -138,6 +139,17 @@ As this is a Vite project, you can also host your website to Netlify, Vercel, He
 - Finally, visit `http://localhost:5173/gitprofile/` from your browser.
 
 > Alternatively, you can set up and run the project using Docker with **[Vail](https://github.com/arifszn/vail)**, a powerful tool for local development of JavaScript/TypeScript Apps.
+
+### Letting an AI agent do it
+
+If you use Claude Code, Codex, Cursor, Gemini CLI, or any other coding agent, it can fork the repo, fill in your details, and deploy it for you. Just tell your agent to install it — paste:
+
+```
+Fetch and follow the install instructions from
+https://raw.githubusercontent.com/arifszn/gitprofile/refs/heads/main/INSTALL.md
+```
+
+The agent will ask you what to put on your portfolio, then handle the fork, config, and GitHub Pages setup. It needs the [GitHub CLI](https://cli.github.com).
 
 ## 🎨 Customization
 
@@ -220,7 +232,7 @@ const CONFIG = {
     telegram: '',
     website: 'https://www.arifszn.com',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: '',
   },
   resume: {
     fileUrl:
@@ -288,7 +300,7 @@ const CONFIG = {
       authors: 'John Doe, Jane Smith',
       link: 'https://example.com',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
     {
       title: 'Publication Title',
@@ -297,14 +309,14 @@ const CONFIG = {
       authors: 'John Doe, Jane Smith',
       link: 'https://example.com',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
     source: 'dev', // medium | dev
     username: 'arifszn', // to hide blog section, keep it empty
-    limit: 3, // How many articles to display. Max is 10.
+    limit: 2, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -312,7 +324,7 @@ const CONFIG = {
   // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: { id: '', snippetVersion: 6 },
   themeConfig: {
-    defaultTheme: 'nord',
+    defaultTheme: 'lofi',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -381,9 +393,9 @@ export default CONFIG;
 
 ### Themes
 
-There are 37 themes available that can be selected from the dropdown.
+There are 36 themes available that can be selected from the dropdown.
 
-The default theme can be specified.
+The default theme can be specified. Removing a theme from `themes` takes it out of the dropdown.
 
 ```ts
 // gitprofile.config.ts
@@ -391,7 +403,20 @@ const CONFIG = {
   // ...
   themeConfig: {
     defaultTheme: 'light',
-    // ...
+
+    // Hides the switch in the navbar.
+    // Useful if you want to support a single color mode.
+    disableSwitch: false,
+
+    // Should use the prefers-color-scheme media-query,
+    // using user system preferences, instead of the hardcoded defaultTheme.
+    respectPrefersColorScheme: false,
+
+    // Display the ring in Profile picture.
+    displayAvatarRing: true,
+
+    // Available themes. To remove any theme, exclude it from here.
+    themes: ['light', 'dark', 'nord'],
   },
 };
 ```
@@ -497,6 +522,18 @@ const CONFIG = {
     phone: '',
     email: '',
   },
+};
+```
+
+### Resume
+
+Link a downloadable resume in `resume`. An empty `fileUrl` hides the `Download Resume` button.
+
+```ts
+// gitprofile.config.ts
+const CONFIG = {
+  // ...
+  resume: { fileUrl: 'https://example.com/resume.pdf' },
 };
 ```
 
@@ -699,6 +736,22 @@ const CONFIG = {
 ![Blog](https://github.com/arifszn/gitprofile/assets/45073703/410124f2-a3c2-48f1-8ec8-0c6fae74ae3d)
 
 The posts are fetched by [blog.js](https://github.com/arifszn/blog.js).
+
+### Footer
+
+An optional footer, supporting plain text or HTML. Keep it empty to hide the footer.
+
+```ts
+// gitprofile.config.ts
+const CONFIG = {
+  // ...
+  footer: `Made with <a
+      class="text-primary" href="https://github.com/arifszn/gitprofile"
+      target="_blank"
+      rel="noreferrer"
+    >GitProfile</a> and ❤️`,
+};
+```
 
 ## 💖 Support
 
