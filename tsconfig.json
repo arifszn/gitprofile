@@ -18,7 +18,8 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "tsBuildInfoFile": "./node_modules/.cache/tsc/app.tsbuildinfo"
   },
   "include": ["src", "global.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]

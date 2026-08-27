@@ -6,7 +6,9 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "declarationDir": "./node_modules/.cache/tsc/node",
+    "tsBuildInfoFile": "./node_modules/.cache/tsc/node.tsbuildinfo"
   },
   "include": ["gitprofile.config.ts", "vite.config.ts"]
 }

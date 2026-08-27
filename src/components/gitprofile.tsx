@@ -194,7 +194,7 @@ const GitProfileContent = ({
     // here means moving data fetching out of the effect entirely (a data library
     // or `use()`), which is a separate change from deriving theme/error above.
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    loadData();
+    void loadData();
   }, [sanitizedConfig, loadData]);
 
   useEffect(() => {
