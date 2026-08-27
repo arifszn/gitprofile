@@ -149,7 +149,7 @@ Fetch and follow the install instructions from
 https://raw.githubusercontent.com/arifszn/gitprofile/refs/heads/main/INSTALL.md
 ```
 
-The agent will ask you what to put on your portfolio, then handle the fork, config, and GitHub Pages setup. It needs the [GitHub CLI](https://cli.github.com).
+The agent will ask you what to put on your portfolio, then handle the config and deployment. With the [GitHub CLI](https://cli.github.com) authenticated it deploys to GitHub Pages; without it, it deploys to Surge, Vercel, or Netlify instead.
 
 ## 🎨 Customization
 
