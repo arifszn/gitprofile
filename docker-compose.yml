@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: ./node_modules/vail/runtimes/npm/Dockerfile
       args:
-        VAIL_NODE_VERSION: 20
+        VAIL_NODE_VERSION: 22
     command: npm run dev -- --host 0.0.0.0
     ports:
       - '5173:5173'
