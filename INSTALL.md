@@ -129,20 +129,49 @@ Run the commands from A4. The deployable site is the `dist/` directory that `npm
 
 ### B3. Deploy `dist/`
 
-Offer the user a choice of free host. All three run via `npx`:
+Offer the user a choice of free host. All three run via `npx`. Each needs a one-time login; check first, and if a login is needed, ask the user to run it **in their own terminal** — the prompts are interactive (Surge asks for email + password on stdin; Vercel and Netlify open a browser) and cannot be driven through your shell. Credentials persist on disk, so after logging in once the deploy commands run non-interactively.
+
+#### Surge
 
 ```shell
-# Surge — pick a memorable subdomain
-npx surge ./dist <NAME>.surge.sh
+npx surge whoami                     # check login (prints email, or "Not Authenticated")
+npx surge login                      # if needed — user runs this in their own terminal
+npx surge ./dist <NAME>.surge.sh     # deploy; pick a memorable subdomain
+```
 
-# Vercel
-npx vercel deploy ./dist --prod --yes
+Token alternative, skipping the login entirely:
 
-# Netlify
+```shell
+SURGE_LOGIN=<email> SURGE_TOKEN=<token> npx surge ./dist <NAME>.surge.sh
+```
+
+#### Vercel
+
+```shell
+npx vercel whoami                    # check login
+npx vercel login                     # if needed — user runs this in their own terminal
+npx vercel deploy ./dist --yes --prod
+```
+
+Token alternative:
+
+```shell
+npx vercel deploy ./dist --yes --prod --token=<token>
+```
+
+#### Netlify
+
+```shell
+npx netlify-cli status               # check login
+npx netlify-cli login                # if needed — user runs this in their own terminal
 npx netlify-cli deploy --dir=./dist --prod
 ```
 
-**Authentication:** each host requires a one-time login, and the interactive prompts may not work through your shell. If a login prompt hangs or fails, ask the user to run the login in their own terminal (`npx surge login`, `npx vercel login`, or `npx netlify-cli login`) — credentials persist on disk, after which the deploy commands above run non-interactively. Tokens work too: `SURGE_LOGIN`/`SURGE_TOKEN`, `--token` for Vercel, `NETLIFY_AUTH_TOKEN` for Netlify.
+Token alternative:
+
+```shell
+npx netlify-cli deploy --dir=./dist --prod --auth=<token>
+```
 
 ### B4. Confirm
 
